@@ -1,0 +1,14 @@
+<!--Empty-->
+
+<window id="129">
+	<controls>
+		<include>Global_Background</include>
+		<include>Global_Filter</include>
+		<control type="label">
+			<include>DialogID</include>
+			<label>SmartPlayListEditor.xml</label>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
+		<include>Object_DebugGrid</include>
+	</controls>
+</window>

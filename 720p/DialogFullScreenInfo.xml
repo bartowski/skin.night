@@ -1,0 +1,193 @@
+<!--Alaska-->
+
+<window id="142">
+	<defaultcontrol>2</defaultcontrol>
+	<controls>	
+		<control type="group">		
+			<posy>560</posy>
+			<animation type="WindowOpen">
+				<effect type="fade" start="0" end="100" time="600" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="fade" start="100" end="0" time="600" />
+			</animation>
+			
+			<control type="label">
+				<posx>640</posx>
+				<posy>0</posy>
+				<include>DialogID</include>
+				<label>DialogFullScreenInfo.xml</label>
+				<visible>Skin.HasSetting(debugmode)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>-560</posy>
+				<width>1280</width>
+				<height>720</height>
+				<texture>osd/pause-back1.png</texture>
+				<aspectratio>scale</aspectratio>
+			</control>
+			
+			<control type="progress" id="23">
+				<texturebg>osd/osd_progress_back1.png</texturebg>
+				<lefttexture>osd/left.png</lefttexture>
+				<midtexture>osd/mid.png</midtexture>
+				<righttexture>osd/new_pause2.png</righttexture>
+				<info>Player.Progress</info>
+				<posx>100</posx>
+				<posy>130</posy>
+				<width>1080</width>
+				<height>19</height>
+			</control>
+			<control type="label">
+				<posx>90</posx>
+				<posy>128</posy>
+				<width>300</width>
+				<height>25</height>
+				<align>right</align> 
+				<font>Font_ListDetail</font>
+				<textcolor>ff67ffff</textcolor>
+				<label>[B]$INFO[VideoPlayer.Time][/B]</label>
+			</control>
+			<control type="label">
+				<posx>1190</posx>
+				<posy>128</posy>
+				<width>300</width>
+				<height>25</height>
+				<font>Font_ListDetail</font>
+				<textcolor>ffffffff</textcolor>
+				<label>[B]$INFO[VideoPlayer.Duration][/B]</label>
+			</control>
+			<control type="group">
+				<posx>20</posx>
+				<posy>-160</posy>
+				<animation effect="slide" start="0,0" end="0,70" time="0" condition="VideoPlayer.Content(episodes)">Conditional</animation>
+				<control type="label">
+					<posx>0</posx>
+					<posy>20</posy>
+					<width>750</width> 
+					<height>25</height> 
+					<label>$INFO[VideoPlayer.Title]</label>
+					<align>left</align> 
+					<aligny>center</aligny> 
+					<font>Font_Bartowski_Title_Pause</font>
+					<textcolor>ff67ffff</textcolor>
+					<visible>!VideoPlayer.Content(movies)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>40</posy>
+					<width>750</width> 
+					<height>25</height> 
+					<label>$INFO[VideoPlayer.Title]</label>
+					<align>left</align> 
+					<aligny>center</aligny> 
+					<font>Font_Bartowski_Title_Pause</font>
+					<textcolor>ff67ffff</textcolor>
+					<visible>VideoPlayer.Content(movies)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>70</posy>
+					<width>412</width> 
+					<height>25</height> 
+					<label>$INFO[VideoPlayer.Year]/$INFO[VideoPlayer.Studio]</label>
+					<align>left</align> 
+					<aligny>center</aligny> 
+					<font>Font_Bartowski_Under_Pause</font>
+					<textcolor>ffffffff</textcolor>
+					<visible>VideoPlayer.Content(movies)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>50</posy>
+					<width>412</width> 
+					<height>25</height> 
+					<label>$LOCALIZE[31068] $INFO[VideoPlayer.Season]/$LOCALIZE[31069] $INFO[VideoPlayer.Episode]</label>
+					<align>left</align> 
+					<aligny>center</aligny> 
+					<font>Font_Bartowski_Under_Pause</font>
+					<textcolor>ffffffff</textcolor>
+					<visible>!VideoPlayer.Content(movies)</visible>
+				</control>
+			</control>
+			<control type="textbox">
+				<posx>20</posx>
+				<posy>0</posy>
+				<width>970</width>
+				<height>110</height>
+				<align>left</align>
+				<label>$INFO[VideoPlayer.Plot]</label>
+				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+				<font>Font_Bartowski_Episodes</font>
+				<textcolor>ffffffff</textcolor>
+				<include>Animation_HiddenByInfo</include>
+				<visible>!VideoPlayer.Content(movies)</visible>
+			</control>
+			<control type="textbox">
+				<posx>20</posx>
+				<posy>0</posy>
+				<width>1040</width>
+				<height>110</height>
+				<align>left</align>
+				<label>$INFO[VideoPlayer.Plot]</label>
+				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+				<font>Font_Bartowski_Episodes</font>
+				<textcolor>ffffffff</textcolor>
+				<include>Animation_HiddenByInfo</include>
+				<visible>VideoPlayer.Content(movies)</visible>
+			</control>
+			<!-- Movie Info  -->
+			<control type="group">
+				<visible>VideoPlayer.Content(movies)</visible>
+				<posx>20</posx>
+				<posy>-80</posy>
+				<control type="label">
+					<description>Director Info</description>
+					<posx>0</posx>
+					<posy>24</posy>
+					<width>970</width>
+					<height>18</height>
+					<aligny>center</aligny>
+					<align>left</align>
+					<font>Font_ListDetail</font>
+					<label>[B][COLOR=ff67ffff]$LOCALIZE[31071]:[/COLOR][/B] [COLOR=ffffffff]$INFO[VideoPlayer.Director][/COLOR]</label>
+				</control>
+				<control type="label">
+					<description>Genre Info</description>
+					<posx>0</posx>
+					<posy>48</posy>
+					<width>970</width>
+					<height>18</height>
+					<aligny>center</aligny>
+					<align>left</align>
+					<font>Font_ListDetail</font>
+					<label>[B][COLOR=ff67ffff]$LOCALIZE[31072]:[/COLOR][/B] [COLOR=ffffffff]$INFO[VideoPlayer.Genre][/COLOR]</label>
+				</control>
+			</control>
+		</control>
+	<control type="group">
+	<posy>560</posy>
+		<control type ="image"> 
+			<description>tv show image</description>
+			<posx>960</posx>     
+			<posy>-190</posy>    
+			<width>340</width>
+			<height>340</height>
+			<aspectratio align="right" aligny="bottom">keep</aspectratio>
+			<texture diffuse="movie-poster/Movie_Thumb_Mask.png">$INFO[VideoPlayer.Cover]</texture>
+			<bordertexture border="32">osd/paused_glow.png</bordertexture>
+			<bordersize>32</bordersize>
+			<animation type="WindowOpen">
+				<effect type="fade" start="0" end="100" time="600" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="fade" start="100" end="0" time="600" />
+			</animation>
+		</control>
+	</control>
+		
+		
+		<include>Object_DebugGrid</include>
+	</controls>
+</window>

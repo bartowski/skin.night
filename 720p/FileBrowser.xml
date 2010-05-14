@@ -1,0 +1,175 @@
+<!--Alaska-->
+
+<window id="126">
+	<defaultcontrol always="true">450</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="largeimage">
+			<include>Dimensions_Fullscreen</include>
+			<width>1280</width>
+			<height>720</height>
+			<texture>special://skin/media/backdrops/curtains_diffuse.png</texture>
+			<aspectratio>scale</aspectratio>
+			<include>VisibleFadeEffect</include>
+		</control>
+		
+		<control type="fixedlist" id="450">
+			<posx>490</posx>
+			<posy>110</posy>
+			<height>546</height>
+			<width>990</width>
+			<onup>450</onup>
+			<ondown>450</ondown>
+			<onleft>7001</onleft>
+			<onright>7001</onright>
+			<viewtype label="">list</viewtype>
+			<orientation>vertical</orientation>
+			<focusposition>4</focusposition>
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_ZoomedByMenu</include>
+			<itemlayout width="750" height="40">
+				<control type="label">
+					<posx>0</posx>
+					<posy>5</posy>
+					<width>750</width>
+					<height>25</height>
+					<aligny>center</aligny>
+					<font>Font_Bartowski_Movies_Duration</font>
+					<textcolor>white</textcolor>
+					<info>ListItem.Label</info>
+				</control>
+				
+			</itemlayout>
+			<focusedlayout width="750" height="100">
+				<control type="label">
+					<posx>0</posx>
+					<posy>30</posy>
+					<width>750</width>
+					<height>25</height>
+					<aligny>center</aligny>
+					<font>Font_Bartowski_Filebrowser</font>
+					<textcolor>mainblue</textcolor>
+					<label>[UPPERCASE][B]$INFO[ListItem.Label][/B][/UPPERCASE]</label>
+				</control>
+				
+			</focusedlayout>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>270</posy>
+			<width>1280</width>
+			<height>2</height>
+			<texture>common/line_1.png</texture>
+			<colordiffuse>99ffffff</colordiffuse>
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_ZoomedByMenu</include>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>370</posy>
+			<width>1280</width>
+			<height>2</height>
+			<texture>common/line_1.png</texture>
+			<colordiffuse>99ffffff</colordiffuse>
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_ZoomedByMenu</include>
+		</control>
+		<control type="image">
+			<description>Large Icon Image</description>
+			<posx>25</posx>
+			<posy>125</posy>
+			<width>450</width>
+			<height>450</height>
+			<aspectratio align="right" aligny="center">keep</aspectratio>
+			<texture background="true" diffuse="common/new_files_diffuse.png">$INFO[Container(450).ListItem.Icon]</texture>
+			<bordertexture border="32">list/files_list_glow.png</bordertexture>
+			<bordersize>32</bordersize>
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_ZoomedByMenu</include>
+		</control>
+	<!-- view options -->
+		<control type="image"><!-- Floor -->
+			<posx>320</posx>
+			<posy>650</posy>
+			<width>640</width>
+			<height>70</height>
+			<texture>backdrops/test2.png</texture>
+			<include>Animation_BartowskiZoomInMenu</include>
+		</control>
+		<control type="grouplist" id="7001">
+			<width>1000</width>
+			<height>40</height>
+			<posx>430</posx>
+			<onup>450</onup>
+			<ondown>450</ondown>
+			<itemgap>0</itemgap>
+			<include>Animation_ZoomInMenu</include>
+			<orientation>horizontal</orientation>
+			<posy>680</posy>
+			<control type="button" id="413">
+				<description>OK</description>
+				<height>30</height>
+				<width>100</width>
+				<font>Font_Bartowski_Press_S</font>
+				<textcolor>MainBlack</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus border="5">confluence/button-focus.png</texturefocus>
+				<align>center</align>
+				<aligny>middle</aligny>
+				<label>$LOCALIZE[186]</label>
+			</control>
+			<control type="button" id="414">
+				<description>Cancel</description>
+				<label>$LOCALIZE[222]</label>
+				<include>WindowMenuButton</include>
+			</control>
+			<control type="button" id="415">
+				<description>Create Folder</description>
+				<label>$LOCALIZE[119]</label>
+				<include>WindowMenuButton</include>
+			</control>
+		</control>
+		<control type="grouplist">
+			<width>1000</width>
+			<height>40</height>
+			<posx>360</posx>
+			<onup>7050</onup>
+			<ondown>7050</ondown>
+			<itemgap>0</itemgap>
+			<visible allowhiddenfocus="true">ControlGroup(7001).HasFocus</visible>
+			<include>Animation_ZoomInMenu</include>
+			<orientation>horizontal</orientation>
+			<posy>307</posy>
+		<!-- ok -->
+			<control type="button" id="7040">
+				<include>WindowMenuLabel</include>
+<!-- LOC -->	<label> - </label>
+			</control>
+		<!-- cancel -->
+			<control type="button" id="7041">
+				<include>WindowMenuLabel</include>
+<!-- LOC -->	<label> - </label>
+			</control>
+		<!-- new folder -->
+			<control type="button" id="7042">
+				<include>WindowMenuLabel</include>
+<!-- LOC -->	<label> - </label>
+			</control>
+		</control>
+	<!-- Heading -->
+		<control type="group">
+			<posx>30</posx>
+			<posy>30</posy>
+			<include>Animation_SlideDownFadeOut</include>
+			<control type="label" id="411">
+				<label>-</label>
+				<include>Global_HeadingSectionVars</include>
+			</control>
+			<control type="label">
+<!-- LOC -->	<label>$INFO[ListItem.path]</label>
+				<include>Global_HeadingDetailVars</include>
+			</control>
+		</control>
+		
+	</controls>
+</window>

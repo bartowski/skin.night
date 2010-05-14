@@ -1,0 +1,144 @@
+<!--Alaska-->
+
+<window id="24">
+	<defaultcontrol always="true">50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<include>Global_Background</include>
+		<control type="largeimage" id="2404">
+			<include>Dimensions_Fullscreen</include>
+			<fadetime>400</fadetime>
+			<texture>$INFO[ListItem.Property(Fanart_Image)]</texture>
+			<include>Animation_CommonFade</include>
+			<visible>!Skin.HasSetting(hidefanart)</visible>
+		</control>
+		<control type="largeimage">
+			<include>Dimensions_Fullscreen</include>
+			<fadetime>400</fadetime>
+			<texture>special://skin/media/backdrops/curtains.png</texture>
+			<include>Animation_CommonFade</include>
+			<visible>IsEmpty(ListItem.Property(Fanart_Image))</visible>
+		</control>
+		<!--<control type="largeimage">
+			<include>Dimensions_Fullscreen</include>
+			<fadetime>400</fadetime>
+			<texture>$INFO[ListItem.Property(Fanart_Image)]</texture>
+			<include>Animation_CommonFade</include>
+			<visible>Control.IsVisible(55)</visible>
+		</control>
+		<include>Global_Filter</include>
+		
+		<include>Object_MovieInfoLines</include>-->
+		
+		<include>Viewtype_Files</include>
+		<include>Viewtype_List</include>
+		<include>Viewtype_Poster</include>
+		<include>Viewtype_Episode</include>
+		<include>Viewtype_Wall</include><!--  54  -->
+		
+		<include>Trailer</include>
+		<include>Trailer_TVLandscape</include>
+		<include>Trailer_16x9</include>
+		<include>Trailer_Files</include>
+		<include>Trailer_Poster</include>
+		
+		<include>Music_Global_TopRight</include>
+		<include>Music_Global_Showcase</include>
+		<include>Music_Global_LowerRight</include>
+		
+		
+		<control type="image"><!-- Floor -->
+			<posx>0</posx>
+			<posy>650</posy>
+			<width>1280</width>
+			<height>70</height>
+			<texture>backdrops/test2.png</texture>
+			<visible>ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews)</visible>
+			<include>Animation_ViewOptions_whitebar</include>
+		</control>
+		<control type="label">
+			<include>WindowID</include>
+			<label>MyVideo.xml</label>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
+
+		<control type="grouplist" id="7000">
+			<visible>!Skin.HasSetting(LockViews)</visible>
+			<include>WindowMenuVars</include>
+			<posy>680</posy>
+			
+			<control type="button" id="20">
+				<include>WindowMenuButton</include>
+				<label>$INFO[Container.ViewMode]</label>
+				<onclick>Container.NextViewMode</onclick>
+								
+			</control>
+			<control type="button" id="3">
+				<include>WindowMenuButton</include>
+				<label>103</label>
+						
+			</control>
+			<control type="togglebutton" id="14">
+				<include>WindowMenuButton</include>
+				<!-- LOC -->
+				<label>$LOCALIZE[31096]</label>
+				<!-- LOC -->
+				<altlabel>$LOCALIZE[31097]</altlabel>				
+							
+			</control>
+			<control type="button" id="8">
+				<include>WindowMenuButton</include>
+				<label>137</label>
+							
+			</control>	
+			<control type="button" id="19">
+				<include>WindowMenuButton</include>
+				<label>587</label>
+								
+			</control>
+		</control>
+
+		<control type="grouplist">
+			<visible>!Skin.HasSetting(LockViews)</visible>
+			<include>WindowMenuVars</include>
+			<posy>658</posy>
+			<control type="button" id="40">
+				<include>WindowMenuLabel</include>
+				<!-- LOC -->
+				<label>$LOCALIZE[31088]</label>
+							
+			</control>
+			<control type="button" id="41">
+				<include>WindowMenuLabel</include>
+				<!-- LOC -->
+				<label>$LOCALIZE[31090]</label>
+							
+			</control>
+			<control type="button" id="42">
+				<include>WindowMenuLabel</include>
+				<!-- LOC -->
+				<label>$LOCALIZE[31098]</label>
+							
+			</control>
+			<control type="button" id="43">
+				<include>WindowMenuLabel</include>
+				<!-- LOC -->
+				<label>$LOCALIZE[31099]</label>
+						
+			</control>	
+			<control type="button" id="44">
+				<include>WindowMenuLabel</include>
+				<!-- LOC -->
+				<label>$LOCALIZE[31099]</label>
+								
+			</control>				
+		</control>
+		
+		<!--<include>Global_Time</include>
+		<include>Global_Heading</include>		
+		<include>Global_RSS</include>-->
+		
+		<include>Object_DebugGrid</include>
+
+	</controls>	
+</window>

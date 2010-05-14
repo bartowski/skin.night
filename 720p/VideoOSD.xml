@@ -1,0 +1,358 @@
+<window type="dialog" id="2901">
+	<defaultcontrol always="true">602</defaultcontrol>
+	<controls>
+		<control type="group">
+			<visible>!Window.IsActive(145)</visible>
+			<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<texture>osd/osd_back.png</texture>
+				<aspectratio>scale</aspectratio>
+			</control>
+			
+			<control type="group" id="200">
+				<posx>417</posx>
+				<posy>4</posy>
+				
+				<control type="button" id="700">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>45</width>
+					<height>45</height>
+					<label>298</label>
+					<font>-</font>
+					<texturefocus>confluence/OSDBookMarksFO.png</texturefocus>
+					<texturenofocus>confluence/OSDBookMarksNF.png</texturenofocus>
+					<onleft>706</onleft>
+					<onright>701</onright>
+					<onup>600</onup>
+					<ondown>600</ondown>
+					<onclick>ActivateWindow(125)</onclick>
+				</control>
+				<control type="button" id="701">
+					<posx>60</posx>
+					<posy>0</posy>
+					<width>45</width>
+					<height>45</height>
+					<label>13396</label>
+					<font>-</font>
+					<texturefocus>confluence/OSDAudioFO.png</texturefocus>
+					<texturenofocus>confluence/OSDAudioNF.png</texturenofocus>
+					<onleft>700</onleft>
+					<onright>702</onright>
+					<onup>600</onup>
+					<ondown>600</ondown>
+					<onclick>ActivateWindow(124)</onclick>
+				</control>
+				<control type="button" id="702">
+					<posx>120</posx>
+					<posy>0</posy>
+					<width>45</width>
+					<height>45</height>
+					<label>13395</label>
+					<font>-</font>
+					<texturefocus>confluence/OSDVideoFO.png</texturefocus>
+					<texturenofocus>confluence/OSDVideoNF.png</texturenofocus>
+					<onleft>701</onleft>
+					<onright>703</onright>
+					<onup>601</onup>
+					<ondown>601</ondown>
+					<onclick>ActivateWindow(123)</onclick>
+				</control>
+			</control>
+			<control type="image" id="11">
+				<description>separator image</description>
+				<posx>567</posx>
+				<posy>25</posy>
+				<width>150</width>
+				<height>1</height>
+				<colordiffuse>66FFFFFF</colordiffuse>
+				<texture>separator2.png</texture>
+			</control>
+			<control type="group" id="201">
+				<posx>718</posx>
+				<posy>4</posy>
+				<control type="button" id="706">
+					<description>Subtitles Menu</description>
+					<posx>6</posx>
+					<posy>6</posy>
+					<width>32</width>
+					<height>32</height>
+					<label>-</label>
+					<font>-</font>
+					<texturenofocus>confluence/osd-subs-nofocus.png</texturenofocus>
+					<texturefocus>confluence/osd-subs-focus.png</texturefocus>
+					<onclick>Close</onclick>
+					<!--<onclick>RunScript($INFO[Skin.String(SubsScript_Path)])</onclick>-->
+					<onclick>XBMC.RunScript($INFO[Skin.String(SubtitleScript_Path)])</onclick>
+					<onleft>705</onleft>
+					<onright>700</onright>
+					<onup>600</onup>
+					<ondown>600</ondown>
+					<visible>Skin.HasSetting(SubsScript_Enable)</visible>
+				</control>
+				<control type="button" id="704">
+					<posx>60</posx>
+					<posy>0</posy>
+					<width>45</width>
+					<height>45</height>
+					<label>31355</label>
+					<font>-</font>
+					<texturefocus>confluence/OSDDvdFO.png</texturefocus>
+					<texturenofocus>confluence/OSDDvdNF.png</texturenofocus>
+					<onleft>703</onleft>
+					<onright>705</onright>
+					<onup>605</onup>
+					<ondown>605</ondown>
+					<onclick>PlayerControl(ShowVideoMenu)</onclick>
+					<enable>VideoPlayer.HasMenu</enable>
+					<animation effect="fade" start="100" end="50" time="100" condition="!VideoPlayer.HasMenu">Conditional</animation>
+				</control>
+				<control type="button" id="705">
+					<posx>120</posx>
+					<posy>0</posy>
+					<width>45</width>
+					<height>45</height>
+					<label>264</label>
+					<font>-</font>
+					<texturefocus>confluence/OSDRecordFO.png</texturefocus>
+					<texturenofocus>confluence/OSDRecordNF.png</texturenofocus>
+					<onleft>704</onleft>
+					<onright>700</onright>
+					<onup>605</onup>
+					<ondown>605</ondown>
+					<onclick>XBMC.PlayerControl(record)</onclick>
+					<enable>Player.CanRecord</enable>
+					<animation effect="fade" start="100" end="50" time="100" condition="!Player.CanRecord">Conditional</animation>
+				</control>
+			</control>
+			<control type="group" id="100">
+				<posx>474</posx>
+				<posy>40</posy>
+				<control type="button" id="600">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>50</width>
+					<height>50</height>
+					<label>210</label>
+					<font>-</font>
+					<texturefocus>confluence/OSDPrevTrackFO.png</texturefocus>
+					<texturenofocus>confluence/OSDPrevTrackNF.png</texturenofocus>
+					<onleft>605</onleft>
+					<onright>601</onright>
+					<onup>701</onup>
+					<ondown>701</ondown>
+					<onclick>PlayerControl(Previous)</onclick>
+				</control>
+				<control type="button" id="601">
+					<posx>60</posx>
+					<posy>0</posy>
+					<width>50</width>
+					<height>50</height>
+					<label>31354</label>
+					<font>-</font>
+					<texturefocus>confluence/OSDRewindFO.png</texturefocus>
+					<texturenofocus>confluence/OSDRewindNF.png</texturenofocus>
+					<onleft>600</onleft>
+					<onright>602</onright>
+					<onup>702</onup>
+					<ondown>702</ondown>
+					<onclick>PlayerControl(Rewind)</onclick>
+				</control>
+				<control type="togglebutton" id="602">
+					<posx>120</posx>
+					<posy>0</posy>
+					<width>50</width>
+					<height>50</height>
+					<label>31351</label>
+					<altlabel>208</altlabel>
+					<font>-</font>
+					<texturefocus>confluence/OSDPauseFO.png</texturefocus>
+					<texturenofocus>confluence/OSDPauseNF.png</texturenofocus>
+					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+					<alttexturefocus>confluence/OSDPlayFO.png</alttexturefocus>
+					<alttexturenofocus>confluence/OSDPlayNF.png</alttexturenofocus>
+					<onleft>601</onleft>
+					<onright>603</onright>
+					<onup>702</onup>
+					<ondown>702</ondown>
+					<onclick>PlayerControl(Play)</onclick>
+				</control>
+				<control type="button" id="603">
+					<posx>180</posx>
+					<posy>0</posy>
+					<width>50</width>
+					<height>50</height>
+					<label>31352</label>
+					<font>-</font>
+					<texturefocus>confluence/OSDStopFO.png</texturefocus>
+					<texturenofocus>confluence/OSDStopNF.png</texturenofocus>
+					<onleft>602</onleft>
+					<onright>604</onright>
+					<onup>703</onup>
+					<ondown>703</ondown>
+					<onclick>PlayerControl(Stop)</onclick>
+				</control>
+				<control type="button" id="604">
+					<posx>240</posx>
+					<posy>0</posy>
+					<width>50</width>
+					<height>50</height>
+					<label>31353</label>
+					<font>-</font>
+					<texturefocus>confluence/OSDForwardFO.png</texturefocus>
+					<texturenofocus>confluence/OSDForwardNF.png</texturenofocus>
+					<onleft>603</onleft>
+					<onright>605</onright>
+					<onup>703</onup>
+					<ondown>703</ondown>
+					<onclick>PlayerControl(Forward)</onclick>
+				</control>
+				<control type="button" id="605">
+					<posx>300</posx>
+					<posy>0</posy>
+					<width>50</width>
+					<height>50</height>
+					<label>209</label>
+					<font>-</font>
+					<texturefocus>confluence/OSDNextTrackFO.png</texturefocus>
+					<texturenofocus>confluence/OSDNextTrackNF.png</texturenofocus>
+					<onleft>604</onleft>
+					<onright>600</onright>
+					<onup>704</onup>
+					<ondown>704</ondown>
+					<onclick>PlayerControl(Next)</onclick>
+				</control>
+			</control>
+			<control type="group">
+	<posx>-320</posx>
+	<posy>560</posy>
+		<control type="label" id="0">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1920</width>
+			<align>center</align>
+			<aligny>top</aligny>
+			<label>$LOCALIZE[112]</label>
+			<font>Font_Bartowski_BigMusic</font>
+			<textcolor>33ffffff</textcolor>
+			<visible>player.paused</visible>
+		</control>
+		<control type="label" id="0">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1920</width>
+			<align>center</align>
+			<aligny>top</aligny>
+			<label>FFx2</label>
+			<font>Font_Bartowski_BigMusic</font>
+			<textcolor>33ffffff</textcolor>
+			<visible>player.forwarding2x</visible>
+		</control>
+		<control type="label" id="0">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1920</width>
+			<align>center</align>
+			<aligny>top</aligny>
+			<label>FFx4</label>
+			<font>Font_Bartowski_BigMusic</font>
+			<textcolor>33ffffff</textcolor>
+			<visible>player.forwarding4x</visible>
+		</control>
+		<control type="label" id="0">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1920</width>
+			<align>center</align>
+			<aligny>top</aligny>
+			<label>FFx8</label>
+			<font>Font_Bartowski_BigMusic</font>
+			<textcolor>33ffffff</textcolor>
+			<visible>player.forwarding8x</visible>
+		</control>
+		<control type="label" id="0">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1920</width>
+			<align>center</align>
+			<aligny>top</aligny>
+			<label>FFx16</label>
+			<font>Font_Bartowski_BigMusic</font>
+			<textcolor>33ffffff</textcolor>
+			<visible>player.forwarding16x</visible>
+		</control>
+		<control type="label" id="0">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1920</width>
+			<align>center</align>
+			<aligny>top</aligny>
+			<label>FFx32</label>
+			<font>Font_Bartowski_BigMusic</font>
+			<textcolor>33ffffff</textcolor>
+			<visible>player.forwarding32x</visible>
+		</control>
+		<control type="label" id="0">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1920</width>
+			<align>center</align>
+			<aligny>top</aligny>
+			<label>RWx2</label>
+			<font>Font_Bartowski_BigMusic</font>
+			<textcolor>33ffffff</textcolor>
+			<visible>player.rewinding2x</visible>
+		</control>
+		<control type="label" id="0">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1920</width>
+			<align>center</align>
+			<aligny>top</aligny>
+			<label>RWx4</label>
+			<font>Font_Bartowski_BigMusic</font>
+			<textcolor>33ffffff</textcolor>
+			<visible>player.rewinding4x</visible>
+		</control>
+		<control type="label" id="0">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1920</width>
+			<align>center</align>
+			<aligny>top</aligny>
+			<label>RWx8</label>
+			<font>Font_Bartowski_BigMusic</font>
+			<textcolor>33ffffff</textcolor>
+			<visible>player.rewinding8x</visible>
+		</control>
+		<control type="label" id="0">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1920</width>
+			<align>center</align>
+			<aligny>top</aligny>
+			<label>RWx16</label>
+			<font>Font_Bartowski_BigMusic</font>
+			<textcolor>33ffffff</textcolor>
+			<visible>player.rewinding16x</visible>
+		</control>
+		<control type="label" id="0">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1920</width>
+			<align>center</align>
+			<aligny>top</aligny>
+			<label>RWx32</label>
+			<font>Font_Bartowski_BigMusic</font>
+			<textcolor>33ffffff</textcolor>
+			<visible>player.rewinding32x</visible>
+		</control>
+	</control>
+		</control>
+	</controls>
+</window>

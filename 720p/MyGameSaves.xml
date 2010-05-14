@@ -1,0 +1,59 @@
+<!--Empty-->
+
+<window id="35">
+	<defaultcontrol always="yes">50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<coordinates>
+		<system>1</system>
+		<posx>360</posx>
+		<posy>120</posy>
+	</coordinates>
+
+	<controls>
+		<include>Global_Background</include>
+		<include>Global_Filter</include>
+
+		<include>Viewtype_List</include>
+		<control type="image" id="0">
+			<description>Back Panel</description>
+			<posx>-30</posx>
+			<posy>-30</posy>
+			<width>620</width>
+			<height>500</height>
+			<texture>favourites/favourites_panel.png</texture>
+			<colordiffuse>FavListPanel</colordiffuse>
+		</control>
+
+		<control type="grouplist" id="9000">
+			<posx>10</posx>
+			<posy>40</posy>
+			<width>150</width>
+			<height>480</height>
+			<itemgap>2</itemgap>
+			<onleft>50</onleft>
+			<onright>50</onright>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<orientation>vertical</orientation>
+			<control type="button" id="2">
+				<description>View</description>
+				<width>150</width>
+			</control>
+			<control type="button" id="3">
+				<description>Sort</description>
+				<width>150</width>
+			</control>
+			<control type="togglebutton" id="4">
+				<description>Ascending</description>
+				<width>150</width>
+				<label>$LOCALIZE[584]</label>
+				<altlabel>$LOCALIZE[585]</altlabel>
+			</control>
+		</control>
+
+		<include>Object_DebugGrid</include>
+
+	</controls>
+
+</window>

@@ -1,0 +1,121 @@
+<!--Alaska-->
+
+<window id="501">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<include>Global_Background</include>
+		<control type="largeimage" id="5019">
+			<include>Dimensions_Fullscreen</include>
+			<fadetime>400</fadetime>
+			<texture>$INFO[ListItem.Property(Fanart_Image)]</texture>
+			<include>Animation_CommonFade</include>
+			<visible>!Skin.HasSetting(hidefanart)</visible>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<fadetime>400</fadetime>
+			<texture>backdrops/curtains.png</texture>
+			<include>Animation_CommonFade</include>
+			<visible>IsEmpty(Control.GetLabel(5019))</visible>
+		</control>
+
+		<include>Viewtype_MusicWall</include>
+		<include>Viewtype_JukeBox</include>
+		<include>Viewtype_Files</include>
+		<include>Viewtype_MusicShowcase</include>
+		
+		<control type="label">
+			<posy>330</posy>
+			<label>MyMusicSongs.xml</label>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
+		
+		
+		<include>7000_has_focus</include>
+		<include>Global_Time</include>
+		
+		<control type="image"><!-- Floor -->
+			<posx>0</posx>
+			<posy>650</posy>
+			<width>1280</width>
+			<height>70</height>
+			<texture>backdrops/test2.png</texture>
+			<visible>ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews)</visible>
+			<include>Animation_ViewOptions_whitebar</include>
+		</control>
+		<control type="grouplist" id="7000">
+			<include>WindowMenuVars</include>
+			<visible>!Skin.HasSetting(LockViews)</visible>
+			<posy>680</posy>
+			<control type="button" id="20">
+				<include>WindowMenuButton</include>
+				<label>$INFO[Container.ViewMode]</label>
+				<onclick>Container.NextViewMode</onclick>
+			</control>
+			<control type="togglebutton" id="22">
+				<description>Toggle MoviesFanart</description>
+				<include>WindowMenuButton</include>
+				<label>$LOCALIZE[31086]</label>
+				<altlabel>$LOCALIZE[31094]</altlabel>
+				<onclick>Skin.ToggleSetting(MusicShowcaseFanart)</onclick>
+				<selected>Skin.HasSetting(MusicShowcaseFanart)</selected>
+				<visible>Control.IsVisible(58)</visible>
+			</control>
+			<control type="button" id="3">
+				<include>WindowMenuButton</include>
+				<label>103</label>
+			</control>
+			<control type="button" id="21">
+				<include>WindowMenuButton</include>
+				<label>$LOCALIZE[31077]</label>
+				<onclick>ReplaceWindow(MusicLibrary)</onclick>
+			</control>
+			<control type="radiobutton" id="16">
+				<include>WindowMenuButton</include>
+				<label>589</label>
+			</control>	
+			<control type="button" id="9">
+				<include>WindowMenuButton</include>
+				<label>$LOCALIZE[31087]</label>
+			</control>
+		</control>
+
+		<control type="grouplist">
+			<include>WindowMenuVars</include>
+			<visible>!Skin.HasSetting(LockViews)</visible>
+			<posy>660</posy>
+			<control type="button" id="40">
+				<include>WindowMenuLabel</include>
+				<label>$LOCALIZE[31088]</label>
+			</control>
+			<control type="button" id="45">
+				<include>WindowMenuLabel</include>
+				<label>$LOCALIZE[31089]</label>
+				<visible>Control.IsVisible(58)</visible>		
+			</control>
+			<control type="button" id="41">
+				<include>WindowMenuLabel</include>
+				<label>$LOCALIZE[31090]</label>
+			</control>
+			<control type="button" id="42">
+				<include>WindowMenuLabel</include>
+				<label>$LOCALIZE[31091]</label>
+			</control>
+			<control type="button" id="43">
+				<include>WindowMenuLabel</include>
+				<label>$LOCALIZE[31092]</label>
+			</control>	
+			<control type="button" id="44">
+				<include>WindowMenuLabel</include>
+				<label>$LOCALIZE[31093]</label>
+			</control>				
+		</control>
+		
+		<!--<include>Global_Time</include>
+		<include>Global_RSS</include>-->
+		
+		<include>Object_DebugGrid</include>
+	
+	</controls>
+</window>

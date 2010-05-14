@@ -1,0 +1,271 @@
+<!--Alaska-->
+
+<includes>
+	<!-- File includes -->
+	<include file="Defaults.xml" />
+	<include file="Viewtype_Episode.xml" />
+	<include file="Viewtype_Poster.xml" />
+	<include file="Viewtype_PictureGrid.xml" />
+	<include file="Viewtype_JukeBox.xml" />
+	<include file="Viewtype_MusicWall.xml" />
+	<include file="Viewtype_List.xml" />
+	<include file="Viewtype_Landscape.xml" />
+	<include file="Viewtype_Fanart.xml" />
+	<include file="Viewtype_Files.xml" />
+	<include file="Viewtype_Showcase.xml" />
+	<include file="Viewtype_MusicShowcase.xml" />
+	<include file="Viewtype_PanelLandscape.xml" />
+	<include file="Viewtype_Banner_Panel.xml" />
+	<include file="Viewtype_Songs.xml" />
+	<include file="Viewtype_16x9.xml" />
+	<include file="Viewtype_Wall.xml" />
+	<include file="Viewtype_WallPanel.xml" />
+	<include file="Viewtype_addons.xml" />
+	<include file="Includes_MediaFlags.xml" />
+	<include file="Includes_Animations.xml" />
+	<include file="Includes_Trailer.xml" />
+	<include file="Includes_Objects.xml" />
+	<include file="Includes_Backgrounds.xml" />
+	<include file="Includes_Home_1.xml" />
+	<include file="IncludesHomeRecentlyAdded.xml" />
+	<include file="Includes_Music_Global.xml" />
+	
+	
+	<include name="ButtonHomeSubCommonValues">
+		<width>600</width>
+		<height>71</height>
+		<textoffsetx>20</textoffsetx>
+		<textwidth>600</textwidth>
+		<posx>150</posx>
+		<posy>91</posy>
+		<font>Font_Bartowski_MainMenu</font>
+		<textcolor>38b8b7b7</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+	</include>
+	<include file="IncludesCodecFlagging.xml" />
+	<!-- Debug objects -->
+	<include name="Object_DebugGrid">
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture>common/debuggrid.png</texture>
+			<visible>Skin.HasSetting(debuggrid)</visible>
+		</control>
+	</include>
+	<include name="DialogID">
+		<posx>10</posx>
+		<posy>35</posy>
+		<font>Large</font>
+		<textcolor>TextDisabled</textcolor>
+		<align>left</align>
+	</include>
+	<include name="WindowID">
+		<posx>10</posx>
+		<posy>10</posy>
+		<font>Large</font>
+		<textcolor>TextDisabled</textcolor>
+		<align>left</align>
+	</include>
+	<!-- Global dimensions -->
+	<include name="Dimensions_Fullscreen">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+	</include>
+	<include name="7000_has_focus">
+		<control type="image">
+			<visible>!Skin.HasSetting(LockViews) + [ControlGroup(7000).HasFocus | Window.IsActive(106) | Window.IsActive(111)]</visible>
+			<include>Dimensions_Fullscreen</include>
+			<texture>common/7000_focus.png</texture>
+			<animation effect="fade" start="0" end="100" time="600">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
+		</control>
+		
+	</include>
+	<!-- Global objects -->
+	<!--<include name="Global_Background">
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture>common/white.png</texture>
+			<colordiffuse>BackgroundColor</colordiffuse>
+		</control>
+	</include>-->
+	
+	<!--<include name="Global_ContextFilter">
+		<control type="group">
+			<visible>ControlGroup(7001).HasFocus | ControlGroup(7000).HasFocus | Window.IsActive(100) | Window.IsActive(103) | Window.IsActive(111) | Window.IsActive(134)</visible>
+			<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
+			<control type="image">
+				<include>Dimensions_Fullscreen</include>
+				<texture>common/white.png</texture>
+				<colordiffuse>BackgroundColor</colordiffuse>
+			</control>
+			<control type="image">
+				<include>Dimensions_Fullscreen</include>
+				<texture>backdrops/filter.png</texture>
+				<colordiffuse>BackgroundFilterColor</colordiffuse>
+			</control>
+		</control>
+	</include>-->
+
+	<include name="Global_Time">
+		<control type="group">
+			<posx>1260</posx>
+			<posy>10</posy>
+			<include>Animation_BackdropFade</include>
+			<visible>!Skin.HasSetting(no_clock) + [Window.IsActive(Home) | [ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews)] | Window.IsActive(106)]</visible>
+				<control type="image"> 
+					<posx>-280</posx>
+					<posy>-10</posy>   
+					<width>357</width>     
+					<height>318</height> 
+					<texture>common/time_gradient_back.png</texture>
+					<colordiffuse>ff15efd9</colordiffuse>
+				</control>
+				<control type="label">
+					<width>300</width>
+					<font>Font_Time</font>
+					<textcolor>mainblue</textcolor>
+					<info>System.Time(hh:mm xx)</info>
+					<align>right</align>
+				</control>
+				<control type="label">
+					<posy>40</posy>
+					<width>300</width>
+					<font>Font_Date</font>
+					<textcolor>white</textcolor>
+					<info>System.Date</info>
+					<align>right</align>
+				</control>
+		</control>
+	</include>
+
+	<include name="Global_HeadingSectionVars">
+		<width>960</width>
+		<font>Font_Bartowski_Movies_Title</font>
+		<textcolor>white</textcolor>
+		<align>left</align>
+		<include>Animation_SlideDownFadeOut</include>
+	</include>
+	<include name="Global_HeadingDetailVars">
+		<posy>40</posy>
+		<width>800</width>
+		<font>Font_Date</font>
+		<textcolor>Date</textcolor>
+		<align>left</align>
+		<include>Animation_SlideDownFadeOut</include>
+	</include>
+	
+	<include name="ButtonInfoDialogsCommonValues"><!--movie info bottom buttons-->
+		<height>40</height>
+		<width>170</width>
+		<textoffsetx>20</textoffsetx>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>Font_Bartowski_Press_S</font>
+		<textcolor>MainBlack</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<texturefocus border="5">confluence/button-focus.png</texturefocus>
+		<texturenofocus border="5">button-nofocus.png</texturenofocus>
+		<pulseonselect>false</pulseonselect>
+	</include>
+	<include name="Global_RSS">
+		<visible>!system.getbool(lookandfeel.enablerssfeeds) + Window.IsActive(home)</visible>
+		<control type="image"> 
+			<posx>0</posx>
+			<posy>528</posy>   
+			<width>1280</width>     
+			<height>192</height> 
+			<texture>common/rss_back.png</texture>
+			<colordiffuse>ff15efd9</colordiffuse>
+			<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+		</control>
+		<control type="rss" id="1">
+			<posx>0</posx>
+			<posy>690</posy>
+			<width>1280</width>
+			<height>40</height>
+			<aligny>bottom</aligny>
+			<font>Font_RSS_Bartowski</font>
+			<textcolor>mainblue</textcolor>
+			<headlinecolor>white</headlinecolor>
+			<highlightcolor>white</highlightcolor>
+			<titlecolor>mainblue</titlecolor>
+			<urlset>1</urlset>
+			<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+		</control>
+	</include>
+	
+	
+	<!-- Window menus -->
+	<include name="WindowMenuVars">
+		<width>1120</width>
+		<height>40</height>
+		<posx>100</posx>
+		<onup>50</onup>
+		<ondown>50</ondown>
+		<itemgap>0</itemgap>
+		<align>center</align>
+		<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus</visible>
+		<include>Animation_ViewOptions</include>
+		<orientation>horizontal</orientation>
+	</include>
+	<include name="WindowMenuButton">
+		<posx>0</posx>
+		<posy>30</posy>
+		<width>160</width>
+		<height>30</height>
+		<align>center</align>
+		<font>Font_Bartowski_Smaller_MenuTitle</font>
+		<textcolor>ff000000</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<texturefocus border="5">confluence/button-focus.png</texturefocus>
+		<alttexturenofocus>-</alttexturenofocus>
+		<alttexturefocus>confluence/button-focus.png</alttexturefocus>
+		<textureradiofocus>-</textureradiofocus>
+		<textureradionofocus>-</textureradionofocus>
+	</include>
+	<include name="WindowMenuRadioButton">
+		<posx>0</posx>
+		<posy>30</posy>
+		<width>200</width>
+		<height>30</height>
+		<align>center</align>
+		<radioposx>45</radioposx>
+		<radioposy>30</radioposy>
+		<radioheight>7</radioheight>
+		<radiowidth>100</radiowidth>
+		<font>Font_MenuValue</font>
+		<textcolor>MenuValue</textcolor>
+		<textureradioon>common/radioUnderline.png</textureradioon>
+		<textureradiooff>-</textureradiooff>
+		<colordiffuse>FlagDiffuse</colordiffuse>
+	</include>
+	<include name="WindowMenuLabel">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>160</width>
+		<height>30</height>
+		<align>center</align>
+		<font>Font_Bartowski_Smaller_MenuTitle</font>
+		<textcolor>ff198f8f</textcolor>
+		<!--<shadowcolor>black</shadowcolor>-->
+		<aligny>bottom</aligny>
+	</include>
+	<!-- Sub Menu -->
+	<include name="ResetItems">
+		<onfocus>Skin.Reset(programitems)</onfocus>
+		<onfocus>Skin.Reset(videoitems)</onfocus>
+		<onfocus>Skin.Reset(musicitems)</onfocus>
+		<onfocus>Skin.Reset(movieitems)</onfocus>
+		<onfocus>Skin.Reset(tvitems)</onfocus>
+		<onfocus>Skin.Reset(pictureitems)</onfocus>
+		<onfocus>Skin.Reset(weatheritems)</onfocus>
+		<onfocus>Skin.Reset(settingitems)</onfocus>
+	</include>
+	<!-- Player OSD Status -->
+	
+
+</includes>

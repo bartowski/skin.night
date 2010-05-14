@@ -1,0 +1,34 @@
+Update 5/10/2010
+  -Finished up addon settings dialog
+  -Fixed/Finished the cast info selction for Video Info screen
+
+Update 5/9/2010
+  -More small tweaks
+  -Added a glow around big focused image in Landscpe view
+  -Hide Landscape tv show level when banners selected...
+  -Users cannot check both Poster and Banner option
+  -Finished basic weather section, waiting till I know merge version of script works before doing more
+  -Finished Profile section
+  -Fixed dialogbusy.xml background
+
+Update 5/7/2010
+  -Bunch of small tweaks
+  -Added a glow around big focused image in episode view
+  -Finally Figured out my weather fanart error...
+  -Added scrollbar to music-showcase
+
+Update 5/6/2010
+  -Skinned master lock dialog
+  -File view for addons now is a seperate .xml
+  -removed Alaska's skin debugging skin setting 
+  -Trying out some new VideoOSD icons
+
+Update 5/5/2010
+  -Change Landscape to behave better with PageUp/Page Down
+  -Continued tightening up addon merge stuff
+  -Started adding some default icons
+  -Playing around with a new look for Movie list view
+  -Change cleartART to be detected automatically, no more skin setting
+
+Update 5/4/2010
+  -Fixed List view to be compatitable with pre-merge builds

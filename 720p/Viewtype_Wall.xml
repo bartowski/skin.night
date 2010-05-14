@@ -1,0 +1,216 @@
+<!--Alaska-->
+
+<includes>
+	<include name="wallpanelslantanimation">
+		<animation type="Conditional" condition="true">
+			<effect type="rotatey" start="0,0" end="-30,0" center="0,0" time="0" tween="sine" easing="out" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="zoom" time="400" center="640,360" start="100" end="280" delay="600" tween="cubic" easing="in" />
+			<effect type="fade" time="400" center="640,360" start="100" end="0" delay="600" />
+		</animation>
+	</include>
+	
+	<include name="Viewtype_Wall">
+											<!--START ONSCROLLNEXT FAKE THUMBS -->
+	<control type="image">
+		<visible>Control.IsVisible(54)</visible>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<texture>wall/wall_backdrop_may2.png</texture>
+		<aspectratio>stretch</aspectratio>
+		<include>Animation_CommonFade</include>
+	</control>
+
+	
+		<control type="panel" id="54">
+					<visible>!Skin.HasSetting(no_Wall) + [Container.Content(Movies) | Window.IsVisible(VideoFiles)]</visible>
+					<posx>0</posx>
+					<posy>-90</posy><!-- -105 -->
+					<width>1206</width>
+					<height>985</height><!-- 1570  1280 -->
+					<pagecontrol>60</pagecontrol>
+					<scrolltime>400</scrolltime>
+					<orientation>horizontal</orientation>
+					<viewtype label="Wall">Wall</viewtype>
+					<onleft>54</onleft>
+					<onright>54</onright>
+					<onup>7000</onup>
+					<ondown>7000</ondown>
+					<include>wallpanelslantanimation</include>
+					<itemlayout width="120" height="200">
+					<control type="group">
+					<posx>0</posx>
+					<posy>60</posy>
+						<control type="image">
+							<description>Poster</description>
+							<posx>5</posx>
+							<posy>5</posy>
+							<width>116</width>
+							<height>190</height>
+							<info>ListItem.Icon</info>
+							<texture background="true" diffuse="movie-poster/posterview_diffuse.png" />
+							<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+							<colordiffuse>79FFFFFF</colordiffuse>
+							<animation effect="fade" start="100" end="0" time="200" condition="Container(54).HasFocus">Conditional</animation>
+						</control>
+					</control>
+					</itemlayout>
+					<focusedlayout width="120" height="200">
+					<control type="group">
+					<posx>0</posx>
+					<posy>60</posy>
+						<control type="image">
+							<description>Poster</description>
+							<posx>-110</posx>
+							<posy>-110</posy>
+							<width>346</width>
+							<height>420</height>
+							<texture>wall/wall_glow1.png</texture>
+							<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" start="90" end="130" center="auto" time="600" tween="back" easing="out" />
+								<!--<effect type="rotatey" start="0,0" end="50,0" center="0,0" time="0" tween="sine" easing="out" />
+								<effect type="fade" start="0" end="100" time="600" />-->
+							</animation>
+						</control>
+						<control type="image">
+							<description>Poster</description>
+							<posx>5</posx>
+							<posy>5</posy>
+							<width>116</width>
+							<height>190</height>
+							<info>ListItem.Icon</info>
+							<texture background="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
+							<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" start="90" end="130" center="auto" time="600" tween="back" easing="out" />
+								<!--<effect type="rotatey" start="0,0" end="50,0" center="0,0" time="0" tween="sine" easing="out" />
+								<effect type="fade" start="0" end="100" time="600" />-->
+							</animation>
+						</control>
+						<control type="image">
+							<description>Poster</description>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>126</width>
+							<height>200</height>
+							<texture>posterframeF_blur.png</texture>
+							<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" start="90" end="130" center="auto" time="600" tween="back" easing="out" />
+								<!--<effect type="rotatey" start="0,0" end="50,0" center="0,0" time="0" tween="sine" easing="out" />
+								<effect type="fade" start="0" end="100" time="600" />-->
+							</animation>
+						</control>
+					</control>
+					</focusedlayout>
+			</control>
+	
+	
+	<control type="image">
+		<visible>Control.IsVisible(54)</visible>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<texture>wall/wall_lastoverlay.png</texture>
+		<aspectratio>stretch</aspectratio>
+		<include>Animation_CommonFade</include>
+	</control>
+	<control type="label">
+		<posx>1280</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>50</height>
+		<align>right</align>
+		<aligny>center</aligny>
+		<font>Font_Bartowski_Movies_Title</font>
+		<textcolor>ff67ffff</textcolor>
+		<label>[B]$INFO[ListItem.Label][/B]</label>
+		<visible>Control.IsVisible(54) + Window.IsVisible(VideoFiles)</visible>
+	</control>
+	<control type="group">
+		<posx>890</posx>
+		<posy>-40</posy>
+		<visible>!IsEmpty(ListItem.Title) + Container.Content(movies) + Control.IsVisible(54)</visible>
+			<control type="label"><!--Movie title-->
+				<posx>0</posx>
+				<posy>80</posy>
+				<width>360</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_Bartowski_Showcase_Title</font>
+				<textcolor>ff15efd9</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+				<include>Animation_Viewtype_Wall_Title</include>
+				<!--<animation effect="slide" start="500,0" end="0,0" time="400" delay="2200">Visible</animation>-->
+			</control>
+			<control type="label"><!--Duration-->
+				<posx>0</posx>
+				<posy>108</posy>
+				<width>360</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_Bartowski_Showcase_runtime_year</font>
+				<textcolor>ffffffff</textcolor>
+				<label>$INFO[ListItem.Duration]</label>
+				<include>Animation_Viewtype_Wall_UnderInfo</include>
+				<!--<animation effect="slide" start="500,0" end="0,0" time="400" delay="2400">Visible</animation>-->
+			</control>
+			<control type="label"><!--Year-->
+				<posx>0</posx>
+				<posy>131</posy>
+				<width>360</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_Bartowski_Showcase_runtime_year</font>
+				<textcolor>ffffffff</textcolor>
+				<label>$INFO[ListItem.Year]</label>
+				<include>Animation_Viewtype_Wall_UnderInfo</include>
+				<!--<animation effect="slide" start="500,0" end="0,0" time="400" delay="2600">Visible</animation>-->
+			</control>
+			<control type="group">
+				<posx>70</posx>
+				<posy>176</posy>
+				<include>VideoMPAAFlaggingConditions</include>
+				<include>Animation_Viewtype_Wall_UnderInfo</include>
+				<animation effect="zoom" start="80" end="80" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="textbox">
+				<visible>![Container.OnNext | Container.OnPrevious]]</visible>
+				<posx>0</posx>
+				<posy>224</posy>
+				<width>360</width>
+				<height>310</height>
+				<align>left</align>
+				<info>ListItem.Plot</info>
+				<font>Font_Bartowski_Movies_Plot</font>
+				<textcolor>ffffffff</textcolor>
+				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+				<animation effect="fade" start="30" end="100" time="400">Visible</animation>
+				<include>Animation_Viewtype_Wall_Plot</include>
+				<!--<animation effect="slide" start="500,0" end="0,0" time="400" delay="2800">Visible</animation>-->
+			</control>
+	</control>
+		<control type="grouplist">
+			<visible>Control.IsVisible(54) + Container.Content(movies) + !Skin.HasSetting(no_media_flags)</visible>
+			<description>Media Codec Flagging Images</description>
+			<posx>880</posx>
+			<posy>680</posy>
+			<width>380</width>
+			<align>center</align>
+			<itemgap>0</itemgap>
+			<orientation>horizontal</orientation>
+			<include>VideoCodecFlaggingConditions</include>
+			<include>AudioCodecFlaggingConditions</include>
+			<include>AspectCodecFlaggingConditions</include>
+			<include>VideoTypeHackFlaggingConditions</include>
+			<include>Animation_HiddenByInfo</include>
+			<include>Animation_Viewtype_Wall_Fags</include>
+		</control>
+
+	</include>
+</includes>

@@ -1,0 +1,13 @@
+<skin>
+  <defaultresolution>720p</defaultresolution>
+  <defaultresolutionwide>720p</defaultresolutionwide>
+  <version>3.00</version>
+  <effectslowdown>1</effectslowdown>
+  <zoom>1.0</zoom>
+  <debugging>true</debugging>
+<credits>
+	<skinname>Night</skinname>
+    	<name>by mcborzu</name>
+</credits>
+</skin>
+

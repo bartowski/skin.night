@@ -1,0 +1,58 @@
+<!--Alaska-->
+
+<window id="113">
+	<defaultcontrol>901</defaultcontrol>
+	<animation type="WindowOpen" reversible="false">
+		<effect type="zoom" start="80" end="100" center="1580,125" delay="200" easing="out" tween="back" time="300" />
+		<effect type="fade" delay="200" start="0" end="100" time="300" />
+	</animation>
+	<animation type="WindowClose" reversible="false">
+		<effect type="zoom" start="100" end="80" center="1580,125" easing="in" tween="back" time="300" />
+		<effect type="fade" start="100" end="0" time="300" />
+	</animation>
+	<controls>
+
+		<control type="label">
+			<include>WindowID</include>
+			<label>DialogMuteBug.xml</label>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
+
+		<control type="group">
+			<animation effect="slide" end="0,-76" time="400" easing="inout" tween="cubic" condition="Window.IsVisible(101)">Conditional</animation>
+			<posx>900</posx>
+			<posy>-10</posy>
+			<width>707</width>
+			<height>183</height>
+			
+			<control type="image">
+				<posx>322</posx>
+				<posy>10</posy>
+				<width>50</width>
+				<height>50</height>
+				<texture>dialogs/dialog_back.png</texture>
+			</control>
+			<control type="image">
+				<posx>322</posx>
+				<posy>10</posy>
+				<width>50</width>
+				<height>50</height>
+				<texture>dialogs/mute.png</texture>
+				<colordiffuse>ButtonFilterColor</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>310</posx>
+				<posy>20</posy>
+				<width>627</width>
+				<height>51</height>
+				<textcolor>Date</textcolor>
+				<align>right</align>
+				<font>Font_Bartowski_ListView_Season</font>
+				<label>$LOCALIZE[31073]</label>
+			</control>
+		</control>
+
+		<include>Object_DebugGrid</include>
+
+	</controls>
+</window>

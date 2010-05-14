@@ -1,0 +1,484 @@
+<includes>
+	<include name="VideoMediaFlags">
+		<control type="image">
+			<description>Blu-ray Image</description>
+			<width>90</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/bluray.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(ListItem.filename,bluray) | substring(ListItem.filename,blu-ray) | substring(ListItem.filename,brrip)</visible>
+		</control>
+		<control type="image">
+			<description>HDDVD Image</description>
+			<width>120</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/hddvd.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(ListItem.filename,hddvd) | substring(ListItem.filename,hd-dvd)</visible>
+		</control>
+			<control type="image">
+			<description>DVD Image</description>
+			<width>90</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/dvd.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(listitem.filename,sddvd) | substring(listitem.filename,.ifo,Right) | substring(listitem.filename,.img,Right) | substring(listitem.filename,.iso,Right) | substring(listitem.filename,.vob,Right)</visible>
+		</control>
+		<control type="image">
+			<description>HDTV Image</description>
+			<width>90</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/hdtv.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(ListItem.filename,hdtv)</visible>
+		</control>
+		<control type="image">
+			<description>DVDRIP Image</description>
+			<width>90</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/dvdrip.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(ListItem.filename,dvdrip)</visible>
+		</control>
+		<control type="image">
+			<description>DVDR5 Image</description>
+			<width>90</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/dvdr5.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(ListItem.filename,dvdr5) | substring(ListItem.filename,.r5)</visible>
+		</control>
+		<control type="image">
+			<description>DVD SCREENER Image</description>
+			<width>90</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/dvdscreener.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(ListItem.filename,dvdscreener) | substring(ListItem.filename,dvdscr) | substring(ListItem.filename,.screener)</visible>
+		</control>
+		<control type="image">
+			<description>TELESYNC Image</description>
+			<width>90</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/telesync.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(ListItem.filename,telesync) | substring(ListItem.filename,.ts.)</visible>
+		</control>
+		<control type="image">
+			<description>CAM Image</description>
+			<width>90</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/cam.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(ListItem.filename,.CAM)</visible>
+		</control>
+		<control type="image">
+			<description>Video Res Image</description>
+			<width>70</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<texture>$INFO[ListItem.VideoResolution,flagging/VideoResolution/,.png]</texture>
+		</control>
+		<control type="image">
+			<description>Codec Image</description>
+			<width>80</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[ListItem.VideoCodec,flagging/VideoCodec/,.png]</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+		</control>
+	</include>
+	
+	<include name="AudioMediaFlags">
+		<control type="image">
+			<description>MP3 Codec Image</description>
+			<width>80</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[ListItem.AudioCodec,flagging/AudioCodec/,.png]</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+		</control>
+		<control type="image">
+			<description>Audio Channels Image</description>
+			<width>70</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[ListItem.AudioChannels,flagging/AudioChannels/,.png]</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+		</control>
+	</include>
+	
+	<include name="AspectMediaFlags">
+		<control type="image">
+			<description>Aspectratio Image</description>
+			<width>60</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[ListItem.VideoAspect,flagging/AspectRatio/,.png]</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+		</control>
+	</include>
+	
+	<include name="TVRatingMediaFlags">
+		<control type="image">
+			<description>TV Rating</description>
+			<width>70</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[ListItem.MPAA,flagging/Rating/,.png]</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>!IsEmpty(ListItem.MPAA) + [Container.Content(tvshows) | Container.Content(episodes)]</visible>
+		</control>
+		
+		<control type="image">
+			<description>TV Rating</description>
+			<width>70</width><width>80</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/Rating/TV-NA.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>IsEmpty(ListItem.MPAA) + [Container.Content(tvshows) | Container.Content(episodes)]</visible>
+		</control>
+	</include>
+
+	<include name="MPAARatingMediaFlags">
+		<control type="group">
+			<visible>Container.Content(movies)</visible>
+			<width>70</width>
+			<height>60</height>
+			
+			<control type="image">
+				<description>TV Rating</description>
+				<width>70</width>
+				<height>60</height>
+				<aspectratio>keep</aspectratio>
+				<texture>flagging/Rating/MPAA-G.png</texture>
+				<fadetime>MediaFlagsCrossfadeTime</fadetime>
+				<visible>!IsEmpty(ListItem.MPAA) + Container.Content(movies) + substring(ListItem.MPAA,USA:G)</visible>
+			</control>
+			<control type="image">
+				<description>TV Rating</description>
+				<width>70</width>
+				<height>60</height>
+				<aspectratio>keep</aspectratio>
+				<texture>flagging/Rating/MPAA-PG.png</texture>
+				<fadetime>MediaFlagsCrossfadeTime</fadetime>
+				<visible>!IsEmpty(ListItem.MPAA) + Container.Content(movies) + substring(ListItem.MPAA,USA:PG) + !substring(ListItem.MPAA,USA:PG-13)</visible>
+			</control>
+			<control type="image">
+				<description>TV Rating</description>
+				<width>70</width>
+				<height>60</height>
+				<aspectratio>keep</aspectratio>
+				<texture>flagging/Rating/MPAA-13.png</texture>
+				<fadetime>MediaFlagsCrossfadeTime</fadetime>
+				<visible>!IsEmpty(ListItem.MPAA) + Container.Content(movies) + substring(ListItem.MPAA,USA:PG-13)</visible>
+			</control>
+			<control type="image">
+				<description>TV Rating</description>
+				<width>70</width>
+				<height>60</height>
+				<aspectratio>keep</aspectratio>
+				<texture>flagging/Rating/MPAA-17.png</texture>
+				<fadetime>MediaFlagsCrossfadeTime</fadetime>
+				<visible>!IsEmpty(ListItem.MPAA) + Container.Content(movies) + substring(ListItem.MPAA,USA:NC-17)</visible>
+			</control>
+			<control type="image">
+				<description>TV Rating</description>
+				<width>70</width>
+				<height>60</height>
+				<aspectratio>keep</aspectratio>
+				<texture>flagging/Rating/MPAA-R.png</texture>
+				<fadetime>MediaFlagsCrossfadeTime</fadetime>
+				<visible>!IsEmpty(ListItem.MPAA) + Container.Content(movies) + substring(ListItem.MPAA,USA:R)</visible>
+			</control>
+			<control type="image">
+				<description>TV Rating</description>
+				<width>70</width>
+				<height>60</height>
+				<aspectratio>keep</aspectratio>
+				<texture>flagging/Rating/MPAA-U.png</texture>
+				<fadetime>MediaFlagsCrossfadeTime</fadetime>
+				<visible>[IsEmpty(ListItem.MPAA) + Container.Content(movies)] | [Container.Content(movies) + substring(ListItem.MPAA,USA:Unrated)]</visible>
+			</control>
+		</control>
+	</include>	
+	
+	<include name="OFLCRatingMediaFlags">
+		<control type="group">
+		<visible>Skin.HasSetting(UseOFLCRatingFlags) + Container.Content(movies)</visible>
+		<width>70</width>
+		<height>60</height>
+			<control type="image">
+				<description>TV Rating</description>
+				<width>70</width>
+				<height>60</height>
+				<aspectratio>keep</aspectratio>
+				<texture>flagging/Rating/OFLC-G.png</texture>
+				<fadetime>MediaFlagsCrossfadeTime</fadetime>
+				<visible>!IsEmpty(ListItem.MPAA) + Container.Content(movies) + substring(ListItem.MPAA,Australia:G)</visible>
+			</control>
+			<control type="image">
+				<description>TV Rating</description>
+				<width>70</width>
+				<height>60</height>
+				<aspectratio>keep</aspectratio>
+				<texture>flagging/Rating/OFLC-PG.png</texture>
+				<fadetime>MediaFlagsCrossfadeTime</fadetime>
+				<visible>!IsEmpty(ListItem.MPAA) + Container.Content(movies) + substring(ListItem.MPAA,Australia:PG)</visible>
+			</control>
+			<control type="image">
+				<description>TV Rating</description>
+				<width>70</width>
+				<height>60</height>
+				<aspectratio>keep</aspectratio>
+				<texture>flagging/Rating/OFLC-M.png</texture>
+				<fadetime>MediaFlagsCrossfadeTime</fadetime>
+				<visible>!IsEmpty(ListItem.MPAA) + Container.Content(movies) + substring(ListItem.MPAA,Australia:M) + !substring(ListItem.MPAA,Australia:MA)</visible>
+			</control>
+			<control type="image">
+				<description>TV Rating</description>
+				<width>70</width>
+				<height>60</height>
+				<aspectratio>keep</aspectratio>
+				<texture>flagging/Rating/OFLC-MA.png</texture>
+				<fadetime>MediaFlagsCrossfadeTime</fadetime>
+				<visible>!IsEmpty(ListItem.MPAA) + Container.Content(movies) + substring(ListItem.MPAA,Australia:MA)</visible>
+			</control>
+			<control type="image">
+				<description>TV Rating</description>
+				<width>70</width>
+				<height>60</height>
+				<aspectratio>keep</aspectratio>
+				<texture>flagging/Rating/OFLC-R.png</texture>
+				<fadetime>MediaFlagsCrossfadeTime</fadetime>
+				<visible>!IsEmpty(ListItem.MPAA) + Container.Content(movies) + substring(ListItem.MPAA,Australia:R)</visible>
+			</control>
+			<control type="image">
+				<description>TV Rating</description>
+				<width>70</width>
+				<height>60</height>
+				<aspectratio>keep</aspectratio>
+				<texture>flagging/Rating/MPAA-U.png</texture>
+				<fadetime>MediaFlagsCrossfadeTime</fadetime>
+				<visible>[IsEmpty(ListItem.MPAA) + Container.Content(movies)]</visible>
+			</control>
+		</control>	
+	</include>
+	
+	<include name="UserRatingMediaFlags">
+		<control type="group">
+		<width>80</width>
+		<height>60</height>
+		<visible>!IsEmpty(ListItem.Rating) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)]</visible>
+		
+			<control type="image">
+				<description>User Rating Image</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>80</width>
+				<height>60</height>
+				<aspectratio>keep</aspectratio>
+				<texture>flagging/Rating/imdb_frame.png</texture>
+				<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			</control>
+			
+			<control type="label">
+				<description>User Rating text</description>
+				<posx>26</posx>
+				<posy>0</posy>
+				<width>60</width>
+				<height>60</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>DefaultFont</font>
+				<textcolor>MediaInfoContentColor</textcolor>
+				<shadowcolor>ShadowColor</shadowcolor>
+				<label>$INFO[ListItem.Rating]</label>
+				<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			</control>
+		</control>
+	</include>
+	
+	<include name="StudioMediaFlag">
+		<control type="image">
+			<width>100</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<texture>$INFO[ListItem.Studio,flagging/Studios/,.png]</texture>
+			<visible>!Skin.HasSetting(HideMovieStudioFlags) + Container.Content(movies)</visible>
+			<include>MediaFlagFadeAnim</include>
+		</control>
+		
+		<control type="image">
+			<width>100</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<texture>$INFO[ListItem.Studio,flagging/Studios/,.png]</texture>
+			<visible>!Skin.HasSetting(HideTVStudioFlags) + [Container.Content(tvshows) | Container.Content(episodes)]</visible>
+			<include>MediaFlagFadeAnim</include>
+		</control>
+	</include>
+	
+	<include name="VisualisationMediaFlags">
+		<control type="image">
+			<description>Audio Codec Image</description>
+			<width>90</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[VideoPlayer.AudioCodec,flagging/AudioCodec/,.png]</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+		</control>
+		<control type="image">
+			<description>Audio Channels Image</description>
+			<width>90</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[VideoPlayer.AudioChannels,flagging/AudioChannels/,.png]</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+		</control>
+	</include>
+	
+	<include name="FullscreenMediaFlags">
+		
+		<control type="image">
+			<description>Video Res Image</description>
+			<width>90</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<texture>$INFO[VideoPlayer.VideoResolution,flagging/VideoResolution/,.png]</texture>
+		</control>
+		<control type="image">
+			<description>Video Codec Image</description>
+			<width>90</width>
+			<height>60</height>
+			<aspectratio>scale</aspectratio>
+			<texture>$INFO[VideoPlayer.VideoCodec,flagging/VideoCodec/,.png]</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+		</control>
+		<control type="image">
+			<description>Audio Codec Image</description>
+			<width>90</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[VideoPlayer.AudioCodec,flagging/AudioCodec/,.png]</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+		</control>
+		<control type="image">
+			<description>Audio Channels Image</description>
+			<width>90</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[VideoPlayer.AudioChannels,flagging/AudioChannels/,.png]</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+		</control>
+		<control type="image">
+			<description>TV Rating</description>
+			<width>90</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[VideoPlayer.MPAA,flagging/Rating/,.png]</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>!IsEmpty(VideoPlayer.MPAA) + VideoPlayer.Content(episodes)</visible>
+		</control>
+		<control type="image">
+			<description>TV Rating</description>
+			<width>90</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/Rating/TV-NA.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>IsEmpty(VideoPlayer.MPAA) + VideoPlayer.Content(episodes)</visible>
+		</control>
+		<control type="image">
+			<description>TV Rating</description>
+			<width>90</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/Rating/MPAA-G.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>!IsEmpty(VideoPlayer.MPAA) + VideoPlayer.Content(Movies) + substring(VideoPlayer.MPAA,USA:G)</visible>
+		</control>
+		<control type="image">
+			<description>TV Rating</description>
+			<width>90</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/Rating/MPAA-PG.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>!IsEmpty(VideoPlayer.MPAA) + VideoPlayer.Content(Movies) + substring(VideoPlayer.MPAA,USA:PG) + !substring(VideoPlayer.MPAA,USA:PG-13)</visible>
+		</control>
+		<control type="image">
+			<description>TV Rating</description>
+			<width>90</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/Rating/MPAA-13.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>!IsEmpty(VideoPlayer.MPAA) + VideoPlayer.Content(Movies) + substring(VideoPlayer.MPAA,USA:PG-13)</visible>
+		</control>
+		<control type="image">
+			<description>TV Rating</description>
+			<width>90</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/Rating/MPAA-17.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>!IsEmpty(VideoPlayer.MPAA) + VideoPlayer.Content(Movies) + substring(VideoPlayer.MPAA,USA:NC-17)</visible>
+		</control>
+		<control type="image">
+			<description>TV Rating</description>
+			<width>90</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/Rating/MPAA-R.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>!IsEmpty(VideoPlayer.MPAA) + VideoPlayer.Content(Movies) + substring(VideoPlayer.MPAA,USA:R)</visible>
+		</control>
+		<control type="image">
+			<description>TV Rating</description>
+			<width>90</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/Rating/MPAA-U.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>[IsEmpty(VideoPlayer.MPAA) + VideoPlayer.Content(Movies)] | [VideoPlayer.Content(Movies) + substring(VideoPlayer.MPAA,USA:Unrated)]</visible>
+		</control>
+		<control type="image">
+			<width>100</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<texture>$INFO[VideoPlayer.Studio,flagging/Studios/,.png]</texture>
+			<include>MediaFlagFadeAnim</include>
+			<visible>!VideoPlayer.Content(files)</visible>
+		</control>
+	</include>
+	
+	<include name="VideoInfoStudioMediaFlag">
+		<control type="image">
+			<posx>40</posx>
+			<posy>505</posy>
+			<width>161</width>
+			<height>109</height>
+			<aspectratio>keep</aspectratio>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<texture>$INFO[ListItem.Studio,flagging/Studios/,.png]</texture>
+		</control>
+	</include>
+	
+	
+</includes>
