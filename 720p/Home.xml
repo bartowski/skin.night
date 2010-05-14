@@ -110,13 +110,13 @@
 					<onclick>XBMC.ActivateWindow(MyVideoLibrary,movietitles,return)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
 				</item>
-				<item id="4">
+				<!--<item id="4">
 					<label>HD Movies</label>
 					<icon>special://skin/media/backgrounds/movies.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomHDMoviesFolder)]</thumb>			
 					<onclick>ActivateWindow(10025,videodb://1/1/9/,return)</onclick>
 					<visible>!Skin.HasSetting(nomovies)</visible>
-				</item>
+				</item>-->
 				<item id="5">
 					<description>TV shows</description>
 					<label>$LOCALIZE[31014]</label>

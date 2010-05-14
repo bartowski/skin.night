@@ -240,6 +240,18 @@
 						<enable>Skin.HasSetting(SubsScript_Enable)</enable>
 						<visible>Skin.HasSetting(SubsScript_Enable)</visible>
 					</control>
+					<control type="radiobutton" id="106">
+						<width>750</width>
+						<height>40</height>
+						<font>Font_KeyboardKeys</font>
+						<label>$LOCALIZE[31217]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(hometheater)</onclick>
+						<selected>Skin.HasSetting(hometheater)</selected>
+					</control>
 					<control type="label" id="110">
 						<width>750</width>
 						<height>45</height>

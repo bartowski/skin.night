@@ -9,7 +9,7 @@
 	<icon>icon.png</icon>
 	<summary>Night - A Skin for XBMC</summary>
 	<disclaimer>You are using a svn version of Night, there is no guarantee svn versions of this skin are stable.</disclaimer>
-	<description>Night started as a project for myself to learn skinning but quickly evolved into a full skin. It main features include: TV Show Logos, Bigger Episode thumbs, more realistic 3D thumbs in some views, and keeping fanart complimentary rather than the focus. Amongst other features just a skin that tries to do things differently...</description>
+	<description>Night started as a project for myself to learn skinning but quickly evolved into a full skin. It's main features include: TV Show Logos, Bigger Episode thumbs, more realistic 3D thumbs in some views, and keeping fanart complimentary rather than the focus. Amongst other features just a skin that tries to do things differently...</description>
 	<minrevision>
 		<xbmc>29676</xbmc>
 	</minrevision>

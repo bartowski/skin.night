@@ -484,7 +484,7 @@
 		<include>Animation_ZoomedByMenu</include>
 		<include>Animation_HiddenByInfo</include>
 		<animation effect="slide" start="0,0" end="0,-40" time="0" tween="cubic" easing="inout" condition="IsEmpty(Control.GetLabel(7015))">Conditional</animation>
-		<visible>Control.IsVisible(50) + !IsEmpty(ListItem.Title) + [Container.Content(tvshows) | Container.Content(seasons)]</visible>	
+		<visible>Control.IsVisible(50) + !IsEmpty(ListItem.Title) + [Container.Content(tvshows) | Container.Content(seasons)] + !Player.HasVideo</visible>	
 			<control type="label">
 				<visible>Container.Content(seasons)</visible>
 				<posx>0</posx>

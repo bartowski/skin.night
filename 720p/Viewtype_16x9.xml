@@ -19,19 +19,28 @@
 			<focusposition>1</focusposition>
 			<scrolltime>400</scrolltime>
 			<preloaditems>2</preloaditems>
+			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Bartowski_Context_Zoom</include>
 			<visible>!Skin.HasSetting(no_16x9) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)]</visible>
 			<itemlayout width="340" height="500">
 				<control type="group">
 				<posx>0</posx>
 				<posy>192</posy>
-					<include>Animation_HiddenByInfo</include>
 					<control type="image">
 						<posx>2</posx>
 						<posy>122</posy>
 						<width>330</width>
 						<height>186</height>
-						<texture background="true" diffuse="postermatte.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
+						<texture>postermatte.png</texture>
+						<colordiffuse>white</colordiffuse>					
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+					</control>
+					<control type="largeimage">
+						<posx>2</posx>
+						<posy>122</posy>
+						<width>330</width>
+						<height>186</height>
+						<texture background="true" diffuse="postermatte.png" fallback="special://skin/media/backgrounds/missing.jpg">$INFO[ListItem.Property(Fanart_Image)]</texture>
 						<fadetime>200</fadetime>					
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<visible>!Container.Content(episodes)</visible>
@@ -41,7 +50,7 @@
 						<posy>122</posy>
 						<width>330</width>
 						<height>186</height>
-						<texture background="true" diffuse="postermatte.png">$INFO[ListItem.Icon]</texture>
+						<texture background="true" diffuse="postermatte.png" fallback="special://skin/media/backgrounds/missing.jpg">$INFO[ListItem.Icon]</texture>
 						<fadetime>200</fadetime>					
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<visible>Container.Content(episodes)</visible>
@@ -90,6 +99,16 @@
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>102</posy>
+						<width>260</width>
+						<height>10</height>
+						<texture>dialogs/tv/$INFO[ListItem.Overlay]</texture>
+						<colordiffuse>ff67ffff</colordiffuse>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay) + Container.Content(movies)</visible>
+					</control>
 				</control>
 			</itemlayout>
 			<focusedlayout width="610" height="600">
@@ -111,12 +130,23 @@
 						<posy>122</posy>
 						<width>600</width>
 						<height>338</height>
-						<texture background="true" diffuse="postermatte.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
+						<texture>postermatte.png</texture>
+						<colordiffuse>white</colordiffuse>					
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="191,440" start="90" end="100" time="400" tween="back" easing="out" />
+						</animation>
+					</control>
+					<control type="largeimage">
+						<posx>2</posx>
+						<posy>122</posy>
+						<width>600</width>
+						<height>338</height>
+						<texture background="true" diffuse="postermatte.png" fallback="special://skin/media/backgrounds/missing.jpg">$INFO[ListItem.Property(Fanart_Image)]</texture>
 						<fadetime>200</fadetime>					
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="191,440" start="90" end="100" time="400" tween="back" easing="out" />
-							<effect type="fade" start="80" end="100" time="400" />
 						</animation>
 						<visible>!Container.Content(episodes)</visible>
 					</control>
@@ -125,12 +155,11 @@
 						<posy>122</posy>
 						<width>600</width>
 						<height>338</height>
-						<texture background="true" diffuse="postermatte.png">$INFO[ListItem.Icon]</texture>
+						<texture background="true" diffuse="postermatte.png" fallback="special://skin/media/backgrounds/missing.jpg">$INFO[ListItem.Icon]</texture>
 						<fadetime>200</fadetime>					
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="191,440" start="90" end="100" time="400" tween="back" easing="out" />
-							<effect type="fade" start="80" end="100" time="400" />
 						</animation>
 						<visible>Container.Content(episodes)</visible>
 					</control>
@@ -197,6 +226,19 @@
 						</animation>
 						<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 					</control>
+					<control type="image">
+						<posy>90</posy>
+						<width>500</width>
+						<height>12</height>
+						<texture>dialogs/tv/$INFO[ListItem.Overlay]</texture>
+						<colordiffuse>ff67ffff</colordiffuse>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="191,440" start="90" end="100" time="400" tween="back" easing="out" />
+							<effect type="fade" start="80" end="100" time="400" />
+						</animation>
+						<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay) + Container.Content(movies)</visible>
+					</control>
 				</control>	
 			</focusedlayout>
 		</control>
@@ -227,7 +269,7 @@
 		</control>
 		
 		<control type="group">
-			<posx>400</posx>
+			<posx>350</posx>
 			<posy>260</posy>
 			<visible>Control.IsVisible(59) + Container.Content(movies) + !IsEmpty(ListItem.Title)</visible>
 			<animation effect="slide" start="0,0" end="-1000,0" time="600" delay="2800" condition="Container.Content(movies) + ![Container(59).OnNext | Container(59).OnPrevious]">Conditional</animation>
@@ -236,7 +278,7 @@
 			<control type="label"><!--Duration-->
 				<posx>15</posx>
 				<posy>250</posy>
-				<width>394</width>
+				<width>460</width>
 				<height>50</height>
 				<aligny>center</aligny>
 				<font>Font_TVShow</font>
@@ -246,7 +288,7 @@
 			<control type="label"><!--Duration-->
 				<posx>15</posx>
 				<posy>273</posy>
-				<width>394</width>
+				<width>460</width>
 				<height>50</height>
 				<aligny>center</aligny>
 				<font>Font_TVShow</font>
@@ -256,7 +298,7 @@
 			<control type="label"><!--Year-->
 				<posx>15</posx>
 				<posy>296</posy>
-				<width>394</width>
+				<width>460</width>
 				<height>50</height>
 				<aligny>center</aligny>
 				<font>Font_TVShow</font>
@@ -266,7 +308,7 @@
 			<control type="label"><!--Year-->
 				<posx>15</posx>
 				<posy>319</posy>
-				<width>394</width>
+				<width>460</width>
 				<height>50</height>
 				<aligny>center</aligny>
 				<font>Font_TVShow</font>
@@ -276,7 +318,7 @@
 			<control type="label"><!--Year-->
 				<posx>15</posx>
 				<posy>342</posy>
-				<width>394</width>
+				<width>460</width>
 				<height>50</height>
 				<aligny>center</aligny>
 				<font>Font_TVShow</font>
@@ -286,7 +328,7 @@
 			<control type="label"><!--Year-->
 				<posx>15</posx>
 				<posy>365</posy>
-				<width>394</width>
+				<width>460</width>
 				<height>50</height>
 				<aligny>center</aligny>
 				<font>Font_TVShow</font>
@@ -295,7 +337,7 @@
 			</control>
 			<control type="group">
 				<posx>116</posx>
-				<posy>538</posy>
+				<posy>540</posy>
 				<include>VideoMPAAFlaggingConditions</include>
 				<animation effect="zoom" start="70" end="70" time="0" condition="true">Conditional</animation>
 			</control>

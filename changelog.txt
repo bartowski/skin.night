@@ -1,3 +1,7 @@
+Update 5/13/2010
+  -Added new fanart option to Landscape view
+  -fixed up some issues in 16x9
+
 Update 5/10/2010
   -Finished up addon settings dialog
   -Fixed/Finished the cast info selction for Video Info screen
