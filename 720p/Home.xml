@@ -155,8 +155,7 @@
 					<label>$LOCALIZE[31016]</label>
 					<icon>special://skin/media/backgrounds/settings.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomSettingsFolder)]</thumb>			
-					<onclick>XBMC.ActivateWindow(4)</onclick>
-					<visible></visible>
+					<onclick>XBMC.ActivateWindow(settings)</onclick>
 				</item>
 				<item id="10">
 					<description>Scripts</description>
@@ -181,7 +180,7 @@
 				<item id="13">
 					<label>31019</label>
 					<icon>special://skin/media/backgrounds/shutdown.jpg</icon>
-					<thumb>$INFO[Skin.String(CustomShutdownFolder)]</thumb>
+					<thumb>$INFO[Skin.String(Home_Custom_Back_Shutdown_Folder)]</thumb>
 					<onclick>XBMC.Shutdown()</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoShutdownButton)</visible>
 				</item>

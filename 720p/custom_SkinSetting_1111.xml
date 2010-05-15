@@ -1997,7 +1997,7 @@
 							<onclick>Skin.ToggleSetting(no_WallPanel)</onclick>
 							<selected>Skin.HasSetting(no_WallPanel)</selected>
 						</control>
-						<control type="label">
+						<control type="label" id="615">
 							<width>750</width>
 							<height>45</height>
 							<font>font16caps</font>
