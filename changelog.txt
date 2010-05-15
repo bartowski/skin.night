@@ -1,4 +1,9 @@
 Update 5/13/2010
+  -Log-in screen 90% done, definately useable now just needs a little more touchup
+  -fixed some settings issues
+  -back to being compatible for merge atleast 30128
+
+Update 5/13/2010
   -Added new fanart option to Landscape view
   -fixed up some issues in 16x9
 
