@@ -14,7 +14,7 @@
 			<texture>panel/panel-back.png</texture>
 		</control>
 		<control type="largeimage">
-			<visible>Control.IsVisible(592) + [Container.Content(movies) | Container.Content(tvshows)] + !Player.HasMedia</visible>
+			<visible>Control.IsVisible(592) + [Container.Content(movies) | Container.Content(tvshows)] + !Player.HasVideo</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>570</width>
