@@ -235,8 +235,9 @@
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
 						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-						<onclick>Skin.SetFile(SubtitleScript_Path,.py)</onclick>
+						<!-- mcborzu-->
 						<!--<onclick>Skin.SetFile(SubsScript_Path,Script)</onclick>-->
+						<onclick>Skin.SetFile(SubtitleScript_Path,.py)</onclick>
 						<enable>Skin.HasSetting(SubsScript_Enable)</enable>
 						<visible>Skin.HasSetting(SubsScript_Enable)</visible>
 					</control>

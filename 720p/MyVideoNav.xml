@@ -77,6 +77,7 @@
 		
 		<include>Trailer</include>
 		<include>Trailer_TVLandscape</include>
+		<include>Trailer_Landscape_Fanart</include>
 		<include>Trailer_16x9</include>
 		<include>Trailer_Files</include>
 		<include>Trailer_Poster</include>
@@ -136,6 +137,15 @@
 				<selected>Skin.HasSetting(Landscape_Fanart)</selected>
 				<visible>Control.IsVisible(52)</visible>
 			</control>
+			<control type="togglebutton" id="27">
+				<description>Toggle MoviesFanart</description>
+				<include>WindowMenuButton</include>
+				<label>$LOCALIZE[31219]</label>
+				<altlabel>$LOCALIZE[31220]</altlabel>
+				<onclick>Skin.ToggleSetting(3dland_jpg)</onclick>
+				<selected>Skin.HasSetting(3dland_jpg)</selected>
+				<visible>Control.IsVisible(53)</visible>
+			</control>
 			<control type="togglebutton" id="24">
 				<description>Toggle MoviesFanart</description>
 				<include>WindowMenuButton</include>
@@ -188,7 +198,7 @@
 			<control type="button" id="45">
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[31089]</label>
-				<visible>[Control.IsVisible(58) | Control.IsVisible(59) | Control.IsVisible(52)] + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>		
+				<visible>[Control.IsVisible(58) | Control.IsVisible(59) | Control.IsVisible(52)  | Control.IsVisible(53)] + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>		
 			</control>
 			<control type="button" id="46">
 				<include>WindowMenuLabel</include>

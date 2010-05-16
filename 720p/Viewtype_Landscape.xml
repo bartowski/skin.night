@@ -299,7 +299,7 @@
 				<!--<animation effect="zoom" start="2,122,0,281" end="0,0,500,281" time="800" delay="200">Visible</animation>-->
 			</control>
 			<control type="image">
-				<visible>Container.Content(episodes)</visible>
+				<visible>Container.Content(episodes) + !IsEmpty(ListItem.Title)</visible>
 				<posx>2</posx>
 				<posy>355</posy>
 				<width>500</width>

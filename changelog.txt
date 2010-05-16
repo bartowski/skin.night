@@ -1,4 +1,9 @@
-Update 5/13/2010
+Update 5/15/2010
+  -Coded up the numeric pad for profile login
+  -fixed music and trailer global now playing in Landscape fanart
+  -added an option to 3dLandscape for local landscape.jpg image
+
+Update 5/14/2010
   -Log-in screen 90% done, definately useable now just needs a little more touchup
   -fixed some settings issues
   -back to being compatible for merge atleast 30128

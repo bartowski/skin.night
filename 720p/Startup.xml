@@ -17,7 +17,7 @@
 			<onfocus>SetFocus(11)</onfocus>
 		</control>
 		
-		<!--COMMENT OUT THE BLOCK BELOW AND UNCOMMENT THE OTHER BLOCK FOR MERGE VERSION -->
+		
 		
 		<control type="button" id="11">
 			<description>Trigger Latest Added</description>
@@ -27,6 +27,8 @@
 			<height>1</height>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
+			<!-- mcborzu-->
+			<!--<onfocus>XBMC.RunScript(script.recentlyadded,limit=10)</onfocus>-->
 			<onfocus>XBMC.RunScript(special://skin/scripts/RecentlyAdded.py,limit=5&amp;albums=True&amp;unplayed=True)</onfocus>
 			<label>$INFO[Window.Property(LatestMovie.1.Title)]</label>
 			<font>-</font>
