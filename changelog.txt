@@ -1,4 +1,7 @@
 Update 5/15/2010
+  -Changed RSS to be at top
+
+Update 5/15/2010
   -Coded up the numeric pad for profile login
   -fixed music and trailer global now playing in Landscape fanart
   -added an option to 3dLandscape for local landscape.jpg image

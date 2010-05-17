@@ -6,7 +6,7 @@
 		<control type="group">
 			<visible>!Window.IsVisible(FileBrowser)</visible>
 			<!--<animation effect="slide" start="1100,0" end="0,0" time="600" tween="quadratic" easing="out">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>-->
+			<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
 			<control type="image"> 
 				<posx>0</posx>
 				<posy>0</posy>
@@ -15,7 +15,7 @@
 				<texture>backdrops/curtains_diffuse.png</texture>
 				<animation effect="fade" start="0" end="100" time="600" >WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="600" delay="800" >WindowClose</animation>
-			</control>
+			</control>-->
 			<control type="label"><!--Big Title-->
 				<visible>Skin.HasSetting(LockViews)</visible>
 				<posx>0</posx>
