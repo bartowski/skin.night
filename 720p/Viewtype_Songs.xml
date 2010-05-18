@@ -168,6 +168,7 @@
 			<height>33</height>
 			<texture>$INFO[ListItem.StarRating]</texture>
 			<colordiffuse>mainblue</colordiffuse>
+			<visible>!Player.HasAudio</visible>
 		</control>
 	</control>
 		

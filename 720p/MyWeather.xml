@@ -26,7 +26,27 @@
 		<include>Animation_SlideUpFadeOut</include>
 		<include>Animation_HiddenByInfo</include>
 		<include>Animation_ZoomedByMenu</include>
+		<visible>Skin.HasSetting(conditions_weather_backdrop)</visible>
 	</control>
+	<control type="multiimage">
+		<posx>440</posx>
+		<posy>0</posy>
+		<width>740</width>
+		<height>414</height>
+		<imagepath diffuse="Showcase/showcase-diffuse.png">$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</imagepath>
+		<aspectratio>stretch</aspectratio>
+		<timeperimage>5000</timeperimage>
+		<randomize>true</randomize>
+		<fadetime>2000</fadetime>
+		<include>Animation_PosterInfoSlide</include>					
+		<include>Animation_SlideUpFadeOut</include>
+		<include>Animation_HiddenByInfo</include>
+		<include>Animation_ZoomedByMenu</include>
+		<visible>!Skin.HasSetting(conditions_weather_backdrop)</visible>
+	</control>
+	
+	
+	
 	<control type="button" id="50">
 			<texturefocus/>
 			<texturenofocus/>
@@ -36,6 +56,7 @@
 			<ondown>7000</ondown>
 			<onclick/>
 		</control>
+		
 		<!-- weather End -->
 		<control type="group">
 			<visible>System.HasNetwork</visible>
@@ -541,30 +562,26 @@
 			</control>-->
 		</control>
 		<!-- view options -->
-		<include>Global_ContextFilter</include>
+		<control type="image">
+			<visible>ControlGroup(7000).HasFocus</visible>
+			<include>Dimensions_Fullscreen</include>
+			<texture>common/7000_focus.png</texture>
+			<animation effect="fade" start="0" end="100" time="600">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
+		</control>
+		<control type="image"><!-- Floor -->
+			<posx>180</posx>
+			<posy>650</posy>
+			<width>880</width>
+			<height>70</height>
+			<texture>backdrops/test2.png</texture>
+			<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews)</visible>
+			<include>Animation_ViewOptions_whitebar</include>
+		</control>
 		<control type="grouplist" id="7000">
-			<posx>260</posx>
+			<posx>70</posx>
 			<include>WindowMenuVars</include>
-			<posy>330</posy>
-			<!-- refresh -->
-			<control type="button" id="2">
-				<label>184</label>
-				<include>WindowMenuButton</include>
-				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(2)">
-					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
-					<effect type="fade" start="100" end="50" time="200" />
-				</animation>
-			</control>
-			<!-- settings -->
-			<control type="button" id="4">
-				<label>8</label>
-				<include>WindowMenuButton</include>
-				<onclick>ActivateWindow(weathersettings)</onclick>
-				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(4)">
-					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
-					<effect type="fade" start="100" end="50" time="200" />
-				</animation>
-			</control>
+			<posy>680</posy>
 			<!-- location -->
 			<control type="spincontrol" id="3">
 				<description>hidden location control</description>
@@ -576,43 +593,39 @@
 			</control>
 			<control type="button" id="7001">
 				<label>$INFO[Weather.Location]</label>
-				<align>left</align>
-				<include>WindowMenuButton</include>
+				<include>WeatherMenuButton</include>
 				<onclick>Control.Message(3,movedown)</onclick>
-				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(7001)">
-					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
-					<effect type="fade" start="100" end="50" time="200" />
-				</animation>
 			</control>
+			<!-- refresh -->
+			<control type="button" id="2">
+				<label>184</label>
+				<include>WeatherMenuButton</include>
+			</control>
+			<!-- settings -->
+			<control type="button" id="4">
+				<label>8</label>
+				<include>WeatherMenuButton</include>
+				<onclick>ActivateWindow(weathersettings)</onclick>
+			</control>
+			
 		</control>
 		<control type="grouplist">
-			<posx>260</posx>
+			<posx>70</posx>
 			<include>WindowMenuVars</include>
-			<posy>307</posy>
+			<posy>657</posy>
+			<control type="button" id="7040">
+				<include>WeatherMenuLabel</include>
+				<label>396</label>
+			</control>
 			<control type="button" id="7041">
-				<include>WindowMenuLabel</include>
+				<include>WeatherMenuLabel</include>
 				<label>8</label>
-				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(2)">
-					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
-					<effect type="fade" start="100" end="50" time="200" />
-				</animation>
 			</control>
 			<control type="button" id="7042">
-				<include>WindowMenuLabel</include>
+				<include>WeatherMenuLabel</include>
 				<label>5</label>
-				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(4)">
-					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
-					<effect type="fade" start="100" end="50" time="200" />
-				</animation>
 			</control>
-			<control type="button" id="7040">
-				<include>WindowMenuLabel</include>
-				<label>396</label>
-				<animation type="conditional" condition="!ControlGroup(7000).HasFocus(7001)">
-					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
-					<effect type="fade" start="100" end="50" time="200" />
-				</animation>
-			</control>
+			
 		</control>
 		<!-- Heading -->
 		<control type="group">

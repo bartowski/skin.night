@@ -1,4 +1,14 @@
-Update 5/15/2010
+Update 5/17/2010
+  -Fixed weather options
+  -Added regular weather fanart for Home, now skin setting for condition based fanart
+  -Added License.txt
+  -Fixed Now playing music in Showcase
+  -Added Global now playing to File and Songs view in music
+  -Fixed overlapping text when hide plot option is checked
+  -Merge version has a setting to check to get recently added to work
+  -Started work on custom Home menus
+
+Update 5/16/2010
   -Changed RSS to be at top
 
 Update 5/15/2010

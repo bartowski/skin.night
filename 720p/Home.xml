@@ -86,6 +86,14 @@
 				</control>
 			</focusedlayout>
 			<content>
+				<item id="15">
+					<description>Custom Movie One</description>
+					<label>$INFO[Skin.String(Menu_Custom1_Label)]</label>
+					<icon>special://skin/media/backgrounds/custom.jpg</icon>
+					<thumb>$INFO[Skin.String(Menu_Custom1_Folder)]</thumb>
+					<onclick>$INFO[Skin.String(Menu_Custom1_Path)]</onclick>
+					<visible>Skin.HasSetting(Menu_Custom1)</visible>
+				</item>
 				<item id="1">
 					<description>music</description>
 					<label>$LOCALIZE[31010]</label>
@@ -141,14 +149,21 @@
 					<onclick>XBMC.ActivateWindow(MyPrograms)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
 				</item>
-				
+				<item id="14">
+					<description>weather</description>
+					<label>$LOCALIZE[31017]</label>
+					<icon>special://skin/media/backgrounds/weather.jpg</icon>
+					<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</thumb>				
+					<onclick>xbmc.activatewindow(2600)</onclick>
+					<visible>!Skin.HasSetting(HomeMenuNoWeatherButton) + !Skin.HasSetting(conditions_weather_backdrop)</visible>
+				</item>
 				<item id="8">
 					<description>weather</description>
 					<label>$LOCALIZE[31017]</label>
 					<icon>special://skin/media/backgrounds/weather.jpg</icon>
 					<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]$INFO[Weather.FanartCode]</thumb>				
 					<onclick>xbmc.activatewindow(2600)</onclick>
-					<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
+					<visible>!Skin.HasSetting(HomeMenuNoWeatherButton) + Skin.HasSetting(conditions_weather_backdrop)</visible>
 				</item>
 				<item id="9">
 					<description>settings</description>
@@ -188,34 +203,46 @@
 		</control>
 		
 		<control type="button" id="8999">
-				<description>Run Recently added</description>
-				<posx>-20</posx>
-				<posy>-20</posy>
-				<width>1</width>
-				<height>1</height>
-				<label>-</label>
-				<font>-</font>
-				<!-- mcborzu-->
-				<!--<onfocus>XBMC.RunScript(script.recentlyadded,limit=10)</onfocus>-->
-				<onfocus>XBMC.RunScript(special://skin/scripts/RecentlyAdded.py,limit=10)</onfocus>
-				<onfocus>SetFocus(300)</onfocus>
-				<texturenofocus>-</texturenofocus>
-				<texturefocus>-</texturefocus>
-				<visible>Skin.HasSetting(homepageHideRecentlyAdded)</visible>
-			</control>
-			<control type="button" id="8999">
-				<description>Don't run Recently added</description>
-				<posx>-20</posx>
-				<posy>-20</posy>
-				<width>1</width>
-				<height>1</height>
-				<label>-</label>
-				<font>-</font>
-				<onfocus>SetFocus(300)</onfocus>
-				<texturenofocus>-</texturenofocus>
-				<texturefocus>-</texturefocus>
-				<visible>!Skin.HasSetting(homepageHideRecentlyAdded)</visible>
-			</control>
+			<description>Run Recently added</description>
+			<posx>-20</posx>
+			<posy>-20</posy>
+			<width>1</width>
+			<height>1</height>
+			<label>-</label>
+			<font>-</font>
+			<onfocus>XBMC.RunScript(special://skin/scripts/RecentlyAdded.py,limit=10)</onfocus>
+			<onfocus>SetFocus(300)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<visible>Skin.HasSetting(homepageHideRecentlyAdded) + !Skin.HasSetting(merge_version)</visible>
+		</control>
+		<control type="button" id="8999">
+			<description>Run Recently added</description>
+			<posx>-20</posx>
+			<posy>-20</posy>
+			<width>1</width>
+			<height>1</height>
+			<label>-</label>
+			<font>-</font>
+			<onfocus>XBMC.RunScript(script.recentlyadded,limit=10)</onfocus>
+			<onfocus>SetFocus(300)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<visible>Skin.HasSetting(homepageHideRecentlyAdded) + Skin.HasSetting(merge_version)</visible>
+		</control>
+		<control type="button" id="8999">
+			<description>Don't run Recently added</description>
+			<posx>-20</posx>
+			<posy>-20</posy>
+			<width>1</width>
+			<height>1</height>
+			<label>-</label>
+			<font>-</font>
+			<onfocus>SetFocus(300)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<visible>!Skin.HasSetting(homepageHideRecentlyAdded)</visible>
+		</control>
 			
 			
 			

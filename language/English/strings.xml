@@ -124,6 +124,7 @@
 	<string id="31218">Power Options</string>
 	<string id="31219">landscape.jpg</string>
 	<string id="31220">Cached Thumb</string>
+	<string id="31221">Use Condition based weather fanart</string>
 	
 	
 	
@@ -150,6 +151,7 @@
   <string id="31115">Customizer</string>
   <string id="31116">Addon Scripts</string>
   <string id="31117">Show Recently added Videos</string>
+  <string id="31118">Check if using a merge version</string>
   <string id="31323">Latest Movies</string>
   <string id="31309">Memory Used:</string>
   <string id="31200">Shortcuts</string>

@@ -29,7 +29,7 @@
 	<include file="Includes_Home_1.xml" />
 	<include file="IncludesHomeRecentlyAdded.xml" />
 	<include file="Includes_Music_Global.xml" />
-	
+	<include file="IncludesCodecFlagging.xml" />
 	
 	<include name="ButtonHomeSubCommonValues">
 		<width>600</width>
@@ -42,7 +42,7 @@
 		<textcolor>38b8b7b7</textcolor>
 		<focusedcolor>mainblue</focusedcolor>
 	</include>
-	<include file="IncludesCodecFlagging.xml" />
+	
 	<!-- Debug objects -->
 	<include name="Object_DebugGrid">
 		<control type="image">
@@ -74,7 +74,7 @@
 	</include>
 	<include name="7000_has_focus">
 		<control type="image">
-			<visible>!Skin.HasSetting(LockViews) + [ControlGroup(7000).HasFocus | Window.IsActive(106) | Window.IsActive(111)]</visible>
+			<visible>!Skin.HasSetting(LockViews) + [ControlGroup(7000).HasFocus | Window.IsActive(106) | Window.IsActive(111) | Window.IsActive(2600)]</visible>
 			<include>Dimensions_Fullscreen</include>
 			<texture>common/7000_focus.png</texture>
 			<animation effect="fade" start="0" end="100" time="600">Visible</animation>
@@ -230,6 +230,22 @@
 		<textureradiofocus>-</textureradiofocus>
 		<textureradionofocus>-</textureradionofocus>
 	</include>
+	<include name="WeatherMenuButton">
+		<posx>0</posx>
+		<posy>30</posy>
+		<width>220</width>
+		<height>30</height>
+		<align>center</align>
+		<textoffsetx>10</textoffsetx>
+		<font>Font_Bartowski_Smaller_MenuTitle</font>
+		<textcolor>ff000000</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<texturefocus border="5">confluence/button-focus.png</texturefocus>
+		<alttexturenofocus>-</alttexturenofocus>
+		<alttexturefocus>confluence/button-focus.png</alttexturefocus>
+		<textureradiofocus>-</textureradiofocus>
+		<textureradionofocus>-</textureradionofocus>
+	</include>
 	<include name="WindowMenuRadioButton">
 		<posx>0</posx>
 		<posy>30</posy>
@@ -250,6 +266,17 @@
 		<posx>0</posx>
 		<posy>0</posy>
 		<width>160</width>
+		<height>30</height>
+		<align>center</align>
+		<font>Font_Bartowski_Smaller_MenuTitle</font>
+		<textcolor>ff198f8f</textcolor>
+		<!--<shadowcolor>black</shadowcolor>-->
+		<aligny>bottom</aligny>
+	</include>
+	<include name="WeatherMenuLabel">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>220</width>
 		<height>30</height>
 		<align>center</align>
 		<font>Font_Bartowski_Smaller_MenuTitle</font>

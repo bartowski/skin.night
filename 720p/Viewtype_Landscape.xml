@@ -355,6 +355,7 @@
 			<include>Animation_HiddenByInfo</include>
 			<visible>Control.IsVisible(52) + !Skin.HasSetting(Landscape_Fanart) + !IsEmpty(ListItem.Title) + !Skin.HasSetting(Landscape_Fanart)</visible>
 				<control type="textbox"><!-- Plot and TV -->
+					<visible>!Container.Content(seasons)</visible>
 					<posx>530</posx>
 					<posy>170</posy>
 					<width>590</width>

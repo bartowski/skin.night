@@ -27,15 +27,12 @@
 			<height>1</height>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
-			<!-- mcborzu-->
-			<!--<onfocus>XBMC.RunScript(script.recentlyadded,limit=10)</onfocus>-->
 			<onfocus>XBMC.RunScript(special://skin/scripts/RecentlyAdded.py,limit=5&amp;albums=True&amp;unplayed=True)</onfocus>
 			<label>$INFO[Window.Property(LatestMovie.1.Title)]</label>
 			<font>-</font>
 			<onfocus>SetFocus(12)</onfocus>
+			<visible>!Skin.HasSetting(merge_version)</visible>
 		</control>
-		
-		<!-- MERGE VERSION RECENTLY ADDED
 		
 		<control type="button" id="11">
 			<description>Trigger Latest Added</description>
@@ -49,8 +46,8 @@
 			<label>$INFO[Window.Property(LatestMovie.1.Title)]</label>
 			<font>-</font>
 			<onfocus>SetFocus(12)</onfocus>
+			<visible>Skin.HasSetting(merge_version)</visible>
 		</control>
-		-->
 		
 		<control type="button" id="12">
 			<posx>-20</posx>

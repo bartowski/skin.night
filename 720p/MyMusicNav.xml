@@ -4,7 +4,7 @@
 	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
-		<include>Global_Background</include>
+		
 
 		<control type="largeimage">
 			<description>album and song level fanart</description>
@@ -44,7 +44,12 @@
 		<include>Viewtype_Songs</include>
 		<include>Viewtype_MusicShowcase</include>
 
-		<include>Global_Time</include>
+		
+		<include>Music_Global_TopRight_Music_Showcase</include>
+		<include>Music_Global_Lowerleft_Music</include>
+		
+		
+		
 		<include>7000_has_focus</include>
 		<control type="image"><!-- Floor -->
 			<posx>0</posx>
