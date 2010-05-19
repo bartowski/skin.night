@@ -4,7 +4,9 @@
 	<include name="Viewtype_16x9">
 
 		<!-- Poster Wrap View -->
-
+		
+		<include>Music_Global_TopRight_Music_Showcase</include>
+		
 		<control type="wraplist" id="59">
 			<posx>0</posx>
 			<posy>0</posy>
@@ -434,26 +436,6 @@
 					<label>[B]First Premiered in $INFO[ListItem.Year][/B]</label>
 					<visible>Container.Content(tvshows)</visible>
 				</control>
-				<!--<control type="label">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width min="5" max="1034">auto</width>
-					<height>100</height>
-					<font>Font_TVShow</font>
-					<textcolor>ff67ffff</textcolor>
-					<label>[B] on [/B]</label>
-					<visible>Container.Content(tvshows) + !IsEmpty(ListItem.Studio)</visible>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>70</width>
-					<height>47</height>
-					<texture>$INFO[listitem.studio,extras/Studios/,.png]</texture>
-					<colordiffuse>ff67ffff</colordiffuse>
-					<visible>Container.Content(tvshows)</visible>
-					<animation effect="slide" start="0,0" end="-6,-12" time="0" tween="cubic" easing="inout" condition="Container.Content(tvshows)">Conditional</animation>
-				</control>-->
 				<control type="label">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -464,26 +446,6 @@
 					<label>[B]This Show Aired $INFO[ListItem.Date][/B]</label>
 					<visible>Container.Content(episodes)</visible>
 				</control>
-				<!--<control type="label">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width min="5" max="1034">auto</width>
-					<height>100</height>
-					<font>Font_TVShow</font>
-					<textcolor>ff67ffff</textcolor>
-					<label>[B] on [/B]</label>
-					<visible>Container.Content(episodes) + !IsEmpty(ListItem.Studio)</visible>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>70</width>
-					<height>47</height>
-					<texture>$INFO[listitem.studio,extras/Studios/,.png]</texture>
-					<colordiffuse>ff67ffff</colordiffuse>
-					<visible>Container.Content(episodes)</visible>
-					<animation effect="slide" start="0,0" end="-10,-12" time="0" tween="cubic" easing="inout" condition="Container.Content(episodes)">Conditional</animation>
-				</control>-->
 			</control>
 			<control type="textbox"><!-- Plot and TV -->
 				<posx>0</posx>

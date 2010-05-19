@@ -263,6 +263,27 @@
 						<animation effect="zoom" start="70" end="100" center="auto" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(8001)">Conditional</animation>
 						<visible>Control.HasFocus(8001)</visible>
 					</control>
+					<!--<control type="image">
+						<posx>-40</posx>
+						<posy>490</posy>
+						<width>300</width>
+						<height>168</height>
+						<texture>common/recently_black_back.png</texture>
+						<fadetime>200</fadetime>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<animation effect="zoom" start="70" end="100" center="auto" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(8001)">Conditional</animation>
+						<visible>Control.HasFocus(8001) | !Control.HasFocus(8001)</visible>
+					</control>
+					<control type="label">
+						<posx>-40</posx>
+						<posy>630</posy>
+						<width>300</width>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
+						<align>center</align>
+						<font>Font_Bartowski_Extras_Pause</font>
+						<textcolor>ffffffff</textcolor>
+						<visible>Control.HasFocus(8001) | !Control.HasFocus(8001)</visible>
+					</control>-->
 				</control>
 				<control type="wraplist" id="8001">
 					<posx>0</posx>
@@ -281,7 +302,7 @@
 						<control type="label">
 							<posx>260</posx>
 							<posy>2</posy>
-							<width>380</width>
+							<width>540</width>
 							<height>10</height>
 							<font>Font_ListSmall</font>
 							<textcolor>grey</textcolor>
@@ -294,7 +315,7 @@
 						<control type="label">
 							<posx>260</posx>
 							<posy>12</posy>
-							<width>380</width>
+							<width>540</width>
 							<height>20</height>
 							<font>font12</font>
 							<textcolor>white</textcolor>
@@ -309,7 +330,7 @@
 						<control type="label">
 							<posx>260</posx>
 							<posy>6</posy>
-							<width>380</width>
+							<width>540</width>
 							<height>10</height>
 							<font>Font_Bartowski_Movies</font>
 							<textcolor>ff67ffff</textcolor>
@@ -322,7 +343,7 @@
 						<control type="label">
 							<posx>260</posx>
 							<posy>18</posy>
-							<width>380</width>
+							<width>540</width>
 							<height>20</height>
 							<font>font12</font>
 							<textcolor>white</textcolor>

@@ -12,6 +12,7 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture>music/music_backdrop3.png</texture>
+			<include>Animation_BackdropFade</include>
 		</control>
 		<control type="label"><!--Big Title-->
 			<visible>Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)</visible>

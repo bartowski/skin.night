@@ -7,8 +7,19 @@
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<texture>list/file-black-background1.png</texture>
-			<visible>Control.IsVisible(55)</visible>
+			<visible>Control.IsVisible(55) + Container.Content(movies) + !Skin.HasSetting(Files_Fanart)</visible>
 		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture>list/file-black-background1.png</texture>
+			<visible>Control.IsVisible(55) + !Container.Content(movies)</visible>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture>list/files_fanart_background.png</texture>
+			<visible>Control.IsVisible(55) + Container.Content(movies) + Skin.HasSetting(Files_Fanart)</visible>
+		</control>
+		
 		
 		<control type="fixedlist" id="55">
 			<posx>0</posx>
@@ -68,6 +79,16 @@
 					<height>4</height>
 					<aspectratio>stretch</aspectratio>
 					<texture>confluence/separator.png</texture>
+					<visible>Control.IsVisible(55) + Container.Content(movies) + !Skin.HasSetting(Files_Fanart)</visible>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>38</posy>
+					<width>880</width>
+					<height>4</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>confluence/separator.png</texture>
+					<visible>Control.IsVisible(55) + !Container.Content(movies)</visible>
 				</control>
 				<control type="label">
 					<posx>20</posx>
@@ -111,14 +132,14 @@
 					<font>Font_Bartowski_List_Main</font>
 					<textcolor>Text-Filemode</textcolor>
 					<label>$INFO[ListItem.year]</label>
-					<visible>Container.Content(movies)</visible>
+					<visible>Container.Content(movies) + !Skin.HasSetting(Files_Fanart)</visible>
 				</control>
 				<control type="group">
 					<posx>1250</posx>
 					<posy>24</posy>
 					<include>VideoMPAAFlaggingConditions_Grey</include>
 					<animation effect="zoom" start="60" end="60" time="0" condition="true">Conditional</animation>
-					<visible>Container.Content(movies)</visible>
+					<visible>Container.Content(movies) + !Skin.HasSetting(Files_Fanart)</visible>
 				</control>
 				<control type="image">
 					<posx>10</posx>
@@ -148,6 +169,16 @@
 					<height>4</height>
 					<aspectratio>stretch</aspectratio>
 					<texture>confluence/separator.png</texture>
+					<visible>Control.IsVisible(55) + Container.Content(movies) + !Skin.HasSetting(Files_Fanart)</visible>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>38</posy>
+					<width>880</width>
+					<height>4</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>confluence/separator.png</texture>
+					<visible>Control.IsVisible(55) + !Container.Content(movies)</visible>
 				</control>
 				<control type="image">
 					<posx>-70</posx>
@@ -190,14 +221,14 @@
 					<font>Font_Bartowski_List_Main</font>
 					<textcolor>white</textcolor>
 					<label>$INFO[ListItem.year]</label>
-					<visible>Container.Content(movies)</visible>
+					<visible>Container.Content(movies) + !Skin.HasSetting(Files_Fanart)</visible>
 				</control>
 				<control type="group">
 					<posx>1250</posx>
 					<posy>24</posy>
 					<include>VideoMPAAFlaggingConditions</include>
 					<animation effect="zoom" start="60" end="60" time="0" condition="true">Conditional</animation>
-					<visible>Container.Content(movies)</visible>
+					<visible>Container.Content(movies) + !Skin.HasSetting(Files_Fanart)</visible>
 				</control>
 				<control type="label">
 					<posx>20</posx>
@@ -242,227 +273,6 @@
 					<label>[COLOR white]$INFO[ListItem.TrackNumber]$INFO[ListItem.Title,. ]$INFO[ListItem.Duration, - ][/COLOR]</label>
 					<visible>!IsEmpty(ListItem.Duration) + !IsEmpty(ListItem.TrackNumber) + [Container.Content(songs) | Window.IsActive(500) | [Window.IsActive(502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]]</visible>
 				</control>
-				<!--<control type="label">
-					<posx>690</posx>
-					<posy>20</posy>
-					<width>720</width>
-					<height>25</height>
-					<aligny>center</aligny>
-					<font>Font_ListDetail</font>
-					<textcolor>ListTitleF</textcolor>
-					<label>$INFO[ListItem.Genre]</label>
-					<visible>!IsEmpty(ListItem.Genre) + Window.IsActive(25) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
-				</control>-->
-				<!--<control type="textbox">
-					<posx>690</posx>
-					<posy>30</posy>
-					<width>700</width>
-					<height>84</height>
-					<font>Font_EpisodePlot</font>
-					<textcolor>EpisodePlot</textcolor>
-					<info>ListItem.Plot</info>
-					<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-					<visible>!IsEmpty(ListItem.Plot) + Window.IsActive(25) + Container.Content(episodes)</visible>
-				</control>-->
-				<!--<control type="image">
-					<posx>690</posx>
-					<posy>80</posy>
-					<width>121</width>
-					<height>25</height>
-					<texture>$INFO[ListItem.StarRating]</texture>
-					<colordiffuse>StarDiffuse</colordiffuse>
-					<visible>Window.IsActive(25) + Container.Content(tvshows)</visible>
-				</control>-->
-				<!--<control type="label">
-					<posx>690</posx>
-					<posy>80</posy>
-					<width>720</width>
-					<height>25</height>
-					<aligny>center</aligny>
-					<font>Font_ListDetail</font>
-					<textcolor>ListTitleF</textcolor>
-					<label>$INFO[ListItem.Duration,[B]Runtime:[/B] ]</label>
-					<visible>substring(listitem.Duration,min) + !IsEmpty(listitem.Duration) + Container.Content(movies)</visible>
-					<visible>!IsEmpty(listitem.Duration)</visible>
-				</control>-->
-				<!--<control type="label">
-					<posx>690</posx>
-					<posy>80</posy>
-					<width>720</width>
-					<height>25</height>
-					<aligny>center</aligny>
-					<font>Font_ListDetail</font>
-					<textcolor>ListTitleF</textcolor>
-					<label>$INFO[ListItem.Duration,[B]Runtime:[/B] ] mins</label>
-					<visible>!substring(listitem.Duration,min) + !IsEmpty(listitem.Duration) + Container.Content(movies)</visible>
-				</control>-->
-				<!-- Programs -->
-				<!--<control type="group">
-					<visible>Window.IsActive(1)</visible>
-					<control type="label">
-						<posx>20</posx>
-						<posy>0</posy>
-						<width>720</width>
-						<height>120</height>
-						<aligny>center</aligny>
-						<font>Font_ListTitleBigger</font>
-						<textcolor>ListTitleF</textcolor>
-						<label>$INFO[ListItem.Label]</label>
-						<animation effect="slide" start="0,-15" end="0,-15" time="0" condition="!IsEmpty(ListItem.Label2)">Conditional</animation>
-					</control>
-					<control type="label">
-						<posx>20</posx>
-						<posy>75</posy>
-						<width>720</width>
-						<height>25</height>
-						<font>Font_ListTitleBig</font>
-						<textcolor>ListTitleF</textcolor>
-						<label>$INFO[ListItem.Label2]</label>
-					</control>
-				</control>-->
-				<!-- Music -->
-				<!-- Artist -->
-				<!--<control type="group">
-					<visible>Container.Content(artists)</visible>
-					<control type="label">
-						<posx>20</posx>
-						<posy>10</posy>
-						<width>720</width>
-						<height>25</height>
-						<aligny>center</aligny>
-						<font>Font_ListTitleBig</font>
-						<textcolor>ListTitleF</textcolor>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-					<control type="textbox">
-						<posx>20</posx>
-						<posy>35</posy>
-						<width>720</width>
-						<height>60</height>
-						<font>Font_ListDetail</font>
-						<textcolor>ListTitleF</textcolor>
-						<label fallback="31425">$INFO[ListItem.Property(description)]</label>
-					</control>
-				</control>-->
-				<!-- Album -->
-				<!--<control type="group">
-					<visible>Container.Content(albums)</visible>
-					<control type="label">
-						<posx>20</posx>
-						<posy>0</posy>
-						<width>720</width>
-						<height>120</height>
-						<aligny>center</aligny>
-						<font>Font_ListTitleBigger</font>
-						<textcolor>ListTitleF</textcolor>
-						<label>$INFO[ListItem.Label]</label>
-						<visible>IsEmpty(ListItem.Album)</visible>
-					</control>
-					<control type="label">
-						<posx>20</posx>
-						<posy>0</posy>
-						<width>720</width>
-						<height>120</height>
-						<aligny>center</aligny>
-						<font>Font_ListTitleBigger</font>
-						<textcolor>ListTitleF</textcolor>
-						<label>$INFO[ListItem.Album]</label>
-					</control>
-					<control type="label">
-						<posx>20</posx>
-						<posy>20</posy>
-						<width>720</width>
-						<height>25</height>
-						<aligny>center</aligny>
-						<font>Font_ListDetail</font>
-						<textcolor>ListTitleF</textcolor>
-						<label>$INFO[ListItem.Genre,[B]$LOCALIZE[515]:[/B] ]</label>
-						<visible>!IsEmpty(ListItem.Album)</visible>
-					</control>
-					<control type="image">
-						<posx>20</posx>
-						<posy>80</posy>
-						<width>121</width>
-						<height>25</height>
-						<texture>$INFO[ListItem.StarRating]</texture>
-						<colordiffuse>StarDiffuse</colordiffuse>
-						<visible>!IsEmpty(ListItem.Album)</visible>
-					</control>
-				</control>-->
-				<!-- Song -->
-				<!--<control type="group">
-					<visible>Container.Content(songs) | Window.IsActive(500)</visible>
-					<control type="label">
-						<posx>20</posx>
-						<posy>0</posy>
-						<width>720</width>
-						<height>120</height>
-						<aligny>center</aligny>
-						<font>Font_ListTitleBigger</font>
-						<textcolor>ListTitleF</textcolor>
-						<label>$INFO[ListItem.Label]</label>
-						<visible>IsEmpty(ListItem.Title)</visible>
-					</control>
-					<control type="label">
-						<posx>20</posx>
-						<posy>0</posy>
-						<width>720</width>
-						<height>120</height>
-						<aligny>center</aligny>
-						<font>Font_ListTitleBigger</font>
-						<textcolor>ListTitleF</textcolor>
-						<label>$INFO[ListItem.TrackNumber]$INFO[ListItem.Title,. ]</label>
-						<visible>!IsEmpty(ListItem.Title)</visible>
-						<animation effect="slide" start="0,-10" end="0,-10" time="0" condition="Window.IsActive(500) | [ Window.IsActive(502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]">Conditional</animation>
-					</control>
-					<control type="label">
-						<posx>20</posx>
-						<posy>20</posy>
-						<width>720</width>
-						<height>25</height>
-						<aligny>center</aligny>
-						<font>Font_ListDetail</font>
-						<textcolor>ListTitleF</textcolor>
-						<label>$INFO[ListItem.Album,[B]Album:[/B] ]</label>
-						<visible>[Window.IsActive(500) | [ Window.IsActive(502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]] + !IsEmpty(ListItem.Title)</visible>
-					</control>
-					<control type="label">
-						<posx>20</posx>
-						<posy>20</posy>
-						<width>720</width>
-						<height>25</height>
-						<aligny>center</aligny>
-						<font>Font_ListDetail</font>
-						<textcolor>ListTitleF</textcolor>
-						<label>$INFO[ListItem.Artist,[B]Artist:[/B] ]</label>
-						<visible>!IsEmpty(ListItem.Title)</visible>
-						<animation effect="slide" start="0,10" end="0,10" time="0" condition="Window.IsActive(500) | [ Window.IsActive(502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]">Conditional</animation>
-					</control>
-					<control type="label">
-						<posx>20</posx>
-						<posy>80</posy>
-						<width>720</width>
-						<height>25</height>
-						<aligny>center</aligny>
-						<font>Font_ListDetail</font>
-						<textcolor>ListTitleF</textcolor>
-						<label>$INFO[ListItem.Duration,[B]Duration:[/B] ]</label>
-						<visible>substring(listitem.Duration,min) + !IsEmpty(listitem.Duration)</visible>
-						<animation effect="slide" start="0,10" end="0,10" time="0" condition="Window.IsActive(500) | [ Window.IsActive(502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]">Conditional</animation>
-					</control>
-					<control type="label">
-						<posx>20</posx>
-						<posy>80</posy>
-						<width>720</width>
-						<height>25</height>
-						<aligny>center</aligny>
-						<font>Font_ListDetail</font>
-						<textcolor>ListTitleF</textcolor>
-						<label>$INFO[ListItem.Duration,[B]Duration:[/B] ] mins</label>
-						<visible>!substring(listitem.Duration,min) + !IsEmpty(listitem.Duration)</visible>
-						<animation effect="slide" start="0,10" end="0,10" time="0" condition="Window.IsActive(500) | [ Window.IsActive(502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]">Conditional</animation>
-					</control>
-				</control>-->
 				<control type="image">
 					<posx>10</posx>
 					<posy>20</posy>
@@ -487,7 +297,7 @@
 	<control type="group">	
 	<include>Animation_Viewtype_Files_RightArea</include>
 	<include>Animation_HiddenByInfo</include>
-	<visible>Container.Content(movies) + Control.IsVisible(55)</visible>
+	<visible>Container.Content(movies) + Control.IsVisible(55) + !Skin.HasSetting(Files_Fanart)</visible>
 		<control type="image">
 			<posx>790</posx>
 			<posy>-26</posy>
@@ -750,7 +560,7 @@
 			<width>230</width>
 			<height>89</height>
 			<texture>$INFO[ListItem.path]logo.png</texture>
-			<fadetime>300</fadetime>
+			<fadetime>100</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Files_RightArea</include>
@@ -762,7 +572,7 @@
 			<width>230</width>
 			<height>89</height>
 			<texture>$INFO[ListItem.path]../logo.png</texture>
-			<fadetime>300</fadetime>
+			<fadetime>100</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Files_RightArea</include>

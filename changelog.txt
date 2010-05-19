@@ -1,9 +1,19 @@
+Update 5/16/2010
+  -Fixed double 'Now Playing' in Landscape
+  -Added Queue/Now Playing windows
+  -Added 2 more custom Home item choices
+  -Fixed some cdART overlap issues
+  -Mover RSS to start 100 or so pixels from the right, Moved time back up
+  -Changed to smaller font on Home submenus to accommodate now playing
+  -Lowered logo fadetime in views
+  -added fanart option to files view in Movies Library mode
+
 Update 5/17/2010
   -Fixed weather options
   -Added regular weather fanart for Home, now skin setting for condition based fanart
   -Added License.txt
   -Fixed Now playing music in Showcase
-  -Added Global now playing to File and Songs view in music
+  -Added Global Music now playing to File and Songs view in music
   -Fixed overlapping text when hide plot option is checked
   -Merge version has a setting to check to get recently added to work
   -Started work on custom Home menus

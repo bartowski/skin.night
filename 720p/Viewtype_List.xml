@@ -34,7 +34,7 @@
 			<include>Animation_HiddenByInfo</include>
 			<camera x="1340" y="380" />
 			<animation effect="rotatey" center="50" start="12" end="12" time="0" condition="true">Conditional</animation>
-			<visible>!Skin.HasSetting(no_3DLandscape) + [[Container.Content(tvshows) | Container.Content(seasons)] + ![Skin.HasSetting(TVPosters) | Skin.HasSetting(TVBanners)] | Container.Content(episodes)]</visible>
+			<visible>!Skin.HasSetting(no_3DLandscape) + !Container.Content(movies)</visible>
 			<itemlayout width="316" height="245">
 				<control type="group">
 				<posx>150</posx>
@@ -72,7 +72,7 @@
 						<texture background="true" diffuse="movie-poster/xper_test.png">$INFO[ListItem.Icon]</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<visible>!Skin.HasSetting(3dland_jpg) + [Container.Content(tvshows) | Container.Content(seasons)] | Container.Content(episodes)</visible>
+						<visible>!Skin.HasSetting(3dland_jpg) + [Container.Content(tvshows) | Container.Content(seasons)] | Container.Content(episodes) | Window.IsActive(videoplaylist)</visible>
 					</control>
 					<control type="image">
 						<posx>-150</posx>
@@ -92,7 +92,7 @@
 						<texture>list/3d_back_overlay1.png</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<visible>!IsEmpty(ListItem.Title) + Container.Content(episodes)</visible>
+						<visible>!IsEmpty(ListItem.Title) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
 					</control>
 					<control type="label"><!-- Episode Description -->
 						<posx>5</posx>
@@ -104,7 +104,7 @@
 						<textcolor>ffffffff</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<animation effect="fade" start="60" end="60" time="0" condition="stringcompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
-						<visible>!IsEmpty(ListItem.Title) + Container.Content(episodes)</visible>
+						<visible>!IsEmpty(ListItem.Title) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
 					</control>
 					
 					<control type="label"><!-- Episode Description -->
@@ -117,7 +117,7 @@
 						<textcolor>ffffffff</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<animation effect="rotatex" start="180" end="180" center="330" time="0" condition="true">Conditional</animation>
-						<visible>!IsEmpty(ListItem.Title) + Container.Content(episodes)</visible>
+						<visible>!IsEmpty(ListItem.Title) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
 					</control>
 					<control type="image">
 						<posx>-150</posx>
@@ -128,7 +128,7 @@
 						<fadetime>200</fadetime>
 						<colordiffuse>89FFFFFF</colordiffuse>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<visible>!Skin.HasSetting(3dland_jpg) + [Container.Content(tvshows) | Container.Content(seasons)] | Container.Content(episodes)</visible>
+						<visible>!Skin.HasSetting(3dland_jpg) + [Container.Content(tvshows) | Container.Content(seasons)] | Container.Content(episodes) | Window.IsActive(videoplaylist)</visible>
 					</control>
 					<control type="image">
 						<posx>-150</posx>
@@ -159,7 +159,7 @@
 						<texture flipy="true">list/3d_back_overlay1.png</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<visible>!IsEmpty(ListItem.Title) + Container.Content(episodes)</visible>
+						<visible>!IsEmpty(ListItem.Title) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
 					</control>
 					<control type="image">
 						<visible>Container.Content(episodes)</visible>
@@ -257,7 +257,7 @@
 							<effect type="fade" start="0" end="70" time="600" />
 						</animation>
 						<include>Animation_HiddenByInfo</include>
-						<visible>!Skin.HasSetting(3dland_jpg) + [Container.Content(tvshows) | Container.Content(seasons)] | Container.Content(episodes)</visible>
+						<visible>!Skin.HasSetting(3dland_jpg) + [Container.Content(tvshows) | Container.Content(seasons)] | Container.Content(episodes) | Window.IsActive(videoplaylist)</visible>
 					</control>
 					<control type="image">
 						<posx>-150</posx>
@@ -286,7 +286,7 @@
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 						</animation>
-						<visible>!Skin.HasSetting(3dland_jpg) + [Container.Content(tvshows) | Container.Content(seasons)] | Container.Content(episodes)</visible>
+						<visible>!Skin.HasSetting(3dland_jpg) + [Container.Content(tvshows) | Container.Content(seasons)] | Container.Content(episodes) | Window.IsActive(videoplaylist)</visible>
 					</control>
 					<control type="image">
 						<posx>-150</posx>
@@ -314,7 +314,7 @@
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 						</animation>
-						<visible>!IsEmpty(ListItem.Title) + Container.Content(episodes)</visible>
+						<visible>!IsEmpty(ListItem.Title) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
 					</control>
 					<control type="image">
 						<visible>Container.Content(episodes)</visible>
@@ -356,7 +356,7 @@
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 						</animation>
-						<visible>!IsEmpty(ListItem.Title) + Container.Content(episodes)</visible>
+						<visible>!IsEmpty(ListItem.Title) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
 					</control>
 					<control type="label"><!-- Episode Description -->
 						<posx>56</posx>
@@ -372,7 +372,7 @@
 						<animation type="Focus" reversible="false">
 							<effect type="fade" center="60,238" start="0" end="100" time="300" delay="300" tween="back" easing="out" />
 						</animation>
-						<visible>!IsEmpty(ListItem.Title) + Container.Content(episodes)</visible>
+						<visible>!IsEmpty(ListItem.Title) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
 					</control>
 					
 					<control type="image">
@@ -387,7 +387,7 @@
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 						</animation>
-						<visible>!IsEmpty(ListItem.Title) + Container.Content(episodes)</visible>
+						<visible>!IsEmpty(ListItem.Title) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
 					</control>
 				</control>	
 			</focusedlayout>
@@ -471,7 +471,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<visible>Control.IsVisible(53) + Container.Content(episodes) + !IsEmpty(ListItem.Title)</visible>
+			<visible>Control.IsVisible(53) + [Container.Content(episodes) | Window.IsActive(videoplaylist)] + !IsEmpty(ListItem.Title)</visible>
 			<include>Animation_Viewtype_3dland_Leftplot</include>
 			<posx>0</posx>
 			<posy>240</posy>
@@ -497,7 +497,7 @@
 				</control>
 		</control>
 	<control type="group">
-		<visible>Control.IsVisible(53) + !IsEmpty(ListItem.Title)</visible>
+		<visible>Control.IsVisible(53) + !Window.IsActive(videoplaylist) + !IsEmpty(ListItem.Title)</visible>
 		<posx>20</posx>
 		<posy>90</posy>
 		<include>Animation_Viewtype_3dland_Lefttop</include>

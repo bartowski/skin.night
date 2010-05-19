@@ -5,8 +5,6 @@
 		
 		<control type="group">
 			<visible>!Window.IsVisible(FileBrowser)</visible>
-			<animation effect="slide" start="1100,0" end="0,0" time="600" tween="quadratic" easing="out">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
 			<control type="image"> 
 				<posx>0</posx>
 				<posy>0</posy>

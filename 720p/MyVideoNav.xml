@@ -5,7 +5,6 @@
 	<allowoverlay>yes</allowoverlay>
 	<views>50,51,52,53,54,55,56,57,58,59,592,597</views>
 	<controls>
-		<include>Global_Background</include>
 		<control type="largeimage">
 			<include>Dimensions_Fullscreen</include>
 			<texture background="true">$INFO[Fanart.Image]</texture>
@@ -95,11 +94,7 @@
 			<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews)</visible>
 			<include>Animation_ViewOptions_whitebar</include>
 		</control>
-		<control type="label">
-			<include>WindowID</include>
-			<label>MyVideoNav.xml</label>
-			<visible>Skin.HasSetting(debugmode)</visible>
-		</control>
+		
 
 		<control type="grouplist" id="7000">
 			<visible>!Skin.HasSetting(LockViews)</visible>
@@ -145,6 +140,15 @@
 				<onclick>Skin.ToggleSetting(3dland_jpg)</onclick>
 				<selected>Skin.HasSetting(3dland_jpg)</selected>
 				<visible>Control.IsVisible(53)</visible>
+			</control>
+			<control type="togglebutton" id="28">
+				<description>Toggle MoviesFanart</description>
+				<include>WindowMenuButton</include>
+				<label>Fanart</label>
+				<altlabel>DarK View</altlabel>
+				<onclick>Skin.ToggleSetting(Files_Fanart)</onclick>
+				<selected>Skin.HasSetting(Files_Fanart)</selected>
+				<visible>Control.IsVisible(55) + Container.Content(movies)</visible>
 			</control>
 			<control type="togglebutton" id="24">
 				<description>Toggle MoviesFanart</description>
@@ -202,10 +206,15 @@
 			</control>
 			<control type="button" id="46">
 				<include>WindowMenuLabel</include>
+				<label>$LOCALIZE[31089]</label>
+				<visible>Control.IsVisible(55) + Container.Content(movies)</visible>		
+			</control>
+			<control type="button" id="47">
+				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[31206]</label>
 				<visible>Control.IsVisible(58)</visible>		
 			</control>
-			<control type="button" id="46">
+			<control type="button" id="48">
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[31207]</label>
 				<visible>Container.Content(movies) | Container.Content(episodes)</visible>		

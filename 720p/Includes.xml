@@ -33,12 +33,12 @@
 	
 	<include name="ButtonHomeSubCommonValues">
 		<width>600</width>
-		<height>71</height>
+		<height>56</height>
 		<textoffsetx>20</textoffsetx>
 		<textwidth>600</textwidth>
 		<posx>150</posx>
 		<posy>91</posy>
-		<font>Font_Bartowski_MainMenu</font>
+		<font>Font_Bartowski_Main_SubMenu</font>
 		<textcolor>38b8b7b7</textcolor>
 		<focusedcolor>mainblue</focusedcolor>
 	</include>
@@ -74,7 +74,7 @@
 	</include>
 	<include name="7000_has_focus">
 		<control type="image">
-			<visible>!Skin.HasSetting(LockViews) + [ControlGroup(7000).HasFocus | Window.IsActive(106) | Window.IsActive(111) | Window.IsActive(2600)]</visible>
+			<visible>!Skin.HasSetting(LockViews) + [ControlGroup(7000).HasFocus | Window.IsActive(contextmenu) | Window.IsActive(shutdownmenu)]</visible>
 			<include>Dimensions_Fullscreen</include>
 			<texture>common/7000_focus.png</texture>
 			<animation effect="fade" start="0" end="100" time="600">Visible</animation>
@@ -82,34 +82,7 @@
 		</control>
 		
 	</include>
-	<!-- Global objects -->
-	<!--<include name="Global_Background">
-		<control type="image">
-			<include>Dimensions_Fullscreen</include>
-			<texture>common/white.png</texture>
-			<colordiffuse>BackgroundColor</colordiffuse>
-		</control>
-	</include>-->
-	
-	<!--<include name="Global_ContextFilter">
-		<control type="group">
-			<visible>ControlGroup(7001).HasFocus | ControlGroup(7000).HasFocus | Window.IsActive(100) | Window.IsActive(103) | Window.IsActive(111) | Window.IsActive(134)</visible>
-			<animation effect="fade" start="0" end="100" time="200">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
-			<control type="image">
-				<include>Dimensions_Fullscreen</include>
-				<texture>common/white.png</texture>
-				<colordiffuse>BackgroundColor</colordiffuse>
-			</control>
-			<control type="image">
-				<include>Dimensions_Fullscreen</include>
-				<texture>backdrops/filter.png</texture>
-				<colordiffuse>BackgroundFilterColor</colordiffuse>
-			</control>
-		</control>
-	</include>-->
-
-	<include name="Global_Time">
+    <include name="Global_Time">
 		<control type="group">
 			<posx>1260</posx>
 			<posy>10</posy>
@@ -129,7 +102,6 @@
 					<textcolor>mainblue</textcolor>
 					<info>System.Time(hh:mm xx)</info>
 					<align>right</align>
-					<animation effect="slide" start="0,0" end="0,16" time="0" condition="system.getbool(lookandfeel.enablerssfeeds)">Conditional</animation>
 				</control>
 				<control type="label">
 					<posy>40</posy>
@@ -138,7 +110,6 @@
 					<textcolor>white</textcolor>
 					<info>System.Date</info>
 					<align>right</align>
-					<animation effect="slide" start="0,0" end="0,16" time="0" condition="system.getbool(lookandfeel.enablerssfeeds)">Conditional</animation>
 				</control>
 		</control>
 	</include>
@@ -186,7 +157,7 @@
 		<control type="rss" id="1">
 			<posx>0</posx>
 			<posy>0</posy>
-			<width>1280</width>
+			<width>1080</width>
 			<height>40</height>
 			<aligny>bottom</aligny>
 			<font>Font_RSS_Bartowski</font>

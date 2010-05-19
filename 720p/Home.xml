@@ -3,7 +3,7 @@
 	<allowoverlay>yes</allowoverlay>
 	<controls>
 
-		<!--<include>Global_Filter</include>-->
+		
 		
 		<control type="multiimage">
 			<posx>0</posx>
@@ -86,6 +86,22 @@
 				</control>
 			</focusedlayout>
 			<content>
+				<item id="17">
+					<description>Custom Movie Three</description>
+					<label>$INFO[Skin.String(Menu_Custom3_Label)]</label>
+					<icon>special://skin/media/backgrounds/custom.jpg</icon>
+					<thumb>$INFO[Skin.String(Menu_Custom3_Folder)]</thumb>
+					<onclick>$INFO[Skin.String(Menu_Custom3_Path)]</onclick>
+					<visible>Skin.HasSetting(Menu_Custom3)</visible>
+				</item>
+				<item id="16">
+					<description>Custom Movie Two</description>
+					<label>$INFO[Skin.String(Menu_Custom2_Label)]</label>
+					<icon>special://skin/media/backgrounds/custom.jpg</icon>
+					<thumb>$INFO[Skin.String(Menu_Custom2_Folder)]</thumb>
+					<onclick>$INFO[Skin.String(Menu_Custom2_Path)]</onclick>
+					<visible>Skin.HasSetting(Menu_Custom2)</visible>
+				</item>
 				<item id="15">
 					<description>Custom Movie One</description>
 					<label>$INFO[Skin.String(Menu_Custom1_Label)]</label>
@@ -118,13 +134,6 @@
 					<onclick>XBMC.ActivateWindow(MyVideoLibrary,movietitles,return)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
 				</item>
-				<!--<item id="4">
-					<label>HD Movies</label>
-					<icon>special://skin/media/backgrounds/movies.jpg</icon>
-					<thumb>$INFO[Skin.String(CustomHDMoviesFolder)]</thumb>			
-					<onclick>ActivateWindow(10025,videodb://1/1/9/,return)</onclick>
-					<visible>!Skin.HasSetting(nomovies)</visible>
-				</item>-->
 				<item id="5">
 					<description>TV shows</description>
 					<label>$LOCALIZE[31014]</label>

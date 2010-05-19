@@ -87,6 +87,37 @@
 		<animation effect="rotate" end="-15" center="auto" time="500" delay="500" reversible="false" condition="Player.Paused">Conditional</animation>
 		<animation effect="rotate" end="-3" center="auto" time="250" delay="1000" reversible="false" condition="Player.Paused">Conditional</animation>
 	</include>
+	<include name="cdartspin3">
+		<animation type="WindowOpen">
+			<effect type="slide" end="74" tween="cubic" easing="out" delay="1000" time="2000" />
+			<effect type="rotate" center="auto" end="234" time="3250" />
+		</animation>
+		<animation type="WindowClose" reversible="false" condition="Player.Playing">
+			<effect type="slide" start="74" end="0" tween="cubic" easing="out" time="2000" />
+			<effect type="rotate" center="auto" start="0" end="20" time="500" />
+			<effect type="rotate" center="auto" start="0" end="25" time="500" delay="500" />
+			<effect type="rotate" center="auto" start="0" end="30" time="500" delay="1000" />
+			<effect type="rotate" center="auto" start="0" end="36" time="500" delay="1500" />
+		</animation>
+		
+		<animation effect="rotate" end="-36000" center="auto" time="500000" loop="true" reversible="false" condition="true">Conditional</animation>
+		<animation effect="rotate" end="-360" center="auto" time="3000" loop="true" reversible="false" condition="Player.Forwarding2x">Conditional</animation>
+		<animation effect="rotate" end="-360" center="auto" time="2000" loop="true" reversible="false" condition="Player.Forwarding4x">Conditional</animation>
+		<animation effect="rotate" end="-360" center="auto" time="1500" loop="true" reversible="false" condition="Player.Forwarding8x">Conditional</animation>
+		<animation effect="rotate" end="-360" center="auto" time="1000" loop="true" reversible="false" condition="Player.Forwarding16x">Conditional</animation>
+		<animation effect="rotate" end="-360" center="auto" time="500" loop="true" reversible="false" condition="Player.Forwarding32x">Conditional</animation>
+		<animation effect="rotate" end="720" center="auto" time="3000" loop="true" reversible="false" condition="Player.Rewinding2x">Conditional</animation>
+		<animation effect="rotate" end="720" center="auto" time="2000" loop="true" reversible="false" condition="Player.Rewinding4x">Conditional</animation>
+		<animation effect="rotate" end="720" center="auto" time="1500" loop="true" reversible="false" condition="Player.Rewinding8x">Conditional</animation>
+		<animation effect="rotate" end="720" center="auto" time="1000" loop="true" reversible="false" condition="Player.Rewinding16x">Conditional</animation>
+		<animation effect="rotate" end="720" center="auto" time="500" loop="true" reversible="false" condition="Player.Rewinding32x">Conditional</animation>
+		<animation effect="rotate" end="36000" center="auto" time="500000" loop="true" reversible="false" condition="Player.Paused">Conditional</animation>
+		<animation effect="rotate" end="-28" center="auto" time="500" reversible="false" condition="Player.Paused">Conditional</animation>
+		<animation effect="rotate" end="-15" center="auto" time="500" delay="500" reversible="false" condition="Player.Paused">Conditional</animation>
+		<animation effect="rotate" end="-3" center="auto" time="250" delay="1000" reversible="false" condition="Player.Paused">Conditional</animation>
+	</include>
+	
+	
 	<include name="Animation_Bartowski_ZoomOutZoomIn">
 		<animation type="WindowOpen">
 			<effect type="zoom" time="400" center="640,360" start="180" end="100" tween="cubic" easing="out" />
