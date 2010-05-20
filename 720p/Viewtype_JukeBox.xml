@@ -246,6 +246,7 @@
 	
 	
 	<control type="label">
+		<description>Now Playing</description>
 		<posx>572</posx>
 		<posy>448</posy>
 		<width>170</width>
@@ -253,10 +254,11 @@
 		<align>center</align>
 		<font>Font_Bartowski_Digital_Clock</font>
 		<textcolor>ff67ffff</textcolor>
-		<label>Now Playing</label>
+		<label>$LOCALIZE[31004]</label>
 		<visible>Control.IsVisible(50) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)</visible>
 	</control>
 	<control type="label">
+		<description>Artists</description>
 		<posx>572</posx>
 		<posy>448</posy>
 		<width>170</width>
@@ -264,10 +266,11 @@
 		<align>center</align>
 		<font>Font_Bartowski_Digital_Clock</font>
 		<textcolor>ff67ffff</textcolor>
-		<label>Artist Level</label>
+		<label>$LOCALIZE[31083]</label>
 		<visible>Control.IsVisible(50) + Container.Content(artists) + !Container.Content(songs) + !Container.Content(albums)</visible>
 	</control>
 	<control type="label">
+		<description>Albums</description>
 		<posx>572</posx>
 		<posy>448</posy>
 		<width>170</width>
@@ -275,10 +278,11 @@
 		<align>center</align>
 		<font>Font_Bartowski_Digital_Clock</font>
 		<textcolor>ff67ffff</textcolor>
-		<label>Album Level</label>
+		<label>$LOCALIZE[31084]</label>
 		<visible>Control.IsVisible(50) + !Container.Content(songs) + Container.Content(albums)</visible>
 	</control>
 	<control type="label">
+		<description>Songs</description>
 		<posx>572</posx>
 		<posy>448</posy>
 		<width>170</width>
@@ -286,10 +290,11 @@
 		<align>center</align>
 		<font>Font_Bartowski_Digital_Clock</font>
 		<textcolor>ff67ffff</textcolor>
-		<label>Song Level</label>
+		<label>$LOCALIZE[31085]</label>
 		<visible>Control.IsVisible(50) + Container.Content(songs) + !Container.Content(albums)</visible>
 	</control>
 	<control type="label">
+		<description>Please Choose a Song</description>
 		<posx>560</posx>
 		<posy>680</posy>
 		<width>200</width>
@@ -297,7 +302,7 @@
 		<align>center</align>
 		<font>Font_Bartowski_Digital_Clock</font>
 		<textcolor>ff67ffff</textcolor>
-		<label>Please Choose a Song</label>
+		<label>$LOCALIZE[31233]</label>
 		<visible>Control.IsVisible(50) + !Player.HasMedia</visible>
 	</control>
 	<control type="label">

@@ -36,7 +36,7 @@
 			<font>Font_Bartowski_BigMusic</font>
 			<shadowcolor>678b8b8b</shadowcolor>
 			<textcolor>678b8b8b</textcolor>
-			<label>GO [CR]BACK</label>
+			<label>$LOCALIZE[31232]</label>
 			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Bartowski_Context_Zoom</include>
 		</control>

@@ -66,14 +66,6 @@
 		<include>Viewtype_WallPanel</include><!--  592  -->
 		
 		
-		
-		
-
-		<include>7000_has_focus</include>
-		<control type="group">
-			<include>Global_Time</include>
-		</control>
-		
 		<include>Trailer</include>
 		<include>Trailer_TVLandscape</include>
 		<include>Trailer_Landscape_Fanart</include>
@@ -81,9 +73,16 @@
 		<include>Trailer_Files</include>
 		<include>Trailer_Poster</include>
 		
+		
 		<include>Music_Global_TopRight</include>
 		<include>Music_Global_Showcase</include>
 		<include>Music_Global_LowerRight</include>
+		
+		<include>7000_has_focus</include>
+		<control type="group">
+			<include>Global_Time</include>
+		</control>
+		
 		
 		<control type="image"><!-- Floor -->
 			<posx>0</posx>
@@ -144,8 +143,8 @@
 			<control type="togglebutton" id="28">
 				<description>Toggle MoviesFanart</description>
 				<include>WindowMenuButton</include>
-				<label>Fanart</label>
-				<altlabel>DarK View</altlabel>
+				<label>$LOCALIZE[31086]</label>
+				<altlabel>$LOCALIZE[31214]</altlabel>
 				<onclick>Skin.ToggleSetting(Files_Fanart)</onclick>
 				<selected>Skin.HasSetting(Files_Fanart)</selected>
 				<visible>Control.IsVisible(55) + Container.Content(movies)</visible>

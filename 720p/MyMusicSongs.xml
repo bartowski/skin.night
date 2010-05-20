@@ -25,11 +25,6 @@
 		<include>Viewtype_Files</include>
 		<include>Viewtype_MusicShowcase</include>
 		
-		<control type="label">
-			<posy>330</posy>
-			<label>MyMusicSongs.xml</label>
-			<visible>Skin.HasSetting(debugmode)</visible>
-		</control>
 		
 		
 		<include>7000_has_focus</include>

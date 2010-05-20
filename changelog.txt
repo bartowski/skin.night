@@ -1,4 +1,11 @@
-Update 5/16/2010
+Update 5/19/2010
+  -Should be good on global music now playing overlaps
+  -Should be done with translating minus a some overlooks
+  -allowed musicshowcase to be used in files mode
+  -added plot to 3DLandscape and Fanart Landscape
+  
+
+Update 5/18/2010
   -Fixed double 'Now Playing' in Landscape
   -Added Queue/Now Playing windows
   -Added 2 more custom Home item choices

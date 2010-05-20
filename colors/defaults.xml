@@ -15,7 +15,7 @@
 	<color name="BackgroundFilterColor">dd727272</color>
 	<color name="BackgroundFilterColor1">dd000000</color>
 	<color name="ButtonFilterColor">FF67FFFF</color>
-
+	<color name="plotdiffuse">bb000000</color>
 	<!-- Home 1 Colours -->
 
 	<color name="HomeFrameColor">FFE0E0E0</color>

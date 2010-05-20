@@ -519,11 +519,17 @@
 			<size>20</size>
 		</font>
 
-		<!--#Pragma Keyboard -->
+		<!--#Pragma Keyboard --><linespacing>1</linespacing>
 		<font>
 			<name>Font_KeyboardKeys</name>
 			<filename>alaska_nocaps.ttf</filename>
 			<size>26</size>
+		</font>
+		<font>
+			<name>Font_KeyboardKeys_Plot</name>
+			<filename>alaska_nocaps.ttf</filename>
+			<size>24</size>
+			<linespacing>.8</linespacing>
 		</font>
 		<font>
 			<name>Font_KeyboardTitle</name>

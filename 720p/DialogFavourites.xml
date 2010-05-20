@@ -4,14 +4,12 @@
 	<defaultcontrol always="true">450</defaultcontrol>
 	<include>Animation_Bartowski_Context_Zoom</include>
 	<controls>
-		<control type="label">
-			<include>WindowID</include>
-			<label>DialogFavourites.xml</label>
-			<visible>Skin.HasSetting(debugmode)</visible>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture>common/7000_focus.png</texture>
+			<animation effect="fade" start="0" end="100" time="600">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
 		</control>
-		<include>Animation_ZoomedByMenu</include>
-			<include>Animation_ZoomInZoomOut</include>
-
 		<control type="image">
 			<description>Panel</description>
 			<posx>240</posx>

@@ -63,7 +63,7 @@
 					<posx>130</posx>
 					<posy>112</posy>
 					<width>235</width>
-					<label>[B]Episode $INFO[ListItem.Episode][/B]</label>
+					<label>[B]$LOCALIZE[31050] $INFO[ListItem.Episode][/B]</label>
 					<align>center</align>
 					<font>Font_Bartowski_Extras_Pause</font>
 					<textcolor>ffffffff</textcolor>
@@ -125,7 +125,7 @@
 					<posx>130</posx>
 					<posy>112</posy>
 					<width>235</width>
-					<label>[B]Episode $INFO[ListItem.Episode][/B]</label>
+					<label>[B]$LOCALIZE[31050] $INFO[ListItem.Episode][/B]</label>
 					<align>center</align>
 					<font>Font_Bartowski_Extras_Pause</font>
 					<textcolor>ffffffff</textcolor>
@@ -262,7 +262,7 @@
 				<align>center</align>
 				<font>Font_TVShow</font>
 				<textcolor>ffffffff</textcolor>
-				<label>Season $INFO[ListItem.Season]/Episode $INFO[ListItem.Episode]</label>
+				<label>$LOCALIZE[31068] $INFO[ListItem.Season]/$LOCALIZE[31050] $INFO[ListItem.Episode]</label>
 			</control>
 			<control type="label"><!-- Episode aired -->
 				<posx>0</posx>
@@ -272,7 +272,7 @@
 				<align>center</align>
 				<font>Font_TVShow</font>
 				<textcolor>ffffffff</textcolor>
-				<label>Aired: $INFO[ListItem.Date]</label>
+				<label>$LOCALIZE[31231]: $INFO[ListItem.Date]</label>
 			</control>
 		</control>
 		<control type="grouplist">

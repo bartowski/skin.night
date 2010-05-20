@@ -471,7 +471,7 @@
 			<aligny>center</aligny>
 			<font>Font_Alaya_Movie-trailer</font>
 			<textcolor>ffffffff</textcolor>
-			<label>*Press Left for Trailer*</label>
+			<label>*$LOCALIZE[31240]*</label>
 			<shadowcolor>black</shadowcolor>
 			<include>Animation_ZoomInZoomOut</include>
 			<include>Animation_ZoomedByMenu</include>
@@ -485,7 +485,7 @@
 			<aligny>center</aligny>
 			<font>Font_Alaya_Movie-trailer</font>
 			<textcolor>ffffffff</textcolor>
-			<label>*Press "X" to Stop*</label>
+			<label>*$LOCALIZE[31238]*</label>
 			<shadowcolor>black</shadowcolor>
 			<include>Animation_ZoomInZoomOut</include>
 			<include>Animation_ZoomedByMenu</include>

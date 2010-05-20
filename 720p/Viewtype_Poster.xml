@@ -39,7 +39,7 @@
 			<font>Font_Bartowski_BigMusic</font>
 			<shadowcolor>678b8b8b</shadowcolor>
 			<textcolor>678b8b8b</textcolor>
-			<label>GO BACK</label>
+			<label>$LOCALIZE[31235]</label>
 			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Bartowski_Context_Zoom</include>
 		</control>
@@ -372,7 +372,7 @@
 				<width>230</width>
 				<height>89</height>
 				<texture>$INFO[ListItem.path]logo.png</texture>
-				<fadetime>300</fadetime>
+				<fadetime>100</fadetime>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<include>Animation_HiddenByInfo</include>
 				<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
@@ -383,7 +383,7 @@
 				<width>230</width>
 				<height>89</height>
 				<texture>$INFO[ListItem.path]../logo.png</texture>
-				<fadetime>300</fadetime>
+				<fadetime>100</fadetime>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<include>Animation_HiddenByInfo</include>
 				<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
@@ -493,7 +493,7 @@
 				<height>89</height>
 				<font>Font_Bartowski_Movies_Duration</font>
 				<textcolor>white</textcolor>
-				<label>[B]Season $INFO[ListItem.season][/B]</label>
+				<label>[B]$LOCALIZE[31068] $INFO[ListItem.season][/B]</label>
 			</control>
 			<control type="label">
 				<visible>![Container.Content(seasons) | Container.Content(episodes)]</visible>
@@ -502,7 +502,7 @@
 				<width>630</width>
 				<height>89</height>
 				<font>Font_TVShow</font>
-				<label>[B][COLOR=ListTrackF]Genre[/COLOR] [B][COLOR=white]$INFO[ListItem.Genre][/B][/COLOR]</label>
+				<label>[B][COLOR=ListTrackF]$LOCALIZE[31072][/COLOR] [B][COLOR=white]$INFO[ListItem.Genre][/B][/COLOR]</label>
 			</control>
 			<control type="label">
 				<visible>![Container.Content(seasons) | Container.Content(episodes)]</visible>
@@ -511,7 +511,7 @@
 				<width>630</width>
 				<height>89</height>
 				<font>Font_TVShow</font>
-				<label>[COLOR=ListTrackF][B]Aired[/COLOR] [COLOR=white]$INFO[ListItem.Date][/COLOR][/B]</label>
+				<label>[COLOR=ListTrackF][B]$LOCALIZE[31231][/COLOR] [COLOR=white]$INFO[ListItem.Date][/COLOR][/B]</label>
 			</control>
 			<control type="label">
 				<visible>![Container.Content(seasons) | Container.Content(episodes)]</visible>
@@ -520,7 +520,7 @@
 				<width>630</width>
 				<height>89</height>
 				<font>Font_TVShow</font>
-				<label>[COLOR=ListTrackF][B]IMDB[/COLOR] [COLOR=white]$INFO[ListItem.Rating][/COLOR][/B]      [COLOR=ListTrackF][B]Rated[/COLOR] [COLOR=white]$INFO[ListItem.mpaa][/COLOR][/B]</label>
+				<label>[COLOR=ListTrackF][B]$LOCALIZE[31225][/COLOR] [COLOR=white]$INFO[ListItem.Rating][/COLOR][/B]      [COLOR=ListTrackF][B]$LOCALIZE[31226][/COLOR] [COLOR=white]$INFO[ListItem.mpaa][/COLOR][/B]</label>
 			</control>
 		</control>
 		<control type="group">
@@ -533,7 +533,7 @@
 				<width>630</width>
 				<height>89</height>
 				<font>Font_TVShow</font>
-				<label>[B][COLOR=ListTrackF]Genre[/COLOR] [B][COLOR=white]$INFO[ListItem.Genre][/B][/COLOR]</label>
+				<label>[B][COLOR=ListTrackF]$LOCALIZE[31072][/COLOR] [B][COLOR=white]$INFO[ListItem.Genre][/B][/COLOR]</label>
 				<include>Animation_HiddenByInfo</include>
 			</control>
 			<control type="label">
@@ -542,7 +542,7 @@
 				<width>630</width>
 				<height>89</height>
 				<font>Font_TVShow</font>
-				<label>[COLOR=ListTrackF][B]Release Date[/COLOR] [COLOR=white]$INFO[ListItem.Property(releasedate)][/COLOR][/B]</label>
+				<label>[COLOR=ListTrackF][B]$LOCALIZE[31236][/COLOR] [COLOR=white]$INFO[ListItem.Property(releasedate)][/COLOR][/B]</label>
 				<include>Animation_HiddenByInfo</include>
 			</control>
 			<control type="label">
@@ -551,12 +551,12 @@
 				<width>630</width>
 				<height>89</height>
 				<font>Font_TVShow</font>
-				<label>[COLOR=ListTrackF][B]Rated[/COLOR] [COLOR=white]$INFO[ListItem.mpaa][/COLOR][/B]</label>
+				<label>[COLOR=ListTrackF][B]$LOCALIZE[31226][/COLOR] [COLOR=white]$INFO[ListItem.mpaa][/COLOR][/B]</label>
 				<include>Animation_HiddenByInfo</include>
 			</control>
 		</control>
 		<control type="label"><!--Trailer Start-->
-				<visible>Control.IsVisible(50) + Container.Content(movies) + !IsEmpty(ListItem.Trailer) + !Player.HasMedia + !Control.IsVisible(68)</visible>
+				<visible>Control.IsVisible(50) + Container.Content(movies) + !IsEmpty(ListItem.Trailer) + !Player.HasVideo + !Control.IsVisible(68)</visible>
 				<posx>115</posx>
 				<posy>640</posy>
 				<width>370</width>
@@ -564,13 +564,13 @@
 				<aligny>center</aligny>
 				<font>Font_Alaya_Movie-trailer</font>
 				<textcolor>ffffffff</textcolor>
-				<label>*Press Down for Trailer*</label>
+				<label>*$LOCALIZE[31237]*</label>
 				<shadowcolor>black</shadowcolor>
 				<include>Animation_ZoomInZoomOut</include>
 				<include>Animation_ZoomedByMenu</include>
 			</control>	
 			<control type="label"><!--Trailer Stop-->
-				<visible>Control.IsVisible(50) + Container.Content(movies) + Player.HasMedia + !Control.IsVisible(68)</visible>
+				<visible>Control.IsVisible(50) + Container.Content(movies) + Player.HasVideo + !Control.IsVisible(68)</visible>
 				<posx>135</posx>
 				<posy>640</posy>
 				<width>370</width>
@@ -578,7 +578,7 @@
 				<aligny>center</aligny>
 				<font>Font_Alaya_Movie-trailer</font>
 				<textcolor>ffffffff</textcolor>
-				<label>*Press "X" to Stop*</label>
+				<label>*$LOCALIZE[31238]*</label>
 				<shadowcolor>black</shadowcolor>
 				<include>Animation_ZoomInZoomOut</include>
 				<include>Animation_ZoomedByMenu</include>

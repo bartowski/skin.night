@@ -87,7 +87,7 @@
 				</control>
 				<!-- label -->
 				<control type="label">
-					<label>Current</label>
+					<label>$LOCALIZE[31222]</label>
 					<width>205</width>
 					<height>20</height>
 					<posx>5</posx>
@@ -109,7 +109,7 @@
 				</control>
 				<!-- current temp -->
 				<control type="label">
-					<label>[B]Current[/B]</label>
+					<label>[B]$LOCALIZE[31222][/B]</label>
 					<posx>5</posx>
 					<posy>100</posy>
 					<width>95</width>

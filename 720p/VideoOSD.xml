@@ -64,7 +64,7 @@
 					<onclick>ActivateWindow(123)</onclick>
 				</control>
 			</control>
-			<control type="image" id="11">
+			<!--<control type="image" id="11">
 				<description>separator image</description>
 				<posx>567</posx>
 				<posy>25</posy>
@@ -72,7 +72,7 @@
 				<height>1</height>
 				<colordiffuse>66FFFFFF</colordiffuse>
 				<texture>separator2.png</texture>
-			</control>
+			</control>-->
 			<control type="group" id="201">
 				<posx>718</posx>
 				<posy>4</posy>

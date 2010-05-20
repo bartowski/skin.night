@@ -1,7 +1,13 @@
 <window type="dialog" id="1114">
 	<defaultcontrol always="true">451</defaultcontrol>
-	<include>dialogeffect3</include>
+	<include>Animation_Bartowski_Context_Zoom</include>
 	<controls>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture>common/7000_focus.png</texture>
+			<animation effect="fade" start="0" end="100" time="600">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
+		</control>
 		<control type="group">
 			<control type="button" id="451">
 				<description>conditionally run RecentlyAdded script at startup</description>
@@ -20,100 +26,78 @@
 				<ondown>450</ondown>
 			</control>
 			<control type="image">
-				<description>background image</description>
-				<posx>335</posx>
-				<posy>35</posy>
-				<width>610</width>
-				<height>650</height>
-				<texture border="50">dialog.png</texture>
+				<description>Panel</description>
+				<posx>240</posx>
+				<posy>72</posy>
+				<width>800</width>
+				<height>544</height>
+				<texture>favourites/favourites_panel1.png</texture>
+				<!--<colordiffuse>FavListPanel</colordiffuse>-->
 			</control>
-			<control type="label" id="2">
-				<description>heading label</description>
-				<posx>375</posx>
-				<posy>70</posy>
-				<width>530</width>
-				<height>30</height>
+			<control type="label">
+				<description>Favourites Label</description>
+				<posx>280</posx>
+				<posy>106</posy>
+				<width>720</width>
+				<height>60</height>
 				<align>center</align>
-				<aligny>center</aligny>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<textcolor>black</textcolor>
 				<label>$LOCALIZE[1036]</label>
-				<font>font-32</font>
+				<font>Font_Bartowski_MainMenu_Context</font>
 			</control>
 			<control type="image">
-				<posx>385</posx>
-				<posy>105</posy>
-				<width>530</width>
+				<posx>270</posx>
+				<posy>160</posy>
+				<width>740</width>
 				<height>2</height>
-				<texture>separator.png</texture>
-			</control>
-			<control type="image">
-				<posx>385</posx>
-				<posy>620</posy>
-				<width>530</width>
-				<height>2</height>
-				<texture>separator.png</texture>
+				<texture>common/divider.png</texture>
 			</control>
 			<control type="list" id="450">
-				<posx>385</posx>
-				<posy>135</posy>
-				<width>510</width>
-				<height>465</height>
-				<onup>450</onup>
-				<onleft>450</onleft>
-				<onright>61</onright>
-				<ondown>450</ondown>
-				<pagecontrol>61</pagecontrol>
-				<scrolltime>200</scrolltime>
-				<itemlayout width="510" height="29">
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>510</width>
-						<height>30</height>
-						<texture border="7">list-nofocus.png</texture>
-					</control>
-					<control type="label">
-						<posx>10</posx>
-						<posy>0</posy>
-						<width>490</width>
-						<height>30</height>
-						<font>font-20</font>
-						<align>left</align>
-						<aligny>center</aligny>
-						<selectedcolor>blue</selectedcolor>
-						<info>ListItem.Label</info>
-					</control>
-				</itemlayout>
-				<focusedlayout width="510" height="29">
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>510</width>
-						<height>30</height>
-						<texture border="7">list-nofocus.png</texture>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>510</width>
-						<height>30</height>
-						<visible>Control.HasFocus(450)</visible>
-						<texture border="7">list-focus2.png</texture>
-						<include>ListFocusScroll3</include>
-					</control>
-					<control type="label">
-						<posx>10</posx>
-						<posy>0</posy>
-						<width>490</width>
-						<height>30</height>
-						<font>Font_KeyboardKeys</font>
-						<align>left</align>
-						<aligny>center</aligny>
-						<selectedcolor>blue</selectedcolor>
-						<info>ListItem.Label</info>
-					</control>
-				</focusedlayout>
+			<posx>260</posx>
+			<posy>150</posy>
+			<width>781</width>
+			<height>375</height>
+			<onleft>-</onleft>
+			<onright>-</onright>
+			<onup>450</onup>
+			<ondown>450</ondown>
+			<pagecontrol>-</pagecontrol>
+			<scrolltime>0</scrolltime>
+			<itemlayout height="40">
+				<control type="label">
+					<posx>30</posx>
+					<posy>15</posy>
+					<width>721</width>
+					<height>30</height>
+					<textcolor>FavListItem</textcolor>
+					<selectedcolor>FavListItemSelected</selectedcolor>
+					<aligny>center</aligny>
+					<font>Font_FavouritesItemLabel</font>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="40">
+				<control type="image">
+					<posx>4</posx>
+					<posy>10</posy>
+					<width>754</width>
+					<height>40</height>
+					<texture>confluence/button-focus-big.png</texture>
+				</control>
+
+				<control type="label">
+					<posx>30</posx>
+					<posy>16</posy>
+					<width>721</width>
+					<height>30</height>
+					<textcolor>white</textcolor>
+					<aligny>center</aligny>
+					<font>Font_FavouritesFocusedItemLabel</font>
+					<info>ListItem.Label</info>
+					<texturefocus border="5">confluence/button-focus.png</texturefocus>
+				</control>
+
+			</focusedlayout>
 				<content>
 					<item id="1">
 						<label>$INFO[Window(0).Property(favourite.1.name)]</label>

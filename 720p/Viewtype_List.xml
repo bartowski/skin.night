@@ -303,6 +303,21 @@
 						<visible>Skin.HasSetting(3dland_jpg) + !Container.Content(episodes)</visible>
 					</control>
 					<control type="image">
+						<visible>Container.Content(episodes)</visible>
+						<posx>-150</posx>
+						<posy>86</posy>
+						<width>407</width>
+						<height>232</height>
+						<texture>movie-poster/xper_test.png</texture>
+						<colordiffuse>plotdiffuse</colordiffuse>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<include>Animation_PosterInfoSlide_Poster</include>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
+							<effect type="fade" start="0" end="100" time="400" delay="2800" />
+						</animation>
+					</control>
+					<control type="image">
 						<posx>-150</posx>
 						<posy>86</posy>
 						<width>407</width>
@@ -374,7 +389,23 @@
 						</animation>
 						<visible>!IsEmpty(ListItem.Title) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
 					</control>
-					
+					<control type="textbox">
+						<visible>Container.Content(episodes)</visible>
+						<posx>-140</posx>
+						<posy>90</posy>
+						<width>384</width>
+						<height>190</height>
+						<font>Font_KeyboardKeys_Plot</font>
+						<textcolor>ffffffff</textcolor>
+						<label>$INFO[ListItem.Plot]</label>
+						<align>justify</align>
+						<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+						<include>Animation_HiddenByInfo</include>
+						<include>Animation_Viewtype_Showcase_Plot</include>
+						<animation type="Focus" reversible="false">
+							<effect type="fade" start="0" end="100" time="800" delay="3400" />
+						</animation>
+					</control>
 					<control type="image">
 						<posx>-150</posx>
 						<posy>312</posy>
@@ -441,7 +472,7 @@
 				<width>230</width>
 				<height>89</height>
 				<texture>$INFO[ListItem.path]logo.png</texture>
-				<fadetime>200</fadetime>
+				<fadetime>100</fadetime>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<include>Animation_Viewtype_3dland_Lefttop</include>
 				<visible></visible>
@@ -452,7 +483,7 @@
 				<width>230</width>
 				<height>89</height>
 				<texture>$INFO[ListItem.path]../logo.png</texture>
-				<fadetime>200</fadetime>
+				<fadetime>100</fadetime>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<include>Animation_Viewtype_3dland_Lefttop</include>
 				<visible></visible>
@@ -483,7 +514,7 @@
 					<aligny>center</aligny>
 					<font>Font_TVShow</font>
 					<textcolor>ffffffff</textcolor>
-					<label>Season $INFO[ListItem.Season]/Episode $INFO[ListItem.Episode]</label>
+					<label>$LOCALIZE[31068] $INFO[ListItem.Season]/$LOCALIZE[31069] $INFO[ListItem.Episode]</label>
 				</control>
 				<control type="label">
 					<posx>20</posx>
@@ -493,7 +524,7 @@
 					<aligny>center</aligny>
 					<font>Font_TVShow</font>
 					<textcolor>ffffffff</textcolor>
-					<label>Aired: $INFO[ListItem.Date]</label>
+					<label>$LOCALIZE[31231]: $INFO[ListItem.Date]</label>
 				</control>
 		</control>
 	<control type="group">
@@ -511,7 +542,7 @@
 				<height>89</height>
 				<font>Font_Bartowski_Movies_Duration</font>
 				<textcolor>white</textcolor>
-				<label>[B]Season $INFO[ListItem.season][/B]</label>
+				<label>[B]$LOCALIZE[31068] $INFO[ListItem.season][/B]</label>
 			</control>
 			<control type="label">
 				<visible>![Container.Content(seasons) | Container.Content(episodes)]</visible>
@@ -520,7 +551,7 @@
 				<width>630</width>
 				<height>89</height>
 				<font>Font_TVShow</font>
-				<label>[B][COLOR=ListTrackF]Genre[/COLOR] [B][COLOR=white]$INFO[ListItem.Genre][/B][/COLOR]</label>
+				<label>[B][COLOR=ListTrackF]$LOCALIZE[31072][/COLOR] [B][COLOR=white]$INFO[ListItem.Genre][/B][/COLOR]</label>
 			</control>
 			<control type="label">
 				<visible>![Container.Content(seasons) | Container.Content(episodes)]</visible>
@@ -529,7 +560,7 @@
 				<width>630</width>
 				<height>89</height>
 				<font>Font_TVShow</font>
-				<label>[COLOR=ListTrackF][B]Aired[/COLOR] [COLOR=white]$INFO[ListItem.Date][/COLOR][/B]</label>
+				<label>[COLOR=ListTrackF][B]$LOCALIZE[31231][/COLOR] [COLOR=white]$INFO[ListItem.Date][/COLOR][/B]</label>
 			</control>
 			<control type="label">
 				<visible>![Container.Content(seasons) | Container.Content(episodes)]</visible>
@@ -538,7 +569,7 @@
 				<width>630</width>
 				<height>89</height>
 				<font>Font_TVShow</font>
-				<label>[COLOR=ListTrackF][B]IMDB[/COLOR] [COLOR=white]$INFO[ListItem.Rating][/COLOR][/B]      [COLOR=ListTrackF][B]Rated[/COLOR] [COLOR=white]$INFO[ListItem.mpaa][/COLOR][/B]</label>
+				<label>[COLOR=ListTrackF][B]$LOCALIZE[31225][/COLOR] [COLOR=white]$INFO[ListItem.Rating][/COLOR][/B]      [COLOR=ListTrackF][B]$LOCALIZE[31226][/COLOR] [COLOR=white]$INFO[ListItem.mpaa][/COLOR][/B]</label>
 			</control>
 	</control>
 		<control type="grouplist">
