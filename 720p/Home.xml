@@ -30,8 +30,8 @@
 			<include>Dimensions_Fullscreen</include>
 			<texture>mainmenu/recently_back.png</texture>
 			<colordiffuse>ff15efd9</colordiffuse>
-			<animation effect="fade" start="0" end="100" time="400" delay="2800" tween="cubic" easing="inout" condition="Container(300).HasFocus(3)">Conditional</animation>
-			<visible>Skin.HasSetting(homepageHideRecentlyAdded) + Container(300).HasFocus(3)</visible>
+			<animation effect="fade" start="0" end="100" time="400" delay="2800" tween="cubic" easing="inout" condition="Container(300).HasFocus(3) | Container(300).HasFocus(8) | Container(300).HasFocus(14)">Conditional</animation>
+			<visible>[Skin.HasSetting(homepageHideRecentlyAdded) + Container(300).HasFocus(3)] | [Skin.HasSetting(HomepageWeatherWidget) + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]]</visible>
 			<include>Animation_BackdropFade</include>
 		</control>
 		<control type="image">
@@ -44,7 +44,12 @@
 			<visible>Skin.HasSetting(homepageHideRecentlyAdded) + Container(300).HasFocus(5)</visible>
 			<include>Animation_BackdropFade</include>
 		</control>
+		
+		
+		
+		
 		<include condition="Skin.HasSetting(homepageHideRecentlyAdded)">HomeRecentlyAddedInfo</include>
+		<include condition="Skin.HasSetting(HomepageWeatherWidget)">HomepageWeatherWidget</include>
 		<control type="fixedlist" id="300">
 			<posx>-131</posx>
 			<posy>100</posy>
@@ -158,6 +163,14 @@
 					<onclick>XBMC.ActivateWindow(MyPrograms)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
 				</item>
+				<item id="10">
+					<description>Scripts</description>
+					<label>$LOCALIZE[31020]</label>
+					<icon>special://skin/media/backgrounds/scripts.jpg</icon>
+					<thumb>$INFO[Skin.String(CustomScriptsFolder)]</thumb>	
+					<onclick>XBMC.ActivateWindow(20)</onclick>
+					<visible>!Skin.HasSetting(HomeMenuNoScriptsButton)</visible>
+				</item>
 				<item id="14">
 					<description>weather</description>
 					<label>$LOCALIZE[31017]</label>
@@ -180,14 +193,6 @@
 					<icon>special://skin/media/backgrounds/settings.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomSettingsFolder)]</thumb>			
 					<onclick>XBMC.ActivateWindow(settings)</onclick>
-				</item>
-				<item id="10">
-					<description>Scripts</description>
-					<label>$LOCALIZE[31020]</label>
-					<icon>special://skin/media/backgrounds/scripts.jpg</icon>
-					<thumb>$INFO[Skin.String(CustomScriptsFolder)]</thumb>	
-					<onclick>XBMC.ActivateWindow(20)</onclick>
-					<visible>!Skin.HasSetting(HomeMenuNoScriptsButton)</visible>
 				</item>
 				<item id="11">
 					<icon>special://skin/media/mainmenu/playdisc.png</icon>						

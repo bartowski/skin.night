@@ -1,3 +1,9 @@
+Update 5/20/2010
+  -Improved videoOSD buttons and added global player controls
+  -added option for landscape.jpg in Landscape view
+  -OSDsubtitle script now has a skin setting if you're on a merge version
+  -added weather widget, thx psike
+
 Update 5/19/2010
   -Should be good on global music now playing overlaps
   -Should be done with translating minus a some overlooks

@@ -30,6 +30,10 @@
 	<include file="IncludesHomeRecentlyAdded.xml" />
 	<include file="Includes_Music_Global.xml" />
 	<include file="IncludesCodecFlagging.xml" />
+	<include file="IncludesHomepageWeatherWidget.xml" />
+	
+	
+	
 	
 	<include name="ButtonHomeSubCommonValues">
 		<width>600</width>

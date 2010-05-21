@@ -35,12 +35,23 @@
 			<include>Animation_HiddenByInfo</include>
 		</control>
 		<control type="image"><!-- 1st Background -->
-			<visible>Control.IsVisible(52) + !Skin.HasSetting(Landscape_Fanart) + Skin.HasSetting(TVPosters) + [Container.Content(tvshows) | Container.Content(seasons)]</visible>
+			<visible>Control.IsVisible(52) + !Skin.HasSetting(Landscape_Fanart) + !Skin.HasSetting(landscape_jpg) + Skin.HasSetting(TVPosters) + [Container.Content(tvshows) | Container.Content(seasons)]</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>544</width>
 			<height>720</height>
 			<texture>tv-landscape/tv_poster_glow.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<include>Animation_LandscapeFade</include>
+			<include>Animation_HiddenByInfo</include>
+		</control>
+		<control type="image"><!-- 1st Background -->
+			<visible>Control.IsVisible(52) + !Skin.HasSetting(Landscape_Fanart) + Skin.HasSetting(landscape_jpg) + !Container.Content(episodes)</visible>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>684</width>
+			<height>720</height>
+			<texture>tv-landscape/landscape_thumb_glow.png</texture>
 			<aspectratio>stretch</aspectratio>
 			<include>Animation_LandscapeFade</include>
 			<include>Animation_HiddenByInfo</include>
@@ -267,33 +278,24 @@
 			<include>Animation_Viewtype_Landscape_ThumbArea</include>
 			<include>Animation_HiddenByInfo</include>
 			<visible>Control.IsVisible(52) + !Skin.HasSetting(Landscape_Fanart)</visible>
-			<!--<control type="image">
-				<visible>Control.IsVisible(52) + Container.OnPrevious</visible>
-				<posx>2</posx>
-				<posy>122</posy>
-				<width>500</width>
-				<height>281</height>
-				<texture background="true" diffuse="postermatte.png">$INFO[ListItem(1).Icon]</texture>
-				<aspectratio scalediffuse="false">stretch</aspectratio>
-				<animation effect="zoom" start="2,122,500,281" end="0,0,500,281" time="1200">Hidden</animation>
-			</control>
 			<control type="image">
-				<visible>Control.IsVisible(52) + Container.OnNext</visible>
-				<posx>2</posx>
-				<posy>122</posy>
-				<width>500</width>
-				<height>281</height>
-				<texture background="true" diffuse="postermatte.png">$INFO[ListItem(-1).Icon]</texture>
-				<aspectratio scalediffuse="false">stretch</aspectratio>
-				<animation effect="zoom" start="2,122,500,281" end="0,0,500,281" time="1200">Hidden</animation>
-			</control>-->
-			<control type="image">
-				<visible>![Skin.HasSetting(TVPosters) + [Container.Content(tvshows) | Container.Content(seasons)]]</visible>
+				<visible>[!Skin.HasSetting(TVPosters) + !Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)]] | Container.Content(episodes)</visible>
 				<posx>2</posx>
 				<posy>122</posy>
 				<width>500</width>
 				<height>281</height>
 				<texture background="true" diffuse="tv-landscape/landscapematteFO.png">$INFO[ListItem.Icon]</texture>
+				<fadetime>200</fadetime>					
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+				<!--<animation effect="zoom" start="2,122,0,281" end="0,0,500,281" time="800" delay="200">Visible</animation>-->
+			</control>
+			<control type="image">
+				<visible>Skin.HasSetting(landscape_jpg) + !Container.Content(episodes)</visible>
+				<posx>2</posx>
+				<posy>122</posy>
+				<width>500</width>
+				<height>281</height>
+				<texture background="true" diffuse="tv-landscape/landscapematteFO.png">$INFO[ListItem.path]landscape.jpg</texture>
 				<fadetime>200</fadetime>					
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<!--<animation effect="zoom" start="2,122,0,281" end="0,0,500,281" time="800" delay="200">Visible</animation>-->
@@ -309,7 +311,7 @@
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 			</control>
 			<control type="image">
-				<visible>![Skin.HasSetting(TVPosters) + [Container.Content(tvshows) | Container.Content(seasons)]]</visible>
+				<visible>![Skin.HasSetting(TVPosters) + !Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)]]</visible>
 				<posx>-20</posx>
 				<posy>106</posy>
 				<width>544</width>
@@ -317,7 +319,7 @@
 				<texture>tv-landscape/landscapeframeFO.png</texture>
 			</control>
 			<control type="image"><!-- USE POSTERS  -->
-				<visible>[Skin.HasSetting(TVPosters) + [Container.Content(tvshows) | Container.Content(seasons)]]</visible>
+				<visible>[Skin.HasSetting(TVPosters) + !Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)]]</visible>
 				<posx>82</posx>
 				<posy>122</posy>
 				<width>268</width>
@@ -339,7 +341,7 @@
 				<include>Animation_HiddenByInfo</include>
 			</control>
 			<control type="image"><!-- USE POSTERS  -->
-				<visible>[Skin.HasSetting(TVPosters) + [Container.Content(tvshows) | Container.Content(seasons)]]</visible>
+				<visible>[Skin.HasSetting(TVPosters) + !Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)]]</visible>
 				<posx>66</posx>
 				<posy>106</posy>
 				<width>300</width>
@@ -350,7 +352,7 @@
 		<control type="group"> 
 			<posx>20</posx>
 			<posy>0</posy>
-			<animation effect="slide" start="0,0" end="-120,0" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(52) + [Skin.HasSetting(TVPosters) + [Container.Content(tvshows) | Container.Content(seasons)]]">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-120,0" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(52) + [Skin.HasSetting(TVPosters) + !Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)]]">Conditional</animation>
 			<include>Animation_Viewtype_Landscape_RightArea</include>
 			<include>Animation_HiddenByInfo</include>
 			<visible>Control.IsVisible(52) + !Skin.HasSetting(Landscape_Fanart) + !IsEmpty(ListItem.Title) + !Skin.HasSetting(Landscape_Fanart)</visible>
@@ -383,7 +385,7 @@
 			<visible>Control.IsVisible(52) + !IsEmpty(ListItem.Title) + !Skin.HasSetting(Landscape_Fanart)</visible>
 			<posx>20</posx>
 			<posy>0</posy>
-			<animation effect="slide" start="0,0" end="0,120" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(52) + [Skin.HasSetting(TVPosters) + [Container.Content(tvshows) | Container.Content(seasons)]]">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,120" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(52) + [Skin.HasSetting(TVPosters) + !Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)]]">Conditional</animation>
 			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Landscape_BottomInfo</include>
 				<control type="label"><!-- 1st Seasons -->
@@ -454,7 +456,7 @@
 			</control>
 			<control type="grouplist">
 				<visible>Control.IsVisible(52) + !IsEmpty(ListItem.Title) + !Skin.HasSetting(Landscape_Fanart)</visible>
-				<animation effect="slide" start="0,0" end="0,120" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(52) + [Skin.HasSetting(TVPosters) + [Container.Content(tvshows) | Container.Content(seasons)]]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,120" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(52) + [Skin.HasSetting(TVPosters) + !Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)]]">Conditional</animation>
 				<include>Animation_Viewtype_Landscape_BottomInfo</include>
 				<include>Animation_HiddenByInfo</include>
 				<posx>25</posx>

@@ -224,6 +224,20 @@
 						<onclick>Skin.ToggleSetting(SubsScript_Enable)</onclick>
 						<selected>Skin.HasSetting(SubsScript_Enable)</selected>
 					</control>
+					<control type="radiobutton" id="104">
+						<width>750</width>
+						<height>40</height>
+						<font>Font_KeyboardKeys</font>
+						<textoffsetx>50</textoffsetx>
+						<label>$LOCALIZE[31118]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(SubsScript_Merge)</onclick>
+						<selected>Skin.HasSetting(SubsScript_Merge)</selected>
+						<visible>Skin.HasSetting(SubsScript_Enable)</visible>
+					</control>
 					<control type="button" id="105">
 						<width>750</width>
 						<height>40</height>
@@ -235,13 +249,26 @@
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
 						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-						<!-- mcborzu-->
-						<!--<onclick>Skin.SetFile(SubsScript_Path,Script)</onclick>-->
 						<onclick>Skin.SetFile(SubtitleScript_Path,.py)</onclick>
 						<enable>Skin.HasSetting(SubsScript_Enable)</enable>
-						<visible>Skin.HasSetting(SubsScript_Enable)</visible>
+						<visible>Skin.HasSetting(SubsScript_Enable) + !Skin.HasSetting(SubsScript_Merge)</visible>
 					</control>
-					<control type="radiobutton" id="106">
+					<control type="button" id="106">
+						<width>750</width>
+						<height>40</height>
+						<font>Font_KeyboardKeys</font>
+						<textoffsetx>50</textoffsetx>
+						<label>[COLOR=red]Merge[/COLOR] - $LOCALIZE[31216] </label>
+						<label2>[COLOR=mainblue]$INFO[Skin.String(SubsScript_Path)][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetFile(SubsScript_Path,Script)</onclick>
+						<enable>Skin.HasSetting(SubsScript_Enable)</enable>
+						<visible>Skin.HasSetting(SubsScript_Enable) + Skin.HasSetting(SubsScript_Merge)</visible>
+					</control>
+					<control type="radiobutton" id="107">
 						<width>750</width>
 						<height>40</height>
 						<font>Font_KeyboardKeys</font>
@@ -406,7 +433,22 @@
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
 						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="202">
+					<!--Weather Widget-->
+						<control type="radiobutton" id="202">
+						<description>Show Weather Widget</description>
+						<width>750</width>
+						<height>40</height>
+						<font>Font_KeyboardKeys</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>31241</label>
+						<onclick>Skin.ToggleSetting(HomepageWeatherWidget)</onclick>
+						<selected>Skin.HasSetting(HomepageWeatherWidget)</selected>
+						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+					</control>
+					<!--End Weather Widget-->
+					<control type="radiobutton" id="203">
 						<description>Show Recently added info</description>
 						<width>750</width>
 						<height>40</height>
@@ -422,7 +464,7 @@
 						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 						<visible>Skin.HasSetting(homepageHideRecentlyAdded)</visible>
 					</control>
-					<control type="radiobutton" id="203">
+					<control type="radiobutton" id="204">
 						<description>conditions based weather backdrop style</description>
 						<width>750</width>
 						<height>40</height>
@@ -435,7 +477,7 @@
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
 						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="label" id="204">
+					<control type="label" id="205">
 						<width>750</width>
 						<height>45</height>
 						<font>font16caps</font>
@@ -445,7 +487,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="radiobutton" id="205">
+					<control type="radiobutton" id="206">
 						<description>custom home 1</description>
 						<width>750</width>
 						<height>40</height>
@@ -583,7 +625,7 @@
 							<onclick>ActivateWindow(1114)</onclick>
 							<visible>Skin.HasSetting(Menu_Custom3) + Skin.String(MoviesCustom,3)</visible>
 						</control>
-					<control type="label" id="206">
+					<control type="label" id="207">
 						<width>750</width>
 						<height>45</height>
 						<font>font16caps</font>
@@ -593,7 +635,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="radiobutton" id="207">
+					<control type="radiobutton" id="208">
 						<description>Hide Videos Button</description>
 						<width>750</width>
 						<height>40</height>
@@ -634,7 +676,7 @@
 						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 						<enable>Library.HasContent(TVShows)</enable>
 					</control>
-					<control type="radiobutton" id="208">
+					<control type="radiobutton" id="209">
 						<description>Hide Music Button</description>
 						<width>750</width>
 						<height>40</height>
@@ -647,7 +689,7 @@
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
 						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="209">
+					<control type="radiobutton" id="210">
 						<description>Hide Pictures Button</description>
 						<width>750</width>
 						<height>40</height>
@@ -660,7 +702,7 @@
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
 						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="210">
+					<control type="radiobutton" id="211">
 						<description>Hide Programs Button</description>
 						<width>750</width>
 						<height>40</height>
@@ -673,7 +715,7 @@
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
 						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="211">
+					<control type="radiobutton" id="212">
 						<description>Hide Scripts Button</description>
 						<width>750</width>
 						<height>40</height>
@@ -686,7 +728,7 @@
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
 						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="212">
+					<control type="radiobutton" id="213">
 						<description>Hide Weather Button</description>
 						<width>750</width>
 						<height>40</height>
@@ -699,7 +741,7 @@
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
 						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="213">
+					<control type="radiobutton" id="214">
 						<description>Hide Weather Button</description>
 						<width>750</width>
 						<height>40</height>

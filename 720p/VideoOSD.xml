@@ -1,234 +1,182 @@
-<window type="dialog" id="2901">
-	<defaultcontrol always="true">602</defaultcontrol>
+<!--Alaska-->
+<window id="2901">
+	<defaultcontrol always="true">410</defaultcontrol>
 	<controls>
-		<control type="group">
-			<visible>!Window.IsActive(145)</visible>
+		<control type="button" id="410">
+			<onfocus>Dialog.Close(142)</onfocus>
+			<onfocus>SetFocus(4)</onfocus>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>osd/osd_back.png</texture>
+			<aspectratio>scale</aspectratio>
 			<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+		</control>
+		<control type="group">
+			<posy>0</posy>
+			<animation type="WindowOpen">
+				<effect type="slide" start="0,-300" end="0,0" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="0" end="100" time="600" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="slide" start="0,0" end="0,-300" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="100" end="0" time="600" />
+			</animation>
+			<animation type="Conditional" condition="Window.IsVisible(145)">
+				<effect type="slide" start="0,0" end="0,-300" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="100" end="0" time="600" />
+			</animation>
 			<control type="image">
+				<animation effect="slide" end="0,-30" time="100" condition="Window.IsVisible(125)">Conditional</animation>
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>1280</width>
-				<height>720</height>
-				<texture>osd/osd_back.png</texture>
-				<aspectratio>scale</aspectratio>
+				<height>165</height>
+				<texture>common/white.png</texture>
+				<colordiffuse>OSDBackground</colordiffuse>
 			</control>
-			
-			<control type="group" id="200">
-				<posx>417</posx>
+			<control type="grouplist" id="2001">
+				<animation effect="fade" start="100" end="0" time="100" condition="Window.IsVisible(125)">Conditional</animation>
+				<include>Animation_CommonFade</include>
+				<posx>0</posx>
 				<posy>4</posy>
-				
-				<control type="button" id="700">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>45</width>
-					<height>45</height>
-					<label>298</label>
-					<font>-</font>
-					<texturefocus>confluence/OSDBookMarksFO.png</texturefocus>
-					<texturenofocus>confluence/OSDBookMarksNF.png</texturenofocus>
-					<onleft>706</onleft>
-					<onright>701</onright>
-					<onup>600</onup>
-					<ondown>600</ondown>
+				<width>1280</width>
+				<height>100</height>
+				<itemgap>-10</itemgap>
+				<orientation>horizontal</orientation>
+				<align>center</align>
+				<onleft>2001</onleft>
+				<onright>2001</onright>
+				<onup>2001</onup>
+				<ondown>2001</ondown>
+				<control type="button" id="15">
+					<description>OSD Subtitles</description>
+					<height>68</height>
+					<width>68</width>
+					<texturefocus border="1">osd/button_sub_fo.png</texturefocus>
+					<texturenofocus border="1">osd/button_sub_nf.png</texturenofocus>
+					<onclick>RunScript($INFO[Skin.String(SubsScript_Path)])</onclick>
+					<visible>Skin.HasSetting(SubsScript_Enable) + Skin.HasSetting(SubsScript_Merge) + !IsEmpty(Skin.String(SubsScript_Path))</visible>
+				</control>
+				<control type="button" id="14">
+					<description>OSD Subtitles</description>
+					<height>68</height>
+					<width>68</width>
+					<texturefocus border="1">osd/button_sub_fo.png</texturefocus>
+					<texturenofocus border="1">osd/button_sub_nf.png</texturenofocus>
+					<onclick>XBMC.RunScript($INFO[Skin.String(SubsScript_Path)])</onclick>
+					<visible>Skin.HasSetting(SubsScript_Enable) + !Skin.HasSetting(SubsScript_Merge) + !IsEmpty(Skin.String(SubsScript_Path))</visible>
+				</control>
+				<!--<control type="button" id="11">
+					<description>Playlists</description>
+					<height>68</height>
+					<width>68</width>
+					<texturefocus border="1">osd/button_playlist_fo.png</texturefocus>
+					<texturenofocus border="1">osd/button_playlist_nf.png</texturenofocus>
+					<onclick>ActivateWindow(28)</onclick>
+				</control>-->
+				<control type="button" id="12">
+					<description>Bookmarks</description>
+					<height>68</height>
+					<width>68</width>
+					<texturefocus border="1">osd/button_bookmark_fo.png</texturefocus>
+					<texturenofocus border="1">osd/button_bookmark_nf.png</texturenofocus>
 					<onclick>ActivateWindow(125)</onclick>
 				</control>
-				<control type="button" id="701">
-					<posx>60</posx>
-					<posy>0</posy>
-					<width>45</width>
-					<height>45</height>
-					<label>13396</label>
-					<font>-</font>
-					<texturefocus>confluence/OSDAudioFO.png</texturefocus>
-					<texturenofocus>confluence/OSDAudioNF.png</texturenofocus>
-					<onleft>700</onleft>
-					<onright>702</onright>
-					<onup>600</onup>
-					<ondown>600</ondown>
-					<onclick>ActivateWindow(124)</onclick>
-				</control>
-				<control type="button" id="702">
-					<posx>120</posx>
-					<posy>0</posy>
-					<width>45</width>
-					<height>45</height>
-					<label>13395</label>
-					<font>-</font>
-					<texturefocus>confluence/OSDVideoFO.png</texturefocus>
-					<texturenofocus>confluence/OSDVideoNF.png</texturenofocus>
-					<onleft>701</onleft>
-					<onright>703</onright>
-					<onup>601</onup>
-					<ondown>601</ondown>
-					<onclick>ActivateWindow(123)</onclick>
-				</control>
-			</control>
-			<!--<control type="image" id="11">
-				<description>separator image</description>
-				<posx>567</posx>
-				<posy>25</posy>
-				<width>150</width>
-				<height>1</height>
-				<colordiffuse>66FFFFFF</colordiffuse>
-				<texture>separator2.png</texture>
-			</control>-->
-			<control type="group" id="201">
-				<posx>718</posx>
-				<posy>4</posy>
-				<control type="button" id="706">
-					<description>Subtitles Menu</description>
-					<posx>6</posx>
-					<posy>6</posy>
-					<width>32</width>
-					<height>32</height>
-					<label>-</label>
-					<font>-</font>
-					<texturenofocus>confluence/osd-subs-nofocus.png</texturenofocus>
-					<texturefocus>confluence/osd-subs-focus.png</texturefocus>
-					<onclick>Close</onclick>
-					<!--<onclick>RunScript($INFO[Skin.String(SubsScript_Path)])</onclick>-->
-					<onclick>XBMC.RunScript($INFO[Skin.String(SubtitleScript_Path)])</onclick>
-					<onleft>705</onleft>
-					<onright>700</onright>
-					<onup>600</onup>
-					<ondown>600</ondown>
-					<visible>Skin.HasSetting(SubsScript_Enable)</visible>
-				</control>
-				<control type="button" id="704">
-					<posx>60</posx>
-					<posy>0</posy>
-					<width>45</width>
-					<height>45</height>
-					<label>31355</label>
-					<font>-</font>
-					<texturefocus>confluence/OSDDvdFO.png</texturefocus>
-					<texturenofocus>confluence/OSDDvdNF.png</texturenofocus>
-					<onleft>703</onleft>
-					<onright>705</onright>
-					<onup>605</onup>
-					<ondown>605</ondown>
+				<control type="button" id="7">
+					<description>DVD MENU</description>
+					<height>68</height>
+					<width>68</width>
+					<texturefocus border="1">osd/button_dvd_fo.png</texturefocus>
+					<texturenofocus border="1">osd/button_dvd_nf.png</texturenofocus>
 					<onclick>PlayerControl(ShowVideoMenu)</onclick>
 					<enable>VideoPlayer.HasMenu</enable>
-					<animation effect="fade" start="100" end="50" time="100" condition="!VideoPlayer.HasMenu">Conditional</animation>
 				</control>
-				<control type="button" id="705">
-					<posx>120</posx>
-					<posy>0</posy>
-					<width>45</width>
-					<height>45</height>
-					<label>264</label>
-					<font>-</font>
-					<texturefocus>confluence/OSDRecordFO.png</texturefocus>
-					<texturenofocus>confluence/OSDRecordNF.png</texturenofocus>
-					<onleft>704</onleft>
-					<onright>700</onright>
-					<onup>605</onup>
-					<ondown>605</ondown>
-					<onclick>XBMC.PlayerControl(record)</onclick>
-					<enable>Player.CanRecord</enable>
-					<animation effect="fade" start="100" end="50" time="100" condition="!Player.CanRecord">Conditional</animation>
-				</control>
-			</control>
-			<control type="group" id="100">
-				<posx>474</posx>
-				<posy>40</posy>
-				<control type="button" id="600">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>50</width>
-					<height>50</height>
-					<label>210</label>
-					<font>-</font>
-					<texturefocus>confluence/OSDPrevTrackFO.png</texturefocus>
-					<texturenofocus>confluence/OSDPrevTrackNF.png</texturenofocus>
-					<onleft>605</onleft>
-					<onright>601</onright>
-					<onup>701</onup>
-					<ondown>701</ondown>
+				<control type="button" id="9">
+					<description>Previous</description>
+					<height>68</height>
+					<width>68</width>
+					<texturefocus border="1">osd/button_prev_fo.png</texturefocus>
+					<texturenofocus border="1">osd/button_prev_nf.png</texturenofocus>
 					<onclick>PlayerControl(Previous)</onclick>
 				</control>
-				<control type="button" id="601">
-					<posx>60</posx>
-					<posy>0</posy>
-					<width>50</width>
-					<height>50</height>
-					<label>31354</label>
-					<font>-</font>
-					<texturefocus>confluence/OSDRewindFO.png</texturefocus>
-					<texturenofocus>confluence/OSDRewindNF.png</texturenofocus>
-					<onleft>600</onleft>
-					<onright>602</onright>
-					<onup>702</onup>
-					<ondown>702</ondown>
-					<onclick>PlayerControl(Rewind)</onclick>
+				<control type="button" id="3">
+					<description>Rewind</description>
+					<height>68</height>
+					<width>68</width>
+					<texturefocus border="1">osd/button_rew_fo.png</texturefocus>
+					<texturenofocus border="1">osd/button_rew_nf.png</texturenofocus>
+					<onclick>PlayerControl(rewind)</onclick>
 				</control>
-				<control type="togglebutton" id="602">
-					<posx>120</posx>
-					<posy>0</posy>
-					<width>50</width>
-					<height>50</height>
-					<label>31351</label>
-					<altlabel>208</altlabel>
-					<font>-</font>
-					<texturefocus>confluence/OSDPauseFO.png</texturefocus>
-					<texturenofocus>confluence/OSDPauseNF.png</texturenofocus>
+				<control type="togglebutton" id="4">
+					<description>Play</description>
+					<height>68</height>
+					<width>68</width>
+					<texturefocus border="1">osd/button_pause_fo.png</texturefocus>
+					<texturenofocus border="1">osd/button_pause_nf.png</texturenofocus>
 					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-					<alttexturefocus>confluence/OSDPlayFO.png</alttexturefocus>
-					<alttexturenofocus>confluence/OSDPlayNF.png</alttexturenofocus>
-					<onleft>601</onleft>
-					<onright>603</onright>
-					<onup>702</onup>
-					<ondown>702</ondown>
-					<onclick>PlayerControl(Play)</onclick>
+					<alttexturefocus border="1">osd/button_play_fo.png</alttexturefocus>
+					<alttexturenofocus border="1">osd/button_play_nf.png</alttexturenofocus>
+					<disabledcolor>-</disabledcolor>
+					<colordiffuse>-</colordiffuse>
+					<onclick>PlayerControl(play)</onclick>
 				</control>
-				<control type="button" id="603">
-					<posx>180</posx>
-					<posy>0</posy>
-					<width>50</width>
-					<height>50</height>
-					<label>31352</label>
-					<font>-</font>
-					<texturefocus>confluence/OSDStopFO.png</texturefocus>
-					<texturenofocus>confluence/OSDStopNF.png</texturenofocus>
-					<onleft>602</onleft>
-					<onright>604</onright>
-					<onup>703</onup>
-					<ondown>703</ondown>
-					<onclick>PlayerControl(Stop)</onclick>
+				<control type="button" id="5">
+					<description>Stop</description>
+					<height>68</height>
+					<width>68</width>
+					<texturefocus border="1">osd/button_stop_fo.png</texturefocus>
+					<texturenofocus border="1">osd/button_stop_nf.png</texturenofocus>
+					<onclick>PlayerControl(stop)</onclick>
 				</control>
-				<control type="button" id="604">
-					<posx>240</posx>
-					<posy>0</posy>
-					<width>50</width>
-					<height>50</height>
-					<label>31353</label>
-					<font>-</font>
-					<texturefocus>confluence/OSDForwardFO.png</texturefocus>
-					<texturenofocus>confluence/OSDForwardNF.png</texturenofocus>
-					<onleft>603</onleft>
-					<onright>605</onright>
-					<onup>703</onup>
-					<ondown>703</ondown>
-					<onclick>PlayerControl(Forward)</onclick>
+				<control type="button" id="6">
+					<description>Forward</description>
+					<height>68</height>
+					<width>68</width>
+					<texturefocus border="1">osd/button_ff_fo.png</texturefocus>
+					<texturenofocus border="1">osd/button_ff_nf.png</texturenofocus>
+					<onclick>PlayerControl(forward)</onclick>
 				</control>
-				<control type="button" id="605">
-					<posx>300</posx>
-					<posy>0</posy>
-					<width>50</width>
-					<height>50</height>
-					<label>209</label>
-					<font>-</font>
-					<texturefocus>confluence/OSDNextTrackFO.png</texturefocus>
-					<texturenofocus>confluence/OSDNextTrackNF.png</texturenofocus>
-					<onleft>604</onleft>
-					<onright>600</onright>
-					<onup>704</onup>
-					<ondown>704</ondown>
+				<control type="button" id="10">
+					<description>Next</description>
+					<height>68</height>
+					<width>68</width>
+					<texturefocus border="1">osd/button_next_fo.png</texturefocus>
+					<texturenofocus border="1">osd/button_next_nf.png</texturenofocus>
 					<onclick>PlayerControl(Next)</onclick>
 				</control>
+				<control type="button" id="13">
+					<description>Video Settings</description>
+					<height>68</height>
+					<width>68</width>
+					<texturefocus border="1">osd/button_settings_fo.png</texturefocus>
+					<texturenofocus border="1">osd/button_settings_nf.png</texturenofocus>
+					<onclick>ActivateWindow(123)</onclick>
+				</control>
+				<control type="button" id="800">
+					<description>audio Settings</description>
+					<height>68</height>
+					<width>68</width>
+					<texturefocus border="1">osd/button_audio_fo.png</texturefocus>
+					<texturenofocus border="1">osd/button_audio_nf.png</texturenofocus>
+					<onclick>ActivateWindow(124)</onclick>
+				</control>
+				<control type="button" id="15">
+					<description>Record</description>
+					<height>68</height>
+					<width>68</width>
+					<texturefocus border="1">osd/button_record_fo.png</texturefocus>
+					<texturenofocus border="1">osd/button_record_nf.png</texturenofocus>
+					<onclick>XBMC.PlayerControl(record)</onclick>
+					<enable>Player.CanRecord</enable>
+				</control>
 			</control>
-			<control type="group">
+		</control>
+		<control type="group">
 	<posx>-320</posx>
 	<posy>560</posy>
 		<control type="label" id="0">
@@ -353,6 +301,6 @@
 			<visible>player.rewinding32x</visible>
 		</control>
 	</control>
-		</control>
+		
 	</controls>
 </window>

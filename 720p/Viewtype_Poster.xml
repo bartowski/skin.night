@@ -48,7 +48,7 @@
 		
 		<control type="fixedlist" id="50">
 			<posx>-30</posx>
-			<posy>210</posy>
+			<posy>220</posy>
 			<height>615</height>
 			<width>1400</width>
 			<onleft>50</onleft>
