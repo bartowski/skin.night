@@ -244,7 +244,7 @@
 						<font>Font_KeyboardKeys</font>
 						<textoffsetx>50</textoffsetx>
 						<label>- $LOCALIZE[31216]</label>
-						<label2>[COLOR=mainblue]$INFO[Skin.String(SubsScript_Path)][/COLOR]</label2>
+						<label2>[COLOR=mainblue]$INFO[Skin.String(SubtitleScript_Path)][/COLOR]</label2>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
@@ -433,22 +433,7 @@
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
 						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 					</control>
-					<!--Weather Widget-->
-						<control type="radiobutton" id="202">
-						<description>Show Weather Widget</description>
-						<width>750</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>31241</label>
-						<onclick>Skin.ToggleSetting(HomepageWeatherWidget)</onclick>
-						<selected>Skin.HasSetting(HomepageWeatherWidget)</selected>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-					</control>
-					<!--End Weather Widget-->
-					<control type="radiobutton" id="203">
+					<control type="radiobutton" id="202">
 						<description>Show Recently added info</description>
 						<width>750</width>
 						<height>40</height>
@@ -464,6 +449,21 @@
 						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 						<visible>Skin.HasSetting(homepageHideRecentlyAdded)</visible>
 					</control>
+					<!--Weather Widget-->
+						<control type="radiobutton" id="203">
+						<description>Show Weather Widget</description>
+						<width>750</width>
+						<height>40</height>
+						<font>Font_KeyboardKeys</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>31241</label>
+						<onclick>Skin.ToggleSetting(HomepageWeatherWidget)</onclick>
+						<selected>Skin.HasSetting(HomepageWeatherWidget)</selected>
+						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+					</control>
+					<!--End Weather Widget-->
 					<control type="radiobutton" id="204">
 						<description>conditions based weather backdrop style</description>
 						<width>750</width>
