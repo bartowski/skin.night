@@ -5,14 +5,18 @@
 		
 		<control type="group">
 			<visible>!Window.IsVisible(FileBrowser)</visible>
-			<control type="image"> 
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>1280</width>
-				<height>720</height>
-				<texture>backdrops/curtains_diffuse.png</texture>
-				<animation effect="fade" start="0" end="100" time="600" >WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" time="600" >WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="600" delay="800" >WindowClose</animation>
+			<control type="largeimage">
+				<include>Dimensions_Fullscreen</include>
+				<texture>$INFO[ListItem.Property(Fanart_Image)]</texture>
+				<aspectratio>scale</aspectratio>
+				<fadetime>400</fadetime>
+			</control>
+			<control type="image">
+				<include>Dimensions_Fullscreen</include>
+				<texture>common/video_info_back.png</texture>
+				<!--<texture>list/file-black-background1.png</texture>-->
 			</control>
 			<control type="label"><!--Big Title-->
 				<visible>Skin.HasSetting(LockViews)</visible>
@@ -49,7 +53,7 @@
 				<bordersize>8</bordersize>
 				<visible>!Container.Content(Genres)</visible>
 				<include>Animation_Music_Fullscreen_Left</include>
-				<visible>!Skin.HasSetting(LockViews)</visible>
+				<visible>!Skin.HasSetting(LockViews) + !Container.Content(movies)</visible>
 			</control>
 			<control type="group">
 				<animation effect="fade" delay="400" start="0" end="100" time="200">WindowOpen</animation>
@@ -57,7 +61,7 @@
 				<control type="label">
 					<description>header label</description>
 					<posx>10</posx>
-					<posy>50</posy>
+					<posy>20</posy>
 					<width>1260</width>
 					<height>30</height>
 					<font>Font_Bartowski_MainMenu_Context</font>
@@ -65,8 +69,17 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<textcolor>mainblue</textcolor>
-					<shadowcolor>black</shadowcolor>
 					<visible>!Skin.HasSetting(LockViews)</visible>
+				</control>
+				<control type="label">
+					<posy>56</posy>
+					<width>1280</width>
+					<height>30</height>
+					<font>font13caps_title</font>
+					<align>center</align>
+					<textcolor>white</textcolor>
+					<label>"$INFO[ListItem.TagLine]"</label>
+					<visible>!IsEmpty(ListItem.TagLine)</visible>
 				</control>
 				<control type="grouplist">
 					<description>Media Codec Flagging Images</description>
@@ -77,7 +90,7 @@
 					<itemgap>0</itemgap>
 					<orientation>horizontal</orientation>
 					<include>VisibleFadeEffect</include>
-					<visible>!Control.IsVisible(50) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
+					<visible>!Control.IsVisible(50) + [Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
 					<include>VideoCodecFlaggingConditions</include>
 					<include>AudioCodecFlaggingConditions</include>
 					<include>AspectCodecFlaggingConditions</include>
@@ -135,9 +148,108 @@
 					<posx>260</posx>
 					<include>VisibleFadeEffect</include>
 					<visible>!Skin.HasSetting(LockViews)</visible>
+					<control type="textbox" id="400">
+						<description>Description Value for Movies</description>
+						<posx>-240</posx>
+						<posy>400</posy>
+						<width>900</width>
+						<height>124</height>
+						<font>Font_Bartowski_Showcase_plot</font>
+						<align>justify</align>
+						<textcolor>white</textcolor>
+						<pagecontrol>61</pagecontrol>
+						<label>$INFO[ListItem.Plot]</label>
+						<autoscroll time="3000" delay="4000" repeat="5000">!Control.HasFocus(61) + Skin.HasSetting(AutoScroll)</autoscroll>
+						<visible>!Control.IsVisible(50)</visible>
+					</control>
+					<control type="group">
+					<posy>160</posy>
+						<control type="largeimage" id="9170">
+							<posx>710</posx>
+							<posy>30</posy>
+							<width>261</width>
+							<height>147</height>
+							<aspectratio>stretch</aspectratio>
+							<texture diffuse="tv-landscape/landscapematteFO.png">$INFO[ListItem.Path,,extrathumbs/thumb1.jpg]</texture>
+							<fadetime>200</fadetime>
+						</control>
+						<control type="image">
+							<posx>698</posx>
+							<posy>20</posy>
+							<width>284</width>
+							<height>166</height>
+							<texture>tv-landscape/landscapeframeFO.png</texture>
+							<visible>!IsEmpty(Control.GetLabel(9170))</visible>
+						</control>
+						<control type="largeimage" id="9171">
+							<posx>710</posx>
+							<posy>200</posy>
+							<width>261</width>
+							<height>147</height>
+							<aspectratio>stretch</aspectratio>
+							<texture diffuse="tv-landscape/landscapematteFO.png">$INFO[ListItem.Path,,extrathumbs/thumb2.jpg]</texture>
+							<fadetime>200</fadetime>
+						</control>
+						<control type="image">
+							<posx>698</posx>
+							<posy>190</posy>
+							<width>284</width>
+							<height>166</height>
+							<texture>tv-landscape/landscapeframeFO.png</texture>
+							<visible>!IsEmpty(Control.GetLabel(9171))</visible>
+						</control>
+					</control>
+					<control type="group">
+					<posx>730</posx>
+					<posy>120</posy>
+					<visible>IsEmpty(Control.GetLabel(9170)) + IsEmpty(Control.GetLabel(9171))</visible>
+						<control type="image">
+							<posx>2</posx>
+							<posy>90</posy>
+							<width>201</width>
+							<height>300</height>
+							<texture background="true" diffuse="postermatte.png">$INFO[ListItem.Icon]</texture>
+							<fadetime>200</fadetime>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+						</control>
+						<control type="image">
+							<posx>-10</posx>
+							<posy>78</posy>
+							<width>225</width>
+							<height>325</height>
+							<texture>posterframeF.png</texture>
+						</control>
+						<control type="image">
+							<posx>-110</posx>
+							<posy>-22</posy>
+							<width>424</width>
+							<height>526</height>
+							<texture>showcase/showcase_glow.png</texture>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" center="90,258" start="81" end="100" time="400" tween="back" easing="out" />
+								<effect type="fade" start="0" end="100" time="1000" delay="400"/>
+							</animation>
+							<animation effect="slide" start="0,0" end="0,30" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
+						</control>
+					</control>
+					<control type="grouplist">
+						<description>Media Codec Flagging Images</description>
+						<posx>580</posx>
+						<posy>520</posy>
+						<width>490</width>
+						<align>center</align>
+						<itemgap>0</itemgap>
+						<orientation>horizontal</orientation>
+						<include>VisibleFadeEffect</include>
+						<include>VideoCodecFlaggingConditions</include>
+						<include>AudioCodecFlaggingConditions</include>
+						<include>AspectCodecFlaggingConditions</include>
+					</control>
+					
+					
 					<control type="list" id="49">
-						<posx>90</posx>
-						<posy>0</posy>
+						<posx>-260</posx>
+						<posy>130</posy>
 						<width>1440</width>
 						<height>330</height>
 						<onleft>49</onleft>
@@ -162,7 +274,7 @@
 							<control type="label">
 								<posx>175</posx>
 								<posy>2</posy>
-								<width>1065</width>
+								<width>790</width>
 								<height>30</height>
 								<font>font13caps_title</font>
 								<align>left</align>
@@ -197,7 +309,7 @@
 							<control type="label">
 								<posx>175</posx>
 								<posy>2</posy>
-								<width>1065</width>
+								<width>790</width>
 								<height>30</height>
 								<font>font13caps_title</font>
 								<align>left</align>
@@ -250,7 +362,7 @@
 								<onclick>-</onclick>
 								<visible>!IsEmpty(ListItem.RatingAndVotes)</visible>
 							</item>
-							<item>
+							<!--<item>
 								<label>$LOCALIZE[202]:</label>
 								<label2>$INFO[ListItem.TagLine]</label2>
 								<onclick>-</onclick>
@@ -261,19 +373,19 @@
 								<label2>$INFO[ListItem.PlotOutline]</label2>
 								<onclick>-</onclick>
 								<visible>!IsEmpty(ListItem.PlotOutline)</visible>
-							</item>
+							</item>-->
 							<item>
 								<label>$LOCALIZE[20074]:</label>
 								<label2>$INFO[ListItem.mpaa]</label2>
 								<onclick>-</onclick>
 								<visible>!IsEmpty(ListItem.mpaa)</visible>
 							</item>
-							<item>
+							<!--<item>
 								<label>$LOCALIZE[15311]</label>
 								<label2>$INFO[ListItem.FilenameAndPath]</label2>
 								<onclick>-</onclick>
 								<visible>!IsEmpty(ListItem.FilenameAndPath)</visible>
-							</item>
+							</item>-->
 						</content>
 					</control>
 					<control type="image">
@@ -747,7 +859,7 @@
 					<aligny>center</aligny>
 					<textcolor>mainblue</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<visible>!Skin.HasSetting(LockViews)</visible>
+					<visible>!Skin.HasSetting(LockViews) + !container.content(movies)</visible>
 				</control>
 				<!--<control type="label">
 					<posx>130r</posx>
@@ -803,7 +915,7 @@
 					<label>$INFO[ListItem.Plot]</label>
 					<autoscroll time="3000" delay="4000" repeat="5000">!Control.HasFocus(61) + Skin.HasSetting(AutoScroll)</autoscroll>
 					<visible>!Control.IsVisible(50)</visible>
-					<visible>!Skin.HasSetting(LockViews)</visible>
+					<visible>!Skin.HasSetting(LockViews) + !container.content(movies)</visible>
 				</control>
 				<control type="image">
 					<description>Actor image</description>
@@ -900,10 +1012,8 @@
 					</control>
 					<control type="togglebutton" id="8">
 						<description>Play/browse to Show</description>
-						<include>ButtonInfoDialogsCommonValues</include>
+						<include>ButtonInfoDialogsCommonValues2</include>
 						<label>208</label>
-						<alttexturefocus border="2">button-focus.png</alttexturefocus>
-						<alttexturenofocus border="2">button-nofocus.png</alttexturenofocus>
 						<altlabel>1024</altlabel>
 						<usealttexture>Container.Content(TVShows)</usealttexture>
 					</control>

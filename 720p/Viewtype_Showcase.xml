@@ -155,7 +155,6 @@ MOVIE SECTION
 					<width>424</width>
 					<height>526</height>
 					<texture>showcase/showcase_glow.png</texture>
-					<include>Animation_HiddenByInfo</include>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="90,258" start="81" end="100" time="400" tween="back" easing="out" />
 						<effect type="fade" start="0" end="100" time="1000" delay="400"/>
@@ -170,7 +169,6 @@ MOVIE SECTION
 					<texture background="true" diffuse="postermatte.png">$INFO[ListItem.Icon]</texture>
 					<fadetime>200</fadetime>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<include>Animation_HiddenByInfo</include>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="80,238" start="81" end="100" time="400" tween="back" easing="out" />
 					</animation>
@@ -185,7 +183,6 @@ MOVIE SECTION
 					<texture background="true" flipy="true" diffuse="postermatte.png">$INFO[ListItem.Icon]</texture>
 					<fadetime>200</fadetime>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<include>Animation_HiddenByInfo</include>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="80,238" start="81" end="100" time="400" tween="back" easing="out" />
 						<effect type="fade" start="0" end="60" time="600" />
@@ -201,7 +198,6 @@ MOVIE SECTION
 					<texture background="true" diffuse="postermatte.png" fallback="defaultmoviegenre.jpg">extras\moviegenres\$INFO[ListItem.Label].jpg</texture>
 					<fadetime>200</fadetime>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<include>Animation_HiddenByInfo</include>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="160,238" start="81" end="100" time="400" tween="back" easing="out" />
 					</animation>
@@ -213,7 +209,6 @@ MOVIE SECTION
 					<width>225</width>
 					<height>325</height>
 					<texture>posterframeF.png</texture>
-					<include>Animation_HiddenByInfo</include>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="90,258" start="81" end="100" time="300" tween="back" easing="out" />
 						<effect type="fade" start="0" end="60" time="600" />
@@ -472,7 +467,6 @@ MOVIE SECTION
 				<width>284</width>
 				<height>166</height>
 				<texture>tv-landscape/landscapeframeFO.png</texture>
-				
 			</control>
 		</control>
 		

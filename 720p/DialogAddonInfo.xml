@@ -419,7 +419,7 @@
 				<texture>backdrops/test2.png</texture>
 			</control>
 			<control type="group" id="9000">
-				<posx>-200</posx>
+				<posx>0</posx>
 				<posy>572</posy>
 				<control type="button" id="6">
 					<description>Enable</description>

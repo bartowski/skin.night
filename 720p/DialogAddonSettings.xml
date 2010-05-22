@@ -2,13 +2,28 @@
 	<defaultcontrol always="true">2</defaultcontrol>
 	<coordinates>
 		<system>1</system>
-		<posx>240</posx>
-		<posy>100</posy>
+		<posx>0</posx>
+		<posy>0</posy>
 	</coordinates>
 	<controls>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture>common/7000_focus.png</texture>
+			<include>Animation_BackdropFade</include>
+		</control>
+		<control type="image" id="0">
+			<description>Back Panel</description>
+			<posx>210</posx>
+			<posy>70</posy>
+			<width>860</width>
+			<height>500</height>
+			<texture>favourites/favourites_panel1.png</texture>
+			<include>Animation_Bartowski_Context_Zoom</include>
+		</control>
 		<control type="group">
-		<posx>-210</posx>
-		<posy>-100</posy>
+		<posx>240</posx>
+		<posy>100</posy>
+		<include>Animation_Bartowski_Context_Zoom</include>
 			<!--<control type="label">
 				<description>Addon Title value</description>
 				<posx>280</posx>
@@ -21,7 +36,7 @@
 				<label>[B]"$INFO[ListItem.Property(Addon.Name)]"[/B]</label>
 				<textcolor>mainblue</textcolor>
 				<scroll>true</scroll>
-			</control>-->
+			</control>
 			<control type="label">
 				<description>Addon Title value</description>
 				<posx>280</posx>
@@ -47,8 +62,8 @@
 				<label>[COLOR=grey]Author - [/COLOR] $INFO[ListItem.Property(Addon.Creator)]</label>
 				<textcolor>white</textcolor>
 				<scroll>true</scroll>
-			</control>
-		</control>
+			</control>-->
+		
 		<control type="label" id="20">
 			<description>header label</description>
 			<posx>10</posx>
@@ -79,7 +94,7 @@
 			<height>40</height>
 			<font>Font_KeyboardEdit</font>
 			<textoffsetx>20</textoffsetx>
-			<textcolor>grey2</textcolor>
+			<textcolor>black</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<texturefocus border="0,2,0,2">confluence/button-focus-big.png</texturefocus>
 		</control>
@@ -88,14 +103,14 @@
 			<height>40</height>
 			<font>Font_KeyboardEdit</font>
 			<textoffsetx>20</textoffsetx>
-			<textcolor>grey2</textcolor>
+			<textcolor>black</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<texturefocus border="0,2,0,2">confluence/button-focus-big.png</texturefocus>
 		</control>
 		<control type="spincontrolex" id="5">
 			<description>Default spincontrolex</description>
 			<height>40</height>
-			<textcolor>grey2</textcolor>
+			<textcolor>black</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<textoffsetx>20</textoffsetx>
 			<texturefocus border="0,2,0,2">confluence/button-focus-big.png</texturefocus>
@@ -183,6 +198,7 @@
 				<ondown>2</ondown>
 			</control>
 		</control>
+	</control>
 		<control type="group">
 			<include>Debug</include>
 			<visible></visible>

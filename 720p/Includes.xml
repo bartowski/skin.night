@@ -147,6 +147,21 @@
 		<texturenofocus border="5">button-nofocus.png</texturenofocus>
 		<pulseonselect>false</pulseonselect>
 	</include>
+	<include name="ButtonInfoDialogsCommonValues2">
+		<height>40</height>
+		<width>170</width>
+		<textoffsetx>20</textoffsetx>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>Font_Bartowski_Press_S</font>
+		<textcolor>ff000000</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<texturefocus border="5">confluence/button-focus.png</texturefocus>
+		<alttexturenofocus>-</alttexturenofocus>
+		<alttexturefocus>confluence/button-focus.png</alttexturefocus>
+		<textureradiofocus>-</textureradiofocus>
+		<textureradionofocus>-</textureradionofocus>
+	</include>
 	<include name="Global_RSS">
 		<visible>!system.getbool(lookandfeel.enablerssfeeds) + Window.IsActive(home)</visible>
 		<control type="image"> 

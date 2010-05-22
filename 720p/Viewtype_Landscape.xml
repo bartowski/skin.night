@@ -94,7 +94,7 @@
 					<posy>50</posy>
 					<width>230</width>
 					<height>89</height>
-					<texture background="true">$INFO[ListItem.path]logo.png</texture>
+					<texture>$INFO[ListItem.path]logo.png</texture>
 					<fadetime>300</fadetime>
 					<!--<colordiffuse>89FFFFFF</colordiffuse>-->
 					<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -159,7 +159,7 @@
 					<posy>50</posy>
 					<width>230</width>
 					<height>89</height>
-					<texture background="true">$INFO[ListItem.path]logo.png</texture>
+					<texture>$INFO[ListItem.path]logo.png</texture>
 					<fadetime>200</fadetime>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 				</control>

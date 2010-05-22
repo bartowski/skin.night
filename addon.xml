@@ -14,4 +14,14 @@
     defaultthemename="textures.xbt" 
     effectslowdown="1"
     debugging="false"/>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <minversion app="xbmc">28000</minversion>
+    <summary>Night skin by mcborzu</summary>
+    <summary lang="nl"></summary>
+    <description>Night started as a project for myself to learn skinning but quickly evolved into a full skin. It's main features include: TV Show Logos, Bigger Episode thumbs, more realistic 3D thumbs in some views, and keeping fanart complimentary rather than the focus. Amongst other features just a skin that tries to do things differently...</description>
+    <description lang="nl"></description>
+    <disclaimer>You are using a svn version of Night, there is no guarantee svn versions of this skin are stable.</disclaimer>
+    <disclaimer lang="nl"></disclaimer>
+  </extension>
 </addon>

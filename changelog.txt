@@ -1,8 +1,17 @@
+Update 5/21/2010
+  -music defaults on files view not jukebox
+  -started work on a new video info screen
+  -fixed issue where if you have no library content, Movies/TV still shows on Home
+  -updated the weather home widget, thanks psike
+  -updated addon.xml
+  -removed redundant background="true" from Landscape
+  -add a background to DialogAddonSettings.xml
+
 Update 5/20/2010
-  -Improved videoOSD buttons and added global player controls
+  -Improved videoOSD buttons and added global player controls, thx Hitcher/djh
   -added option for landscape.jpg in Landscape view
   -OSDsubtitle script now has a skin setting if you're on a merge version
-  -added weather widget, thx psike
+  -added weather widget on Home, thx psike
 
 Update 5/19/2010
   -Should be good on global music now playing overlaps

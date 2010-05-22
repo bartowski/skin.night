@@ -31,7 +31,7 @@
 			<texture>mainmenu/recently_back.png</texture>
 			<colordiffuse>ff15efd9</colordiffuse>
 			<animation effect="fade" start="0" end="100" time="400" delay="2800" tween="cubic" easing="inout" condition="Container(300).HasFocus(3) | Container(300).HasFocus(8) | Container(300).HasFocus(14)">Conditional</animation>
-			<visible>[Skin.HasSetting(homepageHideRecentlyAdded) + Container(300).HasFocus(3)] | [Skin.HasSetting(HomepageWeatherWidget) + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]]</visible>
+			<visible>Skin.HasSetting(homepageHideRecentlyAdded) + Container(300).HasFocus(3)</visible>
 			<include>Animation_BackdropFade</include>
 		</control>
 		<control type="image">
@@ -44,7 +44,16 @@
 			<visible>Skin.HasSetting(homepageHideRecentlyAdded) + Container(300).HasFocus(5)</visible>
 			<include>Animation_BackdropFade</include>
 		</control>
-		
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<include>Dimensions_Fullscreen</include>
+			<texture>mainmenu/recently_back.png</texture>
+			<colordiffuse>ff15efd9</colordiffuse>
+			<animation effect="fade" start="0" end="100" time="400" tween="cubic" easing="inout" condition="Container(300).HasFocus(3) | Container(300).HasFocus(8) | Container(300).HasFocus(14)">Conditional</animation>
+			<visible>Skin.HasSetting(HomepageWeatherWidget) + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]</visible>
+			<include>Animation_BackdropFade</include>
+		</control>
 		
 		
 		
@@ -137,7 +146,7 @@
 					<icon>special://skin/media/backgrounds/movies.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomMoviesFolder)]</thumb>			
 					<onclick>XBMC.ActivateWindow(MyVideoLibrary,movietitles,return)</onclick>
-					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
+					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies)</visible>
 				</item>
 				<item id="5">
 					<description>TV shows</description>
@@ -145,7 +154,7 @@
 					<icon>special://skin/media/backgrounds/tvshows.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomTVShowsFolder)]</thumb>			
 					<onclick>XBMC.ActivateWindow(MyVideoLibrary,tvshowtitles,return)</onclick>
-					<visible>!Skin.HasSetting(HomeMenuNoTVShowsButton)</visible>
+					<visible>!Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows)</visible>
 				</item>
 				<item id="6">
 					<description>pictures</description>
@@ -568,6 +577,33 @@
 						<visible>!Library.HasContent(Music)</visible>
 					</control>-->
 				</control>
+<!--WEATHER -->	<control type="grouplist" id="9018">
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>600</width>
+					<height>465</height>
+					<onleft>300</onleft>
+					<onright>Control.SetFocus(8001,0)</onright>
+					<onup>9017</onup>
+					<ondown>9017</ondown>
+					<itemgap>0</itemgap>
+					<visible>Container(300).HasFocus(8) | Container(300).HasFocus(14)</visible>
+					<control type="button" id="90181">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>Current</label>
+						<onclick>Skin.SetString(Weather,1)</onclick>
+					</control>	
+					<control type="button" id="90182">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>3 Days - Mini</label>
+						<onclick>Skin.SetString(Weather,2)</onclick>
+					</control>
+					<control type="button" id="90183">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>4 Days - Full</label>
+						<onclick>Skin.SetString(Weather,3)</onclick>
+					</control>
+				</control>	
 			</control>	
 		
 		<control type="group">
