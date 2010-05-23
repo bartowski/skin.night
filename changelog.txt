@@ -1,3 +1,7 @@
+Update 5/23/2010
+  -Fixed issue with dialog addon settings
+  -Fixed overlap with recently add and horizontal menu
+
 Update 5/22/2010
   -Added shutdown submenu
   -Started work on a horizontal Home menu

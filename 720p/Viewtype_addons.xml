@@ -161,6 +161,7 @@
 			<textcolor>ffffffff</textcolor>
 			<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 			<include>Animation_HiddenByInfo</include>
+			<include>Animation_Viewtype_Files_RightArea</include>
 			<visible>Window.IsActive(AddonBrowser)</visible>
 		</control>
 		

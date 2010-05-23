@@ -20,6 +20,7 @@
 	<include file="Viewtype_16x9.xml" />
 	<include file="Viewtype_Wall.xml" />
 	<include file="Viewtype_WallPanel.xml" />
+	<include file="Viewtype_Shelf.xml" />
 	<include file="Viewtype_addons.xml" />
 	<include file="Includes_MediaFlags.xml" />
 	<include file="Includes_Animations.xml" />

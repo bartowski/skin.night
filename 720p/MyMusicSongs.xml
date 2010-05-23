@@ -20,9 +20,9 @@
 			<visible>IsEmpty(Control.GetLabel(5019))</visible>
 		</control>
 
+		<include>Viewtype_Files</include>
 		<include>Viewtype_MusicWall</include>
 		<include>Viewtype_JukeBox</include>
-		<include>Viewtype_Files</include>
 		<include>Viewtype_MusicShowcase</include>
 		
 		

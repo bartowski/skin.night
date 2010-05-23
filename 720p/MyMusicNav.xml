@@ -16,7 +16,7 @@
 			<aspectratio>scale</aspectratio>
 			<fadetime>400</fadetime>
 			<include>Animation_BackdropFade</include>
-			<visible>![Skin.HasSetting(hidefanart) | Control.IsVisible(53)]</visible>
+			<visible>![Skin.HasSetting(hidefanart) | Control.IsVisible(53) | Control.IsVisible(51)]</visible>
 		</control>
 		<control type="largeimage">
 			<description>artist level fanart</description>
@@ -28,21 +28,22 @@
 			<aspectratio>scale</aspectratio>
 			<fadetime>400</fadetime>
 			<include>Animation_BackdropFade</include>
-			<visible>![Skin.HasSetting(hidefanart) | Control.IsVisible(53)]</visible>
+			<visible>![Skin.HasSetting(hidefanart) | Control.IsVisible(53) | Control.IsVisible(51)]</visible>
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<fadetime>400</fadetime>
 			<texture>backdrops/curtains_diffuse.png</texture>
 			<include>Animation_BackdropFade</include>
-			<visible>Control.IsVisible(53)</visible>
+			<visible>Control.IsVisible(53) | Control.IsVisible(51)</visible>
 		</control>
 		
-		<include>Viewtype_MusicWall</include>
-		<include>Viewtype_JukeBox</include>
-		<include>Viewtype_Files</include>
-		<include>Viewtype_Songs</include>
-		<include>Viewtype_MusicShowcase</include>
+		<include>Viewtype_Files</include><!-- 55 -->
+		<include>Viewtype_MusicShowcase</include><!-- 58 -->
+		<include>Viewtype_MusicWall</include><!-- 53 -->
+		<include>Viewtype_Songs</include><!-- 52 -->
+		<include>Viewtype_Shelf</include><!-- 51 -->
+		<include>Viewtype_JukeBox</include><!-- 50 -->
 
 		
 		<include>Music_Global_TopRight_Music_Showcase</include>

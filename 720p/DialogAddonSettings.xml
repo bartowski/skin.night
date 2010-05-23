@@ -80,7 +80,7 @@
 		<control type="grouplist" id="2">
 			<description>control area</description>
 			<posx>30</posx>
-			<posy>54</posy>
+			<posy>0</posy>
 			<width>740</width>
 			<height>440</height>
 			<itemgap>-1</itemgap>
