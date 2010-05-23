@@ -26,12 +26,11 @@
 	<include file="Includes_Trailer.xml" />
 	<include file="Includes_Objects.xml" />
 	<include file="Includes_Backgrounds.xml" />
-	<include file="Includes_Home_1.xml" />
 	<include file="IncludesHomeRecentlyAdded.xml" />
 	<include file="Includes_Music_Global.xml" />
 	<include file="IncludesCodecFlagging.xml" />
 	<include file="IncludesHomepageWeatherWidget.xml" />
-	
+	<include file="Includes_Home_Horizontal.xml" />
 	
 	
 	
@@ -42,6 +41,14 @@
 		<textwidth>600</textwidth>
 		<posx>150</posx>
 		<posy>91</posy>
+		<font>Font_Bartowski_Main_SubMenu</font>
+		<textcolor>38b8b7b7</textcolor>
+		<focusedcolor>mainblue</focusedcolor>
+	</include>
+	<include name="ButtonHomeSubCommonValues_Horizontal">
+		<width min="29" max="300">auto</width>
+		<height>56</height>
+		<align>center</align>
 		<font>Font_Bartowski_Main_SubMenu</font>
 		<textcolor>38b8b7b7</textcolor>
 		<focusedcolor>mainblue</focusedcolor>

@@ -23,6 +23,16 @@
 			<texture>mainmenu/vignette.png</texture>
 			<colordiffuse>ff15efd9</colordiffuse>
 			<include>Animation_BackdropFade</include>
+			<visible>!Skin.HasSetting(horizontal_home)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<include>Dimensions_Fullscreen</include>
+			<texture>mainmenu/horizontal_back.png</texture>
+			<colordiffuse>ff15efd9</colordiffuse>
+			<include>Animation_BackdropFade</include>
+			<visible>Skin.HasSetting(horizontal_home)</visible>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -56,7 +66,7 @@
 		</control>
 		
 		
-		
+		<include condition="Skin.HasSetting(horizontal_home)">HorizontalHome</include>
 		<include condition="Skin.HasSetting(homepageHideRecentlyAdded)">HomeRecentlyAddedInfo</include>
 		<include condition="Skin.HasSetting(HomepageWeatherWidget)">HomepageWeatherWidget</include>
 		<control type="fixedlist" id="300">
@@ -73,7 +83,8 @@
 			<focusposition>2</focusposition>
 			<movement>0</movement>
 			<scrolltime>200</scrolltime>
-			<include>Animation_Bartowski_ZoomOutZoomIn</include>				
+			<include>Animation_Bartowski_ZoomOutZoomIn</include>
+			<visible>!Skin.HasSetting(horizontal_home)</visible>			
 			<itemlayout width="600" height="61">
 				<control type="label">
 					<width>500</width>
@@ -225,6 +236,10 @@
 			</content>
 		</control>
 		
+		
+		
+		
+		
 		<control type="button" id="8999">
 			<description>Run Recently added</description>
 			<posx>-20</posx>
@@ -276,11 +291,7 @@
 				<animation effect="fade" start="100" end="0" time="0" condition="!ControlGroup(9001).HasFocus">conditional</animation>
 				<animation effect="fade" start="0" end="100" delay="300" time="200" condition="ControlGroup(9001).HasFocus">conditional</animation>
 				<animation effect="fade" start="100" end="0" time="0" condition="ControlGroup(9001).HasFocus">WindowClose</animation>
-				<!--<animation effect="slide" end="210,0" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus">conditional</animation>
-				<animation effect="slide" end="0,-204" time="300" condition="Container(300).Row(1)">conditional</animation>
-				<animation effect="slide" end="0,-102" time="300" condition="Container(300).Row(2)">conditional</animation>
-				<animation effect="slide" end="0,102" time="300" condition="Container(300).Row(4)">conditional</animation>
-				<animation effect="slide" end="0,204" time="300" condition="Container(300).Row(5)">conditional</animation>-->
+				<visible>!Skin.HasSetting(horizontal_home)</visible>
 <!--VIDEOS -->	<control type="grouplist" id="9010">
 					<posx>10</posx>
 					<posy>30</posy>
@@ -603,7 +614,29 @@
 						<label>4 Days - Full</label>
 						<onclick>Skin.SetString(Weather,3)</onclick>
 					</control>
-				</control>	
+				</control>
+<!--Shutdown --><control type="grouplist" id="9019">
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>600</width>
+					<height>465</height>
+					<onleft>300</onleft>
+					<onright>Control.SetFocus(8001,0)</onright>
+					<onup>9017</onup>
+					<ondown>9017</ondown>
+					<itemgap>0</itemgap>
+					<visible>Container(300).HasFocus(13)</visible>
+					<control type="button" id="90184">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$LOCALIZE[31242]</label>
+						<onclick>AlarmClock(shutdowntimer,Shutdown)</onclick>>
+					</control>
+					<control type="button" id="90185">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$LOCALIZE[31243]</label>
+						<onclick>CancelAlarm(ShutdownTimer)</onclick>
+					</control>
+				</control>
 			</control>	
 		
 		<control type="group">

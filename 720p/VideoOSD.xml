@@ -53,7 +53,7 @@
 				<onright>2001</onright>
 				<onup>2001</onup>
 				<ondown>2001</ondown>
-				<control type="button" id="15">
+				<control type="button" id="16">
 					<description>OSD Subtitles</description>
 					<height>68</height>
 					<width>68</width>

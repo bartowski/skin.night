@@ -21,13 +21,7 @@
 				<aspectratio>scale</aspectratio>
 			</control>
 			
-			<control type="label">
-				<posx>640</posx>
-				<posy>0</posy>
-				<include>DialogID</include>
-				<label>DialogSeekbar.xml</label>
-				<visible>Skin.HasSetting(debugmode)</visible>
-			</control>
+			
 			<control type="progress" id="23">
 				<texturebg>osd/osd_progress_back1.png</texturebg>
 				<lefttexture>osd/left.png</lefttexture>
