@@ -35,7 +35,7 @@
 			<fadetime>400</fadetime>
 			<texture>backdrops/curtains_diffuse.png</texture>
 			<include>Animation_BackdropFade</include>
-			<visible>Control.IsVisible(53) | Control.IsVisible(51)</visible>
+			<visible>Control.IsVisible(53)</visible>
 		</control>
 		
 		<include>Viewtype_Files</include><!-- 55 -->

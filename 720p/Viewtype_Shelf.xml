@@ -7,30 +7,39 @@
 	
 		<control type="panel" id="51">
 			<viewtype label="Shelf">icon</viewtype>
-			<posx>0</posx>
+			<posx>50</posx>
 			<posy>20</posy>
 			<width>1280</width>
-			<height>720</height>
+			<height>680</height>
 			<pagecontrol>61</pagecontrol>
 			<scrolltime>0</scrolltime>
 			<orientation>vertical</orientation>
-			<onup>7000</onup>
-			<ondown>7000</ondown>
-			<visible>Container.Content(artists) | Container.Content(albums)</visible>
-			<itemlayout width="160" height="130">
+			<onright>7000</onright>
+			<onleft>7000</onleft>
+			<include>Animation_BackdropFade</include>
+			<visible>Container.Content(albums)</visible>
+			<itemlayout width="170" height="130">
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>160</width>
-					<height>160</height>
+					<width>170</width>
+					<height>170</height>
 					<texture>wall/musicwallmatte.png</texture>
 					<colordiffuse>black</colordiffuse>
 				</control>
 				<control type="image">
+					<posx>-10</posx>
+					<posy>-18</posy>
+					<width>185</width>
+					<height>33</height>
+					<texture>music/shelf_ledge_back1.png</texture>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+				</control>
+				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>160</width>
-					<height>160</height>
+					<width>170</width>
+					<height>170</height>
 					<fadetime>200</fadetime>
 					<texture background="true" diffuse="wall/musicwallmatte.png">$INFO[ListItem.Icon]</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -41,18 +50,29 @@
 				<control type="image">
 					<posx>16</posx>
 					<posy>16</posy>
-					<width>162</width>
-					<height>162</height>
+					<width>172</width>
+					<height>172</height>
 					<texture>wall/musicwallframeNF.png</texture>
 					<colordiffuse>WallIconDiffuse</colordiffuse>					
-				</control>				
+				</control>
 			</itemlayout>
-			<focusedlayout width="160" height="160">
+			<focusedlayout width="170" height="170">
+				<control type="image">
+					<posx>-80</posx>
+					<posy>-180</posy>
+					<width>335</width>
+					<height>367</height>
+					<texture>music/shelf_back1.png</texture>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<animation type="Focus" reversible="false">
+						<effect type="fade" start="0" end="100" time="600" />
+					</animation>
+				</control>
 				<control type="image">
 					<posx>0</posx>
-					<posy>-30</posy>
-					<width>160</width>
-					<height>160</height>
+					<posy>-40</posy>
+					<width>170</width>
+					<height>170</height>
 					<texture background="true" diffuse="wall/musicwallmatte.png">$INFO[ListItem.Icon]</texture>
 					<!--<colordiffuse>WallIconDiffuse</colordiffuse>-->
 					<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -60,7 +80,43 @@
 						<effect type="slide" start="0,0" end="0,-40" time="200" />
 					</animation>
 				</control>
+				<control type="image">
+					<posx>30</posx>
+					<posy>102</posy>
+					<width>100</width>
+					<height>18</height>
+					<texture>$INFO[ListItem.StarRating]</texture>
+					<colordiffuse>mainblue</colordiffuse>
+					<animation type="Focus" reversible="false">
+						<effect type="fade" start="0" end="100" time="100" delay="300" />
+					</animation>
+				</control>
 			</focusedlayout>
+		</control>
+	
+			
+		<control type="group">
+		<visible>Control.IsVisible(51)</visible>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<texture>music/shelf_overlay.png</texture>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>672</posy>
+				<width>1280</width>
+				<height>50</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Font_Bartowski_Movies_Title</font>
+				<textcolor>ff67ffff</textcolor>
+				<label>"[B]$INFO[ListItem.Label][/B]"</label>
+				<include>Animation_Bartowski_Context_Zoom</include>
+				<visible></visible>
+			</control>
 		</control>
 	
 	</include>
