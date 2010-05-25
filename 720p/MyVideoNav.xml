@@ -195,6 +195,7 @@
 			<control type="button" id="19">
 				<include>WindowMenuButton</include>
 				<label>587</label>
+				<visible>!Control.IsVisible(58)</visible>
 			</control>
 		</control>
 

@@ -595,8 +595,8 @@
 					<height>465</height>
 					<onleft>300</onleft>
 					<onright>Control.SetFocus(8001,0)</onright>
-					<onup>9017</onup>
-					<ondown>9017</ondown>
+					<onup>9018</onup>
+					<ondown>9018</ondown>
 					<itemgap>0</itemgap>
 					<visible>Container(300).HasFocus(8) | Container(300).HasFocus(14)</visible>
 					<control type="button" id="90181">
@@ -622,8 +622,8 @@
 					<height>465</height>
 					<onleft>300</onleft>
 					<onright>Control.SetFocus(8001,0)</onright>
-					<onup>9017</onup>
-					<ondown>9017</ondown>
+					<onup>9019</onup>
+					<ondown>9019</ondown>
 					<itemgap>0</itemgap>
 					<visible>Container(300).HasFocus(13)</visible>
 					<control type="button" id="90184">
@@ -635,7 +635,34 @@
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$LOCALIZE[31243]</label>
 						<onclick>CancelAlarm(ShutdownTimer)</onclick>
+						<visible>System.HasAlarm(ShutdownTimer)</visible>
 					</control>
+					<control type="button" id="90186">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>Suspend</label>
+						<onclick>Dialog.Close(ShutdownMenu,yes)</onclick>
+						<onclick>Suspend()</onclick>
+					</control>
+					<control type="button" id="90187">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>Hibernate</label>
+						<onclick>Hibernate()</onclick>
+					</control>
+					<control type="button" id="90188">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>Restart XBMC</label>
+						<onclick>RestartApp()</onclick>
+					</control>
+					<control type="button" id="90189">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>Exit XBMC</label>
+						<onclick>XBMC.Quit()</onclick>
+					</control>
+					<!--<control type="button" id="90190">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>Shutdown</label>
+						<onclick>ShutDown()</onclick>
+					</control>-->
 				</control>
 			</control>	
 		

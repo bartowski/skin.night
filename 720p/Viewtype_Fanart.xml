@@ -137,7 +137,7 @@
 					<height>500</height>
 					<texture>panel/panel_poster_back.png</texture>
 					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="auto" start="51" end="110" time="600" tween="back" easing="out" />
+						<effect type="zoom" center="auto" start="100" end="110" time="300" tween="back" easing="out" />
 						<effect type="fade" start="0" end="60" time="800" />
 					</animation>
 				</control>
@@ -148,7 +148,7 @@
 					<height>320</height>
 					<texture>postermatteNF.png</texture>
 					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="auto" start="51" end="110" time="600" tween="back" easing="out" />
+						<effect type="zoom" center="auto" start="100" end="110" time="300" tween="back" easing="out" />
 					</animation>
 				</control>
 				<control type="image">
@@ -161,7 +161,7 @@
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<visible>!Container.Content(Genres)</visible>
 					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="auto" start="51" end="110" time="600" tween="back" easing="out" />
+						<effect type="zoom" center="auto" start="100" end="110" time="300" tween="back" easing="out" />
 					</animation>
 				</control>
 				<control type="image">
@@ -175,7 +175,7 @@
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<visible>Container.Content(Genres)</visible>
 					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="auto" start="51" end="110" time="600" tween="back" easing="out" />
+						<effect type="zoom" center="auto" start="100" end="110" time="300" tween="back" easing="out" />
 					</animation>
 				</control>
 				<control type="image">
@@ -185,7 +185,7 @@
 					<height>346</height>
 					<texture>posterframeF.png</texture>
 					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="auto" start="51" end="110" time="600" tween="back" easing="out" />
+						<effect type="zoom" center="auto" start="100" end="110" time="300" tween="back" easing="out" />
 					</animation>
 				</control>
 				<control type="image">
@@ -195,7 +195,7 @@
 					<height>322</height>
 					<texture>posterframeNF.png</texture>
 					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="auto" start="51" end="110" time="600" tween="back" easing="out" />
+						<effect type="zoom" center="auto" start="100" end="110" time="300" tween="back" easing="out" />
 					</animation>
 				</control>
 				<control type="image">
@@ -205,7 +205,7 @@
 					<height>76</height>
 					<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
 					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="auto" start="51" end="110" time="600" tween="back" easing="out" />
+						<effect type="zoom" center="auto" start="100" end="110" time="300" tween="back" easing="out" />
 					</animation>
 					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 				</control>

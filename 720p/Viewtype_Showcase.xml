@@ -150,11 +150,11 @@ MOVIE SECTION
 			
 			<focusedlayout width="210" height="515">
 				<control type="image">
-					<posx>-110</posx>
-					<posy>-22</posy>
-					<width>424</width>
-					<height>526</height>
-					<texture>showcase/showcase_glow.png</texture>
+					<posx>-94</posx>
+					<posy>24</posy>
+					<width>389</width>
+					<height>405</height>
+					<texture>showcase/showcase_glow2.png</texture>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="90,258" start="81" end="100" time="400" tween="back" easing="out" />
 						<effect type="fade" start="0" end="100" time="1000" delay="400"/>
