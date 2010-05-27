@@ -39,17 +39,17 @@
 			<posx>90</posx>
 			<posy>50</posy>
 			<include>Animation_Bartowski_Context_Zoom</include>			
-			<control type="image">
+			<!--<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>1100</width>
 				<height>640</height>
 				<texture border="20">confluence/DialogBack.png</texture>
-			</control>
+			</control>-->
 			<control type="image">
 				<description>LOGO</description>
-				<posx>30</posx>
-				<posy>15</posy>
+				<posx>-60</posx>
+				<posy>-30</posy>
 				<width>220</width>
 				<height>80</height>
 				<aspectratio>keep</aspectratio>
@@ -57,8 +57,8 @@
 			</control>
 			<control type="grouplist" id="3">
 				<description>button area</description>
-				<posx>10</posx>
-				<posy>90</posy>
+				<posx>-80</posx>
+				<posy>60</posy>
 				<width>260</width>
 				<height>481</height>
 				<itemgap>-1</itemgap>
@@ -67,7 +67,7 @@
 				<onup>3</onup>
 				<ondown>3</ondown>
 			</control>
-			<control type="image">
+			<!--<control type="image">
 				<posx>268</posx>
 				<posy>10</posy>
 				<width>790</width>
@@ -81,18 +81,18 @@
 				<height>70</height>
 				<aspectratio>stretch</aspectratio>
 				<texture>confluence/GlassTitleBar.png</texture>
-			</control>
+			</control>-->
 			<control type="label">
 				<description>header label</description>
-				<posx>300</posx>
+				<posx>460</posx>
 				<posy>20</posy>
 				<width>740</width>
 				<height>30</height>
-				<font>font16caps</font>
+				<font>Font_Bartowski_MainMenu_Context</font>
 				<label>$INFO[Control.GetLabel(2)] - $LOCALIZE[5]</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<textcolor>white</textcolor>
+				<textcolor>mainblue</textcolor>
 				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="grouplist" id="5">
@@ -131,7 +131,7 @@
 			<height>60</height>
 			<width>260</width>
 			<textoffsetx>20</textoffsetx>
-			<align>right</align>
+			<align>left</align>
 			<aligny>center</aligny>
 			<font>font24caps_title</font>
 			<textcolor>grey2</textcolor>
@@ -144,7 +144,7 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<height>40</height>
-			<font>font13caps_title</font>
+			<font>Font_KeyboardKeys</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<texturefocus border="0,2,0,2">confluence/MenuItemFO1.png</texturefocus>
@@ -155,7 +155,7 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<height>40</height>
-			<font>font13caps_title</font>
+			<font>Font_KeyboardKeys</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<texturefocus border="0,2,0,2">confluence/MenuItemFO1.png</texturefocus>
@@ -166,7 +166,7 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<height>40</height>
-			<font>font13caps_title</font>
+			<font>Font_KeyboardKeys</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<texturefocus border="0,2,0,2">confluence/MenuItemFO1.png</texturefocus>

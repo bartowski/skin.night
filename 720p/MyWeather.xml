@@ -33,7 +33,7 @@
 		<posy>0</posy>
 		<width>740</width>
 		<height>414</height>
-		<imagepath diffuse="Showcase/showcase-diffuse.png">$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</imagepath>
+		<imagepath diffuse="Showcase/showcase-diffuse.png" fallback="special://skin/media/backgrounds/weather.jpg">$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</imagepath>
 		<aspectratio>stretch</aspectratio>
 		<timeperimage>5000</timeperimage>
 		<randomize>true</randomize>
@@ -87,7 +87,7 @@
 				</control>
 				<!-- label -->
 				<control type="label">
-					<label>$LOCALIZE[31222]</label>
+					<info>Window.Property(Current.Condition)</info>
 					<width>205</width>
 					<height>20</height>
 					<posx>5</posx>
@@ -98,7 +98,7 @@
 				</control>
 				<!-- current condition -->
 				<control type="label">
-					<info>Window.Property(Current.Condition)</info>
+					<label>$LOCALIZE[31222]</label>
 					<width>205</width>
 					<height>35</height>
 					<posx>5</posx>

@@ -1,3 +1,10 @@
+Update 5/26/2010
+  -Added blue box to 'add source' dialogs for easier navigation
+  -Fixed issue where no image shows up on weather screen if no backdrops selected
+  -Changed up look of settings section
+  -Updated the view options for addons section
+
+
 Update 5/24/2010
   -Added more submenu items to Shutdown
   -Fixed too many buttons for View Options in Showcase

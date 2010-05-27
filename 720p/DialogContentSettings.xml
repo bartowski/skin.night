@@ -20,12 +20,6 @@
 			<texture>favourites/favourites_panel1.png</texture>
 		</control>
 
-		<control type="label">
-			<posy>-80</posy>
-			<label>DialogContentSettings.xml</label>
-			<visible>Skin.HasSetting(debugmode)</visible>
-		</control>
-
 		<control type="spincontrolex" id="3">
 			<description>Directory Content</description>
 			<posx>50</posx>
@@ -33,7 +27,10 @@
 			<width>450</width>
 			<align>left</align>
 			<font>font16caps</font>
+			<textoffsetx>6</textoffsetx>
 			<textcolor>black</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<texturefocus>confluence/button-focus-big.png</texturefocus>
 			<width>400</width>
 			<onup>29</onup>
 			<ondown>4</ondown>
@@ -96,19 +93,21 @@
 				<control type="image">
 					<width>340</width>
 					<height>30</height>
-					<texture>ButtonFo.png</texture>
+					<texture>confluence/button-focus-big.png</texture>
+					<visible>Control.HasFocus(4)</visible>
 				</control>
 				<control type="image">
+					<posx>6</posx>
 					<posy>2</posy>
 					<width>26</width>
 					<height>26</height>
 					<info>ListItem.Icon</info>
 				</control>
 				<control type="label">
-					<posx>30</posx>
+					<posx>36</posx>
 					<width>304</width>
 					<height>30</height>
-					<textcolor>TextFocused</textcolor>
+					<textcolor>white</textcolor>
 					<info>ListItem.Label</info>
 				</control>
 			</focusedlayout>
@@ -122,19 +121,27 @@
 			<orientation>vertical</orientation>
 			<width>500</width>
 			<onup>4</onup>
-			<ondown>29</ondown>
+			<ondown>28</ondown>
 			<onleft>4</onleft>
-			<onright>29</onright>
+			<onright>28</onright>
 		</control>
 
 		<control type="button" id="7">
 			<description>default</description>
 			<align>left</align>
+			<textoffsetx>6</textoffsetx>
+			<textcolor>TextSelected</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<texturefocus>confluence/button-focus-big.png</texturefocus>
 		</control>
 
 		<control type="radiobutton" id="8">
 			<description>radioButton</description>
 			<align>left</align>
+			<textoffsetx>6</textoffsetx>
+			<textcolor>TextSelected</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<texturefocus>confluence/button-focus-big.png</texturefocus>
 		</control>
 
 		<control type="button" id="6">
@@ -142,10 +149,11 @@
 			<posx>40</posx>
 			<posy>390</posy>
 			<label>$LOCALIZE[5]</label>
+			<textoffsetx>6</textoffsetx>
 			<align>center</align>
 			<textcolor>black</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<texturefocus>confluence/button-focus.png</texturefocus>
+			<texturefocus>confluence/button-focus-big.png</texturefocus>
 			<texturenofocus border="1">ButtonNF.png</texturenofocus>
 			<onup>5</onup>
 			<onleft>29</onleft>

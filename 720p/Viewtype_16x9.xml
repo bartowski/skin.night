@@ -15,7 +15,7 @@
 			<onleft>59</onleft>
 			<onright>59</onright>
 			<onup>7000</onup>
-			<ondown>7000</ondown>
+			<ondown>XBMC.PlayMedia($INFO[ListItem.Trailer],1,noresume)</ondown>
 			<viewtype label="16x9">list</viewtype>
 			<orientation>horizontal</orientation>
 			<focusposition>1</focusposition>

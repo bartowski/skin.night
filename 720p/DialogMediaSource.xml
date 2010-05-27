@@ -29,12 +29,6 @@
 			<texture>favourites/favourites_panel1.png</texture>
 		</control>
 
-		<control type="label">
-			<posy>-100</posy>
-			<label>DialogMediaSource.xml</label>
-			<visible>Skin.HasSetting(debugmode)</visible>
-		</control>
-
 		<control type="label" id="0">
 			<description>Path</description>
 			<posx>2</posx>
@@ -48,9 +42,9 @@
 		<control type="list" id="10">
 			<posx>20</posx>
 			<posy>75</posy>
-			<width>340</width>
+			<width>386</width>
 			<height>254</height>
-			<onup>19</onup>
+			<onup>18</onup>
 			<onleft>9000</onleft>
 			<onright>9000</onright>
 			<ondown>12</ondown>
@@ -65,19 +59,26 @@
 				</control>
 			</itemlayout>
 			<focusedlayout height="32">
-				<control type="label">
+				<control type="image">
 					<posx>5</posx>
-					<width>330</width>
+					<width>380</width>
+					<height>30</height>
+					<texture>confluence/button-focus-big.png</texture>
+					<visible>Control.HasFocus(10)</visible>
+				</control>
+				<control type="label">
+					<posx>12</posx>
+					<width>380</width>
 					<height>30</height>
 					<textcolor>TextSelected</textcolor>
 					<info>ListItem.Label</info>
 					<visible>!Control.HasFocus(10)</visible>
 				</control>
 				<control type="label">
-					<posx>5</posx>
-					<width>330</width>
+					<posx>12</posx>
+					<width>380</width>
 					<height>30</height>
-					<textcolor>TextFocused</textcolor>
+					<textcolor>white</textcolor>
 					<info>ListItem.Label</info>
 					<visible>Control.HasFocus(10)</visible>
 				</control>
@@ -123,7 +124,7 @@
 				<onup>13</onup>
 				<onleft>10</onleft>
 				<onright>10</onright>
-				<ondown>19</ondown>
+				<ondown>20</ondown>
 			</control>
 		</control>
 
@@ -139,15 +140,25 @@
 
 		<control type="button" id="12">
 			<description>Name</description>
-			<posx>0</posx>
+			<posx>8</posx>
 			<posy>358</posy>
 			<label>-</label>
+			<textcolor>TextSelected</textcolor>
+			<focusedcolor>white</focusedcolor>
 			<width>500</width>
 			<align>left</align>
 			<onup>10</onup>
 			<onleft>12</onleft>
 			<onright>19</onright>
 			<ondown>19</ondown>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>358</posy>
+			<width>500</width>
+			<height>30</height>
+			<texture>confluence/button-focus-big.png</texture>
+			<visible>Control.HasFocus(12)</visible>
 		</control>
 
 		<control type="button" id="20">
