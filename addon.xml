@@ -13,7 +13,7 @@
     defaultresolutionwide="720p"
     defaultthemename="textures.xbt" 
     effectslowdown="1"
-    debugging="true"/>
+    debugging="false"/>
   <extension point="xbmc.addon.metadata">
     <platform>all</platform>
     <minversion app="xbmc">28000</minversion>

@@ -108,15 +108,15 @@
 	<visible>Control.IsVisible(55)</visible>
 	<include>Animation_Viewtype_Files_RightArea</include>	
 		<control type="image">
-			<posx>766</posx>
-			<posy>362</posy>
-			<width>540</width>
+			<posx>776</posx>
+			<posy>334</posy>
+			<width>490</width>
 			<height>380</height>
 			<aspectratio align="right" aligny="bottom">keep</aspectratio>
-			<texture background="true" diffuse="common/new_files_diffuse.png">$INFO[ListItem.Icon]</texture>
-			<bordertexture border="32">list/files_list_glow.png</bordertexture>
-			<fadetime>400</fadetime>
-			<bordersize>32</bordersize>
+			<texture background="true">$INFO[ListItem.Icon]</texture>
+			<bordertexture border="5">confluence/button-nofocus.png</bordertexture>
+				<bordersize>5</bordersize>
+				<fadetime>100</fadetime>
 		</control>
 		<control type="image">
 			<posx>766</posx>
