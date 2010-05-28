@@ -3,7 +3,7 @@
 <window id="25">
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>50,51,52,53,54,55,56,57,58,59,592,597</views>
+	<views>50,51,52,53,54,55,56,57,58,59,592,597,633</views>
 	<controls>
 		<control type="largeimage">
 			<include>Dimensions_Fullscreen</include>
@@ -53,17 +53,18 @@
 
 		
 		<include>Viewtype_Showcase</include><!--  58  -->
-		<include>Viewtype_Files</include><!--  55  -->
 		<include>Viewtype_Poster</include><!--  50  -->
-		<include>Viewtype_Fanart</include><!--  56  -->
-		<include>Viewtype_List</include><!--  53  -->
+		<include>Viewtype_Files</include><!--  55  -->
 		<include>Viewtype_Landscape</include><!--  52  -->
+		<include>Viewtype_Landscape_Fanart</include><!--  598  -->
+		<include>Viewtype_List</include><!--  53  -->
 		<include>Viewtype_Episode</include><!--  51  -->
-		<include>Viewtype_16x9</include><!--  59  -->
 		<include>Viewtype_Wall</include><!--  54  -->
+		<include>Viewtype_Fanart</include><!--  56  -->
 		<include>Viewtype_PanelLandscape</include><!--  57  -->
 		<include>Viewtype_BannerPanel</include><!--  592  -->
-		<include>Viewtype_WallPanel</include><!--  592  -->
+		<include>Viewtype_WallPanel</include><!--  597  -->
+		<include>Viewtype_16x9</include><!--  59  -->
 		
 		
 		<include>Trailer</include>
@@ -96,7 +97,6 @@
 		
 
 		<control type="grouplist" id="7000">
-			<visible>!Skin.HasSetting(LockViews)</visible>
 			<include>WindowMenuVars</include>
 			<posy>680</posy>
 			<control type="button" id="20">
@@ -122,7 +122,7 @@
 				<selected>Skin.HasSetting(extrathumbs)</selected>
 				<visible>Control.IsVisible(58)</visible>
 			</control>
-			<control type="togglebutton" id="26">
+			<!--<control type="togglebutton" id="26">
 				<description>Toggle MoviesFanart</description>
 				<include>WindowMenuButton</include>
 				<label>$LOCALIZE[31086]</label>
@@ -130,7 +130,7 @@
 				<onclick>Skin.ToggleSetting(Landscape_Fanart)</onclick>
 				<selected>Skin.HasSetting(Landscape_Fanart)</selected>
 				<visible>Control.IsVisible(52)</visible>
-			</control>
+			</control>-->
 			<control type="togglebutton" id="27">
 				<description>Toggle MoviesFanart</description>
 				<include>WindowMenuButton</include>
@@ -200,7 +200,6 @@
 		</control>
 
 		<control type="grouplist">
-			<visible>!Skin.HasSetting(LockViews)</visible>
 			<include>WindowMenuVars</include>
 			<posy>658</posy>
 			<control type="button" id="40">
@@ -211,17 +210,12 @@
 			<control type="button" id="45">
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[31089]</label>
-				<visible>[Control.IsVisible(58) | Control.IsVisible(59) | Control.IsVisible(52)] + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>		
+				<visible>[Control.IsVisible(58) | Control.IsVisible(59)] + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>		
 			</control>
 			<control type="button" id="46">
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[31089]</label>
 				<visible>Control.IsVisible(55) + Container.Content(movies)</visible>		
-			</control>
-			<control type="button" id="49">
-				<include>WindowMenuLabel</include>
-				<label>$LOCALIZE[31089]</label>
-				<visible>Control.IsVisible(52) + [Container.Content(tvshows) | Container.Content(seasons)]</visible>	
 			</control>
 			<control type="button" id="950">
 				<include>WindowMenuLabel</include>

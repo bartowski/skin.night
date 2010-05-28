@@ -10,6 +10,7 @@
 	<include file="Viewtype_MusicWall.xml" />
 	<include file="Viewtype_List.xml" />
 	<include file="Viewtype_Landscape.xml" />
+	<include file="Viewtype_Landscape_Fanart.xml" />
 	<include file="Viewtype_Fanart.xml" />
 	<include file="Viewtype_Files.xml" />
 	<include file="Viewtype_Showcase.xml" />
@@ -241,7 +242,7 @@
 		<ondown>50</ondown>
 		<itemgap>0</itemgap>
 		<align>center</align>
-		<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus</visible>
+		<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews)</visible>
 		<include>Animation_ViewOptions</include>
 		<orientation>horizontal</orientation>
 	</include>

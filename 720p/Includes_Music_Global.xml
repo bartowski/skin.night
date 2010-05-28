@@ -158,6 +158,7 @@
 			<control type="group">
 			<posx>-80</posx>
 			<posy>600</posy>
+			<visible>MusicPlayer.HasNext</visible>
 				<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 					<effect type="slide" start="0,400" end="0,0" time="500" delay="21500" />
 					<effect type="slide" start="0,0" end="0,400" time="500" delay="28000" />
@@ -208,9 +209,18 @@
 
 	
 	<include name="Music_Global_TopRight">
+		<control type="image"><!-- Floor -->
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>309</height>
+			<texture>music/music_top_right_fanart_back.png</texture>
+			<include>Animation_CommonFade</include>
+			<visible>Control.IsVisible(633)</visible>
+		</control>
 		<control type="group">
 		<include>Animation_CommonFade</include>
-		<visible>[Control.IsVisible(50) | Control.IsVisible(53) | Control.IsVisible(58)] + Player.HasAudio | [[Control.IsVisible(52) + Container.Content(tvshows)] + Player.HasAudio + Skin.HasSetting(Landscape_Fanart)]</visible>		
+		<visible>[Control.IsVisible(50) | Control.IsVisible(53) | Control.IsVisible(58)] + Player.HasAudio | [Control.IsVisible(633) + Player.HasAudio]</visible>		
 			<control type="group">
 				<posx>1086</posx>
 				<posy>130</posy>
@@ -353,6 +363,7 @@
 			<control type="group">
 			<posx>850</posx>
 			<posy>40</posy>
+			<visible>MusicPlayer.HasNext</visible>
 				<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 					<effect type="slide" start="0,-400" end="0,0" time="500" delay="21500" />
 					<effect type="slide" start="0,0" end="0,-400" time="500" delay="28000" />
@@ -400,8 +411,16 @@
 				</control>
 		</control>
 	</include>
-	
 	<include name="Music_Global_TopRight_Music_Showcase">
+		<control type="image"><!-- Floor -->
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>309</height>
+			<texture>music/music_top_right_fanart_back.png</texture>
+			<include>Animation_CommonFade</include>
+			<visible>Control.IsVisible(58) + Skin.HasSetting(MusicShowcaseFanart)</visible>
+		</control>
 		<control type="group">
 		<include>Animation_CommonFade</include>
 		<visible>[Control.IsVisible(58) | Control.IsVisible(59) | [Control.IsVisible(55) + Window.IsActive(musiclibrary)]] + Player.HasAudio</visible>		
@@ -549,10 +568,11 @@
 			<control type="group">
 			<posx>850</posx>
 			<posy>40</posy>
-				<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
-					<effect type="slide" start="0,-400" end="0,0" time="500" delay="21500" />
-					<effect type="slide" start="0,0" end="0,-400" time="500" delay="28000" />
-				</animation>
+			<visible>MusicPlayer.HasNext</visible>	
+			<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
+				<effect type="slide" start="0,-400" end="0,0" time="500" delay="21500" />
+				<effect type="slide" start="0,0" end="0,-400" time="500" delay="28000" />
+			</animation>
 					<control type="label">
 						<description>Track</description>
 						<posx>250</posx>
@@ -753,6 +773,7 @@
 			<control type="group">
 			<posx>-80</posx>
 			<posy>600</posy>
+			<visible>MusicPlayer.HasNext</visible>
 				<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 					<effect type="slide" start="0,400" end="0,0" time="500" delay="21500" />
 					<effect type="slide" start="0,0" end="0,400" time="500" delay="28000" />
@@ -804,7 +825,7 @@
 	<include name="Music_Global_LowerRight">
 		<control type="group">
 		<include>Animation_CommonFade</include>
-		<visible>[[Control.IsVisible(52) + Container.Content(tvshows)] + Player.HasAudio + !Skin.HasSetting(Landscape_Fanart)] | [[Control.IsVisible(597) + Container.Content(movies)] + Player.HasAudio]</visible>		
+		<visible>[[Control.IsVisible(52) + Container.Content(tvshows)] + Player.HasAudio + !Skin.HasSetting(Landscape_Fanart)] | [[Control.IsVisible(597) + Container.Content(movies)] + Player.HasAudio] | [Control.IsVisible(53) + Window.IsActive(musiclibrary) + Player.HasAudio]</visible>		
 			<control type="group">
 				<posx>1086</posx>
 				<posy>684</posy>
@@ -947,6 +968,7 @@
 			<control type="group">
 			<posx>850</posx>
 			<posy>610</posy>
+			<visible>MusicPlayer.HasNext</visible>
 				<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 					<effect type="slide" start="0,400" end="0,0" time="500" delay="21500" />
 					<effect type="slide" start="0,0" end="0,400" time="500" delay="28000" />

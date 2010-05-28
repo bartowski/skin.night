@@ -370,7 +370,7 @@
 				</control>
 				</control>
 				<control type="group">
-					<animation effect="slide" start="0,150" end="0,0" time="600" delay="800" tween="cubic" easing="inout" condition="Container(300).HasFocus(8) | Container(300).HasFocus(14)">Conditional</animation>	
+					<animation effect="slide" start="0,150" end="0,0" time="600" delay="1200" tween="cubic" easing="inout" condition="Container(300).HasFocus(8) | Container(300).HasFocus(14)">Conditional</animation>
 				<control type="image">
 					<texture>$INFO[Window(Weather).Property(Day3.OutlookIcon)]</texture>
 					<width>70</width>

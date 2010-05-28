@@ -1,3 +1,10 @@
+Update 5/27/2010
+  -Landscape and Landscape Fanart are now seperate views
+  -fixed issue where if you didnt have a next song there was some label overlap
+  -tighten weather widget animation, thx psike
+  -added a gradient backdrop to music now playing when fanart enabled in some views
+  -added Favorites to Home, and all options to disable/set backdrops
+
 Update 5/26/2010
   -Added blue box to 'add source' dialogs for easier navigation
   -Fixed issue where no image shows up on weather screen if no backdrops selected

@@ -188,8 +188,16 @@
 					<label>$LOCALIZE[31020]</label>
 					<icon>special://skin/media/backgrounds/scripts.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomScriptsFolder)]</thumb>	
-					<onclick>XBMC.ActivateWindow(20)</onclick>
+					<onclick>XBMC.ActivateWindow(scripts)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoScriptsButton)</visible>
+				</item>
+				<item id="18">
+					<description>favourites</description>
+					<label>$LOCALIZE[1036]</label>
+					<icon>special://skin/media/backgrounds/favourites.png</icon>
+					<thumb>$INFO[Skin.String(CustomfavouritesFolder)]</thumb>	
+					<onclick>XBMC.ActivateWindow(favourites)</onclick>
+					<visible>!Skin.HasSetting(HomeMenuNofavouritesButton)</visible>
 				</item>
 				<item id="14">
 					<description>weather</description>

@@ -404,7 +404,7 @@
 					<posx>290</posx>
 					<posy>60</posy>
 					<width>860</width>
-					<height>530</height>
+					<height>600</height>
 					<itemgap>-1</itemgap>
 					<pagecontrol>60</pagecontrol>
 					<onleft>9000</onleft>
@@ -750,13 +750,26 @@
 						<font>Font_KeyboardKeys</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
+						<label>$LOCALIZE[31111] - $LOCALIZE[1036]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNofavouritesButton)</onclick>
+						<selected>Skin.HasSetting(HomeMenuNofavouritesButton)</selected>
+						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+					</control>
+					<control type="radiobutton" id="219">
+						<description>Hide Weather Button</description>
+						<width>860</width>
+						<height>40</height>
+						<font>Font_KeyboardKeys</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
 						<label>$LOCALIZE[31111] - $LOCALIZE[8]</label>
 						<onclick>Skin.ToggleSetting(HomeMenuNoWeatherButton)</onclick>
 						<selected>Skin.HasSetting(HomeMenuNoWeatherButton)</selected>
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
 						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="219">
+					<control type="radiobutton" id="220">
 						<description>Hide Weather Button</description>
 						<width>860</width>
 						<height>40</height>
@@ -985,6 +998,12 @@
 								<onclick>-</onclick>
 								<icon>special://skin/media/backgrounds/scripts.jpg</icon>
 								<thumb>$INFO[Skin.String(Home_Custom_Back_Scripts_Folder)]</thumb>
+							</item>
+							<item id="18">
+								<label>1036</label>
+								<onclick>-</onclick>
+								<icon>special://skin/media/backgrounds/favourites.png</icon>
+								<thumb>$INFO[Skin.String(CustomfavouritesFolder)]</thumb>
 							</item>
 							<item id="7">
 								<label>13000</label>
@@ -1364,6 +1383,66 @@
 								<texturenofocus border="5">confluence/button-nofocus.png</texturenofocus>
 								<texturefocus border="5">confluence/button-focus.png</texturefocus>
 								<onclick>Skin.Reset(CustomScriptsFolder)</onclick>
+								<onleft>301</onleft>
+								<onright>300</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container(9003).HasFocus(18)</visible>
+							<control type="button" id="300">
+								<description>Single Image button</description>
+								<posx>5</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31113</label>
+								<font>font12caps_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">confluence/button-nofocus.png</texturenofocus>
+								<texturefocus border="5">confluence/button-focus.png</texturefocus>
+								<onclick>Skin.SetImage(CustomfavouritesFolder)</onclick>
+								<onleft>302</onleft>
+								<onright>301</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="301">
+								<description>Multi Image button</description>
+								<posx>190</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31114</label>
+								<font>font12caps_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">confluence/button-nofocus.png</texturenofocus>
+								<texturefocus border="5">confluence/button-focus.png</texturefocus>
+								<onclick>Skin.SetPath(CustomfavouritesFolder)</onclick>
+								<onleft>300</onleft>
+								<onright>302</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="302">
+								<description>Default Image button</description>
+								<posx>375</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>571</label>
+								<font>font12caps_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">confluence/button-nofocus.png</texturenofocus>
+								<texturefocus border="5">confluence/button-focus.png</texturefocus>
+								<onclick>Skin.Reset(CustomfavouritesFolder)</onclick>
 								<onleft>301</onleft>
 								<onright>300</onright>
 								<onup>304</onup>
@@ -2283,7 +2362,7 @@
 						<posx>290</posx>
 						<posy>60</posy>
 						<width>860</width>
-						<height>526</height>
+						<height>600</height>
 						<itemgap>-1</itemgap>
 						<pagecontrol>61</pagecontrol>
 						<onleft>9000</onleft>
@@ -2433,7 +2512,19 @@
 							<onclick>Skin.ToggleSetting(no_WallPanel)</onclick>
 							<selected>Skin.HasSetting(no_WallPanel)</selected>
 						</control>
-						<control type="label" id="615">
+						<control type="radiobutton" id="612">
+							<width>860</width>
+							<height>40</height>
+							<font>Font_KeyboardKeys</font>
+							<label>"$LOCALIZE[31245]"</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+							<onclick>Skin.ToggleSetting(Landscape_Fanart)</onclick>
+							<selected>Skin.HasSetting(Landscape_Fanart)</selected>
+						</control>
+						<control type="label" id="613">
 							<width>860</width>
 							<height>45</height>
 							<font>font16caps</font>
@@ -2443,7 +2534,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 						</control>
-						<control type="radiobutton" id="612">
+						<control type="radiobutton" id="614">
 							<width>860</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
@@ -2455,7 +2546,7 @@
 							<onclick>Skin.ToggleSetting(no_Jukebox)</onclick>
 							<selected>Skin.HasSetting(no_Jukebox)</selected>
 						</control>
-						<control type="radiobutton" id="613">
+						<control type="radiobutton" id="615">
 							<width>860</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
@@ -2467,7 +2558,7 @@
 							<onclick>Skin.ToggleSetting(no_MusicShowcase)</onclick>
 							<selected>Skin.HasSetting(no_MusicShowcase)</selected>
 						</control>
-						<control type="radiobutton" id="614">
+						<control type="radiobutton" id="616">
 							<width>860</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
