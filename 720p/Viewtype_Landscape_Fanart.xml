@@ -208,7 +208,7 @@
 	</control>
 	
 	<control type="group">
-	<visible>Control.IsVisible(633) + Container.Content(episodes) + !IsEmpty(ListItem.Title)</visible>
+	<visible>Control.IsVisible(633) + Container.Content(episodes) + !IsEmpty(ListItem.Title) + !Skin.HasSetting(landscape_fanart_plot)</visible>
 	<include>Animation_LandscapeFade</include>
 		<control type="image">
 			<posx>458</posx>

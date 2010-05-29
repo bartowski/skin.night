@@ -304,6 +304,48 @@
 						<onclick>Skin.ToggleSetting(FanartNoVisualisation)</onclick>
 						<selected>Skin.HasSetting(FanartNoVisualisation)</selected>
 					</control>
+					<control type="radiobutton" id="114">
+						<width>860</width>
+						<height>40</height>
+						<font>Font_KeyboardTitle</font>
+						<textoffsetx>40</textoffsetx>
+						<label>$LOCALIZE[31041]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(DarkFullscreenMusicPlayback)</onclick>
+						<selected>Skin.HasSetting(DarkFullscreenMusicPlayback)</selected>
+						<visible>Skin.HasSetting(FanartNoVisualisation)</visible>
+					</control>
+					<control type="radiobutton" id="115">
+						<width>860</width>
+						<height>40</height>
+						<font>Font_KeyboardTitle</font>
+						<textoffsetx>40</textoffsetx>
+						<label>Use random music backdrops - Same ones used on Home</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(vis_music_backdrops)</onclick>
+						<selected>Skin.HasSetting(vis_music_backdrops)</selected>
+						<visible>!IsEmpty(Skin.String(CustomMusicFolder)) + Skin.HasSetting(FanartNoVisualisation)</visible>
+					</control>
+					<control type="radiobutton" id="116">
+						<width>860</width>
+						<height>40</height>
+						<font>Font_KeyboardTitle</font>
+						<textoffsetx>40</textoffsetx>
+						<label>Use random photo backdrops - Same ones used on Home</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(vis_photos_backdrops)</onclick>
+						<selected>Skin.HasSetting(vis_photos_backdrops)</selected>
+						<visible>!IsEmpty(Skin.String(CustomPicturesFolder)) + Skin.HasSetting(FanartNoVisualisation)</visible>
+					</control>
 					<control type="radiobutton" id="113">
 						<width>860</width>
 						<height>40</height>
@@ -316,18 +358,8 @@
 						<onclick>Skin.ToggleSetting(FullscreenJukebox)</onclick>
 						<selected>Skin.HasSetting(FullscreenJukebox)</selected>
 					</control>
-					<control type="radiobutton" id="114">
-						<width>860</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<label>$LOCALIZE[31041]</label>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-						<onclick>Skin.ToggleSetting(DarkFullscreenMusicPlayback)</onclick>
-						<selected>Skin.HasSetting(DarkFullscreenMusicPlayback)</selected>
-					</control>
+					
+					
 					<!--<control type="label" id="120">
 						<width>860</width>
 						<height>45</height>

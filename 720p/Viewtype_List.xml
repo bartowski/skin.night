@@ -303,7 +303,7 @@
 						<visible>Skin.HasSetting(3dland_jpg) + !Container.Content(episodes)</visible>
 					</control>
 					<control type="image">
-						<visible>Container.Content(episodes)</visible>
+						<visible>Container.Content(episodes) + !IsEmpty(ListItem.Title) + !Skin.HasSetting(3d_plot)</visible>
 						<posx>-150</posx>
 						<posy>86</posy>
 						<width>407</width>
@@ -390,7 +390,7 @@
 						<visible>!IsEmpty(ListItem.Title) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
 					</control>
 					<control type="textbox">
-						<visible>Container.Content(episodes)</visible>
+						<visible>Container.Content(episodes) + !Skin.HasSetting(3d_plot)</visible>
 						<posx>-140</posx>
 						<posy>90</posy>
 						<width>384</width>

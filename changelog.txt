@@ -1,3 +1,8 @@
+Update 5/28/2010
+  -added disable/re-enable plot for Fanart and 3d Landscape
+  -Change Music Visualization info to fade after 10 seconds
+  -added option for custom music or photos during fullscreen music playback
+
 Update 5/27/2010
   -Landscape and Landscape Fanart are now seperate views
   -fixed issue where if you didnt have a next song there was some label overlap

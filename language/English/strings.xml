@@ -52,7 +52,7 @@
 	<string id="31043">Set Options for TV Shows</string>
 	<string id="31044">Use Posters for TV Section</string>
 	<string id="31045">Use Banners for TV Section</string>
-	<string id="31046">Enable clearART</string>
+	<!--<string id="31046">Enable clearART</string>-->
 	<string id="31047">Disable Movies and TV Views</string>
 	
 <!--VIEWS -->	
@@ -149,6 +149,7 @@
 	<string id="31243">Cancel Timer</string>
 	<string id="31244">Horizontal Home Menu</string>
 	<string id="31245">Landscape Fanart</string>
+	<string id="31246">Show plot</string>
 	
 	
 	
