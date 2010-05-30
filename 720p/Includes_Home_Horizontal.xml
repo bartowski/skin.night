@@ -85,6 +85,12 @@
 					<onclick>XBMC.ActivateWindow(MyVideoFiles)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
 				</item>
+				<item id="11">
+					<icon>special://skin/media/backgrounds/playdisc.jpg</icon>						
+					<label>31018</label>
+					<onclick>XBMC.PlayDVD</onclick>
+					<visible>System.HasMediadvd</visible>
+				</item>
 				<item id="3">
 					<description>movies</description>
 					<label>$LOCALIZE[31013]</label>
@@ -122,8 +128,16 @@
 					<label>$LOCALIZE[31020]</label>
 					<icon>special://skin/media/backgrounds/scripts.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomScriptsFolder)]</thumb>	
-					<onclick>XBMC.ActivateWindow(20)</onclick>
+					<onclick>XBMC.ActivateWindow(scripts)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoScriptsButton)</visible>
+				</item>
+				<item id="18">
+					<description>favourites</description>
+					<label>$LOCALIZE[1036]</label>
+					<icon>special://skin/media/backgrounds/favourites.png</icon>
+					<thumb>$INFO[Skin.String(CustomfavouritesFolder)]</thumb>	
+					<onclick>XBMC.ActivateWindow(favourites)</onclick>
+					<visible>!Skin.HasSetting(HomeMenuNofavouritesButton)</visible>
 				</item>
 				<item id="14">
 					<description>weather</description>
@@ -147,12 +161,6 @@
 					<icon>special://skin/media/backgrounds/settings.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomSettingsFolder)]</thumb>			
 					<onclick>XBMC.ActivateWindow(settings)</onclick>
-				</item>
-				<item id="11">
-					<icon>special://skin/media/mainmenu/playdisc.png</icon>						
-					<label>31018</label>
-					<onclick>XBMC.PlayDVD</onclick>
-					<visible>System.HasMediadvd</visible>
 				</item>
 				<item id="12">
 					<include>BackgroundVarsSignOut</include>					

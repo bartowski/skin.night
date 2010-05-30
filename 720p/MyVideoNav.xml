@@ -158,7 +158,7 @@
 				<selected>Skin.HasSetting(landscape_jpg)</selected>
 				<visible>Control.IsVisible(52) + [Container.Content(tvshows) | Container.Content(seasons)]</visible>
 			</control>
-			<control type="togglebutton" id="30">
+			<!--<control type="togglebutton" id="30">
 				<description>Toggle MoviesFanart</description>
 				<include>WindowMenuButton</include>
 				<label>$LOCALIZE[24021] $LOCALIZE[207]</label>
@@ -166,7 +166,7 @@
 				<onclick>Skin.ToggleSetting(landscape_fanart_plot)</onclick>
 				<selected>Skin.HasSetting(landscape_fanart_plot)</selected>
 				<visible>Control.IsVisible(633) + Container.Content(episodes)</visible>
-			</control>
+			</control>-->
 			<control type="togglebutton" id="24">
 				<description>Toggle MoviesFanart</description>
 				<include>WindowMenuButton</include>
@@ -224,7 +224,7 @@
 			<control type="button" id="46">
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[31089]</label>
-				<visible>[Control.IsVisible(55) + Container.Content(movies)] | [Control.IsVisible(633) + Container.Content(episodes)]</visible>		
+				<visible>[Control.IsVisible(55) + Container.Content(movies)]</visible>		
 			</control>
 			<!--<control type="button" id="950">
 				<include>WindowMenuLabel</include>

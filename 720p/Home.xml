@@ -151,6 +151,12 @@
 					<onclick>XBMC.ActivateWindow(MyVideoFiles)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
 				</item>
+				<item id="11">
+					<icon>special://skin/media/backgrounds/playdisc.jpg</icon>						
+					<label>31018</label>
+					<onclick>XBMC.PlayDVD</onclick>
+					<visible>System.HasMediadvd</visible>
+				</item>
 				<item id="3">
 					<description>movies</description>
 					<label>$LOCALIZE[31013]</label>
@@ -221,12 +227,6 @@
 					<icon>special://skin/media/backgrounds/settings.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomSettingsFolder)]</thumb>			
 					<onclick>XBMC.ActivateWindow(settings)</onclick>
-				</item>
-				<item id="11">
-					<icon>special://skin/media/mainmenu/playdisc.png</icon>						
-					<label>31018</label>
-					<onclick>XBMC.PlayDVD</onclick>
-					<visible>System.HasMediadvd</visible>
 				</item>
 				<item id="12">
 					<include>BackgroundVarsSignOut</include>					
@@ -471,14 +471,15 @@
 					</control>
 					<control type="button" id="90144">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>130</label>
-						<onclick>ActivateWindow(SystemInfo)</onclick>
+						<label>$LOCALIZE[20126]</label>
+						<onclick>System.LogOff</onclick>
+						<include>Home_MainMenuLabel</include>
+						<visible>System.HasLoginScreen</visible>
 					</control>
 					<control type="button" id="90145">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>$LOCALIZE[31082]</label>
-						<onclick>ActivateWindow(Credits)</onclick>
-						<visible>False</visible>
+						<label>130</label>
+						<onclick>ActivateWindow(SystemInfo)</onclick>
 					</control>
 				</control>
 				<control type="grouplist" id="9015">
@@ -671,6 +672,24 @@
 						<label>Shutdown</label>
 						<onclick>ShutDown()</onclick>
 					</control>-->
+				</control>
+				<control type="grouplist" id="9020">
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>600</width>
+					<height>465</height>
+					<onleft>300</onleft>
+					<onright>Control.SetFocus(8001,0)</onright>
+					<onup>9019</onup>
+					<ondown>9019</ondown>
+					<itemgap>0</itemgap>
+					<visible>Container(300).HasFocus(11)</visible>
+					<control type="button" id="91185">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$LOCALIZE[13391]</label>
+						<onclick>EjectTray()</onclick>
+						<visible>System.HasMediaDVD</visible>
+					</control>
 				</control>
 			</control>	
 		

@@ -1,3 +1,9 @@
+Update 5/29/2010
+  -Play Disc now shows between Videos and Movies on Home
+  -Added submenu Eject Disc/Tray under Play Disc
+  -Added submenu logoff under Settings
+  -In Fanart plot now triggered by pressing down
+
 Update 5/28/2010
   -added disable/re-enable plot for Fanart and 3d Landscape
   -Change Music Visualization info to fade after 10 seconds
