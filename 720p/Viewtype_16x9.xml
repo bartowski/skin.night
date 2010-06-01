@@ -16,7 +16,7 @@
 			<onright>59</onright>
 			<onup>7000</onup>
 			<ondown>XBMC.PlayMedia($INFO[ListItem.Trailer],1,noresume)</ondown>
-			<viewtype label="16x9">list</viewtype>
+			<viewtype label="$LOCALIZE[31048]">list</viewtype>
 			<orientation>horizontal</orientation>
 			<focusposition>1</focusposition>
 			<scrolltime>400</scrolltime>
@@ -286,7 +286,7 @@
 				<aligny>center</aligny>
 				<font>Font_TVShow</font>
 				<textcolor>ffffffff</textcolor>
-				<label>[B][COLOR=ff67ffff]$LOCALIZE[31071]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Director][/COLOR]</label>
+				<label>[B][COLOR=ff67ffff]$LOCALIZE[20339]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Director][/COLOR]</label>
 			</control>
 			<control type="label">
 				<description>Writer</description>
@@ -297,7 +297,7 @@
 				<aligny>center</aligny>
 				<font>Font_TVShow</font>
 				<textcolor>ffffffff</textcolor>
-				<label>[B][COLOR=ff67ffff]$LOCALIZE[31223]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Writer][/COLOR]</label>
+				<label>[B][COLOR=ff67ffff]$LOCALIZE[20417]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Writer][/COLOR]</label>
 			</control>
 			<control type="label">
 				<description>Genre</description>
@@ -308,7 +308,7 @@
 				<aligny>center</aligny>
 				<font>Font_TVShow</font>
 				<textcolor>ffffffff</textcolor>
-				<label>[B][COLOR=ff67ffff]$LOCALIZE[31072]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Genre][/COLOR]</label>
+				<label>[B][COLOR=ff67ffff]$LOCALIZE[515]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Genre][/COLOR]</label>
 			</control>
 			<control type="label">
 				<description>Duration</description>
@@ -319,7 +319,7 @@
 				<aligny>center</aligny>
 				<font>Font_TVShow</font>
 				<textcolor>ffffffff</textcolor>
-				<label>[B][COLOR=ff67ffff]$LOCALIZE[31224]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Duration][/COLOR]</label>
+				<label>[B][COLOR=ff67ffff]$LOCALIZE[180]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Duration][/COLOR]</label>
 			</control>
 			<control type="label">
 				<description>Rating</description>
@@ -330,7 +330,7 @@
 				<aligny>center</aligny>
 				<font>Font_TVShow</font>
 				<textcolor>ffffffff</textcolor>
-				<label>[B][COLOR=ff67ffff]$LOCALIZE[31225]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.rating][/COLOR]</label>
+				<label>[B][COLOR=ff67ffff]$LOCALIZE[368]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.rating][/COLOR]</label>
 			</control>
 			<control type="label">
 				<description>Rated</description>
@@ -379,7 +379,7 @@
 					<aligny>center</aligny>
 					<font>Font_TVShow</font>
 					<textcolor>ff67ffff</textcolor>
-					<label>[B][COLOR=ff67ffff]$LOCALIZE[31068]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Season][/COLOR]</label>
+					<label>[B][COLOR=ff67ffff]$LOCALIZE[20373]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Season][/COLOR]</label>
 					<visible>Container.Content(episodes)</visible>
 				</control>
 				<control type="label">
@@ -391,7 +391,7 @@
 					<aligny>center</aligny>
 					<font>Font_TVShow</font>
 					<textcolor>ff67ffff</textcolor>
-					<label>[B][COLOR=ff67ffff]$LOCALIZE[31227]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Episode][/COLOR]</label>
+					<label>[B][COLOR=ff67ffff]$LOCALIZE[20360]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Episode][/COLOR]</label>
 					<visible>Container.Content(tvshows)</visible>
 				</control>
 				<control type="label">
@@ -403,7 +403,7 @@
 					<aligny>center</aligny>
 					<font>Font_TVShow</font>
 					<textcolor>ff67ffff</textcolor>
-					<label>[B][COLOR=ff67ffff]$LOCALIZE[31050]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Episode][/COLOR]</label>
+					<label>[B][COLOR=ff67ffff]$LOCALIZE[20359]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Episode][/COLOR]</label>
 					<visible>Container.Content(episodes)</visible>
 				</control>
 				<control type="label">
@@ -414,7 +414,7 @@
 					<height>50</height>
 					<aligny>center</aligny>
 					<font>Font_TVShow</font>
-					<label>[B][COLOR=ff67ffff]$LOCALIZE[31072]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Genre][/COLOR]</label>
+					<label>[B][COLOR=ff67ffff]$LOCALIZE[515]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Genre][/COLOR]</label>
 					<visible>Container.Content(tvshows)</visible>
 				</control>
 				<control type="label">
@@ -426,7 +426,7 @@
 					<aligny>center</aligny>
 					<font>Font_TVShow</font>
 					<textcolor>ff67ffff</textcolor>
-					<label>[B][COLOR=ff67ffff]$LOCALIZE[31228]:[/B] [COLOR=ffffffff]$INFO[ListItem.Rating][/COLOR]</label>
+					<label>[B][COLOR=ff67ffff]$LOCALIZE[563]:[/B] [COLOR=ffffffff]$INFO[ListItem.Rating][/COLOR]</label>
 					<visible>Container.Content(episodes)</visible>
 				</control>
 			</control>

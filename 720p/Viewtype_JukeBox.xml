@@ -266,7 +266,7 @@
 		<align>center</align>
 		<font>Font_Bartowski_Digital_Clock</font>
 		<textcolor>ff67ffff</textcolor>
-		<label>$LOCALIZE[31083]</label>
+		<label>$LOCALIZE[133]</label>
 		<visible>Control.IsVisible(50) + Container.Content(artists) + !Container.Content(songs) + !Container.Content(albums)</visible>
 	</control>
 	<control type="label">
@@ -278,7 +278,7 @@
 		<align>center</align>
 		<font>Font_Bartowski_Digital_Clock</font>
 		<textcolor>ff67ffff</textcolor>
-		<label>$LOCALIZE[31084]</label>
+		<label>$LOCALIZE[132]</label>
 		<visible>Control.IsVisible(50) + !Container.Content(songs) + Container.Content(albums)</visible>
 	</control>
 	<control type="label">
@@ -290,7 +290,7 @@
 		<align>center</align>
 		<font>Font_Bartowski_Digital_Clock</font>
 		<textcolor>ff67ffff</textcolor>
-		<label>$LOCALIZE[31085]</label>
+		<label>$LOCALIZE[134]</label>
 		<visible>Control.IsVisible(50) + Container.Content(songs) + !Container.Content(albums)</visible>
 	</control>
 	<control type="label">

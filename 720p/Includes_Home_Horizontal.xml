@@ -364,14 +364,15 @@
 					</control>
 					<control type="button" id="90144">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
-						<label>130</label>
-						<onclick>ActivateWindow(SystemInfo)</onclick>
+						<label>$LOCALIZE[20126]</label>
+						<onclick>System.LogOff</onclick>
+						<include>Home_MainMenuLabel</include>
+						<visible>System.HasLoginScreen</visible>
 					</control>
 					<control type="button" id="90145">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
-						<label>$LOCALIZE[31082]</label>
-						<onclick>ActivateWindow(Credits)</onclick>
-						<visible>False</visible>
+						<label>130</label>
+						<onclick>ActivateWindow(SystemInfo)</onclick>
 					</control>
 				</control>
 				<control type="grouplist" id="9015">
@@ -445,7 +446,7 @@
 					<onleft>9017</onleft>
 					<onright>9017</onright>
 					<onup>300</onup>
-					<ondown>Control.SetFocus(8001,0)</ondown>
+					<ondown>Control.SetFocus(8002,0)</ondown>
 					<itemgap>0</itemgap>
 					<visible>Container(300).HasFocus(1)</visible>
 					<control type="button" id="90171">
@@ -496,8 +497,8 @@
 					<width>1280</width>
 					<height>465</height>
 					<orientation>horizontal</orientation>
-					<onleft>9017</onleft>
-					<onright>9017</onright>
+					<onleft>9018</onleft>
+					<onright>9018</onright>
 					<onup>300</onup>
 					<ondown>Control.SetFocus(8001,0)</ondown>
 					<itemgap>0</itemgap>
@@ -524,8 +525,8 @@
 					<width>1280</width>
 					<height>465</height>
 					<orientation>horizontal</orientation>
-					<onleft>9017</onleft>
-					<onright>9017</onright>
+					<onleft>9019</onleft>
+					<onright>9019</onright>
 					<onup>300</onup>
 					<ondown>Control.SetFocus(8001,0)</ondown>
 					<itemgap>0</itemgap>
@@ -539,6 +540,28 @@
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
 						<label>$LOCALIZE[31243]</label>
 						<onclick>CancelAlarm(ShutdownTimer)</onclick>
+						<visible>System.HasAlarm(ShutdownTimer)</visible>
+					</control>
+					<control type="button" id="90186">
+						<include>ButtonHomeSubCommonValues_Horizontal</include>
+						<label>Suspend</label>
+						<onclick>Dialog.Close(ShutdownMenu,yes)</onclick>
+						<onclick>Suspend()</onclick>
+					</control>
+					<control type="button" id="90187">
+						<include>ButtonHomeSubCommonValues_Horizontal</include>
+						<label>Hibernate</label>
+						<onclick>Hibernate()</onclick>
+					</control>
+					<control type="button" id="90188">
+						<include>ButtonHomeSubCommonValues_Horizontal</include>
+						<label>Restart XBMC</label>
+						<onclick>RestartApp()</onclick>
+					</control>
+					<control type="button" id="90189">
+						<include>ButtonHomeSubCommonValues_Horizontal</include>
+						<label>Exit XBMC</label>
+						<onclick>XBMC.Quit()</onclick>
 					</control>
 				</control>
 			</control>	

@@ -48,11 +48,11 @@
 		<focusedcolor>mainblue</focusedcolor>
 	</include>
 	<include name="ButtonHomeSubCommonValues_Horizontal">
-		<width min="29" max="300">auto</width>
+		<width min="100" max="320">auto</width>
 		<height>56</height>
 		<align>center</align>
 		<font>Font_Bartowski_Main_SubMenu</font>
-		<textcolor>38b8b7b7</textcolor>
+		<textcolor>ffb8b7b7</textcolor>
 		<focusedcolor>mainblue</focusedcolor>
 	</include>
 	
@@ -127,29 +127,28 @@
 		</control>
 	</include>
 	
-	<include name="Time_Global">
+	 <include name="Global_Time_TopRight">
 		<control type="group">
 			<posx>1260</posx>
 			<posy>10</posy>
 			<include>Animation_BackdropFade</include>
-			<visible>!Skin.HasSetting(no_clock) + [Window.IsActive(Home) | [ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews)] | Window.IsActive(106) | Window.IsActive(29)]</visible>
+			<visible>Skin.HasSetting(library_global_clock) + Window.IsActive(25) + ![Control.IsVisible(598) | Control.IsVisible(57) | Control.IsVisible(592) | Control.IsVisible(56) | Control.IsVisible(51) | Control.IsVisible(55) | Control.IsVisible(58)]  | [Control.IsVisible(58) + Skin.HasSetting(ShowcaseFanart)]</visible>
 				<control type="image"> 
-					<posx>-280</posx>
+					<posx>-380</posx>
 					<posy>-10</posy>   
-					<width>357</width>     
-					<height>318</height> 
-					<texture>common/time_gradient_back.png</texture>
-					<colordiffuse>ff15efd9</colordiffuse>
+					<width>413</width>     
+					<height>215</height> 
+					<texture>common/library_time_gradient.png</texture>
 				</control>
 				<control type="label">
 					<width>300</width>
-					<font>Font_Time</font>
+					<font>Font_Time_Global</font>
 					<textcolor>mainblue</textcolor>
 					<info>System.Time(hh:mm xx)</info>
 					<align>right</align>
 				</control>
 				<control type="label">
-					<posy>40</posy>
+					<posy>24</posy>
 					<width>300</width>
 					<font>Font_Date</font>
 					<textcolor>white</textcolor>
@@ -158,7 +157,67 @@
 				</control>
 		</control>
 	</include>
-
+	<include name="Global_Time_LowerRight">
+		<control type="group">
+			<posx>1260</posx>
+			<posy>670</posy>
+			<include>Animation_BackdropFade</include>
+			<visible>Skin.HasSetting(library_global_clock) + Window.IsActive(25) + [Control.IsVisible(58) | Control.IsVisible(56)]</visible>
+				<control type="image"> 
+					<posx>-380</posx>
+					<posy>-160</posy>   
+					<width>413</width>     
+					<height>215</height> 
+					<texture>common/library_time_gradient_lowerright.png</texture>
+				</control>
+				<control type="label">
+					<width>300</width>
+					<font>Font_Time_Global</font>
+					<textcolor>mainblue</textcolor>
+					<info>System.Time(hh:mm xx)</info>
+					<align>right</align>
+				</control>
+				<control type="label">
+					<posy>24</posy>
+					<width>300</width>
+					<font>Font_Date</font>
+					<textcolor>white</textcolor>
+					<info>System.Date</info>
+					<align>right</align>
+				</control>
+		</control>
+	</include>
+	<include name="Global_Time_LowerLeft">
+		<control type="group">
+			<posx>10</posx>
+			<posy>670</posy>
+			<include>Animation_BackdropFade</include>
+			<visible>Skin.HasSetting(library_global_clock) + Window.IsActive(25) + [Control.IsVisible(598) | Control.IsVisible(57) | Control.IsVisible(592) | Control.IsVisible(51)]</visible>
+				<control type="image"> 
+					<posx>-10</posx>
+					<posy>-150</posy>   
+					<width>393</width>     
+					<height>206</height> 
+					<texture>common/library_time_gradient_lowerleft.png</texture>
+				</control>
+				<control type="label">
+					<width>300</width>
+					<font>Font_Time_Global</font>
+					<textcolor>mainblue</textcolor>
+					<info>System.Time(hh:mm xx)</info>
+					<align>left</align>
+				</control>
+				<control type="label">
+					<posy>24</posy>
+					<width>300</width>
+					<font>Font_Date</font>
+					<textcolor>white</textcolor>
+					<info>System.Date</info>
+					<align>left</align>
+				</control>
+		</control>
+	</include>
+	
 	<include name="Global_HeadingSectionVars">
 		<width>960</width>
 		<font>Font_Bartowski_Movies_Title</font>

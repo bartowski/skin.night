@@ -595,7 +595,7 @@
 			<posy>60</posy>
 			<width>500</width>
 			<height>89</height>
-			<label>[B][COLOR=ListTrackF]$LOCALIZE[31072]:[/COLOR] [B][COLOR=white]$INFO[ListItem.Genre][/B][/COLOR]</label>
+			<label>[B][COLOR=ListTrackF]$LOCALIZE[515]:[/COLOR] [B][COLOR=white]$INFO[ListItem.Genre][/B][/COLOR]</label>
 			<align>center</align>
 			<font>Font_TVShow</font>
 			<include>Animation_Viewtype_Files_RightArea</include>
@@ -615,7 +615,7 @@
 				<height>89</height>
 				<font>Font_Bartowski_Title_TVShow</font>
 				<textcolor>Text-Filemode</textcolor>
-				<label>[B]$LOCALIZE[31068] $INFO[ListItem.Season]     $LOCALIZE[31069] $INFO[ListItem.Episode][/B]</label>
+				<label>[B]$LOCALIZE[20373] $INFO[ListItem.Season]     $LOCALIZE[20359] $INFO[ListItem.Episode][/B]</label>
 			</control>
 			<control type="label">
 				<visible>Container.Content(episodes)</visible>
@@ -633,7 +633,7 @@
 				<width>630</width>
 				<height>89</height>
 				<font>Font_TVShow</font>
-				<label>[COLOR=ListTrackF][B]$LOCALIZE[31225][/COLOR] [COLOR=white]$INFO[ListItem.Rating][/COLOR][/B]      [COLOR=ListTrackF][B]$LOCALIZE[31226][/COLOR] [COLOR=white]$INFO[ListItem.mpaa][/COLOR][/B]</label>
+				<label>[COLOR=ListTrackF][B]$LOCALIZE[368][/COLOR] [COLOR=white]$INFO[ListItem.Rating][/COLOR][/B]      [COLOR=ListTrackF][B]$LOCALIZE[31226][/COLOR] [COLOR=white]$INFO[ListItem.mpaa][/COLOR][/B]</label>
 			</control>
 			<control type="textbox"><!-- Plot TV -->
 				<visible>Container.Content(episodes) | Container.Content(tvshows)</visible>
@@ -678,11 +678,7 @@
 			<animation effect="slide" start="0,0" end="-500,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(60) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]">Conditional</animation>
 			<animation effect="slide" start="0,0" end="-530,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(60) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]">Conditional</animation>
 		</control>
-		<!--<control type="image">
-			<include>Dimensions_Fullscreen</include>
-			<texture>list/last-overlay.png</texture>
-			<visible>Control.IsVisible(55)</visible>
-		</control>-->
+		
 		
 	</include>
 </includes>

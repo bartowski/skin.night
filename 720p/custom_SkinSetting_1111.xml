@@ -5,7 +5,7 @@
 			<include>Dimensions_Fullscreen</include>
 			<width>1280</width>
 			<height>720</height>
-			<texture>special://skin/media/backdrops/curtains_diffuse.png</texture>
+			<texture>backdrops/curtains_diffuse.png</texture>
 			<aspectratio>scale</aspectratio>
 			<include>VisibleFadeEffect</include>
 		</control>
@@ -201,8 +201,19 @@
 						<onclick>Skin.ToggleSetting(no_clock)</onclick>
 						<selected>Skin.HasSetting(no_clock)</selected>
 					</control>
-					
 					<control type="radiobutton" id="102">
+						<width>860</width>
+						<height>40</height>
+						<font>Font_KeyboardKeys</font>
+						<label>$LOCALIZE[31247]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(library_global_clock)</onclick>
+						<selected>Skin.HasSetting(library_global_clock)</selected>
+					</control>
+					<control type="radiobutton" id="103">
 						<width>860</width>
 						<height>40</height>
 						<font>Font_KeyboardKeys</font>
@@ -214,7 +225,7 @@
 						<onclick>Skin.ToggleSetting(LockViews)</onclick>
 						<selected>Skin.HasSetting(LockViews)</selected>
 					</control>
-					<control type="radiobutton" id="103">
+					<control type="radiobutton" id="104">
 						<width>860</width>
 						<height>40</height>
 						<font>Font_KeyboardKeys</font>
@@ -226,7 +237,7 @@
 						<onclick>Skin.ToggleSetting(SubsScript_Enable)</onclick>
 						<selected>Skin.HasSetting(SubsScript_Enable)</selected>
 					</control>
-					<control type="radiobutton" id="104">
+					<control type="radiobutton" id="105">
 						<width>860</width>
 						<height>40</height>
 						<font>Font_KeyboardKeys</font>
@@ -240,7 +251,7 @@
 						<selected>Skin.HasSetting(SubsScript_Merge)</selected>
 						<visible>Skin.HasSetting(SubsScript_Enable)</visible>
 					</control>
-					<control type="button" id="105">
+					<control type="button" id="106">
 						<width>860</width>
 						<height>40</height>
 						<font>Font_KeyboardKeys</font>
@@ -255,7 +266,7 @@
 						<enable>Skin.HasSetting(SubsScript_Enable)</enable>
 						<visible>Skin.HasSetting(SubsScript_Enable) + !Skin.HasSetting(SubsScript_Merge)</visible>
 					</control>
-					<control type="button" id="106">
+					<control type="button" id="107">
 						<width>860</width>
 						<height>40</height>
 						<font>Font_KeyboardKeys</font>
@@ -270,7 +281,7 @@
 						<enable>Skin.HasSetting(SubsScript_Enable)</enable>
 						<visible>Skin.HasSetting(SubsScript_Enable) + Skin.HasSetting(SubsScript_Merge)</visible>
 					</control>
-					<control type="radiobutton" id="107">
+					<control type="radiobutton" id="108">
 						<width>860</width>
 						<height>40</height>
 						<font>Font_KeyboardKeys</font>
@@ -282,7 +293,7 @@
 						<onclick>Skin.ToggleSetting(hometheater)</onclick>
 						<selected>Skin.HasSetting(hometheater)</selected>
 					</control>
-					<control type="label" id="110">
+					<control type="label" id="109">
 						<width>860</width>
 						<height>45</height>
 						<font>font16caps</font>
@@ -496,6 +507,21 @@
 						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 						<visible>Skin.HasSetting(homepageHideRecentlyAdded)</visible>
 					</control>
+					<!--<control type="radiobutton" id="221">
+						<description>Remove Unwatched Recently added info</description>
+						<width>860</width>
+						<height>40</height>
+						<font>Font_KeyboardKeys</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<textoffsetx>50</textoffsetx>
+						<label>Remove Unwatched Items</label>
+						<onclick>Skin.ToggleSetting(RecentlyUnwatched)</onclick>
+ 					    <selected>Skin.HasSetting(RecentlyUnwatched)</selected>
+						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+						<visible>Skin.HasSetting(homepageHideRecentlyAdded)</visible>
+					</control>-->
 					<!--Weather Widget-->
 						<control type="radiobutton" id="204">
 						<description>Show Weather Widget</description>
@@ -758,7 +784,7 @@
 						<focusedcolor>white</focusedcolor>
 						<label>$LOCALIZE[31111] - $LOCALIZE[0]</label>
 						<onclick>Skin.ToggleSetting(HomeMenuNoProgramsButton)</onclick>
-						<selected>Skin.HasSetting(HomeMenuNoProgramsButton)</selected>
+						<selected>!Skin.HasSetting(HomeMenuNoProgramsButton)</selected>
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
 						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 					</control>
@@ -771,7 +797,7 @@
 						<focusedcolor>white</focusedcolor>
 						<label>$LOCALIZE[31111] - $LOCALIZE[247]</label>
 						<onclick>Skin.ToggleSetting(HomeMenuNoScriptsButton)</onclick>
-						<selected>Skin.HasSetting(HomeMenuNoScriptsButton)</selected>
+						<selected>!Skin.HasSetting(HomeMenuNoScriptsButton)</selected>
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
 						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 					</control>
@@ -784,7 +810,7 @@
 						<focusedcolor>white</focusedcolor>
 						<label>$LOCALIZE[31111] - $LOCALIZE[1036]</label>
 						<onclick>Skin.ToggleSetting(HomeMenuNofavouritesButton)</onclick>
-						<selected>Skin.HasSetting(HomeMenuNofavouritesButton)</selected>
+						<selected>!Skin.HasSetting(HomeMenuNofavouritesButton)</selected>
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
 						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 					</control>
@@ -2385,7 +2411,6 @@
 							<onclick>Skin.ToggleSetting(tvoverlays)</onclick>
 							<selected>Skin.HasSetting(tvoverlays)</selected>
 						</control>
-						
 					</control>
 				</control>
 				<control type="group"><!--mcborzu Disable Views-->
@@ -2553,8 +2578,8 @@
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
 							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-							<onclick>Skin.ToggleSetting(Landscape_Fanart)</onclick>
-							<selected>Skin.HasSetting(Landscape_Fanart)</selected>
+							<onclick>Skin.ToggleSetting(no_Landscape_Fanart)</onclick>
+							<selected>Skin.HasSetting(no_Landscape_Fanart)</selected>
 						</control>
 						<control type="label" id="613">
 							<width>860</width>

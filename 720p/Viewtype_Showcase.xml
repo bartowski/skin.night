@@ -41,6 +41,7 @@
 			<shadowcolor>678b8b8b</shadowcolor>
 			<textcolor>678b8b8b</textcolor>
 			<label>$LOCALIZE[31235]</label>
+			<include>Animation_Bartowski_Context_Zoom</include>
 			<include>Animation_HiddenByInfo</include>
 		</control>
 		
@@ -51,7 +52,7 @@
 			<posy>0</posy>
 			<width>436</width>
 			<height>244</height>
-			<texture diffuse="Showcase/showcase-diffuse.png" fallback="special://skin/media/backgrounds/missing.jpg">$INFO[Container(58).listitem.property(fanart_image)]</texture>
+			<texture diffuse="Showcase/showcase-diffuse.png" fallback="backgrounds/missing.jpg">$INFO[Container(58).listitem.property(fanart_image)]</texture>
 			<fadetime>400</fadetime>
 			<aspectratio>stretch</aspectratio>
 			<include>Animation_PosterInfoSlide</include>					
@@ -337,7 +338,7 @@ MOVIE SECTION
 					<aligny>center</aligny>
 					<font>Font_Bartowski_Showcase_Right_Main</font>
 					<textcolor>ff15efd9</textcolor>
-					<label>$LOCALIZE[31071]</label>
+					<label>$LOCALIZE[20339]</label>
 				</control>
 				<control type="label"><!--Director-->
 					<posx>0</posx>
@@ -357,7 +358,7 @@ MOVIE SECTION
 					<aligny>center</aligny>
 					<font>Font_Bartowski_Showcase_Right_Main</font>
 					<textcolor>ff15efd9</textcolor>
-					<label>$LOCALIZE[31223]</label>
+					<label>$LOCALIZE[20417]</label>
 				</control>
 				<control type="label"><!--Writer-->
 					<posx>0</posx>
@@ -377,7 +378,7 @@ MOVIE SECTION
 					<aligny>center</aligny>
 					<font>Font_Bartowski_Showcase_Right_Main</font>
 					<textcolor>ff15efd9</textcolor>
-					<label>$LOCALIZE[31072]</label>
+					<label>$LOCALIZE[515]</label>
 				</control>
 				<control type="label"><!--Genre-->
 					<posx>0</posx>
@@ -397,7 +398,7 @@ MOVIE SECTION
 					<aligny>center</aligny>
 					<font>Font_Bartowski_Showcase_Right_Main</font>
 					<textcolor>ff15efd9</textcolor>
-					<label>$LOCALIZE[31228]</label>
+					<label>$LOCALIZE[563]</label>
 				</control>
 				<control type="label"><!--Rating-->
 					<posx>0</posx>
@@ -417,7 +418,7 @@ MOVIE SECTION
 					<aligny>center</aligny>
 					<font>Font_Bartowski_Showcase_Right_Main</font>
 					<textcolor>ff15efd9</textcolor>
-					<label>$LOCALIZE[31239]</label>
+					<label>$LOCALIZE[572]</label>
 				</control>
 				<control type="label"><!--Rating-->
 					<posx>0</posx>

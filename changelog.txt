@@ -1,3 +1,11 @@
+Update 5/31/2010
+  -Started fixing some of my strings, now the library views should translate a little better
+  -Changed up the behavior of Recently added, and now has fanart support...Thx psike/Ronie
+  -Believe I fixed problem of the TV view "Fanart" being disabled by default
+  -Now home menu items "Scripts, Programs, Favourites" are disabled by default until enabled
+  -Horizontal Home now has all submenus, and lowered font size a little
+  -Added Global clock option. Setings->Skin->General Options
+
 Update 5/29/2010
   -Play Disc now shows between Videos and Movies on Home
   -Added submenu Eject Disc/Tray under Play Disc

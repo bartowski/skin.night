@@ -106,7 +106,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>Font_Music_Jukebox</font>
-				<label>[COLOR=grey]Author - [/COLOR] $INFO[ListItem.Property(Addon.Creator)]</label>
+				<label>[COLOR=grey]$LOCALIZE[21863] - [/COLOR] $INFO[ListItem.Property(Addon.Creator)]</label>
 				<textcolor>white</textcolor>
 				<scroll>true</scroll>
 			</control>

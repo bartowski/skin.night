@@ -79,11 +79,11 @@
 		<include>Music_Global_Showcase</include>
 		<include>Music_Global_LowerRight</include>
 		
-		<include>7000_has_focus</include>
-		<control type="group">
-			<include>Global_Time</include>
-		</control>
+		<include>Global_Time_TopRight</include>
+		<include>Global_Time_LowerLeft</include>
+		<include>Global_Time_LowerRight</include>
 		
+		<include>7000_has_focus</include>
 		
 		<control type="image"><!-- Floor -->
 			<posx>0</posx>
@@ -272,6 +272,6 @@
 		<include>Global_RSS</include>-->
 
 		<include>Object_DebugGrid</include>
-		<include>Global_Time2</include>
+		
 	</controls>	
 </window>

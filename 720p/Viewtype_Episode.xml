@@ -15,7 +15,7 @@
 			<aspectratio>scale</aspectratio>
 		</control>
 		<control type="fixedlist" id="51">
-			<viewtype label="Episode">list</viewtype>
+			<viewtype label="$LOCALIZE[20359]">list</viewtype>
 			<posx>1010</posx>
 			<posy>0</posy>
 			<width>933</width>
@@ -63,7 +63,7 @@
 					<posx>130</posx>
 					<posy>112</posy>
 					<width>235</width>
-					<label>[B]$LOCALIZE[31050] $INFO[ListItem.Episode][/B]</label>
+					<label>[B]$LOCALIZE[20359] $INFO[ListItem.Episode][/B]</label>
 					<align>center</align>
 					<font>Font_Bartowski_Extras_Pause</font>
 					<textcolor>ffffffff</textcolor>
@@ -125,7 +125,7 @@
 					<posx>130</posx>
 					<posy>112</posy>
 					<width>235</width>
-					<label>[B]$LOCALIZE[31050] $INFO[ListItem.Episode][/B]</label>
+					<label>[B]$LOCALIZE[20359] $INFO[ListItem.Episode][/B]</label>
 					<align>center</align>
 					<font>Font_Bartowski_Extras_Pause</font>
 					<textcolor>ffffffff</textcolor>
@@ -262,7 +262,7 @@
 				<align>center</align>
 				<font>Font_TVShow</font>
 				<textcolor>ffffffff</textcolor>
-				<label>$LOCALIZE[31068] $INFO[ListItem.Season]/$LOCALIZE[31050] $INFO[ListItem.Episode]</label>
+				<label>$LOCALIZE[20373] $INFO[ListItem.Season]/$LOCALIZE[20359] $INFO[ListItem.Episode]</label>
 			</control>
 			<control type="label"><!-- Episode aired -->
 				<posx>0</posx>

@@ -493,7 +493,7 @@
 				<height>89</height>
 				<font>Font_Bartowski_Movies_Duration</font>
 				<textcolor>white</textcolor>
-				<label>[B]$LOCALIZE[31068] $INFO[ListItem.season][/B]</label>
+				<label>[B]$LOCALIZE[20373] $INFO[ListItem.season][/B]</label>
 			</control>
 			<control type="label">
 				<visible>![Container.Content(seasons) | Container.Content(episodes)]</visible>
@@ -502,7 +502,7 @@
 				<width>630</width>
 				<height>89</height>
 				<font>Font_TVShow</font>
-				<label>[B][COLOR=ListTrackF]$LOCALIZE[31072][/COLOR] [B][COLOR=white]$INFO[ListItem.Genre][/B][/COLOR]</label>
+				<label>[B][COLOR=ListTrackF]$LOCALIZE[515][/COLOR] [B][COLOR=white]$INFO[ListItem.Genre][/B][/COLOR]</label>
 			</control>
 			<control type="label">
 				<visible>![Container.Content(seasons) | Container.Content(episodes)]</visible>
@@ -520,7 +520,7 @@
 				<width>630</width>
 				<height>89</height>
 				<font>Font_TVShow</font>
-				<label>[COLOR=ListTrackF][B]$LOCALIZE[31225][/COLOR] [COLOR=white]$INFO[ListItem.Rating][/COLOR][/B]      [COLOR=ListTrackF][B]$LOCALIZE[31226][/COLOR] [COLOR=white]$INFO[ListItem.mpaa][/COLOR][/B]</label>
+				<label>[COLOR=ListTrackF][B]$LOCALIZE[368][/COLOR] [COLOR=white]$INFO[ListItem.Rating][/COLOR][/B]      [COLOR=ListTrackF][B]$LOCALIZE[31226][/COLOR] [COLOR=white]$INFO[ListItem.mpaa][/COLOR][/B]</label>
 			</control>
 		</control>
 		<control type="group">
@@ -533,7 +533,7 @@
 				<width>630</width>
 				<height>89</height>
 				<font>Font_TVShow</font>
-				<label>[B][COLOR=ListTrackF]$LOCALIZE[31072][/COLOR] [B][COLOR=white]$INFO[ListItem.Genre][/B][/COLOR]</label>
+				<label>[B][COLOR=ListTrackF]$LOCALIZE[515][/COLOR] [B][COLOR=white]$INFO[ListItem.Genre][/B][/COLOR]</label>
 				<include>Animation_HiddenByInfo</include>
 			</control>
 			<control type="label">
@@ -542,7 +542,7 @@
 				<width>630</width>
 				<height>89</height>
 				<font>Font_TVShow</font>
-				<label>[COLOR=ListTrackF][B]$LOCALIZE[31236][/COLOR] [COLOR=white]$INFO[ListItem.Property(releasedate)][/COLOR][/B]</label>
+				<label>[COLOR=ListTrackF][B]$LOCALIZE[172][/COLOR] [COLOR=white]$INFO[ListItem.Property(releasedate)][/COLOR][/B]</label>
 				<include>Animation_HiddenByInfo</include>
 			</control>
 			<control type="label">

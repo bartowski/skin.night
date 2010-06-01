@@ -33,7 +33,7 @@
 			<preloaditems>2</preloaditems>
 			<include>Animation_Viewtype_Landscape_Fanart_FocusArea</include>
 			<include>Animation_HiddenByInfo</include>
-			<visible>!Skin.HasSetting(Landscape_Fanart) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+			<visible>!Skin.HasSetting(no_Landscape_Fanart) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 			<itemlayout width="250" height="225">
 				<control type="largeimage">
 					<visible>Container.Content(tvshows)</visible>
@@ -66,7 +66,7 @@
 					<align>center</align>
 					<font>Font_MainMenuLabel</font>
 					<textcolor>ListTrackF</textcolor>
-					<label>[B]$LOCALIZE[31050] $INFO[ListItem.Episode][/B]</label>
+					<label>[B]$LOCALIZE[20359] $INFO[ListItem.Episode][/B]</label>
 				</control>
 				<control type="label">
 					<visible>[Container.Content(episodes) + IsEmpty(ListItem.Title)] | [Container.Content(tvshows) + IsEmpty(ListItem.Title)]</visible>
@@ -132,7 +132,7 @@
 					<aligny>bottom</aligny>
 					<font>Font_MainMenuLabel</font>
 					<textcolor>ffffffff</textcolor>
-					<label>[B]$LOCALIZE[31050] $INFO[ListItem.Episode][/B]</label>
+					<label>[B]$LOCALIZE[20359] $INFO[ListItem.Episode][/B]</label>
 				</control>
 				<control type="label">
 					<visible>[Container.Content(episodes) + IsEmpty(ListItem.Title)] | [Container.Content(tvshows) + IsEmpty(ListItem.Title)]</visible>
