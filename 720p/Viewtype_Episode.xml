@@ -161,7 +161,7 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture>tv-episodes/episode-glow.png</texture>
-			<aspectratio>scale</aspectratio>
+			<aspectratio>stretch</aspectratio>
 			<include>Animation_BackdropFade</include>
 		</control>
 		
