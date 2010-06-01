@@ -12,7 +12,7 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture>tv-episodes/epi-background.png</texture>
-			<aspectratio>scale</aspectratio>
+			<aspectratio>stretch</aspectratio>
 		</control>
 		<control type="fixedlist" id="51">
 			<viewtype label="$LOCALIZE[20359]">list</viewtype>
@@ -298,7 +298,7 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture>tv-episodes/last-overlay.png</texture>
-			<aspectratio>scale</aspectratio>
+			<aspectratio>stretch</aspectratio>
 		</control>
 		<control type="textbox"><!-- Uncheck Cleartitle -->
 			<posx>10</posx>

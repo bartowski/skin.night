@@ -186,7 +186,7 @@
 						<posy>490</posy>
 						<width>300</width>
 						<height>168</height>
-						<texture background="true" diffuse="episodematte.png">$INFO[Container(8001).ListItem.Icon]</texture>
+						<texture background="true" diffuse="episodematte.png">$INFO[Container(8001).ListItem.ActualIcon]</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">scale</aspectratio>
 						<animation effect="zoom" start="70" end="100" center="auto" time="400" tween="cubic" easing="inout" condition="!Control.HasFocus(8001)">Conditional</animation>
@@ -197,7 +197,7 @@
 						<posy>490</posy>
 						<width>300</width>
 						<height>168</height>
-						<texture background="true" diffuse="episodematte.png">$INFO[Container(8001).ListItem.Icon]</texture>
+						<texture background="true" diffuse="episodematte.png">$INFO[Container(8001).ListItem.ActualIcon]</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">scale</aspectratio>
 						<animation effect="zoom" start="70" end="100" center="auto" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(8001)">Conditional</animation>
@@ -392,7 +392,7 @@
 				<posx>310r</posx>
 				<posy>250</posy>
 				<visible>Library.HasContent(Music)</visible>
-				<visible>Container(300).Hasfocus(1)</visible>
+				<visible>Skin.HasSetting(merge_version) + Container(300).Hasfocus(1)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="label">
 					<description>Title label</description>
