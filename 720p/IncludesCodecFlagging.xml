@@ -229,7 +229,7 @@
 		</control>
 		<control type="image">
 			<description>dtsma Image</description>
-			<width>45</width>
+			<width>90</width>
 			<height>33</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/dtsma.png</texture>
