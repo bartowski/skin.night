@@ -227,6 +227,14 @@
 			<aspectratio>keep</aspectratio>
 			<texture>$INFO[ListItem.AudioChannels,flagging/audio/,.png]</texture>
 		</control>
+		<control type="image">
+			<description>dtsma Image</description>
+			<width>45</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/audio/dtsma.png</texture>
+			<visible>substring(ListItem.AudioCodec,dtsma) + substring(ListItem.AudioChannels,8)</visible>
+		</control>
 	</include>
 	<include name="AspectCodecFlaggingConditions">
 		<control type="image">
