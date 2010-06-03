@@ -1,3 +1,9 @@
+Update 6/2/2010
+  -Added 3dBanner view with a fanart option
+  -Fixed some Music Fullscreen and Music Visualisation issues
+  -Added the logo downloading script under Movie/TV options, thx ppic!!
+  -changed the cycling of views, before Fanart was last now it's after Landscape. Now WallPanel after wall etc...
+
 Update 5/31/2010
   -Started fixing some of my strings, now the library views should translate a little better
   -Changed up the behavior of Recently added, and now has fanart support...Thx psike/Ronie

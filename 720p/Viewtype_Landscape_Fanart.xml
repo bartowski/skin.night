@@ -214,14 +214,14 @@
 			<onup>7000</onup>
 			<ondown>633</ondown>
 			<label></label>
-			<visible allowhiddenfocus="true">ControlGroup(8374).HasFocus</visible>
+			<visible allowhiddenfocus="true">ControlGroup(8374).HasFocus + Container.Content(episodes)</visible>
 		</control>
 	</control>
 	
 	<control type="group">
 	<include>Animation_LandscapeFade</include>
 	<animation effect="fade" start="0" end="100" time="400" delay="200" condition="ControlGroup(8374).HasFocus">Conditional</animation>
-	<visible>ControlGroup(8374).HasFocus</visible>
+	<visible>ControlGroup(8374).HasFocus + Container.Content(episodes)</visible>
 		<control type="image">
 			<posx>458</posx>
 			<posy>426</posy>

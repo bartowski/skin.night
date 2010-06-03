@@ -21,12 +21,6 @@
 			<colordiffuse>FavListPanel</colordiffuse>
 		</control>
 
-		<control type="label">
-			<include>DialogID</include>
-			<label>DialogScriptInfo.xml</label>
-			<visible>Skin.HasSetting(debugmode)</visible>
-		</control>
-
 		<control type="textbox" id="5">
 			<description>Textarea</description>
 			<posx>10</posx>

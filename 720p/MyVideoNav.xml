@@ -1,9 +1,9 @@
 <!--Alaska-->
 
 <window id="25">
-	<defaultcontrol always="true">50</defaultcontrol>
+	<defaultcontrol always="true">55</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>50,51,52,53,54,55,56,57,58,59,592,597,633</views>
+	<views>55,50,58,51,52,633,53,54,597,56,57,59,592,593,</views>
 	<controls>
 		<control type="largeimage">
 			<include>Dimensions_Fullscreen</include>
@@ -56,7 +56,7 @@
 		<include>Viewtype_Poster</include><!--  50  -->
 		<include>Viewtype_Files</include><!--  55  -->
 		<include>Viewtype_Landscape</include><!--  52  -->
-		<include>Viewtype_Landscape_Fanart</include><!--  598  -->
+		<include>Viewtype_Landscape_Fanart</include><!--  633  -->
 		<include>Viewtype_List</include><!--  53  -->
 		<include>Viewtype_Episode</include><!--  51  -->
 		<include>Viewtype_Wall</include><!--  54  -->
@@ -65,6 +65,7 @@
 		<include>Viewtype_BannerPanel</include><!--  592  -->
 		<include>Viewtype_WallPanel</include><!--  597  -->
 		<include>Viewtype_16x9</include><!--  59  -->
+		<include>Viewtype_3dbanner</include><!--  593  -->
 		
 		
 		<include>Trailer</include>
@@ -158,15 +159,15 @@
 				<selected>Skin.HasSetting(landscape_jpg)</selected>
 				<visible>Control.IsVisible(52) + [Container.Content(tvshows) | Container.Content(seasons)]</visible>
 			</control>
-			<!--<control type="togglebutton" id="30">
+			<control type="togglebutton" id="30">
 				<description>Toggle MoviesFanart</description>
 				<include>WindowMenuButton</include>
-				<label>$LOCALIZE[24021] $LOCALIZE[207]</label>
-				<altlabel>$LOCALIZE[31246]</altlabel>
-				<onclick>Skin.ToggleSetting(landscape_fanart_plot)</onclick>
-				<selected>Skin.HasSetting(landscape_fanart_plot)</selected>
-				<visible>Control.IsVisible(633) + Container.Content(episodes)</visible>
-			</control>-->
+				<label>$LOCALIZE[31086]</label>
+				<altlabel>$LOCALIZE[31214]</altlabel>
+				<onclick>Skin.ToggleSetting(3dbanner_fanart)</onclick>
+				<selected>Skin.HasSetting(3dbanner_fanart)</selected>
+				<visible>Control.IsVisible(593) + Container.Content(tvshows)</visible>
+			</control>
 			<control type="togglebutton" id="24">
 				<description>Toggle MoviesFanart</description>
 				<include>WindowMenuButton</include>
@@ -219,7 +220,7 @@
 			<control type="button" id="45">
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[31089]</label>
-				<visible>[Control.IsVisible(58) | Control.IsVisible(59) | Control.IsVisible(53)] + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>		
+				<visible>[Control.IsVisible(58) | Control.IsVisible(59) | Control.IsVisible(53) | Control.IsVisible(593)] + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>		
 			</control>
 			<control type="button" id="46">
 				<include>WindowMenuLabel</include>

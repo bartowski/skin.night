@@ -11,7 +11,7 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture>movie-poster/movie-back3.png</texture>
-			<aspectratio>scale</aspectratio>
+			<aspectratio>stretch</aspectratio>
 			<include>Animation_BackdropFade</include>
 		</control>
 		
@@ -188,7 +188,6 @@
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 							<effect type="fade" start="0" end="100" time="600" />
 						</animation>
-						<include>Animation_PosterInfoSlide_Poster</include>
 					</control>
 					<control type="image">
 						<posx>238</posx>
@@ -201,7 +200,6 @@
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 							<effect type="fade" start="0" end="800" time="800" />
 						</animation>
-						<include>Animation_HiddenByInfo</include>
 					</control>
 					<control type="image">
 						<posx>-150</posx>
@@ -210,7 +208,6 @@
 						<height>232</height>
 						<texture>movie-poster/xper_test.png</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<include>Animation_PosterInfoSlide_Poster</include>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 						</animation>
@@ -227,7 +224,6 @@
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 							<effect type="fade" start="0" end="50" time="600" />
 						</animation>
-						<include>Animation_HiddenByInfo</include>
 					</control>
 					<control type="image">
 						<posx>-148</posx>
@@ -238,7 +234,6 @@
 						<colordiffuse>ff000000</colordiffuse>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<include>Animation_HiddenByInfo</include>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 							<effect type="fade" start="0" end="100" time="600" />
@@ -256,7 +251,6 @@
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 							<effect type="fade" start="0" end="70" time="600" />
 						</animation>
-						<include>Animation_HiddenByInfo</include>
 						<visible>!Skin.HasSetting(3dland_jpg) + [Container.Content(tvshows) | Container.Content(seasons)] | Container.Content(episodes) | Window.IsActive(videoplaylist)</visible>
 					</control>
 					<control type="image">
@@ -271,7 +265,6 @@
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 							<effect type="fade" start="0" end="70" time="600" />
 						</animation>
-						<include>Animation_HiddenByInfo</include>
 						<visible>Skin.HasSetting(3dland_jpg) + !Container.Content(episodes)</visible>
 					</control>
 					<control type="image">
@@ -282,7 +275,6 @@
 						<texture background="true" diffuse="movie-poster/xper_test.png">$INFO[ListItem.Icon]</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<include>Animation_PosterInfoSlide_Poster</include>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 						</animation>
@@ -296,7 +288,6 @@
 						<texture background="true" diffuse="movie-poster/xper_test.png">$INFO[ListItem.path]landscape.jpg</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<include>Animation_PosterInfoSlide_Poster</include>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 						</animation>
@@ -311,7 +302,6 @@
 						<texture>movie-poster/xper_test.png</texture>
 						<colordiffuse>plotdiffuse</colordiffuse>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<include>Animation_PosterInfoSlide_Poster</include>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 							<effect type="fade" start="0" end="100" time="400" delay="2800" />
@@ -325,7 +315,6 @@
 						<texture>list/3d_back_overlay1.png</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<include>Animation_PosterInfoSlide_Poster</include>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 						</animation>
@@ -366,7 +355,6 @@
 						<font>Font_Bartowski_Press_S</font>
 						<textcolor>ffffffff</textcolor>
 						<label>$INFO[ListItem.Label]</label>
-						<include>Animation_HiddenByInfo</include>
 						<animation effect="fade" start="60" end="60" time="0" condition="stringcompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
@@ -382,7 +370,6 @@
 						<font>Font_Bartowski_Press_S</font>
 						<textcolor>ffffffff</textcolor>
 						<label>$INFO[ListItem.Label]</label>
-						<include>Animation_HiddenByInfo</include>
 						<animation effect="rotatex" start="180" end="180" center="350" time="0" condition="true">Conditional</animation>
 						<animation type="Focus" reversible="false">
 							<effect type="fade" center="60,238" start="0" end="100" time="300" delay="300" tween="back" easing="out" />
@@ -400,7 +387,6 @@
 						<label>$INFO[ListItem.Plot]</label>
 						<align>justify</align>
 						<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-						<include>Animation_HiddenByInfo</include>
 						<include>Animation_Viewtype_Showcase_Plot</include>
 						<animation type="Focus" reversible="false">
 							<effect type="fade" start="0" end="100" time="800" delay="3400" />
@@ -414,7 +400,6 @@
 						<texture flipy="true">list/3d_back_overlay1.png</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<include>Animation_PosterInfoSlide_Poster</include>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 						</animation>
@@ -431,7 +416,7 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture>movie-poster/last-overlay.png</texture>
-			<aspectratio>scale</aspectratio>
+			<aspectratio>stretch</aspectratio>
 		</control>
 		
 		<!-- Browser label and flags -->

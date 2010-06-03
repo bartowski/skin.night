@@ -121,7 +121,6 @@
 					<width>698</width>
 					<height>142</height>
 					<texture>tv-landscape/landscapeframeFO.png</texture>
-					<!--<colordiffuse>89FFFFFF</colordiffuse>--->
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="auto" start="51" end="104" time="600" tween="back" easing="out" />
 					</animation>

@@ -5,7 +5,7 @@
 			<include>Dimensions_Fullscreen</include>
 			<width>1280</width>
 			<height>720</height>
-			<texture>backdrops/curtains_diffuse.png</texture>
+			<texture>special://skin/media/backdrops/curtains_diffuse.png</texture>
 			<aspectratio>scale</aspectratio>
 			<include>VisibleFadeEffect</include>
 		</control>
@@ -784,7 +784,7 @@
 						<focusedcolor>white</focusedcolor>
 						<label>$LOCALIZE[31111] - $LOCALIZE[0]</label>
 						<onclick>Skin.ToggleSetting(HomeMenuNoProgramsButton)</onclick>
-						<selected>!Skin.HasSetting(HomeMenuNoProgramsButton)</selected>
+						<selected>Skin.HasSetting(HomeMenuNoProgramsButton)</selected>
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
 						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 					</control>
@@ -797,7 +797,7 @@
 						<focusedcolor>white</focusedcolor>
 						<label>$LOCALIZE[31111] - $LOCALIZE[247]</label>
 						<onclick>Skin.ToggleSetting(HomeMenuNoScriptsButton)</onclick>
-						<selected>!Skin.HasSetting(HomeMenuNoScriptsButton)</selected>
+						<selected>Skin.HasSetting(HomeMenuNoScriptsButton)</selected>
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
 						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 					</control>
@@ -810,7 +810,7 @@
 						<focusedcolor>white</focusedcolor>
 						<label>$LOCALIZE[31111] - $LOCALIZE[1036]</label>
 						<onclick>Skin.ToggleSetting(HomeMenuNofavouritesButton)</onclick>
-						<selected>!Skin.HasSetting(HomeMenuNofavouritesButton)</selected>
+						<selected>Skin.HasSetting(HomeMenuNofavouritesButton)</selected>
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
 						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 					</control>
@@ -2411,7 +2411,50 @@
 							<onclick>Skin.ToggleSetting(tvoverlays)</onclick>
 							<selected>Skin.HasSetting(tvoverlays)</selected>
 						</control>
+						<control type="label" id="507">
+							<width>860</width>
+							<height>45</height>
+							<font>font16caps</font>
+							<label></label>
+							<textcolor>mainblue</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+						</control>
+						<control type="label" id="508">
+							<width>860</width>
+							<height>45</height>
+							<font>font16caps</font>
+							<label>Script to Automatically Download Logos</label>
+							<textcolor>mainblue</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+						</control>
+						<control type="button" id="509">
+							<width>280</width>
+							<height>40</height>
+							<font>Font_KeyboardKeys</font>
+							<textoffsetx>10</textoffsetx>
+							<label>Click to Run the logo script</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>confluence/button-focus.png</texturefocus>
+							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+							<onclick>XBMC.RunScript(special://skin/scripts/script.logo/default.py)</onclick>
+						</control>
 					</control>
+						<control type="textbox" id="510">
+							<posx>400</posx>
+							<posy>480</posy>
+							<width>600</width>
+							<height>290</height>
+							<align>justify</align>
+							<label>By clicking the above button, the script will automatically match whatever TV shows you have and then download the correct logo, if there is one, and save it as logo.png in the root of that TV shows folder</label>
+							<font>Font_Bartowski_Movies_Plot</font>
+							<textcolor>ffffffff</textcolor>
+							<visible>Container(9000).Hasfocus(5)</visible>
+						</control>
 				</control>
 				<control type="group"><!--mcborzu Disable Views-->
 					<control type="grouplist" id="9006">
