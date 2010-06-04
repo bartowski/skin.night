@@ -3,7 +3,7 @@
 <window id="25">
 	<defaultcontrol always="true">55</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>55,50,58,51,52,633,53,54,597,56,57,59,592,593,</views>
+	<views>55,50,58,51,52,633,53,54,597,56,57,59,592,593</views>
 	<controls>
 		<control type="largeimage">
 			<include>Dimensions_Fullscreen</include>

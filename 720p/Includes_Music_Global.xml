@@ -216,11 +216,11 @@
 			<height>309</height>
 			<texture>music/music_top_right_fanart_back.png</texture>
 			<include>Animation_CommonFade</include>
-			<visible>Control.IsVisible(633)</visible>
+			<visible>Control.IsVisible(633) | Control.IsVisible(593)</visible>
 		</control>
 		<control type="group">
 		<include>Animation_CommonFade</include>
-		<visible>[Control.IsVisible(50) | Control.IsVisible(53) | Control.IsVisible(58)] + Player.HasAudio | [Control.IsVisible(633) + Player.HasAudio]</visible>		
+		<visible>[Control.IsVisible(50) | Control.IsVisible(53) | Control.IsVisible(58) | Control.IsVisible(593) | Control.IsVisible(633)] + Player.HasAudio</visible>		
 			<control type="group">
 				<posx>1086</posx>
 				<posy>130</posy>

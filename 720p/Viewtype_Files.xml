@@ -460,7 +460,6 @@
 			<height>340</height>
 			<texture background="true" diffuse="music/musicwallmatte.png">$INFO[ListItem.Icon]</texture>
 			<fadetime>400</fadetime>
-			<include>Animation_Files_Episode_Info</include>
 		</control>
 		<control type="image">
 			<posx>-30</posx>
@@ -475,7 +474,6 @@
 			<width>340</width>
 			<height>340</height>
 			<texture background="true" diffuse="music/musicwallmatte.png">$INFO[ListItem(-1).Icon]</texture>
-			<include>Animation_Files_Episode_Info</include>
 			<animation type="Hidden">
 			<effect type="zoom" time="400" center="240,200" start="100" end="180" tween="cubic" easing="in" />
 				<effect type="fade" time="400" center="240,200" start="100" end="0" />
@@ -488,7 +486,6 @@
 			<width>340</width>
 			<height>340</height>
 			<texture background="true" diffuse="music/musicwallmatte.png">$INFO[ListItem(1).Icon]</texture>
-			<include>Animation_Files_Episode_Info</include>
 			<animation type="Hidden">
 			<effect type="zoom" time="400" center="240,200" start="100" end="180" tween="cubic" easing="in" />
 				<effect type="fade" time="400" center="240,200" start="100" end="0" />
@@ -663,7 +660,6 @@
 		</control>
 		<control type="scrollbar" id="60">
 			<include>Animation_ZoomInZoomOut</include>
-			<include>Animation_ZoomedByMenu</include>
 			<posx>1280</posx>
 			<posy>100</posy>
 			<width>25</width>

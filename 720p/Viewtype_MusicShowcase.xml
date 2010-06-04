@@ -65,7 +65,6 @@ MUSIC SECTION
 			<preloaditems>2</preloaditems>
 			<pagecontrol>68</pagecontrol>
 			<include>Animation_ZoomInZoomOut</include>
-			<include>Animation_ZoomedByMenu</include>
 			<visible>!Skin.HasSetting(no_MusicShowcase) + [Container.Content(artists) | Container.Content(albums) | Window.IsActive(musicfiles)]</visible>
 			<itemlayout width="204" height="245">
 			<control type="group">
@@ -203,7 +202,6 @@ MUSIC SECTION
 		
 		<control type="scrollbar" id="68">
 			<include>Animation_ZoomInZoomOut</include>
-			<include>Animation_ZoomedByMenu</include>
 			<posx>100</posx>
 			<posy>900</posy>
 			<width>1080</width>

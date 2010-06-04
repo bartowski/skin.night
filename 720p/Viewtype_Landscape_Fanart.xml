@@ -196,9 +196,9 @@
 			<texture>tv-landscape/landscapeframeFO.png</texture>
 		</control>
 		<control type="label">
-			<posx>440</posx>
+			<posx>460</posx>
 			<posy>612</posy>
-			<width>430</width>
+			<width>390</width>
 			<label>[B]$INFO[ListItem.Title][/B]</label>
 			<align>center</align>
 			<font>Font_Bartowski_Extras_Pause</font>

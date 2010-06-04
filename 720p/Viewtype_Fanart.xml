@@ -329,7 +329,6 @@
 	</control>
 	<control type="scrollbar" id="65">
 		<include>Animation_ZoomInZoomOut</include>
-		<include>Animation_ZoomedByMenu</include>
 		<posx>1280</posx>
 		<posy>100</posy>
 		<width>25</width>

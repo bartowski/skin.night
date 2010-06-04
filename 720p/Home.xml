@@ -67,7 +67,7 @@
 			<include>Dimensions_Fullscreen</include>
 			<texture>mainmenu/recently_back.png</texture>
 			<colordiffuse>ff15efd9</colordiffuse>
-			<animation effect="fade" start="0" end="100" time="400" delay="2800" tween="cubic" easing="inout" condition="Container(300).HasFocus(3) | Container(300).HasFocus(8) | Container(300).HasFocus(14)">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="400" delay="1800" tween="cubic" easing="inout" condition="Container(300).HasFocus(3) | Container(300).HasFocus(8) | Container(300).HasFocus(14)">Conditional</animation>
 			<visible>Skin.HasSetting(homepageHideRecentlyAdded) + Container(300).HasFocus(3)</visible>
 			<include>Animation_BackdropFade</include>
 		</control>
@@ -77,7 +77,7 @@
 			<include>Dimensions_Fullscreen</include>
 			<texture>mainmenu/episode_fade.png</texture>
 			<colordiffuse>ff15efd9</colordiffuse>
-			<animation effect="fade" start="0" end="100" time="400" delay="2800" tween="cubic" easing="inout" condition="Container(300).HasFocus(5)">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="400" delay="1000" tween="cubic" easing="inout" condition="Container(300).HasFocus(5)">Conditional</animation>
 			<visible>Skin.HasSetting(homepageHideRecentlyAdded) + Container(300).HasFocus(5)</visible>
 			<include>Animation_BackdropFade</include>
 		</control>
@@ -92,8 +92,7 @@
 			<include>Animation_BackdropFade</include>
 		</control>
 		
-		<include condition="Skin.HasSetting(homepageHideRecentlyAdded)">recentlyfanartepisodes</include>
-		<include condition="Skin.HasSetting(homepageHideRecentlyAdded)">recentlyfanartalbums</include>
+		
 		<include condition="Skin.HasSetting(horizontal_home)">HorizontalHome</include>
 		<include condition="Skin.HasSetting(homepageHideRecentlyAdded)">HomeRecentlyAddedInfo</include>
 		<include condition="Skin.HasSetting(HomepageWeatherWidget)">HomepageWeatherWidget</include>
@@ -515,7 +514,6 @@
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$LOCALIZE[20126]</label>
 						<onclick>System.LogOff</onclick>
-						<include>Home_MainMenuLabel</include>
 						<visible>System.HasLoginScreen</visible>
 					</control>
 					<control type="button" id="90145">

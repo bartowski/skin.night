@@ -55,10 +55,8 @@
 			<texture diffuse="Showcase/showcase-diffuse.png" fallback="backgrounds/missing.jpg">$INFO[Container(58).listitem.property(fanart_image)]</texture>
 			<fadetime>400</fadetime>
 			<aspectratio>stretch</aspectratio>
-			<include>Animation_PosterInfoSlide</include>					
 			<include>Animation_SlideUpFadeOut</include>
 			<include>Animation_HiddenByInfo</include>
-			<include>Animation_ZoomedByMenu</include>
 		</control>
 <!--------
 ----------
@@ -494,7 +492,6 @@ MOVIE SECTION
 		
 		<control type="scrollbar" id="67">
 			<include>Animation_ZoomInZoomOut</include>
-			<include>Animation_ZoomedByMenu</include>
 			<posx>100</posx>
 			<posy>900</posy>
 			<width>1080</width>

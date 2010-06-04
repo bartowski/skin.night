@@ -159,13 +159,6 @@
 			<effect type="fade" time="400" center="640,360" start="100" end="0" />
 		</animation>	
 	</include>
-	<!--<include name="Animation_ZoomedByMenu">
-		<animation type="Conditional" condition="ControlGroup(7000).HasFocus | ControlGroup(7001).HasFocus | Window.IsActive(100) | Window.IsActive(106) | Window.IsActive(111) | Window.IsActive(134) | Window.IsActive(2002)">
-			<effect type="zoom" time="600" center="640,360" start="100" end="50" tween="cubic" easing="inout" />
-			<effect type="fade" time="400" start="100" end="20" />
-		</animation>
-	</include>-->
-
 	<include name="Animation_ZoomInMenu">
 		<animation type="Visible">
 			<effect delay="200" type="zoom" time="600" center="640,360" start="50" end="100" tween="cubic" easing="out" />

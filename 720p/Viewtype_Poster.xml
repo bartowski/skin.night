@@ -62,7 +62,6 @@
 			<preloaditems>2</preloaditems>
 			<pagecontrol>68</pagecontrol>
 			<include>Animation_ZoomInZoomOut</include>
-			<include>Animation_ZoomedByMenu</include>
 			<include>Animation_HiddenByInfo</include>
 			<camera x="1340" y="380" />
 			<animation effect="rotatey" center="50" start="12" end="12" time="0" condition="true">Conditional</animation>
@@ -326,7 +325,6 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<include>Animation_ZoomInZoomOut</include>
-			<include>Animation_ZoomedByMenu</include>
 			<include>Animation_HiddenByInfo</include>
 			<!--<control type="textbox">
 				<description>Plot Movie and TV</description>
@@ -481,7 +479,6 @@
 		<posx>20</posx>
 		<posy>90</posy>
 		<include>Animation_ZoomInZoomOut</include>
-		<include>Animation_ZoomedByMenu</include>
 		<include>Animation_HiddenByInfo</include>
 		<animation effect="slide" start="0,0" end="0,-40" time="0" tween="cubic" easing="inout" condition="IsEmpty(Control.GetLabel(7015))">Conditional</animation>
 		<visible>Control.IsVisible(50) + !IsEmpty(ListItem.Title) + [Container.Content(tvshows) | Container.Content(seasons)] + !Player.HasVideo</visible>	
@@ -567,7 +564,6 @@
 				<label>*$LOCALIZE[31237]*</label>
 				<shadowcolor>black</shadowcolor>
 				<include>Animation_ZoomInZoomOut</include>
-				<include>Animation_ZoomedByMenu</include>
 			</control>	
 			<control type="label"><!--Trailer Stop-->
 				<visible>Control.IsVisible(50) + Container.Content(movies) + Player.HasVideo + !Control.IsVisible(68)</visible>
@@ -581,7 +577,6 @@
 				<label>*$LOCALIZE[31238]*</label>
 				<shadowcolor>black</shadowcolor>
 				<include>Animation_ZoomInZoomOut</include>
-				<include>Animation_ZoomedByMenu</include>
 			</control>
 		<control type="grouplist">
 			<visible>Control.IsVisible(50) + Container.Content(movies) + !Skin.HasSetting(no_media_flags) + !Control.IsVisible(68)</visible>
@@ -598,7 +593,6 @@
 			<include>VideoTypeHackFlaggingConditions</include>
 			<include>Animation_HiddenByInfo</include>
 			<include>Animation_ZoomInZoomOut</include>
-			<include>Animation_ZoomedByMenu</include>
 		</control>
 		<control type="image"> 
 			<posx>0</posx>
@@ -610,7 +604,6 @@
 		</control>
 		<control type="scrollbar" id="68">
 			<include>Animation_ZoomInZoomOut</include>
-			<include>Animation_ZoomedByMenu</include>
 			<posx>100</posx>
 			<posy>900</posy>
 			<width>1080</width>

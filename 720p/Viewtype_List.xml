@@ -34,7 +34,7 @@
 			<include>Animation_HiddenByInfo</include>
 			<camera x="1340" y="380" />
 			<animation effect="rotatey" center="50" start="12" end="12" time="0" condition="true">Conditional</animation>
-			<visible>!Skin.HasSetting(no_3DLandscape) + !Container.Content(movies)</visible>
+			<visible>!Skin.HasSetting(no_3DLandscape) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 			<itemlayout width="316" height="245">
 				<control type="group">
 				<posx>150</posx>

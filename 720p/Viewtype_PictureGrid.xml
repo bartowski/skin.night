@@ -45,7 +45,6 @@
 			<scrolltime>300</scrolltime>
 			<preloaditems>2</preloaditems>
 			<include>Animation_ZoomInZoomOut</include>
-			<include>Animation_ZoomedByMenu</include>
 			<animation effect="slide" start="0,0" end="0,400" time="600" delay="2800" condition="![Container.OnPrevious | Container.OnNext]">Conditional</animation>
 			<itemlayout width="204" height="245">
 			<control type="group">

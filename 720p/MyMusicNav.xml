@@ -134,7 +134,7 @@
 	
 				
 		<!--<include>Global_RSS</include>-->
-
+		<include>Global_Time_TopRight_Music</include>
 		<include>Object_DebugGrid</include>
 
 	</controls>

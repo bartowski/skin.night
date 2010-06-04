@@ -26,7 +26,6 @@
 			<ondown>7000</ondown>
 			<include>Animation_ZoomInZoomOut</include>
 			<include>Animation_MusicWallFloat</include>
-			<include>Animation_ZoomedByMenu</include>
 			<include>Animation_HiddenByMusicInfo</include>
 			<include>music_slant</include>
 			<visible>!Skin.HasSetting(no_MusicWall) + [Container.Content(artists) | Container.Content(albums)]</visible>

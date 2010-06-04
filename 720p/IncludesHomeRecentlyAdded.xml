@@ -23,7 +23,7 @@
 					<font>Font_KeyboardKeys</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<animation effect="slide" start="220,0" end="0,0" time="600" delay="3400" tween="cubic" easing="inout" condition="Container(300).HasFocus(3)">Conditional</animation>
+					<animation effect="slide" start="220,0" end="0,0" time="600" delay="2400" tween="cubic" easing="inout" condition="Container(300).HasFocus(3)">Conditional</animation>
 				</control>
 				<control type="wraplist" id="8000">
 					<posx>-340</posx>
@@ -39,7 +39,7 @@
 					<focusposition>0</focusposition>
 					<pagecontrol>-</pagecontrol>
 					<scrolltime>0</scrolltime>
-					<animation effect="slide" start="0,300" end="0,0" time="600" delay="3000" tween="cubic" easing="inout" condition="Container(300).HasFocus(3)">Conditional</animation>
+					<animation effect="slide" start="0,300" end="0,0" time="600" delay="2000" tween="cubic" easing="inout" condition="Container(300).HasFocus(3)">Conditional</animation>
 					<itemlayout width="110" height="160">
 						<control type="largeimage">
 							<posx>60</posx>
@@ -163,7 +163,7 @@
 				<posy>50</posy>
 				<visible>Library.HasContent(TVShows)</visible>
 				<visible>[Container(300).Hasfocus(2) + Skin.HasSetting(HomeMenuNoTVShowsButton)] | Container(300).Hasfocus(5)</visible>
-				<animation effect="slide" start="500,0" end="0,0" time="600" delay="3400" tween="cubic" easing="inout" condition="Container(300).HasFocus(5)">Conditional</animation>
+				<animation effect="slide" start="500,0" end="0,0" time="600" delay="1400" tween="cubic" easing="inout" condition="Container(300).HasFocus(5)">Conditional</animation>
 				<animation effect="slide" time="0" start="0,0" end="0,-20" condition="[Library.HasContent(TVShows) + [Skin.HasSetting(HomeMenuNoMoviesButton) | Skin.HasSetting(HomeMenuNoTVShowsButton)]]">Conditional</animation>
 				<control type="label">
 					<visible>!Skin.HasSetting(horizontal_home)</visible>
@@ -406,7 +406,7 @@
 					<font>Font_KeyboardKeys</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<animation effect="slide" start="250,0" end="0,0" time="600" delay="3400" tween="cubic" easing="inout" condition="Container(300).HasFocus(1)">Conditional</animation>
+					<animation effect="slide" start="250,0" end="0,0" time="600" delay="2400" tween="cubic" easing="inout" condition="Container(300).HasFocus(1)">Conditional</animation>
 				</control>
 				<control type="wraplist" id="8002">
 					<posx>-300</posx>
@@ -422,7 +422,7 @@
 					<focusposition>0</focusposition>
 					<pagecontrol>-</pagecontrol>
 					<scrolltime>0</scrolltime>
-					<animation effect="slide" start="0,300" end="0,0" time="600" delay="3000" tween="cubic" easing="inout" condition="Container(300).HasFocus(1)">Conditional</animation>
+					<animation effect="slide" start="0,300" end="0,0" time="600" delay="2000" tween="cubic" easing="inout" condition="Container(300).HasFocus(1)">Conditional</animation>
 					<itemlayout width="110" height="160">
 						<control type="largeimage">
 							<posx>60</posx>
