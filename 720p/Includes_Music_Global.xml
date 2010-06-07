@@ -1,12 +1,11 @@
 <includes>
 
 
-<control type="group">
-<visible>!Skin.HasSetting(zune_music)</visible>
+
 	<include name="Music_Global_Showcase">
 		<control type="group">
 		<include>Animation_CommonFade</include>
-		<visible>[Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(51) | Window.IsActive(Home)] + Player.HasAudio</visible>		
+		<visible>[Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(51) | Window.IsActive(Home)] + Player.HasAudio + !Skin.HasSetting(zune_music)</visible>		
 			<control type="image"><!-- 1st overlay -->
 				<posx>0</posx>
 				<posy>0</posy>
@@ -219,11 +218,11 @@
 			<height>309</height>
 			<texture>music/music_top_right_fanart_back.png</texture>
 			<include>Animation_CommonFade</include>
-			<visible>Control.IsVisible(633) | Control.IsVisible(593)</visible>
+			<visible>[Control.IsVisible(633) | Control.IsVisible(593)] + Player.HasAudio + !Skin.HasSetting(zune_music)</visible>
 		</control>
 		<control type="group">
 		<include>Animation_CommonFade</include>
-		<visible>[Control.IsVisible(50) | Control.IsVisible(53) | [Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)] | Control.IsVisible(593) | Control.IsVisible(633)] + Player.HasAudio</visible>		
+		<visible>[Control.IsVisible(50) | Control.IsVisible(53) | [Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)] | Control.IsVisible(593) | Control.IsVisible(633)] + Player.HasAudio + !Skin.HasSetting(zune_music)</visible>		
 			<control type="group">
 				<posx>1086</posx>
 				<posy>130</posy>
@@ -422,11 +421,11 @@
 			<height>309</height>
 			<texture>music/music_top_right_fanart_back.png</texture>
 			<include>Animation_CommonFade</include>
-			<visible>Control.IsVisible(58) + Skin.HasSetting(MusicShowcaseFanart)</visible>
+			<visible>Control.IsVisible(58) + Skin.HasSetting(MusicShowcaseFanart) + Player.HasAudio + !Skin.HasSetting(zune_music)</visible>
 		</control>
 		<control type="group">
 		<include>Animation_CommonFade</include>
-		<visible>[Control.IsVisible(58) | Control.IsVisible(59) | [Control.IsVisible(55) + Window.IsActive(musiclibrary)]] + Player.HasAudio</visible>		
+		<visible>[Control.IsVisible(58) | Control.IsVisible(59) | [Control.IsVisible(55) + Window.IsActive(musiclibrary)]] + Player.HasAudio + !Skin.HasSetting(zune_music)</visible>		
 			<control type="group">
 				<posx>1086</posx>
 				<posy>130</posy>
@@ -626,7 +625,7 @@
 	<include name="Music_Global_Lowerleft_Music">
 		<control type="group">
 		<include>Animation_CommonFade</include>
-		<visible>Control.IsVisible(52) + Player.HasAudio</visible>		
+		<visible>Control.IsVisible(52) + Player.HasAudio + !Skin.HasSetting(zune_music)</visible>		
 			<control type="image"><!-- 1st overlay -->
 				<posx>0</posx>
 				<posy>0</posy>
@@ -828,7 +827,7 @@
 	<include name="Music_Global_LowerRight">
 		<control type="group">
 		<include>Animation_CommonFade</include>
-		<visible>[[Control.IsVisible(52) + Container.Content(tvshows)] + Player.HasAudio + !Skin.HasSetting(Landscape_Fanart)] | [[Control.IsVisible(597) + Container.Content(movies)] + Player.HasAudio] | [Control.IsVisible(53) + Window.IsActive(musiclibrary) + Player.HasAudio]</visible>		
+		<visible>[[Control.IsVisible(52) + Container.Content(tvshows)] + Player.HasAudio + !Skin.HasSetting(zune_music) + !Skin.HasSetting(Landscape_Fanart)] | [[Control.IsVisible(597) + Container.Content(movies)] + Player.HasAudio] | [Control.IsVisible(53) + Window.IsActive(musiclibrary) + Player.HasAudio]</visible>		
 			<control type="group">
 				<posx>1086</posx>
 				<posy>684</posy>
@@ -1020,6 +1019,6 @@
 		</control>
 	</include>
 
-</control>
+
 	
 	</includes>
