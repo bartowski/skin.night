@@ -248,8 +248,8 @@
 		<control type="largeimage" id="7016">
 			<posx>20</posx>
 			<posy>0</posy>
-			<width>300</width>
-			<height>116</height>
+			<width>250</width>
+			<height>96</height>
 			<texture>$INFO[ListItem.path]logo.png</texture>
 			<fadetime>100</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -260,8 +260,8 @@
 		<control type="largeimage" id="9016">
 			<posx>20</posx>
 			<posy>0</posy>
-			<width>300</width>
-			<height>116</height>
+			<width>250</width>
+			<height>96</height>
 			<texture>$INFO[ListItem.path]../logo.png</texture>
 			<fadetime>100</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -291,7 +291,7 @@
 			<control type="label">
 				<description>Writer</description>
 				<posx>15</posx>
-				<posy>273</posy>
+				<posy>276</posy>
 				<width>460</width>
 				<height>50</height>
 				<aligny>center</aligny>
@@ -302,7 +302,7 @@
 			<control type="label">
 				<description>Genre</description>
 				<posx>15</posx>
-				<posy>296</posy>
+				<posy>299</posy>
 				<width>460</width>
 				<height>50</height>
 				<aligny>center</aligny>
@@ -313,7 +313,7 @@
 			<control type="label">
 				<description>Duration</description>
 				<posx>15</posx>
-				<posy>319</posy>
+				<posy>322</posy>
 				<width>460</width>
 				<height>50</height>
 				<aligny>center</aligny>
@@ -324,7 +324,7 @@
 			<control type="label">
 				<description>Rating</description>
 				<posx>15</posx>
-				<posy>342</posy>
+				<posy>345</posy>
 				<width>460</width>
 				<height>50</height>
 				<aligny>center</aligny>
@@ -335,7 +335,7 @@
 			<control type="label">
 				<description>Rated</description>
 				<posx>15</posx>
-				<posy>365</posy>
+				<posy>368</posy>
 				<width>460</width>
 				<height>50</height>
 				<aligny>center</aligny>
@@ -345,7 +345,7 @@
 			</control>
 			<control type="group">
 				<posx>116</posx>
-				<posy>540</posy>
+				<posy>544</posy>
 				<include>VideoMPAAFlaggingConditions</include>
 				<animation effect="zoom" start="70" end="70" time="0" condition="true">Conditional</animation>
 			</control>
@@ -466,7 +466,7 @@
 				<posy>0</posy>
 				<width>600</width>
 				<height>180</height>
-				<align>left</align>
+				<align>justify</align>
 				<info>ListItem.Plot</info>
 				<font>Font_Bartowski_Movies</font>
 				<textcolor>ffffffff</textcolor>
@@ -476,6 +476,52 @@
 				<visible>Control.IsVisible(59) + [Container.Content(episodes) | Container.Content(movies)]</visible>
 			</control>
 		
+		<control type="group">
+		<visible>Control.IsVisible(59) + Container.Content(movies) + !IsEmpty(ListItem.Trailer)</visible>
+			<control type="label">
+				<visible>!Player.HasVideo</visible>
+				<posx>560</posx>
+				<posy>60</posy>
+				<width>370</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_Alaya_Movie-trailer</font>
+				<textcolor>ffffffff</textcolor>
+				<label>*$LOCALIZE[31237]*</label>
+				<shadowcolor>black</shadowcolor>
+				<include>Animation_Viewtype_Showcase_Trailer</include>
+			</control>	
+			<control type="label">
+				<visible>Player.HasVideo</visible>
+				<posx>570</posx>
+				<posy>60</posy>
+				<width>370</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_Alaya_Movie-trailer</font>
+				<textcolor>ffffffff</textcolor>
+				<label>*$LOCALIZE[31238]*</label>
+				<shadowcolor>black</shadowcolor>
+				<include>Animation_Viewtype_Showcase_Trailer</include>
+			</control>
+		</control>
+			
+			<control type="grouplist">
+				<visible>Control.IsVisible(59) + [Container.Content(movies) | Container.Content(episodes)] + !Skin.HasSetting(no_media_flags)</visible>
+				<description>Media Codec Flagging Images</description>
+				<posx>0</posx>
+				<posy>20</posy>
+				<width>1280</width>
+				<align>center</align>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<include>VideoCodecFlaggingConditions</include>
+				<include>AudioCodecFlaggingConditions</include>
+				<include>AspectCodecFlaggingConditions</include>
+				<include>VideoTypeHackFlaggingConditions</include>
+				<include>Animation_HiddenByInfo</include>
+				<include>Animation_Viewtype_Showcase_RightFlags</include>
+			</control>
 		
 	</include>
 </includes>

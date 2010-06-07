@@ -10,7 +10,11 @@
 		<animation effect="fade" start="0" end="100" time="200">Visible</animation>	
 		<animation effect="fade" start="100" end="0" time="200">Hidden</animation>		
 	</include>
-
+	
+	<include name="Animation_CommonFade_ViewOptions">
+		<animation effect="fade" start="0" end="100" time="100" delay="300" condition="ControlGroup(7000).HasFocus">Conditional</animation>			
+	</include>
+	
 	<include name="Animation_BackdropFade">
 		<animation effect="fade" start="0" end="100" time="800">WindowOpen</animation>	
 		<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>

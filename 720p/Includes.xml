@@ -192,7 +192,7 @@
 			<posx>1260</posx>
 			<posy>670</posy>
 			<include>Animation_BackdropFade</include>
-			<visible>Skin.HasSetting(library_global_clock) + !Player.HasMedia + [Window.IsActive(videolibrary) + [Control.IsVisible(58) | Control.IsVisible(56)]]</visible>
+			<visible>Skin.HasSetting(library_global_clock) + !Player.HasMedia + [Window.IsActive(videolibrary) + [[Container.Content(movies) + !Skin.HasSetting(ShowcaseFanart)] | Control.IsVisible(56)]]</visible>
 				<control type="image"> 
 					<posx>-380</posx>
 					<posy>-160</posy>   
@@ -354,6 +354,31 @@
 	
 	
 	<!-- Window menus -->
+	<include name="WindowMenuVars_Library">
+		<width>440</width>
+		<height>260</height>
+		<posx>270</posx>
+		<onright>50</onright>
+		<onleft>50</onleft>
+		<itemgap>0</itemgap>
+		<align>left</align>
+		<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews)</visible>
+		<orientation>vertical</orientation>
+	</include>
+	<include name="WindowMenuButton_Library">
+		<width>400</width>
+		<height>30</height>
+		<align>left</align>
+		<font>Font_Bartowski_Smaller_MenuTitle</font>
+		<textoffsetx>10</textoffsetx>
+		<textcolor>ff000000</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<texturefocus border="5">confluence/button-focus.png</texturefocus>
+		<alttexturenofocus>-</alttexturenofocus>
+		<alttexturefocus>confluence/button-focus.png</alttexturefocus>
+		<textureradiofocus>-</textureradiofocus>
+		<textureradionofocus>-</textureradionofocus>
+	</include>
 	<include name="WindowMenuVars">
 		<width>1120</width>
 		<height>40</height>

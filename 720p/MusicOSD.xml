@@ -3,11 +3,7 @@
 <window id="120">
 	<defaultcontrol>2001</defaultcontrol>
 	<controls>
-		<control type="label">
-			<include>DialogID</include>
-			<label>MusicOSD.xml</label>
-			<visible>Skin.HasSetting(debugmode)</visible>
-		</control>
+		
 		<control type="group">
 			<posx>0</posx>
 			<posy>560</posy>

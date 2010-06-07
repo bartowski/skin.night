@@ -11,6 +11,12 @@
 			<linespacing>1</linespacing>
 		</font>
 		<font>
+			<name>Font_Bartowski_Zune</name>
+			<filename>alaska_thin.ttf</filename>
+			<size>18</size>
+			<linespacing>1</linespacing>
+		</font>
+		<font>
 			<name>Font_Bartowski_Main_SubMenu</name>
 			<filename>alaska_thin.ttf</filename>
 			<size>64</size>

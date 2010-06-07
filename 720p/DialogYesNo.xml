@@ -15,14 +15,11 @@
 
 	<controls>
 
-		<include>Global_DialogFilter</include>
-
-
-		<control type="label">
-			<include>WindowID</include>
-			<label>DialogYesNo.xml</label>
-			<visible>Skin.HasSetting(debugmode)</visible>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture>common/7000_focus.png</texture>
 		</control>
+		
 		<control type="image" id="997">
 			<description>background top image</description>
 			<posx>360</posx>

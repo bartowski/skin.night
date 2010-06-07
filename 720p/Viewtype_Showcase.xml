@@ -63,6 +63,7 @@
 MOVIE SECTION
 ----------
 ---------->	
+
 		<control type="wraplist" id="58">
 			<posx>-135</posx>
 			<posy>290</posy>
@@ -295,7 +296,7 @@ MOVIE SECTION
 			</control>
 		</control>	
 		<control type="label"><!--Trailer Start-->
-			<visible>Control.IsVisible(58) + Container.Content(movies) + !IsEmpty(ListItem.Trailer) + !Player.HasMedia + !Skin.HasSetting(ShowcaseFanart)</visible>
+			<visible>Control.IsVisible(58) + Container.Content(movies) + !IsEmpty(ListItem.Trailer) + !Player.HasVideo + !Skin.HasSetting(ShowcaseFanart)</visible>
 			<posx>115</posx>
 			<posy>380</posy>
 			<width>370</width>
@@ -308,7 +309,7 @@ MOVIE SECTION
 			<include>Animation_Viewtype_Showcase_Trailer</include>
 		</control>	
 		<control type="label"><!--Trailer Stop-->
-			<visible>Control.IsVisible(58) + Container.Content(movies) + Player.HasMedia + !Skin.HasSetting(ShowcaseFanart)</visible>
+			<visible>Control.IsVisible(58) + Container.Content(movies) + Player.HasVideo + !Skin.HasSetting(ShowcaseFanart)</visible>
 			<posx>135</posx>
 			<posy>380</posy>
 			<width>370</width>

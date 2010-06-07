@@ -293,6 +293,18 @@
 						<onclick>Skin.ToggleSetting(hometheater)</onclick>
 						<selected>Skin.HasSetting(hometheater)</selected>
 					</control>
+					<control type="radiobutton" id="110">
+						<width>860</width>
+						<height>40</height>
+						<font>Font_KeyboardKeys</font>
+						<label>$LOCALIZE[31248]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(zune_music)</onclick>
+						<selected>Skin.HasSetting(zune_music)</selected>
+					</control>
 					<control type="label" id="109">
 						<width>860</width>
 						<height>45</height>

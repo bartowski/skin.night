@@ -2,8 +2,6 @@
 	<defaultcontrol allways="true">6</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
-		<include>CommonMusicBackground</include>
-		<include>CommonMediaPlayingBackground</include>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<fadetime>400</fadetime>

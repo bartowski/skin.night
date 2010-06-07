@@ -1,4 +1,13 @@
-Update 6/2/2010
+Update 6/6/2010
+  -Change the view options dialog
+  -Added video playlist dialogs
+  -Added flags and trailer indicator to the view "16x9"
+  -Added Spanish translation, thx urtzi
+  -Changed up dialog select
+  -Added logo script to the Video Info screen for individual downloading
+  -Trying out a new zune like Global Now playing
+
+Update 6/3/2010
   -Fixed the 3dBanner thumb issue
   -Fixed title label overlap in Fanart view
   -Added global clock to Music section

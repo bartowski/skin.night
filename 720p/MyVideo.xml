@@ -4,7 +4,6 @@
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
-		<include>Global_Background</include>
 		<control type="largeimage" id="2404">
 			<include>Dimensions_Fullscreen</include>
 			<fadetime>400</fadetime>
@@ -19,16 +18,9 @@
 			<include>Animation_CommonFade</include>
 			<visible>IsEmpty(ListItem.Property(Fanart_Image))</visible>
 		</control>
-		<!--<control type="largeimage">
-			<include>Dimensions_Fullscreen</include>
-			<fadetime>400</fadetime>
-			<texture>$INFO[ListItem.Property(Fanart_Image)]</texture>
-			<include>Animation_CommonFade</include>
-			<visible>Control.IsVisible(55)</visible>
-		</control>
-		<include>Global_Filter</include>
 		
-		<include>Object_MovieInfoLines</include>-->
+		
+		
 		
 		<include>Viewtype_Files</include>
 		<include>Viewtype_List</include>
@@ -46,97 +38,170 @@
 		<include>Music_Global_Showcase</include>
 		<include>Music_Global_LowerRight</include>
 		
+		<control type="image">
+			<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews)</visible>
+			<include>Dimensions_Fullscreen</include>
+			<texture>common/7000_focus.png</texture>
+			<animation effect="fade" start="0" end="100" time="600">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
+		</control>
 		
-		<control type="image"><!-- Floor -->
-			<posx>0</posx>
-			<posy>650</posy>
-			<width>1280</width>
-			<height>70</height>
-			<texture>backdrops/test2.png</texture>
-			<visible>ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews)</visible>
-			<include>Animation_ViewOptions_whitebar</include>
-		</control>
-		<control type="label">
-			<include>WindowID</include>
-			<label>MyVideo.xml</label>
-			<visible>Skin.HasSetting(debugmode)</visible>
-		</control>
-
-		<control type="grouplist" id="7000">
-			<visible>!Skin.HasSetting(LockViews)</visible>
-			<include>WindowMenuVars</include>
-			<posy>680</posy>
+		<control type="group">
+		<include>Animation_Bartowski_Context_Zoom</include>
+		<include>Animation_CommonFade_ViewOptions</include>	
+			<control type="image">
+				<posx>250</posx>
+				<posy>150</posy>
+				<width>778</width>
+				<height>322</height>
+				<texture>common/view_option_back.png</texture>
+				<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews)</visible>
+			</control>
+			<control type="label">
+				<description>header label</description>
+				<posx>500</posx>
+				<posy>164</posy>
+				<width>297</width>
+				<height>30</height>
+				<font>Font_Bartowski_Smaller_MenuValue</font>
+				<label>View Options</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>ff000000</textcolor>
+				<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews)</visible>
+			</control>
+			<control type="image">
+				<posx>290</posx>
+				<posy>196</posy>
+				<width>740</width>
+				<height>4</height>
+				<texture>confluence/separator.png</texture>
+				<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews)</visible>
+			</control>
 			
-			<control type="button" id="20">
-				<include>WindowMenuButton</include>
-				<label>$INFO[Container.ViewMode]</label>
-				<onclick>Container.NextViewMode</onclick>
-								
+			
+			<control type="grouplist" id="7000">
+				<include>WindowMenuVars_Library</include>
+				<posy>200</posy>
+				<control type="button" id="20">
+					<include>WindowMenuButton_Library</include>
+					<label>$LOCALIZE[31088] $INFO[Container.ViewMode]</label>
+					<onclick>Container.NextViewMode</onclick>
+				</control>
+				<control type="togglebutton" id="23">
+					<description>Toggle MoviesFanart</description>
+					<include>WindowMenuButton_Library</include>
+					<label>$LOCALIZE[31204]</label>
+					<altlabel>$LOCALIZE[31205]</altlabel>
+					<onclick>Skin.ToggleSetting(no_media_flags)</onclick>
+					<selected>Skin.HasSetting(no_media_flags)</selected>
+					<visible>Container.Content(movies) | Container.Content(episodes)</visible>	
+				</control>
+				
+				<control type="button" id="3">
+					<include>WindowMenuButton_Library</include>
+					<label>103</label>
+				</control>
+				<control type="togglebutton" id="14">
+					<include>WindowMenuButton_Library</include>
+					<!-- LOC -->
+					<label>$LOCALIZE[31096]</label>
+					<!-- LOC -->
+					<altlabel>$LOCALIZE[31097]</altlabel>				
+				</control>
+				<control type="button" id="8">
+					<include>WindowMenuButton_Library</include>
+					<label>137</label>
+				</control>	
+				<control type="button" id="19">
+					<include>WindowMenuButton_Library</include>
+					<label>587</label>
+				</control>
 			</control>
-			<control type="button" id="3">
-				<include>WindowMenuButton</include>
-				<label>103</label>
-						
-			</control>
-			<control type="togglebutton" id="14">
-				<include>WindowMenuButton</include>
-				<!-- LOC -->
-				<label>$LOCALIZE[31096]</label>
-				<!-- LOC -->
-				<altlabel>$LOCALIZE[31097]</altlabel>				
-							
-			</control>
-			<control type="button" id="8">
-				<include>WindowMenuButton</include>
-				<label>137</label>
-							
-			</control>	
-			<control type="button" id="19">
-				<include>WindowMenuButton</include>
-				<label>587</label>
-								
-			</control>
+		
+		
+		<control type="textbox">
+			<posx>720</posx>
+			<posy>200</posy>
+			<width>270</width>
+			<height>200</height>
+			<font>Font_Bartowski_Showcase_plot</font>
+			<textcolor>black</textcolor>
+			<label>Click to switch between different views</label>
+			<align>justify</align>
+			<visible allowhiddenfocus="true">Control.HasFocus(20) + !Skin.HasSetting(LockViews)</visible>
 		</control>
-
-		<control type="grouplist">
-			<visible>!Skin.HasSetting(LockViews)</visible>
-			<include>WindowMenuVars</include>
-			<posy>658</posy>
-			<control type="button" id="40">
-				<include>WindowMenuLabel</include>
-				<!-- LOC -->
-				<label>$LOCALIZE[31088]</label>
-							
-			</control>
-			<control type="button" id="41">
-				<include>WindowMenuLabel</include>
-				<!-- LOC -->
-				<label>$LOCALIZE[31090]</label>
-							
-			</control>
-			<control type="button" id="42">
-				<include>WindowMenuLabel</include>
-				<!-- LOC -->
-				<label>$LOCALIZE[31098]</label>
-							
-			</control>
-			<control type="button" id="43">
-				<include>WindowMenuLabel</include>
-				<!-- LOC -->
-				<label>$LOCALIZE[31099]</label>
-						
-			</control>	
-			<control type="button" id="44">
-				<include>WindowMenuLabel</include>
-				<!-- LOC -->
-				<label>$LOCALIZE[31099]</label>
-								
-			</control>				
+		<control type="textbox">
+			<posx>720</posx>
+			<posy>200</posy>
+			<width>270</width>
+			<height>200</height>
+			<font>Font_Bartowski_Showcase_plot</font>
+			<textcolor>black</textcolor>
+			<label>Click to change the alphabetic order of the list</label>
+			<align>justify</align>
+			<visible allowhiddenfocus="true">Control.HasFocus(3) + !Skin.HasSetting(LockViews)</visible>
+		</control>
+		<control type="textbox">
+			<posx>720</posx>
+			<posy>200</posy>
+			<width>270</width>
+			<height>200</height>
+			<font>Font_Bartowski_Showcase_plot</font>
+			<textcolor>black</textcolor>
+			<label>Click to toggle between hiding watched items or leaving them in</label>
+			<align>justify</align>
+			<visible allowhiddenfocus="true">Control.HasFocus(14) + !Skin.HasSetting(LockViews)</visible>
+		</control>
+		<control type="textbox">
+			<posx>720</posx>
+			<posy>200</posy>
+			<width>270</width>
+			<height>200</height>
+			<font>Font_Bartowski_Showcase_plot</font>
+			<textcolor>black</textcolor>
+			<label>Click to search for the video you want</label>
+			<align>justify</align>
+			<visible allowhiddenfocus="true">Control.HasFocus(8) + !Skin.HasSetting(LockViews)</visible>
 		</control>
 		
-		<!--<include>Global_Time</include>
-		<include>Global_Heading</include>		
-		<include>Global_RSS</include>-->
+		<control type="group">
+		<posx>710</posx>
+		<posy>280</posy>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>300</width>
+				<height>168</height>
+				<texture>extras/viewoptions/views.png</texture>
+				<visible allowhiddenfocus="true">Control.HasFocus(20) + !Skin.HasSetting(LockViews)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>300</width>
+				<height>168</height>
+				<texture>extras/viewoptions/sort.png</texture>
+				<visible allowhiddenfocus="true">Control.HasFocus(3) + !Skin.HasSetting(LockViews)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>300</width>
+				<height>168</height>
+				<texture>extras/viewoptions/watched.png</texture>
+				<visible allowhiddenfocus="true">Control.HasFocus(14) + !Skin.HasSetting(LockViews)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>300</width>
+				<height>168</height>
+				<texture>extras/viewoptions/search.png</texture>
+				<visible allowhiddenfocus="true">Control.HasFocus(8) + !Skin.HasSetting(LockViews)</visible>
+			</control>
+		</control>
+	</control>
 		
 		<include>Object_DebugGrid</include>
 

@@ -2,11 +2,7 @@
 
 <window id="2005">
 	<controls>
-		<control type="label">
-			<include>WindowID</include>
-			<label>VideoFullScreen.xml</label>
-			<visible>Skin.HasSetting(debugmode)</visible>
-		</control>
+		
 	<!-- codec infos -->
 		<control type="group">
 			<posx>0</posx>

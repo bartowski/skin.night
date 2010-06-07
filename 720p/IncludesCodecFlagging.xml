@@ -233,7 +233,23 @@
 			<height>33</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/dtsma.png</texture>
-			<visible>substring(ListItem.AudioCodec,dtsma) + substring(ListItem.AudioChannels,8)</visible>
+			<visible>substring(ListItem.AudioCodec,dtsma) + substring(ListItem.AudioChannels,6)</visible>
+		</control>
+		<control type="image">
+			<description>truehd Image</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/audio/truehd.png</texture>
+			<visible>substring(ListItem.AudioCodec,truehd) + substring(ListItem.AudioChannels,6)</visible>
+		</control>
+		<control type="image">
+			<description>flac Image</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/audio/flac.png</texture>
+			<visible>substring(ListItem.AudioCodec,flac) + substring(ListItem.AudioChannels,6)</visible>
 		</control>
 	</include>
 	<include name="AspectCodecFlaggingConditions">

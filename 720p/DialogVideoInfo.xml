@@ -1045,7 +1045,15 @@
 						<onclick>Playlist.Clear</onclick>
 						<onclick>Dialog.Close(MovieInformation)</onclick>
 						<onclick>RunScript(special://home/scripts/Home Theater Experience/default.py)</onclick>
-						<visible>Skin.HasSetting(hometheater)</visible>
+						<visible>Skin.HasSetting(hometheater) + Container.Content(movies)</visible>
+					</control>
+					<control type="button" id="14">
+						<description>Play Trailer</description>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label>$LOCALIZE[31249]</label>
+						<onclick>Playlist.Clear</onclick>
+						<onclick>RunScript(special://skin/scripts/script.logo/default.py,$INFO[ListItem.FileNameAndPath])</onclick>
+						<visible>Container.Content(tvshows)</visible>
 					</control>
 				</control>
 			</control>
