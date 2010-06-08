@@ -1,4 +1,11 @@
 Update 6/6/2010
+  -Fixed the global time issue I left last night
+  -Minor touch ups to "WallPanel" view
+  -Changed pausebar when playing DVD
+  -changed up mute dialog
+  -updated logo script
+
+Update 6/6/2010
   -Change the view options dialog
   -Added video playlist dialogs
   -Added flags and trailer indicator to the view "16x9"

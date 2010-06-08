@@ -167,7 +167,7 @@
 			</control>
 			
 			<control type ="image"> 
-				<description>tv show image</description>
+				<description>movie image</description>
 				<posx>960</posx>     
 				<posy>-190</posy>    
 				<width>340</width>
@@ -179,8 +179,9 @@
 				<animation type="WindowOpen">
 					<effect type="fade" start="0" end="100" time="900" delay="400" />
 				</animation>
-				<visible>!VideoPlayer.Content(episodes)</visible>
+				<visible>VideoPlayer.Content(movies)</visible>
 			</control>
+			
 	</control>
 		
 	<control type="group">

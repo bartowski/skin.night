@@ -281,8 +281,8 @@
 		
 		<control type="fixedlist" id="597">
 			<posx>0</posx>
-			<posy>150</posy>
-			<height>400</height>
+			<posy>140</posy>
+			<height>410</height>
 			<width>600</width>
 			<onup>597</onup>
 			<ondown>597</ondown>
@@ -300,7 +300,7 @@
 			<itemlayout width="1210" height="30">
 				<control type="label">
 					<posx>20</posx>
-					<posy>0</posy>
+					<posy>10</posy>
 					<width>680</width>
 					<height>46</height>
 					<aligny>center</aligny>
@@ -310,7 +310,7 @@
 				</control>
 				<control type="image">
 					<posx>10</posx>
-					<posy>20</posy>
+					<posy>30</posy>
 					<width>280</width>
 					<height>8</height>
 					<texture>dialogs/tv/$INFO[ListItem.Overlay]</texture>
@@ -321,17 +321,17 @@
 			<focusedlayout width="1210" height="30">
 				<control type="image">
 					<posx>-40</posx>
-					<posy>-34</posy>
-					<width>871</width>
-					<height>121</height>
-					<texture>list/highlight.png</texture>
-					<animation type="Focus" reversible="false">
+					<posy>0</posy>
+					<width>521</width>
+					<height>68</height>
+					<texture>list/highlight_new.png</texture>
+					<!--<animation type="Focus" reversible="false">
 						<effect type="fade" start="0" end="70" time="800" />
-					</animation>
+					</animation>-->
 				</control>
 				<control type="label">
 					<posx>20</posx>
-					<posy>0</posy>
+					<posy>10</posy>
 					<width>720</width>
 					<height>46</height>
 					<aligny>center</aligny>
@@ -341,7 +341,7 @@
 				</control>
 				<control type="image">
 					<posx>10</posx>
-					<posy>20</posy>
+					<posy>30</posy>
 					<width>280</width>
 					<height>8</height>
 					<texture>dialogs/tv/$INFO[ListItem.Overlay]</texture>
@@ -353,7 +353,7 @@
 	
 	<control type="group">
 	<include>Animation_Bartowski_Context_Zoom</include>
-	<visible>!IsEmpty(ListItem.Title) + Container.Content(movies) + Control.IsVisible(597)</visible>
+	<visible>Container.Content(movies) + Control.IsVisible(597)</visible>
 		<control type="image">
 			<posx>380</posx>
 			<posy>100</posy>

@@ -410,11 +410,11 @@
 						<label>$LOCALIZE[31003]</label>
 						<onclick>ActivateWindow(VideoFiles)</onclick>
 					</control>
-					<control type="button" id="90112">
+					<!--<control type="button" id="90112">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$LOCALIZE[31079]</label>
 						<onclick>ActivateWindow(VideoLibrary,MovieTitles,return)</onclick>
-					</control>
+					</control>-->
 					<control type="button" id="90113">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$LOCALIZE[31000]</label>
@@ -440,12 +440,12 @@
 						<label>$LOCALIZE[31081]</label>
 						<onclick>ActivateWindow(VideoLibrary,RecentlyAddedMovies,return)</onclick>
 					</control>
-					<!--<control type="button" id="90117">
+					<control type="button" id="90117">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>31007</label>
-						<onclick>ActivateWindow(MusicFiles,$LOCALIZE[1038])</onclick>
-						<visible>!Library.HasContent(Music)</visible>
-					</control>-->
+						<label>20389</label>
+						<onclick>ActivateWindow(VideoLibrary,MusicVideoTitles,return)</onclick>
+						<visible>Library.HasContent(MusicVideos)</visible>
+					</control>
 				</control>
 <!--TV SHOWS --><control type="grouplist" id="9012">
 					<posx>10</posx>
