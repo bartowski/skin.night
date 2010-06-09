@@ -65,6 +65,6 @@
 			<texturefocus border="5">confluence/button-focus.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 		</control>
-		<include>Global_Time</include>
+		
 	</controls>
 </window>

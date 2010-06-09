@@ -507,7 +507,7 @@
 		</control>
 			
 			<control type="grouplist">
-				<visible>Control.IsVisible(59) + [Container.Content(movies) | Container.Content(episodes)] + !Skin.HasSetting(no_media_flags)</visible>
+				<visible>Control.IsVisible(59) + [Container.Content(movies) | Container.Content(episodes)] + !Skin.HasSetting(no_media_flags) + !Player.HasAudio</visible>
 				<description>Media Codec Flagging Images</description>
 				<posx>0</posx>
 				<posy>20</posy>

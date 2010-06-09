@@ -98,7 +98,7 @@
 				</control>
 				<!-- current condition -->
 				<control type="label">
-					<label>$LOCALIZE[31222]</label>
+					<label>$LOCALIZE[143]</label>
 					<width>205</width>
 					<height>35</height>
 					<posx>5</posx>
@@ -109,7 +109,7 @@
 				</control>
 				<!-- current temp -->
 				<control type="label">
-					<label>[B]$LOCALIZE[31222][/B]</label>
+					<label>[B]$LOCALIZE[143][/B]</label>
 					<posx>5</posx>
 					<posy>100</posy>
 					<width>95</width>
@@ -634,7 +634,7 @@
 			<include>Animation_SlideDownFadeOut</include>
 			<control type="label">
 				<!-- LOC -->
-				<label>[B]Location:[/B] $INFO[Weather.Location]</label>
+				<label>[B]$LOCALIZE[31251]:[/B] $INFO[Weather.Location]</label>
 				<width>960</width>
 				<font>Font_Bartowski_Movies_Title</font>
 				<textcolor>mainblue</textcolor>
@@ -643,7 +643,7 @@
 			</control>
 			<control type="label">
 				<!-- LOC -->
-				<label>[B]Last Updated:[/B] $INFO[Window.Property(Updated)]</label>
+				<label>[B]$LOCALIZE[31252]:[/B] $INFO[Window.Property(Updated)]</label>
 				<posy>40</posy>
 				<include>Global_HeadingDetailVars</include>
 			</control>

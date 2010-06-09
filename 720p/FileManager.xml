@@ -211,27 +211,9 @@
 			</control>
 		</control>
 		<include>Object_DebugGrid</include>	
-		<include>Global_ContextFilter</include>
-		<!-- Heading -->
-		<control type="group">
-			<posx>30</posx>
-			<posy>30</posy>
-			<include>Animation_SlideDownFadeOut</include>
-			<control type="label">
-				<label>7</label>
-				<include>Global_HeadingSectionVars</include>
-			</control>
-			<control type="label">
-				<label>$INFO[listitem.filenameandpath]</label>
-				<include>Global_HeadingDetailVars</include>
-			</control>
-		</control>
-		<include>Global_Time</include>
-		<include>Global_RSS</include>
-		<control type="label">
-			<include>WindowID</include>
-			<label>FileManager.xml</label>
-			<visible>Skin.HasSetting(debugmode)</visible>
-		</control>
+		
+		
+		
+		
 	</controls>
 </window>

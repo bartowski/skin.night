@@ -36,7 +36,7 @@
 			<onright>593</onright>
 			<onup>7000</onup>
 			<ondown></ondown>
-			<viewtype label="3D Banner">list</viewtype>
+			<viewtype label="$LOCALIZE[31250]">list</viewtype>
 			<orientation>horizontal</orientation>
 			<focusposition>2</focusposition>
 			<scrolltime>400</scrolltime>

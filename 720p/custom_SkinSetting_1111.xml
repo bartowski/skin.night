@@ -113,11 +113,11 @@
 					</item>
 					<item id="2">
 						<label>513</label>
-						<label2>31112</label2>
+						<label2>33063</label2>
 						<onclick>-</onclick>
 					</item>
 					<item id="3">
-						<label>31102</label>
+						<label>33068</label>
 						<label2>31115</label2>
 						<onclick>-</onclick>
 					</item>
@@ -127,32 +127,18 @@
 						<onclick>-</onclick>
 					</item>
 					<item id="5">
-						<label>$LOCALIZE[31013] / $LOCALIZE[31209]</label>
-						<label2>31112</label2>
+						<label>$LOCALIZE[20342] / $LOCALIZE[31209]</label>
+						<label2>33063</label2>
 						<onclick>-</onclick>
 					</item>
 					<item id="6">
 						<label>31029</label>
-						<label2>31112</label2>
+						<label2>33063</label2>
 						<onclick>-</onclick>
 					</item>
 				</content>
 			</control>
-			<!--<control type="image">
-				<posx>268</posx>
-				<posy>10</posy>
-				<width>790</width>
-				<height>618</height>
-				<texture border="5">confluence/black-back2.png</texture>
-			</control>
-			<control type="image">
-				<posx>268</posx>
-				<posy>10</posy>
-				<width>804</width>
-				<height>100</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>confluence/GlassTitleBar.png</texture>
-			</control>-->
+			
 			<control type="label">
 				<description>header label</description>
 				<posx>460</posx>
@@ -183,7 +169,7 @@
 						<width>860</width>
 						<height>45</height>
 						<font>font16caps</font>
-						<label>Global Settings</label>
+						<label>$LOCALIZE[31256]</label>
 						<textcolor>mainblue</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
@@ -346,7 +332,7 @@
 						<height>40</height>
 						<font>Font_KeyboardTitle</font>
 						<textoffsetx>40</textoffsetx>
-						<label>Use random music backdrops - Same ones used on Home</label>
+						<label>$LOCALIZE[31257]</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
@@ -360,7 +346,7 @@
 						<height>40</height>
 						<font>Font_KeyboardTitle</font>
 						<textoffsetx>40</textoffsetx>
-						<label>Use random photo backdrops - Same ones used on Home</label>
+						<label>$LOCALIZE[31258]</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
@@ -470,7 +456,7 @@
 						<width>860</width>
 						<height>45</height>
 						<font>font16caps</font>
-						<label>Home screen options</label> <!--31101-->
+						<label>$LOCALIZE[31259]</label> <!--31101-->
 						<textcolor>mainblue</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
@@ -566,7 +552,7 @@
 						<width>860</width>
 						<height>45</height>
 						<font>font16caps</font>
-						<label>Add Custom Items to Home Menu - [COLOR=red]Merge Only[/COLOR]</label>
+						<label>$LOCALIZE[31260] - [COLOR=red]Merge Only[/COLOR]</label>
 						<textcolor>mainblue</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
@@ -579,7 +565,7 @@
 						<font>Font_KeyboardKeys</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>Home Menu One</label>
+						<label>$LOCALIZE[31261] 1</label>
 						<onfocus>Skin.SetString(MoviesCustom,1)</onfocus>
 						<onclick>Skin.ToggleSetting(Menu_Custom1)</onclick>
 						<selected>Skin.HasSetting(Menu_Custom1)</selected>
@@ -625,7 +611,7 @@
 						<font>Font_KeyboardKeys</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>Home Menu Two</label>
+						<label>$LOCALIZE[31261] 2</label>
 						<onfocus>Skin.SetString(MoviesCustom,2)</onfocus>
 						<onclick>Skin.ToggleSetting(Menu_Custom2)</onclick>
 						<selected>Skin.HasSetting(Menu_Custom2)</selected>
@@ -671,7 +657,7 @@
 						<font>Font_KeyboardKeys</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>Home Menu Three</label>
+						<label>$LOCALIZE[31261] 3</label>
 						<onfocus>Skin.SetString(MoviesCustom,3)</onfocus>
 						<onclick>Skin.ToggleSetting(Menu_Custom3)</onclick>
 						<selected>Skin.HasSetting(Menu_Custom3)</selected>
@@ -683,7 +669,7 @@
 						
 						<control type="button" id="8205">
 							<description>custom home 3</description>
-							<label>- Set Label</label>
+							<label>- $LOCALIZE[31262]</label>
 							<label2>[COLOR=lightblue]$INFO[Skin.String(Menu_Custom3_Label)][/COLOR]</label2>
 							<width>860</width>
 							<height>40</height>
@@ -1082,7 +1068,7 @@
 								<thumb>$INFO[Skin.String(CustomSettingsFolder)]</thumb>
 							</item>
 							<item id="8">
-								<label>31019</label>
+								<label>13005</label>
 								<onclick>-</onclick>
 								<icon>special://skin/media/backgrounds/shutdown.jpg</icon>
 								<thumb>$INFO[Skin.String(Home_Custom_Back_Shutdown_Folder)]</thumb>
@@ -2437,7 +2423,7 @@
 							<width>860</width>
 							<height>45</height>
 							<font>font16caps</font>
-							<label>Script to Automatically Download Logos</label>
+							<label>$LOCALIZE[31263]</label>
 							<textcolor>mainblue</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
@@ -2448,7 +2434,7 @@
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
 							<textoffsetx>10</textoffsetx>
-							<label>Click to Run the logo script</label>
+							<label>$LOCALIZE[31264]</label>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>confluence/button-focus.png</texturefocus>
@@ -2462,7 +2448,7 @@
 							<width>600</width>
 							<height>290</height>
 							<align>justify</align>
-							<label>By clicking the above button, the script will automatically match whatever TV shows you have and then download the correct logo, if there is one, and save it as logo.png in the root of that TV shows folder</label>
+							<label>$LOCALIZE[31265]</label>
 							<font>Font_Bartowski_Movies_Plot</font>
 							<textcolor>ffffffff</textcolor>
 							<visible>Container(9000).Hasfocus(5)</visible>
@@ -2520,7 +2506,7 @@
 							<width>860</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
-							<label>"$LOCALIZE[31050]"</label>
+							<label>"$LOCALIZE[20359]"</label>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
@@ -2687,10 +2673,6 @@
 			</control>
 		</control>
 		
-		<control type="label">
-			<include>WindowID</include>
-			<label>CustomSettings.xml</label>
-			<visible>Skin.HasSetting(debugmode)</visible>
-		</control>
+		
 	</controls>
 </window>

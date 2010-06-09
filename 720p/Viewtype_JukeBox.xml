@@ -10,7 +10,7 @@
 	</control>
 	
 		<control type="panel" id="50">
-			<viewtype label="JukeBox">list</viewtype>
+			<viewtype label="$LOCALIZE[31066]">list</viewtype>
 			<posx>366</posx>
 			<posy>460</posy>
 			<width>800</width>

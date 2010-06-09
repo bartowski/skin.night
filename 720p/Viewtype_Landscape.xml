@@ -68,7 +68,7 @@
 			<onright>52</onright>
 			<onup>7000</onup>
 			<ondown>7000</ondown>			
-			<viewtype label="Landscape">list</viewtype>
+			<viewtype label="$LOCALIZE[31052]">list</viewtype>
 			<orientation>horizontal</orientation>
 			<scrolltime>300</scrolltime>
 			<focusposition>2</focusposition>
@@ -210,7 +210,7 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Landscape_RightArea</include>
-			<visible>Control.IsVisible(52) + !Container.Content(tvshows)</visible>
+			<visible>Control.IsVisible(52) + !Container.Content(tvshows) + !Player.HasAudio</visible>
 		</control>
 		<control type="largeimage" id="9014">
 			<visible></visible>
@@ -223,7 +223,7 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Landscape_RightArea</include>
-			<visible>Control.IsVisible(52) + !Container.Content(tvshows)</visible>
+			<visible>Control.IsVisible(52) + !Container.Content(tvshows) + !Player.HasAudio</visible>
 		</control>
 		<control type="image"><!-- Last Overlay -->
 			<visible>Control.IsVisible(52)</visible>
@@ -245,7 +245,7 @@
 			<label>[B]$INFO[ListItem.TVShowtitle][/B]</label>
 			<include>Animation_Viewtype_Landscape_RightArea</include>
 			<include>Animation_HiddenByInfo</include>
-			<visible>Control.IsVisible(52) + IsEmpty(Control.GetLabel(7014)) + IsEmpty(Control.GetLabel(9014)) + !Container.Content(tvshows)</visible>
+			<visible>Control.IsVisible(52) + IsEmpty(Control.GetLabel(7014)) + IsEmpty(Control.GetLabel(9014)) + !Container.Content(tvshows) + !Player.HasAudio</visible>
 		</control>
 		
 		<control type="group">

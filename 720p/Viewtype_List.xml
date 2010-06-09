@@ -25,7 +25,7 @@
 			<onright>53</onright>
 			<onup>7000</onup>
 			<ondown></ondown>
-			<viewtype label="3D Landscape">list</viewtype>
+			<viewtype label="$LOCALIZE[31053]">list</viewtype>
 			<orientation>horizontal</orientation>
 			<focusposition>2</focusposition>
 			<scrolltime>400</scrolltime>

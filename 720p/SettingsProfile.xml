@@ -8,7 +8,6 @@
 			<height>720</height>
 			<texture>special://skin/media/backdrops/curtains_diffuse.png</texture>
 			<aspectratio>scale</aspectratio>
-			<include>VisibleFadeEffect</include>
 		</control>
 		<control type="group">
 			<posx>90</posx>
@@ -21,22 +20,6 @@
 				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
 				<effect type="fade" start="100" end="0" time="300" />
 			</animation>			
-			<!--<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>1100</width>
-				<height>640</height>
-				<texture border="20">confluence/DialogBack1.png</texture>
-			</control>
-			<control type="image">
-				<description>LOGO</description>
-				<posx>30</posx>
-				<posy>15</posy>
-				<width>220</width>
-				<height>80</height>
-				<aspectratio>keep</aspectratio>
-				<texture>Confluence_Logo.png</texture>
-			</control>-->
 			<control type="button" id ="4">
 				<description>Enable Login screen</description>
 				<posx>10</posx>
@@ -139,21 +122,6 @@
 					<label fallback="13170">$INFO[Container(2).ListItem.Label2]</label>
 				</control>
 			</control>
-			<!--<control type="image">
-				<posx>268</posx>
-				<posy>10</posy>
-				<width>790</width>
-				<height>618</height>
-				<texture border="5">black-back2.png</texture>
-			</control>
-			<control type="image">
-				<posx>268</posx>
-				<posy>10</posy>
-				<width>804</width>
-				<height>70</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>GlassTitleBar.png</texture>
-			</control>-->
 			<control type="label">
 				<description>header label</description>
 				<posx>300</posx>

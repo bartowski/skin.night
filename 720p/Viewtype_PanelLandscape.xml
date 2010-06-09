@@ -19,7 +19,8 @@
 			<posy>0</posy>
 			<width>570</width>
 			<height>318</height>
-			<texture diffuse="Showcase/showcase-diffuse.png">$INFO[Container(57).listitem.property(fanart_image)]</texture>
+			<!--<texture diffuse="Showcase/showcase-diffuse.png">$INFO[Container(57).listitem.property(fanart_image)]</texture>-->
+			<texture diffuse="Showcase/showcase-diffuse.png">$INFO[Container(57).listitem.Icon]</texture>
 			<fadetime>400</fadetime>
 			<aspectratio>stretch</aspectratio>
 			<include>Animation_HiddenByInfo</include>
@@ -27,7 +28,7 @@
 		</control>
 		
 		<control type="panel" id="57">
-				<visible>!Skin.HasSetting(no_LandPanel) + [Container.Content(tvshows) + !Skin.HasSetting(TVPosters) + !Skin.HasSetting(TVBanners)]</visible>
+				<visible>!Skin.HasSetting(no_LandPanel) + [[Container.Content(tvshows) + !Skin.HasSetting(TVPosters) + !Skin.HasSetting(TVBanners)] | Container.Content(episodes)]</visible>
 				<posx>560</posx>
 				<posy>-126</posy><!-- -105 -->
 				<width>800</width>
@@ -35,7 +36,7 @@
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>300</scrolltime>
 				<orientation>vertical</orientation>
-				<viewtype label="LandPanel">Wall</viewtype>
+				<viewtype label="$LOCALIZE[31054]">Wall</viewtype>
 				<onleft>7000</onleft>
 				<onright>7000</onright>
 				<onup>57</onup>
@@ -135,7 +136,7 @@
 		<include>Animation_HiddenByInfo</include>
 		<visible>Control.IsVisible(57)</visible>	
 			<control type="largeimage" id="7037">
-				<visible>Container.Content(tvshows)</visible>
+				<visible></visible>
 				<posx>160</posx>
 				<posy>300</posy>
 				<width>230</width>
@@ -143,9 +144,10 @@
 				<texture>$INFO[ListItem.path]logo.png</texture>
 				<fadetime>100</fadetime>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
+				<animation effect="slide" start="0,0" end="14,0" time="0" tween="cubic" easing="inout" condition="Container.Content(episodes)">Conditional</animation>
 			</control>
 			<control type="largeimage" id="9037">
-				<visible>Container.Content(tvshows)</visible>
+				<visible></visible>
 				<posx>160</posx>
 				<posy>300</posy>
 				<width>230</width>
@@ -153,9 +155,10 @@
 				<texture>$INFO[ListItem.path]../logo.png</texture>
 				<fadetime>100</fadetime>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
+				<animation effect="slide" start="0,0" end="14,0" time="0" tween="cubic" easing="inout" condition="Container.Content(episodes)">Conditional</animation>
 			</control>
 			<control type="label">
-				<visible>Container.Content(tvshows) + IsEmpty(Control.GetLabel(7037))</visible>
+				<visible>IsEmpty(Control.GetLabel(7037)) + IsEmpty(Control.GetLabel(9037))</visible>
 				<posx>15</posx>
 				<posy>320</posy>
 				<width>555</width>
@@ -177,6 +180,28 @@
 				<label>$INFO[ListItem.Genre]</label>
 			</control>
 			<control type="label">
+				<visible>Container.Content(episodes)</visible>
+				<posx>15</posx>
+				<posy>394</posy>
+				<width>555</width>
+				<height>50</height>
+				<align>center</align>
+				<font>Font_Bartowski_Smaller_MenuValue</font>
+				<textcolor>ff67ffff</textcolor>
+				<label>"$INFO[ListItem.Title]"</label>
+			</control>
+			<control type="label">
+				<visible>Container.Content(episodes)</visible>
+				<posx>15</posx>
+				<posy>426</posy>
+				<width>555</width>
+				<height>50</height>
+				<align>center</align>
+				<font>Font_Bartowski_Showcase_runtime_year</font>
+				<textcolor>white</textcolor>
+				<label>$LOCALIZE[20373] $INFO[ListItem.Season]/$LOCALIZE[20359] $INFO[ListItem.Episode]</label>
+			</control>
+			<control type="label">
 				<visible>Container.Content(movies)</visible>
 				<posx>15</posx>
 				<posy>356</posy>
@@ -189,10 +214,10 @@
 			</control>
 	</control>
 	<control type="group">
-		<visible>Control.IsVisible(57)</visible>
+		<visible>Control.IsVisible(57) + Container.Content(episodes)</visible>
 		<include>Animation_HiddenByInfo</include>
 			<control type="textbox"><!--TV Plot-->
-				<visible>Container.Content(tvshows) + !Player.HasAudio</visible>
+				<visible>!Player.HasAudio</visible>
 				<posx>15</posx>
 				<posy>410</posy>
 				<width>555</width>
@@ -200,11 +225,12 @@
 				<font>Font_Bartowski_Showcase_plot</font>
 				<textcolor>ffffffff</textcolor>
 				<label>$INFO[ListItem.Plot]</label>
+				<align>justify</align>
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				<include>Animation_Viewtype_Panel_BottomArea</include>
 			</control>
 			<control type="textbox"><!--TV Plot-->
-				<visible>Container.Content(tvshows) + Player.HasAudio</visible>
+				<visible>Player.HasAudio</visible>
 				<posx>15</posx>
 				<posy>410</posy>
 				<width>555</width>
@@ -212,19 +238,67 @@
 				<font>Font_Bartowski_Showcase_plot</font>
 				<textcolor>ffffffff</textcolor>
 				<label>$INFO[ListItem.Plot]</label>
+				<align>justify</align>
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				<include>Animation_Viewtype_Panel_BottomArea</include>
 			</control>
-			<control type="image"><!-- last overlay -->
-				<visible>Container.Content(tvshows)</visible>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>1280</width>
-				<height>720</height>
-				<texture>panel/last-overlay.png</texture>
+	</control>
+	<control type="group">
+		<visible>Control.IsVisible(57)</visible>
+		<include>Animation_HiddenByInfo</include>
+			<control type="textbox"><!--TV Plot-->
+				<visible>!Player.HasAudio</visible>
+				<posx>15</posx>
+				<posy>410</posy>
+				<width>555</width>
+				<height>264</height>
+				<font>Font_Bartowski_Showcase_plot</font>
+				<textcolor>ffffffff</textcolor>
+				<label>$INFO[ListItem.Plot]</label>
+				<align>justify</align>
+				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+				<include>Animation_Viewtype_Panel_BottomArea</include>
+			</control>
+			<control type="textbox"><!--TV Plot-->
+				<visible>Player.HasAudio</visible>
+				<posx>15</posx>
+				<posy>410</posy>
+				<width>555</width>
+				<height>144</height>
+				<font>Font_Bartowski_Showcase_plot</font>
+				<textcolor>ffffffff</textcolor>
+				<label>$INFO[ListItem.Plot]</label>
+				<align>justify</align>
+				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+				<include>Animation_Viewtype_Panel_BottomArea</include>
 			</control>
 	</control>
-		<include>Trailer_Panel</include>
-		<include>Music_Global_Showcase</include>
+	<control type="image"><!-- last overlay -->
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<texture>panel/last-overlay.png</texture>
+		<visible>Control.IsVisible(57)</visible>
+	</control>
+		<control type="grouplist">
+			<visible>Control.IsVisible(57) + Container.Content(episodes) + !Skin.HasSetting(no_media_flags) + !Player.HasAudio</visible>
+			<description>Media Codec Flagging Images</description>
+			<posx>20</posx>
+			<posy>680</posy>
+			<width>540</width>
+			<align>center</align>
+			<itemgap>0</itemgap>
+			<orientation>horizontal</orientation>
+			<include>VideoCodecFlaggingConditions</include>
+			<include>AudioCodecFlaggingConditions</include>
+			<include>AspectCodecFlaggingConditions</include>
+			<include>VideoTypeHackFlaggingConditions</include>
+			<include>VideoMPAAFlaggingConditions</include>
+			<include>Animation_HiddenByInfo</include>
+			<include>Animation_Viewtype_Panel_BottomArea</include>
+		</control>
+	
+		
 	</include>
 </includes>

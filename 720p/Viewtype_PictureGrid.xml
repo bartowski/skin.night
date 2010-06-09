@@ -39,7 +39,7 @@
 			<onright>50</onright>
 			<onup>7000</onup>
 			<ondown>7000</ondown>
-			<viewtype label="Showcase">list</viewtype>
+			<viewtype label="$LOCALIZE[31063]">list</viewtype>
 			<orientation>horizontal</orientation>
 			<focusposition>3</focusposition>
 			<scrolltime>300</scrolltime>

@@ -145,7 +145,7 @@ Normal Fullscreen
 				<align>left</align>
 				<font>Font_Date</font>
 				<textcolor>ffffffff</textcolor>
-				<label>$INFO[MusicPlayer.year,[B]$LOCALIZE[31070]: [/B]]</label>
+				<label>$INFO[MusicPlayer.year,[B]$LOCALIZE[345]: [/B]]</label>
 			</control>
 	</control>
 		
@@ -405,7 +405,7 @@ Visualization Fullscreen
 				<align>left</align>
 				<font>Font_Date</font>
 				<textcolor>ffffffff</textcolor>
-				<label>$INFO[MusicPlayer.year,[B]$LOCALIZE[31070]: [/B]]</label>
+				<label>$INFO[MusicPlayer.year,[B]$LOCALIZE[345]: [/B]]</label>
 			</control>
 	</control>
 		

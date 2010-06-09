@@ -9,9 +9,9 @@
 			<animation effect="slide" start="0,0" end="-420,0" time="0" condition="Window.IsActive(133) | Window.IsActive(112)">Conditional</animation>
 			<visible>!Window.IsVisible(mutebug)</visible>
 			 <control type="image">
-				<posx>0</posx>
+				<posx>140</posx>
 				<posy>-16</posy>
-				<width>400</width>
+				<width>240</width>
 				<height>40</height>
 				<texture flipy="true" border="20,20,20,2">Confluence/InfoMessagePanel2.png</texture>
 			</control>
@@ -39,9 +39,9 @@
 				</control>
 				<control type="progress" id="1">
 					<description>Progressbar</description>
-					<posx>0</posx>
+					<posx>140</posx>
 					<posy>9</posy>
-					<width>248</width>
+					<width>120</width>
 					<height>14</height>
 					<info>Player.Volume</info>
 					<texturebg>osd_volume_indicator_background.png</texturebg>

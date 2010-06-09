@@ -20,7 +20,7 @@
 		
 
 		<include>7000_has_focus</include>
-		<!--<include>Global_ContextFilter</include>-->
+		
 		<control type="image"><!-- Floor -->
 			<posx>0</posx>
 			<posy>650</posy>
@@ -30,11 +30,7 @@
 			<visible>ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews)</visible>
 			<include>Animation_ViewOptions_whitebar</include>
 		</control>
-		<control type="label">
-			<include>WindowID</include>
-			<label>$INFO[Window.Property(xmlfile)]</label>
-			<visible>Skin.HasSetting(debugmode)</visible>
-		</control>
+		
 
 		<control type="grouplist" id="7000">
 			<visible>!Skin.HasSetting(LockViews)</visible>

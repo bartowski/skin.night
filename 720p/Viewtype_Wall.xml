@@ -34,7 +34,7 @@
 					<pagecontrol>60</pagecontrol>
 					<scrolltime>400</scrolltime>
 					<orientation>horizontal</orientation>
-					<viewtype label="Wall">Wall</viewtype>
+					<viewtype label="$LOCALIZE[31064]">Wall</viewtype>
 					<onleft>54</onleft>
 					<onright>54</onright>
 					<onup>7000</onup>
@@ -196,7 +196,7 @@
 			</control>
 	</control>
 		<control type="grouplist">
-			<visible>Control.IsVisible(54) + Container.Content(movies) + !Skin.HasSetting(no_media_flags)</visible>
+			<visible>Control.IsVisible(54) + Container.Content(movies) + !Skin.HasSetting(no_media_flags) + !Player.HasMedia</visible>
 			<description>Media Codec Flagging Images</description>
 			<posx>880</posx>
 			<posy>680</posy>

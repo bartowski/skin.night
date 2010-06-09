@@ -62,7 +62,6 @@
 			<texture>common/line_1.png</texture>
 			<colordiffuse>99ffffff</colordiffuse>
 			<include>Animation_ZoomInZoomOut</include>
-			<include>Animation_ZoomedByMenu</include>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -72,7 +71,6 @@
 			<texture>common/line_1.png</texture>
 			<colordiffuse>99ffffff</colordiffuse>
 			<include>Animation_ZoomInZoomOut</include>
-			<include>Animation_ZoomedByMenu</include>
 		</control>
 		<control type="image">
 			<description>Large Icon Image</description>
@@ -85,7 +83,6 @@
 			<bordertexture border="32">list/files_list_glow.png</bordertexture>
 			<bordersize>32</bordersize>
 			<include>Animation_ZoomInZoomOut</include>
-			<include>Animation_ZoomedByMenu</include>
 		</control>
 	<!-- view options -->
 		<control type="image"><!-- Floor -->

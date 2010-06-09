@@ -289,7 +289,7 @@
 			<onleft>XBMC.PlayMedia($INFO[ListItem.Trailer],1,noresume)</onleft>
 			<onright>62</onright>
 			<scrolltime>0</scrolltime>
-			<viewtype label="WallPanel">list</viewtype>
+			<viewtype label="$LOCALIZE[31213]">list</viewtype>
 			<orientation>vertical</orientation>
 			<focusposition>6</focusposition>
 			<movement>6</movement>

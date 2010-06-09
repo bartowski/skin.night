@@ -38,11 +38,7 @@
 			<include>Animation_ViewOptions_whitebar</include>
 		</control>
 		
-		<control type="label">
-			<include>WindowID</include>
-			<label>MyPics.xml</label>
-			<visible>Skin.HasSetting(debugmode)</visible>
-		</control>	
+		
 
 		<control type="grouplist" id="7000">
 			<include>WindowMenuVars</include>

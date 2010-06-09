@@ -12,13 +12,7 @@
 				<effect type="fade" start="100" end="0" time="600" />
 			</animation>
 			
-			<control type="label">
-				<posx>640</posx>
-				<posy>0</posy>
-				<include>DialogID</include>
-				<label>DialogFullScreenInfo.xml</label>
-				<visible>Skin.HasSetting(debugmode)</visible>
-			</control>
+			
 			<control type="image">
 				<posx>0</posx>
 				<posy>-560</posy>
@@ -103,7 +97,7 @@
 					<posy>50</posy>
 					<width>412</width> 
 					<height>25</height> 
-					<label>$LOCALIZE[31068] $INFO[VideoPlayer.Season]/$LOCALIZE[31069] $INFO[VideoPlayer.Episode]</label>
+					<label>$LOCALIZE[20373] $INFO[VideoPlayer.Season]/$LOCALIZE[20359] $INFO[VideoPlayer.Episode]</label>
 					<align>left</align> 
 					<aligny>center</aligny> 
 					<font>Font_Bartowski_Under_Pause</font>
@@ -151,7 +145,7 @@
 					<aligny>center</aligny>
 					<align>left</align>
 					<font>Font_ListDetail</font>
-					<label>[B][COLOR=ff67ffff]$LOCALIZE[31071]:[/COLOR][/B] [COLOR=ffffffff]$INFO[VideoPlayer.Director][/COLOR]</label>
+					<label>[B][COLOR=ff67ffff]$LOCALIZE[20339]:[/COLOR][/B] [COLOR=ffffffff]$INFO[VideoPlayer.Director][/COLOR]</label>
 				</control>
 				<control type="label">
 					<description>Genre Info</description>
@@ -162,7 +156,7 @@
 					<aligny>center</aligny>
 					<align>left</align>
 					<font>Font_ListDetail</font>
-					<label>[B][COLOR=ff67ffff]$LOCALIZE[31072]:[/COLOR][/B] [COLOR=ffffffff]$INFO[VideoPlayer.Genre][/COLOR]</label>
+					<label>[B][COLOR=ff67ffff]$LOCALIZE[515]:[/COLOR][/B] [COLOR=ffffffff]$INFO[VideoPlayer.Genre][/COLOR]</label>
 				</control>
 			</control>
 		</control>

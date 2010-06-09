@@ -5,7 +5,7 @@
 	<include name="Music_Global_Showcase">
 		<control type="group">
 		<include>Animation_CommonFade</include>
-		<visible>[Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(51) | Window.IsActive(Home)] + Player.HasAudio + !Skin.HasSetting(zune_music)</visible>		
+		<visible>[Control.IsVisible(56) | Control.IsVisible(57) | [Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart)] | Control.IsVisible(51) | Window.IsActive(Home)] + Player.HasAudio + !Skin.HasSetting(zune_music)</visible>		
 			<control type="image"><!-- 1st overlay -->
 				<posx>0</posx>
 				<posy>0</posy>
@@ -148,7 +148,7 @@
 						<align>left</align>
 						<font>Font_Date</font>
 						<textcolor>ffffffff</textcolor>
-						<label>$INFO[MusicPlayer.year,[B]$LOCALIZE[31070]: [/B]]</label>
+						<label>$INFO[MusicPlayer.year,[B]$LOCALIZE[345]: [/B]]</label>
 						<visible>!Control.IsVisible(51)</visible>
 					</control>
 			</control>
@@ -169,7 +169,7 @@
 						<description>Track</description>
 						<posx>250</posx>
 						<posy>6</posy>
-						<width min="750" max="770">auto</width>
+						<width min="40" max="380">auto</width>
 						<align>left</align>
 						<height>18</height>
 						<font>Font_Date</font>
@@ -183,7 +183,7 @@
 						<description>artist name</description>
 						<posx>250</posx>
 						<posy>32</posy>
-						<width>800</width>
+						<width>380</width>
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>left</align>
@@ -197,7 +197,7 @@
 						<description>album name</description>
 						<posx>250</posx>
 						<posy>54</posy>
-						<width>800</width>
+						<width>380</width>
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>left</align>
@@ -218,11 +218,11 @@
 			<height>309</height>
 			<texture>music/music_top_right_fanart_back.png</texture>
 			<include>Animation_CommonFade</include>
-			<visible>[Control.IsVisible(633) | Control.IsVisible(593)] + Player.HasAudio + !Skin.HasSetting(zune_music)</visible>
+			<visible>[Control.IsVisible(633) | Control.IsVisible(593) | [Control.IsVisible(58) + Skin.HasSetting(ShowcaseFanart)]] + Player.HasAudio + !Skin.HasSetting(zune_music)</visible>
 		</control>
 		<control type="group">
 		<include>Animation_CommonFade</include>
-		<visible>[Control.IsVisible(50) | Control.IsVisible(53) | [Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)] | Control.IsVisible(593) | Control.IsVisible(633)] + Player.HasAudio + !Skin.HasSetting(zune_music)</visible>		
+		<visible>[Control.IsVisible(59) | Control.IsVisible(50) | Control.IsVisible(53) | [Control.IsVisible(58) + Skin.HasSetting(ShowcaseFanart)] | Control.IsVisible(593) | Control.IsVisible(633)] + Player.HasAudio + !Skin.HasSetting(zune_music)</visible>		
 			<control type="group">
 				<posx>1086</posx>
 				<posy>130</posy>
@@ -343,6 +343,7 @@
 						<font>Font_Date</font>
 						<textcolor>ffffffff</textcolor>
 						<label>$INFO[MusicPlayer.Album] [B]:$LOCALIZE[558][/B]</label>
+						<visible>!Control.IsVisible(59)</visible>	
 					</control>
 					<control type="label">
 						<description>album name</description>
@@ -354,7 +355,8 @@
 						<align>right</align>
 						<font>Font_Date</font>
 						<textcolor>ffffffff</textcolor>
-						<label>$INFO[MusicPlayer.year] [B]:$LOCALIZE[31070][/B]</label>
+						<label>$INFO[MusicPlayer.year] [B]:$LOCALIZE[345][/B]</label>
+						<visible>!Control.IsVisible(59)</visible>	
 					</control>
 			</control>
 				
@@ -366,6 +368,7 @@
 			<posx>850</posx>
 			<posy>40</posy>
 			<visible>MusicPlayer.HasNext</visible>
+				<animation effect="slide" start="0,0" end=",-30" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(59)">Conditional</animation>
 				<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 					<effect type="slide" start="0,-400" end="0,0" time="500" delay="21500" />
 					<effect type="slide" start="0,0" end="0,-400" time="500" delay="28000" />
@@ -374,7 +377,7 @@
 						<description>Track</description>
 						<posx>250</posx>
 						<posy>6</posy>
-						<width min="750" max="770">auto</width>
+						<width min="40" max="380">auto</width>
 						<align>right</align>
 						<height>18</height>
 						<font>Font_Date</font>
@@ -388,7 +391,7 @@
 						<description>artist name</description>
 						<posx>250</posx>
 						<posy>32</posy>
-						<width>800</width>
+						<width>380</width>
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>right</align>
@@ -402,7 +405,7 @@
 						<description>album name</description>
 						<posx>250</posx>
 						<posy>54</posy>
-						<width>800</width>
+						<width>380</width>
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>right</align>
@@ -425,7 +428,7 @@
 		</control>
 		<control type="group">
 		<include>Animation_CommonFade</include>
-		<visible>[Control.IsVisible(58) | Control.IsVisible(59) | [Control.IsVisible(55) + Window.IsActive(musiclibrary)]] + Player.HasAudio + !Skin.HasSetting(zune_music)</visible>		
+		<visible>[Control.IsVisible(58) | Control.IsVisible(59) | Control.IsVisible(55)] + Window.IsActive(musiclibrary) + Player.HasAudio + !Skin.HasSetting(zune_music)</visible>		
 			<control type="group">
 				<posx>1086</posx>
 				<posy>130</posy>
@@ -558,7 +561,7 @@
 						<align>right</align>
 						<font>Font_Date</font>
 						<textcolor>ffffffff</textcolor>
-						<label>$INFO[MusicPlayer.year] [B]:$LOCALIZE[31070][/B]</label>
+						<label>$INFO[MusicPlayer.year] [B]:$LOCALIZE[345][/B]</label>
 						<visible>!Control.IsVisible(59)</visible>	
 					</control>
 			</control>
@@ -579,7 +582,7 @@
 						<description>Track</description>
 						<posx>250</posx>
 						<posy>6</posy>
-						<width min="750" max="770">auto</width>
+						<width min="40" max="380">auto</width>
 						<align>right</align>
 						<height>18</height>
 						<font>Font_Date</font>
@@ -594,7 +597,7 @@
 						<description>artist name</description>
 						<posx>250</posx>
 						<posy>32</posy>
-						<width>800</width>
+						<width>380</width>
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>right</align>
@@ -609,7 +612,7 @@
 						<description>album name</description>
 						<posx>250</posx>
 						<posy>54</posy>
-						<width>800</width>
+						<width>380</width>
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>right</align>
@@ -764,7 +767,7 @@
 						<align>left</align>
 						<font>Font_Date</font>
 						<textcolor>ffffffff</textcolor>
-						<label>$INFO[MusicPlayer.year,[B]$LOCALIZE[31070]: [/B]]</label>
+						<label>$INFO[MusicPlayer.year,[B]$LOCALIZE[345]: [/B]]</label>
 					</control>
 			</control>
 				
@@ -784,7 +787,7 @@
 						<description>Track</description>
 						<posx>250</posx>
 						<posy>6</posy>
-						<width min="750" max="770">auto</width>
+						<width min="750" max="380">auto</width>
 						<align>left</align>
 						<height>18</height>
 						<font>Font_Date</font>
@@ -798,7 +801,7 @@
 						<description>artist name</description>
 						<posx>250</posx>
 						<posy>32</posy>
-						<width>800</width>
+						<width>380</width>
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>left</align>
@@ -812,7 +815,7 @@
 						<description>album name</description>
 						<posx>250</posx>
 						<posy>54</posy>
-						<width>800</width>
+						<width>380</width>
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>left</align>
@@ -827,7 +830,7 @@
 	<include name="Music_Global_LowerRight">
 		<control type="group">
 		<include>Animation_CommonFade</include>
-		<visible>[[Control.IsVisible(52) + Container.Content(tvshows)] + Player.HasAudio + !Skin.HasSetting(zune_music) + !Skin.HasSetting(Landscape_Fanart)] | [[Control.IsVisible(597) + Container.Content(movies)] + Player.HasAudio] | [Control.IsVisible(53) + Window.IsActive(musiclibrary) + Player.HasAudio]</visible>		
+		<visible>[Control.IsVisible(52) + Player.HasAudio + !Skin.HasSetting(zune_music) + Window.IsActive(videolibrary)] | [[Control.IsVisible(597) | Control.IsVisible(54)] + Container.Content(movies)] + Player.HasAudio] | [Control.IsVisible(53) + Window.IsActive(musiclibrary) + Player.HasAudio]</visible>		
 			<control type="group">
 				<posx>1086</posx>
 				<posy>684</posy>
@@ -836,7 +839,7 @@
 						<effect type="slide" start="0,0" end="400,0" time="500" delay="21000" />
 						<effect type="slide" start="0,0" end="400,0" time="500" delay="28000" />
 					</animation>
-						<control type="image" id="7726">
+						<control type="image" id="17726">
 							<description>dirty hack for showing cdart image</description>
 							<posx>34</posx>
 							<posy>-120</posy>
@@ -891,7 +894,7 @@
 			<control type="group">
 			<posx>850</posx>
 			<posy>610</posy>
-				<animation effect="slide" start="0,0" end="-80,0" delay="600" time="2000" tween="cubic" easing="inout" condition="!IsEmpty(Control.GetLabel(7726))">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-80,0" delay="600" time="2000" tween="cubic" easing="inout" condition="!IsEmpty(Control.GetLabel(17726))">Conditional</animation>
 				<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 					<effect type="slide" start="0,400" end="0,0" time="500" delay="0" />
 					<effect type="slide" start="0,0" end="0,400" time="500" delay="21000" />
@@ -947,7 +950,7 @@
 						<align>right</align>
 						<font>Font_Date</font>
 						<textcolor>ffffffff</textcolor>
-						<label>$INFO[MusicPlayer.Album] [B]:$LOCALIZE[31070][/B]</label>
+						<label>$INFO[MusicPlayer.Album] [B]:$LOCALIZE[558][/B]</label>
 					</control>
 					<control type="label">
 						<description>album name</description>
@@ -959,7 +962,7 @@
 						<align>right</align>
 						<font>Font_Date</font>
 						<textcolor>ffffffff</textcolor>
-						<label>$INFO[MusicPlayer.year] [B]:$LOCALIZE[31070][/B]</label>
+						<label>$INFO[MusicPlayer.year] [B]:$LOCALIZE[345][/B]</label>
 					</control>
 			</control>
 				
@@ -979,7 +982,7 @@
 						<description>Track</description>
 						<posx>250</posx>
 						<posy>6</posy>
-						<width min="750" max="770">auto</width>
+						<width min="750" max="380">auto</width>
 						<align>right</align>
 						<height>18</height>
 						<font>Font_Date</font>
@@ -993,7 +996,7 @@
 						<description>artist name</description>
 						<posx>250</posx>
 						<posy>32</posy>
-						<width>800</width>
+						<width>380</width>
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>right</align>
@@ -1007,7 +1010,7 @@
 						<description>album name</description>
 						<posx>250</posx>
 						<posy>54</posy>
-						<width>800</width>
+						<width>380</width>
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>right</align>

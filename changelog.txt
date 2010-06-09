@@ -1,4 +1,9 @@
-Update 6/6/2010
+Update 6/8/2010
+  -Smaller volumebar
+  -Fixed some global music issues
+  -Added logo to the view "Fanart"
+
+Update 6/7/2010
   -Fixed the global time issue I left last night
   -Minor touch ups to "WallPanel" view
   -Changed pausebar when playing DVD

@@ -51,7 +51,7 @@
 			<height>885</height><!-- 1570  1280 -->
 			<scrolltime>300</scrolltime>
 			<orientation>vertical</orientation>
-			<viewtype label="Panel">List</viewtype>
+			<viewtype label="$LOCALIZE[31051]">List</viewtype>
 			<onleft>7000</onleft>
 			<onright>65</onright>
 			<onup>56</onup>

@@ -26,7 +26,7 @@
 			<onright>633</onright>
 			<onup>7000</onup>
 			<ondown>8374</ondown>			
-			<viewtype label="Fanart">list</viewtype>
+			<viewtype label="$LOCALIZE[20445]">list</viewtype>
 			<orientation>horizontal</orientation>
 			<scrolltime>300</scrolltime>
 			<focusposition>2</focusposition>
@@ -157,8 +157,38 @@
 				</control>
 			</focusedlayout>
 		</control>
-		
-		
+	
+	
+	<control type="group">
+	<include>Animation_LandscapeFade</include>
+	<include>Animation_HiddenByInfo</include>
+	<visible>Control.IsVisible(633) + [Container.Content(seasons) | Container.Content(episodes)]</visible>
+		<control type="image"> 
+			<posx>0</posx>
+			<posy>0</posy>   
+			<width>413</width>     
+			<height>215</height> 
+			<texture>tv-landscape/land_fanart_logo_back.png</texture>
+		</control>
+		<control type="largeimage" id="7015">
+			<posx>20</posx>
+			<posy>0</posy>
+			<width>230</width>
+			<height>89</height>
+			<texture>$INFO[ListItem.path]logo.png</texture>
+			<fadetime>100</fadetime>
+			<aspectratio scalediffuse="false">stretch</aspectratio>
+		</control>
+		<control type="largeimage" id="9015">
+			<posx>20</posx>
+			<posy>0</posy>
+			<width>230</width>
+			<height>89</height>
+			<texture>$INFO[ListItem.path]../logo.png</texture>
+			<fadetime>100</fadetime>
+			<aspectratio scalediffuse="false">stretch</aspectratio>
+		</control>
+	</control>
 	
 	<control type="group">
 	<animation effect="zoom" start="640,0,1,720" end="0,0,1280,720" time="200" delay="200">Visible</animation>

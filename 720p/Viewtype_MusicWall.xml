@@ -14,7 +14,7 @@
 <!-- Browser -->
 	
 		<control type="panel" id="53">
-			<viewtype label="Wall">icon</viewtype>
+			<viewtype label="$LOCALIZE[31064]">icon</viewtype>
 			<posx>-230</posx>
 			<posy>195</posy>
 			<width>1810</width>

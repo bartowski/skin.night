@@ -25,7 +25,7 @@
 				
 				<!-- current temp -->
 				<control type="label">
-					<label>[B]$LOCALIZE[31222][/B]</label>
+					<label>[B]$LOCALIZE[143][/B]</label>
 					<posx>60</posx>
 					<posy>100</posy>
 					<width>95</width>
@@ -103,7 +103,7 @@
 				
 				<!-- current temp -->
 				<control type="label">
-					<label>[B]$LOCALIZE[31222][/B]</label>
+					<label>[B]$LOCALIZE[143][/B]</label>
 					<posx>60</posx>
 					<posy>100</posy>
 					<width>95</width>
@@ -228,7 +228,7 @@
 				
 				<!-- current temp -->
 				<control type="label">
-					<label>[B]$LOCALIZE[31222][/B]</label>
+					<label>[B]$LOCALIZE[143][/B]</label>
 					<posx>60</posx>
 					<posy>100</posy>
 					<width>95</width>

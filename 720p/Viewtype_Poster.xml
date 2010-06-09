@@ -55,7 +55,7 @@
 			<onright>50</onright>
 			<onup>68</onup>
 			<ondown>XBMC.PlayMedia($INFO[ListItem.Trailer],1,noresume)</ondown>
-			<viewtype label="Poster">list</viewtype>
+			<viewtype label="$LOCALIZE[31062]">list</viewtype>
 			<orientation>horizontal</orientation>
 			<focusposition>3</focusposition>
 			<scrolltime>400</scrolltime>

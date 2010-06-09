@@ -71,7 +71,7 @@
 				</item>
 				<item id="1">
 					<description>music</description>
-					<label>$LOCALIZE[31010]</label>
+					<label>2</label>
 					<icon>special://skin/media/backgrounds/music.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomMusicFolder)]</thumb>
 					<onclick>XBMC.ActivateWindow(MyMusic,return)</onclick>
@@ -79,7 +79,7 @@
 				</item>
 				<item id="2">
 					<description>Videos</description>
-					<label>$LOCALIZE[31015]</label>
+					<label>$LOCALIZE[10006]</label>
 					<icon>special://skin/media/backgrounds/videos.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomVideosFolder)]</thumb>
 					<onclick>XBMC.ActivateWindow(MyVideoFiles)</onclick>
@@ -93,7 +93,7 @@
 				</item>
 				<item id="3">
 					<description>movies</description>
-					<label>$LOCALIZE[31013]</label>
+					<label>$LOCALIZE[20342]</label>
 					<icon>special://skin/media/backgrounds/movies.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomMoviesFolder)]</thumb>			
 					<onclick>XBMC.ActivateWindow(MyVideoLibrary,movietitles,return)</onclick>
@@ -101,7 +101,7 @@
 				</item>
 				<item id="5">
 					<description>TV shows</description>
-					<label>$LOCALIZE[31014]</label>
+					<label>$LOCALIZE[20343]</label>
 					<icon>special://skin/media/backgrounds/tvshows.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomTVShowsFolder)]</thumb>			
 					<onclick>XBMC.ActivateWindow(MyVideoLibrary,tvshowtitles,return)</onclick>
@@ -109,7 +109,7 @@
 				</item>
 				<item id="6">
 					<description>pictures</description>
-					<label>$LOCALIZE[31012]</label>
+					<label>1</label>
 					<icon>special://skin/media/backgrounds/pictures.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomPicturesFolder)]</thumb>			
 					<onclick>XBMC.ActivateWindow(MyPictures)</onclick>
@@ -117,7 +117,7 @@
 				</item>
 				<item id="7">
 					<description>programs</description>
-					<label>$LOCALIZE[31009]</label>
+					<label>0</label>
 					<icon>special://skin/media/backgrounds/games.png</icon>
 					<thumb>$INFO[Skin.String(CustomGamesFolder)]</thumb>				
 					<onclick>XBMC.ActivateWindow(MyPrograms)</onclick>
@@ -125,7 +125,7 @@
 				</item>
 				<item id="10">
 					<description>Scripts</description>
-					<label>$LOCALIZE[31020]</label>
+					<label>$LOCALIZE[247]</label>
 					<icon>special://skin/media/backgrounds/scripts.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomScriptsFolder)]</thumb>	
 					<onclick>XBMC.ActivateWindow(scripts)</onclick>
@@ -141,7 +141,7 @@
 				</item>
 				<item id="14">
 					<description>weather</description>
-					<label>$LOCALIZE[31017]</label>
+					<label>8</label>
 					<icon>special://skin/media/backgrounds/weather.jpg</icon>
 					<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</thumb>				
 					<onclick>xbmc.activatewindow(2600)</onclick>
@@ -149,7 +149,7 @@
 				</item>
 				<item id="8">
 					<description>weather</description>
-					<label>$LOCALIZE[31017]</label>
+					<label>8</label>
 					<icon>special://skin/media/backgrounds/weather.jpg</icon>
 					<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]$INFO[Weather.FanartCode]</thumb>				
 					<onclick>xbmc.activatewindow(2600)</onclick>
@@ -157,19 +157,19 @@
 				</item>
 				<item id="9">
 					<description>settings</description>
-					<label>$LOCALIZE[31016]</label>
+					<label>5</label>
 					<icon>special://skin/media/backgrounds/settings.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomSettingsFolder)]</thumb>			
 					<onclick>XBMC.ActivateWindow(settings)</onclick>
 				</item>
-				<item id="12">
+				<!--<item id="12">
 					<include>BackgroundVarsSignOut</include>					
 					<label>31209</label>
 					<onclick>System.LogOff</onclick>
 					<visible>Skin.HasSetting(signout)</visible>
-				</item>				
+				</item>-->	
 				<item id="13">
-					<label>31019</label>
+					<label>13005</label>
 					<icon>special://skin/media/backgrounds/shutdown.jpg</icon>
 					<thumb>$INFO[Skin.String(Home_Custom_Back_Shutdown_Folder)]</thumb>
 					<onclick>XBMC.Shutdown()</onclick>
@@ -184,11 +184,7 @@
 				<animation effect="fade" start="100" end="0" time="0" condition="!ControlGroup(9001).HasFocus">conditional</animation>
 				<animation effect="fade" start="0" end="100" delay="300" time="200" condition="ControlGroup(9001).HasFocus">conditional</animation>
 				<animation effect="fade" start="100" end="0" time="0" condition="ControlGroup(9001).HasFocus">WindowClose</animation>
-				<!--<animation effect="slide" end="210,0" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus">conditional</animation>
-				<animation effect="slide" end="0,-204" time="300" condition="Container(300).Row(1)">conditional</animation>
-				<animation effect="slide" end="0,-102" time="300" condition="Container(300).Row(2)">conditional</animation>
-				<animation effect="slide" end="0,102" time="300" condition="Container(300).Row(4)">conditional</animation>
-				<animation effect="slide" end="0,204" time="300" condition="Container(300).Row(5)">conditional</animation>-->
+				
 <!--VIDEOS -->	<control type="grouplist" id="9010">
 					<posx>10</posx>
 					<posy>30</posy>
@@ -203,13 +199,13 @@
 					<visible>Container(300).HasFocus(2)</visible>
 					<control type="button" id="90101">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
-						<label>$LOCALIZE[31013]</label>
+						<label>$LOCALIZE[20342]</label>
 						<onclick>ActivateWindow(VideoLibrary,MovieTitles,return)</onclick>
 						<visible>Library.HasContent(Movies)</visible>
 					</control>
 					<control type="button" id="90102">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
-						<label>$LOCALIZE[31014]</label>
+						<label>$LOCALIZE[20343]</label>
 						<onclick>ActivateWindow(VideoLibrary,TvShowTitles,return)</onclick>
 						<visible>Library.HasContent(TVShows)</visible>
 					</control>
@@ -221,18 +217,18 @@
 					</control>-->
 					<control type="button" id="90104">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
-						<label>$LOCALIZE[31003]</label>
+						<label>$LOCALIZE[744]</label>
 						<onclick>ActivateWindow(VideoFiles)</onclick>
 					</control>
 					<control type="button" id="90105">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
-						<label>$LOCALIZE[31077]</label>
+						<label>$LOCALIZE[14022]</label>
 						<onclick>ActivateWindow(VideoLibrary)</onclick>
 						<visible>Library.HasContent(Videos)</visible>
 					</control>
 					<control type="button" id="90106">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
-						<label>$LOCALIZE[31078]</label>
+						<label>$LOCALIZE[1037]</label>
 						<onclick>ActivateWindow(VideoLibrary,Plugins)</onclick>
 						<visible>Library.HasContent(Video)</visible>
 					</control>
@@ -257,7 +253,7 @@
 					<visible>Container(300).HasFocus(3)</visible>
 					<control type="button" id="90111">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
-						<label>$LOCALIZE[31003]</label>
+						<label>$LOCALIZE[744]</label>
 						<onclick>ActivateWindow(VideoFiles)</onclick>
 					</control>
 					<!--<control type="button" id="90112">
@@ -267,22 +263,22 @@
 					</control>-->
 					<control type="button" id="90113">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
-						<label>$LOCALIZE[31000]</label>
+						<label>$LOCALIZE[135]</label>
 						<onclick>ActivateWindow(VideoLibrary,MovieGenres,return)</onclick>
 					</control>
 					<control type="button" id="90114">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
-						<label>$LOCALIZE[31001]</label>
+						<label>$LOCALIZE[652]</label>
 						<onclick>ActivateWindow(VideoLibrary,MovieYears,return)</onclick>
 					</control>
 					<control type="button" id="90115">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
-						<label>$LOCALIZE[31002]</label>
+						<label>$LOCALIZE[344]</label>
 						<onclick>ActivateWindow(VideoLibrary,MovieActors,return)</onclick>
 					</control>
 					<control type="button" id="90116">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
-						<label>$LOCALIZE[31080]</label>
+						<label>$LOCALIZE[20348]</label>
 						<onclick>ActivateWindow(VideoLibrary,MovieDirectors,return)</onclick>
 					</control>
 					<control type="button" id="90117">
@@ -290,7 +286,7 @@
 						<label>$LOCALIZE[31081]</label>
 						<onclick>ActivateWindow(VideoLibrary,RecentlyAddedMovies,return)</onclick>
 					</control>
-					<control type="button" id="90117">
+					<control type="button" id="90118">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
 						<label>20389</label>
 						<onclick>ActivateWindow(VideoLibrary,MusicVideoTitles,return)</onclick>
@@ -316,17 +312,17 @@
 					</control>
 					<control type="button" id="90122">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
-						<label>$LOCALIZE[31000]</label>
+						<label>$LOCALIZE[135]</label>
 						<onclick>ActivateWindow(VideoLibrary,TVShowGenres,return)</onclick>
 					</control>
 					<control type="button" id="90123">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
-						<label>$LOCALIZE[31001]</label>
+						<label>$LOCALIZE[652]</label>
 						<onclick>ActivateWindow(VideoLibrary,TVShowYears,return)</onclick>
 					</control>
 					<control type="button" id="90124">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
-						<label>$LOCALIZE[31002]</label>
+						<label>$LOCALIZE[344]</label>
 						<onclick>ActivateWindow(VideoLibrary,TVShowActors,return)</onclick>
 					</control>
 					<control type="button" id="90125">
@@ -451,30 +447,30 @@
 					<visible>Container(300).HasFocus(1)</visible>
 					<control type="button" id="90171">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
-						<label>$LOCALIZE[31083]</label>
+						<label>$LOCALIZE[133]</label>
 						<onclick>ActivateWindow(MusicLibrary,Artists,return)</onclick>
 						<visible>Library.HasContent(Music)</visible>
 					</control>
 					<control type="button" id="90172">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
-						<label>$LOCALIZE[31084]</label>
+						<label>$LOCALIZE[132]</label>
 						<onclick>ActivateWindow(MusicLibrary,Albums,return)</onclick>
 						<visible>Library.HasContent(Music)</visible>
 					</control>
 					<control type="button" id="90173">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
-						<label>$LOCALIZE[31085]</label>
+						<label>$LOCALIZE[134]</label>
 						<onclick>ActivateWindow(MusicLibrary,Songs,return)</onclick>
 						<visible>Library.HasContent(Music)</visible>
 					</control>
 					<control type="button" id="90174">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
-						<label>$LOCALIZE[31003]</label>
+						<label>$LOCALIZE[744]</label>
 						<onclick>ActivateWindow(MusicFiles)</onclick>
 					</control>
 					<control type="button" id="90175">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
-						<label>$LOCALIZE[31077]</label>
+						<label>$LOCALIZE[14022]</label>
 						<onclick>ActivateWindow(MusicLibrary)</onclick>
 						<visible>Library.HasContent(Music)</visible>
 					</control>
@@ -505,17 +501,17 @@
 					<visible>Container(300).HasFocus(8) | Container(300).HasFocus(14)</visible>
 					<control type="button" id="90181">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
-						<label>Current</label>
+						<label>143</label>
 						<onclick>Skin.SetString(Weather,1)</onclick>
 					</control>	
 					<control type="button" id="90182">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
-						<label>3 Days - Mini</label>
+						<label>$LOCALIZE[31254]</label>
 						<onclick>Skin.SetString(Weather,2)</onclick>
 					</control>
 					<control type="button" id="90183">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
-						<label>4 Days - Full</label>
+						<label>$LOCALIZE[31255]</label>
 						<onclick>Skin.SetString(Weather,3)</onclick>
 					</control>
 				</control>
@@ -544,24 +540,42 @@
 					</control>
 					<control type="button" id="90186">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
-						<label>Suspend</label>
+						<label>13011</label>
 						<onclick>Dialog.Close(ShutdownMenu,yes)</onclick>
 						<onclick>Suspend()</onclick>
 					</control>
 					<control type="button" id="90187">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
-						<label>Hibernate</label>
+						<label>13010</label>
 						<onclick>Hibernate()</onclick>
 					</control>
 					<control type="button" id="90188">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
-						<label>Restart XBMC</label>
+						<label>13313</label>
 						<onclick>RestartApp()</onclick>
 					</control>
 					<control type="button" id="90189">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
-						<label>Exit XBMC</label>
+						<label>13012</label>
 						<onclick>XBMC.Quit()</onclick>
+					</control>
+				</control>
+				<control type="grouplist" id="9020">
+					<posx>10</posx>
+					<posy>30</posy>
+					<width>600</width>
+					<height>465</height>
+					<onleft>300</onleft>
+					<onright>Control.SetFocus(8001,0)</onright>
+					<onup>9019</onup>
+					<ondown>9019</ondown>
+					<itemgap>0</itemgap>
+					<visible>Container(300).HasFocus(11)</visible>
+					<control type="button" id="91185">
+						<include>ButtonHomeSubCommonValues_Horizontal</include>
+						<label>$LOCALIZE[13391]</label>
+						<onclick>EjectTray()</onclick>
+						<visible>System.HasMediaDVD</visible>
 					</control>
 				</control>
 			</control>	
