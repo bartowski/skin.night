@@ -180,7 +180,7 @@
 				</item>
 				<item id="11">
 					<icon>special://skin/media/backgrounds/playdisc.jpg</icon>						
-					<label>31018</label>
+					<label>341</label>
 					<onclick>XBMC.PlayDVD</onclick>
 					<visible>System.HasMediadvd</visible>
 				</item>

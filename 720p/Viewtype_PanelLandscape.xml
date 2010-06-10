@@ -14,7 +14,19 @@
 			<texture>panel/panel-back.png</texture>
 		</control>
 		<control type="largeimage">
-			<visible>Control.IsVisible(57) + !Player.HasVideo</visible>
+			<visible>Control.IsVisible(57) + Container.Content(tvshows) + !Player.HasVideo</visible>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>570</width>
+			<height>318</height>
+			<texture diffuse="Showcase/showcase-diffuse.png">$INFO[Container(57).listitem.property(fanart_image)]</texture>
+			<fadetime>400</fadetime>
+			<aspectratio>stretch</aspectratio>
+			<include>Animation_HiddenByInfo</include>
+			<include>Animation_Viewtype_Panel_Fanart</include>
+		</control>
+		<control type="largeimage">
+			<visible>Control.IsVisible(57) + Container.Content(episodes) + !Player.HasVideo</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>570</width>
@@ -63,7 +75,26 @@
 					<texture background="true" diffuse="tv-landscape/landscapematteFO.png">$INFO[ListItem.Icon]</texture>
 					<fadetime>200</fadetime>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<visible>!Container.Content(Genres)</visible>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>260</posy>
+					<width>300</width>
+					<height>39</height>
+					<texture>tv-episodes/epi-black.png</texture>
+					<include>Animation_HiddenByInfo</include>
+					<visible>Container.Content(episodes) + !IsEmpty(ListItem.Title)</visible>
+				</control>
+				<control type="label">
+					<posx>154</posx>
+					<posy>266</posy>
+					<width>298</width>
+					<label>$INFO[ListItem.Label]</label>
+					<align>center</align>
+					<font>Font_KeyboardKeys</font>
+					<textcolor>ffffffff</textcolor>
+					<include>Animation_HiddenByInfo</include>
+					<visible>Container.Content(episodes) + !IsEmpty(ListItem.Title)</visible>
 				</control>
 				<control type="image">
 					<posx>1</posx>
@@ -108,10 +139,35 @@
 					<texture background="true" diffuse="tv-landscape/landscapematteFO.png">$INFO[ListItem.Icon]</texture>
 					<fadetime>200</fadetime>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<visible>!Container.Content(Genres)</visible>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="145,202" start="51" end="100" time="600" tween="back" easing="out" />
 					</animation>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>260</posy>
+					<width>300</width>
+					<height>39</height>
+					<texture>tv-episodes/epi-black.png</texture>
+					<include>Animation_HiddenByInfo</include>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="145,202" start="51" end="100" time="600" tween="back" easing="out" />
+					</animation>
+					<visible>Container.Content(episodes) + !IsEmpty(ListItem.Title)</visible>
+				</control>
+				<control type="label">
+					<posx>154</posx>
+					<posy>266</posy>
+					<width>298</width>
+					<label>$INFO[ListItem.Label]</label>
+					<align>center</align>
+					<font>Font_KeyboardKeys</font>
+					<textcolor>ffffffff</textcolor>
+					<include>Animation_HiddenByInfo</include>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="145,202" start="51" end="100" time="600" tween="back" easing="out" />
+					</animation>
+					<visible>Container.Content(episodes) + !IsEmpty(ListItem.Title)</visible>
 				</control>
 				<control type="image">
 					<posx>-12</posx>
@@ -119,7 +175,6 @@
 					<width>326</width>
 					<height>190</height>
 					<texture>tv-landscape/landscapeframeFO.png</texture>
-					<colordiffuse>89FFFFFF</colordiffuse>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="145,202" start="51" end="100" time="600" tween="back" easing="out" />
 					</animation>
@@ -180,7 +235,7 @@
 				<label>$INFO[ListItem.Genre]</label>
 			</control>
 			<control type="label">
-				<visible>Container.Content(episodes)</visible>
+				<visible>Container.Content(episodes) + !IsEmpty(ListItem.Title)</visible>
 				<posx>15</posx>
 				<posy>394</posy>
 				<width>555</width>
@@ -191,14 +246,14 @@
 				<label>"$INFO[ListItem.Title]"</label>
 			</control>
 			<control type="label">
-				<visible>Container.Content(episodes)</visible>
+				<visible>Container.Content(episodes) + !IsEmpty(ListItem.Title)</visible>
 				<posx>15</posx>
 				<posy>426</posy>
 				<width>555</width>
 				<height>50</height>
 				<align>center</align>
 				<font>Font_Bartowski_Showcase_runtime_year</font>
-				<textcolor>white</textcolor>
+				<textcolor>ListTrackF</textcolor>
 				<label>$LOCALIZE[20373] $INFO[ListItem.Season]/$LOCALIZE[20359] $INFO[ListItem.Episode]</label>
 			</control>
 			<control type="label">
@@ -219,9 +274,9 @@
 			<control type="textbox"><!--TV Plot-->
 				<visible>!Player.HasAudio</visible>
 				<posx>15</posx>
-				<posy>410</posy>
+				<posy>450</posy>
 				<width>555</width>
-				<height>264</height>
+				<height>240</height>
 				<font>Font_Bartowski_Showcase_plot</font>
 				<textcolor>ffffffff</textcolor>
 				<label>$INFO[ListItem.Plot]</label>
@@ -232,7 +287,7 @@
 			<control type="textbox"><!--TV Plot-->
 				<visible>Player.HasAudio</visible>
 				<posx>15</posx>
-				<posy>410</posy>
+				<posy>450</posy>
 				<width>555</width>
 				<height>144</height>
 				<font>Font_Bartowski_Showcase_plot</font>
@@ -244,7 +299,7 @@
 			</control>
 	</control>
 	<control type="group">
-		<visible>Control.IsVisible(57)</visible>
+		<visible>Control.IsVisible(57) + !Container.Content(episodes)</visible>
 		<include>Animation_HiddenByInfo</include>
 			<control type="textbox"><!--TV Plot-->
 				<visible>!Player.HasAudio</visible>

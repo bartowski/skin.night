@@ -1,3 +1,8 @@
+Update 6/9/2010
+  -Finished cleaning up strings.xml
+  -Allowed LandPanel to be used on episode level
+  -Added Fanart option to Poster View
+
 Update 6/8/2010
   -Smaller volumebar
   -Fixed some global music issues

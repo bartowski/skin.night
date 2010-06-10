@@ -5,13 +5,24 @@
 		
 		<!-- Poster Wrap View -->
 		<control type="image"><!-- Fanart -->
-			<visible>Control.IsVisible(50)</visible>
+			<visible>Control.IsVisible(50) + !Skin.HasSetting(Poster_Fanart)</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
 			<texture>movie-poster/movie-back3.png</texture>
-			<aspectratio>scale</aspectratio>
+			<aspectratio>stretch</aspectratio>
+		</control>
+		<control type="image"><!-- Fanart -->
+			<visible>Control.IsVisible(50) + Skin.HasSetting(Poster_Fanart)</visible>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>movie-poster/3dbanner_fanart2.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<include>Animation_BackdropFade</include>
+			<visible>Skin.HasSetting(3dbanner_fanart)</visible>
 		</control>
 		<control type="label"><!--Big Title-->
 			<visible>Control.IsVisible(50) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)]</visible>
@@ -50,14 +61,15 @@
 			<posx>-30</posx>
 			<posy>220</posy>
 			<height>615</height>
-			<width>1400</width>
+			<width>1900</width><!-- 1400 -->
 			<onleft>50</onleft>
 			<onright>50</onright>
 			<onup>68</onup>
 			<ondown>XBMC.PlayMedia($INFO[ListItem.Trailer],1,noresume)</ondown>
 			<viewtype label="$LOCALIZE[31062]">list</viewtype>
 			<orientation>horizontal</orientation>
-			<focusposition>3</focusposition>
+			<include condition="!Skin.HasSetting(Poster_Fanart)">poster_focusposition_dark</include>
+			<include condition="Skin.HasSetting(Poster_Fanart)">poster_focusposition_fanart</include>
 			<scrolltime>400</scrolltime>
 			<preloaditems>2</preloaditems>
 			<pagecontrol>68</pagecontrol>
@@ -65,6 +77,8 @@
 			<include>Animation_HiddenByInfo</include>
 			<camera x="1340" y="380" />
 			<animation effect="rotatey" center="50" start="12" end="12" time="0" condition="true">Conditional</animation>
+			<animation effect="zoom" start="100" end="72" time="700" condition="Skin.HasSetting(Poster_Fanart)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,160" time="700" condition="Skin.HasSetting(Poster_Fanart)">Conditional</animation>
 			<visible>!Skin.HasSetting(no_Poster) + ![Container.Content(episodes) | Container.Content(years)]</visible>
 			<itemlayout width="176" height="245">
 				<control type="group">
@@ -309,19 +323,19 @@
 		</control>
 
 		<control type="image">
-			<visible>Control.IsVisible(50)</visible>
+			<visible>Control.IsVisible(50) + !Skin.HasSetting(Poster_Fanart)</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
 			<texture>movie-poster/last-overlay.png</texture>
-			<aspectratio>scale</aspectratio>
+			<aspectratio>stretch</aspectratio>
 		</control>
 		
 		<!-- Browser label and flags -->
 		
 		<control type="group">
-			<visible>Control.IsVisible(50)</visible>
+			<visible>Control.IsVisible(50) + !Skin.HasSetting(Poster_Fanart)</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<include>Animation_ZoomInZoomOut</include>
@@ -405,7 +419,7 @@
 				<aligny>center</aligny>
 				<font>Font_Bartowski_Movies_Duration</font>
 				<textcolor>ffffffff</textcolor>
-				<label>$INFO[ListItem.duration]</label>
+				<info>ListItem.Duration</info>
 				<visible>Container.Content(movies) + ![Player.HasVideo | substring(container.folderpath,plugin://video/)]</visible>
 			</control>
 			<control type="label">
@@ -481,7 +495,7 @@
 		<include>Animation_ZoomInZoomOut</include>
 		<include>Animation_HiddenByInfo</include>
 		<animation effect="slide" start="0,0" end="0,-40" time="0" tween="cubic" easing="inout" condition="IsEmpty(Control.GetLabel(7015))">Conditional</animation>
-		<visible>Control.IsVisible(50) + !IsEmpty(ListItem.Title) + [Container.Content(tvshows) | Container.Content(seasons)] + !Player.HasVideo</visible>	
+		<visible>Control.IsVisible(50) + !IsEmpty(ListItem.Title) + [Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(Poster_Fanart) + !Player.HasVideo</visible>	
 			<control type="label">
 				<visible>Container.Content(seasons)</visible>
 				<posx>0</posx>

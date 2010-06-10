@@ -131,7 +131,7 @@
 					<description>Toggle MoviesFanart</description>
 					<include>WindowMenuButton_Library</include>
 					<label>$LOCALIZE[31086]</label>
-					<altlabel>$LOCALIZE[31089] $LOCALIZE[31094]</altlabel>
+					<altlabel>$LOCALIZE[31094]</altlabel>
 					<onclick>Skin.ToggleSetting(ShowcaseFanart)</onclick>
 					<selected>Skin.HasSetting(ShowcaseFanart)</selected>
 					<visible>Control.IsVisible(58)</visible>
@@ -190,6 +190,16 @@
 					<selected>Skin.HasSetting(3dbanner_fanart)</selected>
 					<visible>Control.IsVisible(593) + Container.Content(tvshows)</visible>
 				</control>
+				<control type="togglebutton" id="31">
+					<description>Toggle MoviesFanart</description>
+					<include>WindowMenuButton_Library</include>
+					<label>$LOCALIZE[31086]</label>
+					<altlabel>$LOCALIZE[31214]</altlabel>
+					<onclick>Skin.ToggleSetting(Poster_Fanart)</onclick>
+					<onclick>ReloadSkin()</onclick>
+					<selected>Skin.HasSetting(Poster_Fanart)</selected>
+					<visible>Control.IsVisible(50) + [Container.Content(tvshows) | Container.Content(movies)]</visible>
+				</control>
 				<control type="togglebutton" id="24">
 					<description>Toggle MoviesFanart</description>
 					<include>WindowMenuButton_Library</include>
@@ -238,7 +248,7 @@
 			<height>200</height>
 			<font>Font_Bartowski_Showcase_plot</font>
 			<textcolor>black</textcolor>
-			<label>Click to switch between different views</label>
+			<label>$LOCALIZE[31266]</label>
 			<align>justify</align>
 			<visible allowhiddenfocus="true">Control.HasFocus(20) + !Skin.HasSetting(LockViews)</visible>
 		</control>
@@ -249,9 +259,9 @@
 			<height>200</height>
 			<font>Font_Bartowski_Showcase_plot</font>
 			<textcolor>black</textcolor>
-			<label>This option is to enable or disable showing more Fanart</label>
+			<label>$LOCALIZE[31267]</label>
 			<align>justify</align>
-			<visible allowhiddenfocus="true">[Control.HasFocus(22) | Control.HasFocus(28)] + !Skin.HasSetting(LockViews)</visible>
+			<visible allowhiddenfocus="true">[Control.HasFocus(22) | Control.HasFocus(28) | Control.HasFocus(31)] + !Skin.HasSetting(LockViews)</visible>
 		</control>
 		<control type="textbox">
 			<posx>720</posx>
@@ -260,7 +270,7 @@
 			<height>200</height>
 			<font>Font_Bartowski_Showcase_plot</font>
 			<textcolor>black</textcolor>
-			<label>This option is to enable or disable showing Extrathumbs</label>
+			<label>$LOCALIZE[31268]</label>
 			<align>justify</align>
 			<visible allowhiddenfocus="true">Control.HasFocus(25) + !Skin.HasSetting(LockViews)</visible>
 		</control>
@@ -271,7 +281,7 @@
 			<height>200</height>
 			<font>Font_Bartowski_Showcase_plot</font>
 			<textcolor>black</textcolor>
-			<label>Click to enable or disable Flags</label>
+			<label>$LOCALIZE[31269]</label>
 			<align>justify</align>
 			<visible allowhiddenfocus="true">Control.HasFocus(23) + !Skin.HasSetting(LockViews)</visible>
 		</control>
@@ -282,7 +292,7 @@
 			<height>200</height>
 			<font>Font_Bartowski_Showcase_plot</font>
 			<textcolor>black</textcolor>
-			<label>Use this option if you store a landscape.jpg in the root of the TV show folder</label>
+			<label>$LOCALIZE[31270]</label>
 			<align>justify</align>
 			<visible allowhiddenfocus="true">[Control.HasFocus(27) | Control.HasFocus(29)]+ !Skin.HasSetting(LockViews)</visible>
 		</control>
@@ -293,7 +303,7 @@
 			<height>200</height>
 			<font>Font_Bartowski_Showcase_plot</font>
 			<textcolor>black</textcolor>
-			<label>This option is to enable or diable logos</label>
+			<label>$LOCALIZE[31271]</label>
 			<align>justify</align>
 			<visible allowhiddenfocus="true">Control.HasFocus(24) + !Skin.HasSetting(LockViews)</visible>
 		</control>
@@ -304,7 +314,7 @@
 			<height>200</height>
 			<font>Font_Bartowski_Showcase_plot</font>
 			<textcolor>black</textcolor>
-			<label>Click to change the alphabetic order of the list</label>
+			<label>$LOCALIZE[31272]</label>
 			<align>justify</align>
 			<visible allowhiddenfocus="true">Control.HasFocus(3) + !Skin.HasSetting(LockViews)</visible>
 		</control>
@@ -315,7 +325,7 @@
 			<height>200</height>
 			<font>Font_Bartowski_Showcase_plot</font>
 			<textcolor>black</textcolor>
-			<label>Click to toggle between hiding watched items or leaving them in</label>
+			<label>$LOCALIZE[31273]</label>
 			<align>justify</align>
 			<visible allowhiddenfocus="true">Control.HasFocus(14) + !Skin.HasSetting(LockViews)</visible>
 		</control>
@@ -326,7 +336,7 @@
 			<height>200</height>
 			<font>Font_Bartowski_Showcase_plot</font>
 			<textcolor>black</textcolor>
-			<label>Click to search for the video you want</label>
+			<label>$LOCALIZE[31274]</label>
 			<align>justify</align>
 			<visible allowhiddenfocus="true">Control.HasFocus(8) + !Skin.HasSetting(LockViews)</visible>
 		</control>
@@ -365,6 +375,14 @@
 				<height>168</height>
 				<texture>extras/viewoptions/files_fanart.png</texture>
 				<visible allowhiddenfocus="true">Control.HasFocus(28) + !Skin.HasSetting(LockViews)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>300</width>
+				<height>168</height>
+				<texture>extras/viewoptions/poster_fanart.png</texture>
+				<visible allowhiddenfocus="true">Control.HasFocus(31) + !Skin.HasSetting(LockViews)</visible>
 			</control>
 			<control type="image">
 				<posx>0</posx>

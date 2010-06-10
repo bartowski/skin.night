@@ -64,7 +64,7 @@
 				<width>297</width>
 				<height>30</height>
 				<font>Font_Bartowski_Smaller_MenuValue</font>
-				<label>View Options</label>
+				<label>$LOCALIZE[31089]</label>
 				<align>center</align>
 				<aligny>center</aligny>
 				<textcolor>ff000000</textcolor>
@@ -127,7 +127,7 @@
 			<height>200</height>
 			<font>Font_Bartowski_Showcase_plot</font>
 			<textcolor>black</textcolor>
-			<label>Click to switch between different views</label>
+			<label>$LOCALIZE[31266]</label>
 			<align>justify</align>
 			<visible allowhiddenfocus="true">Control.HasFocus(20) + !Skin.HasSetting(LockViews)</visible>
 		</control>
@@ -138,7 +138,7 @@
 			<height>200</height>
 			<font>Font_Bartowski_Showcase_plot</font>
 			<textcolor>black</textcolor>
-			<label>Click to change the alphabetic order of the list</label>
+			<label>$LOCALIZE[31272]</label>
 			<align>justify</align>
 			<visible allowhiddenfocus="true">Control.HasFocus(3) + !Skin.HasSetting(LockViews)</visible>
 		</control>
@@ -149,7 +149,7 @@
 			<height>200</height>
 			<font>Font_Bartowski_Showcase_plot</font>
 			<textcolor>black</textcolor>
-			<label>Click to toggle between hiding watched items or leaving them in</label>
+			<label>$LOCALIZE[31273]</label>
 			<align>justify</align>
 			<visible allowhiddenfocus="true">Control.HasFocus(14) + !Skin.HasSetting(LockViews)</visible>
 		</control>
@@ -160,7 +160,7 @@
 			<height>200</height>
 			<font>Font_Bartowski_Showcase_plot</font>
 			<textcolor>black</textcolor>
-			<label>Click to search for the video you want</label>
+			<label>$LOCALIZE[31274]</label>
 			<align>justify</align>
 			<visible allowhiddenfocus="true">Control.HasFocus(8) + !Skin.HasSetting(LockViews)</visible>
 		</control>

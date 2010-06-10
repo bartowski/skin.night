@@ -47,7 +47,7 @@
 				<width>297</width>
 				<height>30</height>
 				<font>Font_Bartowski_Smaller_MenuValue</font>
-				<label>View Options</label>
+				<label>$LOCALIZE[14018]</label>
 				<align>center</align>
 				<aligny>center</aligny>
 				<textcolor>ff000000</textcolor>
@@ -86,7 +86,7 @@
 				</control>
 				<control type="button" id="21">
 					<include>WindowMenuButton_Library</include>
-					<label>$LOCALIZE[31077]</label>
+					<label>$LOCALIZE[14022]</label>
 					<onclick>ReplaceWindow(MusicLibrary)</onclick>
 				</control>
 				<control type="radiobutton" id="16">
@@ -95,7 +95,7 @@
 				</control>	
 				<control type="button" id="9">
 					<include>WindowMenuButton_Library</include>
-					<label>$LOCALIZE[31087]</label>
+					<label>$LOCALIZE[590]</label>
 				</control>
 		</control>
 	
@@ -106,7 +106,7 @@
 			<height>200</height>
 			<font>Font_Bartowski_Showcase_plot</font>
 			<textcolor>black</textcolor>
-			<label>Click to switch between different views</label>
+			<label>$LOCALIZE[31266]</label>
 			<align>justify</align>
 			<visible allowhiddenfocus="true">Control.HasFocus(20) + !Skin.HasSetting(LockViews)</visible>
 		</control>
@@ -117,7 +117,7 @@
 			<height>200</height>
 			<font>Font_Bartowski_Showcase_plot</font>
 			<textcolor>black</textcolor>
-			<label>This option is to enable or disable showing more Fanart</label>
+			<label>$LOCALIZE[31267]</label>
 			<align>justify</align>
 			<visible allowhiddenfocus="true">Control.HasFocus(22) + !Skin.HasSetting(LockViews)</visible>
 		</control>
@@ -128,7 +128,7 @@
 			<height>200</height>
 			<font>Font_Bartowski_Showcase_plot</font>
 			<textcolor>black</textcolor>
-			<label>Click to change the order in which the list is sorted</label>
+			<label>$LOCALIZE[31275]</label>
 			<align>justify</align>
 			<visible allowhiddenfocus="true">Control.HasFocus(3) + !Skin.HasSetting(LockViews)</visible>
 		</control>
@@ -139,7 +139,7 @@
 			<height>200</height>
 			<font>Font_Bartowski_Showcase_plot</font>
 			<textcolor>black</textcolor>
-			<label>This option is to toggle between Files and Library mode</label>
+			<label>$LOCALIZE[31276]</label>
 			<align>justify</align>
 			<visible allowhiddenfocus="true">Control.HasFocus(21) + !Skin.HasSetting(LockViews)</visible>
 		</control>
@@ -150,7 +150,7 @@
 			<height>200</height>
 			<font>Font_Bartowski_Showcase_plot</font>
 			<textcolor>black</textcolor>
-			<label>Click this to swtich party mode on or off</label>
+			<label>$LOCALIZE[31277]</label>
 			<align>justify</align>
 			<visible allowhiddenfocus="true">Control.HasFocus(16) + !Skin.HasSetting(LockViews)</visible>
 		</control>
@@ -161,7 +161,7 @@
 			<height>200</height>
 			<font>Font_Bartowski_Showcase_plot</font>
 			<textcolor>black</textcolor>
-			<label>Click items into the Library</label>
+			<label>$LOCALIZE[31278]</label>
 			<align>justify</align>
 			<visible allowhiddenfocus="true">Control.HasFocus(9) + !Skin.HasSetting(LockViews)</visible>
 		</control>

@@ -4,40 +4,18 @@
 
 	<!-- Main Labels -->
 	
-	<string id="31000">Genres</string><!-- 135 -->
-	<string id="31001">Years</string><!-- 652 -->
-	<string id="31002">Actors</string><!-- 344 -->
-	<string id="31003">Files</string><!-- 744 -->
-	<string id="31005">VIDEO SETTINGS</string>
-	<string id="31004">NOW PLAYING</string>
-	<string id="31006">MUSIC VIDEOS</string>
+	
+	
+	
 	<string id="31007">Plugins</string><!-- GOOD -->
-	<string id="31008">FAVOURITES</string>
-	<string id="31009">Programs</string>
-	<string id="31010">Music</string><!-- 1211 -->
-	<string id="31011">Games</string><!-- 0 -->
-	<string id="31012">Pictures</string><!-- 1 -->
-	<string id="31013">Movies</string><!-- 20342 -->
-	<string id="31014">TV Shows</string><!-- 20343 -->
-	<string id="31015">Videos</string><!-- 10006 -->
-	<string id="31016">Settings</string><!-- 5 -->
-	<string id="31017">Weather</string><!-- 8 -->
-	<string id="31018">Play Disc</string>
-	<string id="31019">Shutdown</string><!-- 13005 -->
-	<string id="31020">Scripts</string><!-- 247 -->
-	<string id="31021">RESTART</string>
-	<string id="31022">SIGN OUT</string>
-	<string id="31023">WORKING</string>
 	<string id="31024">Page</string><!-- GOOD -->
 	<string id="31025">Items</string><!-- GOOD -->
 	<string id="31326">Created</string>
 	<string id="31327">Resolution</string>
-	<string id="31028">TV Shows</string>
 	<string id="31029">Disable Views</string><!-- GOOD -->
 	
 	<!-- Settings labels -->
-	<!--<string id="31030">Debug mode</string>
-	<string id="31031">for skinning not error reporting</string>-->
+	
 	<string id="31032">Disable Clock</string><!-- GOOD -->
 	<string id="31033">Scroll Plot for Movies and TV</string>
 	<string id="31034">Disable Media Flags</string>
@@ -52,13 +30,12 @@
 	<string id="31043">Set Options for TV Shows</string>
 	<string id="31044">Use Posters for TV Section</string>
 	<string id="31045">Use Banners for TV Section</string>
-	<!--<string id="31046">Enable clearART</string>-->
 	<string id="31047">Disable Movies and TV Views</string><!-- GOOD -->
 	
 <!--VIEWS -->	
 	<string id="31048">16x9</string>
 	<string id="31049">BannerPanel</string>
-	<string id="31050">Episode</string><!-- 20359 -->
+	<string id="31213">WallPanel</string>
 	<string id="31051">Panel</string>
 	<string id="31052">Landscape</string>
 	<string id="31053">3D Landscape</string>
@@ -68,70 +45,49 @@
 	<string id="31064">Wall</string>
 	<string id="31065">Disable Music Views</string>
 	<string id="31066">Jukebox</string>
+	<string id="31250">3D Banner</string>
+	<string id="31245">Landscape Fanart</string>
+	
 	
 <!--MORE COMMON PHRASES -->	
 	<string id="31067">Filemanager</string><!-- GOOD -->
-	<string id="31068">Season</string><!-- 20373 -->
-	<string id="31069">Episode</string><!-- 20359 -->
-	<string id="31070">Year</string><!-- 345 -->
-	<string id="31071">Director</string><!-- 20339 -->
-	<string id="31072">Genre</string><!-- 515 -->
 	<string id="31073">MUTE</string><!-- GOOD -->
 	<string id="31074">Current Time</string><!-- GOOD -->
 	<string id="31075">Finish Time</string><!-- GOOD -->
 	<string id="31076">Kiosk Mode</string><!-- GOOD -->
-	<string id="31077">Library</string><!-- 14022 -->
-	<string id="31078">Video Plugins</string><!-- 1037 -->
 	<string id="31079">Titles</string><!-- GOOD -->
-	<string id="31080">Directors</string><!-- 20348 -->
 	<string id="31081">Recently Added</string><!-- GOOD -->
 	<string id="31082">Credits</string>
-	<string id="31083">Artists</string><!-- 133 -->
-	<string id="31084">Albums</string><!-- 132 -->
-	<string id="31085">Songs</string><!-- 134 -->
-	<string id="31086">Show Fanart</string>
-	<string id="31087">Random</string>
-	<string id="31088">Viewtype -</string>
-	<string id="31089">VIEW OPTIONS</string>
-	<string id="31090">ORDER</string>
-	<string id="31091">MODE</string>
-	<string id="31092">PLAYBACK</string>
-	<string id="31093">SEQUENCE</string>
-	<string id="31094">Dark Showcase</string>
+	<string id="31086">Show Fanart</string><!-- GOOD -->
+	<string id="31088">Viewtype -</string><!-- GOOD -->
+	<string id="31094">Dark Showcase</string><!-- GOOD -->
 	<string id="31095">WATCH</string>
-	<string id="31096">Shown</string>
-	<string id="31097">Hidden</string>
+	<string id="31096">Shown</string><!-- GOOD -->
+	<string id="31097">Hidden</string><!-- GOOD -->
 	<string id="31098">Watched</string>
 	<string id="31099">TITLE</string>
-	<string id="31200">Show Thumbs</string>
-	<string id="31201">Disable Thumbs</string>
-	<string id="31202">Use Logo</string>
-	<string id="31203">No Logo</string>
-	<string id="31204">Disable Flags</string>
-	<string id="31205">Show Flags</string>
-	<string id="31206">Extrathumbs</string>
+	<string id="31200">Show Thumbs</string><!-- GOOD -->
+	<string id="31201">Disable Thumbs</string><!-- GOOD -->
+	<string id="31202">Use Logo</string><!-- GOOD -->
+	<string id="31203">No Logo</string><!-- GOOD -->
+	<string id="31204">Disable Flags</string><!-- GOOD -->
+	<string id="31205">Show Flags</string><!-- GOOD -->
+	<string id="31206">Extrathumbs</string><!-- GOOD -->
 	<string id="31207">FLAGS</string>
 	<string id="31208">Title</string>
 	<string id="31209">TV</string><!-- GOOD -->
 	<string id="31210">Fanart Thumbs</string>
 	<string id="31211">16x9 Thumbs</string>
 	<string id="31212">Theater</string>
-	<string id="31213">WallPanel</string>
-	<string id="31214">Dark View</string>
+	<string id="31214">Dark View</string><!-- GOOD -->
 	<string id="31215">Show subtitle script button in OSD</string><!-- GOOD -->
 	<string id="31216">Script path:</string><!-- GOOD -->
 	<string id="31217">Enable Home Theater Script</string>
 	<string id="31218">Power Options</string>
-	<string id="31219">landscape.jpg</string>
-	<string id="31220">Cached Thumb</string>
+	<string id="31219">landscape.jpg</string><!-- GOOD -->
+	<string id="31220">Cached Thumb</string><!-- GOOD -->
 	<string id="31221">Use Condition based weather fanart</string>
-	<string id="31222">Current</string><!-- 143 -->
-	<string id="31223">Writer</string><!-- 20417 -->
-	<string id="31224">Duration</string><!-- 180 -->
-	<string id="31225">IMDB</string><!-- 368 -->
 	<string id="31226">Rated</string><!-- GOOD -->
-	<string id="31227">Episodes</string><!-- 20360 -->
-	<string id="31228">Rating</string><!-- 563 -->
 	<string id="31229">First Premiered in</string><!-- GOOD -->
 	<string id="31230">This Show Aired</string><!-- GOOD -->
 	<string id="31231">Aired</string><!-- GOOD -->
@@ -139,21 +95,17 @@
 	<string id="31233">Please Choose a Song</string><!-- GOOD -->
 	<string id="31234">on</string><!-- GODD -->
 	<string id="31235">GO BACK</string>
-	<string id="31236">Release Date</string><!-- 172 -->
 	<string id="31237">Press Down for Trailer</string>
 	<string id="31238">Press "X" to Stop</string>
-	<string id="31239">Studio</string><!-- 572 -->
 	<string id="31240">Press "Left" for Trailer</string>
 	<string id="31241">Show Weather Widget</string>
 	<string id="31242">Set Timer</string><!-- GOOD -->
 	<string id="31243">Cancel Timer</string><!-- GOOD -->
 	<string id="31244">Horizontal Home Menu</string>
-	<string id="31245">Landscape Fanart</string>
 	<string id="31246">Show plot</string>
 	<string id="31247">Enable Global Clock - (Library Views)</string>
 	<string id="31248">Use Zune like Global Now Playing for Music</string>
 	<string id="31249">Get Logo</string>
-	<string id="31250">3D Banner</string>
 	<string id="31251">Location</string>
 	<string id="31252">Last Updated</string><!-- GOOD -->
 	<string id="31253">Latests Albums</string><!-- GOOD -->
@@ -170,33 +122,53 @@
 	<string id="31264">Click to Run the logo script</string>
 	<string id="31265">By clicking the above button, the script will automatically match whatever TV shows you have and then download the correct logo, if there is one, and save it as logo.png in the root of that TV shows folder</string>
 	
+<!-- 
+---------
+Section below is are the sentences that appear in View Options
+---------
+-->	
+	<string id="31266">Click to switch between different views</string>
+	<string id="31267">This option is to enable or disable showing more Fanart</string>
+	<string id="31268">This option is to enable or disable showing Extrathumbs</string>
+	<string id="31269">Click to enable or disable Flags</string>
+	<string id="31270">Use this option if you store a landscape.jpg in the root of the TV show folder</string>
+	<string id="31271">This option is to enable or diable logos</string>
+	<string id="31272">Click to change the alphabetic order of the list</string>
+	<string id="31273">Click to toggle between hiding watched items or leaving them in</string>
+	<string id="31274">Click to search for the video you want</string>
+	<string id="31275">Click to change the order in which the list is sorted</string>
+	<string id="31276">This option is to toggle between Files and Library mode</string>
+	<string id="31277">Click this to swtich party mode on or off</string>
+	<string id="31278">Click to scan items into the Library</string>
 	
 	
 	
-	
-	
-	
-	
-	
+<!-- 
+-----------
+-----------
+These last blocks are from Confluence and you can 
+just copy the translations from Confluence to here
+------------
+------------
+-->
 	
 	<!-- Playlist Editor labels -->
-	  <string id="31055">Open playlist</string>
-	  <string id="31056">Save playlist</string>
-	  <string id="31057">Close playlist</string>
-	  <string id="31058">System music files</string>
-	  <string id="31059">Current playlist</string>
-	  <string id="31060">This file is stacked, select the part you want to play from.</string>
-	  <string id="31061">Current Selected</string>
+  <string id="31055">Open playlist</string>
+  <string id="31056">Save playlist</string>
+  <string id="31057">Close playlist</string>
+  <string id="31058">System music files</string>
+  <string id="31059">Current playlist</string>
+  <string id="31060">This file is stacked, select the part you want to play from.</string>
+  <string id="31061">Current Selected</string>
 	
 	<!-- Confluence Labels -->
-	<string id="91000">Change Your</string>
-	<string id="31110">Edit Background for Home Button</string>
-	<string id="31113">Single Image</string><!-- GOOD -->
-	<string id="31114">Multi Image</string><!-- GOOD -->
+  <string id="91000">Change Your</string>
+  <string id="31110">Edit Background for Home Button</string>
+  <string id="31113">Single Image</string><!-- GOOD -->
+  <string id="31114">Multi Image</string><!-- GOOD -->
 	 <!-- Description Labels  -->
-  <string id="31102">Background</string><!-- 33068 -->
+  
   <string id="31106">Miscellaneous options</string>
-  <string id="31112">Options</string><!-- 33063 -->
   <string id="31115">Customizer</string><!-- GOOD -->
   <string id="31116">Addon Scripts</string><!-- GOOD -->
   <string id="31117">Show Recently added Videos</string>

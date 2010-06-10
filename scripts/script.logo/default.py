@@ -4,9 +4,9 @@ __url__          = "http://code.google.com/p/passion-xbmc/"
 __svn_url__      = ""
 __credits__      = "Team XBMC PASSION, http://passion-xbmc.org/"
 __platform__     = "xbmc media center, [LINUX, OS X, WIN32, XBOX]"
-__date__         = "05-06-2010"
-__version__      = "1.2.2"
-__svn_revision__  = "$Revision: 697 $"
+__date__         = "09-06-2010"
+__version__      = "1.2.3"
+__svn_revision__  = "$Revision: 000 $"
 __XBMC_Revision__ = "20000" #XBMC Babylon
 __useragent__ = "Mozilla/5.0 (Windows; U; Windows NT 5.1; fr; rv:1.9.0.1) Gecko/2008070208 Firefox/3.6"
 
@@ -71,8 +71,12 @@ def get_nfo_id( path ):
     print "### nfo file: %s" % nfo
     nfo_read = file(repr(nfo).strip("u'\""), "r" ).read()
     tvdb_id = re.findall( "<tvdbid>(\d{1,10})</tvdbid>", nfo_read )
-    print "thetvdb id: %s" % tvdb_id[0]
-    return tvdb_id[0]
+    if tvdb_id: 
+        print "### tvdb id: %s" % tvdb_id[0]
+        return tvdb_id[0]
+    else:
+        print "### no tvdb id found in: %s" % nfo
+        return False
 
 def listing():
     conn = sqlite3.connect(db_path)
@@ -167,25 +171,37 @@ if ( __name__ == "__main__" ):
         logo_path = sys.argv[ 1 ]
         print "### path:%s###" % logo_path
         print "### Getting id"
-        try: tvid , logo_path = get_tvid_path( sys.argv[ 1 ] )
+        try: baseid , logo_path = get_tvid_path( sys.argv[ 1 ] )
         except: 
-            tvid = False
+            baseid = False
             print_exc()
-        print "### id Found: %s" % tvid
-        if tvid:
-            if tvid[0:2] == "tt" : 
-                print "### IMDB id found (%s), checking for nfo" % logo_path
+        print "### id Found: %s" % baseid
+        if baseid:
+            if baseid[0:2] == "tt" or baseid == "" : 
+                print "### IMDB id found (%s) or no id found in db, checking for nfo" % logo_path
                 try: tvid = get_nfo_id( logo_path )
-                except:                
+                except:  
+                    tvid = False              
                     print "### Error checking for nfo: %stvshow.nfo" % logo_path.replace("\\\\" , "\\").encode("utf-8")
                     print_exc()
-            print "### get logo list for id:%s ###" % tvid
-            logo_list = get_logo_list( tvid )
+            else: 
+                tvid = baseid
+            
+            
+            if tvid: 
+                print "### tvdb id Found: %s" % tvid
+                print "### get logo list for id:%s ###" % tvid
+                logo_list = get_logo_list( tvid )
+            else:
+                print "### no tvdb id Found"
+                logo_list = False
             if logo_list: 
                 print "### %s" % logo_list
                 DIALOG_PROGRESS.close
                 select = xbmcgui.Dialog().select("choose logo to download" , logo_list)
-                if select == -1: pass
+                if select == -1: 
+                    print "### Canceled by user"
+                    xbmcgui.Dialog().ok("Canceled" , "Download canceled by user" )
                 else:
                     DIALOG_PROGRESS.create( "Logo Downloader in action ..." , "Downloading ..." )
                     
@@ -218,6 +234,7 @@ if ( __name__ == "__main__" ):
                             print "### Logo download error !!!"
                             xbmcgui.Dialog().ok("Error" , "Error downloading logo !" )
                     else: print "### Path not found"
+            else: xbmcgui.Dialog().ok("Not Found" , "No logo found!" )
         else: xbmcgui.Dialog().ok("Error" , "Can't get logo from this view" )
         
     else:
@@ -266,5 +283,5 @@ if ( __name__ == "__main__" ):
             xbmcgui.Dialog().ok("Logo Downloader Finished ..." , " %s Logo Downloaded ! TVshow: %s" % ( downloaded , total_tvshow ) , "%s percent completed (%s logo found)" %  ( reussite , total_logo ) )
             print "### %s Logo Downloaded ! TVshow: %s" % (downloaded , total_tvshow)
         else: xbmcgui.Dialog().ok("Error" , "No tvshow find or error getting web page" )
-    
+print "### Exiting ..."    
     
