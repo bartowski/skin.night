@@ -325,9 +325,9 @@
 					<width>521</width>
 					<height>68</height>
 					<texture>list/highlight_new.png</texture>
-					<!--<animation type="Focus" reversible="false">
-						<effect type="fade" start="0" end="70" time="800" />
-					</animation>-->
+					<animation type="Focus" reversible="false">
+						<effect type="fade" start="0" end="100" time="800" />
+					</animation>
 				</control>
 				<control type="label">
 					<posx>20</posx>

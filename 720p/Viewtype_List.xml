@@ -17,10 +17,10 @@
 		
 		
 		<control type="fixedlist" id="53">
-			<posx>-50</posx>
-			<posy>210</posy>
+			<posx>-100</posx>
+			<posy>250</posy>
 			<height>715</height>
-			<width>1400</width>
+			<width>1500</width>
 			<onleft>53</onleft>
 			<onright>53</onright>
 			<onup>7000</onup>
@@ -33,7 +33,7 @@
 			<include>Animation_Viewtype_3dLand_FocusArea</include>
 			<include>Animation_HiddenByInfo</include>
 			<camera x="1340" y="380" />
-			<animation effect="rotatey" center="50" start="12" end="12" time="0" condition="true">Conditional</animation>
+			<animation effect="rotatey" center="50" start="12" end="10" time="0" condition="true">Conditional</animation>
 			<visible>!Skin.HasSetting(no_3DLandscape) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 			<itemlayout width="316" height="245">
 				<control type="group">

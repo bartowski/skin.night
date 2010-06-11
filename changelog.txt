@@ -1,7 +1,14 @@
+Update 6/10/2010
+  -Added Global time to all the videoOSD screens
+  -Fixed an error with the background in Poster view with Fanart option
+  -added 'extrafanart' support to fullscreen music playback
+  -tweak Poster and 3d Landscape's angle and position a little
+
 Update 6/9/2010
   -Finished cleaning up strings.xml
   -Allowed LandPanel to be used on episode level
-  -Added Fanart option to Poster View
+  -Added Fanart option to Poster View 
+  -Updated logo script
 
 Update 6/8/2010
   -Smaller volumebar

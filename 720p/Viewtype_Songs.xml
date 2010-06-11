@@ -57,13 +57,13 @@
 			</itemlayout>
 			<focusedlayout width="1210" height="36">
 				<control type="image">
-					<posx>-40</posx>
-					<posy>-34</posy>
-					<width>871</width>
-					<height>121</height>
-					<texture>list/highlight.png</texture>
+					<posx>0</posx>
+					<posy>-10</posy>
+					<width>640</width>
+					<height>68</height>
+					<texture>list/highlight_new.png</texture>
 					<animation type="Focus" reversible="false">
-						<effect type="fade" start="0" end="70" time="800" />
+						<effect type="fade" start="0" end="100" time="800" />
 					</animation>
 				</control>
 				<control type="label">

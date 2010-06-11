@@ -253,7 +253,7 @@
 				</control>
 		</control>
 	</include>
-	<include name="Global_Time_LowerLeft">
+	<include name="Global_Time_LowerLeft_music">
 		<control type="group">
 			<posx>10</posx>
 			<posy>670</posy>
@@ -283,7 +283,36 @@
 				</control>
 		</control>
 	</include>
-	
+	<include name="Global_Time_TopRight_OSD">
+		<control type="group">
+			<posx>1260</posx>
+			<posy>10</posy>
+			<include>Animation_BackdropFade</include>
+			<visible>Skin.HasSetting(library_global_clock) + [Window.IsActive(seekbar) | Window.IsActive(fullscreeninfo)]</visible>
+				<control type="image"> 
+					<posx>-380</posx>
+					<posy>-10</posy>   
+					<width>413</width>     
+					<height>215</height> 
+					<texture>common/library_time_gradient.png</texture>
+				</control>
+				<control type="label">
+					<width>300</width>
+					<font>Font_Time_Global</font>
+					<textcolor>mainblue</textcolor>
+					<info>System.Time(hh:mm xx)</info>
+					<align>right</align>
+				</control>
+				<control type="label">
+					<posy>24</posy>
+					<width>300</width>
+					<font>Font_Date</font>
+					<textcolor>white</textcolor>
+					<info>System.Date</info>
+					<align>right</align>
+				</control>
+		</control>
+	</include>
 	
 	<include name="Global_HeadingSectionVars">
 		<width>960</width>

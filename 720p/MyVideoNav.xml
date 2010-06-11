@@ -198,7 +198,7 @@
 					<onclick>Skin.ToggleSetting(Poster_Fanart)</onclick>
 					<onclick>ReloadSkin()</onclick>
 					<selected>Skin.HasSetting(Poster_Fanart)</selected>
-					<visible>Control.IsVisible(50) + [Container.Content(tvshows) | Container.Content(movies)]</visible>
+					<visible>Control.IsVisible(50)</visible>
 				</control>
 				<control type="togglebutton" id="24">
 					<description>Toggle MoviesFanart</description>

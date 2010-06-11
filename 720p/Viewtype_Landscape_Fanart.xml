@@ -170,7 +170,7 @@
 			<height>215</height> 
 			<texture>tv-landscape/land_fanart_logo_back.png</texture>
 		</control>
-		<control type="largeimage" id="7015">
+		<control type="largeimage" id="37015">
 			<posx>20</posx>
 			<posy>0</posy>
 			<width>230</width>
@@ -179,7 +179,7 @@
 			<fadetime>100</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 		</control>
-		<control type="largeimage" id="9015">
+		<control type="largeimage" id="39015">
 			<posx>20</posx>
 			<posy>0</posy>
 			<width>230</width>
@@ -187,6 +187,17 @@
 			<texture>$INFO[ListItem.path]../logo.png</texture>
 			<fadetime>100</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
+		</control>
+		<control type="label">
+			<posx>20</posx>
+			<posy>0</posy>
+			<width>1200</width>
+			<height>50</height>
+			<aligny>center</aligny>
+			<font>Font_Bartowski_Landscape_TV_Title</font>
+			<textcolor>ff67ffff</textcolor>
+			<label>[B]$INFO[ListItem.TVShowTitle][/B]</label>
+			<visible>IsEmpty(Control.GetLabel(37015)) + IsEmpty(Control.GetLabel(39015))</visible>
 		</control>
 	</control>
 	

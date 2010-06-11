@@ -370,6 +370,7 @@
 		</control>
 	</control>
 		
+		<include>Global_Time_TopRight_OSD</include>
 		<include>Object_DebugGrid</include>
 	</controls>
 </window>
