@@ -200,6 +200,24 @@
 					<selected>Skin.HasSetting(Poster_Fanart)</selected>
 					<visible>Control.IsVisible(50)</visible>
 				</control>
+				<control type="togglebutton" id="32">
+					<description>Toggle MoviesFanart</description>
+					<include>WindowMenuButton_Library</include>
+					<label>$LOCALIZE[31006]</label>
+					<altlabel>$LOCALIZE[21375]</altlabel>
+					<onclick>Skin.ToggleSetting(PosterPlus)</onclick>
+					<selected>Skin.HasSetting(PosterPlus)</selected>
+					<visible>Control.IsVisible(50) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart)</visible>
+				</control>
+				<!--<control type="togglebutton" id="33">
+					<description>Toggle MoviesFanart</description>
+					<include>WindowMenuButton_Library</include>
+					<label>$LOCALIZE[31086]</label>
+					<altlabel>$LOCALIZE[21375]</altlabel>
+					<onclick>Skin.ToggleSetting(Wall_fanart)</onclick>
+					<selected>Skin.HasSetting(Wall_fanart)</selected>
+					<visible>Control.IsVisible(54)</visible>
+				</control>-->
 				<control type="togglebutton" id="24">
 					<description>Toggle MoviesFanart</description>
 					<include>WindowMenuButton_Library</include>
@@ -261,7 +279,7 @@
 			<textcolor>black</textcolor>
 			<label>$LOCALIZE[31267]</label>
 			<align>justify</align>
-			<visible allowhiddenfocus="true">[Control.HasFocus(22) | Control.HasFocus(28) | Control.HasFocus(31)] + !Skin.HasSetting(LockViews)</visible>
+			<visible allowhiddenfocus="true">[Control.HasFocus(22) | Control.HasFocus(28) | Control.HasFocus(31) | Control.HasFocus(33)] + !Skin.HasSetting(LockViews)</visible>
 		</control>
 		<control type="textbox">
 			<posx>720</posx>
@@ -306,6 +324,17 @@
 			<label>$LOCALIZE[31271]</label>
 			<align>justify</align>
 			<visible allowhiddenfocus="true">Control.HasFocus(24) + !Skin.HasSetting(LockViews)</visible>
+		</control>
+		<control type="textbox">
+			<posx>720</posx>
+			<posy>200</posy>
+			<width>270</width>
+			<height>200</height>
+			<font>Font_Bartowski_Showcase_plot</font>
+			<textcolor>black</textcolor>
+			<label>$LOCALIZE[31005]</label>
+			<align>justify</align>
+			<visible allowhiddenfocus="true">Control.HasFocus(32) + !Skin.HasSetting(LockViews)</visible>
 		</control>
 		<control type="textbox">
 			<posx>720</posx>
@@ -399,6 +428,22 @@
 				<height>168</height>
 				<texture>extras/viewoptions/landscape.jpg</texture>
 				<visible allowhiddenfocus="true">[Control.HasFocus(27) | Control.HasFocus(29)]+ !Skin.HasSetting(LockViews)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>300</width>
+				<height>168</height>
+				<texture>extras/viewoptions/posterplus.png</texture>
+				<visible allowhiddenfocus="true">Control.HasFocus(32) + !Skin.HasSetting(LockViews)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>300</width>
+				<height>168</height>
+				<texture>extras/viewoptions/wall_fanart.png</texture>
+				<visible allowhiddenfocus="true">Control.HasFocus(33) + !Skin.HasSetting(LockViews)</visible>
 			</control>
 			<control type="image">
 				<posx>0</posx>

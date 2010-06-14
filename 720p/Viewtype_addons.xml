@@ -106,27 +106,28 @@
 	<control type="group">
 	<include>Animation_HiddenByInfo</include>
 	<visible>Control.IsVisible(55)</visible>
-	<include>Animation_Viewtype_Files_RightArea</include>	
+	<include>Animation_Viewtype_Wall_Title</include>	
 		<control type="image">
-			<posx>776</posx>
-			<posy>334</posy>
-			<width>490</width>
-			<height>380</height>
+			<posx>810</posx>
+			<posy>380</posy>
+			<width>460</width>
+			<height>330</height>
 			<aspectratio align="right" aligny="bottom">keep</aspectratio>
 			<texture background="true">$INFO[ListItem.Icon]</texture>
 			<bordertexture border="5">confluence/button-nofocus.png</bordertexture>
-				<bordersize>5</bordersize>
-				<fadetime>100</fadetime>
+			<bordersize>5</bordersize>
+			<fadetime>100</fadetime>
 		</control>
 		<control type="image">
-			<posx>766</posx>
-			<posy>362</posy>
-			<width>540</width>
-			<height>380</height>
+			<posx>810</posx>
+			<posy>380</posy>
+			<width>460</width>
+			<height>330</height>
 			<aspectratio align="right" aligny="bottom">keep</aspectratio>
-			<texture background="true" diffuse="common/new_files_diffuse.png">$INFO[ListItem(-1).Icon]</texture>
-			<bordertexture border="32">list/files_list_glow.png</bordertexture>
-			<bordersize>32</bordersize>
+			<texture background="true">$INFO[ListItem(-1).Icon]</texture>
+			<bordertexture border="5">confluence/button-nofocus.png</bordertexture>
+			<bordersize>5</bordersize>
+			<fadetime>100</fadetime>
 			<animation type="Hidden">
 			<effect type="zoom" time="400" center="auto" start="100" end="180" tween="cubic" easing="in" />
 				<effect type="fade" time="400" start="100" end="0" />
@@ -134,14 +135,15 @@
 			<visible>Container(55).OnNext</visible>
 		</control>
 		<control type="image">
-			<posx>766</posx>
-			<posy>362</posy>
-			<width>540</width>
-			<height>380</height>
+			<posx>810</posx>
+			<posy>380</posy>
+			<width>460</width>
+			<height>330</height>
 			<aspectratio align="right" aligny="bottom">keep</aspectratio>
-			<texture background="true" diffuse="common/new_files_diffuse.png">$INFO[ListItem(1).Icon]</texture>
-			<bordertexture border="32">list/files_list_glow.png</bordertexture>
-			<bordersize>32</bordersize>
+			<texture background="true">$INFO[ListItem(1).Icon]</texture>
+			<bordertexture border="5">confluence/button-nofocus.png</bordertexture>
+			<bordersize>5</bordersize>
+			<fadetime>100</fadetime>
 			<animation type="Hidden">
 			<effect type="zoom" time="400" center="auto" start="100" end="180" tween="cubic" easing="in" />
 				<effect type="fade" time="400" start="100" end="0" />
@@ -152,7 +154,7 @@
 	
 		<control type="textbox"><!-- Plot TV -->
 			<posx>790</posx>
-			<posy>90</posy>
+			<posy>70</posy>
 			<width>476</width>
 			<height>280</height>
 			<align>justify</align>
@@ -161,8 +163,8 @@
 			<textcolor>ffffffff</textcolor>
 			<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 			<include>Animation_HiddenByInfo</include>
-			<include>Animation_Viewtype_Files_RightArea</include>
-			<visible>Window.IsActive(AddonBrowser)</visible>
+			<include>Animation_Viewtype_Wall_Plot</include>
+			<visible>Control.IsVisible(55)</visible>
 		</control>
 		
 		<control type="scrollbar" id="60">

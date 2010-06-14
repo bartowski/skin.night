@@ -124,7 +124,7 @@
 					<visible>!IsEmpty(ListItem.Title) + Window.IsActive(25) + Container.Content(episodes)</visible>
 				</control>
 				<control type="label">
-					<posx>690</posx>
+					<posx>750</posx>
 					<posy>0</posy>
 					<width>700</width>
 					<height>46</height>
@@ -132,13 +132,6 @@
 					<font>Font_Bartowski_List_Main</font>
 					<textcolor>Text-Filemode</textcolor>
 					<label>$INFO[ListItem.year]</label>
-					<visible>Container.Content(movies) + !Skin.HasSetting(Files_Fanart)</visible>
-				</control>
-				<control type="group">
-					<posx>1250</posx>
-					<posy>24</posy>
-					<include>VideoMPAAFlaggingConditions_Grey</include>
-					<animation effect="zoom" start="60" end="60" time="0" condition="true">Conditional</animation>
 					<visible>Container.Content(movies) + !Skin.HasSetting(Files_Fanart)</visible>
 				</control>
 				<control type="image">
@@ -213,7 +206,7 @@
 					<visible>Window.IsActive(Programs)</visible>
 				</control>
 				<control type="label">
-					<posx>690</posx>
+					<posx>750</posx>
 					<posy>0</posy>
 					<width>700</width>
 					<height>46</height>
@@ -221,13 +214,6 @@
 					<font>Font_Bartowski_List_Main</font>
 					<textcolor>white</textcolor>
 					<label>$INFO[ListItem.year]</label>
-					<visible>Container.Content(movies) + !Skin.HasSetting(Files_Fanart)</visible>
-				</control>
-				<control type="group">
-					<posx>1250</posx>
-					<posy>24</posy>
-					<include>VideoMPAAFlaggingConditions</include>
-					<animation effect="zoom" start="60" end="60" time="0" condition="true">Conditional</animation>
 					<visible>Container.Content(movies) + !Skin.HasSetting(Files_Fanart)</visible>
 				</control>
 				<control type="label">

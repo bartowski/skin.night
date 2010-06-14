@@ -54,13 +54,6 @@
 				<pagecontrol>61</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<itemlayout height="40" width="570">
-					<!--<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>570</width>
-						<height>41</height>
-						<texture border="0,2,0,2">confluence/MenuItemNF.png</texture>
-					</control>-->
 					<control type="label">
 						<posx>20</posx>
 						<posy>0</posy>

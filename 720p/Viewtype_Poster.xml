@@ -83,7 +83,7 @@
 				<control type="group">
 				<posx>150</posx>
 				<posy>0</posy>
-				<!--<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Container.Content(movies) + ![Container(50).OnNext | Container(50).OnPrevious]">Conditional</animation>-->
+				<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(50).OnNext | Container(50).OnPrevious]">Conditional</animation>
 					<control type="image">
 						<posx>-2</posx>
 						<posy>133</posy>
@@ -174,8 +174,8 @@
 				<control type="group">
 				<posx>140</posx>
 				<posy>0</posy>
-				<!--<animation effect="zoom" start="100" end="120" time="600" delay="2800" condition="Container.Content(movies) + ![Container(50).OnNext | Container(50).OnPrevious]">Conditional</animation>
-				<animation effect="slide" start="0,0" end="40,-20" time="600" delay="2800" condition="Container.Content(movies) + ![Container(50).OnNext | Container(50).OnPrevious]">Conditional</animation>-->
+				<animation effect="zoom" start="100" end="120" time="600" delay="2800" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(50).OnNext | Container(50).OnPrevious]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-280,-80" time="600" delay="2800" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(50).OnNext | Container(50).OnPrevious]">Conditional</animation>
 					<control type="image">
 						<posx>44</posx>
 						<posy>93</posy>
@@ -330,42 +330,38 @@
 			<texture>movie-poster/last-overlay.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
+		<control type="image">
+			<visible>Control.IsVisible(50) + Skin.HasSetting(Poster_Fanart)</visible>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>160</height>
+			<texture>movie-poster/Poster_Fanart_Title_Back.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
 		
 		<!-- Browser label and flags -->
 		
 		<control type="group">
-			<visible>Control.IsVisible(50) + !Skin.HasSetting(Poster_Fanart)</visible>
+			<visible>Control.IsVisible(50)</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<include>Animation_ZoomInZoomOut</include>
 			<include>Animation_HiddenByInfo</include>
-			<!--<control type="textbox">
-				<description>Plot Movie and TV</description>
-				<posx>660</posx>
+			<control type="textbox">
+				<description>Plot Movie</description>
+				<posx>340</posx>
 				<posy>420</posy>
 				<width>600</width>
-				<height>280</height>
-				<align>left</align>
+				<height>236</height>
+				<align>justify</align>
 				<info>ListItem.Plot</info>
 				<font>Font_Bartowski_Movies_Plot</font>
 				<textcolor>ffffffff</textcolor>
-				<animation effect="slide" start="1000,0" end="0,0" time="800" delay="3200" condition="Container.Content(movies) + ![Container(50).OnNext | Container(50).OnPrevious]">Conditional</animation>
+				<animation effect="slide" start="1000,0" end="0,0" time="800" delay="3200" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(50).OnNext | Container(50).OnPrevious]">Conditional</animation>
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-				<visible>Control.IsVisible(50) + Container.Content(movies)</visible>
+				<visible>Control.IsVisible(50) + Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart)</visible>
 			</control>
-			<control type="textbox">
-				<description>Plot season</description>
-				<posx>660</posx>
-				<posy>260</posy>
-				<width>350</width>
-				<height>340</height>
-				<align>left</align>
-				<info>Container(50).ShowPlot</info>
-				<font>Font_Bartowski_Movies_Plot</font>
-				<textcolor>ffffffff</textcolor>
-				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-				<visible>Container.Content(seasons)</visible>
-			</control>-->
 			<control type="label">
 				<posx>20</posx>
 				<posy>0</posy>
@@ -441,14 +437,16 @@
 			</control>
 		</control>
 		
-	<!--<control type="grouplist">
-		<posx>660</posx>
+	<control type="grouplist">
+		<posx>340</posx>
 		<posy>260</posy>
-		<width>390</width>
-		<animation effect="slide" start="0,600" end="0,0" time="400" delay="3000" condition="Container.Content(movies) + ![Container(50).OnNext | Container(50).OnPrevious]">Conditional</animation>
-		<visible>Control.IsVisible(50) + !IsEmpty(ListItem.Title) + Container.Content(movies)</visible>
+		<width>600</width>
+		<include>Animation_ZoomInZoomOut</include>
+		<include>Animation_HiddenByInfo</include>
+		<animation effect="slide" start="0,600" end="0,0" time="400" delay="3000" condition="Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(50).OnNext | Container(50).OnPrevious]">Conditional</animation>
+		<visible>Control.IsVisible(50) + Skin.HasSetting(PosterPlus) + !IsEmpty(ListItem.Title) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart)</visible>
 			<control type="label">
-				<width>390</width>
+				<width>600</width>
 				<height>20</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_Showcase_Right_Under</font>
@@ -456,7 +454,7 @@
 				<label>[B][COLOR=ff67ffff]Director[/COLOR][/B] - $INFO[ListItem.Director]</label>
 			</control>
 			<control type="label">
-				<width>390</width>
+				<width>600</width>
 				<height>20</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_Showcase_Right_Under</font>
@@ -464,7 +462,7 @@
 				<label>[B][COLOR=ff67ffff]Writer[/COLOR][/B] - $INFO[ListItem.Writer]</label>
 			</control>
 			<control type="label">
-				<width>390</width>
+				<width>600</width>
 				<height>20</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_Showcase_Right_Under</font>
@@ -472,7 +470,7 @@
 				<label>[B][COLOR=ff67ffff]Genre[/COLOR][/B] - $INFO[ListItem.Genre]</label>
 			</control>
 			<control type="label">
-				<width>390</width>
+				<width>600</width>
 				<height>20</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_Showcase_Right_Under</font>
@@ -480,14 +478,14 @@
 				<label>[B][COLOR=ff67ffff]Studio[/COLOR][/B] - $INFO[ListItem.Studio]</label>
 			</control>
 			<control type="label">
-				<width>390</width>
+				<width>600</width>
 				<height>20</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_Showcase_Right_Under</font>
 				<textcolor>ffffffff</textcolor>
 				<label>[B][COLOR=ff67ffff]Rating[/COLOR][/B] - $INFO[ListItem.Rating]</label>
 			</control>
-	</control>-->
+	</control>
 		<control type="group">
 		<posx>20</posx>
 		<posy>90</posy>
@@ -498,15 +496,15 @@
 			<control type="label">
 				<visible>Container.Content(seasons)</visible>
 				<posx>0</posx>
-				<posy>-4</posy>
+				<posy>0</posy>
 				<width>630</width>
 				<height>89</height>
 				<font>Font_Bartowski_Movies_Duration</font>
 				<textcolor>white</textcolor>
-				<label>[B]$LOCALIZE[20373] $INFO[ListItem.season][/B]</label>
+				<label>[B]$INFO[ListItem.Label][/B]</label>
 			</control>
 			<control type="label">
-				<visible>![Container.Content(seasons) | Container.Content(episodes)]</visible>
+				<visible>Container.Content(tvshows)</visible>
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>630</width>
@@ -565,6 +563,50 @@
 				<include>Animation_HiddenByInfo</include>
 			</control>
 		</control>
+		<!--<control type="group">
+		<posx>40</posx>
+		<posy>270</posy>
+		<visible>Control.IsVisible(50) + Container.Content(movies) + !IsEmpty(ListItem.Title)</visible>
+		<include>Animation_Viewtype_Showcase_RightArea</include>
+		<include>Animation_HiddenByInfo</include>		
+			<control type="largeimage">
+				<posx>20</posx>
+				<posy>30</posy>
+				<width>261</width>
+				<height>147</height>
+				<aspectratio>stretch</aspectratio>
+				<texture diffuse="tv-landscape/landscapematteFO.png">$INFO[ListItem.Path,,extrathumbs/thumb1.jpg]</texture>
+				<fadetime>200</fadetime>
+				<animation effect="slide" start="-400,0" end="0,0" time="400" delay="3000" condition="Container.Content(movies) + !IsEmpty(ListItem.Title) + ![Container(50).OnNext | Container(50).OnPrevious]">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>8</posx>
+				<posy>20</posy>
+				<width>284</width>
+				<height>166</height>
+				<texture>tv-landscape/landscapeframeFO.png</texture>
+				<animation effect="slide" start="-400,0" end="0,0" time="400" delay="3000" condition="Container.Content(movies) + !IsEmpty(ListItem.Title) + ![Container(50).OnNext | Container(50).OnPrevious]">Conditional</animation>
+			</control>
+			<control type="largeimage">
+				<posx>20</posx>
+				<posy>200</posy>
+				<width>261</width>
+				<height>147</height>
+				<aspectratio>stretch</aspectratio>
+				<texture diffuse="tv-landscape/landscapematteFO.png">$INFO[ListItem.Path,,extrathumbs/thumb2.jpg]</texture>
+				<fadetime>200</fadetime>
+				<animation effect="slide" start="-400,0" end="0,0" time="400" delay="3200" condition="Container.Content(movies) + !IsEmpty(ListItem.Title) + ![Container(50).OnNext | Container(50).OnPrevious]">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>8</posx>
+				<posy>190</posy>
+				<width>284</width>
+				<height>166</height>
+				<texture>tv-landscape/landscapeframeFO.png</texture>
+				<animation effect="slide" start="-400,0" end="0,0" time="400" delay="3200" condition="Container.Content(movies) + !IsEmpty(ListItem.Title) + ![Container(50).OnNext | Container(50).OnPrevious]">Conditional</animation>
+			</control>
+		</control>-->
+		
 		<control type="label"><!--Trailer Start-->
 				<visible>Control.IsVisible(50) + Container.Content(movies) + !IsEmpty(ListItem.Trailer) + !Player.HasVideo + !Control.IsVisible(68)</visible>
 				<posx>115</posx>

@@ -20,30 +20,6 @@
 			<posy>60</posy>
 			<include>VisibleFadeEffect</include>
 			<visible>!Window.isVisible(AddonSettings)</visible>
-			<!--<control type="image">
-				<description>background image</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>920</width>
-				<height>600</height>
-				<texture border="40">DialogBack.png</texture>
-			</control>
-			<control type="image">
-				<posx>260</posx>
-				<posy>10</posy>
-				<width>620</width>
-				<height>578</height>
-				<texture border="5">black-back2.png</texture>
-			</control>
-			<control type="image">
-				<posx>260</posx>
-				<posy>10</posy>
-				<width>610</width>
-				<height>100</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>GlassTitleBar.png</texture>
-			</control>-->
-			
 			<control type="label">
 				<description>header label</description>
 				<posx>200</posx>
@@ -58,18 +34,42 @@
 			</control>
 			<control type="textbox" id="400">
 				<description>Description</description>
-				<posx>-290</posx>
-				<posy>300</posy>
-				<width>530</width>
-				<height>260</height>
+				<posx>290</posx>
+				<posy>140</posy>
+				<width>600</width>
+				<height>500</height>
 				<font>Font_Bartowski_Movies_Plot</font>
 				<align>justify</align>
 				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Property(Addon.Description)]</label>
 				<pagecontrol>60</pagecontrol>
 			</control>
+			<control type="label">
+				<description>Disclaimer txt</description>
+				<posx>550</posx>
+				<posy>500</posy>
+				<width>600</width>
+				<height>25</height>
+				<label>$LOCALIZE[24052]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font13</font>
+				<textcolor>orange</textcolor>
+			</control>
+			<control type="textbox">
+				<description>Disclaimer</description>
+				<posx>300</posx>
+				<posy>525</posy>
+				<width>580</width>
+				<height>40</height>
+				<font>font12</font>
+				<align>justify</align>
+				<textcolor>white</textcolor>
+				<label>$INFO[ListItem.Property(Addon.Disclaimer)]</label>
+				<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
+			</control>
 		<control type="group">
-		<posx>-40</posx>
+		<posx>10</posx>
 		<posy>-40</posy>
 			<control type="label">
 				<description>Addon Title value</description>
@@ -112,60 +112,10 @@
 			</control>
 		</control>
 			<control type="group">
-				<posx>270</posx>
-				<posy>130</posy>
-				<visible>![Control.HasFocus(10) | Control.HasFocus(62)]</visible>
+				<posx>-300</posx>
+				<posy>230</posy>
 				<include>VisibleFadeEffect</include>
-				<!--<control type="label">
-					<description>Type txt</description>
-					<posx>150</posx>
-					<posy>0</posy>
-					<width>140</width>
-					<height>25</height>
-					<label>$LOCALIZE[146]</label>
-					<align>right</align>
-					<aligny>center</aligny>
-					<font>Font_KeyboardKeys</font>
-					<textcolor>grey</textcolor>
-				</control>
-				<control type="label">
-					<description>Type Value</description>
-					<posx>160</posx>
-					<posy>0</posy>
-					<width>440</width>
-					<height>25</height>
-					<label fallback="416">$INFO[ListItem.Property(Addon.Type)]</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>Font_KeyboardKeys</font>
-					<textcolor>white</textcolor>
-					<scroll>true</scroll>
-				</control>
-				<control type="label">
-					<description>Author txt</description>
-					<posx>150</posx>
-					<posy>30</posy>
-					<width>140</width>
-					<height>25</height>
-					<label>$LOCALIZE[21863]:</label>
-					<align>right</align>
-					<aligny>center</aligny>
-					<font>Font_KeyboardKeys</font>
-					<textcolor>grey</textcolor>
-				</control>
-				<control type="label">
-					<description>Author Value</description>
-					<posx>160</posx>
-					<posy>30</posy>
-					<width>440</width>
-					<height>25</height>
-					<label fallback="416">$INFO[ListItem.Property(Addon.Creator)]</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>Font_KeyboardKeys</font>
-					<textcolor>white</textcolor>
-					<scroll>true</scroll>
-				</control>-->
+				
 				<control type="label">
 					<description>Version txt</description>
 					<posx>150</posx>
@@ -211,7 +161,7 @@
 					<height>32</height>
 					<texture>LeftRating/$INFO[ListItem.Property(Addon.Rating)]</texture>
 				</control>
-				<control type="label">
+				<!--<control type="label">
 					<description>Summary txt</description>
 					<posx>150</posx>
 					<posy>120</posy>
@@ -236,41 +186,11 @@
 					<textcolor>white</textcolor>
 					<scrollout>false</scrollout>
 					<pauseatend>2000</pauseatend>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>160</posy>
-					<width>600</width>
-					<height>4</height>
-					<texture>separator.png</texture>
-				</control>
-				<control type="label">
-					<description>Description txt</description>
-					<posx>0</posx>
-					<posy>170</posy>
-					<width>300</width>
-					<height>25</height>
-					<label>$LOCALIZE[21821]</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>font13</font>
-					<textcolor>mainblue</textcolor>
-				</control>
+				</control>-->
+				
+				
 				<control type="group">
 					<visible>!IsEmpty(ListItem.Property(Addon.Disclaimer))</visible>
-					<control type="label">
-						<description>Description Page Count</description>
-						<posx>600</posx>
-						<posy>170</posy>
-						<width>300</width>
-						<height>25</height>
-						<label>$INFO[Container(400).CurrentPage, $LOCALIZE[31024] [COLOR=mainblue]([/COLOR]]$INFO[Container(400).NumPages,/,[COLOR=mainblue])[/COLOR]]</label>
-						<align>right</align>
-						<aligny>center</aligny>
-						<font>font12</font>
-						<textcolor>grey</textcolor>
-					</control>
-					
 					<control type="scrollbar" id="60">
 						<posx>610</posx>
 						<posy>190</posy>
@@ -286,131 +206,9 @@
 						<showonepage>false</showonepage>
 						<orientation>vertical</orientation>
 					</control>
-					<control type="label">
-						<description>Disclaimer txt</description>
-						<posx>0</posx>
-						<posy>370</posy>
-						<width>600</width>
-						<height>25</height>
-						<label>$LOCALIZE[24052]</label>
-						<align>left</align>
-						<aligny>center</aligny>
-						<font>font13</font>
-						<textcolor>orange</textcolor>
-					</control>
-					<control type="textbox">
-						<description>Disclaimer</description>
-						<posx>10</posx>
-						<posy>395</posy>
-						<width>580</width>
-						<height>40</height>
-						<font>font12</font>
-						<align>justify</align>
-						<textcolor>white</textcolor>
-						<label>$INFO[ListItem.Property(Addon.Disclaimer)]</label>
-						<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
-					</control>
-				</control>
-				<!--<control type="group">
-					<visible>IsEmpty(ListItem.Property(Addon.Disclaimer))</visible>
-					<control type="label">
-						<description>Description Page Count</description>
-						<posx>600</posx>
-						<posy>170</posy>
-						<width>300</width>
-						<height>25</height>
-						<label>$INFO[Container(401).CurrentPage, $LOCALIZE[31024] [COLOR=mainblue]([/COLOR]]$INFO[Container(401).NumPages,/,[COLOR=mainblue])[/COLOR]]</label>
-						<align>right</align>
-						<aligny>center</aligny>
-						<font>font12</font>
-						<textcolor>grey</textcolor>
-					</control>
-					<control type="textbox" id="401">
-						<description>Description</description>
-						<posx>10</posx>
-						<posy>195</posy>
-						<width>580</width>
-						<height>250</height>
-						<font>font12</font>
-						<align>justify</align>
-						<textcolor>white</textcolor>
-						<label>$INFO[ListItem.Property(Addon.Description)]</label>
-						<pagecontrol>61</pagecontrol>
-					</control>
-					<control type="scrollbar" id="61">
-						<posx>610</posx>
-						<posy>190</posy>
-						<width>25</width>
-						<height>250</height>
-						<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
-						<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-						<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-						<textureslidernib>ScrollBarNib.png</textureslidernib>
-						<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
-						<onleft>60</onleft>
-						<onright>9000</onright>
-						<showonepage>false</showonepage>
-						<orientation>vertical</orientation>
-					</control>
-				</control>-->
-			</control>
-			<control type="group">
-				<posx>270</posx>
-				<posy>130</posy>
-				<include>VisibleFadeEffect</include>
-				<visible>Control.HasFocus(10) | Control.HasFocus(62)</visible>
-				<control type="label">
-					<description>Description txt</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>300</width>
-					<height>25</height>
-					<label>$LOCALIZE[24036]</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>Font_KeyboardKeys</font>
-					<textcolor>mainblue</textcolor>
-				</control>
-				<control type="label">
-					<description>Description Page Count</description>
-					<posx>600</posx>
-					<posy>0</posy>
-					<width>300</width>
-					<height>25</height>
-					<label>$INFO[Container(403).CurrentPage, $LOCALIZE[31024] [COLOR=mainblue]([/COLOR]]$INFO[Container(403).NumPages,/,[COLOR=mainblue])[/COLOR]]</label>
-					<align>right</align>
-					<aligny>center</aligny>
-					<font>Font_Bartowski_Movies_Plot</font>
-					<textcolor>grey</textcolor>
-				</control>
-				<control type="textbox" id="403">
-					<description>Description</description>
-					<posx>10</posx>
-					<posy>30</posy>
-					<width>580</width>
-					<height>410</height>
-					<font>font12</font>
-					<align>justify</align>
-					<textcolor>white</textcolor>
-					<label>$INFO[ListItem.Property(Addon.ChangeLog)]</label>
-					<pagecontrol>62</pagecontrol>
-				</control>
-				<control type="scrollbar" id="62">
-					<posx>610</posx>
-					<posy>30</posy>
-					<width>25</width>
-					<height>410</height>
-					<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
-					<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-					<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-					<textureslidernib>ScrollBarNib.png</textureslidernib>
-					<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
-					<onleft>9000</onleft>
-					<onright>9000</onright>
-					<showonepage>false</showonepage>
-					<orientation>vertical</orientation>
 				</control>
 			</control>
+			
 			<control type="image"><!-- Floor -->
 				<posx>-300</posx>
 				<posy>590</posy>
@@ -419,7 +217,7 @@
 				<texture>backdrops/test2.png</texture>
 			</control>
 			<control type="group" id="9000">
-				<posx>0</posx>
+				<posx>-160</posx>
 				<posy>572</posy>
 				<control type="button" id="6">
 					<description>Enable</description>
@@ -503,12 +301,12 @@
 					<onright>10</onright>
 				</control>
 				<control type="button" id="10">
-					<description>Changelog</description>
+					<description>Changelog button</description>
 					<posx>800</posx>
 					<posy>33</posy>
 					<width>200</width>
 					<height>35</height>
-					<label>33073</label>
+					<label>24036</label>
 					<font>font16caps</font>
 					<textcolor>white</textcolor>
 					<focusedcolor>white</focusedcolor>
@@ -517,12 +315,10 @@
 					<aligny>center</aligny>
 					<texturefocus border="7">confluence/button-focus.png</texturefocus>
 					<texturenofocus border="7">button-nofocus.png</texturenofocus>
-					<onclick>Skin.ToggleSetting(ViewAddonChangelog)</onclick>
-					<onup>49</onup>
-					<ondown>60</ondown>
 					<onleft>8</onleft>
 					<onright>6</onright>
-					<visible>!IsEmpty(ListItem.Property(Addon.Changelog))</visible>
+					<onup>49</onup>
+					<ondown>60</ondown>
 				</control>
 			</control>
 		</control>

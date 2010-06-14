@@ -426,6 +426,7 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<include>Animation_HiddenByInfo</include>
+			<include>Animation_Viewtype_3dland_Lefttop</include>
 			<!--<control type="textbox">
 				<posx>20</posx>
 				<posy>320</posy>
@@ -459,8 +460,6 @@
 				<texture>$INFO[ListItem.path]logo.png</texture>
 				<fadetime>100</fadetime>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
-				<include>Animation_Viewtype_3dland_Lefttop</include>
-				<visible></visible>
 			</control>
 			<control type="largeimage" id="9018">
 				<posx>20</posx>
@@ -470,8 +469,6 @@
 				<texture>$INFO[ListItem.path]../logo.png</texture>
 				<fadetime>100</fadetime>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
-				<include>Animation_Viewtype_3dland_Lefttop</include>
-				<visible></visible>
 			</control>
 			<control type="label">
 				<posx>20</posx>
@@ -482,8 +479,17 @@
 				<font>Font_Bartowski_Landscape_TV_Title</font>
 				<textcolor>ff67ffff</textcolor>
 				<label>[B]$INFO[ListItem.TVShowTitle][/B]</label>
-				<include>Animation_Viewtype_3dland_Lefttop</include>
 				<visible>IsEmpty(Control.GetLabel(7018)) + IsEmpty(Control.GetLabel(9018))</visible>
+			</control>
+			<control type="label">
+				<visible>Container.Content(seasons)</visible>
+				<posx>20</posx>
+				<posy>90</posy>
+				<width>630</width>
+				<height>89</height>
+				<font>Font_Bartowski_Movies_Duration</font>
+				<textcolor>white</textcolor>
+				<label>[B]$INFO[ListItem.Label][/B]</label>
 			</control>
 		</control>
 		<control type="group">

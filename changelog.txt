@@ -1,3 +1,13 @@
+Update 6/13/2010
+  -Should be back to having all merge dialogs up to date
+  -Added DialogTextViewer.xml
+  -Added ability for custom submenu for scripts (merge only)
+  -Removed Rating icon from Files view
+  -Added option to remove "Settings" from home
+  -Couple new strings
+  -bumped custom Favorites on Home to 5 (merge only)
+  -Added "PosterPlus" option to Poster view
+
 Update 6/10/2010
   -Added Global time to all the videoOSD screens
   -Fixed an error with the background in Poster view with Fanart option
