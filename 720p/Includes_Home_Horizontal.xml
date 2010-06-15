@@ -45,30 +45,6 @@
 				</control>
 			</focusedlayout>
 			<content>
-				<item id="17">
-					<description>Custom Movie Three</description>
-					<label>$INFO[Skin.String(Menu_Custom3_Label)]</label>
-					<icon>special://skin/media/backgrounds/custom.jpg</icon>
-					<thumb>$INFO[Skin.String(Menu_Custom3_Folder)]</thumb>
-					<onclick>$INFO[Skin.String(Menu_Custom3_Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Custom3)</visible>
-				</item>
-				<item id="16">
-					<description>Custom Movie Two</description>
-					<label>$INFO[Skin.String(Menu_Custom2_Label)]</label>
-					<icon>special://skin/media/backgrounds/custom.jpg</icon>
-					<thumb>$INFO[Skin.String(Menu_Custom2_Folder)]</thumb>
-					<onclick>$INFO[Skin.String(Menu_Custom2_Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Custom2)</visible>
-				</item>
-				<item id="15">
-					<description>Custom Movie One</description>
-					<label>$INFO[Skin.String(Menu_Custom1_Label)]</label>
-					<icon>special://skin/media/backgrounds/custom.jpg</icon>
-					<thumb>$INFO[Skin.String(Menu_Custom1_Folder)]</thumb>
-					<onclick>$INFO[Skin.String(Menu_Custom1_Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Custom1)</visible>
-				</item>
 				<item id="1">
 					<description>music</description>
 					<label>2</label>
@@ -101,11 +77,51 @@
 				</item>
 				<item id="5">
 					<description>TV shows</description>
-					<label>$LOCALIZE[20343]</label>
+					<label>$LOCALIZE[31004]</label>
 					<icon>special://skin/media/backgrounds/tvshows.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomTVShowsFolder)]</thumb>			
 					<onclick>XBMC.ActivateWindow(MyVideoLibrary,tvshowtitles,return)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows)</visible>
+				</item>
+				<item id="15">
+					<description>Custom Movie One</description>
+					<label>$INFO[Skin.String(Menu_Custom1_Label)]</label>
+					<icon>special://skin/media/backgrounds/custom.jpg</icon>
+					<thumb>$INFO[Skin.String(Menu_Custom1_Folder)]</thumb>
+					<onclick>$INFO[Skin.String(Menu_Custom1_Path)]</onclick>
+					<visible>Skin.HasSetting(Menu_Custom1)</visible>
+				</item>
+				<item id="16">
+					<description>Custom Movie Two</description>
+					<label>$INFO[Skin.String(Menu_Custom2_Label)]</label>
+					<icon>special://skin/media/backgrounds/custom.jpg</icon>
+					<thumb>$INFO[Skin.String(Menu_Custom2_Folder)]</thumb>
+					<onclick>$INFO[Skin.String(Menu_Custom2_Path)]</onclick>
+					<visible>Skin.HasSetting(Menu_Custom2)</visible>
+				</item>
+				<item id="17">
+					<description>Custom Movie Three</description>
+					<label>$INFO[Skin.String(Menu_Custom3_Label)]</label>
+					<icon>special://skin/media/backgrounds/custom.jpg</icon>
+					<thumb>$INFO[Skin.String(Menu_Custom3_Folder)]</thumb>
+					<onclick>$INFO[Skin.String(Menu_Custom3_Path)]</onclick>
+					<visible>Skin.HasSetting(Menu_Custom3)</visible>
+				</item>
+				<item id="19">
+					<description>Custom Movie Four</description>
+					<label>$INFO[Skin.String(Menu_Custom4_Label)]</label>
+					<icon>special://skin/media/backgrounds/custom.jpg</icon>
+					<thumb>$INFO[Skin.String(Menu_Custom4_Folder)]</thumb>
+					<onclick>$INFO[Skin.String(Menu_Custom4_Path)]</onclick>
+					<visible>Skin.HasSetting(Menu_Custom4)</visible>
+				</item>
+				<item id="20">
+					<description>Custom Movie Five</description>
+					<label>$INFO[Skin.String(Menu_Custom5_Label)]</label>
+					<icon>special://skin/media/backgrounds/custom.jpg</icon>
+					<thumb>$INFO[Skin.String(Menu_Custom5_Folder)]</thumb>
+					<onclick>$INFO[Skin.String(Menu_Custom5_Path)]</onclick>
+					<visible>Skin.HasSetting(Menu_Custom5)</visible>
 				</item>
 				<item id="6">
 					<description>pictures</description>
@@ -161,6 +177,7 @@
 					<icon>special://skin/media/backgrounds/settings.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomSettingsFolder)]</thumb>			
 					<onclick>XBMC.ActivateWindow(settings)</onclick>
+					<visible>!Skin.HasSetting(HomeMenuNoSettingsButton)</visible>
 				</item>
 				<!--<item id="12">
 					<include>BackgroundVarsSignOut</include>					
@@ -191,6 +208,7 @@
 					<width>1280</width>
 					<height>465</height>
 					<orientation>horizontal</orientation>
+					<align>center</align>
 					<onleft>9010</onleft>
 					<onright>9010</onright>
 					<onup>300</onup>
@@ -247,6 +265,7 @@
 					<onleft>9011</onleft>
 					<onright>9011</onright>
 					<orientation>horizontal</orientation>
+					<align>center</align>
 					<onup>300</onup>
 					<ondown>Control.SetFocus(8000,0)</ondown>
 					<itemgap>0</itemgap>
@@ -299,6 +318,7 @@
 					<width>1280</width>
 					<height>465</height>
 					<orientation>horizontal</orientation>
+					<align>center</align>
 					<onleft>9012</onleft>
 					<onright>9012</onright>
 					<onup>300</onup>
@@ -337,6 +357,7 @@
 					<width>1280</width>
 					<height>465</height>
 					<orientation>horizontal</orientation>
+					<align>center</align>
 					<onleft>9014</onleft>
 					<onright>9014</onright>
 					<onup>300</onup>
@@ -371,18 +392,19 @@
 						<onclick>ActivateWindow(SystemInfo)</onclick>
 					</control>
 				</control>
-				<control type="grouplist" id="9015">
+<!--SCRIPTS -->	<control type="grouplist" id="9015">
 					<posx>10</posx>
-					<posy>0</posy>
-					<width>240</width>
-					<height>240</height>
+					<posy>30</posy>
+					<width>1280</width>
+					<orientation>horizontal</orientation>
 					<align>center</align>
-					<onleft>300</onleft>
-					<onright>9001</onright>
-					<onup>9015</onup>
-					<ondown>9015</ondown>
+					<height>465</height>
+					<onleft>9015</onleft>
+					<onright>9015</onright>
+					<onup>300</onup>
+					<ondown>300</ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(300).HasFocus(8) + [[Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))] | [Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))] | [Skin.HasSetting(HomeScriptButton3) + !IsEmpty(Skin.String(HomeScriptButton3_label))] | [Skin.HasSetting(HomeScriptButton4) + !IsEmpty(Skin.String(HomeScriptButton4_label))] | [Skin.HasSetting(HomeScriptButton5) + !IsEmpty(Skin.String(HomeScriptButton5_label))] | [Skin.HasSetting(HomeScriptButton6) + !IsEmpty(Skin.String(HomeScriptButton6_label))]]</visible>
+					<visible>Container(300).HasFocus(10) + [[Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))] | [Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))] | [Skin.HasSetting(HomeScriptButton3) + !IsEmpty(Skin.String(HomeScriptButton3_label))] | [Skin.HasSetting(HomeScriptButton4) + !IsEmpty(Skin.String(HomeScriptButton4_label))] | [Skin.HasSetting(HomeScriptButton5) + !IsEmpty(Skin.String(HomeScriptButton5_label))] | [Skin.HasSetting(HomeScriptButton6) + !IsEmpty(Skin.String(HomeScriptButton6_label))]]</visible>
 					<control type="button" id="90151">
 						<description>Button1</description>
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
@@ -439,6 +461,7 @@
 					<width>1280</width>
 					<height>465</height>
 					<orientation>horizontal</orientation>
+					<align>center</align>
 					<onleft>9017</onleft>
 					<onright>9017</onright>
 					<onup>300</onup>
@@ -493,6 +516,7 @@
 					<width>1280</width>
 					<height>465</height>
 					<orientation>horizontal</orientation>
+					<align>center</align>
 					<onleft>9018</onleft>
 					<onright>9018</onright>
 					<onup>300</onup>
@@ -521,6 +545,7 @@
 					<width>1280</width>
 					<height>465</height>
 					<orientation>horizontal</orientation>
+					<align>center</align>
 					<onleft>9019</onleft>
 					<onright>9019</onright>
 					<onup>300</onup>

@@ -13,10 +13,10 @@
 	
 	<include name="Viewtype_Wall">
 	
-	<control type="largeimage">
+	<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<fadetime>400</fadetime>
-			<texture>$INFO[ListItem.Property(Fanart_Image)]</texture>
+			<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
 			<aspectratio>scale</aspectratio>
 			<include>Animation_BackdropFade</include>
 			<animation effect="fade" start="0" end="100" time="400" delay="2800" condition="Skin.HasSetting(Wall_fanart) + Container.Content(movies) + ![Container(54).OnNext | Container(54).OnPrevious]">Conditional</animation>

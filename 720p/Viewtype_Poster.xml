@@ -373,23 +373,23 @@
 				<label>[B]$INFO[ListItem.Label][/B]</label>
 				<visible>Container.Content(movies)</visible>
 			</control>
-			<control type="largeimage" id="7015">
+			<control type="image" id="7015">
 				<posx>20</posx>
 				<posy>0</posy>
 				<width>230</width>
 				<height>89</height>
-				<texture>$INFO[ListItem.path]logo.png</texture>
+				<texture background="true">$INFO[ListItem.path]logo.png</texture>
 				<fadetime>100</fadetime>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<include>Animation_HiddenByInfo</include>
 				<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 			</control>
-			<control type="largeimage" id="9015">
+			<control type="image" id="9015">
 				<posx>20</posx>
 				<posy>0</posy>
 				<width>230</width>
 				<height>89</height>
-				<texture>$INFO[ListItem.path]../logo.png</texture>
+				<texture background="true">$INFO[ListItem.path]../logo.png</texture>
 				<fadetime>100</fadetime>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<include>Animation_HiddenByInfo</include>
@@ -563,49 +563,6 @@
 				<include>Animation_HiddenByInfo</include>
 			</control>
 		</control>
-		<!--<control type="group">
-		<posx>40</posx>
-		<posy>270</posy>
-		<visible>Control.IsVisible(50) + Container.Content(movies) + !IsEmpty(ListItem.Title)</visible>
-		<include>Animation_Viewtype_Showcase_RightArea</include>
-		<include>Animation_HiddenByInfo</include>		
-			<control type="largeimage">
-				<posx>20</posx>
-				<posy>30</posy>
-				<width>261</width>
-				<height>147</height>
-				<aspectratio>stretch</aspectratio>
-				<texture diffuse="tv-landscape/landscapematteFO.png">$INFO[ListItem.Path,,extrathumbs/thumb1.jpg]</texture>
-				<fadetime>200</fadetime>
-				<animation effect="slide" start="-400,0" end="0,0" time="400" delay="3000" condition="Container.Content(movies) + !IsEmpty(ListItem.Title) + ![Container(50).OnNext | Container(50).OnPrevious]">Conditional</animation>
-			</control>
-			<control type="image">
-				<posx>8</posx>
-				<posy>20</posy>
-				<width>284</width>
-				<height>166</height>
-				<texture>tv-landscape/landscapeframeFO.png</texture>
-				<animation effect="slide" start="-400,0" end="0,0" time="400" delay="3000" condition="Container.Content(movies) + !IsEmpty(ListItem.Title) + ![Container(50).OnNext | Container(50).OnPrevious]">Conditional</animation>
-			</control>
-			<control type="largeimage">
-				<posx>20</posx>
-				<posy>200</posy>
-				<width>261</width>
-				<height>147</height>
-				<aspectratio>stretch</aspectratio>
-				<texture diffuse="tv-landscape/landscapematteFO.png">$INFO[ListItem.Path,,extrathumbs/thumb2.jpg]</texture>
-				<fadetime>200</fadetime>
-				<animation effect="slide" start="-400,0" end="0,0" time="400" delay="3200" condition="Container.Content(movies) + !IsEmpty(ListItem.Title) + ![Container(50).OnNext | Container(50).OnPrevious]">Conditional</animation>
-			</control>
-			<control type="image">
-				<posx>8</posx>
-				<posy>190</posy>
-				<width>284</width>
-				<height>166</height>
-				<texture>tv-landscape/landscapeframeFO.png</texture>
-				<animation effect="slide" start="-400,0" end="0,0" time="400" delay="3200" condition="Container.Content(movies) + !IsEmpty(ListItem.Title) + ![Container(50).OnNext | Container(50).OnPrevious]">Conditional</animation>
-			</control>
-		</control>-->
 		
 		<control type="label"><!--Trailer Start-->
 				<visible>Control.IsVisible(50) + Container.Content(movies) + !IsEmpty(ListItem.Trailer) + !Player.HasVideo + !Control.IsVisible(68)</visible>

@@ -13,26 +13,26 @@
 			<height>720</height>
 			<texture>panel/panel-back.png</texture>
 		</control>
-		<control type="largeimage">
+		<control type="image">
 			<visible>Control.IsVisible(57) + Container.Content(tvshows) + !Player.HasVideo</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>570</width>
 			<height>318</height>
-			<texture diffuse="Showcase/showcase-diffuse.png">$INFO[Container(57).listitem.property(fanart_image)]</texture>
+			<texture background="true" diffuse="Showcase/showcase-diffuse.png">$INFO[Container(57).listitem.property(fanart_image)]</texture>
 			<fadetime>400</fadetime>
 			<aspectratio>stretch</aspectratio>
 			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Panel_Fanart</include>
 		</control>
-		<control type="largeimage">
+		<control type="image">
 			<visible>Control.IsVisible(57) + Container.Content(episodes) + !Player.HasVideo</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>570</width>
 			<height>318</height>
 			<!--<texture diffuse="Showcase/showcase-diffuse.png">$INFO[Container(57).listitem.property(fanart_image)]</texture>-->
-			<texture diffuse="Showcase/showcase-diffuse.png">$INFO[Container(57).listitem.Icon]</texture>
+			<texture background="true" diffuse="Showcase/showcase-diffuse.png">$INFO[Container(57).listitem.Icon]</texture>
 			<fadetime>400</fadetime>
 			<aspectratio>stretch</aspectratio>
 			<include>Animation_HiddenByInfo</include>
@@ -190,24 +190,24 @@
 		<include>Animation_Viewtype_Panel_Title</include>
 		<include>Animation_HiddenByInfo</include>
 		<visible>Control.IsVisible(57)</visible>	
-			<control type="largeimage" id="7037">
+			<control type="image" id="7037">
 				<visible></visible>
 				<posx>160</posx>
 				<posy>300</posy>
 				<width>230</width>
 				<height>89</height>
-				<texture>$INFO[ListItem.path]logo.png</texture>
+				<texture background="true">$INFO[ListItem.path]logo.png</texture>
 				<fadetime>100</fadetime>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<animation effect="slide" start="0,0" end="14,0" time="0" tween="cubic" easing="inout" condition="Container.Content(episodes)">Conditional</animation>
 			</control>
-			<control type="largeimage" id="9037">
+			<control type="image" id="9037">
 				<visible></visible>
 				<posx>160</posx>
 				<posy>300</posy>
 				<width>230</width>
 				<height>89</height>
-				<texture>$INFO[ListItem.path]../logo.png</texture>
+				<texture background="true">$INFO[ListItem.path]../logo.png</texture>
 				<fadetime>100</fadetime>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<animation effect="slide" start="0,0" end="14,0" time="0" tween="cubic" easing="inout" condition="Container.Content(episodes)">Conditional</animation>

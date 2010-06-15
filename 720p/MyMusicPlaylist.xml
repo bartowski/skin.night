@@ -4,7 +4,7 @@
 	<defaultcontrol>55</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
-		<control type="largeimage">
+		<control type="image">
 			<description>artist level fanart</description>
 			<posx>0</posx>
 			<posy>0</posy>

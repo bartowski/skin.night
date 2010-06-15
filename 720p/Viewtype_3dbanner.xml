@@ -220,12 +220,12 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<include>Animation_HiddenByInfo</include>
-			<control type="largeimage" id="7198">
+			<control type="image" id="7198">
 				<posx>20</posx>
 				<posy>0</posy>
 				<width>230</width>
 				<height>89</height>
-				<texture>$INFO[ListItem.path]logo.png</texture>
+				<texture background="true">$INFO[ListItem.path]logo.png</texture>
 				<fadetime>100</fadetime>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<include>Animation_Viewtype_3dland_Lefttop</include>

@@ -4,17 +4,17 @@
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
-		<control type="largeimage" id="2404">
+		<control type="image" id="2404">
 			<include>Dimensions_Fullscreen</include>
 			<fadetime>400</fadetime>
-			<texture>$INFO[ListItem.Property(Fanart_Image)]</texture>
+			<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
 			<include>Animation_CommonFade</include>
 			<visible>!Skin.HasSetting(hidefanart)</visible>
 		</control>
-		<control type="largeimage">
+		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<fadetime>400</fadetime>
-			<texture>special://skin/media/backdrops/curtains.png</texture>
+			<texture background="true">special://skin/media/backdrops/curtains.png</texture>
 			<include>Animation_CommonFade</include>
 			<visible>IsEmpty(ListItem.Property(Fanart_Image))</visible>
 		</control>

@@ -13,13 +13,13 @@
 			<height>720</height>
 			<texture>panel/panel-back.png</texture>
 		</control>
-		<control type="largeimage">
+		<control type="image">
 			<visible>Control.IsVisible(56) + [Container.Content(movies) | Container.Content(tvshows)] + !Player.HasVideo + !IsEmpty(ListItem.Title)</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>570</width>
 			<height>318</height>
-			<texture diffuse="Showcase/showcase-diffuse.png" fallback="special://skin/media/backgrounds/missing.jpg">$INFO[Container(56).listitem.property(fanart_image)]</texture>
+			<texture background="true" diffuse="Showcase/showcase-diffuse.png" fallback="special://skin/media/backgrounds/missing.jpg">$INFO[Container(56).listitem.property(fanart_image)]</texture>
 			<fadetime>400</fadetime>
 			<aspectratio>stretch</aspectratio>
 			<include>Animation_HiddenByInfo</include>
@@ -229,13 +229,13 @@
 			<textcolor>ff67ffff</textcolor>
 			<label>$INFO[ListItem.Label]</label>
 		</control>
-		<control type="largeimage" id="7017">
+		<control type="image" id="7017">
 			<visible>Container.Content(tvshows)</visible>
 			<posx>160</posx>
 			<posy>300</posy>
 			<width>230</width>
 			<height>89</height>
-			<texture>$INFO[ListItem.path]logo.png</texture>
+			<texture background="true">$INFO[ListItem.path]logo.png</texture>
 			<fadetime>100</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 		</control>

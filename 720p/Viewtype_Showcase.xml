@@ -46,13 +46,13 @@
 		</control>
 		
 		
-		<control type="largeimage">
+		<control type="image">
 			<visible>Control.IsVisible(58) + Container.Content(movies) + !Player.HasVideo + !Skin.HasSetting(ShowcaseFanart) + !IsEmpty(ListItem.Title)</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>436</width>
 			<height>244</height>
-			<texture diffuse="Showcase/showcase-diffuse.png" fallback="backgrounds/missing.jpg">$INFO[Container(58).listitem.property(fanart_image)]</texture>
+			<texture background="true" diffuse="Showcase/showcase-diffuse.png" fallback="backgrounds/missing.jpg">$INFO[Container(58).listitem.property(fanart_image)]</texture>
 			<fadetime>400</fadetime>
 			<aspectratio>stretch</aspectratio>
 			<include>Animation_SlideUpFadeOut</include>

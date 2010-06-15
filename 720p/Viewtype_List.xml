@@ -452,21 +452,21 @@
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				<include>Animation_Viewtype_3dland_Leftplot</include>
 			</control>-->
-			<control type="largeimage" id="7018">
+			<control type="image" id="7018">
 				<posx>20</posx>
 				<posy>0</posy>
 				<width>230</width>
 				<height>89</height>
-				<texture>$INFO[ListItem.path]logo.png</texture>
+				<texture background="true">$INFO[ListItem.path]logo.png</texture>
 				<fadetime>100</fadetime>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 			</control>
-			<control type="largeimage" id="9018">
+			<control type="image" id="9018">
 				<posx>20</posx>
 				<posy>0</posy>
 				<width>230</width>
 				<height>89</height>
-				<texture>$INFO[ListItem.path]../logo.png</texture>
+				<texture background="true">$INFO[ListItem.path]../logo.png</texture>
 				<fadetime>100</fadetime>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 			</control>
