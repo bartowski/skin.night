@@ -25,7 +25,8 @@
 			<include>VisibleFadeEffect</include>
 			<include>Animation_BackdropFade</include>
 			<visible>Skin.HasSetting(FanartNoVisualisation) + !Skin.HasSetting(FullscreenJukebox) + ![Skin.HasSetting(vis_photos_backdrops) | Skin.HasSetting(vis_music_backdrops)]</visible>
-		</control><control type="multiimage">
+		</control>
+		<control type="multiimage">
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>

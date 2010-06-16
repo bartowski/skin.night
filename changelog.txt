@@ -1,3 +1,12 @@
+Update 6/15/2010
+  -Added "extrafanart" to Video Library
+  -Changed up look of Files View
+  -Added ability for 2 Custom playlists on Home plus backdrops, thx Waffa
+
+Update 6/14/2010
+  -Switch all "Largeimage" to "image" with background="true"
+  -added the submenu scripts and favorites to horizontal home
+
 Update 6/13/2010
   -Should be back to having all merge dialogs up to date
   -Added DialogTextViewer.xml

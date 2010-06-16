@@ -205,7 +205,7 @@ just copy the translations from Confluence to here
   
     <!-- NEW 6/12-->
   
-  
+  <string id="31003">Custom Playlist</string>
   <string id="31004">TV Shows</string>
   <string id="31005">This option will allow more info to display when paused over a movie</string>
   <string id="31006">PosterPlus</string>

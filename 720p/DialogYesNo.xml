@@ -3,7 +3,7 @@
 <window id="100">
 	<defaultcontrol always="true">10</defaultcontrol>
 
-	<include>Animation_ZoomInMenu</include>
+	<include>Animation_Bartowski_Context_Zoom</include>
 
 
 	<coordinates>

@@ -788,6 +788,96 @@
 							<onclick>ActivateWindow(1114)</onclick>
 							<visible>Skin.HasSetting(Menu_Custom5) + Skin.String(MoviesCustom,5)</visible>
 						</control>
+						<control type="radiobutton" id="231">
+						<description>custom home 6</description>
+						<width>860</width>
+						<height>40</height>
+						<font>Font_KeyboardKeys</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>$LOCALIZE[31003] 1</label>
+						<onfocus>Skin.SetString(MoviesCustom,6)</onfocus>
+						<onclick>Skin.ToggleSetting(Menu_Custom6)</onclick>
+						<selected>Skin.HasSetting(Menu_Custom6)</selected>
+						<enable>!Skin.HasSetting(Menu_Movies_Sub6)</enable>
+						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+					</control>
+					
+						
+						<control type="button" id="8211">
+							<description>custom home 5</description>
+							<label>- $LOCALIZE[31262]</label>
+							<label2>[COLOR=lightblue]$INFO[Skin.String(Menu_Custom6_Label)][/COLOR]</label2>
+							<width>860</width>
+							<height>40</height>
+							<font>Font_KeyboardKeys</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+							<onclick>Skin.SetString(Menu_Custom6_Label)</onclick>
+							<visible>Skin.HasSetting(Menu_Custom6) + Skin.String(MoviesCustom,6)</visible>
+						</control>
+						<control type="button" id="8212">
+							<description>custom home 5</description>
+							<label>- Set Favorite</label>
+							<label2>[COLOR=lightblue]$INFO[Skin.String(Menu_Custom6_Path)][/COLOR]</label2>
+							<width>860</width>
+							<height>40</height>
+							<font>Font_KeyboardKeys</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+							<onclick>Skin.SetFile(Menu_Custom6_Path,.xsp)</onclick>
+							<visible>Skin.HasSetting(Menu_Custom6) + Skin.String(MoviesCustom,6)</visible>
+						</control>
+						<control type="radiobutton" id="232">
+							<description>custom home 7</description>
+							<width>860</width>
+							<height>40</height>
+							<font>Font_KeyboardKeys</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label>$LOCALIZE[31003] 2</label>
+							<onfocus>Skin.SetString(MoviesCustom,7)</onfocus>
+							<onclick>Skin.ToggleSetting(Menu_Custom7)</onclick>
+							<selected>Skin.HasSetting(Menu_Custom7)</selected>
+							<enable>!Skin.HasSetting(Menu_Movies_Sub7)</enable>
+							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+						</control>
+					
+						
+						<control type="button" id="8213">
+							<description>custom home 7</description>
+							<label>- $LOCALIZE[31262]</label>
+							<label2>[COLOR=lightblue]$INFO[Skin.String(Menu_Custom7_Label)][/COLOR]</label2>
+							<width>860</width>
+							<height>40</height>
+							<font>Font_KeyboardKeys</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+							<onclick>Skin.SetString(Menu_Custom6_Label)</onclick>
+							<visible>Skin.HasSetting(Menu_Custom6) + Skin.String(MoviesCustom,6)</visible>
+						</control>
+						<control type="button" id="8214">
+							<description>custom home 5</description>
+							<label>- Set Favorite</label>
+							<label2>[COLOR=lightblue]$INFO[Skin.String(Menu_Custom7_Path)][/COLOR]</label2>
+							<width>860</width>
+							<height>40</height>
+							<font>Font_KeyboardKeys</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+							<onclick>Skin.SetFile(Menu_Custom7_Path,.xsp)</onclick>
+							<visible>Skin.HasSetting(Menu_Custom7) + Skin.String(MoviesCustom,7)</visible>
+						</control>
 					<control type="label" id="210">
 						<width>860</width>
 						<height>45</height>
@@ -1102,6 +1192,20 @@
 								<icon>special://skin/media/backgrounds/custom.jpg</icon>
 								<thumb>$INFO[Skin.String(Menu_Custom5_Folder)]</thumb>
 								<visible>Skin.HasSetting(Menu_Custom5)</visible>
+							</item>
+							<item id="21">
+								<label>$INFO[Skin.String(Menu_Custom6_Label)]</label>
+								<onclick>-</onclick>
+								<icon>special://skin/media/backgrounds/custom.jpg</icon>
+								<thumb>$INFO[Skin.String(Menu_Custom6_Folder)]</thumb>
+								<visible>Skin.HasSetting(Menu_Custom6)</visible>
+							</item>
+							<item id="22">
+								<label>$INFO[Skin.String(Menu_Custom7_Label)]</label>
+								<onclick>-</onclick>
+								<icon>special://skin/media/backgrounds/custom.jpg</icon>
+								<thumb>$INFO[Skin.String(Menu_Custom7_Folder)]</thumb>
+								<visible>Skin.HasSetting(Menu_Custom7)</visible>
 							</item>
 							<item id="17">
 								<label>$INFO[Skin.String(Menu_Custom3_Label)]</label>
@@ -2164,6 +2268,126 @@
 								<ondown>304</ondown>
 							</control>
 						</control>
+						<control type="group">
+							<visible>Container(9003).HasFocus(21)</visible>
+							<control type="button" id="300">
+								<description>Single Image button</description>
+								<posx>5</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31113</label>
+								<font>font12caps_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">confluence/button-nofocus.png</texturenofocus>
+								<texturefocus border="5">confluence/button-focus.png</texturefocus>
+								<onclick>Skin.SetImage(Menu_Custom6_Folder)</onclick>
+								<onleft>302</onleft>
+								<onright>301</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="301">
+								<description>Multi Image button</description>
+								<posx>190</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31114</label>
+								<font>font12caps_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">confluence/button-nofocus.png</texturenofocus>
+								<texturefocus border="5">confluence/button-focus.png</texturefocus>
+								<onclick>Skin.SetPath(Menu_Custom6_Folder)</onclick>
+								<onleft>300</onleft>
+								<onright>302</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="302">
+								<description>Default Image button</description>
+								<posx>375</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>571</label>
+								<font>font12caps_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">confluence/button-nofocus.png</texturenofocus>
+								<texturefocus border="5">confluence/button-focus.png</texturefocus>
+								<onclick>Skin.Reset(Menu_Custom6_Folder)</onclick>
+								<onleft>301</onleft>
+								<onright>300</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container(9003).HasFocus(22)</visible>
+							<control type="button" id="300">
+								<description>Single Image button</description>
+								<posx>5</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31113</label>
+								<font>font12caps_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">confluence/button-nofocus.png</texturenofocus>
+								<texturefocus border="5">confluence/button-focus.png</texturefocus>
+								<onclick>Skin.SetImage(Menu_Custom7_Folder)</onclick>
+								<onleft>302</onleft>
+								<onright>301</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="301">
+								<description>Multi Image button</description>
+								<posx>190</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31114</label>
+								<font>font12caps_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">confluence/button-nofocus.png</texturenofocus>
+								<texturefocus border="5">confluence/button-focus.png</texturefocus>
+								<onclick>Skin.SetPath(Menu_Custom7_Folder)</onclick>
+								<onleft>300</onleft>
+								<onright>302</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="302">
+								<description>Default Image button</description>
+								<posx>375</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>571</label>
+								<font>font12caps_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">confluence/button-nofocus.png</texturenofocus>
+								<texturefocus border="5">confluence/button-focus.png</texturefocus>
+								<onclick>Skin.Reset(Menu_Custom7_Folder)</onclick>
+								<onleft>301</onleft>
+								<onright>300</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+						</control>
 					</control>
 					<control type="multiimage">
 						<posx>95</posx>
@@ -2205,7 +2429,7 @@
 							<width>860</width>
 							<height>45</height>
 							<font>Font_KeyboardKeys</font>
-							<label>Waiting for merge before doing any script stuff</label>
+							<label>MERGE ONLY</label>
 							<textcolor>red</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
@@ -2446,7 +2670,7 @@
 							<visible>Skin.HasSetting(HomeScriptButton6)</visible>
 						</control>
 
-						<control type="label" id="419">
+						<!--<control type="label" id="419">
 							<width>860</width>
 							<height>45</height>
 							<font>Font_KeyboardKeys</font>
@@ -2531,7 +2755,7 @@
 							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>Skin.SetFile(LyricScript_Path,.py)</onclick>
 							<visible>Skin.HasSetting(LyricScript_Enable)</visible>
-						</control>
+						</control>-->
 					</control>
 				</control>
 				<control type="scrollbar" id="61">

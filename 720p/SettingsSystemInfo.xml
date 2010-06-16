@@ -2,11 +2,11 @@
 	<defaultcontrol always="true">95</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
-		<control type="largeimage">
+		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<width>1280</width>
 			<height>720</height>
-			<texture>special://skin/media/backdrops/curtains_diffuse.png</texture>
+			<texture background="true">special://skin/media/backdrops/curtains_diffuse.png</texture>
 			<aspectratio>scale</aspectratio>
 		</control>
 		<control type="group">

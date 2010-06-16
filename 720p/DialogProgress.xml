@@ -1,6 +1,5 @@
 ﻿<window id="101">
 	<defaultcontrol always="true">10</defaultcontrol>
-	<include>Animation_Bartowski_Context_Zoom</include>
 	<coordinates>
 		<system>1</system>
 		<posx>0</posx>
@@ -10,10 +9,13 @@
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<texture>common/7000_focus.png</texture>
+			<visible>!Player.HasVideo</visible>
 		</control>
 		<control type="group">
 		<posx>340</posx>
 		<posy>235</posy>
+		<visible>!Player.HasVideo</visible>
+		
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>

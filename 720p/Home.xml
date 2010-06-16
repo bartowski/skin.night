@@ -176,6 +176,22 @@
 					<onclick>XBMC.ActivateWindow(MyVideoLibrary,tvshowtitles,return)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows)</visible>
 				</item>
+				<item id="21">
+					<description>Custom Movie Five</description>
+					<label>$INFO[Skin.String(Menu_Custom6_Label)]</label>
+					<icon>special://skin/media/backgrounds/custom.jpg</icon>
+					<thumb>$INFO[Skin.String(Menu_Custom6_Folder)]</thumb>
+					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Menu_Custom6_Path)],return)</onclick>
+					<visible>Skin.HasSetting(Menu_Custom6)</visible>
+				</item>
+				<item id="22">
+					<description>Custom Movie Five</description>
+					<label>$INFO[Skin.String(Menu_Custom7_Label)]</label>
+					<icon>special://skin/media/backgrounds/custom.jpg</icon>
+					<thumb>$INFO[Skin.String(Menu_Custom7_Folder)]</thumb>
+					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Menu_Custom7_Path)],return)</onclick>
+					<visible>Skin.HasSetting(Menu_Custom7)</visible>
+				</item>
 				<item id="15">
 					<description>Custom Movie One</description>
 					<label>$INFO[Skin.String(Menu_Custom1_Label)]</label>
