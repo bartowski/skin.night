@@ -861,8 +861,8 @@
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
 							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-							<onclick>Skin.SetString(Menu_Custom6_Label)</onclick>
-							<visible>Skin.HasSetting(Menu_Custom6) + Skin.String(MoviesCustom,6)</visible>
+							<onclick>Skin.SetString(Menu_Custom7_Label)</onclick>
+							<visible>Skin.HasSetting(Menu_Custom7) + Skin.String(MoviesCustom,7)</visible>
 						</control>
 						<control type="button" id="8214">
 							<description>custom home 5</description>
@@ -875,7 +875,7 @@
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
 							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-							<onclick>Skin.SetFile(Menu_Custom7_Path,.xsp)</onclick>
+							<onclick>Skin.SetFile(Menu_Custom7_Path,special://videoplaylists,.xsp)</onclick>
 							<visible>Skin.HasSetting(Menu_Custom7) + Skin.String(MoviesCustom,7)</visible>
 						</control>
 					<control type="label" id="210">
