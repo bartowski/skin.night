@@ -325,6 +325,11 @@
 					<ondown>Control.SetFocus(8001,0)</ondown>
 					<itemgap>0</itemgap>
 					<visible>Container(300).HasFocus(5)</visible>
+					<control type="button" id="90126">
+						<include>ButtonHomeSubCommonValues_Horizontal</include>
+						<label>$LOCALIZE[744]</label>
+						<onclick>ActivateWindow(VideoFiles)</onclick>
+					</control>
 					<control type="button" id="90121">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
 						<label>$LOCALIZE[31079]</label>

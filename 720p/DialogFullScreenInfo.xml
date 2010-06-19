@@ -19,7 +19,7 @@
 				<width>1280</width>
 				<height>720</height>
 				<texture>osd/pause-back1.png</texture>
-				<aspectratio>scale</aspectratio>
+				<aspectratio>stretch</aspectratio>
 			</control>
 			
 			<control type="progress" id="23">
@@ -54,7 +54,7 @@
 			</control>
 			<control type="group">
 				<posx>20</posx>
-				<posy>-160</posy>
+				<posy>-190</posy>
 				<animation effect="slide" start="0,0" end="0,70" time="0" condition="VideoPlayer.Content(episodes)">Conditional</animation>
 				<control type="label">
 					<posx>0</posx>
@@ -107,10 +107,10 @@
 			</control>
 			<control type="textbox">
 				<posx>20</posx>
-				<posy>0</posy>
+				<posy>-30</posy>
 				<width>970</width>
 				<height>110</height>
-				<align>left</align>
+				<align>justify</align>
 				<label>$INFO[VideoPlayer.Plot]</label>
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				<font>Font_Bartowski_Episodes</font>
@@ -120,10 +120,10 @@
 			</control>
 			<control type="textbox">
 				<posx>20</posx>
-				<posy>0</posy>
+				<posy>-30</posy>
 				<width>1040</width>
 				<height>110</height>
-				<align>left</align>
+				<align>justify</align>
 				<label>$INFO[VideoPlayer.Plot]</label>
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				<font>Font_Bartowski_Episodes</font>
@@ -131,11 +131,25 @@
 				<include>Animation_HiddenByInfo</include>
 				<visible>VideoPlayer.Content(movies)</visible>
 			</control>
+			<control type="group">
+				<control type="label">
+					<posx>100</posx>
+					<posy>98</posy>
+					<width>1080</width>
+					<height>25</height>
+					<label>$LOCALIZE[31074] [COLOR=ff67ffff][B]$INFO[System.Time][/COLOR][/B] | $LOCALIZE[31075]: [COLOR=ff67ffff][B]$INFO[Player.FinishTime][/B][/COLOR]</label>
+					<textcolor>ffffffff</textcolor>
+					<font>Font_Bartowski_Extras_Pause</font>
+					<align>center</align>
+					<visible>Player.Paused</visible>
+					<animation effect="fade" start="100" end="0" time="0">windowclose</animation>
+				</control>
+			</control>
 			<!-- Movie Info  -->
 			<control type="group">
 				<visible>VideoPlayer.Content(movies)</visible>
 				<posx>20</posx>
-				<posy>-80</posy>
+				<posy>-110</posy>
 				<control type="label">
 					<description>Director Info</description>
 					<posx>0</posx>

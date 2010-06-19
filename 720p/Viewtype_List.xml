@@ -5,7 +5,7 @@
 		
 		<!-- Poster Wrap View -->
 		<control type="image"><!-- Fanart -->
-			<visible>Control.IsVisible(53)</visible>
+			<visible>Control.IsVisible(53) + !Skin.HasSetting(3dLandscape_Fanart)</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
@@ -14,7 +14,16 @@
 			<aspectratio>stretch</aspectratio>
 			<include>Animation_BackdropFade</include>
 		</control>
-		
+		<control type="image"><!-- Fanart -->
+			<visible>Control.IsVisible(53) + Skin.HasSetting(3dLandscape_Fanart)</visible>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>movie-poster/3dlandscape_fanart.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<include>Animation_BackdropFade</include>
+		</control>
 		
 		<control type="fixedlist" id="53">
 			<posx>-100</posx>
@@ -24,7 +33,7 @@
 			<onleft>53</onleft>
 			<onright>53</onright>
 			<onup>7000</onup>
-			<ondown></ondown>
+			<ondown>28374</ondown>
 			<viewtype label="$LOCALIZE[31053]">list</viewtype>
 			<orientation>horizontal</orientation>
 			<focusposition>2</focusposition>
@@ -178,6 +187,17 @@
 				<posx>124</posx>
 				<posy>60</posy>
 					<control type="image">
+						<posx>-186</posx>
+						<posy>60</posy>
+						<width>500</width>
+						<height>305</height>
+						<texture>movie-poster/3d_side_shadow.png</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<animation type="Focus" reversible="false">
+							<effect type="fade" start="0" end="80" time="600" delay="100" />
+						</animation>
+					</control>
+					<control type="image">
 						<posx>236</posx>
 						<posy>90</posy>
 						<width>38</width>
@@ -294,7 +314,7 @@
 						<visible>Skin.HasSetting(3dland_jpg) + !Container.Content(episodes)</visible>
 					</control>
 					<control type="image">
-						<visible>Container.Content(episodes) + !IsEmpty(ListItem.Title) + !Skin.HasSetting(3d_plot)</visible>
+						<visible>ControlGroup(28374).HasFocus + Container.Content(episodes)</visible>
 						<posx>-150</posx>
 						<posy>86</posy>
 						<width>407</width>
@@ -377,7 +397,7 @@
 						<visible>!IsEmpty(ListItem.Title) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
 					</control>
 					<control type="textbox">
-						<visible>Container.Content(episodes) + !Skin.HasSetting(3d_plot)</visible>
+						<visible>ControlGroup(28374).HasFocus + Container.Content(episodes)</visible>
 						<posx>-140</posx>
 						<posy>90</posy>
 						<width>384</width>
@@ -409,8 +429,20 @@
 			</focusedlayout>
 		</control>
 		
+		<control type="group" id="28374">
+		<control type="button" id="38374">
+			<onleft>53</onleft>
+			<onright>53</onright>
+			<onup>7000</onup>
+			<ondown>53</ondown>
+			<label></label>
+			<visible allowhiddenfocus="true">ControlGroup(28374).HasFocus + Container.Content(episodes)</visible>
+		</control>
+	</control>
+		
+		
 		<control type="image">
-			<visible>Control.IsVisible(53)</visible>
+			<visible>Control.IsVisible(53) + !Skin.HasSetting(3dLandscape_Fanart)</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
@@ -427,31 +459,15 @@
 			<posy>0</posy>
 			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_3dland_Lefttop</include>
-			<!--<control type="textbox">
-				<posx>20</posx>
-				<posy>320</posy>
-				<width>350</width>
-				<height>290</height>
-				<align>left</align>
-				<info>ListItem.Plot</info>
-				<font>Font_Bartowski_Movies_Plot</font>
-				<textcolor>ffffffff</textcolor>
-				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-				<include>Animation_Viewtype_3dland_Leftplot</include>
+			<control type="image">
+				<visible>Skin.HasSetting(3dLandscape_Fanart)</visible>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>160</height>
+				<texture>movie-poster/Poster_Fanart_Title_Back.png</texture>
+				<aspectratio>stretch</aspectratio>
 			</control>
-			<control type="textbox">
-				<visible>Container.Content(seasons)</visible>
-				<posx>20</posx>
-				<posy>320</posy>
-				<width>350</width>
-				<height>290</height>
-				<align>left</align>
-				<info>Container(53).ShowPlot</info>
-				<font>Font_Bartowski_Movies_Plot</font>
-				<textcolor>ffffffff</textcolor>
-				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-				<include>Animation_Viewtype_3dland_Leftplot</include>
-			</control>-->
 			<control type="image" id="7018">
 				<posx>20</posx>
 				<posy>0</posy>
@@ -493,7 +509,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<visible>Control.IsVisible(53) + [Container.Content(episodes) | Window.IsActive(videoplaylist)] + !IsEmpty(ListItem.Title)</visible>
+			<visible>Control.IsVisible(53) + !Skin.HasSetting(3dLandscape_Fanart) + [Container.Content(episodes) | Window.IsActive(videoplaylist)] + !IsEmpty(ListItem.Title)</visible>
 			<include>Animation_Viewtype_3dland_Leftplot</include>
 			<posx>0</posx>
 			<posy>240</posy>
@@ -519,7 +535,7 @@
 				</control>
 		</control>
 	<control type="group">
-		<visible>Control.IsVisible(53) + !Window.IsActive(videoplaylist) + !IsEmpty(ListItem.Title)</visible>
+		<visible>Control.IsVisible(53) + !Skin.HasSetting(3dLandscape_Fanart) + !Window.IsActive(videoplaylist) + !IsEmpty(ListItem.Title)</visible>
 		<posx>20</posx>
 		<posy>90</posy>
 		<include>Animation_Viewtype_3dland_Lefttop</include>
@@ -564,7 +580,7 @@
 			</control>
 	</control>
 		<control type="grouplist">
-			<visible>Control.IsVisible(53) + !Skin.HasSetting(no_media_flags)</visible>
+			<visible>Control.IsVisible(53) + !Skin.HasSetting(3dLandscape_Fanart) + !Skin.HasSetting(no_media_flags)</visible>
 			<!--<animation effect="slide" start="0,0" end="0,400" time="0" delay="800" condition="!Skin.HasSetting(ClearTitle)">Conditional</animation>-->
 			<description>Media Codec Flagging Images</description>
 			<posx>20</posx>

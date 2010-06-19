@@ -322,20 +322,7 @@
 			<texturefocus>-</texturefocus>
 			<visible>[Skin.HasSetting(homepageHideRecentlyAdded) + !Skin.HasSetting(merge_version)] + [Skin.HasSetting(homepageHideRecentlyAdded) + !Skin.HasSetting(merge_version) + Skin.HasSetting(RecentlyUnwatched)]</visible>
 		</control>
-			<control type="button" id="8999">
-			<description>Run Recently added</description>
-			<posx>-20</posx>
-			<posy>-20</posy>
-			<width>1</width>
-			<height>1</height>
-			<label>-</label>
-			<font>-</font>
-			<onfocus>XBMC.RunScript(special://skin/scripts/RecentlyAdded.py,limit=10&amp;albums=True)</onfocus>
-			<onfocus>SetFocus(300)</onfocus>
-			<texturenofocus>-</texturenofocus>
-			<texturefocus>-</texturefocus>
-			<visible>[Skin.HasSetting(homepageHideRecentlyAdded) + !Skin.HasSetting(merge_version)] + [Skin.HasSetting(homepageHideRecentlyAdded) + !Skin.HasSetting(merge_version) + !Skin.HasSetting(RecentlyUnwatched)]</visible>
-		</control>
+			
 		<control type="button" id="8999">
 			<description>Run Recently added</description>
 			<posx>-20</posx>
@@ -491,6 +478,11 @@
 					<ondown>9012</ondown>
 					<itemgap>0</itemgap>
 					<visible>Container(300).HasFocus(5)</visible>
+					<control type="button" id="90126">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$LOCALIZE[744]</label>
+						<onclick>ActivateWindow(VideoFiles)</onclick>
+					</control>
 					<control type="button" id="90121">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$LOCALIZE[31079]</label>

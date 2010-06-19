@@ -1,3 +1,12 @@
+Update 6/18/2010
+  -Changed up Wall View
+  -Redid Genres for File View
+  -Added current time/finish time to Video playback info
+  -Added ondown to activate plot in 3dLandscape
+  -Added Fanart option to 3dLandscape and some other touchups to that view
+  -Forgot to add watched overlay Landpanel
+  -Minor touchup to the music "Shelf" view
+
 Update 6/15/2010
   -Added "extrafanart" to Video Library
   -Changed up look of Files View

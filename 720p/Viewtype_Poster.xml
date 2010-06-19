@@ -358,7 +358,8 @@
 				<info>ListItem.Plot</info>
 				<font>Font_Bartowski_Movies_Plot</font>
 				<textcolor>ffffffff</textcolor>
-				<animation effect="slide" start="1000,0" end="0,0" time="800" delay="3200" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(50).OnNext | Container(50).OnPrevious]">Conditional</animation>
+				<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(50) + Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(50).OnNext | Container(50).OnPrevious]">WindowOpen</animation>
+				<animation effect="slide" start="1000,0" end="0,0" time="400" delay="3600" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(50).OnNext | Container(50).OnPrevious]">Conditional</animation>
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				<visible>Control.IsVisible(50) + Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart)</visible>
 			</control>
@@ -443,7 +444,7 @@
 		<width>600</width>
 		<include>Animation_ZoomInZoomOut</include>
 		<include>Animation_HiddenByInfo</include>
-		<animation effect="slide" start="0,600" end="0,0" time="400" delay="3000" condition="Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(50).OnNext | Container(50).OnPrevious]">Conditional</animation>
+		<animation effect="slide" start="0,600" end="0,0" time="400" delay="3400" condition="Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(50).OnNext | Container(50).OnPrevious]">Conditional</animation>
 		<visible>Control.IsVisible(50) + Skin.HasSetting(PosterPlus) + !IsEmpty(ListItem.Title) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart)</visible>
 			<control type="label">
 				<width>600</width>
@@ -452,6 +453,7 @@
 				<font>Font_Bartowski_Showcase_Right_Under</font>
 				<textcolor>ffffffff</textcolor>
 				<label>[B][COLOR=ff67ffff]Director[/COLOR][/B] - $INFO[ListItem.Director]</label>
+				<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(50).OnNext | Container(50).OnPrevious]">WindowOpen</animation>
 			</control>
 			<control type="label">
 				<width>600</width>
@@ -460,6 +462,7 @@
 				<font>Font_Bartowski_Showcase_Right_Under</font>
 				<textcolor>ffffffff</textcolor>
 				<label>[B][COLOR=ff67ffff]Writer[/COLOR][/B] - $INFO[ListItem.Writer]</label>
+				<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(50).OnNext | Container(50).OnPrevious]">WindowOpen</animation>
 			</control>
 			<control type="label">
 				<width>600</width>
@@ -468,6 +471,7 @@
 				<font>Font_Bartowski_Showcase_Right_Under</font>
 				<textcolor>ffffffff</textcolor>
 				<label>[B][COLOR=ff67ffff]Genre[/COLOR][/B] - $INFO[ListItem.Genre]</label>
+				<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(50).OnNext | Container(50).OnPrevious]">WindowOpen</animation>
 			</control>
 			<control type="label">
 				<width>600</width>
@@ -476,6 +480,7 @@
 				<font>Font_Bartowski_Showcase_Right_Under</font>
 				<textcolor>ffffffff</textcolor>
 				<label>[B][COLOR=ff67ffff]Studio[/COLOR][/B] - $INFO[ListItem.Studio]</label>
+				<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(50).OnNext | Container(50).OnPrevious]">WindowOpen</animation>
 			</control>
 			<control type="label">
 				<width>600</width>
@@ -484,6 +489,7 @@
 				<font>Font_Bartowski_Showcase_Right_Under</font>
 				<textcolor>ffffffff</textcolor>
 				<label>[B][COLOR=ff67ffff]Rating[/COLOR][/B] - $INFO[ListItem.Rating]</label>
+				<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(50).OnNext | Container(50).OnPrevious]">WindowOpen</animation>
 			</control>
 	</control>
 		<control type="group">

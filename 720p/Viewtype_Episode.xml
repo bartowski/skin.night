@@ -31,6 +31,7 @@
 			<movement>2</movement>
 			<visible>!Skin.HasSetting(no_Episode) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
 			<include>Animation_Viewtype_Episode_FocusArea</include>
+			<include>Animation_HiddenByInfo</include>
 			<itemlayout width="633" height="142">
 				<control type="image">
 					<posx>13</posx>
@@ -39,7 +40,6 @@
 					<height>131</height>
 					<texture diffuse="episodematte.png">$INFO[ListItem.Icon]</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<include>Animation_HiddenByInfo</include>
 				</control>
 				<control type="image">
 					<posx>2</posx>
@@ -48,7 +48,6 @@
 					<height>153</height>
 					<texture>episodeframe.png</texture>
 					<colordiffuse>ff959494</colordiffuse>
-					<include>Animation_HiddenByInfo</include>
 				</control>
 				<control type="image">
 					<posx>14</posx>
@@ -57,7 +56,6 @@
 					<height>39</height>
 					<texture>tv-episodes/epi-black.png</texture>
 					<visible>!IsEmpty(ListItem.Title)</visible>
-					<include>Animation_HiddenByInfo</include>
 				</control>
 				<control type="label">
 					<posx>130</posx>
@@ -68,7 +66,6 @@
 					<font>Font_Bartowski_Extras_Pause</font>
 					<textcolor>ffffffff</textcolor>
 					<visible>!IsEmpty(ListItem.Title)</visible>
-					<include>Animation_HiddenByInfo</include>
 				</control>
 				<control type="image">
 					<visible>Container.Content(episodes)</visible>
@@ -78,7 +75,6 @@
 					<height>3</height>
 					<info>ListItem.Overlay</info>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<include>Animation_HiddenByInfo</include>
 					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 				</control>
 			</itemlayout>
@@ -94,7 +90,6 @@
 						<effect type="zoom" center="127,70" start="50" end="100" time="200" tween="cubic" easing="out" />
 						<effect type="fade" start="0" end="100" time="200" />
 					</animation>
-					<include>Animation_HiddenByInfo</include>
 				</control>
 				<control type="image">
 					<posx>14</posx>
@@ -107,7 +102,6 @@
 						<effect type="fade" start="0" end="100" time="200" />
 					</animation>
 					<visible>!IsEmpty(ListItem.Title)</visible>
-					<include>Animation_HiddenByInfo</include>
 				</control>
 				<control type="image">
 					<posx>2</posx>
@@ -119,7 +113,6 @@
 						<effect type="zoom" center="127,70" start="50" end="100" time="200" tween="cubic" easing="out" />
 						<effect type="fade" start="0" end="100" time="200" />
 					</animation>
-					<include>Animation_HiddenByInfo</include>
 				</control>
 				<control type="label">
 					<posx>130</posx>
@@ -134,7 +127,6 @@
 						<effect type="zoom" center="127,70" start="50" end="100" time="200" tween="cubic" easing="out" />
 						<effect type="fade" start="0" end="100" time="200" />
 					</animation>
-					<include>Animation_HiddenByInfo</include>
 				</control>
 				<control type="image">
 					<visible>Container.Content(episodes)</visible>

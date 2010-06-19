@@ -364,45 +364,45 @@
 	<include>Animation_HiddenByInfo</include>
 	<visible>Container.Content(Genres) + Control.IsVisible(55)</visible>
 		<control type="image">
-			<posx>790</posx>
-			<posy>-26</posy>
-			<width>512</width>
-			<height>770</height>
-			<aspectratio align="center" aligny="center">stretch</aspectratio>
-			<texture background="true" diffuse="movie-poster/posterview_diffuse.png" fallback="defaultmoviegenre.jpg">special://skin/media/extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
-			<bordertexture border="28">osd/paused_glow1.png</bordertexture>
-			<fadetime>400</fadetime>
-			<bordersize>28</bordersize>
+			<posx>826</posx>
+			<posy>26</posy>
+			<width>434</width>
+			<height>670</height>
+			<aspectratio align="right" aligny="bottom">stretch</aspectratio>
+			<texture background="true" fallback="defaultmoviegenre.jpg">special://skin/media/extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
+			<bordertexture border="5">confluence/button-nofocus.png</bordertexture>
+			<bordersize>5</bordersize>
+			<fadetime>100</fadetime>
 		</control>
 		<control type="image">
-			<posx>790</posx>
-			<posy>-26</posy>
-			<width>512</width>
-			<height>770</height>
-			<aspectratio align="center" aligny="center">stretch</aspectratio>
-			<texture background="true" diffuse="movie-poster/posterview_diffuse.png" fallback="defaultmoviegenre.jpg">special://skin/media/extras/moviegenres/$INFO[ListItem(-1).Label].jpg</texture>
-			<bordertexture border="28">osd/paused_glow1.png</bordertexture>
-			<fadetime>400</fadetime>
-			<bordersize>28</bordersize>
+			<posx>826</posx>
+			<posy>26</posy>
+			<width>434</width>
+			<height>670</height>
+			<aspectratio align="right" aligny="bottom">stretch</aspectratio>
+			<texture background="true" fallback="defaultmoviegenre.jpg">special://skin/media/extras/moviegenres/$INFO[ListItem(-1).Label].jpg</texture>
+			<bordertexture border="5">confluence/button-nofocus.png</bordertexture>
+			<bordersize>5</bordersize>
+			<fadetime>100</fadetime>
 			<animation type="Hidden">
-			<effect type="zoom" time="400" center="1040,600" start="100" end="180" tween="cubic" easing="in" />
-				<effect type="fade" time="400" center="1240,600" start="100" end="0" />
+			<effect type="zoom" time="400" center="auto" start="100" end="180" tween="cubic" easing="in" />
+				<effect type="fade" time="400" start="100" end="0" />
 			</animation>
 			<visible>Container(55).OnNext</visible>
 		</control>
 		<control type="image">
-			<posx>790</posx>
-			<posy>-26</posy>
-			<width>512</width>
-			<height>770</height>
-			<aspectratio align="center" aligny="center">stretch</aspectratio>
-			<texture background="true" diffuse="movie-poster/posterview_diffuse.png" fallback="defaultmoviegenre.jpg">special://skin/media/extras/moviegenres/$INFO[ListItem(1).Label].jpg</texture>
-			<bordertexture border="28">osd/paused_glow1.png</bordertexture>
-			<fadetime>400</fadetime>
-			<bordersize>28</bordersize>
+			<posx>826</posx>
+			<posy>26</posy>
+			<width>434</width>
+			<height>670</height>
+			<aspectratio align="right" aligny="bottom">stretch</aspectratio>
+			<texture background="true" fallback="defaultmoviegenre.jpg">special://skin/media/extras/moviegenres/$INFO[ListItem(1).Label].jpg</texture>
+			<bordertexture border="5">confluence/button-nofocus.png</bordertexture>
+			<bordersize>5</bordersize>
+			<fadetime>100</fadetime>
 			<animation type="Hidden">
-			<effect type="zoom" time="400" center="1040,600" start="100" end="180" tween="cubic" easing="in" />
-				<effect type="fade" time="400" center="1240,600" start="100" end="0" />
+			<effect type="zoom" time="400" center="auto" start="100" end="180" tween="cubic" easing="in" />
+				<effect type="fade" time="400" start="100" end="0" />
 			</animation>
 			<visible>Container(55).OnPrevious</visible>
 		</control>
@@ -468,7 +468,7 @@
 	<posx>930</posx>
 	<posy>370</posy>
 	<include>Animation_HiddenByInfo</include>
-	<visible>Control.IsVisible(55) + !IsEmpty(ListItem.Title) + [Container.Content(albums) | Container.Content(songs)]</visible>
+	<visible>Control.IsVisible(55) + [Container.Content(albums) | Container.Content(songs)]</visible>
 	<include>Animation_Viewtype_Files_RightArea</include>
 		<control type="image">
 			<posx>-166</posx>

@@ -369,23 +369,7 @@
 		<animation effect="slide" end="600,0" time="300" tween="cubic" easing="inout" condition="Container(53).Column(0)">Conditional</animation>		
 	</include>	
 
-	<include name="Animation_MovieWallFloat">
-		<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="Container(54).Row(0)">Conditional</animation>
-		<animation effect="slide" end="0,-200" time="300" tween="cubic" easing="inout" condition="Container(54).Row(1)">Conditional</animation>		
-		<animation effect="slide" end="0,-400" time="300" tween="cubic" easing="inout" condition="Container(54).Row(2)">Conditional</animation>
-		<animation effect="slide" end="0,-600" time="300" tween="cubic" easing="inout" condition="Container(54).Row(3)">Conditional</animation>
-		<animation effect="slide" end="0,-800" time="300" tween="cubic" easing="inout" condition="Container(54).Row(4)">Conditional</animation>
-		<animation effect="slide" end="0,-1000" time="300" tween="cubic" easing="inout" condition="Container(54).Row(5)">Conditional</animation>
-		<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="Container(54).Column(3)">Conditional</animation>
-		<animation effect="slide" end="-160,0" time="300" tween="cubic" easing="inout" condition="Container(54).Column(4)">Conditional</animation>		
-		<animation effect="slide" end="-320,0" time="300" tween="cubic" easing="inout" condition="Container(54).Column(5)">Conditional</animation>
-		<animation effect="slide" end="-480,0" time="300" tween="cubic" easing="inout" condition="Container(54).Column(6)">Conditional</animation>
-		<animation effect="slide" end="-640,0" time="300" tween="cubic" easing="inout" condition="Container(54).Column(7)">Conditional</animation>
-		<animation effect="slide" end="-800,0" time="300" tween="cubic" easing="inout" condition="Container(54).Column(8)">Conditional</animation>
-		<animation effect="slide" end="160,0" time="300" tween="cubic" easing="inout" condition="Container(54).Column(2)">Conditional</animation>			
-		<animation effect="slide" end="320,0" time="300" tween="cubic" easing="inout" condition="Container(54).Column(1)">Conditional</animation>		
-		<animation effect="slide" end="480,0" time="300" tween="cubic" easing="inout" condition="Container(54).Column(0)">Conditional</animation>		
-	</include>	
+		
 	
 	
 <!--VIEWTYPE FILES -->
