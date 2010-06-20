@@ -319,7 +319,7 @@
 				<aligny>center</aligny>
 				<font>Font_TVShow</font>
 				<textcolor>ffffffff</textcolor>
-				<label>[B][COLOR=ff67ffff]$LOCALIZE[180]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Duration][/COLOR]</label>
+				<label>[B][COLOR=ff67ffff]$LOCALIZE[180]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Duration]  $LOCALIZE[12391][/COLOR]</label>
 			</control>
 			<control type="label">
 				<description>Rating</description>

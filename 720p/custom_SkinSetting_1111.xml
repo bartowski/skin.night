@@ -13,13 +13,6 @@
 			<posx>90</posx>
 			<posy>50</posy>
 			<include>Animation_Bartowski_Context_Zoom</include>			
-			<!--<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>1100</width>
-				<height>640</height>
-				<texture border="20">confluence/DialogBack.png</texture>
-			</control>-->
 			<control type="image">
 				<description>LOGO</description>
 				<posx>-60</posx>
@@ -223,49 +216,20 @@
 						<onclick>Skin.ToggleSetting(SubsScript_Enable)</onclick>
 						<selected>Skin.HasSetting(SubsScript_Enable)</selected>
 					</control>
-					<control type="radiobutton" id="105">
-						<width>860</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<textoffsetx>50</textoffsetx>
-						<label>$LOCALIZE[31118]</label>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-						<onclick>Skin.ToggleSetting(SubsScript_Merge)</onclick>
-						<selected>Skin.HasSetting(SubsScript_Merge)</selected>
-						<visible>Skin.HasSetting(SubsScript_Enable)</visible>
-					</control>
-					<control type="button" id="106">
-						<width>860</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<textoffsetx>50</textoffsetx>
-						<label>- $LOCALIZE[31216]</label>
-						<label2>[COLOR=mainblue]$INFO[Skin.String(SubtitleScript_Path)][/COLOR]</label2>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-						<onclick>Skin.SetFile(SubtitleScript_Path,.py)</onclick>
-						<enable>Skin.HasSetting(SubsScript_Enable)</enable>
-						<visible>Skin.HasSetting(SubsScript_Enable) + !Skin.HasSetting(SubsScript_Merge)</visible>
-					</control>
 					<control type="button" id="107">
 						<width>860</width>
 						<height>40</height>
 						<font>Font_KeyboardKeys</font>
 						<textoffsetx>50</textoffsetx>
-						<label>[COLOR=red]Merge[/COLOR] - $LOCALIZE[31216] </label>
-						<label2>[COLOR=mainblue]$INFO[Skin.String(SubsScript_Path)][/COLOR]</label2>
+						<label> - $LOCALIZE[31216] </label>
+						<label2>[COLOR=selected]$INFO[Skin.String(SubtitleScript_Path)][/COLOR]</label2>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
 						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-						<onclick>Skin.SetFile(SubsScript_Path,Script)</onclick>
+						<onclick>Skin.SetAddon(SubtitleScript_Path,xbmc.python.subtitles)</onclick>
 						<enable>Skin.HasSetting(SubsScript_Enable)</enable>
-						<visible>Skin.HasSetting(SubsScript_Enable) + Skin.HasSetting(SubsScript_Merge)</visible>
+						<visible>Skin.HasSetting(SubsScript_Enable)</visible>
 					</control>
 					<control type="radiobutton" id="108">
 						<width>860</width>
@@ -489,37 +453,7 @@
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
 						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="203">
-						<description>Show Recently added info</description>
-						<width>860</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<textoffsetx>50</textoffsetx>
-						<label>31118</label>
-						<onclick>Skin.ToggleSetting(merge_version)</onclick>
-						<onclick>ReloadSkin()</onclick>
- 					    <selected>Skin.HasSetting(merge_version)</selected>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-						<visible>Skin.HasSetting(homepageHideRecentlyAdded)</visible>
-					</control>
-					<!--<control type="radiobutton" id="221">
-						<description>Remove Unwatched Recently added info</description>
-						<width>860</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<textoffsetx>50</textoffsetx>
-						<label>Remove Unwatched Items</label>
-						<onclick>Skin.ToggleSetting(RecentlyUnwatched)</onclick>
- 					    <selected>Skin.HasSetting(RecentlyUnwatched)</selected>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-						<visible>Skin.HasSetting(homepageHideRecentlyAdded)</visible>
-					</control>-->
+					
 					<!--Weather Widget-->
 						<control type="radiobutton" id="204">
 						<description>Show Weather Widget</description>
@@ -552,7 +486,7 @@
 						<width>860</width>
 						<height>45</height>
 						<font>font16caps</font>
-						<label>$LOCALIZE[31260] - [COLOR=red]Merge Only[/COLOR]</label>
+						<label>$LOCALIZE[31260]</label>
 						<textcolor>mainblue</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
@@ -2429,9 +2363,8 @@
 							<width>860</width>
 							<height>45</height>
 							<font>Font_KeyboardKeys</font>
-							<label>MERGE ONLY</label>
-							<textcolor>red</textcolor>
-							<shadowcolor>black</shadowcolor>
+							<label>Add Submenu of Custom Scripts on Home</label>
+							<textcolor>mainblue</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 						</control>

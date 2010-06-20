@@ -12,9 +12,9 @@
 			<imagepath background="true">$INFO[Container(300).ListItem.Icon]</imagepath>
 			<timeperimage>7000</timeperimage>
 			<randomize>true</randomize>
-			<fadetime>1000</fadetime>
-			<include>Animation_BackdropFade</include>
-			<visible>![Skin.HasSetting(merge_version) + [Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002)]]</visible>
+			<fadetime>600</fadetime>
+			<include>Animation_CommonFadeNoHide</include>
+			<visible>![Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002)]</visible>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -23,7 +23,8 @@
 			<height>720</height>
 			<texture background="true" fallback="backgrounds/missing.jpg">$INFO[Container(8000).ListItem.Thumb]</texture>
 			<fadetime>600</fadetime>
-			<visible>Skin.HasSetting(merge_version) + Control.HasFocus(8000)</visible>
+			<include>Animation_CommonFadeNoHide</include>
+			<visible>Control.HasFocus(8000)</visible>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -32,7 +33,8 @@
 			<height>720</height>
 			<texture background="true" fallback="backgrounds/missing.jpg">$INFO[Container(8001).ListItem.Thumb]</texture>
 			<fadetime>600</fadetime>
-			<visible>Skin.HasSetting(merge_version) + Control.HasFocus(8001)</visible>
+			<include>Animation_CommonFadeNoHide</include>
+			<visible>Control.HasFocus(8001)</visible>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -41,55 +43,51 @@
 			<height>720</height>
 			<texture background="true" fallback="backgrounds/missing.jpg">$INFO[Container(8002).ListItem.Thumb]</texture>
 			<fadetime>600</fadetime>
-			<visible>Skin.HasSetting(merge_version) + Control.HasFocus(8002)</visible>
+			<include>Animation_CommonFadeNoHide</include>
+			<visible>Control.HasFocus(8002)</visible>
 		</control>
 		<control type="image">
 			<posx>0</posx>
 			<posy>0</posy>
 			<include>Dimensions_Fullscreen</include>
-			<texture>mainmenu/vignette.png</texture>
+			<texture background="true">mainmenu/vignette.png</texture>
 			<colordiffuse>ff15efd9</colordiffuse>
-			<include>Animation_BackdropFade</include>
 			<visible>!Skin.HasSetting(horizontal_home)</visible>
 		</control>
 		<control type="image">
 			<posx>0</posx>
 			<posy>0</posy>
 			<include>Dimensions_Fullscreen</include>
-			<texture>mainmenu/horizontal_back.png</texture>
+			<texture background="true">mainmenu/horizontal_back.png</texture>
 			<colordiffuse>ff15efd9</colordiffuse>
-			<include>Animation_BackdropFade</include>
 			<visible>Skin.HasSetting(horizontal_home)</visible>
 		</control>
 		<control type="image">
 			<posx>0</posx>
 			<posy>0</posy>
 			<include>Dimensions_Fullscreen</include>
-			<texture>mainmenu/recently_back.png</texture>
+			<texture background="true">mainmenu/recently_back.png</texture>
 			<colordiffuse>ff15efd9</colordiffuse>
 			<animation effect="fade" start="0" end="100" time="400" delay="1800" tween="cubic" easing="inout" condition="Container(300).HasFocus(3) | Container(300).HasFocus(8) | Container(300).HasFocus(14)">Conditional</animation>
 			<visible>Skin.HasSetting(homepageHideRecentlyAdded) + Container(300).HasFocus(3)</visible>
-			<include>Animation_BackdropFade</include>
 		</control>
 		<control type="image">
 			<posx>0</posx>
 			<posy>0</posy>
 			<include>Dimensions_Fullscreen</include>
-			<texture>mainmenu/episode_fade.png</texture>
+			<texture background="true">mainmenu/episode_fade.png</texture>
 			<colordiffuse>ff15efd9</colordiffuse>
 			<animation effect="fade" start="0" end="100" time="400" delay="1000" tween="cubic" easing="inout" condition="Container(300).HasFocus(5)">Conditional</animation>
 			<visible>Skin.HasSetting(homepageHideRecentlyAdded) + Container(300).HasFocus(5)</visible>
-			<include>Animation_BackdropFade</include>
 		</control>
 		<control type="image">
 			<posx>0</posx>
 			<posy>0</posy>
 			<include>Dimensions_Fullscreen</include>
-			<texture>mainmenu/recently_back.png</texture>
+			<texture background="true">mainmenu/recently_back.png</texture>
 			<colordiffuse>ff15efd9</colordiffuse>
 			<animation effect="fade" start="0" end="100" time="400" tween="cubic" easing="inout" condition="Container(300).HasFocus(3) | Container(300).HasFocus(8) | Container(300).HasFocus(14)">Conditional</animation>
 			<visible>Skin.HasSetting(HomepageWeatherWidget) + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]</visible>
-			<include>Animation_BackdropFade</include>
 		</control>
 		
 		
@@ -306,23 +304,6 @@
 		
 		
 		
-		
-		
-		<control type="button" id="8999">
-			<description>Run Recently added</description>
-			<posx>-20</posx>
-			<posy>-20</posy>
-			<width>1</width>
-			<height>1</height>
-			<label>-</label>
-			<font>-</font>
-			<onfocus>XBMC.RunScript(special://skin/scripts/RecentlyAdded.py,limit=10&amp;albums=True&amp;unplayed=True)</onfocus>
-			<onfocus>SetFocus(300)</onfocus>
-			<texturenofocus>-</texturenofocus>
-			<texturefocus>-</texturefocus>
-			<visible>[Skin.HasSetting(homepageHideRecentlyAdded) + !Skin.HasSetting(merge_version)] + [Skin.HasSetting(homepageHideRecentlyAdded) + !Skin.HasSetting(merge_version) + Skin.HasSetting(RecentlyUnwatched)]</visible>
-		</control>
-			
 		<control type="button" id="8999">
 			<description>Run Recently added</description>
 			<posx>-20</posx>
@@ -335,7 +316,7 @@
 			<onfocus>SetFocus(300)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
-			<visible>Skin.HasSetting(homepageHideRecentlyAdded) + Skin.HasSetting(merge_version)</visible>
+			<visible>Skin.HasSetting(homepageHideRecentlyAdded)</visible>
 		</control>
 		<control type="button" id="8999">
 			<description>Don't run Recently added</description>

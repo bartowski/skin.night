@@ -398,23 +398,23 @@
 				<width>460</width>
 				<height>50</height>
 				<aligny>center</aligny>
-				<font>Font_Bartowski_Showcase_runtime_year</font>
+				<font>Font_RSS_Big</font>
 				<textcolor>ffffffff</textcolor>
-				<label>$INFO[ListItem.Duration]</label>
+				<label>$INFO[ListItem.Duration] $LOCALIZE[12391]</label>
 			</control>
 			<control type="label"><!--Year-->
 				<posx>0</posx>
-				<posy>131</posy>
+				<posy>133</posy>
 				<width>360</width>
 				<height>50</height>
 				<aligny>center</aligny>
-				<font>Font_Bartowski_Showcase_runtime_year</font>
+				<font>Font_RSS_Big</font>
 				<textcolor>ffffffff</textcolor>
 				<label>$INFO[ListItem.Year]</label>
 			</control>
 			<control type="group">
-				<posx>70</posx>
-				<posy>176</posy>
+				<posx>72</posx>
+				<posy>180</posy>
 				<include>VideoMPAAFlaggingConditions</include>
 				<animation effect="zoom" start="80" end="80" time="0" condition="true">Conditional</animation>
 			</control>

@@ -3,7 +3,6 @@
 	<defaultcontrol>1</defaultcontrol>
 	<controls>
 		<control type="group">
-			<include>Window_Fade_Animation</include>
 			<posx>902</posx>
 			<posy>10</posy>
 			<animation effect="slide" start="0,0" end="-420,0" time="0" condition="Window.IsActive(133) | Window.IsActive(112)">Conditional</animation>

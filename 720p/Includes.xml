@@ -23,11 +23,9 @@
 	<include file="Viewtype_WallPanel.xml" />
 	<include file="Viewtype_Shelf.xml" />
 	<include file="Viewtype_addons.xml" />
-	<include file="Includes_MediaFlags.xml" />
 	<include file="Includes_Animations.xml" />
 	<include file="Includes_Trailer.xml" />
 	<include file="Includes_Objects.xml" />
-	<include file="Includes_Backgrounds.xml" />
 	<include file="IncludesHomeRecentlyAdded.xml" />
 	<include file="Includes_Music_Global.xml" />
 	<include file="IncludesCodecFlagging.xml" />
@@ -41,6 +39,8 @@
 	<include name="poster_focusposition_fanart">
 		<focusposition>5</focusposition>
 	</include>
+	
+	
 	
 	<include name="ButtonHomeSubCommonValues">
 		<width>600</width>

@@ -1,7 +1,15 @@
+Update 6/19/2010
+  -Git is now merge only
+  -Removed 'fake' thumbs from Wall view
+  -Updated OSDsubtitle path selection, back to up to date with merge
+  -Now Duration has "minutes" after it
+  -Added minutes to "Files" view
+  -Poster with Fanart option now uses a smaller backdrop
+
 Update 6/18/2010
   -Changed up Wall View
   -Redid Genres for File View
-  -Added current time/finish time to Video playback info
+  -Added current time/finish time to Video playback info screen
   -Added ondown to activate plot in 3dLandscape
   -Added Fanart option to 3dLandscape and some other touchups to that view
   -Forgot to add watched overlay Landpanel
