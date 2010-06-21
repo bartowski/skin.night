@@ -26,197 +26,84 @@
 		
 		
 		
-		<include>7000_has_focus</include>
-		
-		
-		<control type="group">
-		<include>Animation_Bartowski_Context_Zoom</include>
+			<include>7000_has_focus</include>
+	<control type="group">
 		<include>Animation_CommonFade_ViewOptions</include>	
-			<control type="image">
-				<posx>250</posx>
-				<posy>150</posy>
-				<width>778</width>
-				<height>322</height>
-				<texture>common/view_option_back.png</texture>
-				<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews)</visible>
-			</control>
-			<control type="label">
-				<description>header label</description>
-				<posx>500</posx>
-				<posy>164</posy>
-				<width>297</width>
-				<height>30</height>
-				<font>Font_Bartowski_Smaller_MenuValue</font>
-				<label>$LOCALIZE[14018]</label>
-				<align>center</align>
-				<aligny>center</aligny>
-				<textcolor>ff000000</textcolor>
-				<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews)</visible>
-			</control>
-			<control type="image">
-				<posx>290</posx>
-				<posy>196</posy>
-				<width>740</width>
-				<height>4</height>
-				<texture>confluence/separator.png</texture>
-				<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews)</visible>
-			</control>
-
+		<control type="image"><!-- Floor -->
+			<posx>0</posx>
+			<posy>650</posy>
+			<width>1280</width>
+			<height>70</height>
+			<texture>backdrops/test2.png</texture>
+			<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews)</visible>
+		</control>
+		
 		<control type="grouplist" id="7000">
 			<visible>!Skin.HasSetting(LockViews)</visible>
-			<include>WindowMenuVars_Library</include>
-				<posy>200</posy>
-				<control type="button" id="20">
-					<include>WindowMenuButton_Library</include>
-					<label>$LOCALIZE[31088] $INFO[Container.ViewMode]</label>
-					<onclick>Container.NextViewMode</onclick>
-				</control>
-				<control type="togglebutton" id="22">
-					<description>Toggle MoviesFanart</description>
-					<include>WindowMenuButton_Library</include>
-					<label>$LOCALIZE[31086]</label>
-					<altlabel>$LOCALIZE[31094]</altlabel>
-					<onclick>Skin.ToggleSetting(MusicShowcaseFanart)</onclick>
-					<selected>Skin.HasSetting(MusicShowcaseFanart)</selected>
-					<visible>Control.IsVisible(58)</visible>
-				</control>
-				<control type="button" id="3">
-					<include>WindowMenuButton_Library</include>
-					<label>103</label>
-				</control>
-				<control type="button" id="21">
-					<include>WindowMenuButton_Library</include>
-					<label>$LOCALIZE[14022]</label>
-					<onclick>ReplaceWindow(MusicLibrary)</onclick>
-				</control>
-				<control type="radiobutton" id="16">
-					<include>WindowMenuButton_Library</include>
-					<label>589</label>
-				</control>	
-				<control type="button" id="9">
-					<include>WindowMenuButton_Library</include>
-					<label>$LOCALIZE[590]</label>
-				</control>
+			<include>WindowMenuVars</include>
+			<posy>680</posy>
+			<control type="button" id="20">
+				<include>WindowMenuButton</include>
+				<label>$INFO[Container.ViewMode]</label>
+				<onclick>Container.NextViewMode</onclick>
+			</control>
+			<control type="togglebutton" id="22">
+				<description>Toggle MoviesFanart</description>
+				<include>WindowMenuButton</include>
+				<label>$LOCALIZE[31086]</label>
+				<altlabel>$LOCALIZE[31094]</altlabel>
+				<onclick>Skin.ToggleSetting(MusicShowcaseFanart)</onclick>
+				<selected>Skin.HasSetting(MusicShowcaseFanart)</selected>
+				<visible>Control.IsVisible(58)</visible>
+			</control>
+			<control type="button" id="3">
+				<include>WindowMenuButton</include>
+				<label>103</label>
+			</control>
+			<control type="button" id="21">
+				<include>WindowMenuButton</include>
+				<label>$LOCALIZE[744]</label>
+				<onclick>ReplaceWindow(MusicFiles)</onclick>
+			</control>
+			<control type="radiobutton" id="16">
+				<include>WindowMenuButton</include>
+				<label>589</label>
+			</control>	
+			<control type="button" id="9">
+				<include>WindowMenuButton</include>
+				<label>$LOCALIZE[590]</label>
+			</control>
 		</control>
-	
-		<control type="textbox">
-			<posx>720</posx>
-			<posy>200</posy>
-			<width>270</width>
-			<height>200</height>
-			<font>Font_Bartowski_Showcase_plot</font>
-			<textcolor>black</textcolor>
-			<label>$LOCALIZE[31266]</label>
-			<align>justify</align>
-			<visible allowhiddenfocus="true">Control.HasFocus(20) + !Skin.HasSetting(LockViews)</visible>
-		</control>
-		<control type="textbox">
-			<posx>720</posx>
-			<posy>200</posy>
-			<width>270</width>
-			<height>200</height>
-			<font>Font_Bartowski_Showcase_plot</font>
-			<textcolor>black</textcolor>
-			<label>$LOCALIZE[31267]</label>
-			<align>justify</align>
-			<visible allowhiddenfocus="true">Control.HasFocus(22) + !Skin.HasSetting(LockViews)</visible>
-		</control>
-		<control type="textbox">
-			<posx>720</posx>
-			<posy>200</posy>
-			<width>270</width>
-			<height>200</height>
-			<font>Font_Bartowski_Showcase_plot</font>
-			<textcolor>black</textcolor>
-			<label>$LOCALIZE[31275]</label>
-			<align>justify</align>
-			<visible allowhiddenfocus="true">Control.HasFocus(3) + !Skin.HasSetting(LockViews)</visible>
-		</control>
-		<control type="textbox">
-			<posx>720</posx>
-			<posy>200</posy>
-			<width>270</width>
-			<height>200</height>
-			<font>Font_Bartowski_Showcase_plot</font>
-			<textcolor>black</textcolor>
-			<label>$LOCALIZE[31276]</label>
-			<align>justify</align>
-			<visible allowhiddenfocus="true">Control.HasFocus(21) + !Skin.HasSetting(LockViews)</visible>
-		</control>
-		<control type="textbox">
-			<posx>720</posx>
-			<posy>200</posy>
-			<width>270</width>
-			<height>200</height>
-			<font>Font_Bartowski_Showcase_plot</font>
-			<textcolor>black</textcolor>
-			<label>$LOCALIZE[31277]</label>
-			<align>justify</align>
-			<visible allowhiddenfocus="true">Control.HasFocus(16) + !Skin.HasSetting(LockViews)</visible>
-		</control>
-		<control type="textbox">
-			<posx>720</posx>
-			<posy>200</posy>
-			<width>270</width>
-			<height>200</height>
-			<font>Font_Bartowski_Showcase_plot</font>
-			<textcolor>black</textcolor>
-			<label>$LOCALIZE[31278]</label>
-			<align>justify</align>
-			<visible allowhiddenfocus="true">Control.HasFocus(9) + !Skin.HasSetting(LockViews)</visible>
-		</control>
-	
-		<control type="group">
-			<posx>710</posx>
-			<posy>280</posy>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>300</width>
-					<height>168</height>
-					<texture>extras/viewoptions/music_views.png</texture>
-					<visible allowhiddenfocus="true">Control.HasFocus(20) + !Skin.HasSetting(LockViews)</visible>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>300</width>
-					<height>168</height>
-					<texture>extras/viewoptions/music_fanart.png</texture>
-					<visible allowhiddenfocus="true">Control.HasFocus(22) + !Skin.HasSetting(LockViews)</visible>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>300</width>
-					<height>168</height>
-					<texture>extras/viewoptions/sort.png</texture>
-					<visible allowhiddenfocus="true">Control.HasFocus(3) + !Skin.HasSetting(LockViews)</visible>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>300</width>
-					<height>168</height>
-					<texture>extras/viewoptions/music_files.png</texture>
-					<visible allowhiddenfocus="true">Control.HasFocus(21) + !Skin.HasSetting(LockViews)</visible>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>300</width>
-					<height>168</height>
-					<texture>extras/viewoptions/partymode.png</texture>
-					<visible allowhiddenfocus="true">Control.HasFocus(16) + !Skin.HasSetting(LockViews)</visible>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>300</width>
-					<height>168</height>
-					<texture>extras/viewoptions/scan.png</texture>
-					<visible allowhiddenfocus="true">Control.HasFocus(9) + !Skin.HasSetting(LockViews)</visible>
-				</control>
+
+		<control type="grouplist">
+			<visible>!Skin.HasSetting(LockViews)</visible>
+			<include>WindowMenuVars</include>
+			<posy>660</posy>
+			<control type="button" id="40">
+				<include>WindowMenuLabel</include>
+				<label>$LOCALIZE[31088]</label>
+			</control>
+			<control type="button" id="45">
+				<include>WindowMenuLabel</include>
+				<label>$LOCALIZE[14018]</label>
+				<visible>Control.IsVisible(58)</visible>		
+			</control>
+			<control type="button" id="41">
+				<include>WindowMenuLabel</include>
+				<label>$LOCALIZE[31090]</label>
+			</control>
+			<control type="button" id="42">
+				<include>WindowMenuLabel</include>
+				<label>$LOCALIZE[240]</label>
+			</control>
+			<control type="button" id="43">
+				<include>WindowMenuLabel</include>
+				<label>$LOCALIZE[14086]</label>
+			</control>	
+			<control type="button" id="44">
+				<include>WindowMenuLabel</include>
+				<label>$LOCALIZE[31093]</label>
+			</control>				
 		</control>
 	</control>
 		

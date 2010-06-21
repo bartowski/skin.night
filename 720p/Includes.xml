@@ -423,7 +423,6 @@
 		<itemgap>0</itemgap>
 		<align>center</align>
 		<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews)</visible>
-		<include>Animation_ViewOptions</include>
 		<orientation>horizontal</orientation>
 	</include>
 	<include name="WindowMenuButton">

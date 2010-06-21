@@ -1,3 +1,7 @@
+Update 6/20/2010
+  -Updated Movie/TV info screens
+  -Reverted back to the old 'view options'
+
 Update 6/19/2010
   -Git is now merge only
   -Removed 'fake' thumbs from Wall view

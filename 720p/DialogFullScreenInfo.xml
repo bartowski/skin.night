@@ -141,7 +141,6 @@
 					<textcolor>ffffffff</textcolor>
 					<font>Font_Bartowski_Extras_Pause</font>
 					<align>center</align>
-					<visible>Player.Paused</visible>
 					<animation effect="fade" start="100" end="0" time="0">windowclose</animation>
 				</control>
 			</control>

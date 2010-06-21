@@ -59,7 +59,7 @@
 	<string id="31081">Recently Added</string><!-- GOOD -->
 	<string id="31082">Credits</string>
 	<string id="31086">Show Fanart</string><!-- GOOD -->
-	<string id="31088">Viewtype -</string><!-- GOOD -->
+	<string id="31088">Viewtype</string><!-- GOOD -->
 	<string id="31094">Dark Showcase</string><!-- GOOD -->
 	<string id="31095">WATCH</string>
 	<string id="31096">Shown</string><!-- GOOD -->
@@ -216,9 +216,9 @@ just copy the translations from Confluence to here
   
   
   
-  
-  
-  
+  <!-- NEW 6/20-->
+  <string id="31090">Order</string>
+  <string id="31093">Sequence</string>
   
   
   
