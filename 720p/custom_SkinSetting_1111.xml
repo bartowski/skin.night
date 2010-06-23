@@ -116,7 +116,7 @@
 					</item>
 					<item id="4">
 						<label>31116</label>
-						<label2>not in yet</label2>
+						<label2>33063</label2>
 						<onclick>-</onclick>
 					</item>
 					<item id="5">
@@ -512,7 +512,7 @@
 						<control type="button" id="8201">
 							<description>Menu Movies Sub Custom8 Label</description>
 							<label>- Set Label</label>
-							<label2>[COLOR=lightblue]$INFO[Skin.String(Menu_Custom1_Label)][/COLOR]</label2>
+							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom1_Label)][/COLOR]</label2>
 							<width>860</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
@@ -526,7 +526,7 @@
 						<control type="button" id="8202">
 							<description>Menu Movies Sub Custom8 Path</description>
 							<label>- Set Favorite</label>
-							<label2>[COLOR=lightblue]$INFO[Skin.String(Menu_Custom1_Path)][/COLOR]</label2>
+							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom1_Path)][/COLOR]</label2>
 							<width>860</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
@@ -558,7 +558,7 @@
 						<control type="button" id="8203">
 							<description>Menu Movies Sub Custom8 Label</description>
 							<label>- Set Label</label>
-							<label2>[COLOR=lightblue]$INFO[Skin.String(Menu_Custom2_Label)][/COLOR]</label2>
+							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom2_Label)][/COLOR]</label2>
 							<width>860</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
@@ -572,7 +572,7 @@
 						<control type="button" id="8204">
 							<description>Menu Movies Sub Custom8 Path</description>
 							<label>- Set Favorite</label>
-							<label2>[COLOR=lightblue]$INFO[Skin.String(Menu_Custom2_Path)][/COLOR]</label2>
+							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom2_Path)][/COLOR]</label2>
 							<width>860</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
@@ -604,7 +604,7 @@
 						<control type="button" id="8205">
 							<description>custom home 3</description>
 							<label>- $LOCALIZE[31262]</label>
-							<label2>[COLOR=lightblue]$INFO[Skin.String(Menu_Custom3_Label)][/COLOR]</label2>
+							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom3_Label)][/COLOR]</label2>
 							<width>860</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
@@ -618,7 +618,7 @@
 						<control type="button" id="8206">
 							<description>custom home 3</description>
 							<label>- Set Favorite</label>
-							<label2>[COLOR=lightblue]$INFO[Skin.String(Menu_Custom3_Path)][/COLOR]</label2>
+							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom3_Path)][/COLOR]</label2>
 							<width>860</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
@@ -650,7 +650,7 @@
 						<control type="button" id="8207">
 							<description>custom home 4</description>
 							<label>- $LOCALIZE[31262]</label>
-							<label2>[COLOR=lightblue]$INFO[Skin.String(Menu_Custom4_Label)][/COLOR]</label2>
+							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom4_Label)][/COLOR]</label2>
 							<width>860</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
@@ -664,7 +664,7 @@
 						<control type="button" id="8208">
 							<description>custom home 4</description>
 							<label>- Set Favorite</label>
-							<label2>[COLOR=lightblue]$INFO[Skin.String(Menu_Custom4_Path)][/COLOR]</label2>
+							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom4_Path)][/COLOR]</label2>
 							<width>860</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
@@ -696,7 +696,7 @@
 						<control type="button" id="8209">
 							<description>custom home 5</description>
 							<label>- $LOCALIZE[31262]</label>
-							<label2>[COLOR=lightblue]$INFO[Skin.String(Menu_Custom5_Label)][/COLOR]</label2>
+							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom5_Label)][/COLOR]</label2>
 							<width>860</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
@@ -710,7 +710,7 @@
 						<control type="button" id="8210">
 							<description>custom home 5</description>
 							<label>- Set Favorite</label>
-							<label2>[COLOR=lightblue]$INFO[Skin.String(Menu_Custom5_Path)][/COLOR]</label2>
+							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom5_Path)][/COLOR]</label2>
 							<width>860</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
@@ -742,7 +742,7 @@
 						<control type="button" id="8211">
 							<description>custom home 5</description>
 							<label>- $LOCALIZE[31262]</label>
-							<label2>[COLOR=lightblue]$INFO[Skin.String(Menu_Custom6_Label)][/COLOR]</label2>
+							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom6_Label)][/COLOR]</label2>
 							<width>860</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
@@ -756,7 +756,7 @@
 						<control type="button" id="8212">
 							<description>custom home 5</description>
 							<label>- Set Favorite</label>
-							<label2>[COLOR=lightblue]$INFO[Skin.String(Menu_Custom6_Path)][/COLOR]</label2>
+							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom6_Path)][/COLOR]</label2>
 							<width>860</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
@@ -787,7 +787,7 @@
 						<control type="button" id="8213">
 							<description>custom home 7</description>
 							<label>- $LOCALIZE[31262]</label>
-							<label2>[COLOR=lightblue]$INFO[Skin.String(Menu_Custom7_Label)][/COLOR]</label2>
+							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom7_Label)][/COLOR]</label2>
 							<width>860</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
@@ -801,7 +801,7 @@
 						<control type="button" id="8214">
 							<description>custom home 5</description>
 							<label>- Set Favorite</label>
-							<label2>[COLOR=lightblue]$INFO[Skin.String(Menu_Custom7_Path)][/COLOR]</label2>
+							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom7_Path)][/COLOR]</label2>
 							<width>860</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
@@ -2805,6 +2805,29 @@
 							<onclick>Skin.ToggleSetting(tvoverlays)</onclick>
 							<selected>Skin.HasSetting(tvoverlays)</selected>
 						</control>
+						<control type="radiobutton" id="511">
+							<width>860</width>
+							<height>40</height>
+							<font>Font_KeyboardKeys</font>
+							<label>$LOCALIZE[31266]</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+							<onclick>Skin.ToggleSetting(extrafanart)</onclick>
+							<selected>Skin.HasSetting(extrafanart)</selected>
+						</control>
+						<control type="label" id="512">
+							<width>860</width>
+							<height>45</height>
+							<font>Font_KeyboardTitle</font>
+							<textoffsetx>20</textoffsetx>
+							<label>$LOCALIZE[31267]</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<align>left</align>
+							<aligny>top</aligny>
+						</control>
 						<control type="label" id="507">
 							<width>860</width>
 							<height>45</height>
@@ -2840,7 +2863,7 @@
 					</control>
 						<control type="textbox" id="510">
 							<posx>400</posx>
-							<posy>480</posy>
+							<posy>550</posy>
 							<width>600</width>
 							<height>290</height>
 							<align>justify</align>

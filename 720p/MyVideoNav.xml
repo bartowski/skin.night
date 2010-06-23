@@ -8,7 +8,7 @@
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<texture background="true">$INFO[Fanart.Image]</texture>
-			<aspectratio>scale</aspectratio>
+			<aspectratio>stretch</aspectratio>
 			<fadetime>400</fadetime>
 			<include>Animation_BackdropFade</include>
 			<visible>![IsEmpty(Fanart.Image) | Control.IsVisible(59) | Control.IsVisible(54) | Control.IsVisible(57) | Control.IsVisible(56) | Control.IsVisible(592) | Control.IsVisible(597)]</visible>
@@ -17,14 +17,14 @@
 			<include>Dimensions_Fullscreen</include>
 			<fadetime>400</fadetime>
 			<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
-			<aspectratio>scale</aspectratio>
+			<aspectratio>stretch</aspectratio>
 			<include>Animation_BackdropFade</include>
 			<visible>![Skin.HasSetting(hidefanart) | Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart) | Control.IsVisible(54) | Control.IsVisible(59) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(592) | Control.IsVisible(597)]</visible>
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<texture background="true">special://skin/media/backdrops/curtains.png</texture>
-			<aspectratio>scale</aspectratio>
+			<aspectratio>stretch</aspectratio>
 			<include>Animation_BackdropFade</include>
 			<visible>!Control.IsVisible(54) + [IsEmpty(ListItem.Property(Fanart_Image)) + IsEmpty(Fanart.Image)]</visible>
 		</control>
@@ -38,7 +38,7 @@
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
 			<include>Animation_BackdropFade</include>
-			<visible>![Control.IsVisible(59) | Control.IsVisible(54) | Control.IsVisible(57) | Control.IsVisible(56) | Control.IsVisible(592) | Control.IsVisible(597)]</visible>
+			<visible>Skin.HasSetting(extrafanart) + ![Control.IsVisible(59) | Control.IsVisible(54) | Control.IsVisible(57) | Control.IsVisible(56) | Control.IsVisible(592) | Control.IsVisible(597)]</visible>
 		</control>
 		<control type="multiimage">
 			<posx>0</posx>
@@ -50,19 +50,19 @@
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
 			<include>Animation_BackdropFade</include>
-			<visible>![Control.IsVisible(59) | Control.IsVisible(54) | Control.IsVisible(57) | Control.IsVisible(56) | Control.IsVisible(592) | Control.IsVisible(597)]</visible>
+			<visible>Skin.HasSetting(extrafanart) + ![Control.IsVisible(59) | Control.IsVisible(54) | Control.IsVisible(57) | Control.IsVisible(56) | Control.IsVisible(592) | Control.IsVisible(597)]</visible>
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<fadetime>400</fadetime>
-			<texture>backdrops/curtains.png</texture>
+			<texture background="true">backdrops/curtains.png</texture>
 			<include>Animation_BackdropFade</include>
 			<visible>Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(592)</visible>
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<fadetime>400</fadetime>
-			<texture>backdrops/curtains_diffuse.png</texture>
+			<texture background="true">backdrops/curtains_diffuse.png</texture>
 			<include>Animation_BackdropFade</include>
 			<visible>Control.IsVisible(59) | [Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart)]</visible>
 		</control>
@@ -265,7 +265,7 @@
 			<control type="button" id="45">
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[14018]</label>
-				<visible>[Control.IsVisible(50) | Control.IsVisible(58) | Control.IsVisible(52)] + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] | [Control.IsVisible(55) + Container.Content(movies)] | [Control.IsVisible(59) + Container.Content(tvshows)]</visible>		
+				<visible>[Control.IsVisible(50) | Control.IsVisible(53) | Control.IsVisible(58)] + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] | [Control.IsVisible(55) + Container.Content(movies)] | [Control.IsVisible(59) + Container.Content(tvshows)]</visible>		
 			</control>
 			<control type="button" id="46">
 				<include>WindowMenuLabel</include>
@@ -275,7 +275,7 @@
 			<control type="button" id="46">
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[14018]</label>
-				<visible>Control.IsVisible(50) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart)</visible>		
+				<visible>[Control.IsVisible(50) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart)] | [[Control.IsVisible(53) | Control.IsVisible(52)] + [Container.Content(tvshows) | Container.Content(seasons)]]</visible>		
 			</control>
 			<control type="button" id="41">
 				<include>WindowMenuLabel</include>

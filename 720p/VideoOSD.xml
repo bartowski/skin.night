@@ -15,6 +15,7 @@
 			<aspectratio>scale</aspectratio>
 			<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+			<visible>!Window.IsVisible(145)</visible>
 		</control>
 		<control type="group">
 			<posy>0</posy>
@@ -168,130 +169,131 @@
 			</control>
 		</control>
 		<control type="group">
-	<posx>-320</posx>
-	<posy>560</posy>
-		<control type="label" id="0">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1920</width>
-			<align>center</align>
-			<aligny>top</aligny>
-			<label>$LOCALIZE[112]</label>
-			<font>Font_Bartowski_BigMusic</font>
-			<textcolor>33ffffff</textcolor>
-			<visible>player.paused</visible>
+		<posx>-320</posx>
+		<posy>560</posy>
+		<visible>!Window.IsVisible(145)</visible>
+			<control type="label" id="0">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<align>center</align>
+				<aligny>top</aligny>
+				<label>$LOCALIZE[112]</label>
+				<font>Font_Bartowski_BigMusic</font>
+				<textcolor>33ffffff</textcolor>
+				<visible>player.paused</visible>
+			</control>
+			<control type="label" id="0">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<align>center</align>
+				<aligny>top</aligny>
+				<label>FFx2</label>
+				<font>Font_Bartowski_BigMusic</font>
+				<textcolor>33ffffff</textcolor>
+				<visible>player.forwarding2x</visible>
+			</control>
+			<control type="label" id="0">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<align>center</align>
+				<aligny>top</aligny>
+				<label>FFx4</label>
+				<font>Font_Bartowski_BigMusic</font>
+				<textcolor>33ffffff</textcolor>
+				<visible>player.forwarding4x</visible>
+			</control>
+			<control type="label" id="0">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<align>center</align>
+				<aligny>top</aligny>
+				<label>FFx8</label>
+				<font>Font_Bartowski_BigMusic</font>
+				<textcolor>33ffffff</textcolor>
+				<visible>player.forwarding8x</visible>
+			</control>
+			<control type="label" id="0">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<align>center</align>
+				<aligny>top</aligny>
+				<label>FFx16</label>
+				<font>Font_Bartowski_BigMusic</font>
+				<textcolor>33ffffff</textcolor>
+				<visible>player.forwarding16x</visible>
+			</control>
+			<control type="label" id="0">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<align>center</align>
+				<aligny>top</aligny>
+				<label>FFx32</label>
+				<font>Font_Bartowski_BigMusic</font>
+				<textcolor>33ffffff</textcolor>
+				<visible>player.forwarding32x</visible>
+			</control>
+			<control type="label" id="0">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<align>center</align>
+				<aligny>top</aligny>
+				<label>RWx2</label>
+				<font>Font_Bartowski_BigMusic</font>
+				<textcolor>33ffffff</textcolor>
+				<visible>player.rewinding2x</visible>
+			</control>
+			<control type="label" id="0">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<align>center</align>
+				<aligny>top</aligny>
+				<label>RWx4</label>
+				<font>Font_Bartowski_BigMusic</font>
+				<textcolor>33ffffff</textcolor>
+				<visible>player.rewinding4x</visible>
+			</control>
+			<control type="label" id="0">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<align>center</align>
+				<aligny>top</aligny>
+				<label>RWx8</label>
+				<font>Font_Bartowski_BigMusic</font>
+				<textcolor>33ffffff</textcolor>
+				<visible>player.rewinding8x</visible>
+			</control>
+			<control type="label" id="0">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<align>center</align>
+				<aligny>top</aligny>
+				<label>RWx16</label>
+				<font>Font_Bartowski_BigMusic</font>
+				<textcolor>33ffffff</textcolor>
+				<visible>player.rewinding16x</visible>
+			</control>
+			<control type="label" id="0">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<align>center</align>
+				<aligny>top</aligny>
+				<label>RWx32</label>
+				<font>Font_Bartowski_BigMusic</font>
+				<textcolor>33ffffff</textcolor>
+				<visible>player.rewinding32x</visible>
+			</control>
 		</control>
-		<control type="label" id="0">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1920</width>
-			<align>center</align>
-			<aligny>top</aligny>
-			<label>FFx2</label>
-			<font>Font_Bartowski_BigMusic</font>
-			<textcolor>33ffffff</textcolor>
-			<visible>player.forwarding2x</visible>
-		</control>
-		<control type="label" id="0">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1920</width>
-			<align>center</align>
-			<aligny>top</aligny>
-			<label>FFx4</label>
-			<font>Font_Bartowski_BigMusic</font>
-			<textcolor>33ffffff</textcolor>
-			<visible>player.forwarding4x</visible>
-		</control>
-		<control type="label" id="0">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1920</width>
-			<align>center</align>
-			<aligny>top</aligny>
-			<label>FFx8</label>
-			<font>Font_Bartowski_BigMusic</font>
-			<textcolor>33ffffff</textcolor>
-			<visible>player.forwarding8x</visible>
-		</control>
-		<control type="label" id="0">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1920</width>
-			<align>center</align>
-			<aligny>top</aligny>
-			<label>FFx16</label>
-			<font>Font_Bartowski_BigMusic</font>
-			<textcolor>33ffffff</textcolor>
-			<visible>player.forwarding16x</visible>
-		</control>
-		<control type="label" id="0">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1920</width>
-			<align>center</align>
-			<aligny>top</aligny>
-			<label>FFx32</label>
-			<font>Font_Bartowski_BigMusic</font>
-			<textcolor>33ffffff</textcolor>
-			<visible>player.forwarding32x</visible>
-		</control>
-		<control type="label" id="0">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1920</width>
-			<align>center</align>
-			<aligny>top</aligny>
-			<label>RWx2</label>
-			<font>Font_Bartowski_BigMusic</font>
-			<textcolor>33ffffff</textcolor>
-			<visible>player.rewinding2x</visible>
-		</control>
-		<control type="label" id="0">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1920</width>
-			<align>center</align>
-			<aligny>top</aligny>
-			<label>RWx4</label>
-			<font>Font_Bartowski_BigMusic</font>
-			<textcolor>33ffffff</textcolor>
-			<visible>player.rewinding4x</visible>
-		</control>
-		<control type="label" id="0">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1920</width>
-			<align>center</align>
-			<aligny>top</aligny>
-			<label>RWx8</label>
-			<font>Font_Bartowski_BigMusic</font>
-			<textcolor>33ffffff</textcolor>
-			<visible>player.rewinding8x</visible>
-		</control>
-		<control type="label" id="0">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1920</width>
-			<align>center</align>
-			<aligny>top</aligny>
-			<label>RWx16</label>
-			<font>Font_Bartowski_BigMusic</font>
-			<textcolor>33ffffff</textcolor>
-			<visible>player.rewinding16x</visible>
-		</control>
-		<control type="label" id="0">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1920</width>
-			<align>center</align>
-			<aligny>top</aligny>
-			<label>RWx32</label>
-			<font>Font_Bartowski_BigMusic</font>
-			<textcolor>33ffffff</textcolor>
-			<visible>player.rewinding32x</visible>
-		</control>
-	</control>
 		
 	</controls>
 </window>

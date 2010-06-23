@@ -22,6 +22,7 @@
 			<height>720</height>
 			<texture>tv-landscape/landscape_thumb_glow.png</texture>
 			<aspectratio>stretch</aspectratio>
+			<animation effect="fade" start="10" end="100" time="2000" condition="true" pulse="true">conditional</animation>
 			<include>Animation_LandscapeFade</include>
 			<include>Animation_HiddenByInfo</include>
 		</control>
@@ -33,6 +34,7 @@
 			<height>720</height>
 			<texture>tv-landscape/tv_poster_glow.png</texture>
 			<aspectratio>stretch</aspectratio>
+			<animation effect="fade" start="10" end="100" time="2000" condition="true" pulse="true">conditional</animation>
 			<include>Animation_LandscapeFade</include>
 			<include>Animation_HiddenByInfo</include>
 		</control>
@@ -44,6 +46,7 @@
 			<height>720</height>
 			<texture>tv-landscape/landscape_thumb_glow.png</texture>
 			<aspectratio>stretch</aspectratio>
+			<animation effect="fade" start="10" end="100" time="2000" condition="true" pulse="true">conditional</animation>
 			<include>Animation_LandscapeFade</include>
 			<include>Animation_HiddenByInfo</include>
 		</control>
@@ -55,6 +58,7 @@
 			<height>720</height>
 			<texture>tv-landscape/landscape_thumb_glow.png</texture>
 			<aspectratio>stretch</aspectratio>
+			<animation effect="fade" start="10" end="100" time="2000" condition="true" pulse="true">conditional</animation>
 			<include>Animation_LandscapeFade</include>
 			<include>Animation_HiddenByInfo</include>
 		</control>
@@ -232,7 +236,7 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture>tv-landscape/2nd-overlay.png</texture>
-			<aspectratio>scale</aspectratio>
+			<aspectratio>stretch</aspectratio>
 		</control>
 		<control type="label"><!-- Uncheck Cleartitle -->
 			<posx>1260</posx>

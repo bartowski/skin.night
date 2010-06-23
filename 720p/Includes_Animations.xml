@@ -12,7 +12,11 @@
 	</include>
 	
 	<include name="Animation_CommonFade_ViewOptions">
-		<animation effect="fade" start="0" end="100" time="100" delay="300" condition="ControlGroup(7000).HasFocus">Conditional</animation>			
+		<animation effect="slide" start="0,200" end="0,0" time="400" delay="0" condition="ControlGroup(7000).HasFocus">Conditional</animation>			
+	</include>
+	
+	<include name="Animation_7000_viewslide">
+		<animation effect="slide" start="0,0" end="0,-100" time="400" delay="0" condition="ControlGroup(7000).HasFocus">Conditional</animation>			
 	</include>
 	
 	<include name="Animation_BackdropFade">

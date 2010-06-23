@@ -122,27 +122,8 @@
 	<string id="31264">Click to Run the logo script</string>
 	<string id="31265">By clicking the above button, the script will automatically match whatever TV shows you have and then download the correct logo, if there is one, and save it as logo.png in the root of that TV shows folder</string>
 	
-<!-- 
----------
-Section below is are the sentences that appear in View Options
----------
--->	
-	<string id="31266">Click to switch between different views</string>
-	<string id="31267">This option is to enable or disable showing more Fanart</string>
-	<string id="31268">This option is to enable or disable showing Extrathumbs</string>
-	<string id="31269">Click to enable or disable Flags</string>
-	<string id="31270">Use this option if you store a landscape.jpg in the root of the TV show folder</string>
-	<string id="31271">This option is to enable or diable logos</string>
-	<string id="31272">Click to change the alphabetic order of the list</string>
-	<string id="31273">Click to toggle between hiding watched items or leaving them in</string>
-	<string id="31274">Click to search for the video you want</string>
-	<string id="31275">Click to change the order in which the list is sorted</string>
-	<string id="31276">This option is to toggle between Files and Library mode</string>
-	<string id="31277">Click this to swtich party mode on or off</string>
-	<string id="31278">Click to scan items into the Library</string>
-	
-	
-	
+
+
 <!-- 
 -----------
 -----------
@@ -220,8 +201,9 @@ just copy the translations from Confluence to here
   <string id="31090">Order</string>
   <string id="31093">Sequence</string>
   
-  
-  
+    <!-- NEW 6/22-->
+  <string id="31266">Enable 'extrafanart' - allows random cycling of fanart in Library mode</string>
+  <string id="31267">User needs the 'extrafanart' folder at the root a TV Show or Movie folder</string>
   
   </strings>
 

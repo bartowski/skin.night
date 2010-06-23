@@ -143,7 +143,7 @@ MOVIE SECTION
 					<posy>326</posy>
 					<width>100</width>
 					<height>76</height>
-					<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+					<texture background="true">dialogs/movies/$INFO[ListItem.Overlay]</texture>
 					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 				</control>
 			</itemlayout>
@@ -220,7 +220,7 @@ MOVIE SECTION
 					<posy>344</posy>
 					<width>100</width>
 					<height>76</height>
-					<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+					<texture background="true">dialogs/movies/$INFO[ListItem.Overlay]</texture>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="90,258" start="81" end="100" time="300" tween="back" easing="out" />
 					</animation>
@@ -435,13 +435,13 @@ MOVIE SECTION
 		<visible>Control.IsVisible(58) + Container.Content(movies) + !IsEmpty(ListItem.Title) + Skin.HasSetting(extrathumbs) + !Skin.HasSetting(ShowcaseFanart)</visible>
 		<include>Animation_Viewtype_Showcase_RightArea</include>
 		<include>Animation_HiddenByInfo</include>		
-			<control type="largeimage">
+			<control type="image">
 				<posx>1010</posx>
 				<posy>30</posy>
 				<width>261</width>
 				<height>147</height>
 				<aspectratio>stretch</aspectratio>
-				<texture diffuse="tv-landscape/landscapematteFO.png">$INFO[ListItem.Path,,extrathumbs/thumb1.jpg]</texture>
+				<texture background="true" diffuse="tv-landscape/landscapematteFO.png">$INFO[ListItem.Path,,extrathumbs/thumb1.jpg]</texture>
 				<fadetime>200</fadetime>
 			</control>
 			<control type="image">
@@ -452,13 +452,13 @@ MOVIE SECTION
 				<texture>tv-landscape/landscapeframeFO.png</texture>
 				
 			</control>
-			<control type="largeimage">
+			<control type="image">
 				<posx>1010</posx>
 				<posy>200</posy>
 				<width>261</width>
 				<height>147</height>
 				<aspectratio>stretch</aspectratio>
-				<texture diffuse="tv-landscape/landscapematteFO.png">$INFO[ListItem.Path,,extrathumbs/thumb2.jpg]</texture>
+				<texture background="true" diffuse="tv-landscape/landscapematteFO.png">$INFO[ListItem.Path,,extrathumbs/thumb2.jpg]</texture>
 				<fadetime>200</fadetime>
 			</control>
 			<control type="image">
