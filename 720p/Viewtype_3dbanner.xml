@@ -94,6 +94,14 @@
 						<colordiffuse>89FFFFFF</colordiffuse>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 					</control>
+					<control type="image">
+						<posx>90</posx>
+						<posy>266</posy>
+						<width>78</width>
+						<height>60</height>
+						<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+						<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+					</control>
 				</control>
 			</itemlayout>
 			<focusedlayout width="390" height="515">
@@ -186,6 +194,17 @@
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 						</animation>
+					</control>
+					<control type="image">
+						<posx>210</posx>
+						<posy>270</posy>
+						<width>100</width>
+						<height>76</height>
+						<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
+						</animation>
+						<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 					</control>
 				</control>	
 			</focusedlayout>

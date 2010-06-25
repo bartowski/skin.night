@@ -50,7 +50,7 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<include>Dimensions_Fullscreen</include>
-			<texture background="true">mainmenu/vignette.png</texture>
+			<texture>mainmenu/vignette.png</texture>
 			<colordiffuse>ff15efd9</colordiffuse>
 			<visible>!Skin.HasSetting(horizontal_home)</visible>
 		</control>
@@ -58,7 +58,7 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<include>Dimensions_Fullscreen</include>
-			<texture background="true">mainmenu/horizontal_back.png</texture>
+			<texture>mainmenu/horizontal_back.png</texture>
 			<colordiffuse>ff15efd9</colordiffuse>
 			<visible>Skin.HasSetting(horizontal_home)</visible>
 		</control>
@@ -66,7 +66,7 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<include>Dimensions_Fullscreen</include>
-			<texture background="true">mainmenu/recently_back.png</texture>
+			<texture>mainmenu/recently_back.png</texture>
 			<colordiffuse>ff15efd9</colordiffuse>
 			<animation effect="fade" start="0" end="100" time="400" delay="1800" tween="cubic" easing="inout" condition="Container(300).HasFocus(3) | Container(300).HasFocus(8) | Container(300).HasFocus(14)">Conditional</animation>
 			<visible>Skin.HasSetting(homepageHideRecentlyAdded) + Container(300).HasFocus(3)</visible>
@@ -75,7 +75,7 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<include>Dimensions_Fullscreen</include>
-			<texture background="true">mainmenu/episode_fade.png</texture>
+			<texture>mainmenu/episode_fade.png</texture>
 			<colordiffuse>ff15efd9</colordiffuse>
 			<animation effect="fade" start="0" end="100" time="400" delay="1000" tween="cubic" easing="inout" condition="Container(300).HasFocus(5)">Conditional</animation>
 			<visible>Skin.HasSetting(homepageHideRecentlyAdded) + Container(300).HasFocus(5)</visible>
@@ -84,7 +84,7 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<include>Dimensions_Fullscreen</include>
-			<texture background="true">mainmenu/recently_back.png</texture>
+			<texture>mainmenu/recently_back.png</texture>
 			<colordiffuse>ff15efd9</colordiffuse>
 			<animation effect="fade" start="0" end="100" time="400" tween="cubic" easing="inout" condition="Container(300).HasFocus(3) | Container(300).HasFocus(8) | Container(300).HasFocus(14)">Conditional</animation>
 			<visible>Skin.HasSetting(HomepageWeatherWidget) + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]</visible>

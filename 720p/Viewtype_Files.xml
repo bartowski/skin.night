@@ -346,7 +346,7 @@
 		<include>Animation_Viewtype_Wall_Fags</include>
 	</control>
 	
-	<control type="image">
+	<!--<control type="image">
 		<posx>980</posx>
 		<posy>180</posy>
 		<width>300</width>
@@ -357,7 +357,7 @@
 		<bordersize>5</bordersize>
 		<fadetime>100</fadetime>
 		<visible>Control.IsVisible(55) + IsEmpty(ListItem.Title) + ![Container.Content(movies) | Container.Content(Genres) | Container.Content(episodes) | Container.Content(albums) | Container.Content(songs)]</visible>
-	</control>
+	</control>-->
 	
 	<control type="group">	
 	<include>Animation_Viewtype_Files_RightArea</include>
@@ -409,7 +409,7 @@
 	</control>
 	<control type="group">
 	<include>Animation_HiddenByInfo</include>
-	<visible>Control.IsVisible(55) + !IsEmpty(ListItem.Title) + ![Container.Content(movies) | Container.Content(Genres) | Container.Content(episodes) | Container.Content(albums) | Container.Content(songs)]</visible>
+	<visible>Control.IsVisible(55) + ![Window.IsActive(musicfiles) | Container.Content(movies) | Container.Content(Genres) | Container.Content(episodes) | Container.Content(albums) | Container.Content(songs)]</visible>
 	<include>Animation_Viewtype_Files_RightArea</include>	
 		<control type="image">
 			<posx>770</posx>
@@ -453,6 +453,63 @@
 			<posy>180</posy>
 			<width>500</width>
 			<height>540</height>
+			<aspectratio align="right" aligny="bottom">keep</aspectratio>
+			<texture background="true">$INFO[ListItem(1).Icon]</texture>
+			<bordertexture border="5">confluence/button-nofocus.png</bordertexture>
+			<bordersize>5</bordersize>
+			<animation type="Hidden">
+			<effect type="zoom" time="400" center="auto" start="100" end="180" tween="cubic" easing="in" />
+				<effect type="fade" time="400" start="100" end="0" />
+			</animation>
+			<visible>Container(55).OnPrevious</visible>
+		</control>
+	</control>
+	<control type="group">
+	<include>Animation_HiddenByInfo</include>
+	<visible>Control.IsVisible(55) + Window.IsActive(musicfiles)</visible>
+	<include>Animation_Viewtype_Files_RightArea</include>	
+		<control type="image">
+			<posx>770</posx>
+			<posy>370</posy>
+			<width>500</width>
+			<height>350</height>
+			<aspectratio align="right" aligny="bottom">keep</aspectratio>
+			<texture background="true">$INFO[ListItem.Icon]</texture>
+			<bordertexture border="5">confluence/button-nofocus.png</bordertexture>
+			<bordersize>5</bordersize>
+			<fadetime>100</fadetime>
+		</control>
+		<!--<control type="image">
+			<posx>780</posx>
+			<posy>40</posy>
+			<width>500</width>
+			<height>300</height>
+			<aspectratio align="right" aligny="bottom">keep</aspectratio>
+			<texture background="true">$INFO[ListItem.Icon]</texture>
+			<bordertexture border="5">confluence/button-nofocus.png</bordertexture>
+			<bordersize>5</bordersize>
+			<fadetime>100</fadetime>
+		</control>-->
+		<control type="image">
+			<posx>770</posx>
+			<posy>370</posy>
+			<width>500</width>
+			<height>350</height>
+			<aspectratio align="right" aligny="bottom">keep</aspectratio>
+			<texture background="true">$INFO[ListItem(-1).Icon]</texture>
+			<bordertexture border="5">confluence/button-nofocus.png</bordertexture>
+			<bordersize>5</bordersize>
+			<animation type="Hidden">
+			<effect type="zoom" time="400" center="auto" start="100" end="180" tween="cubic" easing="in" />
+				<effect type="fade" time="400" start="100" end="0" />
+			</animation>
+			<visible>Container(55).OnNext</visible>
+		</control>
+		<control type="image">
+			<posx>770</posx>
+			<posy>370</posy>
+			<width>500</width>
+			<height>350</height>
 			<aspectratio align="right" aligny="bottom">keep</aspectratio>
 			<texture background="true">$INFO[ListItem(1).Icon]</texture>
 			<bordertexture border="5">confluence/button-nofocus.png</bordertexture>

@@ -281,6 +281,17 @@
 				<!--<animation effect="zoom" start="2,122,0,281" end="0,0,500,281" time="800" delay="200">Visible</animation>-->
 			</control>
 			<control type="image">
+				<posx>420</posx>
+				<posy>340</posy>
+				<width>120</width>
+				<height>91</height>
+				<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+				<animation type="Focus" reversible="false">
+					<effect type="zoom" center="145,202" start="51" end="100" time="600" tween="back" easing="out" />
+				</animation>
+				<visible>Skin.HasSetting(tvoverlays) + !Skin.HasSetting(TVPosters) + Container.Content(tvshows) + !IsEmpty(ListItem.Overlay)</visible>
+			</control>
+			<control type="image">
 				<visible>Container.Content(episodes) + !IsEmpty(ListItem.Title)</visible>
 				<posx>2</posx>
 				<posy>355</posy>
@@ -307,6 +318,17 @@
 				<texture background="true" diffuse="postermatte.png">$INFO[ListItem.Icon]</texture>
 				<fadetime>200</fadetime>					
 				<aspectratio scalediffuse="false">stretch</aspectratio>
+			</control>
+			<control type="image">
+				<posx>280</posx>
+				<posy>470</posy>
+				<width>100</width>
+				<height>76</height>
+				<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+				<animation type="Focus" reversible="false">
+					<effect type="zoom" center="145,202" start="51" end="100" time="600" tween="back" easing="out" />
+				</animation>
+				<visible>Skin.HasSetting(tvoverlays) + Skin.HasSetting(TVPosters) + Container.Content(tvshows) + !IsEmpty(ListItem.Overlay)</visible>
 			</control>
 			<control type="label"><!-- Episode Description -->
 				<visible>Container.Content(episodes)</visible>

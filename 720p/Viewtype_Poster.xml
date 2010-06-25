@@ -166,7 +166,7 @@
 						<width>100</width>
 						<height>76</height>
 						<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
-						<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+						<visible>[Skin.HasSetting(movieoverlays) | Skin.HasSetting(tvoverlays)] + !IsEmpty(ListItem.Overlay)</visible>
 					</control>
 				</control>
 				</itemlayout>
@@ -315,7 +315,7 @@
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 						</animation>
-						<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+						<visible>[Skin.HasSetting(movieoverlays) | Skin.HasSetting(tvoverlays)] + !IsEmpty(ListItem.Overlay)</visible>
 					</control>
 			</control>	
 			</focusedlayout>

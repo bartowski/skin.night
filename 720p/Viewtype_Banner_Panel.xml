@@ -75,6 +75,14 @@
 						<animation effect="fade" start="10" end="70" time="0" condition="true">Conditional</animation>
 					</control>
 					<control type="image">
+						<posx>576</posx>
+						<posy>76</posy>
+						<width>100</width>
+						<height>76</height>
+						<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+						<visible>[Skin.HasSetting(movieoverlays) | Skin.HasSetting(tvoverlays)]+ !IsEmpty(ListItem.Overlay)</visible>
+					</control>
+					<control type="image">
 						<posx>-26</posx>
 						<posy>-8</posy>
 						<width>698</width>
@@ -101,7 +109,6 @@
 						<effect type="fade" start="0" end="100" time="800" />
 					</animation>
 				</control>
-				
 				<control type="image">
 					<posx>1</posx>
 					<posy>0</posy>
@@ -114,6 +121,17 @@
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="auto" start="51" end="104" time="600" tween="back" easing="out" />
 					</animation>
+				</control>
+				<control type="image">
+					<posx>588</posx>
+					<posy>78</posy>
+					<width>100</width>
+					<height>76</height>
+					<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="auto" start="51" end="104" time="600" tween="back" easing="out" />
+					</animation>
+					<visible>[Skin.HasSetting(movieoverlays) | Skin.HasSetting(tvoverlays)]+ !IsEmpty(ListItem.Overlay)</visible>
 				</control>
 				<control type="image">
 					<posx>-26</posx>

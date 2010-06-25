@@ -62,8 +62,8 @@
 			</control>
 			<control type="button" id="21">
 				<include>WindowMenuButton</include>
-				<label>$LOCALIZE[744]</label>
-				<onclick>ReplaceWindow(MusicFiles)</onclick>
+				<label>$LOCALIZE[14022]</label>
+				<onclick>ReplaceWindow(MusicLibrary)</onclick>
 			</control>
 			<control type="radiobutton" id="16">
 				<include>WindowMenuButton</include>

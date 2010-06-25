@@ -107,6 +107,14 @@
 					<include>Animation_HiddenByInfo</include>
 				</control>
 				<control type="image">
+					<posx>230</posx>
+					<posy>250</posy>
+					<width>100</width>
+					<height>76</height>
+					<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+					<visible>Skin.HasSetting(tvoverlays) + !Container.Content(episodes) + !IsEmpty(ListItem.Overlay)</visible>
+				</control>
+				<control type="image">
 					<posx>1</posx>
 					<posy>131</posy>
 					<width>300</width>
@@ -191,6 +199,17 @@
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="145,202" start="51" end="100" time="600" tween="back" easing="out" />
 					</animation>
+				</control>
+				<control type="image">
+					<posx>230</posx>
+					<posy>250</posy>
+					<width>100</width>
+					<height>76</height>
+					<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="145,202" start="51" end="100" time="600" tween="back" easing="out" />
+					</animation>
+					<visible>Skin.HasSetting(tvoverlays) + !Container.Content(episodes) + !IsEmpty(ListItem.Overlay)</visible>
 				</control>
 				<control type="image">
 					<posx>-12</posx>

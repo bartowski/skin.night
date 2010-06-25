@@ -1,3 +1,7 @@
+Update 6/24/2010
+  -Changed Zune playback into a smaller Music global 'Now Playing'
+  -Added watched indicator to TV/Season level for all views but Fanart
+
 Update 6/22/2010
   -Fixed a few label errors with new 'view options'
   -Favorite script now included in skin, works with pre-merge too

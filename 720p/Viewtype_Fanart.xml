@@ -121,7 +121,7 @@
 					<width>100</width>
 					<height>76</height>
 					<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
-					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+					<visible>[Skin.HasSetting(movieoverlays) | Skin.HasSetting(tvoverlays)]+ !IsEmpty(ListItem.Overlay)</visible>
 				</control>
 			</control>
 			</itemlayout>
@@ -207,7 +207,7 @@
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="auto" start="100" end="110" time="300" tween="back" easing="out" />
 					</animation>
-					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+					<visible>[Skin.HasSetting(movieoverlays) | Skin.HasSetting(tvoverlays)]+ !IsEmpty(ListItem.Overlay)</visible>
 				</control>
 			</control>
 			</focusedlayout>
@@ -310,7 +310,7 @@
 			<texture>panel/last-overlay.png</texture>
 		</control>
 		<control type="grouplist">
-			<visible>Container.Content(movies) + !Skin.HasSetting(no_media_flags)</visible>
+			<visible>Container.Content(movies) + !Player.HasAudio + !Skin.HasSetting(no_media_flags)</visible>
 			<description>Media Codec Flagging Images</description>
 			<posx>20</posx>
 			<posy>680</posy>
