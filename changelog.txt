@@ -1,3 +1,10 @@
+Update 6/26/2010
+  -Fixed a few overlaps with the new mini-player
+  -Added plot to Episode level of 3dLandsape
+  -Change fallback backdrop for Music Fullscreen Playback
+  -Also changed fallback backdrop in Video Library
+  -Black overlay no longer stays during Music Visualization
+
 Update 6/24/2010
   -Changed Zune playback into a smaller Music global 'Now Playing'
   -Added watched indicator to TV/Season level for all views but Fanart

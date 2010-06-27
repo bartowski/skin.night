@@ -451,7 +451,7 @@
 			<description>Media Codec Flagging Images</description>
 			<posx>800</posx>
 			<posy>680</posy>
-			<width>380</width>
+			<width>480</width>
 			<align>center</align>
 			<itemgap>0</itemgap>
 			<orientation>horizontal</orientation>
@@ -460,7 +460,7 @@
 			<include>AspectCodecFlaggingConditions</include>
 			<include>VideoTypeHackFlaggingConditions</include>
 			<include>Animation_HiddenByInfo</include>
-			<include>Animation_Viewtype_Files_RightArea</include>
+			<include>Animation_Viewtype_Wall_Fags</include>
 		</control>
 		<control type="scrollbar" id="62">
 			<include>Animation_ZoomInZoomOut</include>

@@ -59,6 +59,12 @@
 			<linespacing>1</linespacing>
 		</font>
 		<font>
+			<name>Font_3dland_plot</name>
+			<filename>alaska_light_nocaps.ttf</filename>
+			<size>26</size>
+			<linespacing>.8</linespacing>
+		</font>
+		<font>
 			<name>Font_Bartowski_Episodes</name>
 			<filename>alaska_light_nocaps.ttf</filename>
 			<size>24</size>

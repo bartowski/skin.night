@@ -322,7 +322,7 @@
 						<visible>Skin.HasSetting(3dland_jpg) + !Container.Content(episodes)</visible>
 					</control>
 					<control type="image">
-						<visible>ControlGroup(28374).HasFocus + Container.Content(episodes)</visible>
+						<visible>ControlGroup(28374).HasFocus + Container.Content(episodes) + Skin.HasSetting(3dLandscape_Fanart)</visible>
 						<posx>-150</posx>
 						<posy>86</posy>
 						<width>407</width>
@@ -416,7 +416,7 @@
 						<visible>!IsEmpty(ListItem.Title) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
 					</control>
 					<control type="textbox">
-						<visible>ControlGroup(28374).HasFocus + Container.Content(episodes)</visible>
+						<visible>ControlGroup(28374).HasFocus + Container.Content(episodes) + Skin.HasSetting(3dLandscape_Fanart)</visible>
 						<posx>-140</posx>
 						<posy>90</posy>
 						<width>384</width>
@@ -455,7 +455,7 @@
 			<onup>7000</onup>
 			<ondown>53</ondown>
 			<label></label>
-			<visible allowhiddenfocus="true">ControlGroup(28374).HasFocus + Container.Content(episodes)</visible>
+			<visible allowhiddenfocus="true">ControlGroup(28374).HasFocus + Skin.HasSetting(3dLandscape_Fanart) + Container.Content(episodes)</visible>
 		</control>
 	</control>
 		
@@ -528,10 +528,10 @@
 			</control>
 		</control>
 		<control type="group">
-			<visible>Control.IsVisible(53) + !Skin.HasSetting(3dLandscape_Fanart) + [Container.Content(episodes) | Window.IsActive(videoplaylist)] + !IsEmpty(ListItem.Title)</visible>
-			<include>Animation_Viewtype_3dland_Leftplot</include>
 			<posx>0</posx>
-			<posy>240</posy>
+			<posy>30</posy><!-- 240 -->
+			<include>Animation_Viewtype_3dland_Lefttop</include>
+			<visible>Control.IsVisible(53) + !Skin.HasSetting(3dLandscape_Fanart) + [Container.Content(episodes) | Window.IsActive(videoplaylist)] + !IsEmpty(ListItem.Title)</visible>
 				<control type="label">
 					<posx>20</posx>
 					<posy>55</posy>
@@ -541,6 +541,18 @@
 					<font>Font_TVShow</font>
 					<textcolor>ffffffff</textcolor>
 					<label>$LOCALIZE[20373] $INFO[ListItem.Season]/$LOCALIZE[20359] $INFO[ListItem.Episode]</label>
+				</control>
+				<control type="textbox">
+					<description>Plot Movie</description>
+					<posx>20</posx>
+					<posy>120</posy>
+					<width>600</width>
+					<height>226</height>
+					<align>justify</align>
+					<info>ListItem.Plot</info>
+					<font>Font_3dland_plot</font>
+					<textcolor>ffffffff</textcolor>
+					<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				</control>
 				<control type="label">
 					<posx>20</posx>
@@ -603,7 +615,7 @@
 			<!--<animation effect="slide" start="0,0" end="0,400" time="0" delay="800" condition="!Skin.HasSetting(ClearTitle)">Conditional</animation>-->
 			<description>Media Codec Flagging Images</description>
 			<posx>20</posx>
-			<posy>360</posy>
+			<posy>390</posy>
 			<width>1280</width>
 			<align>left</align>
 			<itemgap>0</itemgap>

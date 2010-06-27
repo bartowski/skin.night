@@ -413,9 +413,9 @@
 	<include>Animation_Viewtype_Files_RightArea</include>	
 		<control type="image">
 			<posx>770</posx>
-			<posy>180</posy>
+			<posy>380</posy>
 			<width>500</width>
-			<height>540</height>
+			<height>340</height>
 			<aspectratio align="right" aligny="bottom">keep</aspectratio>
 			<texture background="true">$INFO[ListItem.Icon]</texture>
 			<bordertexture border="5">confluence/button-nofocus.png</bordertexture>
@@ -435,30 +435,30 @@
 		</control>-->
 		<control type="image">
 			<posx>770</posx>
-			<posy>180</posy>
+			<posy>380</posy>
 			<width>500</width>
-			<height>540</height>
+			<height>340</height>
 			<aspectratio align="right" aligny="bottom">keep</aspectratio>
 			<texture background="true">$INFO[ListItem(-1).Icon]</texture>
 			<bordertexture border="5">confluence/button-nofocus.png</bordertexture>
 			<bordersize>5</bordersize>
 			<animation type="Hidden">
-			<effect type="zoom" time="400" center="auto" start="100" end="180" tween="cubic" easing="in" />
+			<effect type="zoom" time="400" center="1200,660" start="100" end="180" tween="cubic" easing="in" />
 				<effect type="fade" time="400" start="100" end="0" />
 			</animation>
 			<visible>Container(55).OnNext</visible>
 		</control>
 		<control type="image">
 			<posx>770</posx>
-			<posy>180</posy>
+			<posy>380</posy>
 			<width>500</width>
-			<height>540</height>
+			<height>340</height>
 			<aspectratio align="right" aligny="bottom">keep</aspectratio>
 			<texture background="true">$INFO[ListItem(1).Icon]</texture>
 			<bordertexture border="5">confluence/button-nofocus.png</bordertexture>
 			<bordersize>5</bordersize>
 			<animation type="Hidden">
-			<effect type="zoom" time="400" center="auto" start="100" end="180" tween="cubic" easing="in" />
+			<effect type="zoom" time="400" center="1200,660" start="100" end="180" tween="cubic" easing="in" />
 				<effect type="fade" time="400" start="100" end="0" />
 			</animation>
 			<visible>Container(55).OnPrevious</visible>

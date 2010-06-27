@@ -19,7 +19,7 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<texture background="true" fallback="backdrops/curtains.png">$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
+			<texture background="true" fallback="backgrounds/music.jpg">$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>400</fadetime>
 			<include>VisibleFadeEffect</include>
@@ -48,7 +48,7 @@
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
 			<include>Animation_BackdropFade</include>
-			<visible>Skin.HasSetting(FanartNoVisualisation) + Skin.HasSetting(vis_music_backdrops)</visible>
+			<visible>[Skin.HasSetting(FanartNoVisualisation) + Skin.HasSetting(vis_music_backdrops)] | !IsEmpty(ListItem.Property(Fanart_Image))</visible>
 		</control>
 		<control type="multiimage">
 			<posx>0</posx>
@@ -70,7 +70,7 @@
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<texture>music/Music_Visualization_Fanart.png</texture>
-			<visible>[!Skin.HasSetting(DarkFullscreenMusicPlayback) + !Skin.HasSetting(FullscreenJukebox)]</visible>
+			<visible>![Skin.HasSetting(DarkFullscreenMusicPlayback) + Skin.HasSetting(FullscreenJukebox)] + Player.ShowInfo</visible>
 		</control>
 <!-------------	
 ---------------	
@@ -79,7 +79,7 @@ Normal Fullscreen
 --------------->		
 	<control type="group">
 			<!--<visible>!Window.IsActive(120) + [!Player.ShowInfo | player.paused]</visible>-->
-			<visible>!Skin.HasSetting(FullscreenJukebox) + Skin.HasSetting(FanartNoVisualisation)</visible>
+			<visible>!Skin.HasSetting(FullscreenJukebox) + Skin.HasSetting(FanartNoVisualisation) + Player.ShowInfo</visible>
 			<posy>630</posy>
 			<animation type="WindowOpen">
 				<effect type="slide" start="0,300" end="0,0" time="600" tween="cubic" easing="out" />
