@@ -23,14 +23,14 @@
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
-			<texture background="true">special://skin/media/backgrounds/movies.jpg</texture>
+			<texture>special://skin/media/backgrounds/movies.jpg</texture>
 			<aspectratio>stretch</aspectratio>
 			<include>Animation_BackdropFade</include>
 			<visible>!Control.IsVisible(54) + !IsEmpty(ListItem.Title) + [IsEmpty(ListItem.Property(Fanart_Image)) + IsEmpty(Fanart.Image)]</visible>
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
-			<texture background="true">special://skin/media/backdrops/curtains.png</texture>
+			<texture>special://skin/media/backdrops/curtains.png</texture>
 			<aspectratio>stretch</aspectratio>
 			<include>Animation_BackdropFade</include>
 			<visible>!Control.IsVisible(54) + IsEmpty(ListItem.Title)</visible>
@@ -62,14 +62,14 @@
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<fadetime>400</fadetime>
-			<texture background="true">backdrops/curtains.png</texture>
+			<texture>backdrops/curtains.png</texture>
 			<include>Animation_BackdropFade</include>
 			<visible>Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(592)</visible>
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<fadetime>400</fadetime>
-			<texture background="true">backdrops/curtains_diffuse.png</texture>
+			<texture>backdrops/curtains_diffuse.png</texture>
 			<include>Animation_BackdropFade</include>
 			<visible>Control.IsVisible(59) | [Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart)]</visible>
 		</control>

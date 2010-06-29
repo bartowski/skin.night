@@ -143,7 +143,7 @@ MOVIE SECTION
 					<posy>326</posy>
 					<width>100</width>
 					<height>76</height>
-					<texture background="true">dialogs/movies/$INFO[ListItem.Overlay]</texture>
+					<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
 					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 				</control>
 			</itemlayout>
@@ -220,7 +220,7 @@ MOVIE SECTION
 					<posy>344</posy>
 					<width>100</width>
 					<height>76</height>
-					<texture background="true">dialogs/movies/$INFO[ListItem.Overlay]</texture>
+					<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="90,258" start="81" end="100" time="300" tween="back" easing="out" />
 					</animation>

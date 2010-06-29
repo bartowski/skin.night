@@ -313,7 +313,7 @@
 	<!-- Info dialog animations -->
 
 	<include name="Animation_HiddenByInfo">
-		<animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(2003) | Window.IsActive(146)">Conditional</animation>	
+		<animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(songinformation)">Conditional</animation>	
 	</include>
 
 	<include name="Animation_HiddenByMusicInfo">

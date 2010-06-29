@@ -12,7 +12,7 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<texture fallback="special://skin/media/backdrops/curtains.png" background="true">$INFO[Fanart.Image]</texture>
+			<texture fallback="special://skin/media/backgrounds/music.jpg" background="true">$INFO[Fanart.Image]</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>400</fadetime>
 			<include>Animation_BackdropFade</include>
@@ -24,7 +24,7 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<texture fallback="special://skin/media/backdrops/curtains.png" background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+			<texture fallback="special://skin/media/backgrounds/music.jpg" background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>400</fadetime>
 			<include>Animation_BackdropFade</include>
@@ -45,11 +45,12 @@
 		<include>Viewtype_Shelf</include><!-- 51 -->
 		<include>Viewtype_JukeBox</include><!-- 50 -->
 
-		
+	<control type="group">
+		<include>Animation_HiddenByInfo</include>
 		<include>Music_Global_TopRight_Music_Showcase</include>
 		<include>Music_Global_Lowerleft_Music</include>
 		<include>Music_Global_LowerRight_music</include>
-		
+	</control>
 		
 		<include>7000_has_focus</include>
 	<control type="group">

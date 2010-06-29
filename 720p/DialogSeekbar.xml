@@ -18,7 +18,7 @@
 				<width>1280</width>
 				<height>720</height>
 				<texture>osd/pause-back1.png</texture>
-				<aspectratio>scale</aspectratio>
+				<aspectratio>stretch</aspectratio>
 			</control>
 			
 			
