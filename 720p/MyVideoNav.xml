@@ -3,7 +3,7 @@
 <window id="25">
 	<defaultcontrol always="true">55</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>55,50,58,51,52,633,53,54,597,56,57,59,592,593</views>
+	<views>55,50,58,51,52,633,53,54,597,56,57,59,592,593,594</views>
 	<controls>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
@@ -90,6 +90,8 @@
 		<include>Viewtype_WallPanel</include><!--  597  -->
 		<include>Viewtype_16x9</include><!--  59  -->
 		<include>Viewtype_3dbanner</include><!--  593  -->
+		<include>Viewtype_Logo</include><!--  594  -->
+		
 		
 		
 		<include>Trailer</include>

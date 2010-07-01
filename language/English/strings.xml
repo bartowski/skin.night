@@ -205,6 +205,9 @@ just copy the translations from Confluence to here
   <string id="31266">Enable 'extrafanart' - allows random cycling of fanart in Library mode</string>
   <string id="31267">User needs the 'extrafanart' folder at the root a TV Show or Movie folder</string>
   
+   <!-- NEW 6/23-->
+  <string id="31268">Logo</string>
+  
   </strings>
 
   

@@ -1,3 +1,11 @@
+Update 6/30/2010
+  -Fixed Custom Playlists not showing for Horizontal Home
+  -Added New View "Logo"
+  -Added a fallback logo image for list views - Fanart, Landscape, Logo
+
+Update 6/28/2010
+  -Updated Song Info Dialog
+
 Update 6/26/2010
   -Fixed a few overlaps with the new mini-player
   -Added plot to Episode level of 3dLandsape

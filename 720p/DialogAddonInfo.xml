@@ -227,9 +227,8 @@
 					<height>35</height>
 					<label>24022</label>
 					<font>font16caps</font>
-					<textcolor>white</textcolor>
+					<textcolor>black</textcolor>
 					<focusedcolor>white</focusedcolor>
-					<shadowcolor>black</shadowcolor>
 					<align>center</align>
 					<aligny>center</aligny>
 					<texturefocus border="7">confluence/button-focus.png</texturefocus>
@@ -247,9 +246,8 @@
 					<height>35</height>
 					<label>24021</label>
 					<font>font16caps</font>
-					<textcolor>white</textcolor>
+					<textcolor>black</textcolor>
 					<focusedcolor>white</focusedcolor>
-					<shadowcolor>black</shadowcolor>
 					<align>center</align>
 					<aligny>center</aligny>
 					<texturefocus border="7">confluence/button-focus.png</texturefocus>
@@ -268,9 +266,8 @@
 					<height>35</height>
 					<label>24069</label>
 					<font>font16caps</font>
-					<textcolor>white</textcolor>
+					<textcolor>black</textcolor>
 					<focusedcolor>white</focusedcolor>
-					<shadowcolor>black</shadowcolor>
 					<align>center</align>
 					<aligny>center</aligny>
 					<texturefocus border="7">confluence/button-focus.png</texturefocus>
@@ -288,9 +285,8 @@
 					<height>35</height>
 					<label>5</label>
 					<font>font16caps</font>
-					<textcolor>white</textcolor>
+					<textcolor>black</textcolor>
 					<focusedcolor>white</focusedcolor>
-					<shadowcolor>black</shadowcolor>
 					<align>center</align>
 					<aligny>center</aligny>
 					<texturefocus border="7">confluence/button-focus.png</texturefocus>
@@ -308,9 +304,8 @@
 					<height>35</height>
 					<label>24036</label>
 					<font>font16caps</font>
-					<textcolor>white</textcolor>
+					<textcolor>black</textcolor>
 					<focusedcolor>white</focusedcolor>
-					<shadowcolor>black</shadowcolor>
 					<align>center</align>
 					<aligny>center</aligny>
 					<texturefocus border="7">confluence/button-focus.png</texturefocus>

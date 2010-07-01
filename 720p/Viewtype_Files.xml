@@ -109,19 +109,8 @@
 					<aligny>center</aligny>
 					<font>Font_Bartowski_List_Main</font>
 					<textcolor>Text-Filemode</textcolor>
-					<label>$INFO[ListItem.Title]</label>
-					<visible>!IsEmpty(ListItem.Title) + Window.IsActive(25) + !Container.Content(episodes)</visible>
-				</control>
-				<control type="label">
-					<posx>20</posx>
-					<posy>0</posy>
-					<width>680</width>
-					<height>46</height>
-					<aligny>center</aligny>
-					<font>Font_Bartowski_List_Main</font>
-					<textcolor>Text-Filemode</textcolor>
-					<label>$INFO[ListItem.Episode]$INFO[ListItem.Title,. ]</label>
-					<visible>!IsEmpty(ListItem.Title) + Window.IsActive(25) + Container.Content(episodes)</visible>
+					<label>$INFO[ListItem.Label]</label>
+					<visible>!IsEmpty(ListItem.Title) + Window.IsActive(25)</visible>
 				</control>
 				<control type="label">
 					<posx>678</posx>
@@ -235,19 +224,8 @@
 					<aligny>center</aligny>
 					<font>Font_Bartowski_List_Main</font>
 					<textcolor>ffffffff</textcolor>
-					<label>$INFO[ListItem.Title]</label>
-					<visible>!IsEmpty(ListItem.Title) + Window.IsActive(25) + !Container.Content(episodes)</visible>
-				</control>
-				<control type="label">
-					<posx>20</posx>
-					<posy>0</posy>
-					<width>680</width>
-					<height>46</height>
-					<aligny>center</aligny>
-					<font>Font_Bartowski_List_Main</font>
-					<textcolor>ffffffff</textcolor>
-					<label>$INFO[ListItem.Episode]$INFO[ListItem.Title,. ]</label>
-					<visible>!IsEmpty(ListItem.Title) + Window.IsActive(25) + Container.Content(episodes)</visible>
+					<label>$INFO[ListItem.Label]</label>
+					<visible>!IsEmpty(ListItem.Title) + Window.IsActive(25)</visible>
 				</control>
 				<control type="label">
 					<posx>20</posx>
