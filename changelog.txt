@@ -1,3 +1,6 @@
+Update 7/1/2010
+  -Little change to poster size on "Files" view
+
 Update 6/30/2010
   -Fixed Custom Playlists not showing for Horizontal Home
   -Added New View "Logo"
