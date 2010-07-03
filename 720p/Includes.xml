@@ -35,7 +35,26 @@
 	<include file="Viewtype_Logo.xml" />
 	
 	
-	
+	<include name="skin_settings_labels">
+		<width>860</width>
+		<height>34</height>
+		<textoffsetx>20</textoffsetx>
+		<font>font16caps</font>
+		<textcolor>grey2</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+		<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+	</include>
+	<include name="skin_settings_button">
+		<width>860</width>
+		<height>34</height>
+		<textoffsetx>40</textoffsetx>
+		<font>font16caps</font>
+		<textcolor>grey2</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+		<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+	</include>
 	
 	
 	<include name="poster_focusposition_dark">

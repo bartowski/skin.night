@@ -195,6 +195,30 @@
 					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Menu_Custom7_Path)],return)</onclick>
 					<visible>Skin.HasSetting(Menu_Custom7)</visible>
 				</item>
+				<item id="23">
+					<description>Custom Movie Five</description>
+					<label>$INFO[Skin.String(Menu_Custom8_Label)]</label>
+					<icon>special://skin/media/backgrounds/custom.jpg</icon>
+					<thumb>$INFO[Skin.String(Menu_Custom8_Folder)]</thumb>
+					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Menu_Custom8_Path)],return)</onclick>
+					<visible>Skin.HasSetting(Menu_Custom8)</visible>
+				</item>
+				<item id="24">
+					<description>Custom Movie Five</description>
+					<label>$INFO[Skin.String(Menu_Custom9_Label)]</label>
+					<icon>special://skin/media/backgrounds/custom.jpg</icon>
+					<thumb>$INFO[Skin.String(Menu_Custom9_Folder)]</thumb>
+					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Menu_Custom9_Path)],return)</onclick>
+					<visible>Skin.HasSetting(Menu_Custom9)</visible>
+				</item>
+				<item id="25">
+					<description>Custom Movie Five</description>
+					<label>$INFO[Skin.String(Menu_Custom10_Label)]</label>
+					<icon>special://skin/media/backgrounds/custom.jpg</icon>
+					<thumb>$INFO[Skin.String(Menu_Custom10_Folder)]</thumb>
+					<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Menu_Custom10_Path)],return)</onclick>
+					<visible>Skin.HasSetting(Menu_Custom10)</visible>
+				</item>
 				<item id="15">
 					<description>Custom Movie One</description>
 					<label>$INFO[Skin.String(Menu_Custom1_Label)]</label>
@@ -249,7 +273,7 @@
 					<icon>special://skin/media/backgrounds/games.png</icon>
 					<thumb>$INFO[Skin.String(CustomGamesFolder)]</thumb>				
 					<onclick>XBMC.ActivateWindow(MyPrograms)</onclick>
-					<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+					<visible>Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
 				</item>
 				<item id="10">
 					<description>Scripts</description>
@@ -265,7 +289,7 @@
 					<icon>special://skin/media/backgrounds/favourites.png</icon>
 					<thumb>$INFO[Skin.String(CustomfavouritesFolder)]</thumb>	
 					<onclick>XBMC.ActivateWindow(favourites)</onclick>
-					<visible>!Skin.HasSetting(HomeMenuNofavouritesButton)</visible>
+					<visible>Skin.HasSetting(HomeMenuNofavouritesButton)</visible>
 				</item>
 				<item id="14">
 					<description>weather</description>
@@ -302,7 +326,7 @@
 					<icon>special://skin/media/backgrounds/shutdown.jpg</icon>
 					<thumb>$INFO[Skin.String(Home_Custom_Back_Shutdown_Folder)]</thumb>
 					<onclick>XBMC.Shutdown()</onclick>
-					<visible>!Skin.HasSetting(HomeMenuNoShutdownButton)</visible>
+					<visible>Skin.HasSetting(HomeMenuNoShutdownButton)</visible>
 				</item>
 			</content>
 		</control>
@@ -411,16 +435,23 @@
 					<ondown>9011</ondown>
 					<itemgap>0</itemgap>
 					<visible>Container(300).HasFocus(3)</visible>
+					<control type="button" id="90110">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(Menu_Custom11_Label)]</label>
+						<onclick>$INFO[Skin.String(Menu_Custom11_Path)]</onclick>
+						<visible>Skin.HasSetting(Menu_Custom11)</visible>
+					</control>
 					<control type="button" id="90111">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>$LOCALIZE[744]</label>
-						<onclick>ActivateWindow(VideoFiles)</onclick>
+						<label>$INFO[Skin.String(Menu_Custom12_Label)]</label>
+						<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Menu_Custom12_Path)],return)</onclick>
+						<visible>Skin.HasSetting(Menu_Custom12)</visible>
 					</control>
-					<!--<control type="button" id="90112">
+					<control type="button" id="90112">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$LOCALIZE[31079]</label>
 						<onclick>ActivateWindow(VideoLibrary,MovieTitles,return)</onclick>
-					</control>-->
+					</control>
 					<control type="button" id="90113">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$LOCALIZE[135]</label>
@@ -464,6 +495,18 @@
 					<ondown>9012</ondown>
 					<itemgap>0</itemgap>
 					<visible>Container(300).HasFocus(5)</visible>
+					<control type="button" id="90128">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(Menu_Custom13_Label)]</label>
+						<onclick>$INFO[Skin.String(Menu_Custom13_Path)]</onclick>
+						<visible>Skin.HasSetting(Menu_Custom13)</visible>
+					</control>
+					<control type="button" id="90129">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(Menu_Custom13_Label)]</label>
+						<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Menu_Custom13_Path)],return)</onclick>
+						<visible>Skin.HasSetting(Menu_Custom13)</visible>
+					</control>
 					<control type="button" id="90126">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$LOCALIZE[744]</label>

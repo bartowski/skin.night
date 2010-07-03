@@ -40,7 +40,7 @@
 			<ondown>7000</ondown>
 			<preloaditems>2</preloaditems>
 			<include>Animation_BackdropFade</include>
-			<visible>Container.Content(tvshows)</visible>
+			<visible>!Skin.HasSetting(no_Logo) + Container.Content(tvshows)</visible>
 			<itemlayout width="330" height="160">
 				<control type="group">
 				<posx>0</posx>

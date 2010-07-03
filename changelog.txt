@@ -1,3 +1,12 @@
+Update 7/2/2010
+  -A good amount of cosmetic changes to Settings Section
+  -Smaller Font size, spacing in Settings, and added an indentation to the settings
+  -Also Moved Custom Home Items to its own menu, removed from "Home Options"
+  -Bumped Custom Home Playlists to 5
+  -Added ability to add 1 custom favorite and 1 custom playlist to Movies and TV submenu
+  -Shutdown, Favorites and Programs are disabled by default
+  -Missed a few of the new views not having a setting to disable them, now they do
+
 Update 7/1/2010
   -Little change to poster size on "Files" view
 

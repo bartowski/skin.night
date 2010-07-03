@@ -23,10 +23,10 @@
 				<texture>confluence/bartowski2.png</texture>
 			</control>
 			<control type="list" id="9000">
-				<posx>-70</posx>
+				<posx>-80</posx>
 				<posy>60</posy>
 				<width>260</width>
-				<height>481</height>
+				<height>600</height>
 				<onleft>9010</onleft>
 				<onright>9010</onright>
 				<onup>9000</onup>
@@ -109,6 +109,11 @@
 						<label2>33063</label2>
 						<onclick>-</onclick>
 					</item>
+					<item id="7">
+						<label>Custom Home</label>
+						<label2>33063</label2>
+						<onclick>-</onclick>
+					</item>
 					<item id="3">
 						<label>33068</label>
 						<label2>31115</label2>
@@ -161,7 +166,7 @@
 					<control type="label" id="100">
 						<width>860</width>
 						<height>45</height>
-						<font>font16caps</font>
+						<font>font13caps</font>
 						<label>$LOCALIZE[31256]</label>
 						<textcolor>mainblue</textcolor>
 						<shadowcolor>black</shadowcolor>
@@ -169,96 +174,53 @@
 						<aligny>center</aligny>
 					</control>
 					<control type="radiobutton" id="101">
-						<width>860</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
+						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31032]</label>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 						<onclick>Skin.ToggleSetting(no_clock)</onclick>
 						<selected>Skin.HasSetting(no_clock)</selected>
 					</control>
 					<control type="radiobutton" id="102">
-						<width>860</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
+						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31247]</label>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 						<onclick>Skin.ToggleSetting(library_global_clock)</onclick>
 						<selected>Skin.HasSetting(library_global_clock)</selected>
 					</control>
 					<control type="radiobutton" id="103">
-						<width>860</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
+						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31037]</label>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 						<onclick>Skin.ToggleSetting(LockViews)</onclick>
 						<selected>Skin.HasSetting(LockViews)</selected>
 					</control>
 					<control type="radiobutton" id="104">
-						<width>860</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
+						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31215]</label>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 						<onclick>Skin.ToggleSetting(SubsScript_Enable)</onclick>
 						<selected>Skin.HasSetting(SubsScript_Enable)</selected>
 					</control>
 					<control type="button" id="107">
-						<width>860</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<textoffsetx>50</textoffsetx>
+						<include>skin_settings_button</include>
 						<label> - $LOCALIZE[31216] </label>
 						<label2>[COLOR=selected]$INFO[Skin.String(SubtitleScript_Path)][/COLOR]</label2>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 						<onclick>Skin.SetAddon(SubtitleScript_Path,xbmc.python.subtitles)</onclick>
 						<enable>Skin.HasSetting(SubsScript_Enable)</enable>
 						<visible>Skin.HasSetting(SubsScript_Enable)</visible>
 					</control>
 					<control type="radiobutton" id="108">
-						<width>860</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
+						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31217]</label>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 						<onclick>Skin.ToggleSetting(hometheater)</onclick>
 						<selected>Skin.HasSetting(hometheater)</selected>
 					</control>
 					<control type="radiobutton" id="110">
-						<width>860</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
+						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31248]</label>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 						<onclick>Skin.ToggleSetting(zune_music)</onclick>
 						<selected>Skin.HasSetting(zune_music)</selected>
 					</control>
 					<control type="label" id="109">
 						<width>860</width>
 						<height>45</height>
-						<font>font16caps</font>
+						<font>font13caps</font>
 						<label>$LOCALIZE[31038]</label>
 						<textcolor>mainblue</textcolor>
 						<shadowcolor>black</shadowcolor>
@@ -266,14 +228,8 @@
 						<aligny>center</aligny>
 					</control>
 					<control type="radiobutton" id="112">
-						<width>860</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
+						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31039]</label>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 						<onclick>Skin.ToggleSetting(FanartNoVisualisation)</onclick>
 						<selected>Skin.HasSetting(FanartNoVisualisation)</selected>
 					</control>
@@ -320,14 +276,8 @@
 						<visible>!IsEmpty(Skin.String(CustomPicturesFolder)) + Skin.HasSetting(FanartNoVisualisation)</visible>
 					</control>
 					<control type="radiobutton" id="113">
-						<width>860</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
+						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31040]</label>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 						<onclick>Skin.ToggleSetting(FullscreenJukebox)</onclick>
 						<selected>Skin.HasSetting(FullscreenJukebox)</selected>
 					</control>
@@ -419,7 +369,7 @@
 					<control type="label" id="200">
 						<width>860</width>
 						<height>45</height>
-						<font>font16caps</font>
+						<font>font13caps</font>
 						<label>$LOCALIZE[31259]</label> <!--31101-->
 						<textcolor>mainblue</textcolor>
 						<shadowcolor>black</shadowcolor>
@@ -429,393 +379,40 @@
 					
 					<control type="radiobutton" id="201">
 						<description>Show Recently added info</description>
-						<width>860</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
+						<include>skin_settings_labels</include>
 						<label>31244</label>
 						<onclick>Skin.ToggleSetting(horizontal_home)</onclick>
 						<selected>Skin.HasSetting(horizontal_home)</selected>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 					</control>
 					<control type="radiobutton" id="202">
 						<description>Show Recently added info</description>
-						<width>860</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
+						<include>skin_settings_labels</include>
 						<label>31117</label>
 						<onclick>Skin.ToggleSetting(homepageHideRecentlyAdded)</onclick>
 						<selected>Skin.HasSetting(homepageHideRecentlyAdded)</selected>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 					</control>
 					
 					<!--Weather Widget-->
 						<control type="radiobutton" id="204">
 						<description>Show Weather Widget</description>
-						<width>860</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
+						<include>skin_settings_labels</include>
 						<label>31241</label>
 						<onclick>Skin.ToggleSetting(HomepageWeatherWidget)</onclick>
 						<selected>Skin.HasSetting(HomepageWeatherWidget)</selected>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 					</control>
 					<!--End Weather Widget-->
 					<control type="radiobutton" id="205">
 						<description>conditions based weather backdrop style</description>
-						<width>860</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
+						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31221]</label>
 						<onclick>Skin.ToggleSetting(conditions_weather_backdrop)</onclick>
 						<selected>Skin.HasSetting(conditions_weather_backdrop)</selected>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-					</control>
-					<control type="label" id="206">
-						<width>860</width>
-						<height>45</height>
-						<font>font16caps</font>
-						<label>$LOCALIZE[31260]</label>
-						<textcolor>mainblue</textcolor>
-						<shadowcolor>black</shadowcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-					</control>
-					<control type="radiobutton" id="207">
-						<description>custom home 1</description>
-						<width>860</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>$LOCALIZE[31261] 1</label>
-						<onfocus>Skin.SetString(MoviesCustom,1)</onfocus>
-						<onclick>Skin.ToggleSetting(Menu_Custom1)</onclick>
-						<selected>Skin.HasSetting(Menu_Custom1)</selected>
-						<enable>!Skin.HasSetting(Menu_Movies_Sub)</enable>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 					</control>
 					
-						
-						<control type="button" id="8201">
-							<description>Menu Movies Sub Custom8 Label</description>
-							<label>- Set Label</label>
-							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom1_Label)][/COLOR]</label2>
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-							<onclick>Skin.SetString(Menu_Custom1_Label)</onclick>
-							<visible>Skin.HasSetting(Menu_Custom1) + Skin.String(MoviesCustom,1)</visible>
-						</control>
-						<control type="button" id="8202">
-							<description>Menu Movies Sub Custom8 Path</description>
-							<label>- Set Favorite</label>
-							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom1_Path)][/COLOR]</label2>
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-							<onclick>Skin.SetString(Menu_Sub_Custom_Favourites_Path,Menu_Custom1_Path)</onclick>
-							<onclick>ActivateWindow(1114)</onclick>
-							<visible>Skin.HasSetting(Menu_Custom1) + Skin.String(MoviesCustom,1)</visible>
-						</control>
-					<control type="radiobutton" id="208">
-						<description>custom home 2</description>
-						<width>860</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>$LOCALIZE[31261] 2</label>
-						<onfocus>Skin.SetString(MoviesCustom,2)</onfocus>
-						<onclick>Skin.ToggleSetting(Menu_Custom2)</onclick>
-						<selected>Skin.HasSetting(Menu_Custom2)</selected>
-						<enable>!Skin.HasSetting(Menu_Movies_Sub2)</enable>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-					</control>
-					
-						
-						<control type="button" id="8203">
-							<description>Menu Movies Sub Custom8 Label</description>
-							<label>- Set Label</label>
-							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom2_Label)][/COLOR]</label2>
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-							<onclick>Skin.SetString(Menu_Custom2_Label)</onclick>
-							<visible>Skin.HasSetting(Menu_Custom2) + Skin.String(MoviesCustom,2)</visible>
-						</control>
-						<control type="button" id="8204">
-							<description>Menu Movies Sub Custom8 Path</description>
-							<label>- Set Favorite</label>
-							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom2_Path)][/COLOR]</label2>
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-							<onclick>Skin.SetString(Menu_Sub_Custom_Favourites_Path,Menu_Custom2_Path)</onclick>
-							<onclick>ActivateWindow(1114)</onclick>
-							<visible>Skin.HasSetting(Menu_Custom2) + Skin.String(MoviesCustom,2)</visible>
-						</control>
-					<control type="radiobutton" id="209">
-						<description>custom home 3</description>
-						<width>860</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>$LOCALIZE[31261] 3</label>
-						<onfocus>Skin.SetString(MoviesCustom,3)</onfocus>
-						<onclick>Skin.ToggleSetting(Menu_Custom3)</onclick>
-						<selected>Skin.HasSetting(Menu_Custom3)</selected>
-						<enable>!Skin.HasSetting(Menu_Movies_Sub3)</enable>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-					</control>
-					
-						
-						<control type="button" id="8205">
-							<description>custom home 3</description>
-							<label>- $LOCALIZE[31262]</label>
-							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom3_Label)][/COLOR]</label2>
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-							<onclick>Skin.SetString(Menu_Custom3_Label)</onclick>
-							<visible>Skin.HasSetting(Menu_Custom3) + Skin.String(MoviesCustom,3)</visible>
-						</control>
-						<control type="button" id="8206">
-							<description>custom home 3</description>
-							<label>- Set Favorite</label>
-							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom3_Path)][/COLOR]</label2>
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-							<onclick>Skin.SetString(Menu_Sub_Custom_Favourites_Path,Menu_Custom3_Path)</onclick>
-							<onclick>ActivateWindow(1114)</onclick>
-							<visible>Skin.HasSetting(Menu_Custom3) + Skin.String(MoviesCustom,3)</visible>
-						</control>
-					<control type="radiobutton" id="222">
-						<description>custom home 4</description>
-						<width>860</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>$LOCALIZE[31261] 4</label>
-						<onfocus>Skin.SetString(MoviesCustom,4)</onfocus>
-						<onclick>Skin.ToggleSetting(Menu_Custom4)</onclick>
-						<selected>Skin.HasSetting(Menu_Custom4)</selected>
-						<enable>!Skin.HasSetting(Menu_Movies_Sub4)</enable>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-					</control>
-					
-						
-						<control type="button" id="8207">
-							<description>custom home 4</description>
-							<label>- $LOCALIZE[31262]</label>
-							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom4_Label)][/COLOR]</label2>
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-							<onclick>Skin.SetString(Menu_Custom4_Label)</onclick>
-							<visible>Skin.HasSetting(Menu_Custom4) + Skin.String(MoviesCustom,4)</visible>
-						</control>
-						<control type="button" id="8208">
-							<description>custom home 4</description>
-							<label>- Set Favorite</label>
-							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom4_Path)][/COLOR]</label2>
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-							<onclick>Skin.SetString(Menu_Sub_Custom_Favourites_Path,Menu_Custom4_Path)</onclick>
-							<onclick>ActivateWindow(1114)</onclick>
-							<visible>Skin.HasSetting(Menu_Custom4) + Skin.String(MoviesCustom,4)</visible>
-						</control>
-					<control type="radiobutton" id="223">
-						<description>custom home 5</description>
-						<width>860</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>$LOCALIZE[31261] 5</label>
-						<onfocus>Skin.SetString(MoviesCustom,5)</onfocus>
-						<onclick>Skin.ToggleSetting(Menu_Custom5)</onclick>
-						<selected>Skin.HasSetting(Menu_Custom5)</selected>
-						<enable>!Skin.HasSetting(Menu_Movies_Sub5)</enable>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-					</control>
-					
-						
-						<control type="button" id="8209">
-							<description>custom home 5</description>
-							<label>- $LOCALIZE[31262]</label>
-							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom5_Label)][/COLOR]</label2>
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-							<onclick>Skin.SetString(Menu_Custom5_Label)</onclick>
-							<visible>Skin.HasSetting(Menu_Custom5) + Skin.String(MoviesCustom,5)</visible>
-						</control>
-						<control type="button" id="8210">
-							<description>custom home 5</description>
-							<label>- Set Favorite</label>
-							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom5_Path)][/COLOR]</label2>
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-							<onclick>Skin.SetString(Menu_Sub_Custom_Favourites_Path,Menu_Custom5_Path)</onclick>
-							<onclick>ActivateWindow(1114)</onclick>
-							<visible>Skin.HasSetting(Menu_Custom5) + Skin.String(MoviesCustom,5)</visible>
-						</control>
-						<control type="radiobutton" id="231">
-						<description>custom home 6</description>
-						<width>860</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>$LOCALIZE[31003] 1</label>
-						<onfocus>Skin.SetString(MoviesCustom,6)</onfocus>
-						<onclick>Skin.ToggleSetting(Menu_Custom6)</onclick>
-						<selected>Skin.HasSetting(Menu_Custom6)</selected>
-						<enable>!Skin.HasSetting(Menu_Movies_Sub6)</enable>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-					</control>
-					
-						
-						<control type="button" id="8211">
-							<description>custom home 5</description>
-							<label>- $LOCALIZE[31262]</label>
-							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom6_Label)][/COLOR]</label2>
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-							<onclick>Skin.SetString(Menu_Custom6_Label)</onclick>
-							<visible>Skin.HasSetting(Menu_Custom6) + Skin.String(MoviesCustom,6)</visible>
-						</control>
-						<control type="button" id="8212">
-							<description>custom home 5</description>
-							<label>- Set Favorite</label>
-							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom6_Path)][/COLOR]</label2>
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-							<onclick>Skin.SetFile(Menu_Custom6_Path,.xsp,special://videoplaylists)</onclick>
-							<visible>Skin.HasSetting(Menu_Custom6) + Skin.String(MoviesCustom,6)</visible>
-						</control>
-						<control type="radiobutton" id="232">
-							<description>custom home 7</description>
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<label>$LOCALIZE[31003] 2</label>
-							<onfocus>Skin.SetString(MoviesCustom,7)</onfocus>
-							<onclick>Skin.ToggleSetting(Menu_Custom7)</onclick>
-							<selected>Skin.HasSetting(Menu_Custom7)</selected>
-							<enable>!Skin.HasSetting(Menu_Movies_Sub7)</enable>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-						</control>
-					
-						
-						<control type="button" id="8213">
-							<description>custom home 7</description>
-							<label>- $LOCALIZE[31262]</label>
-							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom7_Label)][/COLOR]</label2>
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-							<onclick>Skin.SetString(Menu_Custom7_Label)</onclick>
-							<visible>Skin.HasSetting(Menu_Custom7) + Skin.String(MoviesCustom,7)</visible>
-						</control>
-						<control type="button" id="8214">
-							<description>custom home 5</description>
-							<label>- Set Favorite</label>
-							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom7_Path)][/COLOR]</label2>
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-							<onclick>Skin.SetFile(Menu_Custom7_Path,.xsp,special://videoplaylists)</onclick>
-							<visible>Skin.HasSetting(Menu_Custom7) + Skin.String(MoviesCustom,7)</visible>
-						</control>
 					<control type="label" id="210">
 						<width>860</width>
 						<height>45</height>
-						<font>font16caps</font>
+						<font>font13caps</font>
 						<label>$LOCALIZE[31042]</label>
 						<textcolor>mainblue</textcolor>
 						<shadowcolor>black</shadowcolor>
@@ -824,148 +421,82 @@
 					</control>
 					<control type="radiobutton" id="211">
 						<description>Hide Videos Button</description>
-						<width>860</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
+						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31111] - $LOCALIZE[3]</label>
 						<onclick>Skin.ToggleSetting(HomeMenuNoVideosButton)</onclick>
 						<selected>Skin.HasSetting(HomeMenuNoVideosButton)</selected>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 					</control>
 					<control type="radiobutton" id="212">
 						<description>Hide Movies Button</description>
-						<width>860</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
+						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31111] - $LOCALIZE[20342] [COLOR=grey3] ($LOCALIZE[20314])[/COLOR]</label>
 						<onclick>Skin.ToggleSetting(HomeMenuNoMoviesButton)</onclick>
 						<selected>Skin.HasSetting(HomeMenuNoMoviesButton)</selected>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 						<enable>Library.HasContent(Movies)</enable>
 					</control>
 					<control type="radiobutton" id="213">
 						<description>Hide TV Shows Button</description>
-						<width>860</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
+						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31111] - $LOCALIZE[20343] [COLOR=grey3] ($LOCALIZE[20314])[/COLOR]</label>
 						<onclick>Skin.ToggleSetting(HomeMenuNoTVShowsButton)</onclick>
 						<selected>Skin.HasSetting(HomeMenuNoTVShowsButton)</selected>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 						<enable>Library.HasContent(TVShows)</enable>
 					</control>
 					<control type="radiobutton" id="214">
 						<description>Hide Music Button</description>
-						<width>860</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
+						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31111] - $LOCALIZE[2]</label>
 						<onclick>Skin.ToggleSetting(HomeMenuNoMusicButton)</onclick>
 						<selected>Skin.HasSetting(HomeMenuNoMusicButton)</selected>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 					</control>
 					<control type="radiobutton" id="215">
 						<description>Hide Pictures Button</description>
-						<width>860</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
+						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31111] - $LOCALIZE[1]</label>
 						<onclick>Skin.ToggleSetting(HomeMenuNoPicturesButton)</onclick>
 						<selected>Skin.HasSetting(HomeMenuNoPicturesButton)</selected>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 					</control>
 					<control type="radiobutton" id="216">
 						<description>Hide Programs Button</description>
-						<width>860</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
+						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31111] - $LOCALIZE[0]</label>
 						<onclick>Skin.ToggleSetting(HomeMenuNoProgramsButton)</onclick>
-						<selected>Skin.HasSetting(HomeMenuNoProgramsButton)</selected>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+						<selected>!Skin.HasSetting(HomeMenuNoProgramsButton)</selected>
 					</control>
 					<control type="radiobutton" id="217">
 						<description>Hide Scripts Button</description>
-						<width>860</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
+						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31111] - $LOCALIZE[247]</label>
 						<onclick>Skin.ToggleSetting(HomeMenuNoScriptsButton)</onclick>
 						<selected>Skin.HasSetting(HomeMenuNoScriptsButton)</selected>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 					</control>
 					<control type="radiobutton" id="218">
 						<description>Hide Weather Button</description>
-						<width>860</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
+						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31111] - $LOCALIZE[1036]</label>
 						<onclick>Skin.ToggleSetting(HomeMenuNofavouritesButton)</onclick>
-						<selected>Skin.HasSetting(HomeMenuNofavouritesButton)</selected>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+						<selected>!Skin.HasSetting(HomeMenuNofavouritesButton)</selected>
 					</control>
 					<control type="radiobutton" id="219">
 						<description>Hide Weather Button</description>
-						<width>860</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
+						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31111] - $LOCALIZE[8]</label>
 						<onclick>Skin.ToggleSetting(HomeMenuNoWeatherButton)</onclick>
 						<selected>Skin.HasSetting(HomeMenuNoWeatherButton)</selected>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 					</control>
 					<control type="radiobutton" id="220">
 						<description>Hide Shutdown Button</description>
-						<width>860</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
+						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31111] - $LOCALIZE[13005]</label>
 						<onclick>Skin.ToggleSetting(HomeMenuNoShutdownButton)</onclick>
-						<selected>Skin.HasSetting(HomeMenuNoShutdownButton)</selected>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+						<selected>!Skin.HasSetting(HomeMenuNoShutdownButton)</selected>
 					</control>
 					<control type="radiobutton" id="230">
 						<description>Hide Settings Button</description>
-						<width>860</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
+						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31111] - $LOCALIZE[5]</label>
 						<onclick>Skin.ToggleSetting(HomeMenuNoSettingsButton)</onclick>
 						<selected>Skin.HasSetting(HomeMenuNoSettingsButton)</selected>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 					</control>
 				</control>
 				<!--<control type="scrollbar" id="60">
@@ -1140,6 +671,27 @@
 								<icon>special://skin/media/backgrounds/custom.jpg</icon>
 								<thumb>$INFO[Skin.String(Menu_Custom7_Folder)]</thumb>
 								<visible>Skin.HasSetting(Menu_Custom7)</visible>
+							</item>
+							<item id="23">
+								<label>$INFO[Skin.String(Menu_Custom8_Label)]</label>
+								<onclick>-</onclick>
+								<icon>special://skin/media/backgrounds/custom.jpg</icon>
+								<thumb>$INFO[Skin.String(Menu_Custom8_Folder)]</thumb>
+								<visible>Skin.HasSetting(Menu_Custom8)</visible>
+							</item>
+							<item id="24">
+								<label>$INFO[Skin.String(Menu_Custom9_Label)]</label>
+								<onclick>-</onclick>
+								<icon>special://skin/media/backgrounds/custom.jpg</icon>
+								<thumb>$INFO[Skin.String(Menu_Custom9_Folder)]</thumb>
+								<visible>Skin.HasSetting(Menu_Custom9)</visible>
+							</item>
+							<item id="25">
+								<label>$INFO[Skin.String(Menu_Custom10_Label)]</label>
+								<onclick>-</onclick>
+								<icon>special://skin/media/backgrounds/custom.jpg</icon>
+								<thumb>$INFO[Skin.String(Menu_Custom10_Folder)]</thumb>
+								<visible>Skin.HasSetting(Menu_Custom10)</visible>
 							</item>
 							<item id="17">
 								<label>$INFO[Skin.String(Menu_Custom3_Label)]</label>
@@ -2322,6 +1874,186 @@
 								<ondown>304</ondown>
 							</control>
 						</control>
+						<control type="group">
+							<visible>Container(9003).HasFocus(23)</visible>
+							<control type="button" id="300">
+								<description>Single Image button</description>
+								<posx>5</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31113</label>
+								<font>font12caps_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">confluence/button-nofocus.png</texturenofocus>
+								<texturefocus border="5">confluence/button-focus.png</texturefocus>
+								<onclick>Skin.SetImage(Menu_Custom8_Folder)</onclick>
+								<onleft>302</onleft>
+								<onright>301</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="301">
+								<description>Multi Image button</description>
+								<posx>190</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31114</label>
+								<font>font12caps_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">confluence/button-nofocus.png</texturenofocus>
+								<texturefocus border="5">confluence/button-focus.png</texturefocus>
+								<onclick>Skin.SetPath(Menu_Custom8_Folder)</onclick>
+								<onleft>300</onleft>
+								<onright>302</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="302">
+								<description>Default Image button</description>
+								<posx>375</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>571</label>
+								<font>font12caps_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">confluence/button-nofocus.png</texturenofocus>
+								<texturefocus border="5">confluence/button-focus.png</texturefocus>
+								<onclick>Skin.Reset(Menu_Custom8_Folder)</onclick>
+								<onleft>301</onleft>
+								<onright>300</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container(9003).HasFocus(24)</visible>
+							<control type="button" id="300">
+								<description>Single Image button</description>
+								<posx>5</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31113</label>
+								<font>font12caps_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">confluence/button-nofocus.png</texturenofocus>
+								<texturefocus border="5">confluence/button-focus.png</texturefocus>
+								<onclick>Skin.SetImage(Menu_Custom9_Folder)</onclick>
+								<onleft>302</onleft>
+								<onright>301</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="301">
+								<description>Multi Image button</description>
+								<posx>190</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31114</label>
+								<font>font12caps_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">confluence/button-nofocus.png</texturenofocus>
+								<texturefocus border="5">confluence/button-focus.png</texturefocus>
+								<onclick>Skin.SetPath(Menu_Custom9_Folder)</onclick>
+								<onleft>300</onleft>
+								<onright>302</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="302">
+								<description>Default Image button</description>
+								<posx>375</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>571</label>
+								<font>font12caps_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">confluence/button-nofocus.png</texturenofocus>
+								<texturefocus border="5">confluence/button-focus.png</texturefocus>
+								<onclick>Skin.Reset(Menu_Custom9_Folder)</onclick>
+								<onleft>301</onleft>
+								<onright>300</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container(9003).HasFocus(25)</visible>
+							<control type="button" id="300">
+								<description>Single Image button</description>
+								<posx>5</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31113</label>
+								<font>font12caps_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">confluence/button-nofocus.png</texturenofocus>
+								<texturefocus border="5">confluence/button-focus.png</texturefocus>
+								<onclick>Skin.SetImage(Menu_Custom10_Folder)</onclick>
+								<onleft>302</onleft>
+								<onright>301</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="301">
+								<description>Multi Image button</description>
+								<posx>190</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31114</label>
+								<font>font12caps_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">confluence/button-nofocus.png</texturenofocus>
+								<texturefocus border="5">confluence/button-focus.png</texturefocus>
+								<onclick>Skin.SetPath(Menu_Custom10_Folder)</onclick>
+								<onleft>300</onleft>
+								<onright>302</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="302">
+								<description>Default Image button</description>
+								<posx>375</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>571</label>
+								<font>font12caps_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">confluence/button-nofocus.png</texturenofocus>
+								<texturefocus border="5">confluence/button-focus.png</texturefocus>
+								<onclick>Skin.Reset(Menu_Custom10_Folder)</onclick>
+								<onleft>301</onleft>
+								<onright>300</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+						</control>
 					</control>
 					<control type="multiimage">
 						<posx>95</posx>
@@ -2370,235 +2102,128 @@
 						</control>
 
 						<control type="radiobutton" id="401">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
-							<label>$LOCALIZE[31119] [B]1[/B]</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+							<include>skin_settings_labels</include>
+							<label>$LOCALIZE[31119] 1</label>
 							<onclick>Skin.ToggleSetting(HomeScriptButton1)</onclick>
 							<selected>Skin.HasSetting(HomeScriptButton1)</selected>
 						</control>
 						<control type="button" id="402">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
+							<include>skin_settings_button</include>
 							<label> - $LOCALIZE[31120]</label>
 							<label2>[COLOR=selected]$INFO[Skin.String(HomeScriptButton1_label)][/COLOR]</label2>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>Skin.SetString(HomeScriptButton1_label)</onclick>
 							<visible>Skin.HasSetting(HomeScriptButton1)</visible>
 						</control>
 						<control type="button" id="403">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
+							<include>skin_settings_button</include>
 							<label> - $LOCALIZE[31121]</label>
 							<label2>[COLOR=selected]$INFO[Skin.String(HomeScriptButton1_Path)][/COLOR]</label2>
 							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>Skin.SetAddon(HomeScriptButton1_Path,xbmc.python.script)</onclick>
 							<visible>Skin.HasSetting(HomeScriptButton1)</visible>
 						</control>
 
 						<control type="radiobutton" id="404">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
-							<label>$LOCALIZE[31119] [B]2[/B]</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+							<include>skin_settings_labels</include>
+							<label>$LOCALIZE[31119] 2</label>
 							<onclick>Skin.ToggleSetting(HomeScriptButton2)</onclick>
 							<selected>Skin.HasSetting(HomeScriptButton2)</selected>
 						</control>
 						<control type="button" id="405">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
+							<include>skin_settings_button</include>
 							<label> - $LOCALIZE[31120]</label>
 							<label2>[COLOR=selected]$INFO[Skin.String(HomeScriptButton2_label)][/COLOR]</label2>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>Skin.SetString(HomeScriptButton2_label)</onclick>
 							<visible>Skin.HasSetting(HomeScriptButton2)</visible>
 						</control>
 						<control type="button" id="406">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
+							<include>skin_settings_button</include>
 							<label> - $LOCALIZE[31121]</label>
 							<label2>[COLOR=selected]$INFO[Skin.String(HomeScriptButton2_Path)][/COLOR]</label2>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>Skin.SetAddon(HomeScriptButton2_Path,xbmc.python.script)</onclick>
 							<visible>Skin.HasSetting(HomeScriptButton2)</visible>
 						</control>
 
 						<control type="radiobutton" id="407">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
-							<label>$LOCALIZE[31119] [B]3[/B]</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+							<include>skin_settings_labels</include>
+							<label>$LOCALIZE[31119] 3</label>
 							<onclick>Skin.ToggleSetting(HomeScriptButton3)</onclick>
 							<selected>Skin.HasSetting(HomeScriptButton3)</selected>
 						</control>
 						<control type="button" id="408">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
+							<include>skin_settings_button</include>
 							<label> - $LOCALIZE[31120]</label>
 							<label2>[COLOR=selected]$INFO[Skin.String(HomeScriptButton3_label)][/COLOR]</label2>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>Skin.SetString(HomeScriptButton3_label)</onclick>
 							<visible>Skin.HasSetting(HomeScriptButton3)</visible>
 						</control>
 						<control type="button" id="409">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
+							<include>skin_settings_button</include>
 							<label> - $LOCALIZE[31121]</label>
 							<label2>[COLOR=selected]$INFO[Skin.String(HomeScriptButton3_Path)][/COLOR]</label2>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>Skin.SetAddon(HomeScriptButton3_Path,xbmc.python.script)</onclick>
 							<visible>Skin.HasSetting(HomeScriptButton3)</visible>
 						</control>
 
 						<control type="radiobutton" id="410">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
-							<label>$LOCALIZE[31119] [B]4[/B]</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+							<include>skin_settings_labels</include>
+							<label>$LOCALIZE[31119] 4</label>
 							<onclick>Skin.ToggleSetting(HomeScriptButton4)</onclick>
 							<selected>Skin.HasSetting(HomeScriptButton4)</selected>
 						</control>
 						<control type="button" id="411">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
+							<include>skin_settings_button</include>
 							<label> - $LOCALIZE[31120]</label>
 							<label2>[COLOR=selected]$INFO[Skin.String(HomeScriptButton4_label)][/COLOR]</label2>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>Skin.SetString(HomeScriptButton4_label)</onclick>
 							<visible>Skin.HasSetting(HomeScriptButton4)</visible>
 						</control>
 						<control type="button" id="412">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
+							<include>skin_settings_button</include>
 							<label> - $LOCALIZE[31121]</label>
 							<label2>[COLOR=selected]$INFO[Skin.String(HomeScriptButton4_Path)][/COLOR]</label2>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>Skin.SetAddon(HomeScriptButton4_Path,xbmc.python.script)</onclick>
 							<visible>Skin.HasSetting(HomeScriptButton4)</visible>
 						</control>
 
 						<control type="radiobutton" id="413">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
-							<label>$LOCALIZE[31119] [B]5[/B]</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+							<include>skin_settings_labels</include>
+							<label>$LOCALIZE[31119] 5</label>
 							<onclick>Skin.ToggleSetting(HomeScriptButton5)</onclick>
 							<selected>Skin.HasSetting(HomeScriptButton5)</selected>
 						</control>
 						<control type="button" id="414">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
+							<include>skin_settings_button</include>
 							<label> - $LOCALIZE[31120]</label>
 							<label2>[COLOR=selected]$INFO[Skin.String(HomeScriptButton5_label)][/COLOR]</label2>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>Skin.SetString(HomeScriptButton5_label)</onclick>
 							<visible>Skin.HasSetting(HomeScriptButton5)</visible>
 						</control>
 						<control type="button" id="415">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
+							<include>skin_settings_button</include>
 							<label> - $LOCALIZE[31121]</label>
 							<label2>[COLOR=selected]$INFO[Skin.String(HomeScriptButton5_Path)][/COLOR]</label2>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>Skin.SetAddon(HomeScriptButton5_Path,xbmc.python.script)</onclick>
 							<visible>Skin.HasSetting(HomeScriptButton5)</visible>
 						</control>
 
 						<control type="radiobutton" id="416">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
-							<label>$LOCALIZE[31119] [B]6[/B]</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+							<include>skin_settings_labels</include>
+							<label>$LOCALIZE[31119] 6</label>
 							<onclick>Skin.ToggleSetting(HomeScriptButton6)</onclick>
 							<selected>Skin.HasSetting(HomeScriptButton6)</selected>
 						</control>
 						<control type="button" id="417">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
+							<include>skin_settings_button</include>
 							<label> - $LOCALIZE[31120]</label>
 							<label2>[COLOR=selected]$INFO[Skin.String(HomeScriptButton6_label)][/COLOR]</label2>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>Skin.SetString(HomeScriptButton6_label)</onclick>
 							<visible>Skin.HasSetting(HomeScriptButton6)</visible>
 						</control>
 						<control type="button" id="418">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
+							<include>skin_settings_button</include>
 							<label> - $LOCALIZE[31121]</label>
 							<label2>[COLOR=selected]$INFO[Skin.String(HomeScriptButton6_Path)][/COLOR]</label2>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>Skin.SetAddon(HomeScriptButton7_Path,xbmc.python.script)</onclick>
 							<visible>Skin.HasSetting(HomeScriptButton6)</visible>
 						</control>
@@ -2723,7 +2348,7 @@
 						<control type="label" id="500">
 							<width>860</width>
 							<height>45</height>
-							<font>font16caps</font>
+							<font>font13caps</font>
 							<label>$LOCALIZE[31043]</label>
 							<textcolor>mainblue</textcolor>
 							<shadowcolor>black</shadowcolor>
@@ -2732,88 +2357,46 @@
 						</control>
 
 						<control type="radiobutton" id="501"> 
-                            <width>860</width> 
-                            <height>40</height> 
-                            <font>Font_KeyboardKeys</font> 
+                            <include>skin_settings_labels</include> 
                             <label>$LOCALIZE[31044]</label> 
-                            <textcolor>grey2</textcolor> 
-                            <focusedcolor>white</focusedcolor> 
-                            <texturefocus>confluence/MenuItemFO1.png</texturefocus> 
-                            <texturenofocus>confluence/MenuItemNF.png</texturenofocus> 
-                            <onclick>Skin.ToggleSetting(TVPosters)</onclick> 
+							<onclick>Skin.ToggleSetting(TVPosters)</onclick> 
                             <onclick>Skin.Reset(TVBanners)</onclick> 
                             <selected>Skin.HasSetting(TVPosters)</selected> 
                         </control> 
                         <control type="radiobutton" id="502"> 
-                            <width>860</width> 
-                            <height>40</height> 
-                            <font>Font_KeyboardKeys</font> 
+                            <include>skin_settings_labels</include>
                             <label>$LOCALIZE[31045]</label> 
-                            <textcolor>grey2</textcolor> 
-                            <focusedcolor>white</focusedcolor> 
-                            <texturefocus>confluence/MenuItemFO1.png</texturefocus> 
-                            <texturenofocus>confluence/MenuItemNF.png</texturenofocus> 
                             <onclick>Skin.ToggleSetting(TVBanners)</onclick> 
                             <onclick>Skin.Reset(TVPosters)</onclick> 
                             <selected>Skin.HasSetting(TVBanners)</selected> 
                         </control> 
 						<control type="radiobutton" id="503">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
+							<include>skin_settings_labels</include>
 							<label>$LOCALIZE[31033]</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>Skin.ToggleSetting(autoscroll)</onclick>
 							<selected>Skin.HasSetting(autoscroll)</selected>
 						</control>
 						<control type="radiobutton" id="504">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
+							<include>skin_settings_labels</include>
 							<label>$LOCALIZE[31034]</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>Skin.ToggleSetting(no_media_flags)</onclick>
 							<selected>Skin.HasSetting(no_media_flags)</selected>
 						</control>
 						<control type="radiobutton" id="505">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
+							<include>skin_settings_labels</include>
 							<label>$LOCALIZE[31035]</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>Skin.ToggleSetting(movieoverlays)</onclick>
 							<selected>Skin.HasSetting(movieoverlays)</selected>
 						</control>
 						<control type="radiobutton" id="506">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
+							<include>skin_settings_labels</include>
 							<label>$LOCALIZE[31036]</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>Skin.ToggleSetting(tvoverlays)</onclick>
 							<selected>Skin.HasSetting(tvoverlays)</selected>
 						</control>
 						<control type="radiobutton" id="511">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
+							<include>skin_settings_labels</include>
 							<label>$LOCALIZE[31266]</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>Skin.ToggleSetting(extrafanart)</onclick>
 							<selected>Skin.HasSetting(extrafanart)</selected>
 						</control>
@@ -2831,7 +2414,7 @@
 						<control type="label" id="507">
 							<width>860</width>
 							<height>45</height>
-							<font>font16caps</font>
+							<font>font13caps</font>
 							<label></label>
 							<textcolor>mainblue</textcolor>
 							<shadowcolor>black</shadowcolor>
@@ -2841,7 +2424,7 @@
 						<control type="label" id="508">
 							<width>860</width>
 							<height>45</height>
-							<font>font16caps</font>
+							<font>font13caps</font>
 							<label>$LOCALIZE[31263]</label>
 							<textcolor>mainblue</textcolor>
 							<shadowcolor>black</shadowcolor>
@@ -2879,7 +2462,7 @@
 						<posx>290</posx>
 						<posy>60</posy>
 						<width>860</width>
-						<height>600</height>
+						<height>610</height>
 						<itemgap>-1</itemgap>
 						<pagecontrol>61</pagecontrol>
 						<onleft>9000</onleft>
@@ -2889,7 +2472,7 @@
 						<control type="label" id="600">
 							<width>860</width>
 							<height>45</height>
-							<font>font16caps</font>
+							<font>font13caps</font>
 							<label>$LOCALIZE[31047]</label>
 							<textcolor>mainblue</textcolor>
 							<shadowcolor>black</shadowcolor>
@@ -2898,196 +2481,551 @@
 						</control>
 
 						<control type="radiobutton" id="601">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
+							<include>skin_settings_labels</include>
 							<label>"$LOCALIZE[31048]"</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>Skin.ToggleSetting(no_16x9)</onclick>
 							<selected>Skin.HasSetting(no_16x9)</selected>
 						</control>
 						<control type="radiobutton" id="602">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
+							<include>skin_settings_labels</include>
 							<label>"$LOCALIZE[31049]"</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>Skin.ToggleSetting(no_BannerPanel)</onclick>
 							<selected>Skin.HasSetting(no_BannerPanel)</selected>
 						</control>
 						<control type="radiobutton" id="603">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
+							<include>skin_settings_labels</include>
 							<label>"$LOCALIZE[20359]"</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>Skin.ToggleSetting(no_Episode)</onclick>
 							<selected>Skin.HasSetting(no_Episode)</selected>
 						</control>
 						<control type="radiobutton" id="604">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
+							<include>skin_settings_labels</include>
 							<label>"$LOCALIZE[31051]"</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>Skin.ToggleSetting(no_Panel)</onclick>
 							<selected>Skin.HasSetting(no_Panel)</selected>
 						</control>
 						<control type="radiobutton" id="605">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
+							<include>skin_settings_labels</include>
 							<label>"$LOCALIZE[31052]"</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>Skin.ToggleSetting(no_Landscape)</onclick>
 							<selected>Skin.HasSetting(no_Landscape)</selected>
 						</control>no_LandPanel
 						<control type="radiobutton" id="606">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
+							<include>skin_settings_labels</include>
 							<label>"$LOCALIZE[31053]"</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>Skin.ToggleSetting(no_3DLandscape)</onclick>
 							<selected>Skin.HasSetting(no_3DLandscape)</selected>
 						</control>
 						<control type="radiobutton" id="607">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
+							<include>skin_settings_labels</include>
 							<label>"$LOCALIZE[31054]"</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>Skin.ToggleSetting(no_LandPanel)</onclick>
 							<selected>Skin.HasSetting(no_LandPanel)</selected>
 						</control>
 						<control type="radiobutton" id="608">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
+							<include>skin_settings_labels</include>
 							<label>"$LOCALIZE[31062]"</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>Skin.ToggleSetting(no_Poster)</onclick>
 							<selected>Skin.HasSetting(no_Poster)</selected>
 						</control>
 						<control type="radiobutton" id="609">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
+							<include>skin_settings_labels</include>
 							<label>"$LOCALIZE[31063]"</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>Skin.ToggleSetting(no_Showcase)</onclick>
 							<selected>Skin.HasSetting(no_Showcase)</selected>
 						</control>
 						<control type="radiobutton" id="610">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
+							<include>skin_settings_labels</include>
 							<label>"$LOCALIZE[31064]"</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>Skin.ToggleSetting(no_Wall)</onclick>
 							<selected>Skin.HasSetting(no_Wall)</selected>
 						</control>
 						<control type="radiobutton" id="611">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
+							<include>skin_settings_labels</include>
 							<label>"$LOCALIZE[31213]"</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>Skin.ToggleSetting(no_WallPanel)</onclick>
 							<selected>Skin.HasSetting(no_WallPanel)</selected>
 						</control>
 						<control type="radiobutton" id="612">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
+							<include>skin_settings_labels</include>
 							<label>"$LOCALIZE[31245]"</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>Skin.ToggleSetting(no_Landscape_Fanart)</onclick>
 							<selected>Skin.HasSetting(no_Landscape_Fanart)</selected>
 						</control>
-						<control type="label" id="613">
+						<control type="radiobutton" id="613">
+							<include>skin_settings_labels</include>
+							<label>"$LOCALIZE[31268]"</label>
+							<onclick>Skin.ToggleSetting(no_Logo)</onclick>
+							<selected>Skin.HasSetting(no_Logo)</selected>
+						</control>
+						<control type="radiobutton" id="614">
+							<include>skin_settings_labels</include>
+							<label>"$LOCALIZE[31250]"</label>
+							<onclick>Skin.ToggleSetting(no_3dbanner)</onclick>
+							<selected>Skin.HasSetting(no_3dbanner)</selected>
+						</control>
+						<control type="label" id="615">
 							<width>860</width>
 							<height>45</height>
-							<font>font16caps</font>
+							<font>font13caps</font>
 							<label>"$LOCALIZE[31065]"</label>
 							<textcolor>mainblue</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 						</control>
-						<control type="radiobutton" id="614">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
+						<control type="radiobutton" id="616">
+							<include>skin_settings_labels</include>
 							<label>"$LOCALIZE[31066]"</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>Skin.ToggleSetting(no_Jukebox)</onclick>
 							<selected>Skin.HasSetting(no_Jukebox)</selected>
 						</control>
-						<control type="radiobutton" id="615">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
+						<control type="radiobutton" id="617">
+							<include>skin_settings_labels</include>
 							<label>"$LOCALIZE[31063]"</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>Skin.ToggleSetting(no_MusicShowcase)</onclick>
 							<selected>Skin.HasSetting(no_MusicShowcase)</selected>
 						</control>
-						<control type="radiobutton" id="616">
-							<width>860</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
+						<control type="radiobutton" id="618">
+							<include>skin_settings_labels</include>
 							<label>"$LOCALIZE[31064]"</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>Skin.ToggleSetting(no_MusicWall)</onclick>
 							<selected>Skin.HasSetting(no_MusicWall)</selected>
 						</control>
+						<control type="radiobutton" id="619">
+							<include>skin_settings_labels</include>
+							<label>"Shelf"</label>
+							<onclick>Skin.ToggleSetting(no_Shelf)</onclick>
+							<selected>Skin.HasSetting(no_Shelf)</selected>
+						</control>
 					</control>
+				</control>
+				<control type="group">
+					<control type="grouplist" id="9007">
+						<visible>Container(9000).Hasfocus(7)</visible>
+						<posx>290</posx>
+						<posy>60</posy>
+						<width>860</width>
+						<height>600</height>
+						<itemgap>-1</itemgap>
+						<pagecontrol>61</pagecontrol>
+						<onleft>9000</onleft>
+						<onright>61</onright>
+						<onup>9007</onup>
+						<ondown>9007</ondown>
+						<control type="label" id="701">
+							<width>860</width>
+							<height>45</height>
+							<font>font13caps</font>
+							<label>$LOCALIZE[31260]</label>
+							<textcolor>mainblue</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+						</control>
+						<control type="radiobutton" id="702">
+							<description>custom home 1</description>
+							<include>skin_settings_labels</include>
+							<label>$LOCALIZE[31261] 1</label>
+							<onfocus>Skin.SetString(MoviesCustom,1)</onfocus>
+							<onclick>Skin.ToggleSetting(Menu_Custom1)</onclick>
+							<selected>Skin.HasSetting(Menu_Custom1)</selected>
+							<enable>!Skin.HasSetting(Menu_Movies_Sub)</enable>
+						</control>
+						
+							
+							<control type="button" id="8201">
+								<description>Menu Movies Sub Custom8 Label</description>
+								<label>- Set Label</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom1_Label)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetString(Menu_Custom1_Label)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom1) + Skin.String(MoviesCustom,1)</visible>
+							</control>
+							<control type="button" id="8202">
+								<description>Menu Movies Sub Custom8 Path</description>
+								<label>- Set Favorite</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom1_Path)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetString(Menu_Sub_Custom_Favourites_Path,Menu_Custom1_Path)</onclick>
+								<onclick>ActivateWindow(1114)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom1) + Skin.String(MoviesCustom,1)</visible>
+							</control>
+						<control type="radiobutton" id="703">
+							<description>custom home 2</description>
+							<include>skin_settings_labels</include>
+							<label>$LOCALIZE[31261] 2</label>
+							<onfocus>Skin.SetString(MoviesCustom,2)</onfocus>
+							<onclick>Skin.ToggleSetting(Menu_Custom2)</onclick>
+							<selected>Skin.HasSetting(Menu_Custom2)</selected>
+							<enable>!Skin.HasSetting(Menu_Movies_Sub2)</enable>
+						</control>
+						
+							
+							<control type="button" id="8203">
+								<description>Menu Movies Sub Custom8 Label</description>
+								<label>- Set Label</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom2_Label)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetString(Menu_Custom2_Label)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom2) + Skin.String(MoviesCustom,2)</visible>
+							</control>
+							<control type="button" id="8204">
+								<description>Menu Movies Sub Custom8 Path</description>
+								<label>- Set Favorite</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom2_Path)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetString(Menu_Sub_Custom_Favourites_Path,Menu_Custom2_Path)</onclick>
+								<onclick>ActivateWindow(1114)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom2) + Skin.String(MoviesCustom,2)</visible>
+							</control>
+						<control type="radiobutton" id="704">
+							<description>custom home 3</description>
+							<include>skin_settings_labels</include>
+							<label>$LOCALIZE[31261] 3</label>
+							<onfocus>Skin.SetString(MoviesCustom,3)</onfocus>
+							<onclick>Skin.ToggleSetting(Menu_Custom3)</onclick>
+							<selected>Skin.HasSetting(Menu_Custom3)</selected>
+							<enable>!Skin.HasSetting(Menu_Movies_Sub3)</enable>
+						</control>
+						
+							
+							<control type="button" id="8205">
+								<description>custom home 3</description>
+								<label>- $LOCALIZE[31262]</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom3_Label)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetString(Menu_Custom3_Label)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom3) + Skin.String(MoviesCustom,3)</visible>
+							</control>
+							<control type="button" id="8206">
+								<description>custom home 3</description>
+								<label>- Set Favorite</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom3_Path)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetString(Menu_Sub_Custom_Favourites_Path,Menu_Custom3_Path)</onclick>
+								<onclick>ActivateWindow(1114)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom3) + Skin.String(MoviesCustom,3)</visible>
+							</control>
+						<control type="radiobutton" id="705">
+							<description>custom home 4</description>
+							<include>skin_settings_labels</include>
+							<label>$LOCALIZE[31261] 4</label>
+							<onfocus>Skin.SetString(MoviesCustom,4)</onfocus>
+							<onclick>Skin.ToggleSetting(Menu_Custom4)</onclick>
+							<selected>Skin.HasSetting(Menu_Custom4)</selected>
+							<enable>!Skin.HasSetting(Menu_Movies_Sub4)</enable>
+						</control>
+						
+							
+							<control type="button" id="8207">
+								<description>custom home 4</description>
+								<label>- $LOCALIZE[31262]</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom4_Label)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetString(Menu_Custom4_Label)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom4) + Skin.String(MoviesCustom,4)</visible>
+							</control>
+							<control type="button" id="8208">
+								<description>custom home 4</description>
+								<label>- Set Favorite</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom4_Path)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetString(Menu_Sub_Custom_Favourites_Path,Menu_Custom4_Path)</onclick>
+								<onclick>ActivateWindow(1114)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom4) + Skin.String(MoviesCustom,4)</visible>
+							</control>
+						<control type="radiobutton" id="706">
+							<description>custom home 5</description>
+							<include>skin_settings_labels</include>
+							<label>$LOCALIZE[31261] 5</label>
+							<onfocus>Skin.SetString(MoviesCustom,5)</onfocus>
+							<onclick>Skin.ToggleSetting(Menu_Custom5)</onclick>
+							<selected>Skin.HasSetting(Menu_Custom5)</selected>
+							<enable>!Skin.HasSetting(Menu_Movies_Sub5)</enable>
+						</control>
+						
+							
+							<control type="button" id="8209">
+								<description>custom home 5</description>
+								<label>- $LOCALIZE[31262]</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom5_Label)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetString(Menu_Custom5_Label)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom5) + Skin.String(MoviesCustom,5)</visible>
+							</control>
+							<control type="button" id="8210">
+								<description>custom home 5</description>
+								<label>- Set Favorite</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom5_Path)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetString(Menu_Sub_Custom_Favourites_Path,Menu_Custom5_Path)</onclick>
+								<onclick>ActivateWindow(1114)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom5) + Skin.String(MoviesCustom,5)</visible>
+							</control>
+							<control type="radiobutton" id="707">
+								<description>custom home 6</description>
+								<include>skin_settings_labels</include>
+								<focusedcolor>white</focusedcolor>
+								<label>$LOCALIZE[31003] 1</label>
+								<onfocus>Skin.SetString(MoviesCustom,6)</onfocus>
+								<onclick>Skin.ToggleSetting(Menu_Custom6)</onclick>
+								<selected>Skin.HasSetting(Menu_Custom6)</selected>
+								<enable>!Skin.HasSetting(Menu_Movies_Sub6)</enable>
+							</control>
+						
+							
+							<control type="button" id="8211">
+								<description>custom home 6</description>
+								<label>- $LOCALIZE[31262]</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom6_Label)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetString(Menu_Custom6_Label)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom6) + Skin.String(MoviesCustom,6)</visible>
+							</control>
+							<control type="button" id="8212">
+								<description>custom home 6</description>
+								<label>- Set Playlist</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom6_Path)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetFile(Menu_Custom6_Path,.xsp,special://videoplaylists)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom6) + Skin.String(MoviesCustom,6)</visible>
+							</control>
+							<control type="radiobutton" id="708">
+								<description>custom home 7</description>
+								<include>skin_settings_labels</include>
+								<label>$LOCALIZE[31003] 2</label>
+								<onfocus>Skin.SetString(MoviesCustom,7)</onfocus>
+								<onclick>Skin.ToggleSetting(Menu_Custom7)</onclick>
+								<selected>Skin.HasSetting(Menu_Custom7)</selected>
+								<enable>!Skin.HasSetting(Menu_Movies_Sub7)</enable>
+							</control>
+						
+							
+							<control type="button" id="8213">
+								<description>custom home 7</description>
+								<label>- $LOCALIZE[31262]</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom7_Label)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetString(Menu_Custom7_Label)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom7) + Skin.String(MoviesCustom,7)</visible>
+							</control>
+							<control type="button" id="8214">
+								<description>custom home 7</description>
+								<label>- Set Playlist</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom7_Path)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetFile(Menu_Custom7_Path,.xsp,special://videoplaylists)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom7) + Skin.String(MoviesCustom,7)</visible>
+							</control>
+							<control type="radiobutton" id="709">
+								<description>custom home 8</description>
+								<include>skin_settings_labels</include>
+								<label>$LOCALIZE[31003] 3</label>
+								<onfocus>Skin.SetString(MoviesCustom,8)</onfocus>
+								<onclick>Skin.ToggleSetting(Menu_Custom8)</onclick>
+								<selected>Skin.HasSetting(Menu_Custom8)</selected>
+								<enable>!Skin.HasSetting(Menu_Movies_Sub8)</enable>
+							</control>
+						
+							
+							<control type="button" id="8215">
+								<description>custom home 8</description>
+								<label>- $LOCALIZE[31262]</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom8_Label)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetString(Menu_Custom8_Label)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom8) + Skin.String(MoviesCustom,8)</visible>
+							</control>
+							<control type="button" id="8216">
+								<description>custom home 8</description>
+								<label>- Set Playlist</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom8_Path)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetFile(Menu_Custom8_Path,.xsp,special://videoplaylists)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom8) + Skin.String(MoviesCustom,8)</visible>
+							</control>
+							
+							<control type="radiobutton" id="710">
+								<description>custom home 9</description>
+								<include>skin_settings_labels</include>
+								<label>$LOCALIZE[31003] 4</label>
+								<onfocus>Skin.SetString(MoviesCustom,9)</onfocus>
+								<onclick>Skin.ToggleSetting(Menu_Custom9)</onclick>
+								<selected>Skin.HasSetting(Menu_Custom9)</selected>
+								<enable>!Skin.HasSetting(Menu_Movies_Sub9)</enable>
+							</control>
+							<control type="button" id="8217">
+								<description>custom home 9</description>
+								<label>- $LOCALIZE[31262]</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom9_Label)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetString(Menu_Custom9_Label)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom9) + Skin.String(MoviesCustom,9)</visible>
+							</control>
+							<control type="button" id="8218">
+								<description>custom home 9</description>
+								<label>- Set Playlist</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom9_Path)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetFile(Menu_Custom9_Path,.xsp,special://videoplaylists)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom9) + Skin.String(MoviesCustom,9)</visible>
+							</control>
+							
+							<control type="radiobutton" id="711">
+								<description>custom home 10</description>
+								<include>skin_settings_labels</include>
+								<label>$LOCALIZE[31003] 5</label>
+								<onfocus>Skin.SetString(MoviesCustom,10)</onfocus>
+								<onclick>Skin.ToggleSetting(Menu_Custom10)</onclick>
+								<selected>Skin.HasSetting(Menu_Custom10)</selected>
+								<enable>!Skin.HasSetting(Menu_Movies_Sub10)</enable>
+							</control>
+							<control type="button" id="8219">
+								<description>custom home 10</description>
+								<label>- $LOCALIZE[31262]</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom10_Label)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetString(Menu_Custom10_Label)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom10) + Skin.String(MoviesCustom,10)</visible>
+							</control>
+							<control type="button" id="8220">
+								<description>custom home 10</description>
+								<label>- Set Playlist</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom10_Path)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetFile(Menu_Custom10_Path,.xsp,special://videoplaylists)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom10) + Skin.String(MoviesCustom,10)</visible>
+							</control>
+							
+							<control type="label" id="712">
+								<width>860</width>
+								<height>45</height>
+								<font>font13caps</font>
+								<label>Custom Movies Submenus</label>
+								<textcolor>mainblue</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<align>left</align>
+								<aligny>center</aligny>
+							</control>
+							
+							<control type="radiobutton" id="713">
+								<description>custom home 11</description>
+								<include>skin_settings_labels</include>
+								<label>Set Custom Submenu Favorite 1</label>
+								<onfocus>Skin.SetString(MoviesCustom,11)</onfocus>
+								<onclick>Skin.ToggleSetting(Menu_Custom11)</onclick>
+								<selected>Skin.HasSetting(Menu_Custom11)</selected>
+								<enable>!Skin.HasSetting(Menu_Movies_Sub11)</enable>
+							</control>
+							<control type="button" id="8221">
+								<description>Menu Movies Sub Custom11 Label</description>
+								<label>- Set Label</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom11_Label)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetString(Menu_Custom11_Label)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom11) + Skin.String(MoviesCustom,11)</visible>
+							</control>
+							<control type="button" id="8222">
+								<description>Menu Movies Sub Custom11 Path</description>
+								<label>- Set Favorite</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom11_Path)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetString(Menu_Sub_Custom_Favourites_Path,Menu_Custom11_Path)</onclick>
+								<onclick>ActivateWindow(1114)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom11) + Skin.String(MoviesCustom,11)</visible>
+							</control>
+							
+							<control type="radiobutton" id="714">
+								<description>custom home 12</description>
+								<include>skin_settings_labels</include>
+								<label>Set Custom Submenu Playlist 1</label>
+								<onfocus>Skin.SetString(MoviesCustom,12)</onfocus>
+								<onclick>Skin.ToggleSetting(Menu_Custom12)</onclick>
+								<selected>Skin.HasSetting(Menu_Custom12)</selected>
+								<enable>!Skin.HasSetting(Menu_Movies_Sub12)</enable>
+							</control>
+							<control type="button" id="8223">
+								<description>custom home 10</description>
+								<label>- $LOCALIZE[31262]</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom12_Label)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetString(Menu_Custom12_Label)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom12) + Skin.String(MoviesCustom,12)</visible>
+							</control>
+							<control type="button" id="8224">
+								<description>custom home 12</description>
+								<label></label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom12_Path)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetFile(Menu_Custom12_Path,.xsp,special://videoplaylists)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom12) + Skin.String(MoviesCustom,12)</visible>
+							</control>
+							
+							<control type="label" id="715">
+								<width>860</width>
+								<height>45</height>
+								<font>font13caps</font>
+								<label>Custom TV Show Submenus</label>
+								<textcolor>mainblue</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<align>left</align>
+								<aligny>center</aligny>
+							</control>
+							
+							<control type="radiobutton" id="716">
+								<description>custom home 12</description>
+								<include>skin_settings_labels</include>
+								<label>Set Custom Submenu Favorite 1</label>
+								<onfocus>Skin.SetString(MoviesCustom,12)</onfocus>
+								<onclick>Skin.ToggleSetting(Menu_Custom12)</onclick>
+								<selected>Skin.HasSetting(Menu_Custom12)</selected>
+								<enable>!Skin.HasSetting(Menu_Movies_Sub12)</enable>
+							</control>
+							<control type="button" id="8225">
+								<description>Menu Movies Sub Custom12 Label</description>
+								<label>- Set Label</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom12_Label)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetString(Menu_Custom12_Label)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom12) + Skin.String(MoviesCustom,12)</visible>
+							</control>
+							<control type="button" id="8226">
+								<description>Menu Movies Sub Custom12 Path</description>
+								<label>- Set Favorite</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom12_Path)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetString(Menu_Sub_Custom_Favourites_Path,Menu_Custom12_Path)</onclick>
+								<onclick>ActivateWindow(1114)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom12) + Skin.String(MoviesCustom,12)</visible>
+							</control>
+							
+							<control type="radiobutton" id="717">
+								<description>custom home 13</description>
+								<include>skin_settings_labels</include>
+								<label>Set Custom Submenu Playlist 1</label>
+								<onfocus>Skin.SetString(MoviesCustom,12)</onfocus>
+								<onclick>Skin.ToggleSetting(Menu_Custom12)</onclick>
+								<selected>Skin.HasSetting(Menu_Custom12)</selected>
+								<enable>!Skin.HasSetting(Menu_Movies_Sub12)</enable>
+							</control>
+							<control type="button" id="8227">
+								<description>custom home 13</description>
+								<label>- $LOCALIZE[31262]</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom13_Label)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetString(Menu_Custom13_Label)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom13) + Skin.String(MoviesCustom,13)</visible>
+							</control>
+							<control type="button" id="8228">
+								<description>custom home 13</description>
+								<label></label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom13_Path)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetFile(Menu_Custom13_Path,.xsp,special://videoplaylists)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom13) + Skin.String(MoviesCustom,13)</visible>
+							</control>
+						</control>
 				</control>
 			</control>
 		</control>

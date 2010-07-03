@@ -124,7 +124,7 @@
 		</font>
 		<font>
 			<name>Font_Bartowski_Extras_Pause</name>
-			<filename>Comfortaa Thin.ttf</filename>
+			<filename>scoutlightnc.ttf</filename>
 			<size>22</size>
 		</font>
 		<font>
@@ -134,7 +134,7 @@
 		</font>
 		<font>
 			<name>Font_Bartowski_Episode_ContextMenu</name>
-			<filename>Comfortaa Thin.ttf</filename>
+			<filename>scoutlightnc.ttf</filename>
 			<size>30</size>
 		</font>
 		<font>
@@ -144,7 +144,7 @@
 		</font>
 		<font>
 			<name>Font_Bartowski_List_Main</name>
-			<filename>Comfortaa Bold.ttf</filename>
+			<filename>scoutlightnc.ttf</filename>
 			<size>24</size>
 		</font>
 		<font>
@@ -175,27 +175,27 @@
 		</font>
 		<font>
 			<name>Font_Bartowski_MenuValue</name>
-			<filename>Comfortaa Bold.ttf</filename>
+			<filename>scoutlightnc.ttf</filename>
 			<size>36</size>
 		</font>
 		<font>
 			<name>Font_Bartowski_Smaller_MenuValue</name>
-			<filename>Comfortaa Bold.ttf</filename>
+			<filename>scoutlightnc.ttf</filename>
 			<size>30</size>
 		</font>
 		<font>
 			<name>Font_Bartowski_Smaller_MenuTitle</name>
-			<filename>Comfortaa Bold.ttf</filename>
+			<filename>scoutlightnc.ttf</filename>
 			<size>22</size>
 		</font>
 		<font>
 			<name>Font_Bartowski_Press_S</name>
-			<filename>Comfortaa Bold.ttf</filename>
+			<filename>scoutlightnc.ttf</filename>
 			<size>26</size>
 		</font>
 		<font>
 			<name>Font_Bartowski_MainMenu_Context</name>
-			<filename>Comfortaa Bold.ttf</filename>
+			<filename>scoutlightnc.ttf</filename>
 			<size>44</size>
 		</font>
 		<font>
@@ -210,7 +210,7 @@
 		</font>
 		<font>
 			<name>Font_Landscape_TitleTVShow</name>
-			<filename>Comfortaa Bold.ttf</filename>
+			<filename>scoutlightnc.ttf</filename>
 			<size>25</size>
 			<linespacing>1</linespacing>
 		</font>
@@ -601,27 +601,27 @@
 		</font>
 		<font>
 			<name>font24caps_title</name>
-			<filename>Comfortaa Bold.ttf</filename>
+			<filename>scoutlightnc.ttf</filename>
 			<size>34</size>
 		</font>
 		<font>
 			<name>font16caps</name>
-			<filename>Comfortaa Bold.ttf</filename>
+			<filename>scoutlightnc.ttf</filename>
 			<size>25</size>
 		</font>
 		<font>
 			<name>font13caps_title</name>
-			<filename>Comfortaa Bold.ttf</filename>
+			<filename>scoutlightnc.ttf</filename>
 			<size>20</size>
 		</font>
 		<font>
 			<name>Font_Music_Jukebox</name>
-			<filename>Comfortaa Bold.ttf</filename>
+			<filename>scoutlightnc.ttf</filename>
 			<size>18</size>
 		</font>
 		<font>
 			<name>Bartowski_settings_small</name>
-			<filename>Comfortaa Bold.ttf</filename>
+			<filename>scoutlightnc.ttf</filename>
 			<size>16</size>
 		</font>
 		<font>
