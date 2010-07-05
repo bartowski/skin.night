@@ -5,6 +5,7 @@ Update 7/4/2010
   -Redid Filebrowser
   -WallPanel option only pressing right of the scrollbar brings up options
   -Bigger font in Files view, and smaller thumb (non-library)
+  -Added support for dvd, v_mpeg2, and dx50 codecs
 
 Update 7/2/2010
   -A good amount of cosmetic changes to Settings Section
