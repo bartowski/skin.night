@@ -2394,24 +2394,41 @@
 							<onclick>Skin.ToggleSetting(tvoverlays)</onclick>
 							<selected>Skin.HasSetting(tvoverlays)</selected>
 						</control>
-						<control type="radiobutton" id="511">
+						<control type="radiobutton" id="507">
 							<include>skin_settings_labels</include>
-							<label>$LOCALIZE[31266]</label>
-							<onclick>Skin.ToggleSetting(extrafanart)</onclick>
-							<selected>Skin.HasSetting(extrafanart)</selected>
+							<label>$LOCALIZE[31269]</label>
+							<onclick>Skin.ToggleSetting(landscape_jpg)</onclick>
+							<selected>Skin.HasSetting(landscape_jpg)</selected>
 						</control>
-						<control type="label" id="512">
+						<control type="label" id="508">
 							<width>860</width>
-							<height>45</height>
+							<height>26</height>
 							<font>Font_KeyboardTitle</font>
-							<textoffsetx>20</textoffsetx>
+							<textoffsetx>40</textoffsetx>
 							<label>$LOCALIZE[31267]</label>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<align>left</align>
 							<aligny>top</aligny>
 						</control>
-						<control type="label" id="507">
+						<control type="radiobutton" id="509">
+							<include>skin_settings_labels</include>
+							<label>$LOCALIZE[31266]</label>
+							<onclick>Skin.ToggleSetting(extrafanart)</onclick>
+							<selected>Skin.HasSetting(extrafanart)</selected>
+						</control>
+						<control type="label" id="510">
+							<width>860</width>
+							<height>26</height>
+							<font>Font_KeyboardTitle</font>
+							<textoffsetx>40</textoffsetx>
+							<label>$LOCALIZE[31267]</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<align>left</align>
+							<aligny>top</aligny>
+						</control>
+						<control type="label" id="511">
 							<width>860</width>
 							<height>45</height>
 							<font>font13caps</font>
@@ -2421,7 +2438,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 						</control>
-						<control type="label" id="508">
+						<control type="label" id="512">
 							<width>860</width>
 							<height>45</height>
 							<font>font13caps</font>
@@ -2431,7 +2448,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 						</control>
-						<control type="button" id="509">
+						<control type="button" id="513">
 							<width>280</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
@@ -2444,7 +2461,7 @@
 							<onclick>XBMC.RunScript(special://skin/scripts/script.logo/default.py)</onclick>
 						</control>
 					</control>
-						<control type="textbox" id="510">
+						<control type="textbox" id="513">
 							<posx>400</posx>
 							<posy>550</posy>
 							<width>600</width>
@@ -2955,7 +2972,7 @@
 							</control>
 							<control type="button" id="8224">
 								<description>custom home 12</description>
-								<label></label>
+								<label>- Set Playlist</label>
 								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom12_Path)][/COLOR]</label2>
 								<include>skin_settings_button</include>
 								<onclick>Skin.SetFile(Menu_Custom12_Path,.xsp,special://videoplaylists)</onclick>
@@ -2974,56 +2991,56 @@
 							</control>
 							
 							<control type="radiobutton" id="716">
-								<description>custom home 12</description>
+								<description>custom home 13</description>
 								<include>skin_settings_labels</include>
 								<label>Set Custom Submenu Favorite 1</label>
-								<onfocus>Skin.SetString(MoviesCustom,12)</onfocus>
-								<onclick>Skin.ToggleSetting(Menu_Custom12)</onclick>
-								<selected>Skin.HasSetting(Menu_Custom12)</selected>
-								<enable>!Skin.HasSetting(Menu_Movies_Sub12)</enable>
+								<onfocus>Skin.SetString(MoviesCustom,13)</onfocus>
+								<onclick>Skin.ToggleSetting(Menu_Custom13)</onclick>
+								<selected>Skin.HasSetting(Menu_Custom13)</selected>
+								<enable>!Skin.HasSetting(Menu_Movies_Sub13)</enable>
 							</control>
 							<control type="button" id="8225">
-								<description>Menu Movies Sub Custom12 Label</description>
+								<description>Menu Movies Sub Custom13 Label</description>
 								<label>- Set Label</label>
-								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom12_Label)][/COLOR]</label2>
-								<include>skin_settings_button</include>
-								<onclick>Skin.SetString(Menu_Custom12_Label)</onclick>
-								<visible>Skin.HasSetting(Menu_Custom12) + Skin.String(MoviesCustom,12)</visible>
-							</control>
-							<control type="button" id="8226">
-								<description>Menu Movies Sub Custom12 Path</description>
-								<label>- Set Favorite</label>
-								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom12_Path)][/COLOR]</label2>
-								<include>skin_settings_button</include>
-								<onclick>Skin.SetString(Menu_Sub_Custom_Favourites_Path,Menu_Custom12_Path)</onclick>
-								<onclick>ActivateWindow(1114)</onclick>
-								<visible>Skin.HasSetting(Menu_Custom12) + Skin.String(MoviesCustom,12)</visible>
-							</control>
-							
-							<control type="radiobutton" id="717">
-								<description>custom home 13</description>
-								<include>skin_settings_labels</include>
-								<label>Set Custom Submenu Playlist 1</label>
-								<onfocus>Skin.SetString(MoviesCustom,12)</onfocus>
-								<onclick>Skin.ToggleSetting(Menu_Custom12)</onclick>
-								<selected>Skin.HasSetting(Menu_Custom12)</selected>
-								<enable>!Skin.HasSetting(Menu_Movies_Sub12)</enable>
-							</control>
-							<control type="button" id="8227">
-								<description>custom home 13</description>
-								<label>- $LOCALIZE[31262]</label>
 								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom13_Label)][/COLOR]</label2>
 								<include>skin_settings_button</include>
 								<onclick>Skin.SetString(Menu_Custom13_Label)</onclick>
 								<visible>Skin.HasSetting(Menu_Custom13) + Skin.String(MoviesCustom,13)</visible>
 							</control>
-							<control type="button" id="8228">
-								<description>custom home 13</description>
-								<label></label>
+							<control type="button" id="8226">
+								<description>Menu Movies Sub Custom13 Path</description>
+								<label>- Set Favorite</label>
 								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom13_Path)][/COLOR]</label2>
 								<include>skin_settings_button</include>
-								<onclick>Skin.SetFile(Menu_Custom13_Path,.xsp,special://videoplaylists)</onclick>
+								<onclick>Skin.SetString(Menu_Sub_Custom_Favourites_Path,Menu_Custom13_Path)</onclick>
+								<onclick>ActivateWindow(1114)</onclick>
 								<visible>Skin.HasSetting(Menu_Custom13) + Skin.String(MoviesCustom,13)</visible>
+							</control>
+							
+							<control type="radiobutton" id="717">
+								<description>custom home 14</description>
+								<include>skin_settings_labels</include>
+								<label>Set Custom Submenu Playlist 1</label>
+								<onfocus>Skin.SetString(MoviesCustom,14)</onfocus>
+								<onclick>Skin.ToggleSetting(Menu_Custom14)</onclick>
+								<selected>Skin.HasSetting(Menu_Custom14)</selected>
+								<enable>!Skin.HasSetting(Menu_Movies_Sub14)</enable>
+							</control>
+							<control type="button" id="8227">
+								<description>custom home 14</description>
+								<label>- $LOCALIZE[31262]</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom14_Label)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetString(Menu_Custom14_Label)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom14) + Skin.String(MoviesCustom,14)</visible>
+							</control>
+							<control type="button" id="8228">
+								<description>custom home 14</description>
+								<label>- Set Playlist</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom14_Path)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetFile(Menu_Custom14_Path,.xsp,special://videoplaylists)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom14) + Skin.String(MoviesCustom,14)</visible>
 							</control>
 						</control>
 				</control>

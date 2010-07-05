@@ -1,3 +1,11 @@
+Update 7/4/2010
+  -Fixed the minor errors with the new sustom Home items
+  -Now "Landscape" and "3dlandscape" are not visible if using Posters or Banners, still available on Episode level
+  -The landscape.jpg option is now under Skin Settings
+  -Redid Filebrowser
+  -WallPanel option only pressing right of the scrollbar brings up options
+  -Bigger font in Files view, and smaller thumb (non-library)
+
 Update 7/2/2010
   -A good amount of cosmetic changes to Settings Section
   -Smaller Font size, spacing in Settings, and added an indentation to the settings

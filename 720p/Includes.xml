@@ -34,7 +34,18 @@
 	<include file="Viewtype_3dbanner.xml" />
 	<include file="Viewtype_Logo.xml" />
 	
-	
+	<include name="dialogConfirmButton">	
+		<width>120</width>
+		<height>42</height>
+		<font>Font_Bartowski_Smaller_MenuTitle</font>
+		<align>center</align>
+		<aligny>-</aligny>
+		<textoffsety>10</textoffsety>
+		<texturefocus border="5">confluence/button-focus.png</texturefocus>
+		<textcolor>ff000000</textcolor>
+		<focusedcolor>ffffffff</focusedcolor>
+		<pulseonselect>false</pulseonselect>
+	</include>
 	<include name="skin_settings_labels">
 		<width>860</width>
 		<height>34</height>

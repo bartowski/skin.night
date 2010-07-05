@@ -22,7 +22,7 @@
 			<width>760</width>
 			<height>30</height>
 			<font>Font_Bartowski_Smaller_MenuValue</font>
-			<label>$LOCALIZE[21421]</label>
+			<label>[B]$LOCALIZE[21421][/B]</label>
 			<align>center</align>
 			<aligny>center</aligny>
 			<textcolor>black</textcolor>
@@ -71,8 +71,21 @@
 				<label>$INFO[Control.GetLabel(15)]</label>
 				<align>left</align>
 				<aligny>center</aligny>
+				<textcolor>black</textcolor>
+				<visible>!Control.HasFocus(15)</visible>
+			</control>
+			<control type="label">
+				<description>Rule Field label</description>
+				<posx>25</posx>
+				<posy>100</posy>
+				<width>300</width>
+				<height>40</height>
+				<font>font13caps</font>
+				<label>$INFO[Control.GetLabel(15)]</label>
+				<align>left</align>
+				<aligny>center</aligny>
 				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<visible>Control.HasFocus(15)</visible>
 			</control>
 			<control type="spincontrolex" id="16">
 				<description>Rule operator</description>
@@ -98,8 +111,21 @@
 				<label>$INFO[Control.GetLabel(16)]</label>
 				<align>left</align>
 				<aligny>center</aligny>
+				<textcolor>black</textcolor>
+				<visible>!Control.HasFocus(16)</visible>
+			</control>
+			<control type="label">
+				<description>Rule Field label</description>
+				<posx>410</posx>
+				<posy>100</posy>
+				<width>300</width>
+				<height>40</height>
+				<font>font13caps</font>
+				<label>$INFO[Control.GetLabel(16)]</label>
+				<align>left</align>
+				<aligny>center</aligny>
 				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<visible>Control.HasFocus(16)</visible>
 			</control>
 		</control>
 		<control type="image">
@@ -109,15 +135,18 @@
 			<width>585</width>
 			<height>50</height>
 			<texture>common/textbox.png</texture>
+			<visible>!Control.HasFocus(17)</visible>
 		</control>
 		<control type="button" id="17">
 			<description>Value Button</description>
-			<posx>20</posx>
+			<posx>18</posx>
 			<posy>160</posy>
-			<width>585</width>
-			<height>40</height>
+			<width>574</width>
+			<height>34</height>
 			<font>Font_KeyboardEdit</font>
-			<textcolor>white</textcolor>
+			<textcolor>black</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<texturefocus>confluence/button-focus-big.png</texturefocus>
 			<align>center</align>
 			<label>-</label>
 			<onup>9001</onup>
@@ -128,15 +157,16 @@
 		<control type="button" id="20">
 			<description>Browse Button</description>
 			<posx>610</posx>
-			<posy>145</posy>
+			<posy>156</posy>
 			<width>170</width>
 			<height>40</height>
 			<align>center</align>
 			<aligny>center</aligny>
-			<texturefocus border="3">button-focus.png</texturefocus>
-			<texturenofocus border="3">button-nofocus.png</texturenofocus>
+			<textcolor>black</textcolor>
+				<focusedcolor>white</focusedcolor>
+			<texturefocus>confluence/button-focus-big.png</texturefocus>
 			<label>1024</label>
-			<font>font12_title</font>
+			<font>Font_KeyboardEdit</font>
 			<onup>9001</onup>
 			<onleft>17</onleft>
 			<onright>17</onright>

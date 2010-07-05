@@ -43,7 +43,7 @@
 			<include>Animation_HiddenByInfo</include>
 			<camera x="1340" y="380" />
 			<animation effect="rotatey" center="50" start="12" end="10" time="0" condition="true">Conditional</animation>
-			<visible>!Skin.HasSetting(no_3DLandscape) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+			<visible>!Skin.HasSetting(no_3DLandscape) + [[Skin.HasSetting(landscape_jpg) + Container.Content(tvshows)] | [![Skin.HasSetting(TVBanners) | Skin.HasSetting(TVPosters)] + [Container.Content(tvshows) | Container.Content(seasons)]]] | Container.Content(episodes)</visible>
 			<itemlayout width="316" height="245">
 				<control type="group">
 				<posx>150</posx>
@@ -81,7 +81,7 @@
 						<texture background="true" diffuse="movie-poster/xper_test.png">$INFO[ListItem.Icon]</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<visible>!Skin.HasSetting(3dland_jpg) + [Container.Content(tvshows) | Container.Content(seasons)] | Container.Content(episodes) | Window.IsActive(videoplaylist)</visible>
+						<visible>!Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)] | Container.Content(episodes) | Window.IsActive(videoplaylist)</visible>
 					</control>
 					<control type="image">
 						<posx>-150</posx>
@@ -91,7 +91,7 @@
 						<texture background="true" diffuse="movie-poster/xper_test.png">$INFO[ListItem.path]landscape.jpg</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<visible>Skin.HasSetting(3dland_jpg) + !Container.Content(episodes)</visible>
+						<visible>Skin.HasSetting(landscape_jpg) + !Container.Content(episodes)</visible>
 					</control>
 					<control type="image">
 						<posx>-150</posx>
@@ -137,7 +137,7 @@
 						<fadetime>200</fadetime>
 						<colordiffuse>89FFFFFF</colordiffuse>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<visible>!Skin.HasSetting(3dland_jpg) + [Container.Content(tvshows) | Container.Content(seasons)] | Container.Content(episodes) | Window.IsActive(videoplaylist)</visible>
+						<visible>!Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)] | Container.Content(episodes) | Window.IsActive(videoplaylist)</visible>
 					</control>
 					<control type="image">
 						<posx>-150</posx>
@@ -148,7 +148,7 @@
 						<fadetime>200</fadetime>
 						<colordiffuse>89FFFFFF</colordiffuse>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<visible>Skin.HasSetting(3dland_jpg) + !Container.Content(episodes)</visible>
+						<visible>Skin.HasSetting(landscape_jpg) + !Container.Content(episodes)</visible>
 					</control>
 					<control type="image">
 						<visible>Container.Content(episodes)</visible>
@@ -279,7 +279,7 @@
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 							<effect type="fade" start="0" end="70" time="600" />
 						</animation>
-						<visible>!Skin.HasSetting(3dland_jpg) + [Container.Content(tvshows) | Container.Content(seasons)] | Container.Content(episodes) | Window.IsActive(videoplaylist)</visible>
+						<visible>!Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)] | Container.Content(episodes) | Window.IsActive(videoplaylist)</visible>
 					</control>
 					<control type="image">
 						<posx>-150</posx>
@@ -293,7 +293,7 @@
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 							<effect type="fade" start="0" end="70" time="600" />
 						</animation>
-						<visible>Skin.HasSetting(3dland_jpg) + !Container.Content(episodes)</visible>
+						<visible>Skin.HasSetting(landscape_jpg) + !Container.Content(episodes)</visible>
 					</control>
 					<control type="image">
 						<posx>-150</posx>
@@ -306,7 +306,7 @@
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 						</animation>
-						<visible>!Skin.HasSetting(3dland_jpg) + [Container.Content(tvshows) | Container.Content(seasons)] | Container.Content(episodes) | Window.IsActive(videoplaylist)</visible>
+						<visible>!Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)] | Container.Content(episodes) | Window.IsActive(videoplaylist)</visible>
 					</control>
 					<control type="image">
 						<posx>-150</posx>
@@ -319,7 +319,7 @@
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 						</animation>
-						<visible>Skin.HasSetting(3dland_jpg) + !Container.Content(episodes)</visible>
+						<visible>Skin.HasSetting(landscape_jpg) + !Container.Content(episodes)</visible>
 					</control>
 					<control type="image">
 						<visible>ControlGroup(28374).HasFocus + Container.Content(episodes) + Skin.HasSetting(3dLandscape_Fanart)</visible>

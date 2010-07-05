@@ -21,7 +21,7 @@
 			<height>33</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/divx.png</texture>
-			<visible>substring(ListItem.VideoCodec,divx) | substring(ListItem.VideoCodec,div3) |substring(ListItem.VideoCodec,div4) | substring(ListItem.VideoCodec,div5)</visible>
+			<visible>substring(ListItem.VideoCodec,divx)| substring(ListItem.VideoCodec,dx50) | substring(ListItem.VideoCodec,div3) |substring(ListItem.VideoCodec,div4) | substring(ListItem.VideoCodec,div5)</visible>
 		</control>
 		<control type="image">
 			<description>h264 Codec Image</description>
@@ -61,7 +61,7 @@
 			<height>33</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/mpeg2video.png</texture>
-			<visible>substring(ListItem.VideoCodec,mpeg2video)</visible>
+			<visible>substring(ListItem.VideoCodec,mpeg2video) | substring(ListItem.VideoCodec,v_mpeg2)</visible>
 		</control>
 	</include>
 	<include name="VideoTypeHackFlaggingConditions">
@@ -80,6 +80,14 @@
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/hddvd.png</texture>
 			<visible>substring(ListItem.filename,hddvd)</visible>
+		</control>
+		<control type="image">
+			<description>DVD Image</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/dvd.png</texture>
+			<visible>substring(ListItem.filename,dvd)</visible>
 		</control>
 	</include>
 	<include name="VideoMPAAFlaggingConditions_Grey">

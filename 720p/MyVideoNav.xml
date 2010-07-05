@@ -159,7 +159,7 @@
 					<selected>Skin.HasSetting(3dLandscape_Fanart)</selected>
 					<visible>Control.IsVisible(53)</visible>
 				</control>
-				<control type="togglebutton" id="27">
+				<!--<control type="togglebutton" id="27">
 					<description>Toggle MoviesFanart</description>
 					<include>WindowMenuButton</include>
 					<label>$LOCALIZE[31219]</label>
@@ -167,7 +167,7 @@
 					<onclick>Skin.ToggleSetting(3dland_jpg)</onclick>
 					<selected>Skin.HasSetting(3dland_jpg)</selected>
 					<visible>Control.IsVisible(53) + [Container.Content(tvshows) | Container.Content(seasons)]</visible>
-				</control>
+				</control>-->
 				<control type="togglebutton" id="28">
 					<description>Toggle MoviesFanart</description>
 					<include>WindowMenuButton</include>
@@ -177,7 +177,7 @@
 					<selected>Skin.HasSetting(Files_Fanart)</selected>
 					<visible>Control.IsVisible(55) + Container.Content(movies)</visible>
 				</control>
-				<control type="togglebutton" id="29">
+				<!--<control type="togglebutton" id="29">
 					<description>Toggle MoviesFanart</description>
 					<include>WindowMenuButton</include>
 					<label>$LOCALIZE[31219]</label>
@@ -185,7 +185,7 @@
 					<onclick>Skin.ToggleSetting(landscape_jpg)</onclick>
 					<selected>Skin.HasSetting(landscape_jpg)</selected>
 					<visible>Control.IsVisible(52) + [Container.Content(tvshows) | Container.Content(seasons)]</visible>
-				</control>
+				</control>-->
 				<control type="togglebutton" id="30">
 					<description>Toggle MoviesFanart</description>
 					<include>WindowMenuButton</include>
@@ -284,7 +284,7 @@
 			<control type="button" id="46">
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[14018]</label>
-				<visible>[Control.IsVisible(50) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart)] | [[Control.IsVisible(53) | Control.IsVisible(52)] + [Container.Content(tvshows) | Container.Content(seasons)]]</visible>		
+				<visible>Control.IsVisible(50) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart)</visible>		
 			</control>
 			<control type="button" id="41">
 				<include>WindowMenuLabel</include>

@@ -79,7 +79,7 @@
 			<preloaditems>2</preloaditems>
 			<include>Animation_Viewtype_Landscape_FocusArea</include>
 			<include>Animation_HiddenByInfo</include>
-			<visible>!Skin.HasSetting(no_Landscape) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+			<visible>!Skin.HasSetting(no_Landscape) + [[Skin.HasSetting(landscape_jpg) + Container.Content(tvshows)] | [!Skin.HasSetting(TVBanners) + [Container.Content(tvshows) | Container.Content(seasons)]]] | Container.Content(episodes)</visible>
 			<itemlayout width="250" height="225">
 				<control type="image">
 					<visible>Container.Content(tvshows) + !IsEmpty(ListItem.Title)</visible>

@@ -33,7 +33,7 @@
 				<width>760</width>
 				<height>30</height>
 				<font>Font_Bartowski_Smaller_MenuValue</font>
-				<label>$LOCALIZE[21432]</label>
+				<label>[B]$LOCALIZE[21432][/B]</label>
 				<align>center</align>
 				<aligny>center</aligny>
 				<textcolor>black</textcolor>
@@ -78,20 +78,22 @@
 				<width>760</width>
 				<height>50</height>
 				<texture>common/textbox.png</texture>
+				<visible>!Control.HasFocus(12)</visible>
 			</control>
 			<control type="edit" id="12">
 				<description>Name Button</description>
 				<posx>20</posx>
-				<posy>170</posy>
+				<posy>160</posy>
 				<width>760</width>
 				<height>40</height>
 				<textoffsetx>10</textoffsetx>
+				<textoffsety>10</textoffsety>
 				<textwidth>750</textwidth>
 				<font>Font_KeyboardEdit</font>
 				<textcolor>white</textcolor>
 				<align>center</align>
 				<aligny>bottom</aligny>
-				<!--<texturefocus>confluence/button-focus-big.png</texturefocus>-->
+				<texturefocus>confluence/button-focus-big.png</texturefocus>
 				<label>-</label>
 				<onup>22</onup>
 				<onleft>12</onleft>

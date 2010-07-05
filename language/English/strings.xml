@@ -207,6 +207,10 @@ just copy the translations from Confluence to here
   
    <!-- NEW 6/23-->
   <string id="31268">Logo</string>
+  <string id="31269">Use a local landcape.jpg instead of regular thumb on TV level</string>
+  <string id="31270">User needs a landcape.jpg mage at the root a TV Show folder</string>
+  
+  
   
   </strings>
 

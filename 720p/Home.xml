@@ -503,9 +503,9 @@
 					</control>
 					<control type="button" id="90129">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>$INFO[Skin.String(Menu_Custom13_Label)]</label>
-						<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Menu_Custom13_Path)],return)</onclick>
-						<visible>Skin.HasSetting(Menu_Custom13)</visible>
+						<label>$INFO[Skin.String(Menu_Custom14_Label)]</label>
+						<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Menu_Custom14_Path)],return)</onclick>
+						<visible>Skin.HasSetting(Menu_Custom14)</visible>
 					</control>
 					<control type="button" id="90126">
 						<include>ButtonHomeSubCommonValues</include>
