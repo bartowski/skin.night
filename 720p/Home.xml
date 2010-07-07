@@ -375,7 +375,7 @@
 					<posx>10</posx>
 					<posy>30</posy>
 					<width>600</width>
-					<height>465</height>
+					<height>390</height>
 					<onleft>300</onleft>
 					<onright>Control.SetFocus(8000,0)</onright>
 					<onup>9010</onup>
@@ -428,7 +428,7 @@
 					<posx>10</posx>
 					<posy>30</posy>
 					<width>600</width>
-					<height>500</height>
+					<height>390</height>
 					<onleft>300</onleft>
 					<onright>Control.SetFocus(8000,0)</onright>
 					<onup>9011</onup>
@@ -488,7 +488,7 @@
 					<posx>10</posx>
 					<posy>30</posy>
 					<width>600</width>
-					<height>465</height>
+					<height>390</height>
 					<onleft>300</onleft>
 					<onright>Control.SetFocus(8001,0)</onright>
 					<onup>9012</onup>
@@ -542,7 +542,7 @@
 					<posx>10</posx>
 					<posy>30</posy>
 					<width>600</width>
-					<height>465</height>
+					<height>390</height>
 					<onleft>300</onleft>
 					<onright>9001</onright>
 					<onup>9014</onup>
@@ -580,7 +580,7 @@
 					<posx>10</posx>
 					<posy>30</posy>
 					<width>600</width>
-					<height>465</height>
+					<height>390</height>
 					<onleft>300</onleft>
 					<onright>9001</onright>
 					<onup>9015</onup>
@@ -641,7 +641,7 @@
 					<posx>10</posx>
 					<posy>30</posy>
 					<width>600</width>
-					<height>465</height>
+					<height>390</height>
 					<onleft>300</onleft>
 					<onright>Control.SetFocus(8002,0)</onright>
 					<onup>9017</onup>
@@ -694,7 +694,7 @@
 					<posx>10</posx>
 					<posy>30</posy>
 					<width>600</width>
-					<height>465</height>
+					<height>390</height>
 					<onleft>300</onleft>
 					<onright>Control.SetFocus(8001,0)</onright>
 					<onup>9018</onup>
@@ -721,7 +721,7 @@
 					<posx>10</posx>
 					<posy>30</posy>
 					<width>600</width>
-					<height>465</height>
+					<height>390</height>
 					<onleft>300</onleft>
 					<onright>Control.SetFocus(8001,0)</onright>
 					<onup>9019</onup>
@@ -770,7 +770,7 @@
 					<posx>10</posx>
 					<posy>30</posy>
 					<width>600</width>
-					<height>465</height>
+					<height>390</height>
 					<onleft>300</onleft>
 					<onright>Control.SetFocus(8001,0)</onright>
 					<onup>9019</onup>

@@ -142,7 +142,7 @@ MUSIC SECTION
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<include>Animation_HiddenByInfo</include>
 					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="auto" start="90" end="114" time="300" tween="back" easing="out" />
+						<effect type="zoom" center="auto" start="90" end="114" time="400" tween="back" easing="out" />
 						<effect type="fade" start="0" end="60"/>
 					</animation>
 				</control>
@@ -154,7 +154,7 @@ MUSIC SECTION
 					<texture flipy="true">posterframeF.png</texture>
 					<include>Animation_HiddenByInfo</include>
 					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="auto" start="90" end="114" time="300" tween="back" easing="out" />
+						<effect type="zoom" center="auto" start="90" end="114" time="400" tween="back" easing="out" />
 						<effect type="fade" start="0" end="20"/>
 					</animation>
 				</control>
@@ -181,7 +181,7 @@ MUSIC SECTION
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<include>Animation_PosterInfoSlide_Showcase</include>
 					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="auto" start="80" end="100" time="300" tween="back" easing="out" />
+						<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
 					</animation>
 				</control>
 				<control type="image">
@@ -192,8 +192,8 @@ MUSIC SECTION
 					<texture>posterframeF.png</texture>
 					<include>Animation_PosterInfoSlide_Showcase</include>
 					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="auto" start="80" end="100" time="300" tween="back" easing="out" />
-						<effect type="fade" start="0" end="60" time="600" />
+						<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
+						<effect type="fade" start="60" end="60" time="400" />
 					</animation>
 				</control>
 			</control>

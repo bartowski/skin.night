@@ -1,3 +1,9 @@
+Update 7/6/2010
+  -Added Title to recently added TV image
+  -maybe added support for bbfc flags?
+  -Added sutdown timer to 'Press S' dialog
+  -Modified "Song" view to be used on Artist level
+
 Update 7/4/2010
   -Fixed the minor errors with the new sustom Home items
   -Now "Landscape" and "3dlandscape" are not visible if using Posters or Banners, still available on Episode level

@@ -4,11 +4,11 @@ __url__          = "http://code.google.com/p/passion-xbmc/"
 __svn_url__      = ""
 __credits__      = "Team XBMC PASSION, http://passion-xbmc.org/"
 __platform__     = "xbmc media center, [LINUX, OS X, WIN32, XBOX]"
-__date__         = "09-06-2010"
-__version__      = "1.2.3"
+__date__         = "05-07-2010"
+__version__      = "1.3"
 __svn_revision__  = "$Revision: 000 $"
-__XBMC_Revision__ = "20000" #XBMC Babylon
-__useragent__ = "Mozilla/5.0 (Windows; U; Windows NT 5.1; fr; rv:1.9.0.1) Gecko/2008070208 Firefox/3.6"
+__XBMC_Revision__ = "30000" #XBMC Babylon
+__useragent__ = "Logo downloader %s" % __version__
 
 
 import urllib
@@ -23,7 +23,8 @@ import xbmcgui
 SOURCEPATH = os.getcwd()
 RESOURCES_PATH = os.path.join( SOURCEPATH , "resources" )
 db_path = os.path.join(xbmc.translatePath( "special://profile/Database/" ), "MyVideos34.db")
-BASE_URL = "http://www.themurrayworld.com/xbmc/logos/"
+#BASE_URL = "http://www.themurrayworld.com/xbmc/logos/"
+BASE_URL = "http://www.lockstockmods.net/logos/getlogo.php?id="
 LOGO_TEST_PATH = os.path.join( RESOURCES_PATH , "test" )
 DIALOG_PROGRESS = xbmcgui.DialogProgress()
 
@@ -113,9 +114,11 @@ def get_tvid_path( tvpath ):
     
     
 def get_first_logo( tvid ):
-    match = re.search("""<li><a href="(.*%s.*\.png)">.*?</a></li>""" % tvid , base_info)
+    #match = re.search("""<li><a href="(.*%s.*\.png)">.*?</a></li>""" % tvid , base_info)
+    base_info = get_html_source( BASE_URL + tvid )
+    match = re.search("""<logo url="(.*?)"/>""" , base_info)
     if match:
-        logo_url = BASE_URL + match.group(1)
+        logo_url = match.group(1)
         #getting first logo:
         multi_logo = re.search("(-\d)\.png" , logo_url )
         if multi_logo:
@@ -128,7 +131,9 @@ def get_first_logo( tvid ):
         return False
 
 def get_logo_list( tvid ):
-    match = re.findall("""<li><a href="(.*%s.*\.png)">.*?</a></li>""" % tvid , base_info)
+    #match = re.findall("""<li><a href="(.*%s.*\.png)">.*?</a></li>""" % tvid , base_info)
+    base_info = get_html_source( BASE_URL + tvid )
+    match = re.findall("""<logo url="(.*?)"/>""" , base_info)
     if match: return match
     else: 
         print "### No logo found !"
@@ -164,7 +169,8 @@ if ( __name__ == "__main__" ):
             solo_mode = True
     except: print "### No Args found"
     
-    base_info = get_html_source( BASE_URL )
+    #base_info = get_html_source( BASE_URL )
+    base_info = True
     
     if solo_mode:        
         print "### Starting solo Mode"
@@ -205,7 +211,7 @@ if ( __name__ == "__main__" ):
                 else:
                     DIALOG_PROGRESS.create( "Logo Downloader in action ..." , "Downloading ..." )
                     
-                    url_logo = BASE_URL + logo_list[select]
+                    url_logo = logo_list[select]
                     
                     if logo_path: 
                         full_logo_path = os.path.join( logo_path , "logo.png").replace("\\\\" , "\\").encode("utf-8")

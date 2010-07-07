@@ -36,6 +36,7 @@
 				<description>Settings</description>
 				<height>30</height>
 				<width min="40" max="170">auto</width>
+				<textoffsety>2</textoffsety>
 				<font>Font_Bartowski_Press_S</font>
 				<textcolor>MainBlack</textcolor>
 				<focusedcolor>white</focusedcolor>
@@ -49,20 +50,22 @@
 				<description>Filemanager</description>
 				<height>30</height>
 				<width min="40" max="170">auto</width>
+				<textoffsety>2</textoffsety>
 				<font>Font_Bartowski_Press_S</font>
 				<textcolor>MainBlack</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<texturefocus border="5">confluence/button-focus.png</texturefocus>
 				<align>center</align>
 				<aligny>middle</aligny>
-				<label>$LOCALIZE[31067]</label>
-				<onclick>ActivateWindow(3)</onclick>
+				<label>$LOCALIZE[31242]</label>
+				<onclick>AlarmClock(shutdowntimer,Shutdown)</onclick>>
 			</control>
 
 			<control type="button" id="3117">
 				<description>Favourites</description>
 				<height>30</height>
 				<width min="40" max="170">auto</width>
+				<textoffsety>2</textoffsety>
 				<font>Font_Bartowski_Press_S</font>
 				<textcolor>MainBlack</textcolor>
 				<focusedcolor>white</focusedcolor>
@@ -77,6 +80,7 @@
 				<description>Reboot</description>
 				<height>30</height>
 				<width min="40" max="170">auto</width>
+				<textoffsety>2</textoffsety>
 				<font>Font_Bartowski_Press_S</font>
 				<textcolor>MainBlack</textcolor>
 				<focusedcolor>white</focusedcolor>
@@ -90,6 +94,7 @@
 				<description>Shutdown</description>
 				<height>30</height>
 				<width min="40" max="170">auto</width>
+				<textoffsety>2</textoffsety>
 				<font>Font_Bartowski_Press_S</font>
 				<textcolor>MainBlack</textcolor>
 				<focusedcolor>white</focusedcolor>
@@ -103,6 +108,7 @@
 				<description>Restart Xbmc</description>
 				<height>30</height>
 				<width min="40" max="170">auto</width>
+				<textoffsety>2</textoffsety>
 				<font>Font_Bartowski_Press_S</font>
 				<textcolor>MainBlack</textcolor>
 				<focusedcolor>white</focusedcolor>
@@ -116,6 +122,7 @@
 				<description>System Info Button</description>
 				<height>30</height>
 				<width min="40" max="170">auto</width>
+				<textoffsety>2</textoffsety>
 				<font>Font_Bartowski_Press_S</font>
 				<textcolor>MainBlack</textcolor>
 				<focusedcolor>white</focusedcolor>
