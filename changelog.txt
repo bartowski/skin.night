@@ -1,3 +1,13 @@
+Update 7/9/2010
+  -Fixed some addons button errors, plus minor addon touchups
+  -Created a 3d addon view, also available for album level
+  -Added 1 favorite and 3 submenu playlists to Music
+  -Submenu link to playlists for Movie/Music
+  -Changed filebrowser to a better ratio to fit images better
+  -Updated bbfc ratings code and images
+  -Horizontal home up to date
+  -Changed up volumebar
+
 Update 7/6/2010
   -Added Title to recently added TV image
   -maybe added support for bbfc flags?

@@ -1,7 +1,7 @@
 <window id="20">
 	<defaultcontrol always="true">55</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<views>55,50,500</views>
+	<views>55,50</views>
 	<controls>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>		
@@ -61,21 +61,9 @@
 		</control>
 		<control type="group">
 				<include>Viewtype_Addons</include><!--  55  -->
-				<include>Viewtype_Poster</include><!--  50  -->
+				<include>Viewtype_3daddon</include><!--  50  -->
 		</control>
-		<control type="group">
-			<control type="button" id="8999">
-				<description>Fake button for mouse control</description>
-				<posx>-250</posx>
-				<posy>0</posy>
-				<width>265</width>
-				<height>720</height>
-				<label>-</label>
-				<font>-</font>
-				<texturenofocus>-</texturenofocus>
-				<texturefocus>-</texturefocus>
-				<visible>true</visible>
-			</control>
+		
 			<control type="image">
 				<visible>ControlGroup(7000).HasFocus</visible>
 				<include>Dimensions_Fullscreen</include>
@@ -83,6 +71,8 @@
 				<animation effect="fade" start="0" end="100" time="600">Visible</animation>
 				<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
 			</control>
+	<control type="group">
+	<include>Animation_CommonFade_ViewOptions</include>	
 			<control type="image"><!-- Floor -->
 				<posx>300</posx>
 				<posy>650</posy>
@@ -90,7 +80,6 @@
 				<height>70</height>
 				<texture>backdrops/test2.png</texture>
 				<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews)</visible>
-				<include>Animation_ViewOptions_whitebar</include>
 			</control>
 			
 			<control type="grouplist" id="7000">

@@ -33,6 +33,10 @@
 	<include file="Includes_Home_Horizontal.xml" />
 	<include file="Viewtype_3dbanner.xml" />
 	<include file="Viewtype_Logo.xml" />
+	<include file="Viewtype_3daddon.xml" />
+	
+	
+	
 	
 	<include name="dialogConfirmButton">	
 		<width>120</width>

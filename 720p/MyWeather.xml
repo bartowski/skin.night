@@ -73,7 +73,7 @@
 					<effect type="fade" start="100" end="0" time="400" delay="500" />
 					<effect type="zoom" end="50,50" start="100,100" center="auto" time="500" delay="500" />
 				</animation>
-				<posx>-220</posx>
+				<posx>-180</posx>
 				<posy>-140</posy>
 				<width>225</width>
 				<height>300</height>
@@ -88,9 +88,9 @@
 				<!-- label -->
 				<control type="label">
 					<info>Window.Property(Current.Condition)</info>
-					<width>205</width>
+					<width>460</width>
 					<height>20</height>
-					<posx>5</posx>
+					<posx>-120</posx>
 					<posy>10</posy>
 					<font>Font_EpisodeNumber</font>
 					<textcolor>mainblue</textcolor>

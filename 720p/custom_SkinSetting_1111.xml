@@ -2630,6 +2630,7 @@
 						<onright>61</onright>
 						<onup>9007</onup>
 						<ondown>9007</ondown>
+						<!--<animation effect="slide" start="0,0" end="0,-70" time="1000" delay="200" tween="cubic" easing="inout" condition="Control.HasFocus(719) | Control.HasFocus(8229) | Control.HasFocus(8229)">Conditional</animation>-->
 						<control type="label" id="701">
 							<width>860</width>
 							<height>45</height>
@@ -3041,6 +3042,119 @@
 								<include>skin_settings_button</include>
 								<onclick>Skin.SetFile(Menu_Custom14_Path,.xsp,special://videoplaylists)</onclick>
 								<visible>Skin.HasSetting(Menu_Custom14) + Skin.String(MoviesCustom,14)</visible>
+							</control>
+							
+							<control type="label" id="718">
+								<width>860</width>
+								<height>45</height>
+								<font>font13caps</font>
+								<label>Custom Music Submenus</label>
+								<textcolor>mainblue</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<align>left</align>
+								<aligny>center</aligny>
+							</control>
+							
+							<control type="radiobutton" id="719">
+								<description>custom home 15</description>
+								<include>skin_settings_labels</include>
+								<label>Set Custom Submenu Favorite 1</label>
+								<onfocus>Skin.SetString(MoviesCustom,15)</onfocus>
+								<onclick>Skin.ToggleSetting(Menu_Custom15)</onclick>
+								<selected>Skin.HasSetting(Menu_Custom15)</selected>
+								<enable>!Skin.HasSetting(Menu_Movies_Sub15)</enable>
+							</control>
+							<control type="button" id="8229">
+								<description>Menu Movies Sub Custom15 Label</description>
+								<label>- Set Label</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom15_Label)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetString(Menu_Custom15_Label)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom15) + Skin.String(MoviesCustom,15)</visible>
+							</control>
+							<control type="button" id="8230">
+								<description>Menu Movies Sub Custom15 Path</description>
+								<label>- Set Favorite</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom15_Path)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetString(Menu_Sub_Custom_Favourites_Path,Menu_Custom15_Path)</onclick>
+								<onclick>ActivateWindow(1114)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom15) + Skin.String(MoviesCustom,15)</visible>
+							</control>
+							<control type="radiobutton" id="720">
+								<description>custom home 16</description>
+								<include>skin_settings_labels</include>
+								<label>Set Custom Submenu Playlist 1</label>
+								<onfocus>Skin.SetString(MoviesCustom,16)</onfocus>
+								<onclick>Skin.ToggleSetting(Menu_Custom16)</onclick>
+								<selected>Skin.HasSetting(Menu_Custom16)</selected>
+								<enable>!Skin.HasSetting(Menu_Movies_Sub16)</enable>
+							</control>
+							<control type="button" id="8231">
+								<description>custom home 16</description>
+								<label>- $LOCALIZE[31262]</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom16_Label)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetString(Menu_Custom16_Label)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom16) + Skin.String(MoviesCustom,16)</visible>
+							</control>
+							<control type="button" id="8232">
+								<description>custom home 16</description>
+								<label>- Set Playlist</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom16_Path)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetFile(Menu_Custom16_Path,.xsp,special://musicplaylists)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom16) + Skin.String(MoviesCustom,16)</visible>
+							</control>
+							<control type="radiobutton" id="721">
+								<description>custom home 17</description>
+								<include>skin_settings_labels</include>
+								<label>Set Custom Submenu Playlist 2</label>
+								<onfocus>Skin.SetString(MoviesCustom,17)</onfocus>
+								<onclick>Skin.ToggleSetting(Menu_Custom17)</onclick>
+								<selected>Skin.HasSetting(Menu_Custom17)</selected>
+								<enable>!Skin.HasSetting(Menu_Movies_Sub17)</enable>
+							</control>
+							<control type="button" id="8233">
+								<description>custom home 17</description>
+								<label>- $LOCALIZE[31262]</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom17_Label)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetString(Menu_Custom17_Label)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom17) + Skin.String(MoviesCustom,17)</visible>
+							</control>
+							<control type="button" id="8234">
+								<description>custom home 17</description>
+								<label>- Set Playlist</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom17_Path)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetFile(Menu_Custom17_Path,.xsp,special://musicplaylists)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom17) + Skin.String(MoviesCustom,17)</visible>
+							</control>
+							<control type="radiobutton" id="722">
+								<description>custom home 18</description>
+								<include>skin_settings_labels</include>
+								<label>Set Custom Submenu Playlist 3</label>
+								<onfocus>Skin.SetString(MoviesCustom,18)</onfocus>
+								<onclick>Skin.ToggleSetting(Menu_Custom18)</onclick>
+								<selected>Skin.HasSetting(Menu_Custom18)</selected>
+								<enable>!Skin.HasSetting(Menu_Movies_Sub18)</enable>
+							</control>
+							<control type="button" id="8235">
+								<description>custom home 18</description>
+								<label>- $LOCALIZE[31262]</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom18_Label)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetString(Menu_Custom18_Label)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom18) + Skin.String(MoviesCustom,18)</visible>
+							</control>
+							<control type="button" id="8236">
+								<description>custom home 18</description>
+								<label>- Set Playlist</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom18_Path)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetFile(Menu_Custom18_Path,.xsp,special://musicplaylists)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom18) + Skin.String(MoviesCustom,18)</visible>
 							</control>
 						</control>
 				</control>

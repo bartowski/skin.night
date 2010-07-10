@@ -16,7 +16,7 @@
 			<aspectratio>scale</aspectratio>
 			<fadetime>400</fadetime>
 			<include>Animation_BackdropFade</include>
-			<visible>![Skin.HasSetting(hidefanart) | Control.IsVisible(53) | Control.IsVisible(51) | [Control.IsVisible(52) + Container.Content(artists)]]</visible>
+			<visible>![Skin.HasSetting(hidefanart) | Control.IsVisible(54) | Control.IsVisible(53) | Control.IsVisible(51) | [Control.IsVisible(52) + Container.Content(artists)]]</visible>
 		</control>
 		<control type="image">
 			<description>artist level fanart</description>
@@ -28,7 +28,7 @@
 			<aspectratio>scale</aspectratio>
 			<fadetime>400</fadetime>
 			<include>Animation_BackdropFade</include>
-			<visible>![Skin.HasSetting(hidefanart) | Control.IsVisible(53) | Control.IsVisible(51) | [Control.IsVisible(52) + Container.Content(artists)]]</visible>
+			<visible>![Skin.HasSetting(hidefanart) | Control.IsVisible(54) | Control.IsVisible(53) | Control.IsVisible(51) | [Control.IsVisible(52) + Container.Content(artists)]]</visible>
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
@@ -40,10 +40,13 @@
 		
 		<include>Viewtype_Files</include><!-- 55 -->
 		<include>Viewtype_MusicShowcase</include><!-- 58 -->
+		<include>Viewtype_3daddon</include><!-- 50 -->
 		<include>Viewtype_MusicWall</include><!-- 53 -->
 		<include>Viewtype_Songs</include><!-- 52 -->
 		<include>Viewtype_Shelf</include><!-- 51 -->
-		<include>Viewtype_JukeBox</include><!-- 50 -->
+		<include>Viewtype_JukeBox</include><!-- 54 -->
+		
+		
 
 	<control type="group">
 		<include>Animation_HiddenByInfo</include>
@@ -82,6 +85,15 @@
 				<selected>Skin.HasSetting(MusicShowcaseFanart)</selected>
 				<visible>Control.IsVisible(58)</visible>
 			</control>
+			<control type="togglebutton" id="22">
+				<description>Toggle MoviesFanart</description>
+				<include>WindowMenuButton</include>
+				<label>$LOCALIZE[31086]</label>
+				<altlabel>$LOCALIZE[31214]</altlabel>
+				<onclick>Skin.ToggleSetting(3dmusic_Fanart)</onclick>
+				<selected>Skin.HasSetting(3dmusic_Fanart)</selected>
+				<visible>Control.IsVisible(50)</visible>
+			</control>
 			<control type="button" id="3">
 				<include>WindowMenuButton</include>
 				<label>103</label>
@@ -112,7 +124,7 @@
 			<control type="button" id="45">
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[14018]</label>
-				<visible>Control.IsVisible(58)</visible>		
+				<visible>Control.IsVisible(58) | Control.IsVisible(50)</visible>		
 			</control>
 			<control type="button" id="41">
 				<include>WindowMenuLabel</include>

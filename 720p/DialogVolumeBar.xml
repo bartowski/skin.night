@@ -1,56 +1,52 @@
-﻿<?xml version="1.0"?>
+﻿<!--Alaska-->
 <window id="104">
-	<defaultcontrol>1</defaultcontrol>
+	<animation type="WindowOpen" reversible="false">
+		<effect type="zoom" start="80" end="100" center="1580,125" delay="200" easing="out" tween="back" time="300" />
+		<effect type="fade" delay="200" start="0" end="100" time="300" />
+	</animation>
+	<animation type="WindowClose" reversible="false">
+		<effect type="zoom" start="100" end="80" center="1580,125" easing="in" tween="back" time="300" />
+		<effect type="fade" start="100" end="0" time="300" />
+	</animation>
 	<controls>
 		<control type="group">
-			<posx>902</posx>
-			<posy>10</posy>
-			<animation effect="slide" start="0,0" end="-420,0" time="0" condition="Window.IsActive(133) | Window.IsActive(112)">Conditional</animation>
-			<visible>!Window.IsVisible(mutebug)</visible>
-			 <control type="image">
-				<posx>140</posx>
-				<posy>-16</posy>
-				<width>240</width>
-				<height>40</height>
-				<texture flipy="true" border="20,20,20,2">Confluence/InfoMessagePanel2.png</texture>
-			</control>
+			<posx>880</posx>
+			<posy>90</posy>
+			<width>707</width>
+			<height>183</height>
 			<control type="group">
-				<posx>20</posx>
-				<posy>-10</posy>
 				<control type="image">
-					<description>speaker image</description>
-					<posx>288</posx>
-					<posy>0</posy>
-					<width>42</width>
-					<height>32</height>
-					<aspectratio>keep</aspectratio>
-					<texture flipx="true">icon_volume_on.png</texture>
-					<colordiffuse>ff6d6d6d</colordiffuse>
-				</control>
-				<control type="image">
-					<description>dotted line</description>
-					<posx>268</posx>
-					<posy>6</posy>
-					<width>3</width>
-					<height>20</height>
-					<texture>dotted_line_divider.png</texture>
-					<colordiffuse>ff6d6d6d</colordiffuse>
+					<posx>322</posx>
+					<posy>10</posy>
+					<width>77</width>
+					<height>342</height>
+					<texture>dialogs/volume_back.png</texture>
 				</control>
 				<control type="progress" id="1">
 					<description>Progressbar</description>
-					<posx>140</posx>
-					<posy>9</posy>
-					<width>120</width>
-					<height>14</height>
+					<posx>226</posx>
+					<posy>160</posy>
+					<width>240</width>
+					<height>28</height>
 					<info>Player.Volume</info>
-					<texturebg>osd_volume_indicator_background.png</texturebg>
-					<lefttexture>osd_volume_indicator_left.png</lefttexture>
-					<midtexture>osd_volume_indicator.png</midtexture>
-					<righttexture>osd_volume_indicator_right.png</righttexture>
+					<lefttexture>-</lefttexture>
+					<midtexture>dialogs/osd_volume.png</midtexture>
+					<righttexture>-</righttexture>
 					<overlaytexture>-</overlaytexture>
 					<visible>true</visible>
+					<animation effect="rotate" center="auto" start="90" end="90" time="0" condition="true">Conditional</animation>
 				</control>
+
+				<control type="image">
+					<posx>322</posx>
+					<posy>10</posy>
+					<width>77</width>
+					<height>342</height>
+					<texture>dialogs/volume_cover.png</texture>
+				</control>
+				
 			</control>
 		</control>
+		
 	</controls>
 </window>

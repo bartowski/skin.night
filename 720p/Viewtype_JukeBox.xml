@@ -6,10 +6,10 @@
 	<control type="image">
 		<include>Dimensions_Fullscreen</include>
 		<texture>music/jukebox_underlay1.png</texture>
-		<visible>Control.IsVisible(50)</visible>
+		<visible>Control.IsVisible(54)</visible>
 	</control>
 	
-		<control type="panel" id="50">
+		<control type="panel" id="54">
 			<viewtype label="$LOCALIZE[31066]">list</viewtype>
 			<posx>366</posx>
 			<posy>460</posy>
@@ -19,7 +19,7 @@
 			<scrolltime>300</scrolltime>
 			<orientation>horizontal</orientation>
 			<onup>7000</onup>
-			<ondown>50</ondown>
+			<ondown>7000</ondown>
 			<visible>!Skin.HasSetting(no_Jukebox) + !Container.Content(Plugins)</visible>	
 			<itemlayout width="400" height="64">
 				<control type="image">
@@ -159,14 +159,14 @@
 		<height>178</height>
 		<aspectratio stretchdiffuse="false">stretch</aspectratio>
 		<texture>music/row_fake_cds.png</texture>
-		<visible>Control.IsVisible(50) + [Container.Content(albums) | Container.Content(artists)]</visible>
+		<visible>Control.IsVisible(54) + [Container.Content(albums) | Container.Content(artists)]</visible>
 	</control>
 		
 <control type="group">
 <posx>-20</posx>
 <posy>10</posy>musicwallframeF.png
 	<control type="image">
-		<visible>Control.IsVisible(50) + [Container.Content(albums) | Container.Content(artists)]</visible>
+		<visible>Control.IsVisible(54) + [Container.Content(albums) | Container.Content(artists)]</visible>
 		<posx>570</posx>
 		<posy>190</posy>
 		<width>220</width>
@@ -176,7 +176,7 @@
 		<aspectratio scalediffuse="false">stretch</aspectratio>
 	</control>
 	<control type="image">
-		<visible>Control.IsVisible(50) + [Container.Content(albums) | Container.Content(artists)]</visible>
+		<visible>Control.IsVisible(54) + [Container.Content(albums) | Container.Content(artists)]</visible>
 		<posx>552</posx>
 		<posy>172</posy>
 		<width>256</width>
@@ -185,7 +185,7 @@
 		<aspectratio scalediffuse="false">stretch</aspectratio>
 	</control>
 	<!--<control type="image">
-		<visible>Control.IsVisible(50) + Container.OnPrevious</visible>
+		<visible>Control.IsVisible(54) + Container.OnPrevious</visible>
 		<posx>570</posx>
 		<posy>190</posy>
 		<width>218</width>
@@ -195,7 +195,7 @@
 		<animation effect="slide" start="0,0" end="0,200" time="200">Hidden</animation>
 	</control>
 	<control type="image">
-		<visible>Control.IsVisible(50) + Container.OnNext</visible>
+		<visible>Control.IsVisible(54) + Container.OnNext</visible>
 		<posx>570</posx>
 		<posy>190</posy>
 		<width>218</width>
@@ -211,7 +211,7 @@
 		<width>218</width>
 		<height>200</height>
 		<texture>music/no_cd.png</texture>
-		<visible>Control.IsVisible(50) + !Player.HasMedia + !Container.Content(songs)</visible>
+		<visible>Control.IsVisible(54) + !Player.HasMedia + !Container.Content(songs)</visible>
 	</control>
 	<control type="image">
 		<posx>552</posx>
@@ -219,29 +219,29 @@
 		<width>211</width>
 		<height>192</height>
 		<texture diffuse="music/music_cover_diffuse.png">$INFO[MusicPlayer.Cover]</texture>
-		<visible>Control.IsVisible(50) + Player.HasMedia</visible>
+		<visible>Control.IsVisible(54) + Player.HasMedia</visible>
 	</control>
 	<control type="image">
 		<posx>552</posx>
 		<posy>476</posy>
 		<width>211</width>
 		<height>192</height>
-		<texture diffuse="music/music_cover_diffuse.png">$INFO[ListItem.Icon]</texture>
-		<visible>Control.IsVisible(50) + !Player.HasMedia + Container.Content(songs)</visible>
+		<texture background="true" diffuse="music/music_cover_diffuse.png">$INFO[ListItem.Icon]</texture>
+		<visible>Control.IsVisible(54) + !Player.HasMedia + Container.Content(songs)</visible>
 	</control>
 	<control type="image">
 		<posx>370</posx>
 		<posy>146</posy>
 		<width>585</width>
 		<height>286</height>
-		<texture diffuse="music/jukebox_fanart_diffuse.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
-		<visible>Control.IsVisible(50) + Container.Content(songs)</visible>
+		<texture diffuse="music/jukebox_fanart_diffuse.png" fallback="special://skin/media/backgrounds/music.jpg" background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+		<visible>Control.IsVisible(54) + Container.Content(songs)</visible>
 	</control>
 	
 	<control type="image">
 		<include>Dimensions_Fullscreen</include>
 		<texture>music/jukebox1.png</texture>
-		<visible>Control.IsVisible(50)</visible>
+		<visible>Control.IsVisible(54)</visible>
 	</control>
 	
 	
@@ -255,7 +255,7 @@
 		<font>Font_Bartowski_Digital_Clock</font>
 		<textcolor>ff67ffff</textcolor>
 		<label>$LOCALIZE[31004]</label>
-		<visible>Control.IsVisible(50) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)</visible>
+		<visible>Control.IsVisible(54) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)</visible>
 	</control>
 	<control type="label">
 		<description>Artists</description>
@@ -267,7 +267,7 @@
 		<font>Font_Bartowski_Digital_Clock</font>
 		<textcolor>ff67ffff</textcolor>
 		<label>$LOCALIZE[133]</label>
-		<visible>Control.IsVisible(50) + Container.Content(artists) + !Container.Content(songs) + !Container.Content(albums)</visible>
+		<visible>Control.IsVisible(54) + Container.Content(artists) + !Container.Content(songs) + !Container.Content(albums)</visible>
 	</control>
 	<control type="label">
 		<description>Albums</description>
@@ -279,7 +279,7 @@
 		<font>Font_Bartowski_Digital_Clock</font>
 		<textcolor>ff67ffff</textcolor>
 		<label>$LOCALIZE[132]</label>
-		<visible>Control.IsVisible(50) + !Container.Content(songs) + Container.Content(albums)</visible>
+		<visible>Control.IsVisible(54) + !Container.Content(songs) + Container.Content(albums)</visible>
 	</control>
 	<control type="label">
 		<description>Songs</description>
@@ -291,7 +291,7 @@
 		<font>Font_Bartowski_Digital_Clock</font>
 		<textcolor>ff67ffff</textcolor>
 		<label>$LOCALIZE[134]</label>
-		<visible>Control.IsVisible(50) + Container.Content(songs) + !Container.Content(albums)</visible>
+		<visible>Control.IsVisible(54) + Container.Content(songs) + !Container.Content(albums)</visible>
 	</control>
 	<control type="label">
 		<description>Please Choose a Song</description>
@@ -303,7 +303,7 @@
 		<font>Font_Bartowski_Digital_Clock</font>
 		<textcolor>ff67ffff</textcolor>
 		<label>$LOCALIZE[31233]</label>
-		<visible>Control.IsVisible(50) + !Player.HasMedia</visible>
+		<visible>Control.IsVisible(54) + !Player.HasMedia</visible>
 	</control>
 	<control type="label">
 		<posx>560</posx>
@@ -315,7 +315,7 @@
 		<textcolor>ff67ffff</textcolor>
 		<font>Font_Bartowski_Digital_Clock</font>
 		<align>center</align>
-		<visible>Control.IsVisible(50) + Player.HasMedia</visible>
+		<visible>Control.IsVisible(54) + Player.HasMedia</visible>
 	</control>
 	<control type="label">
 		<posx>560</posx>
@@ -327,8 +327,8 @@
 		<textcolor>ff67ffff</textcolor>
 		<font>Font_Bartowski_Digital_Clock</font>
 		<align>center</align>
-		<visible>Control.IsVisible(50) + Player.HasMedia</visible>
-		<animation type="Conditional" reversible="false" condition="Control.IsVisible(50) + Player.HasMedia" loop="true">
+		<visible>Control.IsVisible(54) + Player.HasMedia</visible>
+		<animation type="Conditional" reversible="false" condition="Control.IsVisible(54) + Player.HasMedia" loop="true">
 			<effect type="fade" start="0" end="100" time="500" delay="0" />
 			<effect type="fade" start="100" end="0" time="500" delay="7000" />
 			<effect type="fade" start="100" end="0" time="500" delay="14000" />
@@ -345,8 +345,8 @@
 		<textcolor>ff67ffff</textcolor>
 		<font>Font_Bartowski_Digital_Clock</font>
 		<align>center</align>
-		<visible>Control.IsVisible(50) + Player.HasMedia</visible>
-		<animation type="Conditional" reversible="false" condition="Control.IsVisible(50) + Player.HasMedia" loop="true">
+		<visible>Control.IsVisible(54) + Player.HasMedia</visible>
+		<animation type="Conditional" reversible="false" condition="Control.IsVisible(54) + Player.HasMedia" loop="true">
 			<effect type="fade" start="0" end="100" time="500" delay="7500" />
 			<effect type="fade" start="100" end="0" time="500" delay="14000" />
 		</animation>

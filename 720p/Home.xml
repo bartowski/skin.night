@@ -474,10 +474,15 @@
 					</control>
 					<control type="button" id="90117">
 						<include>ButtonHomeSubCommonValues</include>
+						<label>$LOCALIZE[136]</label>
+						<onclick>ActivateWindow(VideoLibrary,Playlists,return)</onclick>
+					</control>
+					<control type="button" id="90118">
+						<include>ButtonHomeSubCommonValues</include>
 						<label>$LOCALIZE[31081]</label>
 						<onclick>ActivateWindow(VideoLibrary,RecentlyAddedMovies,return)</onclick>
 					</control>
-					<control type="button" id="90118">
+					<control type="button" id="90119">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>20389</label>
 						<onclick>ActivateWindow(VideoLibrary,MusicVideoTitles,return)</onclick>
@@ -648,36 +653,59 @@
 					<ondown>9017</ondown>
 					<itemgap>0</itemgap>
 					<visible>Container(300).HasFocus(1)</visible>
+					<control type="button" id="90170">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(Menu_Custom15_Label)]</label>
+						<onclick>$INFO[Skin.String(Menu_Custom15_Path)]</onclick>
+						<visible>Skin.HasSetting(Menu_Custom15)</visible>
+					</control>
 					<control type="button" id="90171">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(Menu_Custom16_Label)]</label>
+						<onclick>XBMC.ActivateWindow(musiclibrary,$INFO[Skin.String(Menu_Custom16_Path)],return)</onclick>
+						<visible>Skin.HasSetting(Menu_Custom16)</visible>
+					</control>
+					<control type="button" id="90172">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(Menu_Custom17_Label)]</label>
+						<onclick>XBMC.ActivateWindow(musiclibrary,$INFO[Skin.String(Menu_Custom17_Path)],return)</onclick>
+						<visible>Skin.HasSetting(Menu_Custom17)</visible>
+					</control>
+					<control type="button" id="90173">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>$INFO[Skin.String(Menu_Custom18_Label)]</label>
+						<onclick>XBMC.ActivateWindow(musiclibrary,$INFO[Skin.String(Menu_Custom18_Path)],return)</onclick>
+						<visible>Skin.HasSetting(Menu_Custom18)</visible>
+					</control>
+					<control type="button" id="90174">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$LOCALIZE[133]</label>
 						<onclick>ActivateWindow(MusicLibrary,Artists,return)</onclick>
 						<visible>Library.HasContent(Music)</visible>
 					</control>
-					<control type="button" id="90172">
+					<control type="button" id="90175">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$LOCALIZE[132]</label>
 						<onclick>ActivateWindow(MusicLibrary,Albums,return)</onclick>
 						<visible>Library.HasContent(Music)</visible>
 					</control>
-					<control type="button" id="90173">
+					<control type="button" id="90176">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$LOCALIZE[134]</label>
 						<onclick>ActivateWindow(MusicLibrary,Songs,return)</onclick>
 						<visible>Library.HasContent(Music)</visible>
 					</control>
-					<control type="button" id="90174">
+					<control type="button" id="90177">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$LOCALIZE[744]</label>
 						<onclick>ActivateWindow(MusicFiles)</onclick>
 					</control>
-					<control type="button" id="90175">
+					<control type="button" id="90178">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>$LOCALIZE[14022]</label>
-						<onclick>ActivateWindow(MusicLibrary)</onclick>
-						<visible>Library.HasContent(Music)</visible>
+						<label>$LOCALIZE[136]</label>
+						<onclick>ActivateWindow(MusicLibrary,Playlists,return)</onclick>
 					</control>
-					<control type="button" id="90176">
+					<control type="button" id="90179">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$LOCALIZE[31007]</label>
 						<onclick>ActivateWindow(MusicLibrary,Plugins)</onclick>
