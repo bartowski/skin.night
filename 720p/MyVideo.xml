@@ -34,6 +34,8 @@
 		<include>Trailer_Files</include>
 		<include>Trailer_Poster</include>
 		
+		<include>Global_Time_TopRight_Files</include>
+		
 		<include>Music_Global_TopRight</include>
 		<include>Music_Global_Showcase</include>
 		<include>Music_Global_LowerRight</include>
@@ -191,9 +193,10 @@
 					<include>WindowMenuButton</include>
 					<label>137</label>
 				</control>	
-				<control type="button" id="19">
+				<control type="button" id="21">
 					<include>WindowMenuButton</include>
-					<label>587</label>
+					<label>29800</label>
+					<onclick>ReplaceWindow(VideoLibrary)</onclick>
 				</control>
 			</control>
 			<control type="grouplist">

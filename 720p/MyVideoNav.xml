@@ -159,15 +159,15 @@
 					<selected>Skin.HasSetting(3dLandscape_Fanart)</selected>
 					<visible>Control.IsVisible(53)</visible>
 				</control>
-				<!--<control type="togglebutton" id="27">
+				<control type="togglebutton" id="27">
 					<description>Toggle MoviesFanart</description>
 					<include>WindowMenuButton</include>
-					<label>$LOCALIZE[31219]</label>
-					<altlabel>$LOCALIZE[31220]</altlabel>
-					<onclick>Skin.ToggleSetting(3dland_jpg)</onclick>
-					<selected>Skin.HasSetting(3dland_jpg)</selected>
-					<visible>Control.IsVisible(53) + [Container.Content(tvshows) | Container.Content(seasons)]</visible>
-				</control>-->
+					<label>Remove Info</label>
+					<altlabel>Show Info</altlabel>
+					<onclick>Skin.ToggleSetting(clean_poster)</onclick>
+					<selected>Skin.HasSetting(clean_poster)</selected>
+					<visible>Control.IsVisible(50) + Container.Content(movies)</visible>
+				</control>
 				<control type="togglebutton" id="28">
 					<description>Toggle MoviesFanart</description>
 					<include>WindowMenuButton</include>
@@ -257,9 +257,11 @@
 					<include>WindowMenuButton</include>
 					<label>137</label>
 				</control>	
-				<control type="button" id="19">
+				<control type="button" id="21">
 					<include>WindowMenuButton</include>
-					<label>587</label>
+					<label>744</label>
+					<onclick>ReplaceWindow(VideoFiles)</onclick>
+					<visible>![Control.IsVisible(50) + Container.Content(movies)]</visible>
 				</control>
 			</control>
 			<control type="grouplist">
@@ -286,6 +288,11 @@
 				<label>$LOCALIZE[14018]</label>
 				<visible>Control.IsVisible(50) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart)</visible>		
 			</control>
+			<control type="button" id="46">
+				<include>WindowMenuLabel</include>
+				<label>$LOCALIZE[14018]</label>
+				<visible>Control.IsVisible(50) + Container.Content(movies)</visible>		
+			</control>
 			<control type="button" id="41">
 				<include>WindowMenuLabel</include>
 				<!-- LOC -->
@@ -304,229 +311,11 @@
 			<control type="button" id="44">
 				<include>WindowMenuLabel</include>
 				<!-- LOC -->
-				<label>$LOCALIZE[369]</label>
+				<label>$LOCALIZE[240]</label>
+				<visible>![Control.IsVisible(50) + Container.Content(movies)]</visible>
 			</control>				
 		</control>
-		<!--
-		<control type="textbox">
-			<posx>720</posx>
-			<posy>200</posy>
-			<width>270</width>
-			<height>200</height>
-			<font>Font_Bartowski_Showcase_plot</font>
-			<textcolor>black</textcolor>
-			<label>$LOCALIZE[31266]</label>
-			<align>justify</align>
-			<visible allowhiddenfocus="true">Control.HasFocus(20) + !Skin.HasSetting(LockViews)</visible>
-		</control>
-		<control type="textbox">
-			<posx>720</posx>
-			<posy>200</posy>
-			<width>270</width>
-			<height>200</height>
-			<font>Font_Bartowski_Showcase_plot</font>
-			<textcolor>black</textcolor>
-			<label>$LOCALIZE[31267]</label>
-			<align>justify</align>
-			<visible allowhiddenfocus="true">[Control.HasFocus(22) | Control.HasFocus(28) | Control.HasFocus(31) | Control.HasFocus(33)] + !Skin.HasSetting(LockViews)</visible>
-		</control>
-		<control type="textbox">
-			<posx>720</posx>
-			<posy>200</posy>
-			<width>270</width>
-			<height>200</height>
-			<font>Font_Bartowski_Showcase_plot</font>
-			<textcolor>black</textcolor>
-			<label>$LOCALIZE[31268]</label>
-			<align>justify</align>
-			<visible allowhiddenfocus="true">Control.HasFocus(25) + !Skin.HasSetting(LockViews)</visible>
-		</control>
-		<control type="textbox">
-			<posx>720</posx>
-			<posy>200</posy>
-			<width>270</width>
-			<height>200</height>
-			<font>Font_Bartowski_Showcase_plot</font>
-			<textcolor>black</textcolor>
-			<label>$LOCALIZE[31269]</label>
-			<align>justify</align>
-			<visible allowhiddenfocus="true">Control.HasFocus(23) + !Skin.HasSetting(LockViews)</visible>
-		</control>
-		<control type="textbox">
-			<posx>720</posx>
-			<posy>200</posy>
-			<width>270</width>
-			<height>200</height>
-			<font>Font_Bartowski_Showcase_plot</font>
-			<textcolor>black</textcolor>
-			<label>$LOCALIZE[31270]</label>
-			<align>justify</align>
-			<visible allowhiddenfocus="true">[Control.HasFocus(27) | Control.HasFocus(29)]+ !Skin.HasSetting(LockViews)</visible>
-		</control>
-		<control type="textbox">
-			<posx>720</posx>
-			<posy>200</posy>
-			<width>270</width>
-			<height>200</height>
-			<font>Font_Bartowski_Showcase_plot</font>
-			<textcolor>black</textcolor>
-			<label>$LOCALIZE[31271]</label>
-			<align>justify</align>
-			<visible allowhiddenfocus="true">Control.HasFocus(24) + !Skin.HasSetting(LockViews)</visible>
-		</control>
-		<control type="textbox">
-			<posx>720</posx>
-			<posy>200</posy>
-			<width>270</width>
-			<height>200</height>
-			<font>Font_Bartowski_Showcase_plot</font>
-			<textcolor>black</textcolor>
-			<label>$LOCALIZE[31005]</label>
-			<align>justify</align>
-			<visible allowhiddenfocus="true">Control.HasFocus(32) + !Skin.HasSetting(LockViews)</visible>
-		</control>
-		<control type="textbox">
-			<posx>720</posx>
-			<posy>200</posy>
-			<width>270</width>
-			<height>200</height>
-			<font>Font_Bartowski_Showcase_plot</font>
-			<textcolor>black</textcolor>
-			<label>$LOCALIZE[31272]</label>
-			<align>justify</align>
-			<visible allowhiddenfocus="true">Control.HasFocus(3) + !Skin.HasSetting(LockViews)</visible>
-		</control>
-		<control type="textbox">
-			<posx>720</posx>
-			<posy>200</posy>
-			<width>270</width>
-			<height>200</height>
-			<font>Font_Bartowski_Showcase_plot</font>
-			<textcolor>black</textcolor>
-			<label>$LOCALIZE[31273]</label>
-			<align>justify</align>
-			<visible allowhiddenfocus="true">Control.HasFocus(14) + !Skin.HasSetting(LockViews)</visible>
-		</control>
-		<control type="textbox">
-			<posx>720</posx>
-			<posy>200</posy>
-			<width>270</width>
-			<height>200</height>
-			<font>Font_Bartowski_Showcase_plot</font>
-			<textcolor>black</textcolor>
-			<label>$LOCALIZE[31274]</label>
-			<align>justify</align>
-			<visible allowhiddenfocus="true">Control.HasFocus(8) + !Skin.HasSetting(LockViews)</visible>
-		</control>
 		
-		<control type="group">
-		<posx>710</posx>
-		<posy>280</posy>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>300</width>
-				<height>168</height>
-				<texture>extras/viewoptions/views.png</texture>
-				<visible allowhiddenfocus="true">Control.HasFocus(20) + !Skin.HasSetting(LockViews)</visible>
-			</control>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>300</width>
-				<height>168</height>
-				<texture>extras/viewoptions/showcase_fanart.png</texture>
-				<visible allowhiddenfocus="true">Control.HasFocus(22) + !Skin.HasSetting(LockViews)</visible>
-			</control>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>300</width>
-				<height>168</height>
-				<texture>extras/viewoptions/showcase_extrathumbs.png</texture>
-				<visible allowhiddenfocus="true">Control.HasFocus(25) + !Skin.HasSetting(LockViews)</visible>
-			</control>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>300</width>
-				<height>168</height>
-				<texture>extras/viewoptions/files_fanart.png</texture>
-				<visible allowhiddenfocus="true">Control.HasFocus(28) + !Skin.HasSetting(LockViews)</visible>
-			</control>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>300</width>
-				<height>168</height>
-				<texture>extras/viewoptions/poster_fanart.png</texture>
-				<visible allowhiddenfocus="true">Control.HasFocus(31) + !Skin.HasSetting(LockViews)</visible>
-			</control>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>300</width>
-				<height>168</height>
-				<texture>extras/viewoptions/16x9_nologo.png</texture>
-				<visible allowhiddenfocus="true">Control.HasFocus(24) + !Skin.HasSetting(LockViews)</visible>
-			</control>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>300</width>
-				<height>168</height>
-				<texture>extras/viewoptions/landscape.jpg</texture>
-				<visible allowhiddenfocus="true">[Control.HasFocus(27) | Control.HasFocus(29)]+ !Skin.HasSetting(LockViews)</visible>
-			</control>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>300</width>
-				<height>168</height>
-				<texture>extras/viewoptions/posterplus.png</texture>
-				<visible allowhiddenfocus="true">Control.HasFocus(32) + !Skin.HasSetting(LockViews)</visible>
-			</control>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>300</width>
-				<height>168</height>
-				<texture>extras/viewoptions/wall_fanart.png</texture>
-				<visible allowhiddenfocus="true">Control.HasFocus(33) + !Skin.HasSetting(LockViews)</visible>
-			</control>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>300</width>
-				<height>168</height>
-				<texture>extras/viewoptions/flags.png</texture>
-				<visible allowhiddenfocus="true">Control.HasFocus(23) + !Skin.HasSetting(LockViews)</visible>
-			</control>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>300</width>
-				<height>168</height>
-				<texture>extras/viewoptions/sort.png</texture>
-				<visible allowhiddenfocus="true">Control.HasFocus(3) + !Skin.HasSetting(LockViews)</visible>
-			</control>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>300</width>
-				<height>168</height>
-				<texture>extras/viewoptions/watched.png</texture>
-				<visible allowhiddenfocus="true">Control.HasFocus(14) + !Skin.HasSetting(LockViews)</visible>
-			</control>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>300</width>
-				<height>168</height>
-				<texture>extras/viewoptions/search.png</texture>
-				<visible allowhiddenfocus="true">Control.HasFocus(8) + !Skin.HasSetting(LockViews)</visible>
-			</control>
-		</control>-->
 	</control>
 	
 	

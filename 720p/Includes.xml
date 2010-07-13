@@ -152,7 +152,6 @@
 					<width>357</width>     
 					<height>318</height> 
 					<texture>common/time_gradient_back.png</texture>
-					<colordiffuse>ff15efd9</colordiffuse>
 				</control>
 				<control type="label">
 					<width>300</width>
@@ -208,6 +207,36 @@
 			<posy>10</posy>
 			<include>Animation_BackdropFade</include>
 			<visible>Skin.HasSetting(library_global_clock) + !Player.HasMedia + Window.IsActive(musiclibrary) + [Control.IsVisible(58) | Control.IsVisible(55) | Control.IsVisible(50) | Control.IsVisible(53)]</visible>
+				<control type="image"> 
+					<posx>-380</posx>
+					<posy>-10</posy>   
+					<width>413</width>     
+					<height>215</height> 
+					<texture>common/library_time_gradient.png</texture>
+				</control>
+				<control type="label">
+					<width>300</width>
+					<font>Font_Time_Global</font>
+					<textcolor>mainblue</textcolor>
+					<info>System.Time(hh:mm xx)</info>
+					<align>right</align>
+				</control>
+				<control type="label">
+					<posy>24</posy>
+					<width>300</width>
+					<font>Font_Date</font>
+					<textcolor>white</textcolor>
+					<info>System.Date</info>
+					<align>right</align>
+				</control>
+		</control>
+	</include>
+	<include name="Global_Time_TopRight_Files">
+		<control type="group">
+			<posx>1260</posx>
+			<posy>10</posy>
+			<include>Animation_BackdropFade</include>
+			<visible>Skin.HasSetting(library_global_clock) + !Player.HasMedia</visible>
 				<control type="image"> 
 					<posx>-380</posx>
 					<posy>-10</posy>   

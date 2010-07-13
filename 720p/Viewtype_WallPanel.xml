@@ -424,7 +424,7 @@
 				<posy>224</posy>
 				<width>460</width>
 				<height>310</height>
-				<align>left</align>
+				<align>justify</align>
 				<info>ListItem.Plot</info>
 				<font>Font_Bartowski_Movies_Plot</font>
 				<textcolor>ffffffff</textcolor>
@@ -437,7 +437,7 @@
 				<posy>224</posy>
 				<width>460</width>
 				<height>264</height>
-				<align>left</align>
+				<align>justify</align>
 				<info>ListItem.Plot</info>
 				<font>Font_Bartowski_Movies_Plot</font>
 				<textcolor>ffffffff</textcolor>

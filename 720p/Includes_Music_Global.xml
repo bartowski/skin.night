@@ -567,7 +567,7 @@
 		</control>
 		<control type="group">
 		<include>Animation_CommonFade</include>
-		<visible>[Control.IsVisible(58) | Control.IsVisible(59) | Control.IsVisible(55)] + Window.IsActive(musiclibrary) + Player.HasAudio + !Skin.HasSetting(zune_music)</visible>		
+		<visible>[Control.IsVisible(50) | Control.IsVisible(58) | Control.IsVisible(59) | Control.IsVisible(55)] + Window.IsActive(musiclibrary) + Player.HasAudio + !Skin.HasSetting(zune_music)</visible>		
 			<control type="group">
 				<posx>1086</posx>
 				<posy>130</posy>
@@ -766,7 +766,7 @@
 		<posx>1000</posx>
 		<posy>-10</posy>
 		<include>Animation_CommonFade</include>
-		<visible>[Control.IsVisible(58) | Control.IsVisible(59) | Control.IsVisible(55)] + Window.IsActive(musiclibrary) + Player.HasAudio + Skin.HasSetting(zune_music)</visible>
+		<visible>[Control.IsVisible(50) | Control.IsVisible(58) | Control.IsVisible(59) | Control.IsVisible(55)] + Window.IsActive(musiclibrary) + Player.HasAudio + Skin.HasSetting(zune_music)</visible>
 			<control type="image">
 				<description>cover image</description>
 				<posx>0</posx>

@@ -52,7 +52,7 @@
 		<include>Animation_HiddenByInfo</include>
 		<include>Music_Global_TopRight_Music_Showcase</include>
 		<include>Music_Global_Lowerleft_Music</include>
-		<include>Music_Global_LowerRight_music</include>
+		<include>Music_Global_LowerRight</include>
 	</control>
 		
 		<include>7000_has_focus</include>

@@ -53,7 +53,7 @@
 	</include>
 	<include name="Trailer_Landscape_Fanart"><!--Landscape Season Episodes-->
 		<control type="group">
-			<visible>Player.HasVideo + [Control.IsVisible(633) | Control.IsVisible(593)]</visible>
+			<visible>Player.HasVideo + [Control.IsVisible(53) | Control.IsVisible(633) | Control.IsVisible(593)]</visible>
 			<animation effect="zoom" start="0" end="70" time="0" delay="0" condition="Player.HasVideo">Conditional</animation>
 			<animation effect="fade" start="0" end="100" time="400" delay="800" condition="Player.HasVideo">Conditional</animation>
 			<!--Landscape TVshows-->
@@ -253,30 +253,7 @@
 		</control>
 	</include>
 	</include>
-	<include name="Trailer_3Dland">
-		<control type="group">
-			<visible>Control.IsVisible(53) + Player.HasVideo</visible>
-			<animation effect="zoom" start="0" end="60" time="0" delay="0" condition="Player.HasVideo">Conditional</animation>
-			<animation effect="fade" start="0" end="100" time="400" delay="800" condition="Player.HasVideo">Conditional</animation>
-			<animation effect="slide" start="0,0" end="0,140" time="0" condition="Container.Content(tvshows) | Container.Content(seasons)">Conditional</animation>
-			<posx>0</posx>
-			<posy>160</posy>
-			<control type="image"> 
-				<description>trailer image</description>
-				<posx>-70</posx>
-				<posy>-70</posy>   
-				<width>693</width>     
-				<height>445</height> 
-				<texture>dialogs/trailer_diffuse_back.png</texture>
-			</control>
-			<control type="videowindow" id="8">
-				<posx>30</posx>
-				<posy>26</posy>
-				<width>500</width>
-				<height>256</height>
-			</control>
-		</control>
-	</include>
+	
 	<include name="Trailer_WallPanel">
 		<control type="group">
 			<visible>Control.IsVisible(597) + Player.HasVideo</visible>

@@ -3,10 +3,17 @@
 <window id="120">
 	<defaultcontrol>2001</defaultcontrol>
 	<controls>
-		
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>280</height>
+			<texture>osd/player_controls_back.png</texture>
+			<include>Animation_BackdropFade</include>
+		</control>
 		<control type="group">
 			<posx>0</posx>
-			<posy>560</posy>
+			<posy>10</posy>
 			<width>1000</width>
 			<height>151</height>
 			<animation type="WindowOpen">
@@ -30,8 +37,8 @@
 				<visible allowhiddenfocus="true">Controlgroup(2001).HasFocus</visible>
 				<animation effect="slide" start="0,0" end="-110,0" time="0" condition="LastFM.RadioPlaying">Conditional</animation>
 				<include>Animation_CommonFade</include>
-				<posx>965</posx>
-				<posy>25</posy>
+				<posx>465</posx>
+				<posy>0</posy>
 				<width>475</width>
 				<height>100</height>
 				<itemgap>-20</itemgap>
@@ -107,8 +114,8 @@
 			<control type="grouplist" id="2002">
 				<visible allowhiddenfocus="true">Controlgroup(2002).HasFocus</visible>
 				<include>Animation_CommonFade</include>
-				<posx>855</posx>
-				<posy>25</posy>
+				<posx>355</posx>
+				<posy>0</posy>
 				<width>475</width>
 				<height>100</height>
 				<itemgap>-20</itemgap>
@@ -157,21 +164,20 @@
 					<texturenofocus border="1">osd/button_bookmark_nf.png</texturenofocus>
 					<onclick>SetFocus(503)</onclick>
 				</control>
-				<control type="button" id="13">
+				<control type="button" id="500">
 					<description>Visualisation Preset List</description>
 					<height>75</height>
 					<width>75</width>
-					<texturefocus border="1">osd/button_settings_fo.png</texturefocus>
-					<texturenofocus border="1">osd/button_settings_nf.png</texturenofocus>
-					<onclick>ActivateWindow(122)</onclick>
+					<texturefocus border="1">osd/button500_focus.png</texturefocus>
+					<texturenofocus border="1">osd/button500.png</texturenofocus>
 				</control>
 				<control type="button" id="14">
 					<description>Visualisation Settings</description>
 					<height>75</height>
 					<width>75</width>
-					<texturefocus border="1">osd/button_settings_fo.png</texturefocus>
-					<texturenofocus border="1">osd/button_settings_nf.png</texturenofocus>
-					<onclick>ActivateWindow(121)</onclick>
+					<texturefocus border="1">osd/button14_focus.png</texturefocus>
+					<texturenofocus border="1">osd/button14.png</texturenofocus>
+					<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
 				</control>
 			</control>
 			<control type="selectbutton" id="503">

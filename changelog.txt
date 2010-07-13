@@ -1,3 +1,12 @@
+Update 7/12/2010
+  -Change the Home gradients form darkish-blue to black
+  -Added Files option to submenu Movies and View Options
+  -Changed the Files view strikethrough to an "X"
+  -Added time to Music and Video Files mode
+  -Fixed some buttons errors for MusicOSD
+  -Repositioned 'Now Playing' video on 3dLandscape to top left
+  -Added a "Clean Poster" option to Poster view, removes all info but Poster image
+
 Update 7/9/2010
   -Fixed some addons button errors, plus minor addon touchups
   -Created a 3d addon view, also available for album level

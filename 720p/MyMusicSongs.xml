@@ -24,9 +24,10 @@
 		<include>Viewtype_JukeBox</include>
 		<include>Viewtype_MusicShowcase</include>
 		
+		<include>Global_Time_TopRight_Files</include>
 		
+		<include>7000_has_focus</include>
 		
-			<include>7000_has_focus</include>
 	<control type="group">
 		<include>Animation_CommonFade_ViewOptions</include>	
 		<control type="image"><!-- Floor -->

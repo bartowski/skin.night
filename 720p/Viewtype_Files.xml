@@ -110,6 +110,7 @@
 					<font>Font_Bartowski_Episode_ContextMenu</font>
 					<textcolor>Text-Filemode</textcolor>
 					<label>$INFO[ListItem.Label]</label>
+					<animation effect="slide" start="0,0" end="30,0" time="0" condition="[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + stringcompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
 					<visible>!IsEmpty(ListItem.Title) + Window.IsActive(25)</visible>
 				</control>
 				<control type="label">
@@ -124,23 +125,23 @@
 					<visible>Container.Content(movies) + !Skin.HasSetting(Files_Fanart) + !IsEmpty(ListItem.Title)</visible>
 				</control>
 				<control type="image">
-					<posx>10</posx>
-					<posy>20</posy>
-					<width>280</width>
-					<height>8</height>
-					<texture>dialogs/tv/$INFO[ListItem.Overlay]</texture>
+					<posx>24</posx>
+					<posy>11</posy>
+					<width>22</width>
+					<height>25</height>
+					<texture>dialogs/files/$INFO[ListItem.Overlay]</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<animation effect="fade" start="60" end="60" time="0" condition="true">Conditional</animation>
 					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 				</control>
 				<control type="image">
-					<visible>Container.Content(movies)</visible>
-					<posx>10</posx>
-					<posy>20</posy>
-					<width>280</width>
-					<height>8</height>
-					<texture>dialogs/tv/$INFO[ListItem.Overlay]</texture>
+					<posx>24</posx>
+					<posy>11</posy>
+					<width>22</width>
+					<height>25</height>
+					<texture>dialogs/files/$INFO[ListItem.Overlay]</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+					<visible>Skin.HasSetting(movieoverlays) + Container.Content(movies) + !IsEmpty(ListItem.Overlay)</visible>
 				</control>
 			</itemlayout>
 			<focusedlayout width="1210" height="36">
@@ -225,6 +226,7 @@
 					<font>Font_Bartowski_Episode_ContextMenu</font>
 					<textcolor>ffffffff</textcolor>
 					<label>$INFO[ListItem.Label]</label>
+					<animation effect="slide" start="0,0" end="30,0" time="0" condition="[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + stringcompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
 					<visible>!IsEmpty(ListItem.Title) + Window.IsActive(25)</visible>
 				</control>
 				<control type="label">
@@ -238,23 +240,22 @@
 					<visible>!IsEmpty(ListItem.Duration) + !IsEmpty(ListItem.TrackNumber) + [Container.Content(songs) | Window.IsActive(500) | [Window.IsActive(502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]]</visible>
 				</control>
 				<control type="image">
-					<posx>10</posx>
-					<posy>20</posy>
-					<width>280</width>
-					<height>8</height>
-					<texture>dialogs/tv/$INFO[ListItem.Overlay]</texture>
+					<posx>24</posx>
+					<posy>11</posy>
+					<width>22</width>
+					<height>25</height>
+					<texture>dialogs/files/$INFO[ListItem.Overlay]</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 				</control>
 				<control type="image">
-					<visible>Container.Content(movies)</visible>
-					<posx>10</posx>
-					<posy>20</posy>
-					<width>280</width>
-					<height>8</height>
-					<texture>dialogs/tv/$INFO[ListItem.Overlay]</texture>
+					<posx>24</posx>
+					<posy>11</posy>
+					<width>22</width>
+					<height>25</height>
+					<texture>dialogs/files/$INFO[ListItem.Overlay]</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+					<visible>Skin.HasSetting(movieoverlays) + Container.Content(movies) + !IsEmpty(ListItem.Overlay)</visible>
 				</control>
 			</focusedlayout>
 		</control>		
@@ -308,7 +309,7 @@
 	</control>
 	
 	<control type="grouplist">
-		<visible>Control.IsVisible(55) + Container.Content(movies) + !Window.IsActive(videofiles) + !Skin.HasSetting(no_media_flags)</visible>
+		<visible>Control.IsVisible(55) + Container.Content(movies) + !Window.IsActive(videofiles) + !Skin.HasSetting(no_media_flags) + !Skin.HasSetting(Files_Fanart)</visible>
 		<description>Media Codec Flagging Images</description>
 		<posx>864</posx>
 		<posy>680</posy>

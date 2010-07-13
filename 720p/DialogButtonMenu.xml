@@ -58,9 +58,24 @@
 				<align>center</align>
 				<aligny>middle</aligny>
 				<label>$LOCALIZE[31242]</label>
-				<onclick>AlarmClock(shutdowntimer,Shutdown)</onclick>>
+				<onclick>AlarmClock(shutdowntimer,Shutdown)</onclick>
+				<visible>!System.HasAlarm(ShutdownTimer)</visible>
 			</control>
-
+			<control type="button" id="3111">
+				<description>Filemanager</description>
+				<height>30</height>
+				<width min="40" max="170">auto</width>
+				<textoffsety>2</textoffsety>
+				<font>Font_Bartowski_Press_S</font>
+				<textcolor>MainBlack</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus border="5">confluence/button-focus.png</texturefocus>
+				<align>center</align>
+				<aligny>middle</aligny>
+				<label>$LOCALIZE[31243]</label>
+				<onclick>CancelAlarm(ShutdownTimer)</onclick>
+				<visible>System.HasAlarm(ShutdownTimer)</visible>
+			</control>
 			<control type="button" id="3117">
 				<description>Favourites</description>
 				<height>30</height>
