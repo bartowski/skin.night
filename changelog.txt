@@ -1,3 +1,12 @@
+Update 7/15/2010
+  -Home weather widget the one day forecast shows by default, before it had to be selected via submenu
+  -Fixed Music recently added error
+  -Added Library totals to Global Time
+  -Added option to lower Horizontal Home to bottom, option visible when Horizontal is checked
+  -Lowered Recently added Movie/Misc to 3 visible instead of 5 visible
+  -added scrollbar to Music "Shelf" view, fixed some music scrollbar errors
+  -bunch of very minor fixes/tweaks
+
 Update 7/12/2010
   -Change the Home gradients form darkish-blue to black
   -Added Files option to submenu Movies and View Options

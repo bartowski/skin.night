@@ -384,6 +384,21 @@
 						<onclick>Skin.ToggleSetting(horizontal_home)</onclick>
 						<selected>Skin.HasSetting(horizontal_home)</selected>
 					</control>
+					<control type="radiobutton" id="203">
+						<description>Show Recently added info</description>
+						<width>860</width>
+						<height>26</height>
+						<font>Font_KeyboardTitle</font>
+						<textoffsetx>40</textoffsetx>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<align>left</align>
+						<aligny>top</aligny>
+						<label>31271</label>
+						<onclick>Skin.ToggleSetting(horizontal_bottom_align)</onclick>
+						<selected>Skin.HasSetting(horizontal_bottom_align)</selected>
+						<visible>Skin.HasSetting(horizontal_home)</visible>
+					</control>
 					<control type="radiobutton" id="202">
 						<description>Show Recently added info</description>
 						<include>skin_settings_labels</include>
@@ -2405,7 +2420,7 @@
 							<height>26</height>
 							<font>Font_KeyboardTitle</font>
 							<textoffsetx>40</textoffsetx>
-							<label>$LOCALIZE[31267]</label>
+							<label>$LOCALIZE[31270]</label>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<align>left</align>

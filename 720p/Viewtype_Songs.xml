@@ -31,7 +31,7 @@
 			<onup>52</onup>
 			<ondown>52</ondown>
 			<onleft>7000</onleft>
-			<onright>60</onright>
+			<onright>61</onright>
 			<scrolltime>0</scrolltime>
 			<viewtype label="$LOCALIZE[134]">list</viewtype>
 			<orientation>vertical</orientation>
@@ -251,7 +251,7 @@
 		<include>Animation_HiddenByInfo</include>
 		<include>Animation_Viewtype_3dland_Leftplot</include>
 	</control>
-		<control type="scrollbar" id="60">
+		<control type="scrollbar" id="61">
 			<include>Animation_ZoomInZoomOut</include>
 			<posx>1280</posx>
 			<posy>100</posy>

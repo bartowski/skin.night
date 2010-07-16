@@ -61,7 +61,7 @@
 				<onclick>AlarmClock(shutdowntimer,Shutdown)</onclick>
 				<visible>!System.HasAlarm(ShutdownTimer)</visible>
 			</control>
-			<control type="button" id="3111">
+			<control type="button" id="3116">
 				<description>Filemanager</description>
 				<height>30</height>
 				<width min="40" max="170">auto</width>

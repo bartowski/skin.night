@@ -120,7 +120,7 @@
 	<string id="31262">Set Label</string>
 	<string id="31263">Script to Automatically Download Logos</string>
 	<string id="31264">Click to Run the logo script</string>
-	<string id="31265">By clicking the above button, the script will automatically match whatever TV shows you have and then download the correct logo, if there is one, and save it as logo.png in the root of that TV shows folder[CR]**Go to www.lockstockmods.com if you want to download one by one**</string>
+	<string id="31265">By clicking the above button, the script will automatically match whatever TV shows you have and then download the correct logo, if there is one, and save it as logo.png in the root of that TV shows folder[CR]**Go to www.lockstockmods.net if you want to download one by one**</string>
 	
 
 
@@ -210,7 +210,9 @@ just copy the translations from Confluence to here
   <string id="31269">Use a local landcape.jpg instead of regular thumb on TV level</string>
   <string id="31270">User needs a landcape.jpg mage at the root a TV Show folder</string>
   
-  
+  <!-- NEW 6/23-->
+  <string id="40281">Items</string>
+  <string id="31271">Set Home Menu to Bottom</string>
   
   </strings>
 

@@ -4,11 +4,11 @@
 
 		<control type="fixedlist" id="300">
 			<posx>-100</posx>
-			<posy>190</posy>
+			<posy>190</posy><!--540-->
 			<height>466</height>
 			<width>1541</width>
-			<onup></onup>
-			<ondown>9001</ondown>
+			<onup>9001</onup>
+			<ondown></ondown>
 			<onleft>300</onleft>
 			<onright>300</onright>
 			<viewtype>list</viewtype>
@@ -17,6 +17,8 @@
 			<movement>0</movement>
 			<scrolltime>200</scrolltime>
 			<include>Animation_Bartowski_Context_Zoom</include>
+			<visible>Skin.HasSetting(horizontal_home)</visible>	
+			<animation effect="slide" end="0,350" time="0" condition="Skin.HasSetting(horizontal_bottom_align)">conditional</animation>
 			<itemlayout width="300" height="61">
 				<control type="label">
 					<width>500</width>
@@ -27,7 +29,7 @@
 					<font>Font_Bartowski_MainMenu</font>
 					<textcolor>38b8b7b7</textcolor>
 					<label>$INFO[ListItem.label]</label>
-					<animation effect="slide" end="0,-600" time="600" condition="ControlGroup(9001).HasFocus">conditional</animation>
+					<animation effect="slide" end="0,600" time="600" condition="ControlGroup(9001).HasFocus">conditional</animation>
 				</control>			
 			</itemlayout>
 			<focusedlayout width="600" height="61">
@@ -241,7 +243,7 @@
 				<animation effect="fade" start="100" end="0" time="0" condition="!ControlGroup(9001).HasFocus">conditional</animation>
 				<animation effect="fade" start="0" end="100" delay="300" time="200" condition="ControlGroup(9001).HasFocus">conditional</animation>
 				<animation effect="fade" start="100" end="0" time="0" condition="ControlGroup(9001).HasFocus">WindowClose</animation>
-				
+				<animation effect="slide" end="0,350" time="0" condition="Skin.HasSetting(horizontal_bottom_align)">conditional</animation>
 <!--VIDEOS -->	<control type="grouplist" id="9010">
 					<posx>10</posx>
 					<posy>30</posy>
@@ -252,7 +254,7 @@
 					<onleft>9010</onleft>
 					<onright>9010</onright>
 					<onup>300</onup>
-					<ondown>Control.SetFocus(8000,0)</ondown>
+					<ondown>300</ondown>
 					<itemgap>0</itemgap>
 					<visible>Container(300).HasFocus(2)</visible>
 					<control type="button" id="90101">
@@ -306,8 +308,8 @@
 					<onright>9011</onright>
 					<orientation>horizontal</orientation>
 					<align>center</align>
-					<onup>300</onup>
-					<ondown>Control.SetFocus(8000,0)</ondown>
+					<onup>Control.SetFocus(8000,0)</onup>
+					<ondown>300</ondown>
 					<itemgap>0</itemgap>
 					<visible>Container(300).HasFocus(3)</visible>
 					<control type="button" id="90110">
@@ -324,8 +326,8 @@
 					</control>
 					<control type="button" id="90112">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
-						<label>$LOCALIZE[31079]</label>
-						<onclick>ActivateWindow(VideoLibrary,MovieTitles,return)</onclick>
+						<label>$LOCALIZE[744]</label>
+						<onclick>ActivateWindow(VideoFiles)</onclick>
 					</control>
 					<control type="button" id="90113">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
@@ -373,8 +375,8 @@
 					<align>center</align>
 					<onleft>9012</onleft>
 					<onright>9012</onright>
-					<onup>300</onup>
-					<ondown>Control.SetFocus(8001,0)</ondown>
+					<onup>Control.SetFocus(8001,0)</onup>
+					<ondown>300</ondown>
 					<itemgap>0</itemgap>
 					<visible>Container(300).HasFocus(5)</visible>
 					<control type="button" id="90128">
@@ -393,11 +395,6 @@
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
 						<label>$LOCALIZE[744]</label>
 						<onclick>ActivateWindow(VideoFiles)</onclick>
-					</control>
-					<control type="button" id="90121">
-						<include>ButtonHomeSubCommonValues_Horizontal</include>
-						<label>$LOCALIZE[31079]</label>
-						<onclick>ActivateWindow(VideoLibrary,TVShowTitles,return)</onclick>
 					</control>
 					<control type="button" id="90122">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
@@ -532,8 +529,8 @@
 					<align>center</align>
 					<onleft>9017</onleft>
 					<onright>9017</onright>
-					<onup>300</onup>
-					<ondown>Control.SetFocus(8002,0)</ondown>
+					<onup>Control.SetFocus(8002,0)</onup>
+					<ondown>300</ondown>
 					<itemgap>0</itemgap>
 					<visible>Container(300).HasFocus(1)</visible>
 					<control type="button" id="90170">
@@ -611,7 +608,7 @@
 					<onleft>9018</onleft>
 					<onright>9018</onright>
 					<onup>300</onup>
-					<ondown>Control.SetFocus(8001,0)</ondown>
+					<ondown>300</ondown>
 					<itemgap>0</itemgap>
 					<visible>Container(300).HasFocus(8) | Container(300).HasFocus(14)</visible>
 					<control type="button" id="90181">
@@ -640,7 +637,7 @@
 					<onleft>9019</onleft>
 					<onright>9019</onright>
 					<onup>300</onup>
-					<ondown>Control.SetFocus(8001,0)</ondown>
+					<ondown>300</ondown>
 					<itemgap>0</itemgap>
 					<visible>Container(300).HasFocus(13)</visible>
 					<control type="button" id="90184">
@@ -681,13 +678,13 @@
 						<onclick>ShutDown()</onclick>
 					</control>-->
 				</control>
-				<control type="grouplist" id="9020">
+<!--DVD      --><control type="grouplist" id="9020">
 					<posx>10</posx>
 					<posy>30</posy>
 					<width>600</width>
 					<height>465</height>
 					<onleft>300</onleft>
-					<onright>Control.SetFocus(8001,0)</onright>
+					<onright>300</onright>
 					<onup>9019</onup>
 					<ondown>9019</ondown>
 					<itemgap>0</itemgap>

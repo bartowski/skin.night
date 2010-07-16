@@ -55,6 +55,9 @@
 		<include>Music_Global_LowerRight</include>
 	</control>
 		
+		<include>Global_Time_TopRight_Music</include>
+		<include>Global_Time_LowerLeft_music</include>
+		
 		<include>7000_has_focus</include>
 	<control type="group">
 		<include>Animation_CommonFade_ViewOptions</include>	
@@ -85,7 +88,7 @@
 				<selected>Skin.HasSetting(MusicShowcaseFanart)</selected>
 				<visible>Control.IsVisible(58)</visible>
 			</control>
-			<control type="togglebutton" id="22">
+			<control type="togglebutton" id="23">
 				<description>Toggle MoviesFanart</description>
 				<include>WindowMenuButton</include>
 				<label>$LOCALIZE[31086]</label>
@@ -146,7 +149,7 @@
 	</control>
 				
 		<!--<include>Global_RSS</include>-->
-		<include>Global_Time_TopRight_Music</include>
+		
 		<include>Object_DebugGrid</include>
 
 	</controls>

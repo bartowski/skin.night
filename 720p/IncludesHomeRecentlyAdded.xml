@@ -5,6 +5,7 @@
 			<include>VisibleFadeEffect</include>
 			<animation effect="fade" time="300" delay="1000">WindowOpen</animation>
 			<animation effect="fade" time="200">WindowClose</animation>
+			<animation effect="slide" end="0,-100" time="600" condition="Skin.HasSetting(horizontal_home) + Skin.HasSetting(horizontal_bottom_align)">conditional</animation>
 			<control type="group">
 				<posx>275r</posx>
 				<posy>200</posy>
@@ -12,7 +13,7 @@
 				<include>VisibleFadeEffect</include>
 				<control type="label">
 					<description>Title label</description>
-					<posx>70</posx>
+					<posx>120</posx>
 					<posy>330</posy>
 					<height>20</height>
 					<width>230</width>
@@ -25,9 +26,9 @@
 					<animation effect="slide" start="220,0" end="0,0" time="600" delay="2400" tween="cubic" easing="inout" condition="Container(300).HasFocus(3)">Conditional</animation>
 				</control>
 				<control type="wraplist" id="8000">
-					<posx>-340</posx>
+					<posx>-120</posx>
 					<posy>270</posy>
-					<width>610</width>
+					<width>390</width>
 					<height>1000</height>
 					<onleft>8000</onleft>
 					<onright>8000</onright>
@@ -387,14 +388,15 @@
 		</control>
 			<!--Music widget-->
 			<control type="group">
-				<posx>310r</posx>
+				<posx>90r</posx>
 				<posy>250</posy>
 				<visible>Library.HasContent(Music)</visible>
-				<visible>Skin.HasSetting(merge_version) + Container(300).Hasfocus(1)</visible>
+				<visible>Container(300).Hasfocus(1)</visible>
 				<include>VisibleFadeEffect</include>
+				<animation effect="slide" end="0,-100" time="600" condition="Skin.HasSetting(horizontal_home) + Skin.HasSetting(horizontal_bottom_align)">conditional</animation>
 				<control type="label">
 					<description>Title label</description>
-					<posx>70</posx>
+					<posx>-74</posx>
 					<posy>330</posy>
 					<height>20</height>
 					<width>230</width>
@@ -409,11 +411,11 @@
 				<control type="wraplist" id="8002">
 					<posx>-300</posx>
 					<posy>270</posy>
-					<width>610</width>
+					<width>380</width>
 					<height>1000</height>
-					<onleft>8000</onleft>
-					<onright>8000</onright>
-					<onup>8002</onup>
+					<onleft>8002</onleft>
+					<onright>8002</onright>
+					<onup>300</onup>
 					<ondown>300</ondown>
 					<viewtype label="535">list</viewtype>
 					<orientation>horizontal</orientation>
@@ -448,7 +450,7 @@
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" start="70" end="130" center="auto" tween="back" easing="out" time="500" />
-								<effect type="slide" start="0,0" end="0,-18" time="0" />
+								<effect type="slide" start="0,0" end="0,-10" time="0" />
 							</animation>
 						</control>
 						<control type="image">
@@ -459,7 +461,7 @@
 							<texture>posterframeF.png</texture>
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" start="70" end="130" center="auto" tween="back" easing="out" time="500" />
-								<effect type="slide" start="0,0" end="0,-18" time="0" />
+								<effect type="slide" start="0,0" end="0,-10" time="0" />
 							</animation>
 						</control>
 					</focusedlayout>
