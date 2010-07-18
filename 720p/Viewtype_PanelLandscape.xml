@@ -45,15 +45,15 @@
 				<posy>-126</posy><!-- -105 -->
 				<width>800</width>
 				<height>885</height><!-- 1570  1280 -->
-				<pagecontrol>60</pagecontrol>
 				<scrolltime>300</scrolltime>
 				<orientation>vertical</orientation>
 				<viewtype label="$LOCALIZE[31054]">Wall</viewtype>
 				<onleft>7000</onleft>
-				<onright>7000</onright>
+				<onright>67</onright>
 				<onup>57</onup>
 				<ondown>57</ondown>
 				<preloaditems>2</preloaditems>
+				<pagecontrol>67</pagecontrol>
 				<include>Animation_Viewtype_Panel_FocusArea</include>
 				<include>Animation_HiddenByInfo</include>
 			<itemlayout width="320" height="180">
@@ -395,7 +395,22 @@
 			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Panel_BottomArea</include>
 		</control>
-	
+	<control type="scrollbar" id="67">
+		<include>Animation_ZoomInZoomOut</include>
+		<posx>1280</posx>
+		<posy>100</posy>
+		<width>25</width>
+		<height>460</height>
+		<visible allowhiddenfocus="true">Control.IsVisible(57) + Control.HasFocus(67)</visible>
+		<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+		<textureslidernibfocus>ScrollBarV_Nib_Focus1.png</textureslidernibfocus>
+		<onleft>57</onleft>
+		<onright>57</onright>
+		<showonepage>false</showonepage>
+		<orientation>vertical</orientation>
+		<include>Animation_CommonFade</include>
+		<animation effect="slide" start="0,0" end="-40,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(67)">Conditional</animation>
+	</control>
 		
 	</include>
 </includes>

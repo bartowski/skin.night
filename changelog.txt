@@ -1,4 +1,9 @@
 Update 7/15/2010
+  -Adjust Lower Horizontal home, changed the press up/down to better correspond with being in the middle or at the bottom
+  -Added a scrollbar to all TV/Movies vies but "Wall" and "Logo" I believe
+  -Fixed view options being stuck for Files mode in Music
+
+Update 7/15/2010
   -Home weather widget the one day forecast shows by default, before it had to be selected via submenu
   -Fixed Music recently added error
   -Added Library totals to Global Time

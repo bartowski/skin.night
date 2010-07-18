@@ -35,7 +35,8 @@
 			<onleft>593</onleft>
 			<onright>593</onright>
 			<onup>7000</onup>
-			<ondown></ondown>
+			<ondown>5930</ondown>
+			<pagecontrol>5930</pagecontrol>
 			<viewtype label="$LOCALIZE[31250]">list</viewtype>
 			<orientation>horizontal</orientation>
 			<focusposition>2</focusposition>
@@ -334,6 +335,23 @@
 				<label>[COLOR=ListTrackF][B]$LOCALIZE[368][/COLOR] [COLOR=white]$INFO[ListItem.Rating][/COLOR][/B]      [COLOR=ListTrackF][B]$LOCALIZE[31226][/COLOR] [COLOR=white]$INFO[ListItem.mpaa][/COLOR][/B]</label>
 			</control>
 	</control>
-		<include>Trailer_3Dland</include>
+	
+		<control type="scrollbar" id="5930">
+			<include>Animation_ZoomInZoomOut</include>
+			<posx>100</posx>
+			<posy>900</posy>
+			<width>1080</width>
+			<height>25</height>
+			<visible allowhiddenfocus="true">Control.IsVisible(593) + Control.HasFocus(5930)</visible>
+			<texturesliderbackground>osd/osd_progress_back1.png</texturesliderbackground>
+			<textureslidernibfocus>ScrollBarV_Nib_Focus1.png</textureslidernibfocus>
+			<onup>593</onup>
+			<ondown>593</ondown>
+			<showonepage>false</showonepage>
+			<orientation>horizontal</orientation>
+			<include>Animation_CommonFade</include>
+			<animation effect="slide" start="0,0" end="0,-220" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(593)">Conditional</animation>
+		</control>
+	
 	</include>
 </includes>

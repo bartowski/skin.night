@@ -63,7 +63,7 @@
 			<width>1900</width><!-- 1400 -->
 			<onleft>50</onleft>
 			<onright>50</onright>
-			<onup>68</onup>
+			<onup>60</onup>
 			<ondown>XBMC.PlayMedia($INFO[ListItem.Trailer],1,noresume)</ondown>
 			<viewtype label="$LOCALIZE[31062]">list</viewtype>
 			<orientation>horizontal</orientation>
@@ -71,7 +71,7 @@
 			<include condition="Skin.HasSetting(Poster_Fanart)">poster_focusposition_fanart</include>
 			<scrolltime>400</scrolltime>
 			<preloaditems>2</preloaditems>
-			<pagecontrol>68</pagecontrol>
+			<pagecontrol>60</pagecontrol>
 			<include>Animation_ZoomInZoomOut</include>
 			<include>Animation_HiddenByInfo</include>
 			<camera x="1340" y="380" />
@@ -620,13 +620,13 @@
 			<texture>common/scrollbar_back.png</texture>
 			<visible>Control.IsVisible(50) + Control.HasFocus(68)</visible>
 		</control>
-		<control type="scrollbar" id="68">
+		<control type="scrollbar" id="60">
 			<include>Animation_ZoomInZoomOut</include>
 			<posx>100</posx>
 			<posy>900</posy>
 			<width>1080</width>
 			<height>25</height>
-			<visible allowhiddenfocus="true">Control.IsVisible(50) + Control.HasFocus(68)</visible>
+			<visible allowhiddenfocus="true">Control.IsVisible(50) + Control.HasFocus(60)</visible>
 			<texturesliderbackground>osd/osd_progress_back1.png</texturesliderbackground>
 			<textureslidernibfocus>ScrollBarV_Nib_Focus1.png</textureslidernibfocus>
 			<onup>7000</onup>
@@ -634,7 +634,7 @@
 			<showonepage>false</showonepage>
 			<orientation>horizontal</orientation>
 			<include>Animation_CommonFade</include>
-			<animation effect="slide" start="0,0" end="0,-220" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(68)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-220" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(60)">Conditional</animation>
 		</control>
 	</include>
 	

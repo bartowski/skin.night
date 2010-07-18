@@ -122,66 +122,6 @@
 				</control>
 			</control>
 		</control>
-		<!--<control type="group">
-			<posx>470</posx>
-			<posy>0</posy>
-			<visible>!IsEmpty(Container.Property(AddonCategory))</visible>
-			<include>VisibleFadeEffect</include>
-			<animation effect="slide" end="-710,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
-			<animation effect="slide" start="-710,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>300</width>
-				<height>35</height>
-				<texture border="0,0,32,0">header.png</texture>
-			</control>
-			<control type="label">
-				<include>WindowTitleCommons</include>
-				<posx>270</posx>
-				<label>$INFO[Container.Property(AddonCategory)]</label>
-			</control>
-		</control>
-		<control type="group">
-			<posx>240</posx>
-			<posy>0</posy>
-			<visible>!IsEmpty(Container.Property(RepoName))</visible>
-			<include>VisibleFadeEffect</include>
-			<animation effect="slide" end="-600,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
-			<animation effect="slide" start="-600,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>350</width>
-				<height>35</height>
-				<texture border="0,0,32,0">header.png</texture>
-			</control>
-			<control type="label">
-				<width>250</width>
-				<include>WindowTitleCommons</include>
-				<posx>320</posx>
-				<label>$INFO[Container.Property(RepoName)]</label>
-			</control>
-		</control>
-		<control type="group">
-			<posx>60</posx>
-			<posy>0</posy>
-			<animation effect="slide" end="-310,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
-			<animation effect="slide" start="-310,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>250</width>
-				<height>35</height>
-				<texture border="0,0,32,0">header.png</texture>
-			</control>
-			<control type="label">
-				<include>WindowTitleCommons</include>
-				<posx>220</posx>
-				<label>$LOCALIZE[24001]</label>
-			</control>
-		</control>
-		<include>WindowTitleHomeButton</include>
-		<include>Clock</include>-->
+		<include>Global_Time_TopRight_Files</include>
 	</controls>
 </window>

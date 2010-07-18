@@ -390,11 +390,14 @@
 						<height>26</height>
 						<font>Font_KeyboardTitle</font>
 						<textoffsetx>40</textoffsetx>
+						<textoffsety>4</textoffsety>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<align>left</align>
 						<aligny>top</aligny>
 						<label>31271</label>
+						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 						<onclick>Skin.ToggleSetting(horizontal_bottom_align)</onclick>
 						<selected>Skin.HasSetting(horizontal_bottom_align)</selected>
 						<visible>Skin.HasSetting(horizontal_home)</visible>
@@ -3176,6 +3179,6 @@
 			</control>
 		</control>
 		
-		
+		<include>Global_Time_TopRight_Files</include>
 	</controls>
 </window>

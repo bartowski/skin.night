@@ -33,7 +33,8 @@
 			<onleft>53</onleft>
 			<onright>53</onright>
 			<onup>7000</onup>
-			<ondown>28374</ondown>
+			<ondown>63</ondown>
+			<pagecontrol>63</pagecontrol>
 			<viewtype label="$LOCALIZE[31053]">list</viewtype>
 			<orientation>horizontal</orientation>
 			<focusposition>2</focusposition>
@@ -321,7 +322,7 @@
 						</animation>
 						<visible>Skin.HasSetting(landscape_jpg) + !Container.Content(episodes)</visible>
 					</control>
-					<control type="image">
+					<!--<control type="image">
 						<visible>ControlGroup(28374).HasFocus + Container.Content(episodes) + Skin.HasSetting(3dLandscape_Fanart)</visible>
 						<posx>-150</posx>
 						<posy>86</posy>
@@ -334,7 +335,7 @@
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 							<effect type="fade" start="0" end="100" time="400" delay="2800" />
 						</animation>
-					</control>
+					</control>-->
 					<control type="image">
 						<posx>-150</posx>
 						<posy>86</posy>
@@ -415,7 +416,7 @@
 						</animation>
 						<visible>!IsEmpty(ListItem.Title) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
 					</control>
-					<control type="textbox">
+					<!--<control type="textbox">
 						<visible>ControlGroup(28374).HasFocus + Container.Content(episodes) + Skin.HasSetting(3dLandscape_Fanart)</visible>
 						<posx>-140</posx>
 						<posy>90</posy>
@@ -430,7 +431,7 @@
 						<animation type="Focus" reversible="false">
 							<effect type="fade" start="0" end="100" time="800" delay="3400" />
 						</animation>
-					</control>
+					</control>-->
 					<control type="image">
 						<posx>-150</posx>
 						<posy>312</posy>
@@ -448,7 +449,7 @@
 			</focusedlayout>
 		</control>
 		
-		<control type="group" id="28374">
+		<!--<control type="group" id="28374">
 		<control type="button" id="38374">
 			<onleft>53</onleft>
 			<onright>53</onright>
@@ -457,7 +458,7 @@
 			<label></label>
 			<visible allowhiddenfocus="true">ControlGroup(28374).HasFocus + Skin.HasSetting(3dLandscape_Fanart) + Container.Content(episodes)</visible>
 		</control>
-	</control>
+	</control>-->
 		
 		
 		<control type="image">
@@ -627,6 +628,22 @@
 			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_3dland_Leftplot</include>
 		</control>
-		<include>Trailer_3Dland</include>
+		<control type="scrollbar" id="63">
+			<include>Animation_ZoomInZoomOut</include>
+			<posx>100</posx>
+			<posy>900</posy>
+			<width>1080</width>
+			<height>25</height>
+			<visible allowhiddenfocus="true">Control.IsVisible(53) + Control.HasFocus(63)</visible>
+			<texturesliderbackground>osd/osd_progress_back1.png</texturesliderbackground>
+			<textureslidernibfocus>ScrollBarV_Nib_Focus1.png</textureslidernibfocus>
+			<onup>53</onup>
+			<ondown>53</ondown>
+			<showonepage>false</showonepage>
+			<orientation>horizontal</orientation>
+			<include>Animation_CommonFade</include>
+			<animation effect="slide" start="0,0" end="0,-220" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(63)">Conditional</animation>
+		</control>
+		
 	</include>
 </includes>

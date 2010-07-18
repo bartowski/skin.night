@@ -25,7 +25,8 @@
 			<onleft>633</onleft>
 			<onright>633</onright>
 			<onup>7000</onup>
-			<ondown>8374</ondown>			
+			<ondown>6330</ondown>
+			<pagecontrol>6330</pagecontrol>
 			<viewtype label="$LOCALIZE[20445]">list</viewtype>
 			<orientation>horizontal</orientation>
 			<scrolltime>300</scrolltime>
@@ -33,6 +34,7 @@
 			<preloaditems>2</preloaditems>
 			<include>Animation_Viewtype_Landscape_Fanart_FocusArea</include>
 			<include>Animation_HiddenByInfo</include>
+			<animation effect="slide" start="0,0" end="0,-40" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(6330)">Conditional</animation>
 			<visible>!Skin.HasSetting(no_Landscape_Fanart) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 			<itemlayout width="250" height="225">
 				<control type="image">
@@ -203,6 +205,7 @@
 	
 	<control type="group">
 	<animation effect="zoom" start="640,0,1,720" end="0,0,1280,720" time="200" delay="200">Visible</animation>
+	<animation effect="slide" start="0,0" end="0,-40" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(6330)">Conditional</animation>
 	<include>Animation_LandscapeFade</include>
 	<include>Animation_HiddenByInfo</include>
 	<visible>Control.IsVisible(633) + Container.Content(episodes) + ![Container(633).OnNext | Container(633).OnPrevious]</visible>
@@ -248,7 +251,7 @@
 		</control>
 	</control>
 	
-	<control type="group" id="8374">
+	<!--<control type="group" id="8374">
 		<control type="button" id="18374">
 			<onleft>633</onleft>
 			<onright>633</onright>
@@ -257,12 +260,13 @@
 			<label></label>
 			<visible allowhiddenfocus="true">ControlGroup(8374).HasFocus + Container.Content(episodes)</visible>
 		</control>
-	</control>
+	</control>-->
 	
 	<control type="group">
 	<include>Animation_LandscapeFade</include>
-	<animation effect="fade" start="0" end="100" time="400" delay="200" condition="ControlGroup(8374).HasFocus">Conditional</animation>
-	<visible>ControlGroup(8374).HasFocus + Container.Content(episodes)</visible>
+	<animation effect="slide" start="0,0" end="0,-40" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(6330)">Conditional</animation>
+	<animation effect="fade" start="0" end="100" time="400" delay="2400" condition="![Container(633).OnNext | Container(633).OnPrevious]">Conditional</animation>
+	<visible>Control.IsVisible(633) + Container.Content(episodes) + !IsEmpty(ListItem.Title) + ![Container(633).OnNext | Container(633).OnPrevious]</visible>
 		<control type="image">
 			<posx>458</posx>
 			<posy>426</posy>
@@ -283,31 +287,22 @@
 		</control>
 	</control>
 	
-	<!--<control type="group">
-	<visible>Control.IsVisible(633) + Container.Content(episodes) + !IsEmpty(ListItem.Title) + !Skin.HasSetting(landscape_fanart_plot)</visible>
-	<include>Animation_LandscapeFade</include>
-		<control type="image">
-			<posx>458</posx>
-			<posy>426</posy>
-			<width>392</width>
-			<height>221</height>
-			<texture>tv-landscape/fanart_land_plot_back.png</texture>
-			<animation effect="fade" start="0" end="100" time="400" delay="2800" condition="Container.Content(episodes) + ![Container(633).OnNext | Container(633).OnPrevious]">Conditional</animation>
-		</control>
-		<control type="textbox">
-			<visible>Container.Content(episodes)</visible>
-			<posx>460</posx>
-			<posy>424</posy>
-			<width>386</width>
-			<height>188</height>
-			<font>Font_KeyboardKeys_Plot</font>
-			<textcolor>ffffffff</textcolor>
-			<label>$INFO[ListItem.Plot]</label>
-			<align>justify</align>
-			<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-			<animation effect="fade" start="0" end="100" time="800" delay="3400" condition="Container.Content(episodes) + ![Container(633).OnNext | Container(633).OnPrevious]">Conditional</animation>
-		</control>
-	</control>-->
+	<control type="scrollbar" id="6330">
+		<include>Animation_ZoomInZoomOut</include>
+		<posx>100</posx>
+		<posy>900</posy>
+		<width>1080</width>
+		<height>25</height>
+		<visible allowhiddenfocus="true">Control.IsVisible(633) + Control.HasFocus(6330)</visible>
+		<texturesliderbackground>osd/osd_progress_back1.png</texturesliderbackground>
+		<textureslidernibfocus>ScrollBarV_Nib_Focus1.png</textureslidernibfocus>
+		<onup>633</onup>
+		<ondown>633</ondown>
+		<showonepage>false</showonepage>
+		<orientation>horizontal</orientation>
+		<include>Animation_CommonFade</include>
+		<animation effect="slide" start="0,0" end="0,-220" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(6330)">Conditional</animation>
+	</control>
 		
 		
 		

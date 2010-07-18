@@ -71,14 +71,14 @@ MOVIE SECTION
 			<width>1480</width>
 			<onleft>50</onleft>
 			<onright>50</onright>
-			<onup>67</onup>
+			<onup>68</onup>
 			<ondown>XBMC.PlayMedia($INFO[ListItem.Trailer],1,noresume)</ondown>
 			<viewtype label="$LOCALIZE[31063]">list</viewtype>
 			<orientation>horizontal</orientation>
 			<focusposition>4</focusposition>
 			<scrolltime>400</scrolltime>
 			<preloaditems>2</preloaditems>
-			<pagecontrol>67</pagecontrol>
+			<pagecontrol>68</pagecontrol>
 			<include>Animation_Viewtype_Showcase_FocusArea</include>
 			<include>Animation_HiddenByInfo</include>
 			<visible>!Skin.HasSetting(no_Showcase) + Container.Content(movies)</visible>
@@ -491,13 +491,13 @@ MOVIE SECTION
 		<include>Trailer_Showcase</include>
 		<include>Music_Global_Showcase</include>
 		
-		<control type="scrollbar" id="67">
+		<control type="scrollbar" id="68">
 			<include>Animation_ZoomInZoomOut</include>
 			<posx>100</posx>
 			<posy>900</posy>
 			<width>1080</width>
 			<height>25</height>
-			<visible allowhiddenfocus="true">Control.IsVisible(58) + Control.HasFocus(67)</visible>
+			<visible allowhiddenfocus="true">Control.IsVisible(58) + Control.HasFocus(68)</visible>
 			<texturesliderbackground>osd/osd_progress_back1.png</texturesliderbackground>
 			<textureslidernibfocus>ScrollBarV_Nib_Focus1.png</textureslidernibfocus>
 			<onup>7000</onup>
@@ -505,7 +505,7 @@ MOVIE SECTION
 			<showonepage>false</showonepage>
 			<orientation>horizontal</orientation>
 			<include>Animation_CommonFade</include>
-			<animation effect="slide" start="0,0" end="0,-220" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(67)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-220" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(68)">Conditional</animation>
 		</control>
 	</include>
 	

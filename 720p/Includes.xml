@@ -36,6 +36,30 @@
 	<include file="Viewtype_3daddon.xml" />
 	
 	
+	<include name="middle_horizontal_movies">
+		<onup>300</onup>
+		<ondown>Control.SetFocus(8000,0)</ondown>
+	</include>
+	<include name="lower_horizontal_movies">
+		<onup>Control.SetFocus(8000,0)</onup>
+		<ondown>300</ondown>
+	</include>
+	<include name="middle_horizontal_tv">
+		<onup>300</onup>
+		<ondown>Control.SetFocus(8001,0)</ondown>
+	</include>
+	<include name="lower_horizontal_tv">
+		<onup>Control.SetFocus(8001,0)</onup>
+		<ondown>300</ondown>
+	</include>
+	<include name="middle_horizontal_music">
+		<onup>300</onup>
+		<ondown>Control.SetFocus(8002,0)</ondown>
+	</include>
+	<include name="lower_horizontal_music">
+		<onup>Control.SetFocus(8002,0)</onup>
+		<ondown>300</ondown>
+	</include>
 	
 	
 	<include name="dialogConfirmButton">	
@@ -520,7 +544,7 @@
 			<posx>10</posx>
 			<posy>650</posy>
 			<include>Animation_BackdropFade</include>
-			<visible>Skin.HasSetting(library_global_clock) + !Player.HasMedia + Window.IsActive(videolibrary) + [[Control.IsVisible(52) + Container.Content(episodes)] | Control.IsVisible(51) | Control.IsVisible(57)]</visible>
+			<visible>Skin.HasSetting(library_global_clock) + !Player.HasMedia + Window.IsActive(videolibrary) + [[Control.IsVisible(52) + Container.Content(episodes)] | Control.IsVisible(51) | Control.IsVisible(57) | Control.IsVisible(592)]</visible>
 				<control type="image"> 
 					<posx>-10</posx>
 					<posy>-150</posy>   
@@ -800,8 +824,8 @@
 		<width>1120</width>
 		<height>40</height>
 		<posx>100</posx>
-		<onup>50</onup>
-		<ondown>50</ondown>
+		<onup>55</onup>
+		<ondown>55</ondown>
 		<itemgap>0</itemgap>
 		<align>center</align>
 		<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews)</visible>

@@ -141,6 +141,6 @@
 			<font>-</font>
 			<visible>false</visible>
 		</control>
-		
+		<include>Global_Time_TopRight_Files</include>
 	</controls>
 </window>

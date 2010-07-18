@@ -35,16 +35,17 @@
 			<onup>592</onup>
 			<ondown>592</ondown>
 			<onleft>7000</onleft>
-			<onright>7000</onright>
+			<onright>5920</onright>
 			<scrolltime>0</scrolltime>
 			<viewtype label="$LOCALIZE[31049]">list</viewtype>
 			<orientation>vertical</orientation>
 			<focusposition>2</focusposition>
 			<movement>2</movement>
-			<pagecontrol>60</pagecontrol>
+			<pagecontrol>5920</pagecontrol>
 			<preloaditems>2</preloaditems>
 			<include>Animation_Viewtype_Panel_FocusArea</include>
 			<include>Animation_HiddenByInfo</include>
+			<animation effect="slide" start="0,0" end="-40,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(5920)">Conditional</animation>
 			<itemlayout width="660" height="138">
 				<control type="group">
 				<posx>60</posx>
@@ -211,5 +212,23 @@
 		</control>
 	</control>
 		<include>Trailer_Panel</include>
+		
+	<control type="scrollbar" id="5920">
+		<include>Animation_ZoomInZoomOut</include>
+		<posx>1280</posx>
+		<posy>100</posy>
+		<width>25</width>
+		<height>460</height>
+		<visible allowhiddenfocus="true">Control.IsVisible(592) + Control.HasFocus(5920)</visible>
+		<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+		<textureslidernibfocus>ScrollBarV_Nib_Focus1.png</textureslidernibfocus>
+		<onleft>57</onleft>
+		<onright>57</onright>
+		<showonepage>false</showonepage>
+		<orientation>vertical</orientation>
+		<include>Animation_CommonFade</include>
+		<animation effect="slide" start="0,0" end="-40,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(5920)">Conditional</animation>
+	</control>
+		
 	</include>
 </includes>

@@ -71,7 +71,8 @@
 			<onleft>52</onleft>
 			<onright>52</onright>
 			<onup>7000</onup>
-			<ondown>7000</ondown>			
+			<ondown>62</ondown>
+			<pagecontrol>62</pagecontrol>
 			<viewtype label="$LOCALIZE[31052]">list</viewtype>
 			<orientation>horizontal</orientation>
 			<scrolltime>300</scrolltime>
@@ -542,7 +543,22 @@
 			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Landscape_BottomInfo</include>
 		</control>
-		
+		<control type="scrollbar" id="62">
+			<include>Animation_ZoomInZoomOut</include>
+			<posx>100</posx>
+			<posy>10</posy>
+			<width>1080</width>
+			<height>25</height>
+			<visible allowhiddenfocus="true">Control.IsVisible(52) + Control.HasFocus(62)</visible>
+			<texturesliderbackground>osd/osd_progress_back1.png</texturesliderbackground>
+			<textureslidernibfocus>ScrollBarV_Nib_Focus1.png</textureslidernibfocus>
+			<onup>52</onup>
+			<ondown>52</ondown>
+			<showonepage>false</showonepage>
+			<orientation>horizontal</orientation>
+			<include>Animation_CommonFade</include>
+			<animation effect="slide" start="0,-200" end="0,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(62)">Conditional</animation>
+		</control>
 	</include>
 
 </includes>

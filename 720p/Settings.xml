@@ -169,5 +169,6 @@
 				<shadowcolor>black</shadowcolor>
 			</control>
 		</control>
+		<include>Global_Time_TopRight_Files</include>
 	</controls>
 </window>

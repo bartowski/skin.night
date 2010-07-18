@@ -8,7 +8,7 @@
 			<height>466</height>
 			<width>1541</width>
 			<onup>9001</onup>
-			<ondown></ondown>
+			<ondown>9001</ondown>
 			<onleft>300</onleft>
 			<onright>300</onright>
 			<viewtype>list</viewtype>
@@ -18,7 +18,7 @@
 			<scrolltime>200</scrolltime>
 			<include>Animation_Bartowski_Context_Zoom</include>
 			<visible>Skin.HasSetting(horizontal_home)</visible>	
-			<animation effect="slide" end="0,350" time="0" condition="Skin.HasSetting(horizontal_bottom_align)">conditional</animation>
+			<animation effect="slide" end="0,330" time="0" condition="Skin.HasSetting(horizontal_bottom_align)">conditional</animation>
 			<itemlayout width="300" height="61">
 				<control type="label">
 					<width>500</width>
@@ -308,8 +308,8 @@
 					<onright>9011</onright>
 					<orientation>horizontal</orientation>
 					<align>center</align>
-					<onup>Control.SetFocus(8000,0)</onup>
-					<ondown>300</ondown>
+					<include condition="!Skin.HasSetting(horizontal_bottom_align)">middle_horizontal_movies</include>
+					<include condition="Skin.HasSetting(horizontal_bottom_align)">lower_horizontal_movies</include>
 					<itemgap>0</itemgap>
 					<visible>Container(300).HasFocus(3)</visible>
 					<control type="button" id="90110">
@@ -375,8 +375,8 @@
 					<align>center</align>
 					<onleft>9012</onleft>
 					<onright>9012</onright>
-					<onup>Control.SetFocus(8001,0)</onup>
-					<ondown>300</ondown>
+					<include condition="!Skin.HasSetting(horizontal_bottom_align)">middle_horizontal_tv</include>
+					<include condition="Skin.HasSetting(horizontal_bottom_align)">lower_horizontal_tv</include>
 					<itemgap>0</itemgap>
 					<visible>Container(300).HasFocus(5)</visible>
 					<control type="button" id="90128">
@@ -529,8 +529,8 @@
 					<align>center</align>
 					<onleft>9017</onleft>
 					<onright>9017</onright>
-					<onup>Control.SetFocus(8002,0)</onup>
-					<ondown>300</ondown>
+					<include condition="!Skin.HasSetting(horizontal_bottom_align)">middle_horizontal_music</include>
+					<include condition="Skin.HasSetting(horizontal_bottom_align)">lower_horizontal_music</include>
 					<itemgap>0</itemgap>
 					<visible>Container(300).HasFocus(1)</visible>
 					<control type="button" id="90170">

@@ -287,13 +287,13 @@
 			<onup>597</onup>
 			<ondown>597</ondown>
 			<onleft>XBMC.PlayMedia($INFO[ListItem.Trailer],1,noresume)</onleft>
-			<onright>62</onright>
+			<onright>5970</onright>
 			<scrolltime>0</scrolltime>
 			<viewtype label="$LOCALIZE[31213]">list</viewtype>
 			<orientation>vertical</orientation>
 			<focusposition>6</focusposition>
 			<movement>6</movement>
-			<pagecontrol>62</pagecontrol>
+			<pagecontrol>5970</pagecontrol>
 			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Panel_Title</include>
 			<visible>!Skin.HasSetting(no_WallPanel) + Container.Content(movies)</visible>
@@ -462,13 +462,13 @@
 			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Wall_Fags</include>
 		</control>
-		<control type="scrollbar" id="62">
+		<control type="scrollbar" id="5970">
 			<include>Animation_ZoomInZoomOut</include>
 			<posx>1280</posx>
 			<posy>100</posy>
 			<width>25</width>
 			<height>460</height>
-			<visible allowhiddenfocus="true">Control.IsVisible(597) + Control.HasFocus(62)</visible>
+			<visible allowhiddenfocus="true">Control.IsVisible(597) + Control.HasFocus(5970)</visible>
 			<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 			<textureslidernibfocus>ScrollBarV_Nib_Focus1.png</textureslidernibfocus>
 			<onleft>597</onleft>
@@ -476,7 +476,7 @@
 			<showonepage>false</showonepage>
 			<orientation>vertical</orientation>
 			<include>Animation_CommonFade</include>
-			<animation effect="slide" start="0,0" end="-500,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(62)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-500,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(5970)">Conditional</animation>
 		</control>
 		<include>Trailer_WallPanel</include>
 		<control type="label"><!--Trailer Start-->
