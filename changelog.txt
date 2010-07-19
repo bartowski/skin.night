@@ -1,4 +1,10 @@
-Update 7/15/2010
+Update 7/18/2010
+  -Changed up some of the positioning of 'Now Playing' items Home with Bottom Horizontal
+  -Also changed animations for Music/Movies Recently Added and Weather widget
+  -Removed "Programs", "Scripts" now called "Addons"
+  -Changed "WallPanel" from a strikethrough to a 'X'
+
+Update 7/17/2010
   -Adjust Lower Horizontal home, changed the press up/down to better correspond with being in the middle or at the bottom
   -Added a scrollbar to all TV/Movies vies but "Wall" and "Logo" I believe
   -Fixed view options being stuck for Files mode in Music

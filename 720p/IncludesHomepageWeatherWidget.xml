@@ -91,8 +91,9 @@
 				<height>300</height>
 				<visible>Skin.String(Weather,2) + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]</visible>
 				<include>VisibleFadeEffect</include>
-				<animation effect="slide" start="225,0" end="0,0" time="600" delay="400" tween="cubic" easing="inout" condition="Container(300).HasFocus(8) | Container(300).HasFocus(14)">Conditional</animation>
-
+				<animation effect="slide" start="0,450" end="0,0" time="600" delay="400" tween="cubic" easing="inout" condition="Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align) + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]">Conditional</animation>
+				<animation effect="slide" start="225,0" end="0,0" time="600" delay="400" tween="cubic" easing="inout" condition="!Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align) + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]">Conditional</animation>
+				<animation effect="slide" start="580,0" end="0,0" time="600" delay="600" tween="cubic" easing="inout" condition="Skin.HasSetting(horizontal_home) + Skin.HasSetting(horizontal_bottom_align) + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]">Conditional</animation>
 			<!-- today -->
 				<!-- condition icon -->
 				<control type="image">
@@ -170,7 +171,9 @@
 					<height>70</height>
 					<posx>-90</posx>
 					<posy>118</posy>
-					<animation effect="slide" start="0,450" end="0,0" time="600" delay="400" tween="cubic" easing="inout" condition="Container(300).HasFocus(8) | Container(300).HasFocus(14)">Conditional</animation>	
+					<animation effect="slide" start="0,450" end="0,0" time="600" delay="400" tween="cubic" easing="inout" condition="Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align) + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]">Conditional</animation>
+					<animation effect="slide" start="0,450" end="0,0" time="600" delay="400" tween="cubic" easing="inout" condition="!Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align) + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]">Conditional</animation>
+					<animation effect="slide" start="580,0" end="0,0" time="600" delay="600" tween="cubic" easing="inout" condition="Skin.HasSetting(horizontal_home) + Skin.HasSetting(horizontal_bottom_align) + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]">Conditional</animation>
 				</control>
 				<control type="label">
 					<posx>-150</posx>
@@ -181,7 +184,9 @@
 					<font>Font_Bartowski_Movies</font>
 					<textcolor>white</textcolor>
 					<align>center</align>
-					<animation effect="slide" start="0,450" end="0,0" time="600" delay="400" tween="cubic" easing="inout" condition="Container(300).HasFocus(8) | Container(300).HasFocus(14)">Conditional</animation>	
+					<animation effect="slide" start="0,450" end="0,0" time="600" delay="400" tween="cubic" easing="inout" condition="Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align) + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]">Conditional</animation>
+					<animation effect="slide" start="0,450" end="0,0" time="600" delay="400" tween="cubic" easing="inout" condition="!Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align) + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]">Conditional</animation>
+					<animation effect="slide" start="580,0" end="0,0" time="600" delay="600" tween="cubic" easing="inout" condition="Skin.HasSetting(horizontal_home) + Skin.HasSetting(horizontal_bottom_align) + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]">Conditional</animation>
 				</control>
 				<control type="image">
 					<texture>$INFO[Window(Weather).Property(Day2.OutlookIcon)]</texture>
@@ -189,7 +194,9 @@
 					<height>70</height>
 					<posx>-196</posx>
 					<posy>118</posy>
-					<animation effect="slide" start="0,450" end="0,0" time="600" delay="800" tween="cubic" easing="inout" condition="Container(300).HasFocus(8) | Container(300).HasFocus(14)">Conditional</animation>	
+					<animation effect="slide" start="0,450" end="0,0" time="600" delay="800" tween="cubic" easing="inout" condition="Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align) + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]">Conditional</animation>
+					<animation effect="slide" start="0,450" end="0,0" time="600" delay="800" tween="cubic" easing="inout" condition="!Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align) + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]">Conditional</animation>
+					<animation effect="slide" start="580,0" end="0,0" time="600" delay="600" tween="cubic" easing="inout" condition="Skin.HasSetting(horizontal_home) + Skin.HasSetting(horizontal_bottom_align) + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]">Conditional</animation>
 				</control>
 				<control type="label">
 					<posx>-260</posx>
@@ -200,7 +207,9 @@
 					<font>Font_Bartowski_Movies</font>
 					<textcolor>white</textcolor>
 					<align>center</align>
-					<animation effect="slide" start="0,450" end="0,0" time="600" delay="800" tween="cubic" easing="inout" condition="Container(300).HasFocus(8) | Container(300).HasFocus(14)">Conditional</animation>	
+					<animation effect="slide" start="0,450" end="0,0" time="600" delay="800" tween="cubic" easing="inout" condition="Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align) + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]">Conditional</animation>
+					<animation effect="slide" start="0,450" end="0,0" time="600" delay="800" tween="cubic" easing="inout" condition="!Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align) + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]">Conditional</animation>
+					<animation effect="slide" start="580,0" end="0,0" time="600" delay="600" tween="cubic" easing="inout" condition="Skin.HasSetting(horizontal_home) + Skin.HasSetting(horizontal_bottom_align) + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]">Conditional</animation>
 				</control>
 			</control>
 		</control>
@@ -217,7 +226,9 @@
 				<height>300</height>
 				<visible>Skin.String(Weather,3) + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]</visible>
 				<include>VisibleFadeEffect</include>
-				<animation effect="slide" start="225,0" end="0,0" time="600" delay="400" tween="cubic" easing="inout" condition="Container(300).HasFocus(8) | Container(300).HasFocus(14)">Conditional</animation>
+				<animation effect="slide" start="0,450" end="0,0" time="600" delay="200" tween="cubic" easing="inout" condition="Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align) + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]">Conditional</animation>
+				<animation effect="slide" start="225,0" end="0,0" time="600" delay="200" tween="cubic" easing="inout" condition="!Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align) + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]">Conditional</animation>
+				<animation effect="slide" start="580,0" end="0,0" time="600" delay="600" tween="cubic" easing="inout" condition="Skin.HasSetting(horizontal_home) + Skin.HasSetting(horizontal_bottom_align) + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]">Conditional</animation>
 
 			<!-- today -->
 				<!-- condition icon -->
@@ -291,7 +302,9 @@
 				<visible>Skin.String(Weather,3) + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="group">
-					<animation effect="slide" start="0,450" end="0,0" time="600" delay="400" tween="cubic" easing="inout" condition="Container(300).HasFocus(8) | Container(300).HasFocus(14)">Conditional</animation>	
+					<animation effect="slide" start="0,450" end="0,0" time="600" delay="400" tween="cubic" easing="inout" condition="Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align) + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]">Conditional</animation>
+					<animation effect="slide" start="0,450" end="0,0" time="600" delay="400" tween="cubic" easing="inout" condition="!Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align) + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]">Conditional</animation>
+					<animation effect="slide" start="580,0" end="0,0" time="600" delay="600" tween="cubic" easing="inout" condition="Skin.HasSetting(horizontal_home) + Skin.HasSetting(horizontal_bottom_align) + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]">Conditional</animation>
 				<control type="image">
 					<texture>$INFO[Window(Weather).Property(Day1.OutlookIcon)]</texture>
 					<width>70</width>
@@ -332,7 +345,9 @@
 				</control>
 				</control>
 				<control type="group">
-					<animation effect="slide" start="0,450" end="0,0" time="600" delay="800" tween="cubic" easing="inout" condition="Container(300).HasFocus(8) | Container(300).HasFocus(14)">Conditional</animation>	
+					<animation effect="slide" start="0,450" end="0,0" time="600" delay="800" tween="cubic" easing="inout" condition="Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align) + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]">Conditional</animation>
+					<animation effect="slide" start="0,450" end="0,0" time="600" delay="800" tween="cubic" easing="inout" condition="!Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align) + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]">Conditional</animation>
+					<animation effect="slide" start="580,0" end="0,0" time="600" delay="600" tween="cubic" easing="inout" condition="Skin.HasSetting(horizontal_home) + Skin.HasSetting(horizontal_bottom_align) + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]">Conditional</animation>
 				<control type="image">
 					<texture>$INFO[Window(Weather).Property(Day2.OutlookIcon)]</texture>
 					<width>70</width>
@@ -373,7 +388,9 @@
 				</control>
 				</control>
 				<control type="group">
-					<animation effect="slide" start="0,450" end="0,0" time="600" delay="1200" tween="cubic" easing="inout" condition="Container(300).HasFocus(8) | Container(300).HasFocus(14)">Conditional</animation>
+					<animation effect="slide" start="0,450" end="0,0" time="600" delay="1200" tween="cubic" easing="inout" condition="Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align) + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]">Conditional</animation>
+					<animation effect="slide" start="0,450" end="0,0" time="600" delay="1200" tween="cubic" easing="inout" condition="!Skin.HasSetting(horizontal_home) + !Skin.HasSetting(horizontal_bottom_align) + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]">Conditional</animation>
+					<animation effect="slide" start="580,0" end="0,0" time="600" delay="600" tween="cubic" easing="inout" condition="Skin.HasSetting(horizontal_home) + Skin.HasSetting(horizontal_bottom_align) + [Container(300).HasFocus(8) | Container(300).HasFocus(14)]">Conditional</animation>
 				<control type="image">
 					<texture>$INFO[Window(Weather).Property(Day3.OutlookIcon)]</texture>
 					<width>70</width>

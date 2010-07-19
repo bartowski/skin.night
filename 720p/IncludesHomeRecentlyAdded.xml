@@ -39,7 +39,7 @@
 					<focusposition>0</focusposition>
 					<pagecontrol>-</pagecontrol>
 					<scrolltime>0</scrolltime>
-					<animation effect="slide" start="0,300" end="0,0" time="600" delay="2000" tween="cubic" easing="inout" condition="Container(300).HasFocus(3)">Conditional</animation>
+					<animation effect="slide" start="400,0" end="0,0" time="600" delay="2000" tween="cubic" easing="inout" condition="Container(300).HasFocus(3)">Conditional</animation>
 					<itemlayout width="110" height="160">
 						<control type="largeimage">
 							<posx>60</posx>
@@ -422,7 +422,7 @@
 					<focusposition>0</focusposition>
 					<pagecontrol>-</pagecontrol>
 					<scrolltime>0</scrolltime>
-					<animation effect="slide" start="0,300" end="0,0" time="600" delay="2000" tween="cubic" easing="inout" condition="Container(300).HasFocus(1)">Conditional</animation>
+					<animation effect="slide" start="400,0" end="0,0" time="600" delay="2000" tween="cubic" easing="inout" condition="Container(300).HasFocus(1)">Conditional</animation>
 					<itemlayout width="110" height="160">
 						<control type="image">
 							<posx>60</posx>

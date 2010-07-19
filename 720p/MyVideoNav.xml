@@ -291,7 +291,7 @@
 			<control type="button" id="46">
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[14018]</label>
-				<visible>Control.IsVisible(50) + Container.Content(movies)</visible>		
+				<visible>[Control.IsVisible(50) + Container.Content(movies)] | [Control.IsVisible(593) + Container.Content(tvshows)]</visible>		
 			</control>
 			<control type="button" id="41">
 				<include>WindowMenuLabel</include>

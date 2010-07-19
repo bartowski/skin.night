@@ -1,5 +1,5 @@
 <window id="2003">
-	<defaultcontrol always="true">8</defaultcontrol>
+	<defaultcontrol always="true">7050</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
 		
@@ -957,12 +957,12 @@
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label>206</label>
 					</control>
-					<control type="togglebutton" id="8">
-						<description>Play/browse to Show</description>
-						<include>ButtonInfoDialogsCommonValues2</include>
+					<control type="button" id="7050"> 
+						<description>Play</description>
+						<include>ButtonInfoDialogsCommonValues</include>
 						<label>208</label>
-						<altlabel>1024</altlabel>
-						<usealttexture>Container.Content(TVShows)</usealttexture>
+						<onclick>Dialog.Close(movieinformation)</onclick> 
+						<onclick>PlayMedia($INFO[ListItem.FileNameAndPath])</onclick> 
 					</control>
 					<control type="button" id="6">
 						<description>Refresh</description>

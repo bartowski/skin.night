@@ -25,7 +25,7 @@
 		<include>Viewtype_Files</include>
 		<include>PictureThumbView</include>
 
-			
+		<include>Global_Time_TopRight_Files</include>
 		
 		<control type="image"><!-- Floor -->
 			<posx>0</posx>

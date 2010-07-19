@@ -117,7 +117,7 @@
 		<focusedcolor>mainblue</focusedcolor>
 	</include>
 	<include name="ButtonHomeSubCommonValues_Horizontal">
-		<width min="100" max="320">auto</width>
+		<width>320</width>
 		<height>56</height>
 		<align>center</align>
 		<font>Font_Bartowski_Main_SubMenu</font>

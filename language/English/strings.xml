@@ -152,7 +152,7 @@ just copy the translations from Confluence to here
   <string id="31106">Miscellaneous options</string>
   <string id="31115">Customizer</string><!-- GOOD -->
   <string id="31116">Addon Scripts</string><!-- GOOD -->
-  <string id="31117">Show Recently added Videos</string>
+  <string id="31117">Show Recently Added Content on Home</string>
   <string id="31118">Check if using a merge version</string>
   <string id="31323">Latest Movies</string>
   <string id="31309">Memory Used:</string>
@@ -213,6 +213,7 @@ just copy the translations from Confluence to here
   <!-- NEW 6/23-->
   <string id="40281">Items</string>
   <string id="31271">Set Home Menu to Bottom</string>
+  <string id="31272">Addons</string>
   
   </strings>
 

@@ -307,15 +307,16 @@
 					<font>Font_Bartowski_Movies</font>
 					<textcolor>Text-Filemode</textcolor>
 					<label>$INFO[ListItem.Label]</label>
+					<animation effect="slide" start="0,0" end="20,0" time="0" condition="stringcompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
 				</control>
 				<control type="image">
-					<posx>10</posx>
-					<posy>30</posy>
-					<width>280</width>
-					<height>8</height>
-					<texture>dialogs/tv/$INFO[ListItem.Overlay]</texture>
+					<posx>20</posx>
+					<posy>24</posy>
+					<width>17</width>
+					<height>20</height>
+					<texture>dialogs/files/$INFO[ListItem.Overlay]</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+					<visible>Skin.HasSetting(movieoverlays) + Container.Content(movies) + !IsEmpty(ListItem.Overlay)</visible>
 				</control>
 			</itemlayout>
 			<focusedlayout width="1210" height="30">
@@ -338,15 +339,16 @@
 					<font>Font_Bartowski_Movies</font>
 					<textcolor>ffffffff</textcolor>
 					<label>[B]$INFO[ListItem.Label][/B]</label>
+					<animation effect="slide" start="0,0" end="20,0" time="0" condition="stringcompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
 				</control>
 				<control type="image">
-					<posx>10</posx>
-					<posy>30</posy>
-					<width>280</width>
-					<height>8</height>
-					<texture>dialogs/tv/$INFO[ListItem.Overlay]</texture>
+					<posx>20</posx>
+					<posy>24</posy>
+					<width>17</width>
+					<height>20</height>
+					<texture>dialogs/files/$INFO[ListItem.Overlay]</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+					<visible>Skin.HasSetting(movieoverlays) + Container.Content(movies) + !IsEmpty(ListItem.Overlay)</visible>
 				</control>
 			</focusedlayout>
 		</control>		

@@ -124,6 +124,7 @@
 					<include>Animation_PosterInfoSlide_Showcase</include>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="auto" start="80" end="100" time="300" tween="back" easing="out" />
+						<effect type="fade" start="100" end="0" time="600" delay="2800" />
 					</animation>
 				</control>
 				<control type="image">
@@ -138,6 +139,7 @@
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="auto" start="90" end="114" time="300" tween="back" easing="out" />
 						<effect type="fade" start="0" end="60"/>
+						<effect type="fade" start="100" end="0" time="600" delay="2800" />
 					</animation>
 				</control>
 				<control type="image">
@@ -150,6 +152,7 @@
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="auto" start="90" end="114" time="300" tween="back" easing="out" />
 						<effect type="fade" start="0" end="20"/>
+						<effect type="fade" start="100" end="0" time="600" delay="2800" />
 					</animation>
 				</control>
 				<control type="image">
@@ -162,6 +165,7 @@
 					<include>Animation_PosterInfoSlide_Showcase</include>
 					<animation type="Focus" reversible="false">
 						<effect type="fade" start="0" end="60" time="1000" delay="800" />
+						<effect type="fade" start="100" end="0" time="600" delay="2800" />
 					</animation>
 					<visible>!Skin.HasSetting(MusicShowcaseFanart)</visible>
 				</control>
@@ -176,6 +180,7 @@
 					<include>Animation_PosterInfoSlide_Showcase</include>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="auto" start="80" end="100" time="300" tween="back" easing="out" />
+						<effect type="fade" start="100" end="0" time="600" delay="2800" />
 					</animation>
 				</control>
 				<control type="image">
@@ -188,13 +193,27 @@
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="auto" start="80" end="100" time="300" tween="back" easing="out" />
 						<effect type="fade" start="0" end="80" time="600" />
+						<effect type="fade" start="100" end="0" time="600" delay="2800" />
 					</animation>
 				</control>
 			</control>
 			</focusedlayout>
 		</control>
 		
-				
+		<control type="label">
+			<description>Title txt</description>
+			<posx>0</posx>
+			<posy>10</posy>
+			<width>1100</width>
+			<height>15</height>
+			<label>$INFO[ListItem.Label]</label>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>Font_MainMenuLabel</font>
+			<textcolor>mainblue</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<visible>Control.IsVisible(50)</visible>
+		</control>
 		
 	</include>
 

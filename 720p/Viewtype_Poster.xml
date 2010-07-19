@@ -572,8 +572,8 @@
 		
 		<control type="label"><!--Trailer Start-->
 				<visible>Control.IsVisible(50) + Container.Content(movies) + !Skin.HasSetting(clean_poster) + !IsEmpty(ListItem.Trailer) + !Player.HasVideo + !Control.IsVisible(68)</visible>
-				<posx>115</posx>
-				<posy>640</posy>
+				<posx>20</posx>
+				<posy>78</posy>
 				<width>370</width>
 				<height>50</height>
 				<aligny>center</aligny>
@@ -585,8 +585,8 @@
 			</control>	
 			<control type="label"><!--Trailer Stop-->
 				<visible>Control.IsVisible(50) + Container.Content(movies) + Player.HasVideo + !Control.IsVisible(68) + !Skin.HasSetting(clean_poster)</visible>
-				<posx>135</posx>
-				<posy>640</posy>
+				<posx>60</posx>
+				<posy>26</posy>
 				<width>370</width>
 				<height>50</height>
 				<aligny>center</aligny>
@@ -618,7 +618,7 @@
 			<width>1280</width>     
 			<height>192</height> 
 			<texture>common/scrollbar_back.png</texture>
-			<visible>Control.IsVisible(50) + Control.HasFocus(68)</visible>
+			<visible>Control.IsVisible(50) + Control.HasFocus(60)</visible>
 		</control>
 		<control type="scrollbar" id="60">
 			<include>Animation_ZoomInZoomOut</include>
