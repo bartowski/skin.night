@@ -822,8 +822,9 @@
 		<control type="group">
 			<animation effect="zoom" start="0" end="50" time="0" delay="0" condition="Player.HasVideo">Conditional</animation>
 			<animation effect="fade" start="0" end="100" time="400" delay="800" condition="Player.HasVideo">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-200" time="0" condition="Skin.HasSetting(horizontal_home) + Skin.HasSetting(horizontal_bottom_align)">Conditional</animation>
 			<posx>0</posx>
-			<posy>940</posy>
+			<posy>1140</posy>
 			<control type="image"> 
 				<description>trailer image</description>
 				<posx>-70</posx>
