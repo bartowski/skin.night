@@ -27,7 +27,7 @@
 			<textcolor>678b8b8b</textcolor>
 			<label>$INFO[ListItem.label]</label>
 			<include>Animation_HiddenByInfo</include>
-		</control>
+		</control>-->
 		<control type="label">
 			<visible>Control.IsVisible(58) + Container.Content(movies) + IsEmpty(ListItem.Title)</visible>
 			<animation effect="slide" start="0,0" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
@@ -43,7 +43,7 @@
 			<label>$LOCALIZE[31235]</label>
 			<include>Animation_Bartowski_Context_Zoom</include>
 			<include>Animation_HiddenByInfo</include>
-		</control>-->
+		</control>
 		
 		
 		<control type="image">

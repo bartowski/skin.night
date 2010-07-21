@@ -35,6 +35,13 @@
 			<include>Animation_BackdropFade</include>
 			<visible>!Control.IsVisible(54) + IsEmpty(ListItem.Title)</visible>
 		</control>
+		<control type="image"> <!-- genre fanart -->
+			<include>Dimensions_Fullscreen</include>
+			<fadetime>400</fadetime>
+			<include>Animation_BackdropFade</include>
+			<texture>extras/genrefanart/$INFO[ListItem.Label].jpg</texture>
+			<visible>Container.Content(genres)</visible>
+		</control>
 		<control type="multiimage">
 			<posx>0</posx>
 			<posy>0</posy>
