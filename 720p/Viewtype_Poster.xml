@@ -5,7 +5,7 @@
 		
 		<!-- Poster Wrap View -->
 		<control type="image"><!-- Fanart -->
-			<visible>Control.IsVisible(50) + !Skin.HasSetting(Poster_Fanart)</visible>
+			<visible>Control.IsVisible(55) + !Skin.HasSetting(Poster_Fanart)</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
@@ -14,7 +14,7 @@
 			<aspectratio>stretch</aspectratio>
 		</control>
 		<control type="image"><!-- Fanart -->
-			<visible>Control.IsVisible(50) + Skin.HasSetting(Poster_Fanart)</visible>
+			<visible>Control.IsVisible(55) + Skin.HasSetting(Poster_Fanart)</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
@@ -24,8 +24,8 @@
 			<include>Animation_BackdropFade</include>
 		</control>
 		<control type="label"><!--Big Title-->
-			<visible>Control.IsVisible(50) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)]</visible>
-			<animation effect="slide" start="0,0" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(50) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies)]">Conditional</animation>
+			<visible>Control.IsVisible(55) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)]</visible>
+			<animation effect="slide" start="0,0" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(55) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies)]">Conditional</animation>
 			<posx>0</posx>
 			<posy>235</posy>
 			<width>1280</width>
@@ -39,8 +39,8 @@
 			<include>Animation_Bartowski_Context_Zoom</include>
 		</control>
 		<control type="label"><!--Big Title-->
-			<visible>Control.IsVisible(50) + Container.Content(movies) + IsEmpty(ListItem.Title) + !Window.IsVisible(VideoFiles)</visible>
-			<animation effect="slide" start="0,0" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(50) + Container.Content(movies) + IsEmpty(ListItem.Title)">Conditional</animation>
+			<visible>Control.IsVisible(55) + Container.Content(movies) + IsEmpty(ListItem.Title) + !Window.IsVisible(VideoFiles)</visible>
+			<animation effect="slide" start="0,0" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(55) + Container.Content(movies) + IsEmpty(ListItem.Title)">Conditional</animation>
 			<posx>0</posx>
 			<posy>235</posy>
 			<width>1280</width>
@@ -56,14 +56,14 @@
 		
 		
 		
-		<control type="fixedlist" id="50">
+		<control type="fixedlist" id="55">
 			<posx>-30</posx>
 			<posy>250</posy>
 			<height>615</height>
 			<width>1900</width><!-- 1400 -->
-			<onleft>50</onleft>
-			<onright>50</onright>
-			<onup>60</onup>
+			<onleft>55</onleft>
+			<onright>55</onright>
+			<onup>65</onup>
 			<ondown>XBMC.PlayMedia($INFO[ListItem.Trailer],1,noresume)</ondown>
 			<viewtype label="$LOCALIZE[31062]">list</viewtype>
 			<orientation>horizontal</orientation>
@@ -71,7 +71,7 @@
 			<include condition="Skin.HasSetting(Poster_Fanart)">poster_focusposition_fanart</include>
 			<scrolltime>400</scrolltime>
 			<preloaditems>2</preloaditems>
-			<pagecontrol>60</pagecontrol>
+			<pagecontrol>65</pagecontrol>
 			<include>Animation_ZoomInZoomOut</include>
 			<include>Animation_HiddenByInfo</include>
 			<camera x="1340" y="380" />
@@ -83,7 +83,7 @@
 				<control type="group">
 				<posx>150</posx>
 				<posy>0</posy>
-				<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(50).OnNext | Container(50).OnPrevious]">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(55).OnNext | Container(55).OnPrevious]">Conditional</animation>
 					<control type="image">
 						<posx>-2</posx>
 						<posy>133</posy>
@@ -174,8 +174,8 @@
 				<control type="group">
 				<posx>140</posx>
 				<posy>0</posy>
-				<animation effect="zoom" start="100" end="120" time="600" delay="2800" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(50).OnNext | Container(50).OnPrevious]">Conditional</animation>
-				<animation effect="slide" start="0,0" end="-280,-80" time="600" delay="2800" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(50).OnNext | Container(50).OnPrevious]">Conditional</animation>
+				<animation effect="zoom" start="100" end="120" time="600" delay="2800" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(55).OnNext | Container(55).OnPrevious]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-280,-80" time="600" delay="2800" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(55).OnNext | Container(55).OnPrevious]">Conditional</animation>
 					<control type="image">
 						<posx>44</posx>
 						<posy>93</posy>
@@ -322,7 +322,7 @@
 		</control>
 
 		<control type="image">
-			<visible>Control.IsVisible(50) + !Skin.HasSetting(Poster_Fanart)</visible>
+			<visible>Control.IsVisible(55) + !Skin.HasSetting(Poster_Fanart)</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
@@ -331,7 +331,7 @@
 			<aspectratio>stretch</aspectratio>
 		</control>
 		<control type="image">
-			<visible>Control.IsVisible(50) + Skin.HasSetting(Poster_Fanart) + !Skin.HasSetting(clean_poster)</visible>
+			<visible>Control.IsVisible(55) + Skin.HasSetting(Poster_Fanart) + !Skin.HasSetting(clean_poster)</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
@@ -343,7 +343,7 @@
 		<!-- Browser label and flags -->
 		
 		<control type="group">
-			<visible>Control.IsVisible(50)</visible>
+			<visible>Control.IsVisible(55)</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<include>Animation_ZoomInZoomOut</include>
@@ -358,10 +358,10 @@
 				<info>ListItem.Plot</info>
 				<font>Font_Bartowski_Movies_Plot</font>
 				<textcolor>ffffffff</textcolor>
-				<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(50) + Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(50).OnNext | Container(50).OnPrevious]">WindowOpen</animation>
-				<animation effect="slide" start="1000,0" end="0,0" time="400" delay="3600" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(50).OnNext | Container(50).OnPrevious]">Conditional</animation>
+				<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(55) + Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(55).OnNext | Container(55).OnPrevious]">WindowOpen</animation>
+				<animation effect="slide" start="1000,0" end="0,0" time="400" delay="3600" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(55).OnNext | Container(55).OnPrevious]">Conditional</animation>
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-				<visible>Control.IsVisible(50) + Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart)</visible>
+				<visible>Control.IsVisible(55) + Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart)</visible>
 			</control>
 			<control type="label">
 				<posx>20</posx>
@@ -444,8 +444,8 @@
 		<width>600</width>
 		<include>Animation_ZoomInZoomOut</include>
 		<include>Animation_HiddenByInfo</include>
-		<animation effect="slide" start="0,600" end="0,0" time="400" delay="3400" condition="Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(50).OnNext | Container(50).OnPrevious]">Conditional</animation>
-		<visible>Control.IsVisible(50) + Skin.HasSetting(PosterPlus) + !IsEmpty(ListItem.Title) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart)</visible>
+		<animation effect="slide" start="0,600" end="0,0" time="400" delay="3400" condition="Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(55).OnNext | Container(55).OnPrevious]">Conditional</animation>
+		<visible>Control.IsVisible(55) + Skin.HasSetting(PosterPlus) + !IsEmpty(ListItem.Title) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart)</visible>
 			<control type="label">
 				<width>600</width>
 				<height>20</height>
@@ -453,7 +453,7 @@
 				<font>Font_Bartowski_Showcase_Right_Under</font>
 				<textcolor>ffffffff</textcolor>
 				<label>[B][COLOR=ff67ffff]Director[/COLOR][/B] - $INFO[ListItem.Director]</label>
-				<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(50).OnNext | Container(50).OnPrevious]">WindowOpen</animation>
+				<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(55).OnNext | Container(55).OnPrevious]">WindowOpen</animation>
 			</control>
 			<control type="label">
 				<width>600</width>
@@ -462,7 +462,7 @@
 				<font>Font_Bartowski_Showcase_Right_Under</font>
 				<textcolor>ffffffff</textcolor>
 				<label>[B][COLOR=ff67ffff]Writer[/COLOR][/B] - $INFO[ListItem.Writer]</label>
-				<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(50).OnNext | Container(50).OnPrevious]">WindowOpen</animation>
+				<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(55).OnNext | Container(55).OnPrevious]">WindowOpen</animation>
 			</control>
 			<control type="label">
 				<width>600</width>
@@ -471,7 +471,7 @@
 				<font>Font_Bartowski_Showcase_Right_Under</font>
 				<textcolor>ffffffff</textcolor>
 				<label>[B][COLOR=ff67ffff]Genre[/COLOR][/B] - $INFO[ListItem.Genre]</label>
-				<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(50).OnNext | Container(50).OnPrevious]">WindowOpen</animation>
+				<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(55).OnNext | Container(55).OnPrevious]">WindowOpen</animation>
 			</control>
 			<control type="label">
 				<width>600</width>
@@ -480,7 +480,7 @@
 				<font>Font_Bartowski_Showcase_Right_Under</font>
 				<textcolor>ffffffff</textcolor>
 				<label>[B][COLOR=ff67ffff]Studio[/COLOR][/B] - $INFO[ListItem.Studio]</label>
-				<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(50).OnNext | Container(50).OnPrevious]">WindowOpen</animation>
+				<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(55).OnNext | Container(55).OnPrevious]">WindowOpen</animation>
 			</control>
 			<control type="label">
 				<width>600</width>
@@ -489,7 +489,7 @@
 				<font>Font_Bartowski_Showcase_Right_Under</font>
 				<textcolor>ffffffff</textcolor>
 				<label>[B][COLOR=ff67ffff]Rating[/COLOR][/B] - $INFO[ListItem.Rating]</label>
-				<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(50).OnNext | Container(50).OnPrevious]">WindowOpen</animation>
+				<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(55).OnNext | Container(55).OnPrevious]">WindowOpen</animation>
 			</control>
 	</control>
 		<control type="group">
@@ -498,7 +498,7 @@
 		<include>Animation_ZoomInZoomOut</include>
 		<include>Animation_HiddenByInfo</include>
 		<animation effect="slide" start="0,0" end="0,-40" time="0" tween="cubic" easing="inout" condition="IsEmpty(Control.GetLabel(7015))">Conditional</animation>
-		<visible>Control.IsVisible(50) + !IsEmpty(ListItem.Title) + [Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(Poster_Fanart) + !Player.HasVideo</visible>	
+		<visible>Control.IsVisible(55) + !IsEmpty(ListItem.Title) + [Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(Poster_Fanart) + !Player.HasVideo</visible>	
 			<control type="label">
 				<visible>Container.Content(seasons)</visible>
 				<posx>0</posx>
@@ -538,7 +538,7 @@
 			</control>
 		</control>
 		<control type="group">
-		<visible>Control.IsVisible(50) + substring(container.folderpath,plugin://video/Apple Movie) + !IsEmpty(ListItem.Title)</visible>
+		<visible>Control.IsVisible(55) + substring(container.folderpath,plugin://video/Apple Movie) + !IsEmpty(ListItem.Title)</visible>
 		<posx>20</posx>
 		<posy>50</posy>
 			<control type="label">
@@ -571,7 +571,7 @@
 		</control>
 		
 		<control type="label"><!--Trailer Start-->
-				<visible>Control.IsVisible(50) + Container.Content(movies) + !Skin.HasSetting(clean_poster) + !IsEmpty(ListItem.Trailer) + !Player.HasVideo + !Control.IsVisible(68)</visible>
+				<visible>Control.IsVisible(55) + Container.Content(movies) + !Skin.HasSetting(clean_poster) + !IsEmpty(ListItem.Trailer) + !Player.HasVideo + !Control.IsVisible(68)</visible>
 				<posx>20</posx>
 				<posy>78</posy>
 				<width>370</width>
@@ -584,7 +584,7 @@
 				<include>Animation_ZoomInZoomOut</include>
 			</control>	
 			<control type="label"><!--Trailer Stop-->
-				<visible>Control.IsVisible(50) + Container.Content(movies) + Player.HasVideo + !Control.IsVisible(68) + !Skin.HasSetting(clean_poster)</visible>
+				<visible>Control.IsVisible(55) + Container.Content(movies) + Player.HasVideo + !Control.IsVisible(68) + !Skin.HasSetting(clean_poster)</visible>
 				<posx>60</posx>
 				<posy>26</posy>
 				<width>370</width>
@@ -597,7 +597,7 @@
 				<include>Animation_ZoomInZoomOut</include>
 			</control>
 		<control type="grouplist">
-			<visible>Control.IsVisible(50) + Container.Content(movies) + !Skin.HasSetting(clean_poster) + !Skin.HasSetting(no_media_flags) + !Control.IsVisible(68)</visible>
+			<visible>Control.IsVisible(55) + Container.Content(movies) + !Skin.HasSetting(clean_poster) + !Skin.HasSetting(no_media_flags) + !Control.IsVisible(68)</visible>
 			<description>Media Codec Flagging Images</description>
 			<posx>20</posx>
 			<posy>680</posy>
@@ -618,23 +618,23 @@
 			<width>1280</width>     
 			<height>192</height> 
 			<texture>common/scrollbar_back.png</texture>
-			<visible>Control.IsVisible(50) + Control.HasFocus(60)</visible>
+			<visible>Control.IsVisible(55) + Control.HasFocus(60)</visible>
 		</control>
-		<control type="scrollbar" id="60">
+		<control type="scrollbar" id="65">
 			<include>Animation_ZoomInZoomOut</include>
 			<posx>100</posx>
 			<posy>900</posy>
 			<width>1080</width>
 			<height>25</height>
-			<visible allowhiddenfocus="true">Control.IsVisible(50) + Control.HasFocus(60)</visible>
+			<visible allowhiddenfocus="true">Control.IsVisible(55) + Control.HasFocus(65)</visible>
 			<texturesliderbackground>osd/osd_progress_back1.png</texturesliderbackground>
 			<textureslidernibfocus>ScrollBarV_Nib_Focus1.png</textureslidernibfocus>
 			<onup>7000</onup>
-			<ondown>50</ondown>
+			<ondown>55</ondown>
 			<showonepage>false</showonepage>
 			<orientation>horizontal</orientation>
 			<include>Animation_CommonFade</include>
-			<animation effect="slide" start="0,0" end="0,-220" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(60)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-220" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(65)">Conditional</animation>
 		</control>
 	</include>
 	

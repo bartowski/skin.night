@@ -5,7 +5,7 @@
 		
 		<!-- Poster Wrap View -->
 		<control type="image"><!-- Fanart -->
-			<visible>Control.IsVisible(50) + ![Container.Content(albums) + Skin.HasSetting(3dmusic_Fanart)]</visible>
+			<visible>Control.IsVisible(56) + ![Container.Content(albums) + Skin.HasSetting(3dmusic_Fanart)]</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
@@ -14,7 +14,7 @@
 			<aspectratio>stretch</aspectratio>
 		</control>
 		<control type="image"><!-- Fanart -->
-			<visible>Control.IsVisible(50) + Skin.HasSetting(3dmusic_Fanart)</visible>
+			<visible>Control.IsVisible(56) + Skin.HasSetting(3dmusic_Fanart)</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
@@ -23,8 +23,8 @@
 			<aspectratio>stretch</aspectratio>
 		</control>
 		<!--<control type="label">
-			<visible>Control.IsVisible(50)</visible>
-			<animation effect="slide" start="0,0" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(50) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies)]">Conditional</animation>
+			<visible>Control.IsVisible(56)</visible>
+			<animation effect="slide" start="0,0" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(56) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies)]">Conditional</animation>
 			<posx>0</posx>
 			<posy>320</posy>
 			<width>1280</width>
@@ -38,8 +38,8 @@
 			<include>Animation_Bartowski_Context_Zoom</include>
 		</control>
 		<control type="label">
-			<visible>Control.IsVisible(50) + IsEmpty(ListItem.Title) + !Window.IsVisible(VideoFiles)</visible>
-			<animation effect="slide" start="0,0" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(50) + Container.Content(movies) + IsEmpty(ListItem.Title)">Conditional</animation>
+			<visible>Control.IsVisible(56) + IsEmpty(ListItem.Title) + !Window.IsVisible(VideoFiles)</visible>
+			<animation effect="slide" start="0,0" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(56) + Container.Content(movies) + IsEmpty(ListItem.Title)">Conditional</animation>
 			<posx>0</posx>
 			<posy>235</posy>
 			<width>1280</width>
@@ -55,24 +55,24 @@
 		
 		
 		
-		<control type="fixedlist" id="50">
+		<control type="fixedlist" id="56">
 			<posx>-30</posx>
 			<posy>250</posy>
 			<height>615</height>
 			<width>1400</width><!-- 1400 -->
-			<onleft>50</onleft>
-			<onright>50</onright>
+			<onleft>56</onleft>
+			<onright>56</onright>
 			<onup>7000</onup>
-			<ondown>63</ondown>
+			<ondown>66</ondown>
 			<viewtype label="3d Square">list</viewtype>
 			<orientation>horizontal</orientation>
 			<focusposition>3</focusposition>
 			<scrolltime>400</scrolltime>
 			<preloaditems>2</preloaditems>
-			<pagecontrol>63</pagecontrol>
+			<pagecontrol>66</pagecontrol>
 			<include>Animation_ZoomInZoomOut</include>
 			<include>Animation_HiddenByInfo</include>
-			<visible>Window.IsVisible(AddonBrowser.xml) | Container.Content(albums)</visible>
+			<!--<visible>Window.IsVisible(AddonBrowser.xml) | Container.Content(albums) | Window.IsActive(Programs)</visible>-->
 			<camera x="1340" y="380" />
 			<animation effect="rotatey" center="50" start="8" end="8" time="0" condition="true">Conditional</animation>
 			<visible></visible>
@@ -80,7 +80,7 @@
 				<control type="group">
 				<posx>150</posx>
 				<posy>60</posy>
-				<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(50).OnNext | Container(50).OnPrevious]">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="400" delay="2800" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(56).OnNext | Container(56).OnPrevious]">Conditional</animation>
 					<control type="image">
 						<posx>-2</posx>
 						<posy>133</posy>
@@ -142,8 +142,8 @@
 				<control type="group">
 				<posx>140</posx>
 				<posy>60</posy>
-				<animation effect="zoom" start="100" end="120" time="600" delay="2800" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(50).OnNext | Container(50).OnPrevious]">Conditional</animation>
-				<animation effect="slide" start="0,0" end="-280,-80" time="600" delay="2800" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(50).OnNext | Container(50).OnPrevious]">Conditional</animation>
+				<animation effect="zoom" start="100" end="120" time="600" delay="2800" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(56).OnNext | Container(56).OnPrevious]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-280,-80" time="600" delay="2800" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(56).OnNext | Container(56).OnPrevious]">Conditional</animation>
 					<control type="image">
 						<posx>44</posx>
 						<posy>93</posy>
@@ -236,7 +236,7 @@
 		</control>
 
 		<control type="image">
-			<visible>Control.IsVisible(50) + !Skin.HasSetting(Poster_Fanart)</visible>
+			<visible>Control.IsVisible(56) + !Skin.HasSetting(Poster_Fanart)</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
@@ -248,7 +248,7 @@
 	<control type="group">
 	<include>Animation_HiddenByInfo</include>
 	<include>Animation_Viewtype_Showcase_ThumbArea</include>
-	<visible>Control.IsVisible(50) + Container.Content(albums)</visible>
+	<visible>Control.IsVisible(56) + Container.Content(albums)</visible>
 		<control type="image">
 			<visible>Skin.HasSetting(3dmusic_Fanart)</visible>
 			<posx>0</posx>
@@ -293,7 +293,7 @@
 	<control type="group">
 	<include>Animation_HiddenByInfo</include>
 	<include>Animation_Viewtype_Showcase_ThumbArea</include>
-	<visible>Control.IsVisible(50) + Window.IsVisible(AddonBrowser.xml)</visible>
+	<visible>Control.IsVisible(56) + !Container.Content(albums)</visible>
 		<control type="label">
 			<posx>20</posx>
 			<posy>0</posy>
@@ -322,23 +322,23 @@
 			<width>1280</width>     
 			<height>192</height> 
 			<texture>common/scrollbar_back.png</texture>
-			<visible>Control.IsVisible(50) + Control.HasFocus(68)</visible>
+			<visible>Control.IsVisible(56) + Control.HasFocus(68)</visible>
 		</control>
-		<control type="scrollbar" id="63">
+		<control type="scrollbar" id="66">
 			<include>Animation_ZoomInZoomOut</include>
 			<posx>100</posx>
 			<posy>900</posy>
 			<width>1080</width>
 			<height>25</height>
-			<visible allowhiddenfocus="true">Control.IsVisible(50) + Control.HasFocus(63)</visible>
+			<visible allowhiddenfocus="true">Control.IsVisible(56) + Control.HasFocus(66)</visible>
 			<texturesliderbackground>osd/osd_progress_back1.png</texturesliderbackground>
 			<textureslidernibfocus>ScrollBarV_Nib_Focus1.png</textureslidernibfocus>
-			<onup>50</onup>
-			<ondown>50</ondown>
+			<onup>56</onup>
+			<ondown>56</ondown>
 			<showonepage>false</showonepage>
 			<orientation>horizontal</orientation>
 			<include>Animation_CommonFade</include>
-			<animation effect="slide" start="0,0" end="0,-220" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(63)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-220" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(66)">Conditional</animation>
 		</control>
 	</include>
 	

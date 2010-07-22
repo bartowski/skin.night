@@ -7,27 +7,27 @@
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<texture>list/file-black-background1.png</texture>
-			<visible>Control.IsVisible(55) + Container.Content(movies) + !Skin.HasSetting(Files_Fanart)</visible>
+			<visible>Control.IsVisible(50) + Container.Content(movies) + !Skin.HasSetting(Files_Fanart)</visible>
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<texture>list/file-black-background1.png</texture>
-			<visible>Control.IsVisible(55) + !Container.Content(movies)</visible>
+			<visible>Control.IsVisible(50) + !Container.Content(movies)</visible>
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<texture>list/files_fanart_background.png</texture>
-			<visible>Control.IsVisible(55) + Container.Content(movies) + Skin.HasSetting(Files_Fanart)</visible>
+			<visible>Control.IsVisible(50) + Container.Content(movies) + Skin.HasSetting(Files_Fanart)</visible>
 		</control>
 		
 		
-		<control type="fixedlist" id="55">
+		<control type="fixedlist" id="50">
 			<posx>0</posx>
 			<posy>-14</posy>
 			<height>885</height>
 			<width>1680</width>
-			<onup>55</onup>
-			<ondown>55</ondown>
+			<onup>50</onup>
+			<ondown>50</ondown>
 			<onleft>7000</onleft>
 			<onright>60</onright>
 			<scrolltime>0</scrolltime>
@@ -79,7 +79,7 @@
 					<height>4</height>
 					<aspectratio>stretch</aspectratio>
 					<texture>confluence/separator.png</texture>
-					<visible>Control.IsVisible(55) + Container.Content(movies) + !Skin.HasSetting(Files_Fanart)</visible>
+					<visible>Control.IsVisible(50) + Container.Content(movies) + !Skin.HasSetting(Files_Fanart)</visible>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -88,7 +88,7 @@
 					<height>4</height>
 					<aspectratio>stretch</aspectratio>
 					<texture>confluence/separator.png</texture>
-					<visible>Control.IsVisible(55) + !Container.Content(movies)</visible>
+					<visible>Control.IsVisible(50) + !Container.Content(movies)</visible>
 				</control>
 				<control type="label">
 					<posx>20</posx>
@@ -152,7 +152,7 @@
 					<height>4</height>
 					<aspectratio>stretch</aspectratio>
 					<texture>confluence/separator.png</texture>
-					<visible>Control.IsVisible(55) + Container.Content(movies) + !Skin.HasSetting(Files_Fanart)</visible>
+					<visible>Control.IsVisible(50) + Container.Content(movies) + !Skin.HasSetting(Files_Fanart)</visible>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -161,7 +161,7 @@
 					<height>4</height>
 					<aspectratio>stretch</aspectratio>
 					<texture>confluence/separator.png</texture>
-					<visible>Control.IsVisible(55) + !Container.Content(movies)</visible>
+					<visible>Control.IsVisible(50) + !Container.Content(movies)</visible>
 				</control>
 				<control type="image">
 					<posx>-70</posx>
@@ -262,7 +262,7 @@
 	<control type="group">	
 	<include>Animation_Viewtype_Files_RightArea</include>
 	<include>Animation_HiddenByInfo</include>
-	<visible>Container.Content(movies) + Control.IsVisible(55) + !Skin.HasSetting(Files_Fanart)</visible>
+	<visible>Container.Content(movies) + Control.IsVisible(50) + !Skin.HasSetting(Files_Fanart)</visible>
 		<control type="image">
 			<posx>830</posx>
 			<posy>6</posy>
@@ -288,7 +288,7 @@
 			<effect type="zoom" time="400" center="auto" start="100" end="180" tween="cubic" easing="in" />
 				<effect type="fade" time="400" start="100" end="0" />
 			</animation>
-			<visible>Container(55).OnNext</visible>
+			<visible>Container(50).OnNext</visible>
 		</control>
 		<control type="image">
 			<posx>830</posx>
@@ -304,12 +304,12 @@
 			<effect type="zoom" time="400" center="auto" start="100" end="180" tween="cubic" easing="in" />
 				<effect type="fade" time="400" start="100" end="0" />
 			</animation>
-			<visible>Container(55).OnPrevious</visible>
+			<visible>Container(50).OnPrevious</visible>
 		</control>
 	</control>
 	
 	<control type="grouplist">
-		<visible>Control.IsVisible(55) + Container.Content(movies) + !Window.IsActive(videofiles) + !Skin.HasSetting(no_media_flags) + !Skin.HasSetting(Files_Fanart)</visible>
+		<visible>Control.IsVisible(50) + Container.Content(movies) + !Window.IsActive(videofiles) + !Skin.HasSetting(no_media_flags) + !Skin.HasSetting(Files_Fanart)</visible>
 		<description>Media Codec Flagging Images</description>
 		<posx>864</posx>
 		<posy>680</posy>
@@ -335,13 +335,13 @@
 		<bordertexture border="5">confluence/button-nofocus.png</bordertexture>
 		<bordersize>5</bordersize>
 		<fadetime>100</fadetime>
-		<visible>Control.IsVisible(55) + IsEmpty(ListItem.Title) + ![Container.Content(movies) | Container.Content(Genres) | Container.Content(episodes) | Container.Content(albums) | Container.Content(songs)]</visible>
+		<visible>Control.IsVisible(50) + IsEmpty(ListItem.Title) + ![Container.Content(movies) | Container.Content(Genres) | Container.Content(episodes) | Container.Content(albums) | Container.Content(songs)]</visible>
 	</control>-->
 	
 	<control type="group">	
 	<include>Animation_Viewtype_Files_RightArea</include>
 	<include>Animation_HiddenByInfo</include>
-	<visible>Container.Content(Genres) + Control.IsVisible(55)</visible>
+	<visible>Container.Content(Genres) + Control.IsVisible(50)</visible>
 		<control type="image">
 			<posx>826</posx>
 			<posy>26</posy>
@@ -367,7 +367,7 @@
 			<effect type="zoom" time="400" center="auto" start="100" end="180" tween="cubic" easing="in" />
 				<effect type="fade" time="400" start="100" end="0" />
 			</animation>
-			<visible>Container(55).OnNext</visible>
+			<visible>Container(50).OnNext</visible>
 		</control>
 		<control type="image">
 			<posx>826</posx>
@@ -383,12 +383,12 @@
 			<effect type="zoom" time="400" center="auto" start="100" end="180" tween="cubic" easing="in" />
 				<effect type="fade" time="400" start="100" end="0" />
 			</animation>
-			<visible>Container(55).OnPrevious</visible>
+			<visible>Container(50).OnPrevious</visible>
 		</control>
 	</control>
 	<control type="group">
 	<include>Animation_HiddenByInfo</include>
-	<visible>Control.IsVisible(55) + [Container.Content(tvshows) | Container.Content(seasons)]</visible>
+	<visible>Control.IsVisible(50) + [Container.Content(tvshows) | Container.Content(seasons)]</visible>
 	<include>Animation_Viewtype_Files_RightArea</include>	
 		<control type="image">
 			<posx>770</posx>
@@ -425,7 +425,7 @@
 			<effect type="zoom" time="400" center="1200,660" start="100" end="180" tween="cubic" easing="in" />
 				<effect type="fade" time="400" start="100" end="0" />
 			</animation>
-			<visible>Container(55).OnNext</visible>
+			<visible>Container(50).OnNext</visible>
 		</control>
 		<control type="image">
 			<posx>770</posx>
@@ -440,12 +440,12 @@
 			<effect type="zoom" time="400" center="1200,660" start="100" end="180" tween="cubic" easing="in" />
 				<effect type="fade" time="400" start="100" end="0" />
 			</animation>
-			<visible>Container(55).OnPrevious</visible>
+			<visible>Container(50).OnPrevious</visible>
 		</control>
 	</control>
 	<control type="group">
 	<include>Animation_HiddenByInfo</include>
-	<visible>Control.IsVisible(55) + ![Window.IsActive(musicfiles) | Container.Content(movies) | Container.Content(Genres) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(albums) | Container.Content(songs)]</visible>
+	<visible>Control.IsVisible(50) + ![Window.IsActive(musicfiles) | Container.Content(movies) | Container.Content(Genres) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(albums) | Container.Content(songs)]</visible>
 	<include>Animation_Viewtype_Files_RightArea</include>	
 		<control type="image">
 			<posx>770</posx>
@@ -482,7 +482,7 @@
 			<effect type="zoom" time="400" center="1200,660" start="100" end="180" tween="cubic" easing="in" />
 				<effect type="fade" time="400" start="100" end="0" />
 			</animation>
-			<visible>Container(55).OnNext</visible>
+			<visible>Container(50).OnNext</visible>
 		</control>
 		<control type="image">
 			<posx>770</posx>
@@ -497,12 +497,12 @@
 			<effect type="zoom" time="400" center="1200,660" start="100" end="180" tween="cubic" easing="in" />
 				<effect type="fade" time="400" start="100" end="0" />
 			</animation>
-			<visible>Container(55).OnPrevious</visible>
+			<visible>Container(50).OnPrevious</visible>
 		</control>
 	</control>
 	<control type="group">
 	<include>Animation_HiddenByInfo</include>
-	<visible>Control.IsVisible(55) + Window.IsActive(musicfiles)</visible>
+	<visible>Control.IsVisible(50) + Window.IsActive(musicfiles)</visible>
 	<include>Animation_Viewtype_Files_RightArea</include>	
 		<control type="image">
 			<posx>770</posx>
@@ -539,7 +539,7 @@
 			<effect type="zoom" time="400" center="auto" start="100" end="180" tween="cubic" easing="in" />
 				<effect type="fade" time="400" start="100" end="0" />
 			</animation>
-			<visible>Container(55).OnNext</visible>
+			<visible>Container(50).OnNext</visible>
 		</control>
 		<control type="image">
 			<posx>770</posx>
@@ -554,14 +554,14 @@
 			<effect type="zoom" time="400" center="auto" start="100" end="180" tween="cubic" easing="in" />
 				<effect type="fade" time="400" start="100" end="0" />
 			</animation>
-			<visible>Container(55).OnPrevious</visible>
+			<visible>Container(50).OnPrevious</visible>
 		</control>
 	</control>
 	<control type="group">
 	<posx>930</posx>
 	<posy>370</posy>
 	<include>Animation_HiddenByInfo</include>
-	<visible>Control.IsVisible(55) + [Container.Content(albums) | Container.Content(songs)]</visible>
+	<visible>Control.IsVisible(50) + [Container.Content(albums) | Container.Content(songs)]</visible>
 	<include>Animation_Viewtype_Files_RightArea</include>
 		<control type="image">
 			<posx>-166</posx>
@@ -572,7 +572,7 @@
 			<animation type="Visible">
 				<effect type="fade" start="0" end="100" delay="400" time="1200" />
 			</animation>
-			<visible>![Container(55).OnNext | Container(55).OnPrevious]</visible>
+			<visible>![Container(50).OnNext | Container(50).OnPrevious]</visible>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -599,7 +599,7 @@
 			<effect type="zoom" time="400" center="240,200" start="100" end="180" tween="cubic" easing="in" />
 				<effect type="fade" time="400" center="240,200" start="100" end="0" />
 			</animation>
-			<visible>Container(55).OnNext + !Container.Content(songs)</visible>
+			<visible>Container(50).OnNext + !Container.Content(songs)</visible>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -611,14 +611,14 @@
 			<effect type="zoom" time="400" center="240,200" start="100" end="180" tween="cubic" easing="in" />
 				<effect type="fade" time="400" center="240,200" start="100" end="0" />
 			</animation>
-			<visible>Container(55).OnPrevious + !Container.Content(songs)</visible>
+			<visible>Container(50).OnPrevious + !Container.Content(songs)</visible>
 		</control>
 	</control>
 	<control type="group">
 	<posx>-6</posx>
 	<posy>26</posy>
 	<include>Animation_HiddenByInfo</include>
-	<visible>Control.IsVisible(55) + Container.Content(episodes)</visible>
+	<visible>Control.IsVisible(50) + Container.Content(episodes)</visible>
 	<include>Animation_Viewtype_Files_RightArea</include>
 		<control type="image">
 			<posx>726</posx>
@@ -629,7 +629,7 @@
 			<animation type="Visible">
 				<effect type="fade" start="0" end="100" delay="400" time="1200" />
 			</animation>
-			<visible>![Container(55).OnNext | Container(55).OnPrevious]</visible>
+			<visible>![Container(50).OnNext | Container(50).OnPrevious]</visible>
 		</control>
 		<control type="image">
 			<posx>854</posx>
@@ -656,7 +656,7 @@
 			<effect type="zoom" time="400" center="1040,600" start="100" end="180" tween="cubic" easing="in" />
 				<effect type="fade" time="400" center="1040,600" start="100" end="0" />
 			</animation>
-			<visible>Container(55).OnNext</visible>
+			<visible>Container(50).OnNext</visible>
 		</control>
 		<control type="image">
 			<posx>854</posx>
@@ -668,11 +668,11 @@
 			<effect type="zoom" time="400" center="1040,600" start="100" end="180" tween="cubic" easing="in" />
 				<effect type="fade" time="400" center="1040,600" start="100" end="0" />
 			</animation>
-			<visible>Container(55).OnPrevious</visible>
+			<visible>Container(50).OnPrevious</visible>
 		</control>
 	</control>
 		<control type="image" id="7019">
-			<visible>Control.IsVisible(55)</visible>
+			<visible>Control.IsVisible(50)</visible>
 			<posx>920</posx>
 			<posy>0</posy>
 			<width>230</width>
@@ -684,7 +684,7 @@
 			<include>Animation_Viewtype_Files_RightArea</include>
 		</control>
 		<control type="image" id="9019">
-			<visible>Control.IsVisible(55)</visible>
+			<visible>Control.IsVisible(50)</visible>
 			<posx>920</posx>
 			<posy>0</posy>
 			<width>230</width>
@@ -705,10 +705,10 @@
 			<textcolor>ff67ffff</textcolor>
 			<label>[B]$INFO[ListItem.TVShowtitle][/B]</label>
 			<include>Animation_Viewtype_Files_RightArea</include>
-			<visible>Control.IsVisible(55) + IsEmpty(Control.GetLabel(7019)) + IsEmpty(Control.GetLabel(9019))</visible>
+			<visible>Control.IsVisible(50) + IsEmpty(Control.GetLabel(7019)) + IsEmpty(Control.GetLabel(9019))</visible>
 		</control>
 	<control type="group">
-		<visible>Control.IsVisible(55) + !Window.IsActive(videoplaylist) + !IsEmpty(ListItem.Title)</visible>
+		<visible>Control.IsVisible(50) + !Window.IsActive(videoplaylist) + !IsEmpty(ListItem.Title)</visible>
 		<posx>720</posx>
 		<posy>96</posy>
 		<include>Animation_Viewtype_Wall_UnderInfo</include>
@@ -761,7 +761,7 @@
 		<posy>0</posy>
 		<include>Animation_HiddenByInfo</include>
 		<include>Animation_Viewtype_Files_RightArea</include>
-		<visible>Control.IsVisible(55) + !IsEmpty(ListItem.Title)</visible>
+		<visible>Control.IsVisible(50) + !IsEmpty(ListItem.Title)</visible>
 			<control type="label">
 				<visible>Container.Content(episodes)</visible>
 				<posx>830</posx>
@@ -810,27 +810,28 @@
 				<width>476</width>
 				<height>280</height>
 				<align>justify</align>
-				<info>Container(55).ShowPlot</info>
+				<info>Container(50).ShowPlot</info>
 				<font>Font_Bartowski_Movies</font>
 				<textcolor>ffffffff</textcolor>
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 			</control>-->
 		</control>
-		<control type="scrollbar" id="65">
+		<control type="scrollbar" id="60">
 			<include>Animation_ZoomInZoomOut</include>
 			<posx>1280</posx>
 			<posy>100</posy>
 			<width>25</width>
 			<height>460</height>
-			<visible allowhiddenfocus="true">Control.IsVisible(55) + Control.HasFocus(65)</visible>
+			<visible allowhiddenfocus="true">Control.IsVisible(50) + Control.HasFocus(60)</visible>
 			<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 			<textureslidernibfocus>ScrollBarV_Nib_Focus1.png</textureslidernibfocus>
-			<onleft>55</onleft>
+			<onleft>50</onleft>
+			<onright>50</onright>
 			<showonepage>false</showonepage>
 			<orientation>vertical</orientation>
 			<include>Animation_CommonFade</include>
-			<animation effect="slide" start="0,0" end="-500,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(65) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]">Conditional</animation>
-			<animation effect="slide" start="0,0" end="-530,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(65) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-500,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(60) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-530,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(60) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]">Conditional</animation>
 		</control>
 		
 		

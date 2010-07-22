@@ -1,3 +1,11 @@
+Update 7/21/2010
+  -Fixed some scrollbar errors
+  -Added "3d Square" view to Addons/Programs and Music Files mode
+  -Added submenu link to AddonBrowser under "Addons"
+
+Update 7/20/2010
+  -Code for genre fanart is in
+
 Update 7/18/2010
   -Changed up some of the positioning of 'Now Playing' items Home with Bottom Horizontal
   -Also changed animations for Music/Movies Recently Added and Weather widget

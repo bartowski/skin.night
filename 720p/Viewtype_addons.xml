@@ -7,16 +7,16 @@
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<texture>list/file-black-background1.png</texture>
-			<visible>Control.IsVisible(55)</visible>
+			<visible>Control.IsVisible(50)</visible>
 		</control>
 		
-		<control type="fixedlist" id="55">
+		<control type="fixedlist" id="50">
 			<posx>0</posx>
 			<posy>-14</posy>
 			<height>885</height>
 			<width>1680</width>
-			<onup>55</onup>
-			<ondown>55</ondown>
+			<onup>50</onup>
+			<ondown>50</ondown>
 			<onleft>7000</onleft>
 			<onright>60</onright>
 			<scrolltime>0</scrolltime>
@@ -105,7 +105,7 @@
 	
 	<control type="group">
 	<include>Animation_HiddenByInfo</include>
-	<visible>Control.IsVisible(55)</visible>
+	<visible>Control.IsVisible(50)</visible>
 	<include>Animation_Viewtype_Wall_Title</include>	
 		<control type="image">
 			<posx>810</posx>
@@ -132,7 +132,7 @@
 			<effect type="zoom" time="400" center="auto" start="100" end="180" tween="cubic" easing="in" />
 				<effect type="fade" time="400" start="100" end="0" />
 			</animation>
-			<visible>Container(55).OnNext</visible>
+			<visible>Container(50).OnNext</visible>
 		</control>
 		<control type="image">
 			<posx>810</posx>
@@ -148,7 +148,7 @@
 			<effect type="zoom" time="400" center="auto" start="100" end="180" tween="cubic" easing="in" />
 				<effect type="fade" time="400" start="100" end="0" />
 			</animation>
-			<visible>Container(55).OnPrevious</visible>
+			<visible>Container(50).OnPrevious</visible>
 		</control>
 	</control>
 	
@@ -164,7 +164,7 @@
 			<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Wall_Plot</include>
-			<visible>Control.IsVisible(55)</visible>
+			<visible>Control.IsVisible(50)</visible>
 		</control>
 		
 		<control type="scrollbar" id="60">
@@ -173,15 +173,15 @@
 			<posy>100</posy>
 			<width>25</width>
 			<height>460</height>
-			<visible allowhiddenfocus="true">Control.IsVisible(55) + Control.HasFocus(60)</visible>
+			<visible allowhiddenfocus="true">Control.IsVisible(50) + Control.HasFocus(60)</visible>
 			<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 			<textureslidernibfocus>ScrollBarV_Nib_Focus1.png</textureslidernibfocus>
-			<onleft>55</onleft>
+			<onleft>50</onleft>
 			<showonepage>false</showonepage>
 			<orientation>vertical</orientation>
 			<include>Animation_CommonFade</include>
-			<animation effect="slide" start="0,0" end="-500,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(60) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]">Conditional</animation>
-			<animation effect="slide" start="0,0" end="-530,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(60) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-500,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(60)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-530,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(60)">Conditional</animation>
 		</control>
 		
 	</include>

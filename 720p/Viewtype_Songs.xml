@@ -31,13 +31,13 @@
 			<onup>52</onup>
 			<ondown>52</ondown>
 			<onleft>7000</onleft>
-			<onright>61</onright>
+			<onright>62</onright>
 			<scrolltime>0</scrolltime>
 			<viewtype label="$LOCALIZE[134]">list</viewtype>
 			<orientation>vertical</orientation>
 			<focusposition>9</focusposition>
 			<movement>9</movement>
-			<pagecontrol>60</pagecontrol>
+			<pagecontrol>62</pagecontrol>
 			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Panel_FocusArea</include>
 			<visible>Container.Content(songs) | Container.Content(artists)</visible>
@@ -251,20 +251,20 @@
 		<include>Animation_HiddenByInfo</include>
 		<include>Animation_Viewtype_3dland_Leftplot</include>
 	</control>
-		<control type="scrollbar" id="61">
+		<control type="scrollbar" id="62">
 			<include>Animation_ZoomInZoomOut</include>
 			<posx>1280</posx>
 			<posy>100</posy>
 			<width>25</width>
 			<height>460</height>
-			<visible allowhiddenfocus="true">Control.IsVisible(52) + Control.HasFocus(60)</visible>
+			<visible allowhiddenfocus="true">Control.IsVisible(52) + Control.HasFocus(62)</visible>
 			<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 			<textureslidernibfocus>ScrollBarV_Nib_Focus1.png</textureslidernibfocus>
-			<onleft>55</onleft>
+			<onleft>52</onleft>
 			<showonepage>false</showonepage>
 			<orientation>vertical</orientation>
 			<include>Animation_CommonFade</include>
-			<animation effect="slide" start="0,0" end="-100,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(60)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-40,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(62)">Conditional</animation>
 		</control>
 		
 	</include>

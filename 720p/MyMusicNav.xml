@@ -1,8 +1,9 @@
 <!--Alaska-->
 
 <window id="502">
-	<defaultcontrol>55</defaultcontrol>
+	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
+	<views>50,56,58,51,52,53,54</views>
 	<controls>
 		
 
@@ -38,9 +39,9 @@
 			<visible>Control.IsVisible(53) | [Control.IsVisible(52) + Container.Content(artists)]</visible>
 		</control>
 		
-		<include>Viewtype_Files</include><!-- 55 -->
+		<include>Viewtype_Files</include><!-- 50 -->
 		<include>Viewtype_MusicShowcase</include><!-- 58 -->
-		<include>Viewtype_3daddon</include><!-- 50 -->
+		<include>Viewtype_3daddon</include><!-- 56 -->
 		<include>Viewtype_MusicWall</include><!-- 53 -->
 		<include>Viewtype_Songs</include><!-- 52 -->
 		<include>Viewtype_Shelf</include><!-- 51 -->

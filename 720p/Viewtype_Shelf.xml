@@ -13,9 +13,9 @@
 			<height>760</height>
 			<scrolltime>0</scrolltime>
 			<orientation>vertical</orientation>
-			<onright>62</onright>
+			<onright>61</onright>
 			<onleft>7000</onleft>
-			<pagecontrol>62</pagecontrol>
+			<pagecontrol>61</pagecontrol>
 			<include>Animation_BackdropFade</include>
 			<visible>!Skin.HasSetting(no_Shelf) + Container.Content(albums)</visible>
 			<animation effect="slide" end="0,-60" time="800" tween="cubic" easing="inout" condition="!Container(51).Row(0)">Conditional</animation>
@@ -135,20 +135,20 @@
 				<visible></visible>
 			</control>
 		</control>
-		<control type="scrollbar" id="62">
+		<control type="scrollbar" id="61">
 			<include>Animation_ZoomInZoomOut</include>
 			<posx>1280</posx>
 			<posy>100</posy>
 			<width>25</width>
 			<height>460</height>
-			<visible allowhiddenfocus="true">Control.IsVisible(51) + Control.HasFocus(62)</visible>
+			<visible allowhiddenfocus="true">Control.IsVisible(51) + Control.HasFocus(61)</visible>
 			<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 			<textureslidernibfocus>ScrollBarV_Nib_Focus1.png</textureslidernibfocus>
 			<onleft>51</onleft>
 			<showonepage>false</showonepage>
 			<orientation>vertical</orientation>
 			<include>Animation_CommonFade</include>
-			<animation effect="slide" start="0,0" end="-40,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(62)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-40,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(61)">Conditional</animation>
 		</control>
 	</include>
 

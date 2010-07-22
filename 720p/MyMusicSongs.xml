@@ -1,7 +1,7 @@
 <!--Alaska-->
 
 <window id="501">
-	<defaultcontrol>55</defaultcontrol>
+	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
 		<control type="image" id="5019">
@@ -19,9 +19,10 @@
 			<visible>IsEmpty(Control.GetLabel(5019))</visible>
 		</control>
 
-		<include>Viewtype_Files</include>
-		<include>Viewtype_JukeBox</include>
-		<include>Viewtype_MusicShowcase</include>
+		<include>Viewtype_Files</include><!-- 55  -->
+		<include>Viewtype_JukeBox</include><!-- 54 -->
+		<include>Viewtype_MusicShowcase</include><!-- 58 -->
+		<include>Viewtype_3daddon</include><!-- 56 -->
 		
 		<include>Global_Time_TopRight_Files</include>
 		

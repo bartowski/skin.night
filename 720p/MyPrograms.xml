@@ -3,6 +3,7 @@
 <window id="1">
 	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
+	<views>50,56,55</views>
 	<controls>
 		
 		<control type="image">
@@ -16,15 +17,15 @@
 		
 		<include>Viewtype_Files</include>
 		<include>Viewtype_Poster</include>
-		<include>Viewtype_List</include>
+		<include>Viewtype_3daddon</include><!--  56  -->
 		
 
 		<include>7000_has_focus</include>
 		
 		<control type="image"><!-- Floor -->
-			<posx>0</posx>
+			<posx>460</posx>
 			<posy>650</posy>
-			<width>1280</width>
+			<width>380</width>
 			<height>70</height>
 			<texture>backdrops/test2.png</texture>
 			<visible>ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews)</visible>

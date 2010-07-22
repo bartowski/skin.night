@@ -824,8 +824,8 @@
 		<width>1120</width>
 		<height>40</height>
 		<posx>100</posx>
-		<onup>55</onup>
-		<ondown>55</ondown>
+		<onup>50</onup>
+		<ondown>50</ondown>
 		<itemgap>0</itemgap>
 		<align>center</align>
 		<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews)</visible>

@@ -15,8 +15,9 @@
 			<orientation>horizontal</orientation>
 			<focusposition>2</focusposition>
 			<movement>0</movement>
-			<scrolltime>200</scrolltime>
-			<include>Animation_Bartowski_Context_Zoom</include>
+			<scrolltime>300</scrolltime>
+			<include condition="!Skin.HasSetting(horizontal_bottom_align)">Animation_Bartowski_Context_Zoom</include>
+			<include condition="Skin.HasSetting(horizontal_bottom_align)">Animation_Bartowski_Context_Zoom_Bottom</include>
 			<visible>Skin.HasSetting(horizontal_home)</visible>	
 			<animation effect="slide" end="0,330" time="0" condition="Skin.HasSetting(horizontal_bottom_align)">conditional</animation>
 			<itemlayout width="300" height="61">
@@ -470,6 +471,11 @@
 					<ondown>300</ondown>
 					<itemgap>0</itemgap>
 					<visible>Container(300).HasFocus(10) + [[Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))] | [Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))] | [Skin.HasSetting(HomeScriptButton3) + !IsEmpty(Skin.String(HomeScriptButton3_label))] | [Skin.HasSetting(HomeScriptButton4) + !IsEmpty(Skin.String(HomeScriptButton4_label))] | [Skin.HasSetting(HomeScriptButton5) + !IsEmpty(Skin.String(HomeScriptButton5_label))] | [Skin.HasSetting(HomeScriptButton6) + !IsEmpty(Skin.String(HomeScriptButton6_label))]]</visible>
+					<control type="button" id="90150">
+						<include>ButtonHomeSubCommonValues_Horizontal</include>
+						<label>$LOCALIZE[31273]</label>
+						<onclick>ActivateWindow(addonbrowser)</onclick>
+					</control>
 					<control type="button" id="90151">
 						<description>Button1</description>
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
