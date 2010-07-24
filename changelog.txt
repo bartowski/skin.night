@@ -1,3 +1,11 @@
+Update 7/22/2010
+  -Changed the Showcase Picture view to disappear by pressing down not automatically as before
+  -Fixed a few errors with Now Playing after I swapped id's on Files and Poster view
+  -Fixed a bbfc flag error
+  -Fanart option for "Files" view in Music Library
+  -Minutes no longer show when focused on a movie set
+  -Added 'ondown' option in View Options to "Fanart" view
+
 Update 7/21/2010
   -Fixed some scrollbar errors
   -Added "3d Square" view to Addons/Programs and Music Files mode

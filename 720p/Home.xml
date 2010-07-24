@@ -167,12 +167,6 @@
 					<onclick>XBMC.ActivateWindow(MyVideoFiles)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
 				</item>
-				<item id="11">
-					<icon>special://skin/backgrounds/playdisc.jpg</icon>						
-					<label>341</label>
-					<onclick>XBMC.PlayDVD</onclick>
-					<visible>System.HasMediadvd</visible>
-				</item>
 				<item id="3">
 					<description>movies</description>
 					<label>$LOCALIZE[20342]</label>
@@ -337,6 +331,12 @@
 					<thumb>$INFO[Skin.String(Home_Custom_Back_Shutdown_Folder)]</thumb>
 					<onclick>XBMC.Shutdown()</onclick>
 					<visible>Skin.HasSetting(HomeMenuNoShutdownButton)</visible>
+				</item>
+				<item id="11">
+					<icon>special://skin/backgrounds/playdisc.jpg</icon>						
+					<label>341</label>
+					<onclick>XBMC.PlayDVD</onclick>
+					<visible>System.HasMediadvd</visible>
 				</item>
 			</content>
 		</control>

@@ -191,7 +191,7 @@
 			<width>90</width>
 			<height>33</height>
 			<aspectratio>keep</aspectratio>
-			<texture>flagging/ratings/bbfc_u.png</texture>
+			<texture>flagging/ratings/bbfc_pg.png</texture>
 			<visible>substring(listitem.mpaa,UK:PG)</visible>
 		</control>
 		<control type="image">

@@ -19,7 +19,7 @@
 				<font>-</font>
 				<texturenofocus>-</texturenofocus>
 				<texturefocus>-</texturefocus>
-				<onfocus>RunScript(special://skin/scripts/script.favourites/default.py,playlists=play)</onfocus>
+				<onfocus>RunScript(script.favourites,playlists=play)</onfocus>
 				<onup>450</onup>
 				<onleft>450</onleft>
 				<onright>450</onright>

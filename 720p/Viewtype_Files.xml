@@ -12,12 +12,22 @@
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<texture>list/file-black-background1.png</texture>
-			<visible>Control.IsVisible(50) + !Container.Content(movies)</visible>
+			<visible>Control.IsVisible(50) + Window.IsActive(musiclibrary) + !Skin.HasSetting(music_files_fanart)</visible>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture>list/file-black-background1.png</texture>
+			<visible>Control.IsVisible(50) + ![Container.Content(movies) | Window.IsActive(musiclibrary)]</visible>
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<texture>list/files_fanart_background.png</texture>
 			<visible>Control.IsVisible(50) + Container.Content(movies) + Skin.HasSetting(Files_Fanart)</visible>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture>list/files_fanart_background.png</texture>
+			<visible>Control.IsVisible(50) + Window.IsActive(musiclibrary) + Skin.HasSetting(music_files_fanart)</visible>
 		</control>
 		
 		
@@ -88,7 +98,16 @@
 					<height>4</height>
 					<aspectratio>stretch</aspectratio>
 					<texture>confluence/separator.png</texture>
-					<visible>Control.IsVisible(50) + !Container.Content(movies)</visible>
+					<visible>Control.IsVisible(50) + Window.IsActive(musiclibrary) + !Skin.HasSetting(music_files_fanart)</visible>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>38</posy>
+					<width>880</width>
+					<height>4</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>confluence/separator.png</texture>
+					<visible>Control.IsVisible(50) + ![Container.Content(movies) | Window.IsActive(musiclibrary)]</visible>
 				</control>
 				<control type="label">
 					<posx>20</posx>
@@ -161,7 +180,16 @@
 					<height>4</height>
 					<aspectratio>stretch</aspectratio>
 					<texture>confluence/separator.png</texture>
-					<visible>Control.IsVisible(50) + !Container.Content(movies)</visible>
+					<visible>Control.IsVisible(50) + Window.IsActive(musiclibrary) + !Skin.HasSetting(music_files_fanart)</visible>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>38</posy>
+					<width>880</width>
+					<height>4</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>confluence/separator.png</texture>
+					<visible>Control.IsVisible(50) + ![Container.Content(movies) | Window.IsActive(musiclibrary)]</visible>
 				</control>
 				<control type="image">
 					<posx>-70</posx>
@@ -445,7 +473,7 @@
 	</control>
 	<control type="group">
 	<include>Animation_HiddenByInfo</include>
-	<visible>Control.IsVisible(50) + ![Window.IsActive(musicfiles) | Container.Content(movies) | Container.Content(Genres) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(albums) | Container.Content(songs)]</visible>
+	<visible>Control.IsVisible(50) + ![Window.IsActive(musicfiles) | Container.Content(movies) | Container.Content(Genres) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(albums) | Container.Content(songs) | [Window.IsActive(musiclibrary) + Skin.HasSetting(music_files_fanart)]]</visible>
 	<include>Animation_Viewtype_Files_RightArea</include>	
 		<control type="image">
 			<posx>770</posx>
@@ -458,17 +486,6 @@
 			<bordersize>5</bordersize>
 			<fadetime>100</fadetime>
 		</control>
-		<!--<control type="image">
-			<posx>780</posx>
-			<posy>40</posy>
-			<width>500</width>
-			<height>300</height>
-			<aspectratio align="right" aligny="bottom">keep</aspectratio>
-			<texture background="true">$INFO[ListItem.Icon]</texture>
-			<bordertexture border="5">confluence/button-nofocus.png</bordertexture>
-			<bordersize>5</bordersize>
-			<fadetime>100</fadetime>
-		</control>-->
 		<control type="image">
 			<posx>770</posx>
 			<posy>360</posy>

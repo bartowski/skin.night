@@ -96,13 +96,22 @@
 				<altlabel>$LOCALIZE[31214]</altlabel>
 				<onclick>Skin.ToggleSetting(3dmusic_Fanart)</onclick>
 				<selected>Skin.HasSetting(3dmusic_Fanart)</selected>
+				<visible>Control.IsVisible(56)</visible>
+			</control>
+			<control type="togglebutton" id="23">
+				<description>Toggle MoviesFanart</description>
+				<include>WindowMenuButton</include>
+				<label>$LOCALIZE[31086]</label>
+				<altlabel>$LOCALIZE[31214]</altlabel>
+				<onclick>Skin.ToggleSetting(music_files_fanart)</onclick>
+				<selected>Skin.HasSetting(music_files_fanart)</selected>
 				<visible>Control.IsVisible(50)</visible>
 			</control>
 			<control type="button" id="3">
 				<include>WindowMenuButton</include>
 				<label>103</label>
 			</control>
-			<control type="button" id="23">
+			<control type="button" id="24">
 				<include>WindowMenuButton</include>
 				<label>$LOCALIZE[744]</label>
 				<onclick>ReplaceWindow(MusicFiles)</onclick>
@@ -128,7 +137,7 @@
 			<control type="button" id="41">
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[14018]</label>
-				<visible>Control.IsVisible(58) | Control.IsVisible(50)</visible>		
+				<visible>Control.IsVisible(50) | Control.IsVisible(56) | Control.IsVisible(58)</visible>		
 			</control>
 			<control type="button" id="42">
 				<include>WindowMenuLabel</include>

@@ -25,7 +25,8 @@
 			<onleft>633</onleft>
 			<onright>633</onright>
 			<onup>7000</onup>
-			<ondown>6330</ondown>
+			<include condition="!Skin.HasSetting(3dland_down_plot)">3dland_down_scrollbar</include>
+			<include condition="Skin.HasSetting(3dland_down_plot)">3dland_down_plot</include>
 			<pagecontrol>6330</pagecontrol>
 			<viewtype label="$LOCALIZE[20445]">list</viewtype>
 			<orientation>horizontal</orientation>
@@ -251,7 +252,7 @@
 		</control>
 	</control>
 	
-	<!--<control type="group" id="8374">
+	<control type="group" id="8374">
 		<control type="button" id="18374">
 			<onleft>633</onleft>
 			<onright>633</onright>
@@ -260,13 +261,13 @@
 			<label></label>
 			<visible allowhiddenfocus="true">ControlGroup(8374).HasFocus + Container.Content(episodes)</visible>
 		</control>
-	</control>-->
+	</control>
 	
 	<control type="group">
 	<include>Animation_LandscapeFade</include>
 	<animation effect="slide" start="0,0" end="0,-40" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(6330)">Conditional</animation>
 	<animation effect="fade" start="0" end="100" time="400" delay="2400" condition="![Container(633).OnNext | Container(633).OnPrevious]">Conditional</animation>
-	<visible>Control.IsVisible(633) + Container.Content(episodes) + !IsEmpty(ListItem.Title) + ![Container(633).OnNext | Container(633).OnPrevious]</visible>
+	<visible>Control.IsVisible(633) + Container.Content(episodes) + !Skin.HasSetting(3dland_down_plot) + !IsEmpty(ListItem.Title) + ![Container(633).OnNext | Container(633).OnPrevious]</visible>
 		<control type="image">
 			<posx>458</posx>
 			<posy>426</posy>
@@ -286,6 +287,32 @@
 			<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 		</control>
 	</control>
+	
+	<control type="group">
+	<include>Animation_LandscapeFade</include>
+	<animation effect="slide" start="0,0" end="0,-40" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(6330)">Conditional</animation>
+	<animation effect="fade" start="0" end="100" time="400" delay="200" condition="ControlGroup(8374).HasFocus">Conditional</animation>
+	<visible>Control.IsVisible(633) + Container.Content(episodes) + Skin.HasSetting(3dland_down_plot) + !IsEmpty(ListItem.Title) + ControlGroup(8374).HasFocus</visible>
+		<control type="image">
+			<posx>458</posx>
+			<posy>426</posy>
+			<width>392</width>
+			<height>221</height>
+			<texture>tv-landscape/fanart_land_plot_back.png</texture>
+		</control>
+		<control type="textbox">
+			<posx>460</posx>
+			<posy>424</posy>
+			<width>386</width>
+			<height>188</height>
+			<font>Font_KeyboardKeys_Plot</font>
+			<textcolor>ffffffff</textcolor>
+			<label>$INFO[ListItem.Plot]</label>
+			<align>justify</align>
+			<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+		</control>
+	</control>
+	
 	
 	<control type="scrollbar" id="6330">
 		<include>Animation_ZoomInZoomOut</include>

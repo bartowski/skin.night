@@ -26,26 +26,26 @@
 		<width>1280</width>
 		<height>720</height>
 		<texture>music/music_backdrop3.png</texture>
-		<animation effect="slide" start="0,0" end="0,400" time="800" delay="2800" condition="![Container.OnPrevious | Container.OnNext]">Conditional</animation>
-		<visible>Control.IsVisible(50)</visible>
+		<animation effect="slide" start="0,0" end="0,400" time="200" delay="0" condition="Control.HasFocus(8000)">Conditional</animation>
+		<visible>Control.IsVisible(51)</visible>
 	</control>
 	
-		<control type="wraplist" id="50">
+		<control type="wraplist" id="51">
 			<posx>-64</posx>
 			<posy>290</posy>
 			<height>515</height>
 			<width>1920</width>
-			<onleft>50</onleft>
-			<onright>50</onright>
+			<onleft>51</onleft>
+			<onright>51</onright>
 			<onup>7000</onup>
-			<ondown>7000</ondown>
+			<ondown>8000</ondown>
 			<viewtype label="$LOCALIZE[31063]">list</viewtype>
 			<orientation>horizontal</orientation>
 			<focusposition>3</focusposition>
 			<scrolltime>300</scrolltime>
 			<preloaditems>2</preloaditems>
 			<include>Animation_ZoomInZoomOut</include>
-			<animation effect="slide" start="0,0" end="0,400" time="600" delay="2800" condition="![Container.OnPrevious | Container.OnNext]">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,400" time="600" delay="0" condition="Control.HasFocus(8000)">Conditional</animation>
 			<itemlayout width="204" height="245">
 			<control type="group">
 			<posx>0</posx>
@@ -124,7 +124,6 @@
 					<include>Animation_PosterInfoSlide_Showcase</include>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="auto" start="80" end="100" time="300" tween="back" easing="out" />
-						<effect type="fade" start="100" end="0" time="600" delay="2800" />
 					</animation>
 				</control>
 				<control type="image">
@@ -139,7 +138,6 @@
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="auto" start="90" end="114" time="300" tween="back" easing="out" />
 						<effect type="fade" start="0" end="60"/>
-						<effect type="fade" start="100" end="0" time="600" delay="2800" />
 					</animation>
 				</control>
 				<control type="image">
@@ -152,7 +150,6 @@
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="auto" start="90" end="114" time="300" tween="back" easing="out" />
 						<effect type="fade" start="0" end="20"/>
-						<effect type="fade" start="100" end="0" time="600" delay="2800" />
 					</animation>
 				</control>
 				<control type="image">
@@ -165,9 +162,7 @@
 					<include>Animation_PosterInfoSlide_Showcase</include>
 					<animation type="Focus" reversible="false">
 						<effect type="fade" start="0" end="60" time="1000" delay="800" />
-						<effect type="fade" start="100" end="0" time="600" delay="2800" />
 					</animation>
-					<visible>!Skin.HasSetting(MusicShowcaseFanart)</visible>
 				</control>
 				<control type="image">
 					<posx>-14</posx>
@@ -180,7 +175,6 @@
 					<include>Animation_PosterInfoSlide_Showcase</include>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="auto" start="80" end="100" time="300" tween="back" easing="out" />
-						<effect type="fade" start="100" end="0" time="600" delay="2800" />
 					</animation>
 				</control>
 				<control type="image">
@@ -193,11 +187,20 @@
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="auto" start="80" end="100" time="300" tween="back" easing="out" />
 						<effect type="fade" start="0" end="80" time="600" />
-						<effect type="fade" start="100" end="0" time="600" delay="2800" />
 					</animation>
 				</control>
 			</control>
 			</focusedlayout>
+		</control>
+		
+		<control type="button" id="8000">
+			<label>SHOULD NOT SEE ME</label>
+			<onup>51</onup>
+			<ondown>51</ondown>
+			<onleft>51</onleft>
+			<onright>51</onright>
+			<width>500</width>
+			<visible allowhiddenfocus="true">false</visible>
 		</control>
 		
 		<control type="label">
@@ -212,7 +215,8 @@
 			<font>Font_MainMenuLabel</font>
 			<textcolor>mainblue</textcolor>
 			<shadowcolor>black</shadowcolor>
-			<visible>Control.IsVisible(50)</visible>
+			<include>Animation_BackdropFade</include>
+			<visible>Control.IsVisible(51)</visible>
 		</control>
 		
 	</include>

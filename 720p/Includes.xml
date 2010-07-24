@@ -103,7 +103,12 @@
 		<focusposition>5</focusposition>
 	</include>
 	
-	
+	<include name="3dland_down_scrollbar">
+		<ondown>6330</ondown>		
+	</include>
+	<include name="3dland_down_plot">
+		<ondown>8374</ondown>		
+	</include>
 	
 	<include name="ButtonHomeSubCommonValues">
 		<width>600</width>

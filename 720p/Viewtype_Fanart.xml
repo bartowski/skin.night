@@ -271,6 +271,7 @@
 			<font>Font_RSS_Big</font>
 			<textcolor>ffffffff</textcolor>
 			<label>$INFO[ListItem.Duration] $LOCALIZE[12391]</label>
+			<visible>!IsEmpty(ListItem.Duration)</visible>
 		</control>
 	</control>
 	<control type="group">

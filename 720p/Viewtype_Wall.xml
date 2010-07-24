@@ -178,6 +178,7 @@
 				<textcolor>ffffffff</textcolor>
 				<label>$INFO[ListItem.Duration] $LOCALIZE[12391]</label>
 				<include>Animation_Viewtype_Wall_UnderInfo</include>
+				<visible>!IsEmpty(ListItem.Duration)</visible>
 			</control>
 			<control type="label">
 				<posx>0</posx>
