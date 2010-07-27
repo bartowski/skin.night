@@ -1,3 +1,8 @@
+Update 7/26/2010
+  -Fixed a global time error after I swapped id's on Files and Poster view
+  -Season Fanart
+  -New way for recent episodes Trial Balloon
+
 Update 7/22/2010
   -Changed the Showcase Picture view to disappear by pressing down not automatically as before
   -Fixed a few errors with Now Playing after I swapped id's on Files and Poster view
