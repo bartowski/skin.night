@@ -999,7 +999,7 @@
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label>$LOCALIZE[31249]</label>
 						<onclick>Playlist.Clear</onclick>
-						<onclick>RunScript(special://skin/scripts/script.logo/default.py,$INFO[ListItem.FileNameAndPath])</onclick>
+						<onclick>XBMC.RunScript(special://skin/scripts/script.logo/default.py,$INFO[ListItem.FileNameAndPath])</onclick>
 						<visible>Container.Content(tvshows)</visible>
 					</control>
 				</control>

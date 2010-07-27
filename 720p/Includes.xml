@@ -205,7 +205,7 @@
 			<posx>1260</posx>
 			<posy>10</posy>
 			<include>Animation_BackdropFade</include>
-			<visible>Skin.HasSetting(library_global_clock) + !Player.HasMedia + Window.IsActive(videolibrary) + ![[Control.IsVisible(52) + Container.Content(tvshows)] | Control.IsVisible(598) | Control.IsVisible(57) | Control.IsVisible(592) | Control.IsVisible(56) | Control.IsVisible(51) | Control.IsVisible(54) | Control.IsVisible(55) | Control.IsVisible(58)]</visible>
+			<visible>Skin.HasSetting(library_global_clock) + !Player.HasMedia + Window.IsActive(videolibrary) + ![[Control.IsVisible(52) + Container.Content(tvshows)] | Control.IsVisible(598) | Control.IsVisible(57) | Control.IsVisible(592) | Control.IsVisible(56) | Control.IsVisible(51) | Control.IsVisible(54) | Control.IsVisible(50) | Control.IsVisible(58)]</visible>
 				<control type="image"> 
 					<posx>-380</posx>
 					<posy>-10</posy>   

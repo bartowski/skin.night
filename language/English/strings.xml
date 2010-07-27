@@ -216,6 +216,10 @@ just copy the translations from Confluence to here
   <string id="31272">Addons</string>
   <string id="31273">AddonBrowser</string>
   
+   <!-- NEW 7/24-->
+  <string id="31274">NOW PLAYING</string>
+  <string id="31275">Recent Episodes</string>
+  
   </strings>
 
   

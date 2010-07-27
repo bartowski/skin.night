@@ -87,7 +87,7 @@
 			<height>33</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/dvd.png</texture>
-			<visible>substring(ListItem.filename,dvd)</visible>
+			<visible>substring(ListItem.filename,dvd) + !substring(ListItem.filename,hddvd)</visible>
 		</control>
 	</include>
 	<include name="VideoMPAAFlaggingConditions_Grey">

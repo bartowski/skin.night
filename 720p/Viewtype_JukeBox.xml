@@ -254,8 +254,8 @@
 		<align>center</align>
 		<font>Font_Bartowski_Digital_Clock</font>
 		<textcolor>ff67ffff</textcolor>
-		<label>$LOCALIZE[31004]</label>
-		<visible>Control.IsVisible(54) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)</visible>
+		<label>$LOCALIZE[31274]</label>
+		<visible>Control.IsVisible(54) + Player.HasMedia</visible>
 	</control>
 	<control type="label">
 		<description>Artists</description>
@@ -267,7 +267,7 @@
 		<font>Font_Bartowski_Digital_Clock</font>
 		<textcolor>ff67ffff</textcolor>
 		<label>$LOCALIZE[133]</label>
-		<visible>Control.IsVisible(54) + Container.Content(artists) + !Container.Content(songs) + !Container.Content(albums)</visible>
+		<visible>Control.IsVisible(54) + Container.Content(artists) + !Player.HasMedia</visible>
 	</control>
 	<control type="label">
 		<description>Albums</description>
@@ -279,7 +279,7 @@
 		<font>Font_Bartowski_Digital_Clock</font>
 		<textcolor>ff67ffff</textcolor>
 		<label>$LOCALIZE[132]</label>
-		<visible>Control.IsVisible(54) + !Container.Content(songs) + Container.Content(albums)</visible>
+		<visible>Control.IsVisible(54) + Container.Content(albums) + !Player.HasMedia</visible>
 	</control>
 	<control type="label">
 		<description>Songs</description>
@@ -291,7 +291,7 @@
 		<font>Font_Bartowski_Digital_Clock</font>
 		<textcolor>ff67ffff</textcolor>
 		<label>$LOCALIZE[134]</label>
-		<visible>Control.IsVisible(54) + Container.Content(songs) + !Container.Content(albums)</visible>
+		<visible>Control.IsVisible(54) + Container.Content(songs) + !Player.HasMedia</visible>
 	</control>
 	<control type="label">
 		<description>Please Choose a Song</description>
