@@ -239,7 +239,7 @@
 		</control>
 		
 		<control type="group" id="9001">
-				<posx>0</posx>
+				<posx>30</posx>
 				<posy>274</posy>
 				<animation effect="fade" start="100" end="0" time="0" condition="!ControlGroup(9001).HasFocus">conditional</animation>
 				<animation effect="fade" start="0" end="100" delay="300" time="200" condition="ControlGroup(9001).HasFocus">conditional</animation>
@@ -470,7 +470,7 @@
 					<onup>300</onup>
 					<ondown>300</ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(300).HasFocus(10) + [[Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))] | [Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))] | [Skin.HasSetting(HomeScriptButton3) + !IsEmpty(Skin.String(HomeScriptButton3_label))] | [Skin.HasSetting(HomeScriptButton4) + !IsEmpty(Skin.String(HomeScriptButton4_label))] | [Skin.HasSetting(HomeScriptButton5) + !IsEmpty(Skin.String(HomeScriptButton5_label))] | [Skin.HasSetting(HomeScriptButton6) + !IsEmpty(Skin.String(HomeScriptButton6_label))]]</visible>
+					<visible>Container(300).HasFocus(10)</visible>
 					<control type="button" id="90150">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
 						<label>$LOCALIZE[31273]</label>
@@ -702,7 +702,9 @@
 						<visible>System.HasMediaDVD</visible>
 					</control>
 				</control>
-			</control>	
+		</control>	
+		
+		
 		
 	</include>
 </includes>

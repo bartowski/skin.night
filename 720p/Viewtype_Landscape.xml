@@ -22,7 +22,6 @@
 			<height>720</height>
 			<texture>tv-landscape/landscape_thumb_glow.png</texture>
 			<aspectratio>stretch</aspectratio>
-			<animation effect="fade" start="10" end="100" time="2000" condition="true" pulse="true">conditional</animation>
 			<include>Animation_LandscapeFade</include>
 			<include>Animation_HiddenByInfo</include>
 		</control>
@@ -34,7 +33,6 @@
 			<height>720</height>
 			<texture>tv-landscape/tv_poster_glow.png</texture>
 			<aspectratio>stretch</aspectratio>
-			<animation effect="fade" start="10" end="100" time="2000" condition="true" pulse="true">conditional</animation>
 			<include>Animation_LandscapeFade</include>
 			<include>Animation_HiddenByInfo</include>
 		</control>
@@ -46,7 +44,6 @@
 			<height>720</height>
 			<texture>tv-landscape/landscape_thumb_glow.png</texture>
 			<aspectratio>stretch</aspectratio>
-			<animation effect="fade" start="10" end="100" time="2000" condition="true" pulse="true">conditional</animation>
 			<include>Animation_LandscapeFade</include>
 			<include>Animation_HiddenByInfo</include>
 		</control>
@@ -58,7 +55,6 @@
 			<height>720</height>
 			<texture>tv-landscape/landscape_thumb_glow.png</texture>
 			<aspectratio>stretch</aspectratio>
-			<animation effect="fade" start="10" end="100" time="2000" condition="true" pulse="true">conditional</animation>
 			<include>Animation_LandscapeFade</include>
 			<include>Animation_HiddenByInfo</include>
 		</control>
@@ -205,7 +201,6 @@
 		</control>
 		
 		<control type="image" id="7014">
-			<visible></visible>
 			<posx>950</posx>
 			<posy>580</posy>
 			<width>300</width>
@@ -536,7 +531,7 @@
 		<textcolor>mainblue</textcolor>
 		<label>[B]$LOCALIZE[31275][/B]</label>
 		<include>Animation_CommonFade</include>
-		<visible>Control.IsVisible(52) + Container.Content(tvshows) + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem.Label)]</visible>
+		<visible>Control.IsVisible(52) + Container.Content(tvshows) + !Skin.HasSetting(no_new_recent_info) + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem.Label)]</visible>
 	</control>
 			
 	<control type="grouplist" id="2447">
@@ -546,7 +541,7 @@
 	<ondown>52</ondown>
 	<orientation>horizontal</orientation>
 	<include>Animation_CommonFade</include>
-	<visible>Control.IsVisible(52) + Container.Content(tvshows)</visible>
+	<visible>Control.IsVisible(52) + Container.Content(tvshows) + !Skin.HasSetting(no_new_recent_info)</visible>
 		<control type="button" id="16374">
 			<width>2</width>
 			<height>2</height>
@@ -592,7 +587,7 @@
 		<align>right</align>
 		<orientation>horizontal</orientation>
 		<include>Animation_CommonFade</include>
-		<visible>Control.IsVisible(52) + Container.Content(tvshows)</visible>
+		<visible>Control.IsVisible(52) + Container.Content(tvshows) + !Skin.HasSetting(no_new_recent_info)</visible>
 			<control type="image">
 				<width>180</width>
 				<height>100</height>
@@ -634,7 +629,7 @@
 		<align>right</align>
 		<orientation>horizontal</orientation>
 		<include>Animation_CommonFade</include>
-		<visible>Control.IsVisible(52) + Container.Content(tvshows)</visible>
+		<visible>Control.IsVisible(52) + Container.Content(tvshows) + !Skin.HasSetting(no_new_recent_info)</visible>
 			<control type="image">
 				<width>180</width>
 				<height>100</height>
@@ -672,7 +667,7 @@
 		<align>right</align>
 		<orientation>horizontal</orientation>
 		<include>Animation_CommonFade</include>
-		<visible>Control.IsVisible(52) + Container.Content(tvshows)</visible>
+		<visible>Control.IsVisible(52) + Container.Content(tvshows) + !Skin.HasSetting(no_new_recent_info)</visible>
 			<control type="label">
 				<width>180</width>
 				<height>100</height>

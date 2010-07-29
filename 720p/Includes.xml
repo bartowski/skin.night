@@ -95,6 +95,20 @@
 		<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 	</include>
 	
+	<include name="ondown_small_trailer">
+		<ondown>XBMC.PlayMedia($INFO[ListItem.Trailer],1,noresume)</ondown>
+	</include>
+	<include name="ondown_big_trailer">
+		<ondown>XBMC.PlayMedia($INFO[ListItem.Trailer],noresume)</ondown>
+	</include>
+	<include name="onleft_small_trailer">
+		<onleft>XBMC.PlayMedia($INFO[ListItem.Trailer],1,noresume)</onleft>
+	</include>
+	<include name="onleft_big_trailer">
+		<onleft>XBMC.PlayMedia($INFO[ListItem.Trailer],noresume)</onleft>
+	</include>
+	
+	
 	
 	<include name="poster_focusposition_dark">
 		<focusposition>3</focusposition>
@@ -124,7 +138,6 @@
 	<include name="ButtonHomeSubCommonValues_Horizontal">
 		<width>320</width>
 		<height>56</height>
-		<align>center</align>
 		<font>Font_Bartowski_Main_SubMenu</font>
 		<textcolor>ffb8b7b7</textcolor>
 		<focusedcolor>mainblue</focusedcolor>
@@ -205,7 +218,8 @@
 			<posx>1260</posx>
 			<posy>10</posy>
 			<include>Animation_BackdropFade</include>
-			<visible>Skin.HasSetting(library_global_clock) + !Player.HasMedia + Window.IsActive(videolibrary) + ![[Control.IsVisible(52) + Container.Content(tvshows)] | Control.IsVisible(598) | Control.IsVisible(57) | Control.IsVisible(592) | Control.IsVisible(56) | Control.IsVisible(51) | Control.IsVisible(54) | Control.IsVisible(50) | Control.IsVisible(58)]</visible>
+			<animation effect="slide" start="0,0" end="0,-10" time="0" condition="Control.IsVisible(52) + Container.Content(tvshows) + !Skin.HasSetting(no_new_recent_info)">Conditional</animation>
+			<visible>Skin.HasSetting(library_global_clock) + !Player.HasMedia + Window.IsActive(videolibrary) + ![[Control.IsVisible(52) + Container.Content(tvshows) + Skin.HasSetting(no_new_recent_info)] | Control.IsVisible(598) | Control.IsVisible(57) | Control.IsVisible(592) | Control.IsVisible(56) | Control.IsVisible(51) | Control.IsVisible(54) | Control.IsVisible(50) | Control.IsVisible(58)]</visible>
 				<control type="image"> 
 					<posx>-380</posx>
 					<posy>-10</posy>   
@@ -467,7 +481,7 @@
 			<posx>1260</posx>
 			<posy>654</posy>
 			<include>Animation_BackdropFade</include>
-			<visible>Skin.HasSetting(library_global_clock) + !Player.HasMedia + Window.IsActive(videolibrary) + [[Control.IsVisible(52) + Container.Content(tvshows)] | Control.IsVisible(58) | Control.IsVisible(56)]</visible>
+			<visible>Skin.HasSetting(library_global_clock) + !Player.HasMedia + Window.IsActive(videolibrary) + [[Control.IsVisible(52) + Container.Content(tvshows) + Skin.HasSetting(no_new_recent_info)] | Control.IsVisible(58) | Control.IsVisible(56)]</visible>
 				<control type="image"> 
 					<posx>-380</posx>
 					<posy>-144</posy>   

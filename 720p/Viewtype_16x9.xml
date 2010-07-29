@@ -243,7 +243,7 @@
 						<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay) + Container.Content(movies)</visible>
 					</control>
 				</control>	
-				<control type="group">
+				<!--<control type="group">
 				<visible>Control.IsVisible(59) + Container.Content(movies) + !IsEmpty(ListItem.Trailer)</visible>
 					<control type="label">
 						<visible>!Player.HasVideo</visible>
@@ -275,7 +275,7 @@
 							<effect type="fade" start="0" end="100" time="400" delay="600" />
 						</animation>
 					</control>
-				</control>
+				</control>-->
 			</focusedlayout>
 		</control>
 		
@@ -393,7 +393,7 @@
 			<animation effect="slide" start="0,0" end="-1000,0" time="600" delay="2800" condition="Container.Content(episodes) + ![Container(59).OnNext | Container(59).OnPrevious]">Conditional</animation>
 			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Panel_BottomArea</include>
-				<!--<control type="label">
+				<control type="label">
 					<description>Rated</description>
 					<posx>5</posx>
 					<posy>455</posy>
@@ -403,8 +403,31 @@
 					<font>Font_TVShow</font>
 					<textcolor>ff67ffff</textcolor>
 					<label>[B][COLOR=ff67ffff]$LOCALIZE[31226]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Mpaa][/COLOR]</label>
-					<visible>Container.Content(tvshows)</visible>
-				</control>-->
+					<visible>Container.Content(tvshows) + Skin.HasSetting(no_new_recent_info)</visible>
+				</control>
+				<control type="label">
+					<description>Episodes</description>
+					<posx>5</posx>
+					<posy>485</posy>
+					<width>570</width>
+					<height>50</height>
+					<aligny>center</aligny>
+					<font>Font_TVShow</font>
+					<textcolor>ff67ffff</textcolor>
+					<label>[B][COLOR=ff67ffff]$LOCALIZE[20360]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Episode][/COLOR]</label>
+					<visible>Container.Content(tvshows) + Skin.HasSetting(no_new_recent_info)</visible>
+				</control>
+				<control type="label">
+					<description>Genre</description>
+					<posx>5</posx>
+					<posy>515</posy>
+					<width>570</width>
+					<height>50</height>
+					<aligny>center</aligny>
+					<font>Font_TVShow</font>
+					<label>[B][COLOR=ff67ffff]$LOCALIZE[515]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Genre][/COLOR]</label>
+					<visible>Container.Content(tvshows) + Skin.HasSetting(no_new_recent_info)</visible>
+				</control>
 				<control type="label">
 					<description>Season</description>
 					<posx>5</posx>
@@ -417,18 +440,6 @@
 					<label>[B][COLOR=ff67ffff]$LOCALIZE[20373]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Season][/COLOR]</label>
 					<visible>Container.Content(episodes)</visible>
 				</control>
-				<!--<control type="label">
-					<description>Episodes</description>
-					<posx>5</posx>
-					<posy>485</posy>
-					<width>570</width>
-					<height>50</height>
-					<aligny>center</aligny>
-					<font>Font_TVShow</font>
-					<textcolor>ff67ffff</textcolor>
-					<label>[B][COLOR=ff67ffff]$LOCALIZE[20360]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Episode][/COLOR]</label>
-					<visible>Container.Content(tvshows)</visible>
-				</control>-->
 				<control type="label">
 					<description>Episode</description>
 					<posx>5</posx>
@@ -441,17 +452,6 @@
 					<label>[B][COLOR=ff67ffff]$LOCALIZE[20359]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Episode][/COLOR]</label>
 					<visible>Container.Content(episodes)</visible>
 				</control>
-				<!--<control type="label">
-					<description>Genre</description>
-					<posx>5</posx>
-					<posy>515</posy>
-					<width>570</width>
-					<height>50</height>
-					<aligny>center</aligny>
-					<font>Font_TVShow</font>
-					<label>[B][COLOR=ff67ffff]$LOCALIZE[515]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Genre][/COLOR]</label>
-					<visible>Container.Content(tvshows)</visible>
-				</control>-->
 				<control type="label">
 					<description>Rating</description>
 					<posx>5</posx>
@@ -473,7 +473,7 @@
 				<posx>366</posx>
 				<posy>636</posy>
 				<orientation>horizontal</orientation>
-				<!--<control type="label">
+				<control type="label">
 					<description>First Premiered in</description>
 					<posx>0</posx>
 					<posy>0</posy>
@@ -482,8 +482,8 @@
 					<font>Font_TVShow</font>
 					<textcolor>ff67ffff</textcolor>
 					<label>[B]$LOCALIZE[31229] $INFO[ListItem.Year][/B]</label>
-					<visible>Container.Content(tvshows)</visible>
-				</control>-->
+					<visible>Container.Content(tvshows) + Skin.HasSetting(no_new_recent_info)</visible>
+				</control>
 				<control type="label">
 					<description>This Show Aired</description>
 					<posx>0</posx>
@@ -520,17 +520,17 @@
 		<textcolor>mainblue</textcolor>
 		<label>[B]$LOCALIZE[31275][/B]</label>
 		<include>Animation_CommonFade</include>
-		<visible>Control.IsVisible(59) + Container.Content(tvshows) + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem.Label)]</visible>
+		<visible>Control.IsVisible(59) + Container.Content(tvshows) + !Skin.HasSetting(no_new_recent_info) + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem.Label)]</visible>
 	</control>
 			
 	<control type="grouplist" id="2448">
 	<posx>800</posx>
 	<posy>600</posy>
 	<onup>52</onup>
-	<ondown>52</ondown>
+	<ondown>69</ondown>
 	<orientation>horizontal</orientation>
 	<include>Animation_CommonFade</include>
-	<visible>Control.IsVisible(59) + Container.Content(tvshows)</visible>
+	<visible>Control.IsVisible(59) + Container.Content(tvshows) + !Skin.HasSetting(no_new_recent_info)</visible>
 		<control type="button" id="26374">
 			<width>2</width>
 			<height>2</height>
@@ -630,7 +630,7 @@
 		<align>center</align>
 		<orientation>horizontal</orientation>
 		<include>Animation_CommonFade</include>
-		<visible>Control.IsVisible(59) + Container.Content(tvshows)</visible>
+		<visible>Control.IsVisible(59) + Container.Content(tvshows) + !Skin.HasSetting(no_new_recent_info)</visible>
 			<control type="image">
 				<width>180</width>
 				<height>100</height>
@@ -720,7 +720,7 @@
 		<align>center</align>
 		<orientation>horizontal</orientation>
 		<include>Animation_CommonFade</include>
-		<visible>Control.IsVisible(59) + Container.Content(tvshows)</visible>
+		<visible>Control.IsVisible(59) + Container.Content(tvshows) + !Skin.HasSetting(no_new_recent_info)</visible>
 			<control type="image">
 				<width>180</width>
 				<height>100</height>
@@ -800,7 +800,7 @@
 		<align>center</align>
 		<orientation>horizontal</orientation>
 		<include>Animation_CommonFade</include>
-		<visible>Control.IsVisible(59) + Container.Content(tvshows)</visible>
+		<visible>Control.IsVisible(59) + Container.Content(tvshows) + !Skin.HasSetting(no_new_recent_info)</visible>
 			<control type="label">
 				<width>180</width>
 				<height>100</height>

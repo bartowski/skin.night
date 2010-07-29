@@ -370,7 +370,20 @@
 			<texturefocus>-</texturefocus>
 			<visible>!Skin.HasSetting(homepageHideRecentlyAdded)</visible>
 		</control>
-			
+		<control type="button" id="8999">
+			<description>Don't run Recently added</description>
+			<posx>-20</posx>
+			<posy>-20</posy>
+			<width>1</width>
+			<height>1</height>
+			<label>-</label>
+			<font>-</font>
+			<onfocus>Skin.Reset(LibraryUpdated)</onfocus>
+			<onfocus>SetFocus(300)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<visible>!Skin.HasSetting(homepageHideRecentlyAdded) + Skin.HasSetting(LibraryUpdated) + !Window.IsVisible(DialogMusicScan.xml) + !Window.IsVisible(DialogVideoScan.xml)</visible>
+		</control>
 			
 			
 			
@@ -596,7 +609,7 @@
 					<onup>9015</onup>
 					<ondown>9015</ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(300).HasFocus(10) + [[Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))] | [Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))] | [Skin.HasSetting(HomeScriptButton3) + !IsEmpty(Skin.String(HomeScriptButton3_label))] | [Skin.HasSetting(HomeScriptButton4) + !IsEmpty(Skin.String(HomeScriptButton4_label))] | [Skin.HasSetting(HomeScriptButton5) + !IsEmpty(Skin.String(HomeScriptButton5_label))] | [Skin.HasSetting(HomeScriptButton6) + !IsEmpty(Skin.String(HomeScriptButton6_label))]]</visible>
+					<visible>Container(300).HasFocus(10)</visible>
 					<control type="button" id="90150">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$LOCALIZE[31273]</label>

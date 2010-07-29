@@ -72,7 +72,8 @@ MOVIE SECTION
 			<onleft>50</onleft>
 			<onright>50</onright>
 			<onup>68</onup>
-			<ondown>XBMC.PlayMedia($INFO[ListItem.Trailer],1,noresume)</ondown>
+			<include condition="!Skin.HasSetting(big_trailer)">ondown_small_trailer</include>
+			<include condition="Skin.HasSetting(big_trailer)">ondown_big_trailer</include>
 			<viewtype label="$LOCALIZE[31063]">list</viewtype>
 			<orientation>horizontal</orientation>
 			<focusposition>4</focusposition>

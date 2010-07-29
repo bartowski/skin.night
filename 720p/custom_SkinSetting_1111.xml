@@ -5,8 +5,8 @@
 			<include>Dimensions_Fullscreen</include>
 			<width>1280</width>
 			<height>720</height>
-			<texture>backdrops/curtains_diffuse.png</texture>
-			<aspectratio>scale</aspectratio>
+			<texture>special://skin/media/backdrops/curtains_diffuse.png</texture>
+			<aspectratio>stretch</aspectratio>
 			<include>VisibleFadeEffect</include>
 		</control>
 		<control type="group">
@@ -197,7 +197,7 @@
 						<onclick>Skin.ToggleSetting(SubsScript_Enable)</onclick>
 						<selected>Skin.HasSetting(SubsScript_Enable)</selected>
 					</control>
-					<control type="button" id="107">
+					<control type="button" id="105">
 						<include>skin_settings_button</include>
 						<label> - $LOCALIZE[31216] </label>
 						<label2>[COLOR=selected]$INFO[Skin.String(SubtitleScript_Path)][/COLOR]</label2>
@@ -205,17 +205,23 @@
 						<enable>Skin.HasSetting(SubsScript_Enable)</enable>
 						<visible>Skin.HasSetting(SubsScript_Enable)</visible>
 					</control>
-					<control type="radiobutton" id="108">
+					<!--<control type="radiobutton" id="106">
 						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31217]</label>
 						<onclick>Skin.ToggleSetting(hometheater)</onclick>
 						<selected>Skin.HasSetting(hometheater)</selected>
-					</control>
-					<control type="radiobutton" id="110">
+					</control>-->
+					<control type="radiobutton" id="107">
 						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31248]</label>
 						<onclick>Skin.ToggleSetting(zune_music)</onclick>
 						<selected>Skin.HasSetting(zune_music)</selected>
+					</control>
+					<control type="radiobutton" id="108">
+						<include>skin_settings_labels</include>
+						<label>$LOCALIZE[31276]</label>
+						<onclick>Skin.ToggleSetting(big_trailer)</onclick>
+						<selected>Skin.HasSetting(big_trailer)</selected>
 					</control>
 					<control type="label" id="109">
 						<width>860</width>
@@ -227,13 +233,13 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="radiobutton" id="112">
+					<control type="radiobutton" id="110">
 						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31039]</label>
 						<onclick>Skin.ToggleSetting(FanartNoVisualisation)</onclick>
 						<selected>Skin.HasSetting(FanartNoVisualisation)</selected>
 					</control>
-					<control type="radiobutton" id="114">
+					<control type="radiobutton" id="111">
 						<width>860</width>
 						<height>40</height>
 						<font>Font_KeyboardTitle</font>
@@ -247,7 +253,7 @@
 						<selected>Skin.HasSetting(DarkFullscreenMusicPlayback)</selected>
 						<visible>Skin.HasSetting(FanartNoVisualisation)</visible>
 					</control>
-					<control type="radiobutton" id="115">
+					<control type="radiobutton" id="112">
 						<width>860</width>
 						<height>40</height>
 						<font>Font_KeyboardTitle</font>
@@ -261,7 +267,7 @@
 						<selected>Skin.HasSetting(vis_music_backdrops)</selected>
 						<visible>!IsEmpty(Skin.String(CustomMusicFolder)) + Skin.HasSetting(FanartNoVisualisation)</visible>
 					</control>
-					<control type="radiobutton" id="116">
+					<control type="radiobutton" id="113">
 						<width>860</width>
 						<height>40</height>
 						<font>Font_KeyboardTitle</font>
@@ -275,7 +281,7 @@
 						<selected>Skin.HasSetting(vis_photos_backdrops)</selected>
 						<visible>!IsEmpty(Skin.String(CustomPicturesFolder)) + Skin.HasSetting(FanartNoVisualisation)</visible>
 					</control>
-					<control type="radiobutton" id="113">
+					<control type="radiobutton" id="114">
 						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31040]</label>
 						<onclick>Skin.ToggleSetting(FullscreenJukebox)</onclick>

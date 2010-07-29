@@ -1,3 +1,8 @@
+Update 7/28/2010
+  -Added a option for Trailers to be played fullscreen - Settings->Skin->General
+  -Removed 'Home Theater' option until script is current with Dharma
+  -Added setting, in View Options, to turn of Recently added in 16x9 and Landscape
+
 Update 7/26/2010
   -Fixed a global time error after I swapped id's on Files and Poster view
   -Season Fanart

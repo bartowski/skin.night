@@ -7,7 +7,7 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture>special://skin/media/backdrops/curtains_diffuse.png</texture>
-			<aspectratio>scale</aspectratio>
+			<aspectratio>stretch</aspectratio>
 			<include>VisibleFadeEffect</include>
 		</control>
 		<control type="group">

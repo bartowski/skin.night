@@ -985,7 +985,7 @@
 						<label>20410</label>
 						<visible>!IsEmpty(ListItem.Trailer)</visible>
 					</control>
-					<control type="button" id="13">
+					<!--<control type="button" id="13">
 						<description>Play Trailer</description>
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label>$LOCALIZE[31212]</label>
@@ -993,7 +993,7 @@
 						<onclick>Dialog.Close(MovieInformation)</onclick>
 						<onclick>RunScript(special://home/scripts/Home Theater Experience/default.py)</onclick>
 						<visible>Skin.HasSetting(hometheater) + Container.Content(movies)</visible>
-					</control>
+					</control>-->
 					<control type="button" id="14">
 						<description>Play Trailer</description>
 						<include>ButtonInfoDialogsCommonValues</include>

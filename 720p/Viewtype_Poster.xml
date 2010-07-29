@@ -64,7 +64,8 @@
 			<onleft>55</onleft>
 			<onright>55</onright>
 			<onup>65</onup>
-			<ondown>XBMC.PlayMedia($INFO[ListItem.Trailer],1,noresume)</ondown>
+			<include condition="!Skin.HasSetting(big_trailer)">ondown_small_trailer</include>
+			<include condition="Skin.HasSetting(big_trailer)">ondown_big_trailer</include>
 			<viewtype label="$LOCALIZE[31062]">list</viewtype>
 			<orientation>horizontal</orientation>
 			<include condition="!Skin.HasSetting(Poster_Fanart)">poster_focusposition_dark</include>
@@ -427,7 +428,7 @@
 				<font>Font_RSS_Big</font>
 				<textcolor>ffffffff</textcolor>
 				<label>MovieSet</label>
-				<visible>IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)</visible>
+				<visible>IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres)</visible>
 			</control>
 			<control type="label">
 				<posx>20</posx>
