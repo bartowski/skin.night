@@ -9,7 +9,14 @@
 			<fadetime>400</fadetime>
 			<texture>backdrops/curtains_diffuse.png</texture>
 			<include>Animation_CommonFade</include>
-			<visible></visible>
+			<visible>![Control.IsVisible(50) | Control.IsVisible(55)]</visible>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<fadetime>400</fadetime>
+			<texture>backdrops/curtains.png</texture>
+			<include>Animation_CommonFade</include>
+			<visible>Control.IsVisible(50) | Control.IsVisible(55)</visible>
 		</control>
 		<control type="largeimage" id="668">
 			<include>Dimensions_Fullscreen</include>
@@ -20,10 +27,10 @@
 			<include>Animation_BackdropFade</include>
 		</control>
 		
-		
-		<include>Viewtype_PictureGrid</include>
 		<include>Viewtype_Files</include>
+		<include>Viewtype_PictureGrid</include>
 		<include>PictureThumbView</include>
+		<include>Viewtype_Comics</include>
 
 		<include>Global_Time_TopRight_Files</include>
 		
@@ -59,7 +66,7 @@
 			</control>	
 			<control type="button" id="9">
 				<include>WindowMenuButton</include>
-				<label>$LOCALIZE[31087]</label>
+				<label>$LOCALIZE[590]</label>
 			</control>
 		</control>
 		

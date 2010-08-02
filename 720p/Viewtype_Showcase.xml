@@ -247,14 +247,14 @@ MOVIE SECTION
 			<include>Animation_Viewtype_Showcase_Plot</include>
 		</control>
 		<control type="image"><!-- Floor -->
-				<visible>Control.IsVisible(58) + Container.Content(movies) + !Skin.HasSetting(ShowcaseFanart)</visible>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>1280</width>
-				<height>720</height>
-				<texture>Showcase/last-overlay.png</texture>
-			</control>
-		<!-- Browser label and flags -->
+			<visible>Control.IsVisible(58) + Container.Content(movies) + !Skin.HasSetting(ShowcaseFanart)</visible>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>Showcase/last-overlay.png</texture>
+		</control>
+		
 		<control type="group">
 			<visible>Control.IsVisible(58) + Container.Content(movies) + !IsEmpty(ListItem.Title) + !Skin.HasSetting(ShowcaseFanart)</visible>
 			<include>Animation_HiddenByInfo</include>
@@ -266,7 +266,7 @@ MOVIE SECTION
 				<height>50</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_Showcase_Title</font>
-				<textcolor>ff15efd9</textcolor>
+				<textcolor>mainblue</textcolor>
 				<label>$INFO[ListItem.Label]</label>
 			</control>
 			<control type="label"><!--Duration-->
@@ -299,8 +299,8 @@ MOVIE SECTION
 		</control>	
 		<control type="label"><!--Trailer Start-->
 			<visible>Control.IsVisible(58) + Container.Content(movies) + !IsEmpty(ListItem.Trailer) + !Player.HasVideo + !Skin.HasSetting(ShowcaseFanart)</visible>
-			<posx>115</posx>
-			<posy>380</posy>
+			<posx>20</posx>
+			<posy>320</posy>
 			<width>370</width>
 			<height>50</height>
 			<aligny>center</aligny>
@@ -309,11 +309,12 @@ MOVIE SECTION
 			<label>*$LOCALIZE[31237]*</label>
 			<shadowcolor>black</shadowcolor>
 			<include>Animation_Viewtype_Showcase_Trailer</include>
+			<animation effect="fade"  start="0" end="100" time="400" delay="1000" condition="![Container(58).OnNext | Container(58).OnPrevious]">Conditional</animation>
 		</control>	
 		<control type="label"><!--Trailer Stop-->
 			<visible>Control.IsVisible(58) + Container.Content(movies) + Player.HasVideo + !Skin.HasSetting(ShowcaseFanart)</visible>
-			<posx>135</posx>
-			<posy>380</posy>
+			<posx>20</posx>
+			<posy>320</posy>
 			<width>370</width>
 			<height>50</height>
 			<aligny>center</aligny>
@@ -325,111 +326,138 @@ MOVIE SECTION
 		</control>
 <!--Plot and extrathumbs-->
 			
-		<control type="group">
+		<control type="grouplist">
 			<visible>Control.IsVisible(58) + Container.Content(movies) + !IsEmpty(ListItem.Title) + !Skin.HasSetting(extrathumbs) + !Skin.HasSetting(ShowcaseFanart) </visible>
 			<posx>1020</posx>
-			<posy>12</posy>
+			<posy>22</posy>
+			<itemgap>0</itemgap>
 			<include>Animation_Viewtype_Showcase_RightArea</include>
 			<include>Animation_HiddenByInfo</include>
 				<control type="label"><!--Director-->
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>390</width>
-					<height>50</height>
-					<aligny>center</aligny>
+					<height>24</height>
 					<font>Font_Bartowski_Showcase_Right_Main</font>
 					<textcolor>ff15efd9</textcolor>
 					<label>$LOCALIZE[20339]</label>
 				</control>
 				<control type="label"><!--Director-->
 					<posx>0</posx>
-					<posy>24</posy>
+					<posy>0</posy>
 					<width>390</width>
-					<height>50</height>
-					<aligny>center</aligny>
+					<height>24</height>
 					<font>Font_Bartowski_Showcase_Right_Under</font>
 					<textcolor>ffffffff</textcolor>
-					<label>$INFO[ListItem.Director]</label>
+					<label fallback="Not Available">$INFO[ListItem.Director]</label>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>390</width>
+					<height>10</height>
+					<font>Font_Bartowski_Showcase_Right_Main</font>
+					<textcolor>ff15efd9</textcolor>
+					<label></label>
 				</control>
 				<control type="label"><!--Writer-->
 					<posx>0</posx>
-					<posy>70</posy>
+					<posy>0</posy>
 					<width>390</width>
-					<height>50</height>
-					<aligny>center</aligny>
+					<height>24</height>
 					<font>Font_Bartowski_Showcase_Right_Main</font>
 					<textcolor>ff15efd9</textcolor>
 					<label>$LOCALIZE[20417]</label>
 				</control>
 				<control type="label"><!--Writer-->
 					<posx>0</posx>
-					<posy>94</posy>
+					<posy>0</posy>
 					<width>390</width>
-					<height>50</height>
-					<aligny>center</aligny>
+					<height>24</height>
 					<font>Font_Bartowski_Showcase_Right_Under</font>
 					<textcolor>ffffffff</textcolor>
-					<label>$INFO[ListItem.Writer]</label>
+					<label fallback="Not Available">$INFO[ListItem.Writer]</label>
+				</control>
+				<control type="label"><!--Director-->
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>390</width>
+					<height>10</height>
+					<font>Font_Bartowski_Showcase_Right_Main</font>
+					<textcolor>ff15efd9</textcolor>
+					<label></label>
 				</control>
 				<control type="label"><!--Genre-->
 					<posx>0</posx>
-					<posy>140</posy>
+					<posy>0</posy>
 					<width>390</width>
-					<height>50</height>
-					<aligny>center</aligny>
+					<height>24</height>
 					<font>Font_Bartowski_Showcase_Right_Main</font>
 					<textcolor>ff15efd9</textcolor>
 					<label>$LOCALIZE[515]</label>
 				</control>
 				<control type="label"><!--Genre-->
 					<posx>0</posx>
-					<posy>164</posy>
+					<posy>0</posy>
 					<width>390</width>
-					<height>50</height>
-					<aligny>center</aligny>
+					<height>24</height>
 					<font>Font_Bartowski_Showcase_Right_Under</font>
 					<textcolor>ffffffff</textcolor>
-					<label>$INFO[ListItem.Genre]</label>
+					<label fallback="Not Available">$INFO[ListItem.Genre]</label>
+				</control>
+				<control type="label"><!--Director-->
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>390</width>
+					<height>10</height>
+					<font>Font_Bartowski_Showcase_Right_Main</font>
+					<textcolor>ff15efd9</textcolor>
+					<label></label>
 				</control>
 				<control type="label"><!--Rating-->
 					<posx>0</posx>
-					<posy>210</posy>
+					<posy>0</posy>
 					<width>390</width>
-					<height>50</height>
-					<aligny>center</aligny>
+					<height>24</height>
 					<font>Font_Bartowski_Showcase_Right_Main</font>
 					<textcolor>ff15efd9</textcolor>
 					<label>$LOCALIZE[563]</label>
 				</control>
 				<control type="label"><!--Rating-->
 					<posx>0</posx>
-					<posy>234</posy>
+					<posy>0</posy>
 					<width>390</width>
-					<height>50</height>
-					<aligny>center</aligny>
+					<height>24</height>
 					<font>Font_Bartowski_Showcase_Right_Under</font>
 					<textcolor>ffffffff</textcolor>
-					<label>$INFO[ListItem.Rating]</label>
+					<label fallback="Not Available">$INFO[ListItem.Rating]</label>
+				</control>
+				<control type="label"><!--Director-->
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>390</width>
+					<height>10</height>
+					<font>Font_Bartowski_Showcase_Right_Main</font>
+					<textcolor>ff15efd9</textcolor>
+					<label></label>
 				</control>
 				<control type="label"><!--Studio-->
 					<posx>0</posx>
-					<posy>280</posy>
+					<posy>0</posy>
 					<width>390</width>
-					<height>50</height>
-					<aligny>center</aligny>
+					<height>24</height>
 					<font>Font_Bartowski_Showcase_Right_Main</font>
 					<textcolor>ff15efd9</textcolor>
 					<label>$LOCALIZE[572]</label>
 				</control>
 				<control type="label"><!--Rating-->
 					<posx>0</posx>
-					<posy>304</posy>
+					<posy>0</posy>
 					<width>390</width>
-					<height>50</height>
-					<aligny>center</aligny>
+					<height>24</height>
 					<font>Font_Bartowski_Showcase_Right_Under</font>
 					<textcolor>ffffffff</textcolor>
-					<label>$INFO[ListItem.studio]</label>
+					<label fallback="Not Available">$INFO[ListItem.studio]</label>
 				</control>
 		</control>
 		
@@ -452,7 +480,6 @@ MOVIE SECTION
 				<width>284</width>
 				<height>166</height>
 				<texture>tv-landscape/landscapeframeFO.png</texture>
-				
 			</control>
 			<control type="image">
 				<posx>1010</posx>

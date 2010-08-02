@@ -223,7 +223,20 @@
 						<onclick>Skin.ToggleSetting(big_trailer)</onclick>
 						<selected>Skin.HasSetting(big_trailer)</selected>
 					</control>
-					<control type="label" id="109">
+					<control type="radiobutton" id="109">
+						<include>skin_settings_labels</include>
+						<label>Show Lyrics Button in MusicOSD</label>
+						<onclick>Skin.ToggleSetting(show_lyrics)</onclick>
+						<selected>Skin.HasSetting(show_lyrics)</selected>
+					</control>
+					<control type="button" id="425">
+						<include>skin_settings_button</include>
+						<label>- $LOCALIZE[31127]</label>
+						<label2>[COLOR=selected]$INFO[Skin.String(LyricScript_Path)][/COLOR]</label2>
+						<onclick>Skin.SetAddon(LyricScript_Path,xbmc.python.lyrics)</onclick>
+						<visible>Skin.HasSetting(show_lyrics)</visible>
+					</control>
+					<control type="label" id="110">
 						<width>860</width>
 						<height>45</height>
 						<font>font13caps</font>
@@ -233,13 +246,13 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="radiobutton" id="110">
+					<control type="radiobutton" id="111">
 						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31039]</label>
 						<onclick>Skin.ToggleSetting(FanartNoVisualisation)</onclick>
 						<selected>Skin.HasSetting(FanartNoVisualisation)</selected>
 					</control>
-					<control type="radiobutton" id="111">
+					<control type="radiobutton" id="112">
 						<width>860</width>
 						<height>40</height>
 						<font>Font_KeyboardTitle</font>
@@ -253,7 +266,7 @@
 						<selected>Skin.HasSetting(DarkFullscreenMusicPlayback)</selected>
 						<visible>Skin.HasSetting(FanartNoVisualisation)</visible>
 					</control>
-					<control type="radiobutton" id="112">
+					<control type="radiobutton" id="113">
 						<width>860</width>
 						<height>40</height>
 						<font>Font_KeyboardTitle</font>
@@ -267,7 +280,7 @@
 						<selected>Skin.HasSetting(vis_music_backdrops)</selected>
 						<visible>!IsEmpty(Skin.String(CustomMusicFolder)) + Skin.HasSetting(FanartNoVisualisation)</visible>
 					</control>
-					<control type="radiobutton" id="113">
+					<control type="radiobutton" id="114">
 						<width>860</width>
 						<height>40</height>
 						<font>Font_KeyboardTitle</font>
@@ -281,7 +294,7 @@
 						<selected>Skin.HasSetting(vis_photos_backdrops)</selected>
 						<visible>!IsEmpty(Skin.String(CustomPicturesFolder)) + Skin.HasSetting(FanartNoVisualisation)</visible>
 					</control>
-					<control type="radiobutton" id="114">
+					<control type="radiobutton" id="115">
 						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31040]</label>
 						<onclick>Skin.ToggleSetting(FullscreenJukebox)</onclick>

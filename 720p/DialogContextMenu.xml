@@ -52,9 +52,9 @@
 		</control>
 		<control type="button" id="1000">
 			<description>button template</description>
-			<posx>34</posx>
+			<posx>32</posx>
 			<posy>-</posy>
-			<width>297</width>
+			<width>300</width>
 			<height>38</height>
 			<font>Font_Bartowski_Episode_ContextMenu</font>
 			<textcolor>ff000000</textcolor>

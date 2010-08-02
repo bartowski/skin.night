@@ -34,6 +34,7 @@
 	<include file="Viewtype_3dbanner.xml" />
 	<include file="Viewtype_Logo.xml" />
 	<include file="Viewtype_3daddon.xml" />
+	<include file="Viewtype_Slide.xml" />
 	
 	
 	<include name="middle_horizontal_movies">
@@ -447,9 +448,9 @@
 					</control>
 					<control type="label">
 						<description>Tv Shows</description>
-						<label>$INFO[Container.NumItems,, $LOCALIZE[40281]] - [COLOR=ff67ffff][B]$LOCALIZE[20360][/COLOR][/B]</label>
+						<label>$INFO[Container.NumItems,, $LOCALIZE[40281]] - [COLOR=ff67ffff][B]AddonBrowser[/COLOR][/B]</label>
 						<include>Global_HeadingSectionVars1</include>
-						<visible>Window.IsActive(25) + Container.Content(episodes) + !Window.IsActive(134)</visible>
+						<visible>Window.IsActive(addonbrowser)</visible>
 					</control>
 					<control type="label">
 						<description>Music</description>

@@ -882,6 +882,8 @@
 					<width>250</width>
 					<height>250</height>
 					<texture>$INFO[Container(50).Listitem.Icon]</texture>
+					<bordertexture border="5">confluence/button-nofocus.png</bordertexture>
+					<bordersize>5</bordersize>
 					<aspectratio>keep</aspectratio>
 					<visible>Control.IsVisible(50)</visible>
 					<visible>!Skin.HasSetting(LockViews) |  !Control.HasFocus(12)</visible>
@@ -950,7 +952,7 @@
 					<onleft>9000</onleft>
 					<onright>9000</onright>
 					<onup>50</onup>
-					<ondown>49</ondown>
+					<ondown>50</ondown>
 					<visible>!Skin.HasSetting(LockViews)</visible>
 					<control type="button" id="5">
 						<description>Cast/Review</description>
@@ -993,7 +995,7 @@
 						<onclick>Dialog.Close(MovieInformation)</onclick>
 						<onclick>RunScript(special://home/scripts/Home Theater Experience/default.py)</onclick>
 						<visible>Skin.HasSetting(hometheater) + Container.Content(movies)</visible>
-					</control>-->
+					</control>
 					<control type="button" id="14">
 						<description>Play Trailer</description>
 						<include>ButtonInfoDialogsCommonValues</include>
@@ -1001,7 +1003,7 @@
 						<onclick>Playlist.Clear</onclick>
 						<onclick>XBMC.RunScript(special://skin/scripts/script.logo/default.py,$INFO[ListItem.FileNameAndPath])</onclick>
 						<visible>Container.Content(tvshows)</visible>
-					</control>
+					</control>-->
 				</control>
 			</control>
 		</control>

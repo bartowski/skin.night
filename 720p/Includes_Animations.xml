@@ -160,21 +160,31 @@
 	<include name="Animation_Bartowski_Context_Zoom">
 		<animation type="WindowOpen">
 			<effect type="zoom" time="400" center="640,360" start="180" end="100" tween="cubic" easing="out" />
-			<effect type="fade" time="400" center="640,360" start="0" end="100" />
+			<effect type="fade" time="400" start="0" end="100" />
 		</animation>			
 		<animation type="WindowClose">
 			<effect type="zoom" time="400" center="640,360" start="100" end="280" tween="cubic" easing="in" />
-			<effect type="fade" time="400" center="640,360" start="100" end="0" />
+			<effect type="fade" time="400" start="100" end="0" />
 		</animation>	
 	</include>
 	<include name="Animation_Bartowski_Context_Zoom_Bottom">
 		<animation type="WindowOpen">
 			<effect type="zoom" time="400" center="640,660" start="180" end="100" tween="cubic" easing="out" />
-			<effect type="fade" time="400" center="640,660" start="0" end="100" />
+			<effect type="fade" time="400" start="0" end="100" />
 		</animation>			
 		<animation type="WindowClose">
 			<effect type="zoom" time="400" center="640,660" start="100" end="280" tween="cubic" easing="in" />
-			<effect type="fade" time="400" center="640,660" start="100" end="0" />
+			<effect type="fade" time="400" start="100" end="0" />
+		</animation>	
+	</include>
+	<include name="Animation_Bartowski_Context_Zoom_Slide">
+		<animation type="WindowOpen">
+			<effect type="zoom" time="400" center="auto" start="180" end="100" tween="cubic" easing="out" />
+			<effect type="fade" time="400" start="0" end="100" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="zoom" time="400" center="auto" start="100" end="280" tween="cubic" easing="in" />
+			<effect type="fade" time="400" start="100" end="0" />
 		</animation>	
 	</include>
 	<include name="Animation_ZoomInMenu">
@@ -500,8 +510,7 @@
 <!--VIEWTYPE SHOWCASE -->
 	<include name="Animation_Viewtype_Showcase_FocusArea">
 		<animation type="WindowOpen">
-			<effect type="slide" start="1400" end="-400,0" time="600" tween="cubic" easing="inout" />
-			<effect type="slide" start="0,0" end="400,0" time="800" delay="600" tween="cubic" easing="inout" />
+			<effect type="slide" start="0,400" end="0,0" time="600" tween="cubic" easing="inout" />
 		</animation>			
 		<animation type="WindowClose">
 			<effect type="slide" start="0,0" end="0,400" time="600" tween="cubic" easing="inout" />
@@ -526,12 +535,10 @@
 	</include>
 	<include name="Animation_Viewtype_Showcase_LeftArea">
 		<animation type="WindowOpen">
-			<effect type="slide" start="-800" end="200,0" time="600" tween="cubic" easing="inout" />
-			<effect type="slide" start="0,0" end="-200,0" time="800" delay="600" tween="cubic" easing="inout" />
+			<effect type="slide" start="-600" end="0,0" time="600" tween="cubic" easing="inout" />
 		</animation>			
 		<animation type="WindowClose">
-			<effect type="slide" start="0,0" end="200,0" time="600" tween="cubic" easing="inout" />
-			<effect type="slide" start="0,0" end="-800,0" time="800" delay="600" tween="cubic" easing="inout" />
+			<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="inout" />
 		</animation>	
 	</include>
 	<include name="Animation_Viewtype_Showcase_Trailer">

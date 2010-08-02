@@ -112,7 +112,7 @@
 		<control type="fixedlist" id="300">
 			<posx>-131</posx>
 			<posy>100</posy>
-			<height>466</height>
+			<height>468</height>
 			<width>1541</width>
 			<onup>300</onup>
 			<ondown>300</ondown>

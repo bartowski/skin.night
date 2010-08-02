@@ -19,7 +19,8 @@
 		<include>Viewtype_Poster</include>
 		<include>Viewtype_3daddon</include><!--  56  -->
 		
-
+		<include>Global_Time_TopRight_Files</include>
+		
 		<include>7000_has_focus</include>
 		
 		<control type="image"><!-- Floor -->

@@ -249,7 +249,7 @@
 				<font>Font_Bartowski_Zune</font>
 				<textcolor>grey2</textcolor>
 				<label>$INFO[MusicPlayer.Artist]</label>
-				<animation type="Conditional" reversible="false" condition="Player.Playing" loop="true">
+				<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 					<effect type="fade" start="0" end="100" time="500" delay="0" />
 					<effect type="fade" start="100" end="0" time="500" delay="7000" />
 					<effect type="fade" start="100" end="0" time="500" delay="14000" />
@@ -266,7 +266,7 @@
 				<font>Font_Bartowski_Zune</font>
 				<textcolor>grey2</textcolor>
 				<label>$INFO[MusicPlayer.Album]</label>
-				<animation type="Conditional" reversible="false" condition="Player.Playing" loop="true">
+				<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 					<effect type="fade" start="0" end="100" time="500" delay="7500" />
 					<effect type="fade" start="100" end="0" time="500" delay="14000" />
 				</animation>
@@ -529,7 +529,7 @@
 				<font>Font_Bartowski_Zune</font>
 				<textcolor>grey2</textcolor>
 				<label>$INFO[MusicPlayer.Artist]</label>
-				<animation type="Conditional" reversible="false" condition="Player.Playing" loop="true">
+				<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 					<effect type="fade" start="0" end="100" time="500" delay="0" />
 					<effect type="fade" start="100" end="0" time="500" delay="7000" />
 					<effect type="fade" start="100" end="0" time="500" delay="14000" />
@@ -546,7 +546,7 @@
 				<font>Font_Bartowski_Zune</font>
 				<textcolor>grey2</textcolor>
 				<label>$INFO[MusicPlayer.Album]</label>
-				<animation type="Conditional" reversible="false" condition="Player.Playing" loop="true">
+				<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 					<effect type="fade" start="0" end="100" time="500" delay="7500" />
 					<effect type="fade" start="100" end="0" time="500" delay="14000" />
 				</animation>
@@ -578,7 +578,7 @@
 		</control>
 		<control type="group">
 		<include>Animation_CommonFade</include>
-		<visible>[Control.IsVisible(59) | Control.IsVisible(55) | Control.IsVisible(53) | [Control.IsVisible(58) + Skin.HasSetting(ShowcaseFanart)] | Control.IsVisible(593) | Control.IsVisible(633)] + Player.HasAudio + !Skin.HasSetting(zune_music)</visible>		
+		<visible>[Control.IsVisible(59) | Control.IsVisible(55) | Control.IsVisible(53) | Control.IsVisible(595) | [Control.IsVisible(58) + Skin.HasSetting(ShowcaseFanart)] | Control.IsVisible(593) | Control.IsVisible(633)] + Player.HasAudio + !Skin.HasSetting(zune_music)</visible>		
 			<control type="group">
 				<posx>1086</posx>
 				<posy>130</posy>
@@ -803,7 +803,7 @@
 					<font>Font_Bartowski_Zune</font>
 					<textcolor>grey2</textcolor>
 					<label>$INFO[MusicPlayer.Artist]</label>
-					<animation type="Conditional" reversible="false" condition="Player.Playing" loop="true">
+					<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 						<effect type="fade" start="0" end="100" time="500" delay="0" />
 						<effect type="fade" start="100" end="0" time="500" delay="7000" />
 						<effect type="fade" start="100" end="0" time="500" delay="14000" />
@@ -820,7 +820,7 @@
 					<font>Font_Bartowski_Zune</font>
 					<textcolor>grey2</textcolor>
 					<label>$INFO[MusicPlayer.Album]</label>
-					<animation type="Conditional" reversible="false" condition="Player.Playing" loop="true">
+					<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 						<effect type="fade" start="0" end="100" time="500" delay="7500" />
 						<effect type="fade" start="100" end="0" time="500" delay="14000" />
 					</animation>
@@ -1077,7 +1077,7 @@
 				<font>Font_Bartowski_Zune</font>
 				<textcolor>grey2</textcolor>
 				<label>$INFO[MusicPlayer.Artist]</label>
-				<animation type="Conditional" reversible="false" condition="Player.Playing" loop="true">
+				<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 					<effect type="fade" start="0" end="100" time="500" delay="0" />
 					<effect type="fade" start="100" end="0" time="500" delay="7000" />
 					<effect type="fade" start="100" end="0" time="500" delay="14000" />
@@ -1094,7 +1094,7 @@
 				<font>Font_Bartowski_Zune</font>
 				<textcolor>grey2</textcolor>
 				<label>$INFO[MusicPlayer.Album]</label>
-				<animation type="Conditional" reversible="false" condition="Player.Playing" loop="true">
+				<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 					<effect type="fade" start="0" end="100" time="500" delay="7500" />
 					<effect type="fade" start="100" end="0" time="500" delay="14000" />
 				</animation>
@@ -1345,7 +1345,7 @@
 				<font>Font_Bartowski_Zune</font>
 				<textcolor>grey2</textcolor>
 				<label>$INFO[MusicPlayer.Artist]</label>
-				<animation type="Conditional" reversible="false" condition="Player.Playing" loop="true">
+				<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 					<effect type="fade" start="0" end="100" time="500" delay="0" />
 					<effect type="fade" start="100" end="0" time="500" delay="7000" />
 					<effect type="fade" start="100" end="0" time="500" delay="14000" />
@@ -1362,7 +1362,7 @@
 				<font>Font_Bartowski_Zune</font>
 				<textcolor>grey2</textcolor>
 				<label>$INFO[MusicPlayer.Album]</label>
-				<animation type="Conditional" reversible="false" condition="Player.Playing" loop="true">
+				<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 					<effect type="fade" start="0" end="100" time="500" delay="7500" />
 					<effect type="fade" start="100" end="0" time="500" delay="14000" />
 				</animation>
@@ -1606,7 +1606,7 @@
 				<font>Font_Bartowski_Zune</font>
 				<textcolor>grey2</textcolor>
 				<label>$INFO[MusicPlayer.Artist]</label>
-				<animation type="Conditional" reversible="false" condition="Player.Playing" loop="true">
+				<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 					<effect type="fade" start="0" end="100" time="500" delay="0" />
 					<effect type="fade" start="100" end="0" time="500" delay="7000" />
 					<effect type="fade" start="100" end="0" time="500" delay="14000" />
@@ -1623,7 +1623,7 @@
 				<font>Font_Bartowski_Zune</font>
 				<textcolor>grey2</textcolor>
 				<label>$INFO[MusicPlayer.Album]</label>
-				<animation type="Conditional" reversible="false" condition="Player.Playing" loop="true">
+				<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 					<effect type="fade" start="0" end="100" time="500" delay="7500" />
 					<effect type="fade" start="100" end="0" time="500" delay="14000" />
 				</animation>

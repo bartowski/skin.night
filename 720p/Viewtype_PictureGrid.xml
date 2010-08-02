@@ -222,8 +222,7 @@
 	</include>
 
 	<include name="PictureThumbView">
-		<control type="group">
-			<visible>Control.IsVisible(58)</visible>
+		
 			<control type="panel" id="58">
 				<posx>40</posx>
 				<posy>80</posy>
@@ -287,6 +286,7 @@
 			<control type="group">
 				<posx>540</posx>
 				<posy>60</posy>
+				<visible>Control.IsVisible(58)</visible>
 				<control type="label">
 					<description>Title txt</description>
 					<posx>0</posx>
@@ -336,7 +336,7 @@
 					<shadowcolor>black</shadowcolor>
 				</control>
 			</control>
-		</control>
+		
 	</include>
 	
 </includes>

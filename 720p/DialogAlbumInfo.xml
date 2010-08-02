@@ -644,6 +644,12 @@
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label>20413</label>
 					</control>
+					<!--<control type="button" id="13">
+						<description>Get cdART</description>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label>Get cdART</label>
+						<onclick>RunScript(script.cdart,$INFO[ListItem.Artist],$INFO[ListItem.Album],$INFO[ListItem.Path])</onclick>
+					</control>-->
 				</control>
 			</control>
 		</control>
