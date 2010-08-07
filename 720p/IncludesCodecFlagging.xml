@@ -71,7 +71,7 @@
 			<height>33</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/bluray.png</texture>
-			<visible>substring(ListItem.filename,bluray)</visible>
+			<visible>substring(ListItem.FilenameAndPath,bluray)</visible>
 		</control>
 		<control type="image">
 			<description>HDDVD Image</description>
@@ -79,7 +79,15 @@
 			<height>33</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/hddvd.png</texture>
-			<visible>substring(ListItem.filename,hddvd)</visible>
+			<visible>substring(ListItem.FilenameAndPath,hddvd)</visible>
+		</control>
+		<control type="image">
+			<description>TV Image</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/tv.png</texture>
+			<visible>[substring(ListItem.FilenameAndPathAndPath,pdtv) | substring(ListItem.FilenameAndPathAndPath,hdtv) | substring(ListItem.FilenameAndPathAndPath,dsr)]</visible>
 		</control>
 		<control type="image">
 			<description>DVD Image</description>
@@ -87,7 +95,7 @@
 			<height>33</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/dvd.png</texture>
-			<visible>substring(ListItem.filename,dvd) + !substring(ListItem.filename,hddvd)</visible>
+			<visible>substring(ListItem.FilenameAndPath,dvd) + !substring(ListItem.FilenameAndPath,hddvd)</visible>
 		</control>
 	</include>
 	<include name="VideoMPAAFlaggingConditions_Grey">
@@ -283,6 +291,14 @@
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/audio/wmapro.png</texture>
 			<visible>substring(ListItem.AudioCodec,wmapro)</visible>
+		</control>
+		 <control type="image">
+			<description>vorbis Image</description>
+			<width>90</width>
+			<height>33</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/audio/vorbis.png</texture>
+			<visible>substring(ListItem.AudioCodec,vorbis)</visible>
 		</control>
 		<control type="image">
 			<description>Audio Channels Image</description>

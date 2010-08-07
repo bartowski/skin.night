@@ -220,6 +220,8 @@ just copy the translations from Confluence to here
   <string id="31274">NOW PLAYING</string>
   <string id="31275">Recent Episodes</string>
   <string id="31276">Play trailers Fullscreen rather than small version</string>
+  <string id="31277">Show Lyrics Button in MusicOSD</string>
+  <string id="31278">Play Videos in Backgorund, Not In Small 'Now Playing' Window</string>
   
   </strings>
 

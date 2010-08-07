@@ -1,3 +1,9 @@
+Update 8/4/2010
+  -Removed the 'new recently added' thing I was trying out
+  -fixed Titles sliding 10px if "watched" was turned off (Files and WallPanel)
+  -Centered the Season (x) label under logo when on Season level
+  -Might switch from rounded corners to regular box look on 3d views
+
 Update 8/1/2010
   -Removed "Get Logo" from VideoInfo screen
   -Global Time added to Addons/Program window

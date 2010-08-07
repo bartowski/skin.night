@@ -15,7 +15,7 @@
 			<onleft>59</onleft>
 			<onright>59</onright>
 			<onup>7000</onup>
-			<ondown>2448</ondown>
+			<ondown>69</ondown>
 			<pagecontrol>69</pagecontrol>
 			<viewtype label="$LOCALIZE[31048]">list</viewtype>
 			<orientation>horizontal</orientation>
@@ -403,7 +403,7 @@
 					<font>Font_TVShow</font>
 					<textcolor>ff67ffff</textcolor>
 					<label>[B][COLOR=ff67ffff]$LOCALIZE[31226]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Mpaa][/COLOR]</label>
-					<visible>Container.Content(tvshows) + Skin.HasSetting(no_new_recent_info)</visible>
+					<visible>Container.Content(tvshows)</visible>
 				</control>
 				<control type="label">
 					<description>Episodes</description>
@@ -415,7 +415,7 @@
 					<font>Font_TVShow</font>
 					<textcolor>ff67ffff</textcolor>
 					<label>[B][COLOR=ff67ffff]$LOCALIZE[20360]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Episode][/COLOR]</label>
-					<visible>Container.Content(tvshows) + Skin.HasSetting(no_new_recent_info)</visible>
+					<visible>Container.Content(tvshows)</visible>
 				</control>
 				<control type="label">
 					<description>Genre</description>
@@ -426,7 +426,7 @@
 					<aligny>center</aligny>
 					<font>Font_TVShow</font>
 					<label>[B][COLOR=ff67ffff]$LOCALIZE[515]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Genre][/COLOR]</label>
-					<visible>Container.Content(tvshows) + Skin.HasSetting(no_new_recent_info)</visible>
+					<visible>Container.Content(tvshows)</visible>
 				</control>
 				<control type="label">
 					<description>Season</description>
@@ -482,7 +482,7 @@
 					<font>Font_TVShow</font>
 					<textcolor>ff67ffff</textcolor>
 					<label>[B]$LOCALIZE[31229] $INFO[ListItem.Year][/B]</label>
-					<visible>Container.Content(tvshows) + Skin.HasSetting(no_new_recent_info)</visible>
+					<visible>Container.Content(tvshows)</visible>
 				</control>
 				<control type="label">
 					<description>This Show Aired</description>
@@ -511,405 +511,23 @@
 				<visible>Control.IsVisible(59) + [Container.Content(episodes) | Container.Content(movies)]</visible>
 			</control>
 		
-	<control type="label">
-		<posx>530</posx>
-		<posy>580</posy>
-		<width>300</width>
-		<height>100</height>
-		<font>Font_TVShow</font>
-		<textcolor>mainblue</textcolor>
-		<label>[B]$LOCALIZE[31275][/B]</label>
-		<include>Animation_CommonFade</include>
-		<visible>Control.IsVisible(59) + Container.Content(tvshows) + !Skin.HasSetting(no_new_recent_info) + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem.Label)]</visible>
-	</control>
-			
-	<control type="grouplist" id="2448">
-	<posx>800</posx>
-	<posy>600</posy>
-	<onup>52</onup>
-	<ondown>69</ondown>
-	<orientation>horizontal</orientation>
-	<include>Animation_CommonFade</include>
-	<visible>Control.IsVisible(59) + Container.Content(tvshows) + !Skin.HasSetting(no_new_recent_info)</visible>
-		<control type="button" id="26374">
-			<width>2</width>
-			<height>2</height>
-			<onleft>26376</onleft>
-			<onright>26375</onright>
-			<label></label>
-			<onclick>PlayMedia($INFO[Window(Home).Property(LatestEpisode.1.Path)])</onclick>
-			<visible>StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem.Label)</visible>
+		<control type="grouplist">
+			<visible>Control.IsVisible(59) + [Container.Content(movies) | Container.Content(episodes)] + !Skin.HasSetting(no_media_flags) + !Player.HasAudio</visible>
+			<animation effect="slide" start="0,0" end="-1000,0" time="600" delay="2800" condition="Container.Content(movies) + ![Container(59).OnNext | Container(59).OnPrevious]">Conditional</animation>
+			<description>Media Codec Flagging Images</description>
+			<posx>0</posx>
+			<posy>680</posy>
+			<width>1280</width>
+			<align>center</align>
+			<itemgap>0</itemgap>
+			<orientation>horizontal</orientation>
+			<include>VideoCodecFlaggingConditions</include>
+			<include>AudioCodecFlaggingConditions</include>
+			<include>AspectCodecFlaggingConditions</include>
+			<include>VideoTypeHackFlaggingConditions</include>
+			<include>Animation_HiddenByInfo</include>
+			<include>Animation_Viewtype_Panel_BottomArea</include>
 		</control>
-		<control type="button" id="26375">
-			<width>2</width>
-			<height>2</height>
-			<onleft>26374</onleft>
-			<onright>26376</onright>
-			<label></label>
-			<onclick>PlayMedia($INFO[Window(Home).Property(LatestEpisode.2.Path)])</onclick>
-			<visible>StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem.Label)</visible>
-		</control>
-		<control type="button" id="26376">
-			<width>2</width>
-			<height>2</height>
-			<onleft>26376</onleft>
-			<onright>26375</onright>
-			<label></label>
-			<onclick>PlayMedia($INFO[Window(Home).Property(LatestEpisode.3.Path)])</onclick>
-			<visible>StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem.Label)</visible>
-		</control>
-		<control type="button" id="26377">
-			<width>2</width>
-			<height>2</height>
-			<onleft>26374</onleft>
-			<onright>26376</onright>
-			<label></label>
-			<onclick>PlayMedia($INFO[Window(Home).Property(LatestEpisode.4.Path)])</onclick>
-			<visible>StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem.Label)</visible>
-		</control>
-		<control type="button" id="26378">
-			<width>2</width>
-			<height>2</height>
-			<onleft>26376</onleft>
-			<onright>26375</onright>
-			<label></label>
-			<onclick>PlayMedia($INFO[Window(Home).Property(LatestEpisode.5.Path)])</onclick>
-			<visible>StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem.Label)</visible>
-		</control>
-		<control type="button" id="26379">
-			<width>2</width>
-			<height>2</height>
-			<onleft>26374</onleft>
-			<onright>26376</onright>
-			<label></label>
-			<onclick>PlayMedia($INFO[Window(Home).Property(LatestEpisode.6.Path)])</onclick>
-			<visible>StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem.Label)</visible>
-		</control>
-		<control type="button" id="26380">
-			<width>2</width>
-			<height>2</height>
-			<onleft>26376</onleft>
-			<onright>26375</onright>
-			<label></label>
-			<onclick>PlayMedia($INFO[Window(Home).Property(LatestEpisode.7.Path)])</onclick>
-			<visible>StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem.Label)</visible>
-		</control>
-		<control type="button" id="26381">
-			<width>2</width>
-			<height>2</height>
-			<onleft>26374</onleft>
-			<onright>26376</onright>
-			<label></label>
-			<onclick>PlayMedia($INFO[Window(Home).Property(LatestEpisode.8.Path)])</onclick>
-			<visible>StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem.Label)</visible>
-		</control>
-		<control type="button" id="26382">
-			<width>2</width>
-			<height>2</height>
-			<onleft>26376</onleft>
-			<onright>26375</onright>
-			<label></label>
-			<onclick>PlayMedia($INFO[Window(Home).Property(LatestEpisode.9.Path)])</onclick>
-			<visible>StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem.Label)</visible>
-		</control>
-		<control type="button" id="26383">
-			<width>2</width>
-			<height>2</height>
-			<onleft>26374</onleft>
-			<onright>26376</onright>
-			<label></label>
-			<onclick>PlayMedia($INFO[Window(Home).Property(LatestEpisode.10.Path)])</onclick>
-			<visible>StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem.Label)</visible>
-		</control>
-	</control>
-		
-	<control type="grouplist">
-		<posx>-30</posx>
-		<posy>614</posy>
-		<width>1280</width>
-		<align>center</align>
-		<orientation>horizontal</orientation>
-		<include>Animation_CommonFade</include>
-		<visible>Control.IsVisible(59) + Container.Content(tvshows) + !Skin.HasSetting(no_new_recent_info)</visible>
-			<control type="image">
-				<width>180</width>
-				<height>100</height>
-				<texture background="true" diffuse="tv-landscape/landscapematteFO.png">$INFO[Window(Home).Property(LatestEpisode.1.Thumb)]</texture>
-				<animation effect="zoom" start="100" end="110" center="auto" time="400" condition="Control.HasFocus(26374))">Conditional</animation>
-				<animation effect="fade" start="100" end="70" time="0" condition="!Control.HasFocus(26374))">Conditional</animation>
-				<visible>StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem.Label)</visible>
-			</control>
-			<control type="image">
-				<width>180</width>
-				<height>100</height>
-				<texture background="true" diffuse="tv-landscape/landscapematteFO.png">$INFO[Window(Home).Property(LatestEpisode.2.Thumb)]</texture>
-				<animation effect="zoom" start="100" end="110" center="auto" time="400" condition="Control.HasFocus(26375))">Conditional</animation>
-				<animation effect="fade" start="100" end="70" time="0" condition="!Control.HasFocus(26375))">Conditional</animation>
-				<visible>StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem.Label)</visible>
-			</control>
-			<control type="image">
-				<width>180</width>
-				<height>100</height>
-				<texture background="true" diffuse="tv-landscape/landscapematteFO.png">$INFO[Window(Home).Property(LatestEpisode.3.Thumb)]</texture>
-				<animation effect="zoom" start="100" end="110" center="auto" time="400" condition="Control.HasFocus(26376))">Conditional</animation>
-				<animation effect="fade" start="100" end="70" time="0" condition="!Control.HasFocus(26376))">Conditional</animation>
-				<visible>StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem.Label)</visible>
-			</control>
-			<control type="image">
-				<width>180</width>
-				<height>100</height>
-				<texture background="true" diffuse="tv-landscape/landscapematteFO.png">$INFO[Window(Home).Property(LatestEpisode.4.Thumb)]</texture>
-				<animation effect="zoom" start="100" end="110" center="auto" time="400" condition="Control.HasFocus(26377))">Conditional</animation>
-				<animation effect="fade" start="100" end="70" time="0" condition="!Control.HasFocus(26377))">Conditional</animation>
-				<visible>StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem.Label)</visible>
-			</control>
-			<control type="image">
-				<width>180</width>
-				<height>100</height>
-				<texture background="true" diffuse="tv-landscape/landscapematteFO.png">$INFO[Window(Home).Property(LatestEpisode.5.Thumb)]</texture>
-				<animation effect="zoom" start="100" end="110" center="auto" time="400" condition="Control.HasFocus(26378))">Conditional</animation>
-				<animation effect="fade" start="100" end="70" time="0" condition="!Control.HasFocus(26378))">Conditional</animation>
-				<visible>StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem.Label)</visible>
-			</control>
-			<control type="image">
-				<width>180</width>
-				<height>100</height>
-				<texture background="true" diffuse="tv-landscape/landscapematteFO.png">$INFO[Window(Home).Property(LatestEpisode.6.Thumb)]</texture>
-				<animation effect="zoom" start="100" end="110" center="auto" time="400" condition="Control.HasFocus(26379))">Conditional</animation>
-				<animation effect="fade" start="100" end="70" time="0" condition="!Control.HasFocus(26375))">Conditional</animation>
-				<visible>StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem.Label)</visible>
-			</control>
-			<control type="image">
-				<width>180</width>
-				<height>100</height>
-				<texture background="true" diffuse="tv-landscape/landscapematteFO.png">$INFO[Window(Home).Property(LatestEpisode.7.Thumb)]</texture>
-				<animation effect="zoom" start="100" end="110" center="auto" time="400" condition="Control.HasFocus(26380))">Conditional</animation>
-				<animation effect="fade" start="100" end="70" time="0" condition="!Control.HasFocus(26380))">Conditional</animation>
-				<visible>StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem.Label)</visible>
-			</control>
-			<control type="image">
-				<width>180</width>
-				<height>100</height>
-				<texture background="true" diffuse="tv-landscape/landscapematteFO.png">$INFO[Window(Home).Property(LatestEpisode.8.Thumb)]</texture>
-				<animation effect="zoom" start="100" end="110" center="auto" time="400" condition="Control.HasFocus(26381))">Conditional</animation>
-				<animation effect="fade" start="100" end="70" time="0" condition="!Control.HasFocus(26381))">Conditional</animation>
-				<visible>StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem.Label)</visible>
-			</control>
-			<control type="image">
-				<width>180</width>
-				<height>100</height>
-				<texture background="true" diffuse="tv-landscape/landscapematteFO.png">$INFO[Window(Home).Property(LatestEpisode.9.Thumb)]</texture>
-				<animation effect="zoom" start="100" end="110" center="auto" time="400" condition="Control.HasFocus(26382))">Conditional</animation>
-				<animation effect="fade" start="100" end="70" time="0" condition="!Control.HasFocus(26382))">Conditional</animation>
-				<visible>StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem.Label)</visible>
-			</control>
-			<control type="image">
-				<width>180</width>
-				<height>100</height>
-				<texture background="true" diffuse="tv-landscape/landscapematteFO.png">$INFO[Window(Home).Property(LatestEpisode.10.Thumb)]</texture>
-				<animation effect="zoom" start="100" end="110" center="auto" time="400" condition="Control.HasFocus(26383))">Conditional</animation>
-				<animation effect="fade" start="100" end="70" time="0" condition="!Control.HasFocus(26383))">Conditional</animation>
-				<visible>StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem.Label)</visible>
-			</control>
-		</control>
-	
-	<control type="grouplist">
-		<posx>-30</posx>
-		<posy>614</posy>
-		<width>1280</width>
-		<align>center</align>
-		<orientation>horizontal</orientation>
-		<include>Animation_CommonFade</include>
-		<visible>Control.IsVisible(59) + Container.Content(tvshows) + !Skin.HasSetting(no_new_recent_info)</visible>
-			<control type="image">
-				<width>180</width>
-				<height>100</height>
-				<texture>tv-landscape/new_recent_back.png</texture>
-				<animation effect="zoom" start="100" end="110" center="auto" time="400" condition="Control.HasFocus(26374))">Conditional</animation>
-				<visible>StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem.Label)</visible>
-			</control>
-			<control type="image">
-				<width>180</width>
-				<height>100</height>
-				<texture>tv-landscape/new_recent_back.png</texture>
-				<animation effect="zoom" start="100" end="110" center="auto" time="400" condition="Control.HasFocus(26375))">Conditional</animation>
-				<visible>StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem.Label)</visible>
-			</control>
-			<control type="image">
-				<width>180</width>
-				<height>100</height>
-				<texture>tv-landscape/new_recent_back.png</texture>
-				<animation effect="zoom" start="100" end="110" center="auto" time="400" condition="Control.HasFocus(26376))">Conditional</animation>
-				<visible>StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem.Label)</visible>
-			</control>
-			<control type="image">
-				<width>180</width>
-				<height>100</height>
-				<texture>tv-landscape/new_recent_back.png</texture>
-				<animation effect="zoom" start="100" end="110" center="auto" time="400" condition="Control.HasFocus(26377))">Conditional</animation>
-				<visible>StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem.Label)</visible>
-			</control>
-			<control type="image">
-				<width>180</width>
-				<height>100</height>
-				<texture>tv-landscape/new_recent_back.png</texture>
-				<animation effect="zoom" start="100" end="110" center="auto" time="400" condition="Control.HasFocus(26378))">Conditional</animation>
-				<visible>StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem.Label)</visible>
-			</control>
-			<control type="image">
-				<width>180</width>
-				<height>100</height>
-				<texture>tv-landscape/new_recent_back.png</texture>
-				<animation effect="zoom" start="100" end="110" center="auto" time="400" condition="Control.HasFocus(26379))">Conditional</animation>
-				<visible>StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem.Label)</visible>
-			</control>
-			<control type="image">
-				<width>180</width>
-				<height>100</height>
-				<texture>tv-landscape/new_recent_back.png</texture>
-				<animation effect="zoom" start="100" end="110" center="auto" time="400" condition="Control.HasFocus(26380))">Conditional</animation>
-				<visible>StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem.Label)</visible>
-			</control>
-			<control type="image">
-				<width>180</width>
-				<height>100</height>
-				<texture>tv-landscape/new_recent_back.png</texture>
-				<animation effect="zoom" start="100" end="110" center="auto" time="400" condition="Control.HasFocus(26381))">Conditional</animation>
-				<visible>StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem.Label)</visible>
-			</control>
-			<control type="image">
-				<width>180</width>
-				<height>100</height>
-				<texture>tv-landscape/new_recent_back.png</texture>
-				<animation effect="zoom" start="100" end="110" center="auto" time="400" condition="Control.HasFocus(26382))">Conditional</animation>
-				<visible>StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem.Label)</visible>
-			</control>
-			<control type="image">
-				<width>180</width>
-				<height>100</height>
-				<texture>tv-landscape/new_recent_back.png</texture>
-				<animation effect="zoom" start="100" end="110" center="auto" time="400" condition="Control.HasFocus(26383))">Conditional</animation>
-				<visible>StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem.Label)</visible>
-			</control>
-		</control>
-	
-	<control type="grouplist">
-		<posx>-30</posx>
-		<posy>690</posy>
-		<width>1280</width>
-		<align>center</align>
-		<orientation>horizontal</orientation>
-		<include>Animation_CommonFade</include>
-		<visible>Control.IsVisible(59) + Container.Content(tvshows) + !Skin.HasSetting(no_new_recent_info)</visible>
-			<control type="label">
-				<width>180</width>
-				<height>100</height>
-				<align>center</align>
-				<font>Font_TVShow</font>
-				<textcolor>white</textcolor>
-				<label>$INFO[Window(Home).Property(LatestEpisode.1.EpisodeTitle)]</label>
-				<visible>StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem.Label)</visible>
-			</control>
-			<control type="label">
-				<width>180</width>
-				<height>100</height>
-				<align>center</align>
-				<font>Font_TVShow</font>
-				<textcolor>white</textcolor>
-				<label>$INFO[Window(Home).Property(LatestEpisode.2.EpisodeTitle)]</label>
-				<visible>StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem.Label)</visible>
-			</control>
-			<control type="label">
-				<width>180</width>
-				<height>100</height>
-				<align>center</align>
-				<font>Font_TVShow</font>
-				<textcolor>white</textcolor>
-				<label>$INFO[Window(Home).Property(LatestEpisode.3.EpisodeTitle)]</label>
-				<visible>StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem.Label)</visible>
-			</control>
-			<control type="label">
-				<width>180</width>
-				<height>100</height>
-				<align>center</align>
-				<font>Font_TVShow</font>
-				<textcolor>white</textcolor>
-				<label>$INFO[Window(Home).Property(LatestEpisode.4.EpisodeTitle)]</label>
-				<visible>StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem.Label)</visible>
-			</control>
-			<control type="label">
-				<width>180</width>
-				<height>100</height>
-				<align>center</align>
-				<font>Font_TVShow</font>
-				<textcolor>white</textcolor>
-				<label>$INFO[Window(Home).Property(LatestEpisode.5.EpisodeTitle)]</label>
-				<visible>StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem.Label)</visible>
-			</control>
-			<control type="label">
-				<width>180</width>
-				<height>100</height>
-				<align>center</align>
-				<font>Font_TVShow</font>
-				<textcolor>white</textcolor>
-				<label>$INFO[Window(Home).Property(LatestEpisode.6.EpisodeTitle)]</label>
-				<visible>StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem.Label)</visible>
-			</control>
-			<control type="label">
-				<width>180</width>
-				<height>100</height>
-				<align>center</align>
-				<font>Font_TVShow</font>
-				<textcolor>white</textcolor>
-				<label>$INFO[Window(Home).Property(LatestEpisode.7.EpisodeTitle)]</label>
-				<visible>StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem.Label)</visible>
-			</control>
-			<control type="label">
-				<width>180</width>
-				<height>100</height>
-				<align>center</align>
-				<font>Font_TVShow</font>
-				<textcolor>white</textcolor>
-				<label>$INFO[Window(Home).Property(LatestEpisode.8.EpisodeTitle)]</label>
-				<visible>StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem.Label)</visible>
-			</control>
-			<control type="label">
-				<width>180</width>
-				<height>100</height>
-				<align>center</align>
-				<font>Font_TVShow</font>
-				<textcolor>white</textcolor>
-				<label>$INFO[Window(Home).Property(LatestEpisode.9.EpisodeTitle)]</label>
-				<visible>StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem.Label)</visible>
-			</control>
-			<control type="label">
-				<width>180</width>
-				<height>100</height>
-				<align>center</align>
-				<font>Font_TVShow</font>
-				<textcolor>white</textcolor>
-				<label>$INFO[Window(Home).Property(LatestEpisode.10.EpisodeTitle)]</label>
-				<visible>StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem.Label)</visible>
-			</control>
-		</control>	
-			
-			<control type="grouplist">
-				<visible>Control.IsVisible(59) + [Container.Content(movies) | Container.Content(episodes)] + !Skin.HasSetting(no_media_flags) + !Player.HasAudio</visible>
-				<animation effect="slide" start="0,0" end="-1000,0" time="600" delay="2800" condition="Container.Content(movies) + ![Container(59).OnNext | Container(59).OnPrevious]">Conditional</animation>
-				<description>Media Codec Flagging Images</description>
-				<posx>0</posx>
-				<posy>680</posy>
-				<width>1280</width>
-				<align>center</align>
-				<itemgap>0</itemgap>
-				<orientation>horizontal</orientation>
-				<include>VideoCodecFlaggingConditions</include>
-				<include>AudioCodecFlaggingConditions</include>
-				<include>AspectCodecFlaggingConditions</include>
-				<include>VideoTypeHackFlaggingConditions</include>
-				<include>Animation_HiddenByInfo</include>
-				<include>Animation_Viewtype_Panel_BottomArea</include>
-			</control>
 		
 		<control type="scrollbar" id="69">
 			<include>Animation_ZoomInZoomOut</include>

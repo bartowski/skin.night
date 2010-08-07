@@ -103,14 +103,14 @@
 						<posy>131</posy>
 						<width>162</width>
 						<height>162</height>
-						<texture>movie-poster/posterview_diffuse.png</texture>
+						<texture>movie-poster/music_square_diffuse.png</texture>
 					</control>
 					<control type="image">
 						<posx>-149</posx>
 						<posy>131</posy>
 						<width>162</width>
 						<height>162</height>
-						<texture background="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
+						<texture background="true" diffuse="movie-poster/music_square_diffuse.png">$INFO[ListItem.Icon]</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 					</control>
@@ -130,7 +130,7 @@
 						<posy>290</posy>
 						<width>162</width>
 						<height>162</height>
-						<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
+						<texture background="true" flipy="true" diffuse="movie-poster/music_square_diffuse.png">$INFO[ListItem.Icon]</texture>
 						<fadetime>200</fadetime>
 						<colordiffuse>89FFFFFF</colordiffuse>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -173,7 +173,7 @@
 						<posy>90</posy>
 						<width>211</width>
 						<height>211</height>
-						<texture>movie-poster/posterview_diffuse.png</texture>
+						<texture>movie-poster/music_square_diffuse.png</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -185,7 +185,7 @@
 						<posy>302</posy>
 						<width>211</width>
 						<height>211</height>
-						<texture flipy="true">movie-poster/posterview_diffuse.png</texture>
+						<texture flipy="true">movie-poster/music_square_diffuse.png</texture>
 						<colordiffuse>ff000000</colordiffuse>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -198,7 +198,7 @@
 						<posy>90</posy>
 						<width>211</width>
 						<height>211</height>
-						<texture background="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
+						<texture background="true" diffuse="movie-poster/music_square_diffuse.png">$INFO[ListItem.Icon]</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -210,7 +210,7 @@
 						<posy>298</posy>
 						<width>211</width>
 						<height>211</height>
-						<texture flipy="true">movie-poster/posterview_diffuse.png</texture>
+						<texture flipy="true">movie-poster/music_square_diffuse.png</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -223,7 +223,7 @@
 						<posy>298</posy>
 						<width>211</width>
 						<height>211</height>
-						<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
+						<texture background="true" flipy="true" diffuse="movie-poster/music_square_diffuse.png">$INFO[ListItem.Icon]</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">

@@ -624,7 +624,6 @@
 			<include>VideoCodecFlaggingConditions</include>
 			<include>AudioCodecFlaggingConditions</include>
 			<include>AspectCodecFlaggingConditions</include>
-			<include>VideoTypeHackFlaggingConditions</include>
 			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_3dland_Leftplot</include>
 		</control>
