@@ -1,3 +1,9 @@
+Update 8/8/2010
+  -Changed all the Music Global Now Playing, 10% smaller and label alignment changes
+  -Reverted "Poster" view to rounded corners
+  -Removed glow from icon on Info screen when paused
+  -Added alot of Default Music Icons
+
 Update 8/4/2010
   -Removed the 'new recently added' thing I was trying out
   -fixed Titles sliding 10px if "watched" was turned off (Files and WallPanel)

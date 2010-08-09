@@ -46,7 +46,7 @@
 						<texture background="true" diffuse="postermatte.png" fallback="special://skin/media/backgrounds/missing.jpg">$INFO[ListItem.Property(Fanart_Image)]</texture>
 						<fadetime>200</fadetime>					
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<visible>!Container.Content(episodes)</visible>
+						<visible>!Container.Content(episodes) + !IsEmpty(ListItem.Title)</visible>
 					</control>
 					<control type="image">
 						<posx>2</posx>
@@ -56,7 +56,17 @@
 						<texture background="true" diffuse="postermatte.png" fallback="special://skin/media/backgrounds/missing.jpg">$INFO[ListItem.Icon]</texture>
 						<fadetime>200</fadetime>					
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<visible>Container.Content(episodes)</visible>
+						<visible>IsEmpty(ListItem.Title)</visible>
+					</control>
+					<control type="image">
+						<posx>2</posx>
+						<posy>122</posy>
+						<width>330</width>
+						<height>186</height>
+						<texture background="true" diffuse="postermatte.png" fallback="special://skin/media/backgrounds/missing.jpg">$INFO[ListItem.Icon]</texture>
+						<fadetime>200</fadetime>					
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<visible>Container.Content(episodes) + !IsEmpty(ListItem.Title)</visible>
 					</control>
 					<control type="image">
 						<posx>0</posx>

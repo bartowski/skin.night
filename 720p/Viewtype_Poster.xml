@@ -107,14 +107,14 @@
 						<posy>131</posy>
 						<width>162</width>
 						<height>241</height>
-						<texture>movie-poster/posterview_diffuse_sharp_corners.png</texture>
+						<texture>movie-poster/posterview_diffuse.png</texture>
 					</control>
 					<control type="image">
 						<posx>-149</posx>
 						<posy>131</posy>
 						<width>162</width>
 						<height>241</height>
-						<texture background="true" diffuse="movie-poster/posterview_diffuse_sharp_corners.png">$INFO[ListItem.Icon]</texture>
+						<texture background="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 					</control>
@@ -123,17 +123,17 @@
 						<posy>131</posy>
 						<width>162</width>
 						<height>241</height>
-						<texture diffuse="movie-poster/posterview_diffuse_sharp_corners.png" fallback="defaultmoviegenre.jpg">special://skin/media/extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
+						<texture diffuse="movie-poster/posterview_diffuse.png" fallback="defaultmoviegenre.jpg">special://skin/media/extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<visible>Container.Content(Genres)</visible>
 					</control>
 					<control type="image">
 						<posx>-150</posx>
-						<posy>366</posy>
+						<posy>368</posy>
 						<width>162</width>
 						<height>241</height>
-						<texture flipy="true">movie-poster/posterview_diffuse_sharp_corners_border.png</texture>
+						<texture flipy="true">movie-poster/posterview_diffuse_border.png</texture>
 						<fadetime>200</fadetime>
 						<colordiffuse>89FFFFFF</colordiffuse>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -141,10 +141,10 @@
 					</control>
 					<control type="image">
 						<posx>-150</posx>
-						<posy>366</posy>
+						<posy>368</posy>
 						<width>162</width>
 						<height>241</height>
-						<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse_sharp_corners.png">$INFO[ListItem.Icon]</texture>
+						<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
 						<fadetime>200</fadetime>
 						<colordiffuse>89FFFFFF</colordiffuse>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -152,10 +152,10 @@
 					</control>
 					<control type="image">
 						<posx>-150</posx>
-						<posy>366</posy>
+						<posy>368</posy>
 						<width>162</width>
 						<height>241</height>
-						<texture diffuse="movie-poster/posterview_diffuse_sharp_corners.png" fallback="defaultmoviegenre.jpg">special://skin/media/extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
+						<texture diffuse="movie-poster/posterview_diffuse.png" fallback="defaultmoviegenre.jpg">special://skin/media/extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
 						<fadetime>200</fadetime>
 						<colordiffuse>89FFFFFF</colordiffuse>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -206,32 +206,32 @@
 						<posy>90</posy>
 						<width>211</width>
 						<height>300</height>
-						<texture>movie-poster/posterview_diffuse_sharp_corners.png</texture>
+						<texture>movie-poster/posterview_diffuse.png</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 						</animation>
 					</control>
-					<!--<control type="image">
+					<control type="image">
 						<posx>-148</posx>
-						<posy>388</posy>
+						<posy>390</posy>
 						<width>211</width>
 						<height>300</height>
-						<texture flipy="true">movie-poster/posterview_diffuse_sharp_corners.png</texture>
+						<texture flipy="true">movie-poster/posterview_diffuse.png</texture>
 						<colordiffuse>ff000000</colordiffuse>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 							<effect type="fade" start="0" end="100" time="600" />
 						</animation>
-					</control>-->
+					</control>
 					<control type="image">
 						<posx>-148</posx>
 						<posy>90</posy>
 						<width>211</width>
 						<height>300</height>
-						<texture background="true" diffuse="movie-poster/posterview_diffuse_sharp_corners.png">$INFO[ListItem.Icon]</texture>
+						<texture background="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -244,7 +244,7 @@
 						<posy>90</posy>
 						<width>211</width>
 						<height>300</height>
-						<texture diffuse="movie-poster/posterview_diffuse_sharp_corners.png" fallback="defaultmoviegenre.jpg">special://skin/media/extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
+						<texture diffuse="movie-poster/posterview_diffuse.png" fallback="defaultmoviegenre.jpg">special://skin/media/extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -267,10 +267,10 @@
 					</control>-->
 					<control type="image">
 						<posx>-148</posx>
-						<posy>382</posy>
+						<posy>386</posy>
 						<width>211</width>
 						<height>300</height>
-						<texture flipy="true">movie-poster/posterview_diffuse_sharp_corners_border.png</texture>
+						<texture flipy="true">movie-poster/posterview_diffuse_border.png</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -281,10 +281,10 @@
 					</control>
 					<control type="image">
 						<posx>-148</posx>
-						<posy>382</posy>
+						<posy>386</posy>
 						<width>211</width>
 						<height>300</height>
-						<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse_sharp_corners.png">$INFO[ListItem.Icon]</texture>
+						<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -295,10 +295,10 @@
 					</control>
 					<control type="image">
 						<posx>-148</posx>
-						<posy>386</posy>
+						<posy>390</posy>
 						<width>211</width>
 						<height>300</height>
-						<texture diffuse="movie-poster/posterview_diffuse_sharp_corners.png" fallback="defaultmoviegenre.jpg">special://skin/media/extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
+						<texture diffuse="movie-poster/posterview_diffuse.png" fallback="defaultmoviegenre.jpg">special://skin/media/extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -515,9 +515,8 @@
 				<visible>Container.Content(seasons)</visible>
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>230</width>
+				<width>630</width>
 				<height>89</height>
-				<align>center</align>
 				<font>Font_Bartowski_Movies_Duration</font>
 				<textcolor>white</textcolor>
 				<label>[B]$INFO[ListItem.Label][/B]</label>
@@ -584,7 +583,7 @@
 		</control>
 		
 		<control type="label"><!--Trailer Start-->
-				<visible>Control.IsVisible(55) + Container.Content(movies) + !Skin.HasSetting(clean_poster) + !IsEmpty(ListItem.Trailer) + !Player.HasVideo + !Control.IsVisible(68)</visible>
+				<visible>Control.IsVisible(55) + Container.Content(movies) + !Skin.HasSetting(clean_poster) + !IsEmpty(ListItem.Trailer) + !Player.HasVideo</visible>
 				<posx>20</posx>
 				<posy>78</posy>
 				<width>370</width>

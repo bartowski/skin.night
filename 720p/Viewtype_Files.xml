@@ -183,7 +183,7 @@
 				<control type="image">
 					<posx>-70</posx>
 					<posy>-34</posy>
-					<width>871</width>
+					<width>930</width>
 					<height>121</height>
 					<texture>list/highlight.png</texture>
 					<animation type="Focus" reversible="false">
@@ -698,7 +698,7 @@
 			<height>50</height>
 			<align>center</align>
 			<font>Font_Bartowski_TV_Title</font>
-			<textcolor>ff67ffff</textcolor>
+			<textcolor>mainblue</textcolor>
 			<label>[B]$INFO[ListItem.TVShowtitle][/B]</label>
 			<include>Animation_Viewtype_Files_RightArea</include>
 			<visible>Control.IsVisible(50) + IsEmpty(Control.GetLabel(7019)) + IsEmpty(Control.GetLabel(9019))</visible>

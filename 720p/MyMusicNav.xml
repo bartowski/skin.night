@@ -3,7 +3,7 @@
 <window id="502">
 	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>50,56,58,51,52,53,54</views>
+	<views>50,56,58,51,52,54</views>
 	<controls>
 		
 
@@ -42,7 +42,7 @@
 		<include>Viewtype_Files</include><!-- 50 -->
 		<include>Viewtype_MusicShowcase</include><!-- 58 -->
 		<include>Viewtype_3daddon</include><!-- 56 -->
-		<include>Viewtype_MusicWall</include><!-- 53 -->
+		<!--<include>Viewtype_MusicWall</include> 53 -->
 		<include>Viewtype_Songs</include><!-- 52 -->
 		<include>Viewtype_Shelf</include><!-- 51 -->
 		<include>Viewtype_JukeBox</include><!-- 54 -->
@@ -75,12 +75,12 @@
 			<visible>!Skin.HasSetting(LockViews)</visible>
 			<include>WindowMenuVars</include>
 			<posy>680</posy>
-			<control type="button" id="20">
+			<control type="button" id="2">
 				<include>WindowMenuButton</include>
 				<label>$INFO[Container.ViewMode]</label>
 				<onclick>Container.NextViewMode</onclick>
 			</control>
-			<control type="togglebutton" id="21">
+			<control type="togglebutton" id="26">
 				<description>Toggle MoviesFanart</description>
 				<include>WindowMenuButton</include>
 				<label>$LOCALIZE[31086]</label>
@@ -89,7 +89,7 @@
 				<selected>Skin.HasSetting(MusicShowcaseFanart)</selected>
 				<visible>Control.IsVisible(58)</visible>
 			</control>
-			<control type="togglebutton" id="22">
+			<control type="togglebutton" id="28">
 				<description>Toggle MoviesFanart</description>
 				<include>WindowMenuButton</include>
 				<label>$LOCALIZE[31086]</label>
@@ -98,7 +98,7 @@
 				<selected>Skin.HasSetting(3dmusic_Fanart)</selected>
 				<visible>Control.IsVisible(56)</visible>
 			</control>
-			<control type="togglebutton" id="23">
+			<control type="togglebutton" id="29">
 				<description>Toggle MoviesFanart</description>
 				<include>WindowMenuButton</include>
 				<label>$LOCALIZE[31086]</label>
@@ -111,18 +111,18 @@
 				<include>WindowMenuButton</include>
 				<label>103</label>
 			</control>
-			<control type="button" id="24">
+			<control type="button" id="5">
 				<include>WindowMenuButton</include>
 				<label>$LOCALIZE[744]</label>
-				<onclick>ReplaceWindow(MusicFiles)</onclick>
 			</control>
 			<control type="radiobutton" id="16">
 				<include>WindowMenuButton</include>
 				<label>589</label>
 			</control>	
-			<control type="button" id="9">
+			<control type="togglebutton" id="4">
 				<include>WindowMenuButton</include>
-				<label>$LOCALIZE[590]</label>
+				<label>ascending</label>
+				<altlabel>descending</altlabel>
 			</control>
 		</control>
 
@@ -130,28 +130,28 @@
 			<visible>!Skin.HasSetting(LockViews)</visible>
 			<include>WindowMenuVars</include>
 			<posy>660</posy>
-			<control type="button" id="40">
+			<control type="label">
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[31088]</label>
 			</control>
-			<control type="button" id="41">
+			<control type="label">
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[14018]</label>
 				<visible>Control.IsVisible(50) | Control.IsVisible(56) | Control.IsVisible(58)</visible>		
 			</control>
-			<control type="button" id="42">
+			<control type="label">
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[31090]</label>
 			</control>
-			<control type="button" id="43">
+			<control type="label">
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[240]</label>
 			</control>
-			<control type="button" id="44">
+			<control type="label">
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[14086]</label>
 			</control>	
-			<control type="button" id="45">
+			<control type="label">
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[31093]</label>
 			</control>				

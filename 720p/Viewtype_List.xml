@@ -521,8 +521,9 @@
 				<visible>Container.Content(seasons)</visible>
 				<posx>20</posx>
 				<posy>90</posy>
-				<width>630</width>
+				<width>230</width>
 				<height>89</height>
+				<align>center</align>
 				<font>Font_Bartowski_Movies_Duration</font>
 				<textcolor>white</textcolor>
 				<label>[B]$INFO[ListItem.Label][/B]</label>

@@ -286,8 +286,8 @@
 			<width>600</width>
 			<onup>597</onup>
 			<ondown>597</ondown>
-			<include condition="!Skin.HasSetting(big_trailer)">ondown_small_trailer</include>
-			<include condition="Skin.HasSetting(big_trailer)">ondown_big_trailer</include>
+			<include condition="!Skin.HasSetting(big_trailer)">onleft_small_trailer</include>
+			<include condition="Skin.HasSetting(big_trailer)">onleft_big_trailer</include>
 			<onright>5970</onright>
 			<scrolltime>0</scrolltime>
 			<viewtype label="$LOCALIZE[31213]">list</viewtype>

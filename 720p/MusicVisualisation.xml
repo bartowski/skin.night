@@ -112,13 +112,25 @@ Normal Fullscreen
 			<control type="label">
 				<description>Track</description>
 				<posx>250</posx>
+				<posy>-18</posy>
+				<width min="750" max="770">auto</width>
+				<align>left</align>
+				<height>18</height>
+				<font>Font_Date</font>
+				<textcolor>mainblue</textcolor>
+				<label>[B]$LOCALIZE[13350][/B]</label>
+				<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
+			</control>
+			<control type="label">
+				<description>Track</description>
+				<posx>250</posx>
 				<posy>2</posy>
 				<width min="750" max="770">auto</width>
 				<align>left</align>
 				<height>18</height>
 				<font>Font_Bartowski_Showcase_Title</font>
 				<textcolor>ffffffff</textcolor>
-				<label>$INFO[MusicPlayer.Title,[B][COLOR=ff67ffff]$LOCALIZE[13350][/COLOR] [/B]]</label>
+				<label>[B]$INFO[MusicPlayer.Title][/B]</label>
 				<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
 			</control>
 		
@@ -175,13 +187,25 @@ Normal Fullscreen
 			<control type="label">
 				<description>Track</description>
 				<posx>250</posx>
-				<posy>6</posy>
+				<posy>-12</posy>
 				<width min="750" max="770">auto</width>
 				<align>left</align>
 				<height>18</height>
 				<font>Font_Date</font>
+				<textcolor>mainblue</textcolor>
+				<label>[B]$LOCALIZE[209]...[/B]</label>
+				<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
+			</control>
+			<control type="label">
+				<description>Track</description>
+				<posx>250</posx>
+				<posy>4</posy>
+				<width min="750" max="770">auto</width>
+				<align>left</align>
+				<height>18</height>
+				<font>Font_Bartowski_Showcase_Title</font>
 				<textcolor>ffffffff</textcolor>
-				<label>$INFO[MusicPlayer.offset(1).Title,[B][COLOR=ff67ffff]$LOCALIZE[209]:[/COLOR]  [/B]]</label>
+				<label>[B]$INFO[MusicPlayer.offset(1).Title][/B]</label>
 				<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
 			</control>
 			
@@ -378,7 +402,7 @@ Visualization Fullscreen
 				<height>18</height>
 				<font>Font_Bartowski_Showcase_Title</font>
 				<textcolor>ffffffff</textcolor>
-				<label>$INFO[MusicPlayer.Title,[B][COLOR=ff67ffff]$LOCALIZE[13350][/COLOR] [/B]]</label>
+				<label>$INFO[MusicPlayer.Title,[B][COLOR=mainblue]$LOCALIZE[13350][/COLOR] [/B]]</label>
 				<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
 			</control>
 		
@@ -441,7 +465,7 @@ Visualization Fullscreen
 				<height>18</height>
 				<font>Font_Date</font>
 				<textcolor>ffffffff</textcolor>
-				<label>$INFO[MusicPlayer.offset(1).Title,[B][COLOR=ff67ffff]$LOCALIZE[209]:[/COLOR]  [/B]]</label>
+				<label>$INFO[MusicPlayer.offset(1).Title,[B][COLOR=mainblue]$LOCALIZE[209]:[/COLOR]  [/B]]</label>
 				<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
 			</control>
 			
@@ -623,7 +647,7 @@ Visualization Fullscreen
 				<height>40</height>
 				<align>center</align>
 				<font>Font_Bartowski_Digital_Clock</font>
-				<textcolor>ff67ffff</textcolor>
+				<textcolor>mainblue</textcolor>
 				<label>Now Playing</label>
 			</control>
 			<control type="label">
@@ -633,7 +657,7 @@ Visualization Fullscreen
 				<height>40</height>
 				<align>center</align>
 				<label>$INFO[MusicPlayer.Title]</label>
-				<textcolor>ff67ffff</textcolor>
+				<textcolor>mainblue</textcolor>
 				<font>Font_Bartowski_Digital_Clock</font>
 				<align>center</align>
 			</control>
@@ -644,7 +668,7 @@ Visualization Fullscreen
 				<height>40</height>
 				<align>center</align>
 				<label>$INFO[MusicPlayer.album]</label>
-				<textcolor>ff67ffff</textcolor>
+				<textcolor>mainblue</textcolor>
 				<font>Font_Bartowski_Digital_Clock</font>
 				<align>center</align>
 				<animation type="Conditional" reversible="false" condition="true" loop="true">
@@ -661,7 +685,7 @@ Visualization Fullscreen
 				<height>40</height>
 				<align>center</align>
 				<label>$INFO[MusicPlayer.Time]/$INFO[MusicPlayer.Duration]</label>
-				<textcolor>ff67ffff</textcolor>
+				<textcolor>mainblue</textcolor>
 				<font>Font_Bartowski_Digital_Clock</font>
 				<align>center</align>
 				<animation type="Conditional" reversible="false" condition="true" loop="true">
