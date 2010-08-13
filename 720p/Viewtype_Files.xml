@@ -68,8 +68,9 @@
 					<aligny>center</aligny>
 					<font>Font_Bartowski_Episode_ContextMenu</font>
 					<textcolor>Text-Filemode</textcolor>
+					<selectedcolor>mainblue</selectedcolor>
 					<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, - ]</label>
-					<visible>Window.IsActive(Programs)</visible>
+					<visible>Window.IsActive(Programs) | Window.IsActive(musicplaylist)</visible>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -209,8 +210,9 @@
 					<aligny>center</aligny>
 					<font>Font_Bartowski_Episode_ContextMenu</font>
 					<textcolor>ffffffff</textcolor>
+					<selectedcolor>mainblue</selectedcolor>
 					<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, - ]</label>
-					<visible>Window.IsActive(Programs)</visible>
+					<visible>Window.IsActive(Programs) | Window.IsActive(musicplaylist)</visible>
 				</control>
 				<control type="label">
 					<posx>756</posx>

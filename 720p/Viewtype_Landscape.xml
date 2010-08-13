@@ -373,7 +373,7 @@
 					<width>590</width>
 					<height>280</height>
 					<align>left</align>
-					<info>Container(75).ShowPlot</info>
+					<info>Container(52).ShowPlot</info>
 					<font>Font_Bartowski_Movies</font>
 					<textcolor>ffffffff</textcolor>
 					<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>

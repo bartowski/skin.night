@@ -188,12 +188,12 @@
 			<posx>1260</posx>
 			<posy>10</posy>
 			<include>Animation_BackdropFade</include>
-			<visible>!Skin.HasSetting(no_clock) + [Window.IsActive(Home) | [ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews)] | Window.IsActive(106) | Window.IsActive(29)]</visible>
+			<visible>!Skin.HasSetting(no_clock) + Window.IsActive(Home)</visible>
 				<control type="image"> 
-					<posx>-280</posx>
+					<posx>-430</posx>
 					<posy>-10</posy>   
-					<width>357</width>     
-					<height>318</height> 
+					<width>453</width>     
+					<height>208</height> 
 					<texture>common/time_gradient_back.png</texture>
 				</control>
 				<control type="label">

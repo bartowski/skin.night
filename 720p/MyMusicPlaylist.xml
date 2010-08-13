@@ -1,7 +1,7 @@
 <!--Alaska-->
 
 <window id="500">
-	<defaultcontrol>55</defaultcontrol>
+	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
 		<control type="image">
@@ -22,6 +22,7 @@
 		<!-- view options -->
 		<include>Global_Time</include>
 		<include>7000_has_focus</include>
+		
 		<control type="image"><!-- Floor -->
 			<posx>0</posx>
 			<posy>650</posy>
@@ -36,8 +37,8 @@
 			<width>1100</width>
 			<height>40</height>
 			<posx>180</posx>
-			<onup>55</onup>
-			<ondown>55</ondown>
+			<onup>50</onup>
+			<ondown>50</ondown>
 			<itemgap>0</itemgap>
 			<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews)</visible>
 			<orientation>horizontal</orientation>

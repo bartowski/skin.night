@@ -175,6 +175,14 @@
 					<onclick>XBMC.ActivateWindow(MyVideoLibrary,movietitles,return)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies)</visible>
 				</item>
+				<item id="4">
+					<description>movies</description>
+					<label>$LOCALIZE[31280]</label>
+					<icon>special://skin/backgrounds/HDmovies.jpg</icon>
+					<thumb>$INFO[Skin.String(CustomHDMoviesFolder)]</thumb>			
+					<onclick>XBMC.ActivateWindow(10025,special://skin/playlists/HDMovies.xsp,return)</onclick>
+					<visible>!Skin.HasSetting(HomeMenuNoHDMoviesButton) + Library.HasContent(Movies)</visible>
+				</item>
 				<item id="5">
 					<description>TV shows</description>
 					<label>$LOCALIZE[31004]</label>

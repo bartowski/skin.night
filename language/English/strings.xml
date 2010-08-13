@@ -203,12 +203,12 @@ just copy the translations from Confluence to here
   
     <!-- NEW 6/22-->
   <string id="31266">Enable 'extrafanart' - allows random cycling of fanart in Library mode</string>
-  <string id="31267">User needs the 'extrafanart' folder at the root a TV Show or Movie folder</string>
+  <string id="31267">User needs the 'extrafanart' folder at the root of TV Show or Movie folder</string>
   
    <!-- NEW 6/23-->
   <string id="31268">Logo</string>
   <string id="31269">Use a local landcape.jpg instead of regular thumb on TV level</string>
-  <string id="31270">User needs a landcape.jpg mage at the root a TV Show folder</string>
+  <string id="31270">User needs a landcape.jpg image at the root of TV Show folder</string>
   
   <!-- NEW 6/23-->
   <string id="40281">Items</string>
@@ -222,6 +222,12 @@ just copy the translations from Confluence to here
   <string id="31276">Play trailers Fullscreen rather than small version</string>
   <string id="31277">Show Lyrics Button in MusicOSD</string>
   <string id="31278">Play Videos in Backgorund, Not In Small 'Now Playing' Window</string>
+  
+  <!-- NEW 8/12-->
+  <string id="31279">Slide</string>
+  <string id="31280">HD Movies</string>
+  
+  
   
   </strings>
 

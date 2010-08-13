@@ -478,6 +478,14 @@
 						<enable>Library.HasContent(Movies)</enable>
 					</control>
 					<control type="radiobutton" id="213">
+						<description>Hide HDMovies Button</description>
+						<include>skin_settings_labels</include>
+						<label>$LOCALIZE[31111] - $LOCALIZE[31280] [COLOR=grey3] ($LOCALIZE[20314])[/COLOR]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoHDMoviesButton)</onclick>
+						<selected>Skin.HasSetting(HomeMenuNoHDMoviesButton)</selected>
+						<enable>Library.HasContent(Movies)</enable>
+					</control>
+					<control type="radiobutton" id="214">
 						<description>Hide TV Shows Button</description>
 						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31111] - $LOCALIZE[20343] [COLOR=grey3] ($LOCALIZE[20314])[/COLOR]</label>
@@ -485,14 +493,14 @@
 						<selected>Skin.HasSetting(HomeMenuNoTVShowsButton)</selected>
 						<enable>Library.HasContent(TVShows)</enable>
 					</control>
-					<control type="radiobutton" id="214">
+					<control type="radiobutton" id="215">
 						<description>Hide Music Button</description>
 						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31111] - $LOCALIZE[2]</label>
 						<onclick>Skin.ToggleSetting(HomeMenuNoMusicButton)</onclick>
 						<selected>Skin.HasSetting(HomeMenuNoMusicButton)</selected>
 					</control>
-					<control type="radiobutton" id="215">
+					<control type="radiobutton" id="216">
 						<description>Hide Pictures Button</description>
 						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31111] - $LOCALIZE[1]</label>
@@ -770,6 +778,12 @@
 								<thumb>$INFO[Skin.String(CustomMoviesFolder)]</thumb>
 								<visible>Library.HasContent(Movies)</visible>
 							</item>
+							<item id="4">
+								<label>$LOCALIZE[31280]</label>
+								<onclick>-</onclick>
+								<icon>special://skin/backgrounds/programs.jpg</icon>
+								<thumb>$INFO[Skin.String(CustomGamesFolder)]</thumb>
+							</item>
 							<item id="11">
 								<label>20343</label><!-- tv shows -->
 								<onclick>-</onclick>
@@ -789,12 +803,7 @@
 								<icon>special://skin/backgrounds/pictures.jpg</icon>
 								<thumb>$INFO[Skin.String(CustomPicturesFolder)]</thumb>
 							</item>
-							<!--<item id="4">
-								<label>0</label>
-								<onclick>-</onclick>
-								<icon>special://skin/backgrounds/programs.jpg</icon>
-								<thumb>$INFO[Skin.String(CustomGamesFolder)]</thumb>
-							</item>-->
+							
 							<item id="5">
 								<label>8</label>
 								<onclick>-</onclick>
@@ -1032,7 +1041,7 @@
 								<align>center</align>
 								<texturenofocus border="5">confluence/button-nofocus.png</texturenofocus>
 								<texturefocus border="5">confluence/button-focus.png</texturefocus>
-								<onclick>Skin.SetImage(CustomGamesFolder)</onclick>
+								<onclick>Skin.SetImage(CustomHDMoviesFolder)</onclick>
 								<onleft>302</onleft>
 								<onright>301</onright>
 								<onup>304</onup>
@@ -1051,7 +1060,7 @@
 								<align>center</align>
 								<texturenofocus border="5">confluence/button-nofocus.png</texturenofocus>
 								<texturefocus border="5">confluence/button-focus.png</texturefocus>
-								<onclick>Skin.SetPath(CustomGamesFolder)</onclick>
+								<onclick>Skin.SetPath(CustomHDMoviesFolder)</onclick>
 								<onleft>300</onleft>
 								<onright>302</onright>
 								<onup>304</onup>
@@ -1070,7 +1079,7 @@
 								<align>center</align>
 								<texturenofocus border="5">confluence/button-nofocus.png</texturenofocus>
 								<texturefocus border="5">confluence/button-focus.png</texturefocus>
-								<onclick>Skin.Reset(CustomGamesFolder)</onclick>
+								<onclick>Skin.Reset(CustomHDMoviesFolder)</onclick>
 								<onleft>301</onleft>
 								<onright>300</onright>
 								<onup>304</onup>
@@ -2502,6 +2511,7 @@
 							<texturefocus>confluence/button-focus.png</texturefocus>
 							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>XBMC.RunScript(special://skin/scripts/script.logo/default.py)</onclick>
+							<onfocus>RunScript(script.logo-downloader)</onfocus>
 						</control>
 					</control>
 						<control type="textbox" id="513">
@@ -2624,7 +2634,13 @@
 							<onclick>Skin.ToggleSetting(no_3dbanner)</onclick>
 							<selected>Skin.HasSetting(no_3dbanner)</selected>
 						</control>
-						<control type="label" id="615">
+						<control type="radiobutton" id="615">
+							<include>skin_settings_labels</include>
+							<label>"$LOCALIZE[31279]"</label>
+							<onclick>Skin.ToggleSetting(no_Slide)</onclick>
+							<selected>Skin.HasSetting(no_Slide)</selected>
+						</control>
+						<control type="label" id="616">
 							<width>860</width>
 							<height>45</height>
 							<font>font13caps</font>
@@ -2634,25 +2650,25 @@
 							<align>left</align>
 							<aligny>center</aligny>
 						</control>
-						<control type="radiobutton" id="616">
+						<control type="radiobutton" id="617">
 							<include>skin_settings_labels</include>
 							<label>"$LOCALIZE[31066]"</label>
 							<onclick>Skin.ToggleSetting(no_Jukebox)</onclick>
 							<selected>Skin.HasSetting(no_Jukebox)</selected>
 						</control>
-						<control type="radiobutton" id="617">
+						<control type="radiobutton" id="618">
 							<include>skin_settings_labels</include>
 							<label>"$LOCALIZE[31063]"</label>
 							<onclick>Skin.ToggleSetting(no_MusicShowcase)</onclick>
 							<selected>Skin.HasSetting(no_MusicShowcase)</selected>
 						</control>
-						<control type="radiobutton" id="618">
+						<control type="radiobutton" id="619">
 							<include>skin_settings_labels</include>
 							<label>"$LOCALIZE[31064]"</label>
 							<onclick>Skin.ToggleSetting(no_MusicWall)</onclick>
 							<selected>Skin.HasSetting(no_MusicWall)</selected>
 						</control>
-						<control type="radiobutton" id="619">
+						<control type="radiobutton" id="620">
 							<include>skin_settings_labels</include>
 							<label>"Shelf"</label>
 							<onclick>Skin.ToggleSetting(no_Shelf)</onclick>

@@ -87,7 +87,7 @@
 			<height>33</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/tv.png</texture>
-			<visible>[substring(ListItem.FilenameAndPathAndPath,pdtv) | substring(ListItem.FilenameAndPathAndPath,hdtv) | substring(ListItem.FilenameAndPathAndPath,dsr)]</visible>
+			<visible>[substring(ListItem.FilenameAndPath,pdtv) | substring(ListItem.FilenameAndPath,hdtv) | substring(ListItem.FilenameAndPath,dsr)]</visible>
 		</control>
 		<control type="image">
 			<description>DVD Image</description>

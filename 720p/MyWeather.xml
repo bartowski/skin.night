@@ -645,7 +645,11 @@
 				<!-- LOC -->
 				<label>[B]$LOCALIZE[31252]:[/B] $INFO[Window.Property(Updated)]</label>
 				<posy>40</posy>
-				<include>Global_HeadingDetailVars</include>
+				<posy>40</posy>
+				<width>800</width>
+				<font>Font_Date</font>
+				<textcolor>Date</textcolor>
+				<align>left</align>
 			</control>
 		</control>
 		
