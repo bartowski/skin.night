@@ -62,6 +62,12 @@
 		<ondown>300</ondown>
 	</include>
 	
+	<include name="switch_vertical_home">
+		<onfocus>SetFocus(300)</onfocus>
+	</include>
+	<include name="switch_horizontal_home">
+		<onfocus>SetFocus(301)</onfocus>
+	</include>
 	
 	<include name="dialogConfirmButton">	
 		<width>120</width>
