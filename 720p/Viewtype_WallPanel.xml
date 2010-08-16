@@ -395,6 +395,17 @@
 				<textcolor>ff15efd9</textcolor>
 				<label>$INFO[ListItem.Label]</label>
 			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>108</posy>
+				<width>460</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_RSS_Big</font>
+				<textcolor>ffffffff</textcolor>
+				<label>MovieSet</label>
+				<visible>IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres)</visible>
+			</control>
 			<control type="label"><!--Duration-->
 				<posx>0</posx>
 				<posy>108</posy>

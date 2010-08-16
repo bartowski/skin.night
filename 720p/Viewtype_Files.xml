@@ -333,6 +333,18 @@
 		<include>Animation_HiddenByInfo</include>
 		<include>Animation_Viewtype_Wall_Fags</include>
 	</control>
+	<control type="label">
+		<posx>864</posx>
+		<posy>670</posy>
+		<width>380</width>
+		<height>50</height>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>Font_Bartowski_Title_TVShow</font>
+		<textcolor>ffffffff</textcolor>
+		<label>MovieSet</label>
+		<visible>IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres)</visible>
+	</control>
 	
 	<!--<control type="image">
 		<posx>980</posx>

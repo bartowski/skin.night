@@ -262,6 +262,17 @@
 			<label>$INFO[ListItem.Genre]</label>
 		</control>
 		<control type="label">
+			<posx>15</posx>
+			<posy>356</posy>
+			<width>555</width>
+			<height>50</height>
+			<align>center</align>
+			<font>Font_RSS_Big</font>
+			<textcolor>ffffffff</textcolor>
+			<label>MovieSet</label>
+			<visible>Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres)</visible>
+		</control>
+		<control type="label">
 			<visible>Container.Content(movies) + !IsEmpty(ListItem.Title)</visible>
 			<posx>15</posx>
 			<posy>356</posy>

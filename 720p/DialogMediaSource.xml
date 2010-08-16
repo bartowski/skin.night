@@ -45,8 +45,8 @@
 			<width>386</width>
 			<height>254</height>
 			<onup>18</onup>
-			<onleft>9000</onleft>
-			<onright>9000</onright>
+			<onleft>11</onleft>
+			<onright>11</onright>
 			<ondown>12</ondown>
 			<itemlayout height="32">
 				<control type="label">
@@ -149,8 +149,8 @@
 			<align>left</align>
 			<onup>10</onup>
 			<onleft>12</onleft>
-			<onright>19</onright>
-			<ondown>19</ondown>
+			<onright>18</onright>
+			<ondown>18</ondown>
 		</control>
 		<control type="image">
 			<posx>0</posx>

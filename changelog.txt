@@ -1,3 +1,10 @@
+Update 8/14/2010
+  -Addon.xml is updated with correct dependencies
+  -Logo button via Video Info screen reactivated
+  -added "Movieset" label to all views
+  -Changed Home weather widget to read left to right
+  -Fixed Horizontal Home always focused on "Movies" not on last window selection
+
 Update 8/12/2010
   -Fixed Music Playlist not being navigable
   -Fixed bug with tv.png, thx zwat

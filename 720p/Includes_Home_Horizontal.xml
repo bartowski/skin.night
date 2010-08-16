@@ -2,25 +2,25 @@
 
 	<include name="HorizontalHome">
 
-		<control type="fixedlist" id="300">
+		<control type="fixedlist" id="301">
 			<posx>-100</posx>
 			<posy>190</posy>
 			<height>466</height>
 			<width>1541</width>
 			<onup>9001</onup>
 			<ondown>9001</ondown>
-			<onleft>300</onleft>
-			<onright>300</onright>
+			<onleft>301</onleft>
+			<onright>301</onright>
 			<viewtype>list</viewtype>
 			<orientation>horizontal</orientation>
 			<focusposition>2</focusposition>
 			<movement>0</movement>
-			<scrolltime>300</scrolltime>
+			<scrolltime>301</scrolltime>
 			<include condition="!Skin.HasSetting(horizontal_bottom_align)">Animation_Bartowski_Context_Zoom</include>
 			<include condition="Skin.HasSetting(horizontal_bottom_align)">Animation_Bartowski_Context_Zoom_Bottom</include>
 			<visible>Skin.HasSetting(horizontal_home)</visible>	
 			<animation effect="slide" end="0,330" time="0" condition="Skin.HasSetting(horizontal_bottom_align)">conditional</animation>
-			<itemlayout width="300" height="61">
+			<itemlayout width="301" height="61">
 				<control type="label">
 					<width>500</width>
 					<height>61</height>
@@ -44,7 +44,7 @@
 					<textcolor>ffffffff</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<label>$INFO[ListItem.label]</label>
-					<animation effect="slide" end="0,-60" time="300" condition="ControlGroup(9001).HasFocus">conditional</animation>
+					<animation effect="slide" end="0,-60" time="301" condition="ControlGroup(9001).HasFocus">conditional</animation>
 				</control>
 			</focusedlayout>
 			<content>
@@ -237,7 +237,7 @@
 					<visible>Skin.HasSetting(signout)</visible>
 				</item>-->	
 				<item id="13">
-					<label>13005</label>
+					<label>13015</label>
 					<icon>special://skin/backgrounds/shutdown.jpg</icon>
 					<thumb>$INFO[Skin.String(Home_Custom_Back_Shutdown_Folder)]</thumb>
 					<onclick>XBMC.Shutdown()</onclick>
@@ -250,7 +250,7 @@
 				<posx>30</posx>
 				<posy>274</posy>
 				<animation effect="fade" start="100" end="0" time="0" condition="!ControlGroup(9001).HasFocus">conditional</animation>
-				<animation effect="fade" start="0" end="100" delay="300" time="200" condition="ControlGroup(9001).HasFocus">conditional</animation>
+				<animation effect="fade" start="0" end="100" delay="301" time="200" condition="ControlGroup(9001).HasFocus">conditional</animation>
 				<animation effect="fade" start="100" end="0" time="0" condition="ControlGroup(9001).HasFocus">WindowClose</animation>
 				<animation effect="slide" end="0,350" time="0" condition="Skin.HasSetting(horizontal_bottom_align)">conditional</animation>
 <!--VIDEOS -->	<control type="grouplist" id="9010">
@@ -262,10 +262,10 @@
 					<align>center</align>
 					<onleft>9010</onleft>
 					<onright>9010</onright>
-					<onup>300</onup>
-					<ondown>300</ondown>
+					<onup>301</onup>
+					<ondown>301</ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(300).HasFocus(2)</visible>
+					<visible>Container(301).HasFocus(2)</visible>
 					<control type="button" id="90101">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
 						<label>$LOCALIZE[20342]</label>
@@ -312,15 +312,15 @@
 					<posx>10</posx>
 					<posy>30</posy>
 					<width>1280</width>
-					<height>300</height>
+					<height>301</height>
 					<onleft>9011</onleft>
 					<onright>9011</onright>
+					<onup>301</onup>
+					<ondown>301</ondown>
 					<orientation>horizontal</orientation>
 					<align>center</align>
-					<include condition="!Skin.HasSetting(horizontal_bottom_align)">middle_horizontal_movies</include>
-					<include condition="Skin.HasSetting(horizontal_bottom_align)">lower_horizontal_movies</include>
 					<itemgap>0</itemgap>
-					<visible>Container(300).HasFocus(3)</visible>
+					<visible>Container(301).HasFocus(3)</visible>
 					<control type="button" id="90110">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
 						<label>$INFO[Skin.String(Menu_Custom11_Label)]</label>
@@ -384,10 +384,10 @@
 					<align>center</align>
 					<onleft>9012</onleft>
 					<onright>9012</onright>
-					<include condition="!Skin.HasSetting(horizontal_bottom_align)">middle_horizontal_tv</include>
-					<include condition="Skin.HasSetting(horizontal_bottom_align)">lower_horizontal_tv</include>
+					<onup>301</onup>
+					<ondown>301</ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(300).HasFocus(5)</visible>
+					<visible>Container(301).HasFocus(5)</visible>
 					<control type="button" id="90128">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
 						<label>$INFO[Skin.String(Menu_Custom13_Label)]</label>
@@ -435,10 +435,10 @@
 					<align>center</align>
 					<onleft>9014</onleft>
 					<onright>9014</onright>
-					<onup>300</onup>
-					<ondown>300</ondown>
+					<onup>301</onup>
+					<ondown>301</ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(300).HasFocus(9)</visible>
+					<visible>Container(301).HasFocus(9)</visible>
 					<control type="button" id="90141">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
 						<label>5</label>
@@ -475,10 +475,10 @@
 					<height>465</height>
 					<onleft>9015</onleft>
 					<onright>9015</onright>
-					<onup>300</onup>
-					<ondown>300</ondown>
+					<onup>301</onup>
+					<ondown>301</ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(300).HasFocus(10)</visible>
+					<visible>Container(301).HasFocus(10)</visible>
 					<control type="button" id="90150">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
 						<label>$LOCALIZE[31273]</label>
@@ -488,7 +488,7 @@
 						<description>Button1</description>
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
 						<label>$INFO[Skin.String(HomeScriptButton1_label)]</label>
-						<onclick>Setfocus(300)</onclick>
+						<onclick>Setfocus(301)</onclick>
 						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton1_Path)])</onclick>
 						<visible>Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))</visible>
 					</control>
@@ -496,7 +496,7 @@
 						<description>Button2</description>
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
 						<label>$INFO[Skin.String(HomeScriptButton2_label)]</label>
-						<onclick>Setfocus(300)</onclick>
+						<onclick>Setfocus(301)</onclick>
 						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton2_Path)])</onclick>
 						<visible>Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))</visible>
 					</control>
@@ -504,7 +504,7 @@
 						<description>Button3</description>
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
 						<label>$INFO[Skin.String(HomeScriptButton3_label)]</label>
-						<onclick>Setfocus(300)</onclick>
+						<onclick>Setfocus(301)</onclick>
 						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton3_Path)])</onclick>
 						<visible>Skin.HasSetting(HomeScriptButton3) + !IsEmpty(Skin.String(HomeScriptButton3_label))</visible>
 					</control>
@@ -512,7 +512,7 @@
 						<description>Button4</description>
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
 						<label>$INFO[Skin.String(HomeScriptButton4_label)]</label>
-						<onclick>Setfocus(300)</onclick>
+						<onclick>Setfocus(301)</onclick>
 						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton4_Path)])</onclick>
 						<visible>Skin.HasSetting(HomeScriptButton4) + !IsEmpty(Skin.String(HomeScriptButton4_label))</visible>
 					</control>
@@ -520,7 +520,7 @@
 						<description>Button5</description>
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
 						<label>$INFO[Skin.String(HomeScriptButton5_label)]</label>
-						<onclick>Setfocus(300)</onclick>
+						<onclick>Setfocus(301)</onclick>
 						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton5_Path)])</onclick>
 						<visible>Skin.HasSetting(HomeScriptButton5) + !IsEmpty(Skin.String(HomeScriptButton5_label))</visible>
 					</control>
@@ -528,7 +528,7 @@
 						<description>Button6</description>
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
 						<label>$INFO[Skin.String(HomeScriptButton6_label)]</label>
-						<onclick>Setfocus(300)</onclick>
+						<onclick>Setfocus(301)</onclick>
 						<onclick>XBMC.RunScript($INFO[Skin.String(HomeScriptButton6_Path)])</onclick>
 						<visible>Skin.HasSetting(HomeScriptButton6) + !IsEmpty(Skin.String(HomeScriptButton6_label))</visible>
 					</control>
@@ -543,10 +543,10 @@
 					<align>center</align>
 					<onleft>9017</onleft>
 					<onright>9017</onright>
-					<include condition="!Skin.HasSetting(horizontal_bottom_align)">middle_horizontal_music</include>
-					<include condition="Skin.HasSetting(horizontal_bottom_align)">lower_horizontal_music</include>
+					<onup>301</onup>
+					<ondown>301</ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(300).HasFocus(1)</visible>
+					<visible>Container(301).HasFocus(1)</visible>
 					<control type="button" id="90170">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
 						<label>$INFO[Skin.String(Menu_Custom15_Label)]</label>
@@ -621,10 +621,10 @@
 					<align>center</align>
 					<onleft>9018</onleft>
 					<onright>9018</onright>
-					<onup>300</onup>
-					<ondown>300</ondown>
+					<onup>301</onup>
+					<ondown>301</ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(300).HasFocus(8) | Container(300).HasFocus(14)</visible>
+					<visible>Container(301).HasFocus(8) | Container(301).HasFocus(14)</visible>
 					<control type="button" id="90181">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
 						<label>143</label>
@@ -650,10 +650,10 @@
 					<align>center</align>
 					<onleft>9019</onleft>
 					<onright>9019</onright>
-					<onup>300</onup>
-					<ondown>300</ondown>
+					<onup>301</onup>
+					<ondown>301</ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(300).HasFocus(13)</visible>
+					<visible>Container(301).HasFocus(13)</visible>
 					<control type="button" id="90184">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
 						<label>$LOCALIZE[31242]</label>
@@ -667,13 +667,13 @@
 					</control>
 					<control type="button" id="90186">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
-						<label>13001</label>
+						<label>13011</label>
 						<onclick>Dialog.Close(ShutdownMenu,yes)</onclick>
 						<onclick>Suspend()</onclick>
 					</control>
 					<control type="button" id="90187">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
-						<label>13000</label>
+						<label>13010</label>
 						<onclick>Hibernate()</onclick>
 					</control>
 					<control type="button" id="90188">
@@ -683,7 +683,7 @@
 					</control>
 					<control type="button" id="90189">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
-						<label>13002</label>
+						<label>13012</label>
 						<onclick>XBMC.Quit()</onclick>
 					</control>
 					<!--<control type="button" id="90190">
@@ -697,12 +697,12 @@
 					<posy>30</posy>
 					<width>600</width>
 					<height>465</height>
-					<onleft>300</onleft>
-					<onright>300</onright>
+					<onleft>301</onleft>
+					<onright>301</onright>
 					<onup>9019</onup>
 					<ondown>9019</ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(300).HasFocus(11)</visible>
+					<visible>Container(301).HasFocus(11)</visible>
 					<control type="button" id="91185">
 						<include>ButtonHomeSubCommonValues_Horizontal</include>
 						<label>$LOCALIZE[13391]</label>

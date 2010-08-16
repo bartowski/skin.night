@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="skin.night"
-  version="1.0.0"
+  version="1.4.0"
   name="Night"
   provider-name="mcborzu">
   <requires>
     <import addon="xbmc.gui" version="2.11"/>
-    <import addon="script.recentlyadded" version="1.0.4"/>
-	<import addon="script.favourites" version="1.0.1"/>
+    <import addon="script.recentlyadded" version="1.0.5"/>
+	<import addon="script.favourites" version="1.0.2"/>
+	<import addon="script.logo-downloader" version="1.4.0"/>
   </requires>
   <extension 
     point="xbmc.gui.skin"

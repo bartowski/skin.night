@@ -933,17 +933,17 @@
 					<onup>50</onup>
 					<ondown>50</ondown>
 					<visible>!Skin.HasSetting(LockViews)</visible>
-					<control type="button" id="5">
-						<description>Cast/Review</description>
-						<include>ButtonInfoDialogsCommonValues</include>
-						<label>206</label>
-					</control>
 					<control type="button" id="7050"> 
 						<description>Play</description>
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label>208</label>
 						<onclick>Dialog.Close(movieinformation)</onclick> 
 						<onclick>PlayMedia($INFO[ListItem.FileNameAndPath])</onclick> 
+					</control>
+					<control type="button" id="5">
+						<description>Cast/Review</description>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label>206</label>
 					</control>
 					<control type="button" id="6">
 						<description>Refresh</description>
@@ -974,15 +974,15 @@
 						<onclick>Dialog.Close(MovieInformation)</onclick>
 						<onclick>RunScript(special://home/scripts/Home Theater Experience/default.py)</onclick>
 						<visible>Skin.HasSetting(hometheater) + Container.Content(movies)</visible>
-					</control>
+					</control>-->
 					<control type="button" id="14">
 						<description>Play Trailer</description>
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label>$LOCALIZE[31249]</label>
 						<onclick>Playlist.Clear</onclick>
-						<onclick>XBMC.RunScript(special://skin/scripts/script.logo/default.py,$INFO[ListItem.FileNameAndPath])</onclick>
+						<onclick>XBMC.RunScript(script.logo-downloader,$INFO[ListItem.FileNameAndPath])</onclick>
 						<visible>Container.Content(tvshows)</visible>
-					</control>-->
+					</control>
 				</control>
 			</control>
 		</control>

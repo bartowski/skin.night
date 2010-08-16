@@ -202,7 +202,6 @@
 						<label> - $LOCALIZE[31216] </label>
 						<label2>[COLOR=selected]$INFO[Skin.String(SubtitleScript_Path)][/COLOR]</label2>
 						<onclick>Skin.SetAddon(SubtitleScript_Path,xbmc.python.subtitles)</onclick>
-						<enable>Skin.HasSetting(SubsScript_Enable)</enable>
 						<visible>Skin.HasSetting(SubsScript_Enable)</visible>
 					</control>
 					<!--<control type="radiobutton" id="106">

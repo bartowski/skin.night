@@ -25,173 +25,93 @@
 		<posy>0</posy>
 		<width>1280</width>
 		<height>720</height>
-		<texture>music/music_backdrop3.png</texture>
+		<texture>music/pic_back.png</texture>
 		<animation effect="slide" start="0,0" end="0,400" time="200" delay="0" condition="Control.HasFocus(8000)">Conditional</animation>
 		<visible>Control.IsVisible(51)</visible>
 	</control>
 	
 		<control type="wraplist" id="51">
-			<posx>-64</posx>
-			<posy>290</posy>
+			<posx>-70</posx>
+			<posy>350</posy>
 			<height>515</height>
-			<width>1920</width>
+			<width>1380</width>
 			<onleft>51</onleft>
 			<onright>51</onright>
 			<onup>7000</onup>
 			<ondown>8000</ondown>
 			<viewtype label="$LOCALIZE[31063]">list</viewtype>
 			<orientation>horizontal</orientation>
-			<focusposition>3</focusposition>
+			<focusposition>4</focusposition>
 			<scrolltime>300</scrolltime>
 			<preloaditems>2</preloaditems>
 			<include>Animation_ZoomInZoomOut</include>
 			<animation effect="slide" start="0,0" end="0,400" time="600" delay="0" condition="Control.HasFocus(8000)">Conditional</animation>
-			<itemlayout width="204" height="245">
+			<itemlayout width="150" height="245">
 			<control type="group">
 			<posx>0</posx>
 			<posy>180</posy>
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>200</width>
-					<height>200</height>
-					<texture>postermatteNF.png</texture>
-					<colordiffuse>black</colordiffuse>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<width>140</width>
+					<height>140</height>
+					<aspectratio align="center" aligny="bottom">keep</aspectratio>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<bordertexture border="5">confluence/button-nofocus.png</bordertexture>
+					<bordersize>5</bordersize>
 					<include>Animation_HiddenByInfo</include>
 				</control>
 				<control type="image">
 					<posx>0</posx>
-					<posy>0</posy>
-					<width>200</width>
-					<height>200</height>
-					<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
-					<fadetime>200</fadetime>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<posy>142</posy>
+					<width>140</width>
+					<height>140</height>
+					<aspectratio align="center" aligny="top">keep</aspectratio>
+					<texture background="true" flippy="true">$INFO[ListItem.Icon]</texture>
+					<bordertexture border="5">confluence/button-nofocus.png</bordertexture>
+					<bordersize>5</bordersize>
+					<animation effect="fade" start="30" end="30" time="0" condition="true">Conditional</animation>
 					<include>Animation_HiddenByInfo</include>
-				</control>
-				<control type="image">
-					<posx>-11</posx>
-					<posy>-8</posy>
-					<width>222</width>
-					<height>216</height>
-					<texture>posterframeF.png</texture>
-					<colordiffuse>89FFFFFF</colordiffuse>
-					<include>Animation_HiddenByInfo</include>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>202</posy>
-					<width>200</width>
-					<height>200</height>
-					<texture background="true" flipy="true" diffuse="movie-poster/Movie_Thumb_Mask.png">$INFO[ListItem.Icon]</texture>
-					<colordiffuse>69FFFFFF</colordiffuse>
-					<fadetime>200</fadetime>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<include>Animation_HiddenByInfo</include>
-					<animation type="Conditional" reversible="false" condition="true">
-						<effect type="fade" start="0" end="60" time="0" />
-					</animation>
-				</control>
-				<control type="image">
-					<posx>-11</posx>
-					<posy>194</posy>
-					<width>222</width>
-					<height>216</height>
-					<texture flipy="true">posterframeF.png</texture>
-					<colordiffuse>39FFFFFF</colordiffuse>
-					<include>Animation_HiddenByInfo</include>
-					<animation type="Conditional" reversible="false" condition="true">
-						<effect type="fade" start="0" end="60" time="0" />
-					</animation>
 				</control>
 			</control>
 		</itemlayout>
 			
-		<focusedlayout width="224" height="515">
+		<focusedlayout width="250" height="500">
 			<control type="group">
 			<posx>0</posx>
-			<posy>170</posy>
-				
+			<posy>90</posy>
 				<control type="image">
-					<posx>-14</posx>
-					<posy>-16</posy>
+					<posx>0</posx>
+					<posy>0</posy>
 					<width>250</width>
 					<height>250</height>
-					<texture>postermatteNF.png</texture>
-					<colordiffuse>black</colordiffuse>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<include>Animation_PosterInfoSlide_Showcase</include>
+					<aspectratio align="center" aligny="bottom">keep</aspectratio>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<bordertexture border="5">confluence/pic_border.png</bordertexture>
+					<bordersize>5</bordersize>
 					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="auto" start="80" end="100" time="300" tween="back" easing="out" />
+						<effect type="zoom" center="80,238" start="81" end="100" time="400" tween="back" easing="out" />
 					</animation>
+					<include>Animation_HiddenByInfo</include>
 				</control>
 				<control type="image">
 					<posx>0</posx>
 					<posy>252</posy>
-					<width>220</width>
-					<height>220</height>
-					<texture background="true" flipy="true" diffuse="postermatte.png">$INFO[ListItem.Icon]</texture>
-					<fadetime>200</fadetime>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<include>Animation_HiddenByInfo</include>
-					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="auto" start="90" end="114" time="300" tween="back" easing="out" />
-						<effect type="fade" start="0" end="60"/>
-					</animation>
-				</control>
-				<control type="image">
-					<posx>-12</posx>
-					<posy>246</posy>
-					<width>246</width>
-					<height>236</height>
-					<texture flipy="true">posterframeF.png</texture>
-					<include>Animation_HiddenByInfo</include>
-					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="auto" start="90" end="114" time="300" tween="back" easing="out" />
-						<effect type="fade" start="0" end="20"/>
-					</animation>
-				</control>
-				<control type="image">
-					<posx>-220</posx>
-					<posy>-156</posy>
-					<width>651</width>
-					<height>417</height>
-					<texture>music/musci_focus_glow.png</texture>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<include>Animation_PosterInfoSlide_Showcase</include>
-					<animation type="Focus" reversible="false">
-						<effect type="fade" start="0" end="60" time="1000" delay="800" />
-					</animation>
-				</control>
-				<control type="image">
-					<posx>-14</posx>
-					<posy>-16</posy>
 					<width>250</width>
 					<height>250</height>
-					<texture background="true" diffuse="postermatte.png">$INFO[ListItem.Icon]</texture>
-					<fadetime>200</fadetime>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<include>Animation_PosterInfoSlide_Showcase</include>
+					<aspectratio align="center" aligny="top">keep</aspectratio>
+					<texture background="true" flippy="true">$INFO[ListItem.Icon]</texture>
+					<bordertexture border="5">confluence/pic_border.png</bordertexture>
+					<bordersize>5</bordersize>
 					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="auto" start="80" end="100" time="300" tween="back" easing="out" />
+						<effect type="zoom" center="80,238" start="81" end="100" time="400" tween="back" easing="out" />
 					</animation>
-				</control>
-				<control type="image">
-					<posx>-29</posx>
-					<posy>-26</posy>
-					<width>280</width>
-					<height>270</height>
-					<texture>posterframeF.png</texture>
-					<include>Animation_PosterInfoSlide_Showcase</include>
-					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="auto" start="80" end="100" time="300" tween="back" easing="out" />
-						<effect type="fade" start="0" end="80" time="600" />
-					</animation>
+					<animation effect="fade" start="30" end="30" time="0" condition="true">Conditional</animation>
+					<include>Animation_HiddenByInfo</include>
 				</control>
 			</control>
-			</focusedlayout>
-		</control>
+		</focusedlayout>
+	</control>
 		
 		<control type="button" id="8000">
 			<label>SHOULD NOT SEE ME</label>
