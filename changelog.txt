@@ -3,6 +3,7 @@ Update 8/14/2010
   -Logo button via Video Info screen reactivated
   -added "Movieset" label to all views
   -Changed Home weather widget to read left to right
+  -Changed the Showcase view for Picture section
   -Fixed Horizontal Home always focused on "Movies" not on last window selection
 
 Update 8/12/2010

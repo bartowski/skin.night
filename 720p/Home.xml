@@ -377,7 +377,8 @@
 			<height>1</height>
 			<label>-</label>
 			<font>-</font>
-			<onfocus>SetFocus(300)</onfocus>
+			<include condition="!Skin.HasSetting(horizontal_home)">switch_vertical_home</include>
+			<include condition="Skin.HasSetting(horizontal_home)">switch_horizontal_home</include>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
 			<visible>!Skin.HasSetting(homepageHideRecentlyAdded)</visible>
@@ -391,7 +392,8 @@
 			<label>-</label>
 			<font>-</font>
 			<onfocus>Skin.Reset(LibraryUpdated)</onfocus>
-			<onfocus>SetFocus(300)</onfocus>
+			<include condition="!Skin.HasSetting(horizontal_home)">switch_vertical_home</include>
+			<include condition="Skin.HasSetting(horizontal_home)">switch_horizontal_home</include>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
 			<visible>!Skin.HasSetting(homepageHideRecentlyAdded) + Skin.HasSetting(LibraryUpdated) + !Window.IsVisible(DialogMusicScan.xml) + !Window.IsVisible(DialogVideoScan.xml)</visible>
