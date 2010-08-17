@@ -2509,8 +2509,7 @@
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>confluence/button-focus.png</texturefocus>
 							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-							<onclick>XBMC.RunScript(special://skin/scripts/script.logo/default.py)</onclick>
-							<onfocus>RunScript(script.logo-downloader)</onfocus>
+							<onclick>RunScript(script.logo-downloader)</onclick>
 						</control>
 					</control>
 						<control type="textbox" id="513">

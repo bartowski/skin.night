@@ -224,7 +224,7 @@
 			<posy>560</posy>
 			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Episode_BottomArea</include>
-			<visible>Control.IsVisible(51)</visible>
+			<visible>Control.IsVisible(51) + !IsEmpty(ListItem.Title)</visible>
 			<control type="label"><!-- Episode Title -->
 				<posx>0</posx>
 				<posy>-10</posy>
