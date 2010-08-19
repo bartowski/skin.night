@@ -2510,6 +2510,7 @@
 							<texturefocus>confluence/button-focus.png</texturefocus>
 							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>RunScript(script.logo-downloader)</onclick>
+							<!--<onclick>XBMC.RunScript(script.logo-downloader,mode=bulk,clearart=True,logo=True,showthumb=True)</onclick>-->
 						</control>
 					</control>
 						<control type="textbox" id="513">
