@@ -1,3 +1,8 @@
+Update 8/20/2010
+  -Fix Horizontal Home navigation error
+  -Added scrollbar to "Slide" view
+  -*Trail Balloon* for new watched overlay
+
 Update 8/16/2010
   -Fix logo button error
   -Season/Episode not longer show when pressing "I" playing video

@@ -277,7 +277,7 @@
 				<!--<animation effect="zoom" start="2,122,0,281" end="0,0,500,281" time="800" delay="200">Visible</animation>-->
 			</control>
 			<control type="image">
-				<posx>420</posx>
+				<posx>410</posx>
 				<posy>340</posy>
 				<width>120</width>
 				<height>91</height>
