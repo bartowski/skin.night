@@ -46,7 +46,7 @@
 					<height>89</height>
 					<texture background="true" fallback="special://skin/media/backgrounds/fallback.png">$INFO[ListItem.path]logo.png</texture>
 					<fadetime>100</fadetime>
-					<!--<colordiffuse>89FFFFFF</colordiffuse>-->
+					<animation effect="fade" start="50" end="50" time="0" condition="true">conditional</animation>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 				</control>	
 				<control type="label">

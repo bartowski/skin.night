@@ -450,6 +450,13 @@
 						<onclick>Skin.ToggleSetting(conditions_weather_backdrop)</onclick>
 						<selected>Skin.HasSetting(conditions_weather_backdrop)</selected>
 					</control>
+					<control type="radiobutton" id="206">
+						<description>conditions based weather backdrop style</description>
+						<include>skin_settings_labels</include>
+						<label>$LOCALIZE[31281]</label>
+						<onclick>Skin.ToggleSetting(animation_bg)</onclick>
+						<selected>Skin.HasSetting(animation_bg)</selected>
+					</control>
 					
 					<control type="label" id="210">
 						<width>860</width>
@@ -2447,11 +2454,18 @@
 						</control>
 						<control type="radiobutton" id="507">
 							<include>skin_settings_labels</include>
+							<label>$LOCALIZE[31282]</label>
+							<onclick>Skin.ToggleSetting(genrefanart)</onclick>
+							<onclick>Skin.Reset(extrafanart)</onclick> 
+							<selected>Skin.HasSetting(genrefanart)</selected>
+						</control>
+						<control type="radiobutton" id="508">
+							<include>skin_settings_labels</include>
 							<label>$LOCALIZE[31269]</label>
 							<onclick>Skin.ToggleSetting(landscape_jpg)</onclick>
 							<selected>Skin.HasSetting(landscape_jpg)</selected>
 						</control>
-						<control type="label" id="508">
+						<control type="label" id="509">
 							<width>860</width>
 							<height>26</height>
 							<font>Font_KeyboardTitle</font>
@@ -2462,13 +2476,13 @@
 							<align>left</align>
 							<aligny>top</aligny>
 						</control>
-						<control type="radiobutton" id="509">
+						<control type="radiobutton" id="510">
 							<include>skin_settings_labels</include>
 							<label>$LOCALIZE[31266]</label>
 							<onclick>Skin.ToggleSetting(extrafanart)</onclick>
 							<selected>Skin.HasSetting(extrafanart)</selected>
 						</control>
-						<control type="label" id="510">
+						<control type="label" id="511">
 							<width>860</width>
 							<height>26</height>
 							<font>Font_KeyboardTitle</font>
@@ -2479,7 +2493,7 @@
 							<align>left</align>
 							<aligny>top</aligny>
 						</control>
-						<control type="label" id="511">
+						<!--<control type="label" id="512">
 							<width>860</width>
 							<height>45</height>
 							<font>font13caps</font>
@@ -2488,8 +2502,8 @@
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
-						</control>
-						<control type="label" id="512">
+						</control>-->
+						<control type="label" id="513">
 							<width>860</width>
 							<height>45</height>
 							<font>font13caps</font>
@@ -2499,7 +2513,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 						</control>
-						<control type="button" id="513">
+						<control type="button" id="514">
 							<width>280</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
@@ -2513,7 +2527,7 @@
 							<!--<onclick>XBMC.RunScript(script.logo-downloader,mode=bulk,clearart=True,logo=True,showthumb=True)</onclick>-->
 						</control>
 					</control>
-						<control type="textbox" id="513">
+						<control type="textbox" id="515">
 							<posx>400</posx>
 							<posy>550</posy>
 							<width>600</width>

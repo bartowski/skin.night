@@ -177,7 +177,7 @@
 				<font>Font_RSS_Big</font>
 				<textcolor>ffffffff</textcolor>
 				<label>MovieSet</label>
-				<visible>IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + !Window.IsActive(videofiles)</visible>
+				<visible>IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)</visible>
 			</control>
 			<control type="label">
 				<posx>0</posx>
