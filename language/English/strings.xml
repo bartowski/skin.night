@@ -229,7 +229,7 @@ just copy the translations from Confluence to here
   
   <!-- NEW 8/22-->
   <string id="31281">Ken Burns Effect - Rotate/Zoom Fanart on Home</string>
-  <string id="31282">Enable Genre Fanart on Episode level, will disable "ExtraFanart"</string>
+  <string id="31282">Enable Season Fanart on Episode level, will disable "ExtraFanart"</string>
   
   
   </strings>

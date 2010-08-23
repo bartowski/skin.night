@@ -343,7 +343,7 @@
 		<font>Font_Bartowski_Title_TVShow</font>
 		<textcolor>ffffffff</textcolor>
 		<label>MovieSet</label>
-		<visible>IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)</visible>
+		<visible>Control.IsVisible(50) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)</visible>
 	</control>
 	
 	<!--<control type="image">
