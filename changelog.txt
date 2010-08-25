@@ -1,10 +1,15 @@
+Update 8/24/2010 
+  -Random backdrops for Video and Music Files section - same as ones that you set on Home
+  -Option to disable "Play Disc" on Home
+  -Updated Logo script code
+
 Update 8/22/2010
   -Switched up position on Home time/date
   -Fixed "MovieSet" showing on non-library screens
   -Switched RSS to an full unicode font
   -added Korean and French translations
   -Added "Ken Burns" option only on Home - Settings->Skin->Home Window
-  -Added "Genre Fanart" option - Settings->Skin->Movie/TV
+  -Added "Season Fanart" option - Settings->Skin->Movie/TV
 
 Update 8/20/2010
   -Fix Horizontal Home navigation error

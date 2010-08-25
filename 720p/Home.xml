@@ -350,7 +350,7 @@
 					<icon>special://skin/backgrounds/playdisc.jpg</icon>						
 					<label>341</label>
 					<onclick>XBMC.PlayDVD</onclick>
-					<visible>System.HasMediadvd</visible>
+					<visible>System.HasMediadvd + !Skin.HasSetting(HomeMenuNoPlayDVDButton)</visible>
 				</item>
 			</content>
 		</control>
