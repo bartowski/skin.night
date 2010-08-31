@@ -50,17 +50,6 @@
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 				</control>	
 				<control type="label">
-					<visible>Container.Content(seasons)</visible>
-					<posx>115</posx>
-					<posy>100</posy>
-					<width>230</width>
-					<height>89</height>
-					<align>center</align>
-					<font>Font_MainMenuLabel</font>
-					<textcolor>ListTrackF</textcolor>
-					<label>[B]$INFO[ListItem.Label][/B]</label>
-				</control>
-				<control type="label">
 					<visible>Container.Content(episodes) + !IsEmpty(ListItem.Title)</visible>
 					<posx>115</posx>
 					<posy>100</posy>
@@ -72,7 +61,7 @@
 					<label>[B]$LOCALIZE[20359] $INFO[ListItem.Episode][/B]</label>
 				</control>
 				<control type="label">
-					<visible>[Container.Content(episodes) + IsEmpty(ListItem.Title)] | [Container.Content(tvshows) + IsEmpty(ListItem.Title)]</visible>
+					<visible>Container.Content(seasons) | [Container.Content(episodes) + IsEmpty(ListItem.Title)] | [Container.Content(tvshows) + IsEmpty(ListItem.Title)]</visible>
 					<posx>115</posx>
 					<posy>100</posy>
 					<width>230</width>
@@ -123,18 +112,6 @@
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 				</control>
 				<control type="label">
-					<visible>Container.Content(seasons)</visible>
-					<posx>135</posx>
-					<posy>100</posy>
-					<width>230</width>
-					<height>89</height>
-					<align>center</align>
-					<aligny>bottom</aligny>
-					<font>Font_MainMenuLabel</font>
-					<textcolor>ffffffff</textcolor>
-					<label>[B]$INFO[ListItem.Label][/B]</label>
-				</control>
-				<control type="label">
 					<visible>Container.Content(episodes) + !IsEmpty(ListItem.Title)</visible>
 					<posx>135</posx>
 					<posy>100</posy>
@@ -147,7 +124,7 @@
 					<label>[B]$LOCALIZE[20359] $INFO[ListItem.Episode][/B]</label>
 				</control>
 				<control type="label">
-					<visible>[Container.Content(episodes) + IsEmpty(ListItem.Title)] | [Container.Content(tvshows) + IsEmpty(ListItem.Title)]</visible>
+					<visible>Container.Content(seasons) | [Container.Content(episodes) + IsEmpty(ListItem.Title)] | [Container.Content(tvshows) + IsEmpty(ListItem.Title)]</visible>
 					<posx>135</posx>
 					<posy>100</posy>
 					<width>230</width>
