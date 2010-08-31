@@ -1,3 +1,7 @@
+Update 8/30/2010 
+  -Removed the teal focus bar from "Landscape", "Landcape Fanart" and "Logo"
+  -Testing a 'Watched' status for "Landcape Fanart"
+
 Update 8/24/2010 
   -Random backdrops for Video and Music Files section - same as ones that you set on Home
   -Option to disable "Play Disc" on Home
