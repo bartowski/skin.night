@@ -71,14 +71,16 @@
 					<textcolor>ListTrackF</textcolor>
 					<label>[B]$INFO[ListItem.Label][/B]</label>
 				</control>
-				<control type="image">
-					<posx>80</posx>
-					<posy>120</posy>
-					<width>73</width>
-					<height>56</height>
-					<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
-					<animation effect="fade" start="40" end="40" time="0" condition="true">conditional</animation>
-					<visible>Skin.HasSetting(tvoverlays) + Container.Content(tvshows) + !IsEmpty(ListItem.Overlay)</visible>
+				<control type="label">
+					<posx>115</posx>
+					<posy>140</posy>
+					<width>230</width>
+					<height>89</height>
+					<align>center</align>
+					<font>Font_Alaya_Movie-trailer</font>
+					<textcolor>ListTrackNF</textcolor>
+					<label>[B]*Watched*[/B]</label>
+					<visible>Skin.HasSetting(tvoverlays) + Container.Content(tvshows) + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
 				</control>
 				<control type="image">
 					<posx>-8</posx>
@@ -135,13 +137,16 @@
 					<textcolor>ffffffff</textcolor>
 					<label>[B]$INFO[ListItem.Label][/B]</label>
 				</control>
-				<control type="image">
-					<posx>100</posx>
-					<posy>120</posy>
-					<width>73</width>
-					<height>56</height>
-					<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
-					<visible>Skin.HasSetting(tvoverlays) + Container.Content(tvshows) + !IsEmpty(ListItem.Overlay)</visible>
+				<control type="label">
+					<posx>130</posx>
+					<posy>140</posy>
+					<width>230</width>
+					<height>89</height>
+					<align>center</align>
+					<font>Font_Alaya_Movie-trailer</font>
+					<textcolor>mainblue</textcolor>
+					<label>[B]*Watched*[/B]</label>
+					<visible>Skin.HasSetting(tvoverlays) + Container.Content(tvshows) + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
 				</control>
 				<control type="image">
 					<posx>10</posx>
