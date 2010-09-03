@@ -10,9 +10,7 @@
             <texture background="true">$INFO[Fanart.Image]</texture> 
             <aspectratio>stretch</aspectratio> 
             <fadetime>400</fadetime> 
-			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg_global)">Conditional</animation>
-			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg_global)">Conditional</animation>
-            <include>Animation_MyVideoNav_Fanart</include> 
+			<include>Animation_MyVideoNav_Fanart</include> 
             <visible>![IsEmpty(Fanart.Image) | Control.IsVisible(59) | Control.IsVisible(54) | Control.IsVisible(57) | Control.IsVisible(56) | Control.IsVisible(592) | Control.IsVisible(597)]</visible> 
         </control> 
         <control type="image"> 
@@ -21,17 +19,13 @@
             <texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture> 
             <aspectratio>stretch</aspectratio> 
             <include>Animation_MyVideoNav_Fanart</include> 
-			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg_global)">Conditional</animation>
-			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg_global)">Conditional</animation>
-            <visible>![Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart) | Control.IsVisible(54) | Control.IsVisible(59) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(592) | Control.IsVisible(597)]</visible> 
+			 <visible>![Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart) | Control.IsVisible(54) | Control.IsVisible(59) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(592) | Control.IsVisible(597)]</visible> 
         </control> 
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<texture>backdrops/curtains.png</texture>
 			<aspectratio>stretch</aspectratio>
 			<include>Animation_MyVideoNav_Fanart</include>
-			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg_global)">Conditional</animation>
-			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg_global)">Conditional</animation>
 			<visible>!Container.Content(movies) + !Control.IsVisible(54) + IsEmpty(ListItem.Title) + [IsEmpty(ListItem.Property(Fanart_Image)) + IsEmpty(Fanart.Image)]</visible>
 		</control>
 		<control type="image">
@@ -39,8 +33,6 @@
 			<texture>backgrounds/movies.jpg</texture>
 			<aspectratio>stretch</aspectratio>
 			<include>Animation_MyVideoNav_Fanart</include>
-			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg_global)">Conditional</animation>
-			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg_global)">Conditional</animation>
 			<visible>Container.Content(movies) + !Control.IsVisible(54) + IsEmpty(ListItem.Title) + [IsEmpty(ListItem.Property(Fanart_Image)) + IsEmpty(Fanart.Image)]</visible>
 		</control>
 		<control type="image" id="8437"> 
@@ -49,8 +41,6 @@
             <texture background="true">$INFO[ListItem.path,,fanart.jpg]</texture> 
             <aspectratio>stretch</aspectratio> 
             <include>Animation_MyVideoNav_Fanart</include>
-			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg_global)">Conditional</animation>
-			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg_global)">Conditional</animation>
 			<visible>Skin.HasSetting(genrefanart) + Container.Content(episodes) + [Control.IsVisible(50) | Control.IsVisible(52) | Control.IsVisible(633) | Control.IsVisible(53) | Control.IsVisible(51)]</visible>
         </control>
 		<control type="image"> <!-- genre fanart -->
@@ -58,8 +48,6 @@
 			<fadetime>400</fadetime>
 			<include>Animation_MyVideoNav_Fanart</include>
 			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg_global)">Conditional</animation>
-			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg_global)">Conditional</animation>
-			<texture>extras/genrefanart/$INFO[ListItem.Label].jpg</texture>
 			<visible>Container.Content(genres)</visible>
 		</control>
 		<control type="multiimage">
@@ -72,8 +60,6 @@
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
 			<include>Animation_MyVideoNav_Fanart</include>
-			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg_global)">Conditional</animation>
-			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg_global)">Conditional</animation>
 			<visible>Skin.HasSetting(extrafanart) + ![Control.IsVisible(59) | Control.IsVisible(54) | Control.IsVisible(57) | Control.IsVisible(56) | Control.IsVisible(592) | Control.IsVisible(597)]</visible>
 		</control>
 		<control type="multiimage">
@@ -86,8 +72,6 @@
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
 			<include>Animation_MyVideoNav_Fanart</include>
-			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg_global)">Conditional</animation>
-			<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg_global)">Conditional</animation>
 			<visible>Skin.HasSetting(extrafanart) + Container.Content(episodes) + ![Control.IsVisible(59) | Control.IsVisible(54) | Control.IsVisible(57) | Control.IsVisible(56) | Control.IsVisible(592) | Control.IsVisible(597)]</visible>
 		</control>
 		<control type="image">
