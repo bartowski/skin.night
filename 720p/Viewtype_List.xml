@@ -162,10 +162,10 @@
 						<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 					</control>
 					<control type="image">
-						<posx>74</posx>
-						<posy>250</posy>
-						<width>100</width>
-						<height>76</height>
+						<posx>90</posx>
+						<posy>258</posy>
+						<width>80</width>
+						<height>60</height>
 						<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
 						<visible>Skin.HasSetting(tvoverlays) + !Container.Content(episodes) + !IsEmpty(ListItem.Overlay)</visible>
 					</control>
