@@ -72,11 +72,9 @@
 			<texture>music/Music_Visualization_Fanart.png</texture>
 			<visible>![Skin.HasSetting(DarkFullscreenMusicPlayback) + Skin.HasSetting(FullscreenJukebox)] + Player.ShowInfo</visible>
 		</control>
-<!-------------	
----------------	
+<!--
 Normal Fullscreen
----------------	
---------------->		
+-->
 	<control type="group">
 			<!--<visible>!Window.IsActive(120) + [!Player.ShowInfo | player.paused]</visible>-->
 			<visible>!Skin.HasSetting(FullscreenJukebox) + Skin.HasSetting(FanartNoVisualisation) + Player.ShowInfo</visible>
@@ -355,11 +353,9 @@ Normal Fullscreen
 			</control>
 		</control>
 	</control>
-<!-------------	
----------------	
+<!--
 Visualization Fullscreen
----------------	
---------------->	
+-->
 	
 	<control type="group">
 			<!--<visible>!Window.IsActive(120) + [!Player.ShowInfo | player.paused]</visible>-->
@@ -639,11 +635,9 @@ Visualization Fullscreen
 			</control>
 		</control>
 	</control>
-<!-------------	
----------------	
+<!--
 	JUKEBOX
----------------	
---------------->	
+-->
 	<control type="group">
 		<visible>Skin.HasSetting(FullscreenJukebox)</visible>
 			<control type="image">

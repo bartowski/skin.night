@@ -3,7 +3,6 @@ Update 9/2/2010
   -Redid the codec/drop frames video dialog
   -added Genre icons for Music section
   -3d music slides down a little more if Fanart option enabled 
-  -Ken Burns animated fanart option for Library views - it appears when the main option is checked
   -addon.xml has correct versions for dependencies
 
 Update 8/30/2010 

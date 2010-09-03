@@ -17,7 +17,7 @@
 	<!-- Settings labels -->
 	
 	<string id="31032">Deaktiviere Uhr/Datum</string><!-- GOOD -->
-	<string id="31033">Scroll-Effect für Handlung bei Filme & TV Serien</string>
+	<string id="31033">Scroll-Effect für Handlung bei Filme und TV Serien</string>
 	<string id="31034">Deaktiviere Media Flags</string>
 	<string id="31035">Aktiviere Movies 'Watched Overlay' Icon</string>
 	<string id="31036">Aktiviere TV Serien 'Watched Overlay' Icon</string>
@@ -120,17 +120,13 @@
 	<string id="31262">Setze Label</string>
 	<string id="31263">Script zum automatischen Logo Download</string>
 	<string id="31264">Starte Logo Script</string>
-	<string id="31265">Beim Starten des Scripts wird automatisch deine TV Serien Datenbank durchsucht und passendes Logo als Logo.png in den passenden Ordner gespeichert.[CR]*** Besuche www.lockstockmods.net für Infos & manuellen Download ***</string>
+	<string id="31265">Beim Starten des Scripts wird automatisch deine TV Serien Datenbank durchsucht und passendes Logo als Logo.png in den passenden Ordner gespeichert.[CR]*** Besuche www.lockstockmods.net für Infos und manuellen Download ***</string>
 	
 
 
 <!-- 
------------
------------
 These last blocks are from Confluence and you can 
 just copy the translations from Confluence to here
-------------
-------------
 -->
 	
 	<!-- Playlist Editor labels -->

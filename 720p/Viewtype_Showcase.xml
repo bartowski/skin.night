@@ -58,11 +58,9 @@
 			<include>Animation_SlideUpFadeOut</include>
 			<include>Animation_HiddenByInfo</include>
 		</control>
-<!--------
-----------
+<!--
 MOVIE SECTION
-----------
----------->	
+-->
 
 		<control type="wraplist" id="58">
 			<posx>-135</posx>
