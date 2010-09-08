@@ -1,3 +1,8 @@
+Update 9/7/2010 
+  -Added Global Ken Burns, Rotating/zoom, fanart option available underneath the main setting
+  -Filebrowser now a larger 2x2 grid instead of a smaller 3x3 grid
+  -Conditional Weather is set by an option underneath the main option
+
 Update 9/2/2010 
   -Resized the watched flag on many views, also added to "Wall" view
   -Redid the codec/drop frames video dialog

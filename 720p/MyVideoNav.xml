@@ -11,6 +11,7 @@
             <aspectratio>stretch</aspectratio> 
             <fadetime>400</fadetime> 
 			<include>Animation_MyVideoNav_Fanart</include> 
+			<include>global_kenburns_fanart</include>
             <visible>![IsEmpty(Fanart.Image) | Control.IsVisible(59) | Control.IsVisible(54) | Control.IsVisible(57) | Control.IsVisible(56) | Control.IsVisible(592) | Control.IsVisible(597)]</visible> 
         </control> 
         <control type="image"> 
@@ -19,6 +20,7 @@
             <texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture> 
             <aspectratio>stretch</aspectratio> 
             <include>Animation_MyVideoNav_Fanart</include> 
+			<include>global_kenburns_fanart</include>
 			 <visible>![Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart) | Control.IsVisible(54) | Control.IsVisible(59) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(592) | Control.IsVisible(597)]</visible> 
         </control> 
 		<control type="image">
@@ -26,6 +28,7 @@
 			<texture>backdrops/curtains.png</texture>
 			<aspectratio>stretch</aspectratio>
 			<include>Animation_MyVideoNav_Fanart</include>
+			<include>global_kenburns_fanart</include>
 			<visible>!Container.Content(movies) + !Control.IsVisible(54) + IsEmpty(ListItem.Title) + [IsEmpty(ListItem.Property(Fanart_Image)) + IsEmpty(Fanart.Image)]</visible>
 		</control>
 		<control type="image">
@@ -33,6 +36,7 @@
 			<texture>backgrounds/movies.jpg</texture>
 			<aspectratio>stretch</aspectratio>
 			<include>Animation_MyVideoNav_Fanart</include>
+			<include>global_kenburns_fanart</include>
 			<visible>Container.Content(movies) + !Control.IsVisible(54) + IsEmpty(ListItem.Title) + [IsEmpty(ListItem.Property(Fanart_Image)) + IsEmpty(Fanart.Image)]</visible>
 		</control>
 		<control type="image" id="8437"> 
@@ -41,12 +45,14 @@
             <texture background="true">$INFO[ListItem.path,,fanart.jpg]</texture> 
             <aspectratio>stretch</aspectratio> 
             <include>Animation_MyVideoNav_Fanart</include>
+			<include>global_kenburns_fanart</include>
 			<visible>Skin.HasSetting(genrefanart) + Container.Content(episodes) + [Control.IsVisible(50) | Control.IsVisible(52) | Control.IsVisible(633) | Control.IsVisible(53) | Control.IsVisible(51)]</visible>
         </control>
 		<control type="image"> <!-- genre fanart -->
 			<include>Dimensions_Fullscreen</include>
 			<fadetime>400</fadetime>
 			<include>Animation_MyVideoNav_Fanart</include>
+			<include>global_kenburns_fanart</include>
 			<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg_global)">Conditional</animation>
 			<visible>Container.Content(genres)</visible>
 		</control>
@@ -60,6 +66,7 @@
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
 			<include>Animation_MyVideoNav_Fanart</include>
+			<include>global_kenburns_fanart</include>
 			<visible>Skin.HasSetting(extrafanart) + ![Control.IsVisible(59) | Control.IsVisible(54) | Control.IsVisible(57) | Control.IsVisible(56) | Control.IsVisible(592) | Control.IsVisible(597)]</visible>
 		</control>
 		<control type="multiimage">
@@ -72,6 +79,7 @@
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
 			<include>Animation_MyVideoNav_Fanart</include>
+			<include>global_kenburns_fanart</include>
 			<visible>Skin.HasSetting(extrafanart) + Container.Content(episodes) + ![Control.IsVisible(59) | Control.IsVisible(54) | Control.IsVisible(57) | Control.IsVisible(56) | Control.IsVisible(592) | Control.IsVisible(597)]</visible>
 		</control>
 		<control type="image">
