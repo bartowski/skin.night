@@ -1,8 +1,8 @@
-<!--Alaska-->
+
 
 <includes>
 	<include name="Viewtype_MusicShowcase">
-		<!-- Browser sdfds-->
+		
 		
 		
 		<control type="image">
@@ -44,9 +44,6 @@
 			<texture>music/music_darkshowcase3.png</texture>
 		</control>
 
-<!--
-MUSIC SECTION
--->
 		<control type="wraplist" id="58">
 			<posx>-64</posx>
 			<posy>290</posy>
@@ -215,7 +212,7 @@ MUSIC SECTION
 			<animation effect="slide" start="0,0" end="0,-220" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(68)">Conditional</animation>
 		</control>
 		
-<!--NOW PLAYING -->
+
 	
 	</include>
 	

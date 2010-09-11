@@ -57,7 +57,6 @@
 		<include>Viewtype_Files</include><!-- 50 -->
 		<include>Viewtype_MusicShowcase</include><!-- 58 -->
 		<include>Viewtype_3daddon</include><!-- 56 -->
-		<!--<include>Viewtype_MusicWall</include> 53 -->
 		<include>Viewtype_Songs</include><!-- 52 -->
 		<include>Viewtype_Shelf</include><!-- 51 -->
 		<include>Viewtype_JukeBox</include><!-- 54 -->
@@ -90,7 +89,7 @@
 			<visible>!Skin.HasSetting(LockViews)</visible>
 			<include>WindowMenuVars</include>
 			<posy>680</posy>
-			<control type="button" id="2">
+			<control type="button" id="20">
 				<include>WindowMenuButton</include>
 				<label>$INFO[Container.ViewMode]</label>
 				<onclick>Container.NextViewMode</onclick>
