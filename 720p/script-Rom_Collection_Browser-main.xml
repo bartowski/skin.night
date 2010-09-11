@@ -28,6 +28,14 @@
 			<aspectratio>stretch</aspectratio>
 			<include>Animation_BackdropFade</include>
 		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>music/pic_back.png</texture>
+			<visible>Control.IsVisible(52)</visible>
+		</control>
 		
 		<!-- gamelist groups -->
 		<control type="group" id="200">
@@ -258,123 +266,91 @@
 			<!-- gamelist 52 -->
 			<control type="group">
 				<control type="group">
-					<posx>385</posx>
-					<posy>10</posy>
+					<posx>-20</posx>
+					<posy>0</posy>
 					<visible>Control.IsVisible(52)</visible>
-					<control type="image">				
-						<description>gamelist background image</description>
+										
+					<control type="wraplist" id="52">
+						<posx>-70</posx>
+						<posy>220</posy>
+						<height>515</height>
+						<width>1380</width>
+						<onleft>52</onleft>
+						<onright>52</onright>
+						<onup>900</onup>
+						<ondown>900</ondown>
+						<viewtype label="$LOCALIZE[31063]">list</viewtype>
+						<orientation>horizontal</orientation>
+						<focusposition>4</focusposition>
+						<scrolltime>300</scrolltime>
+						<preloaditems>2</preloaditems>
+						<include>Animation_ZoomInZoomOut</include>
+						<itemlayout width="150" height="245">
+						<control type="group">
 						<posx>0</posx>
-						<posy>0</posy>
-						<width>320</width>
-						<height>553</height>
-						<texture>script_rom_browser/rcb-ContentPanel.png</texture>
-						<colordiffuse>DDFFFFFF</colordiffuse>						
-					</control>
-					<control type="label">
-						<posx>5</posx>
-						<posy>15</posy>
-						<width>320</width>
-						<height>20</height>
-						<font>font16caps</font>
-						<aligny>center</aligny>
-						<textcolor>DDFFFFFF</textcolor>
-						<selectedcolor>FFe2ff43</selectedcolor>
-						<align>center</align>
-						<label>$INFO[ListItem.Property(console)]</label>
-						<visible>IsEmpty(ListItem.Property(mainview2)) + Control.IsVisible(52)</visible>
-					</control>					
-					<!-- mainview1 -->
-					<control type="image">
-						<description>mainview1</description>
-						<posx>5</posx>
-						<posy>15</posy>
-						<width>30</width>
-						<height>20</height>						
-						<texture>$INFO[ListItem.Property(mainview1)]</texture>						
-					</control>
-					<!-- mainview2 -->
-					<control type="image">
-						<description>mainview2</description>
-						<posx>160</posx>
-						<posy>15</posy>
-						<width>30</width>
-						<height>20</height>						
-						<texture>$INFO[ListItem.Property(mainview2)]</texture>						
-					</control>
-					<!-- mainview3 -->
-					<control type="image">
-						<description>mainview3</description>
-						<posx>285</posx>
-						<posy>15</posy>
-						<width>30</width>
-						<height>20</height>						
-						<texture>$INFO[ListItem.Property(mainview3)]</texture>						
-					</control>					
-					<control type="list" id="52">					
+						<posy>180</posy>
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>150</width>
+								<height>260</height>
+								<aspectratio align="center" aligny="bottom">keep</aspectratio>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<bordertexture border="5">confluence/button-nofocus.png</bordertexture>
+								<bordersize>5</bordersize>
+								<include>Animation_HiddenByInfo</include>
+							</control>
+							<control type="image">
+								<posx>0</posx>
+								<posy>260</posy>
+								<width>150</width>
+								<height>260</height>
+								<aspectratio align="center" aligny="top">keep</aspectratio>
+								<texture background="true" flippy="true">$INFO[ListItem.Icon]</texture>
+								<bordertexture border="5">confluence/button-nofocus.png</bordertexture>
+								<bordersize>5</bordersize>
+								<animation effect="fade" start="30" end="30" time="0" condition="true">Conditional</animation>
+								<include>Animation_HiddenByInfo</include>
+							</control>
+						</control>
+					</itemlayout>
+						
+					<focusedlayout width="250" height="500">
+						<control type="group">
 						<posx>0</posx>
-						<posy>45</posy>
-						<width>320</width>
-						<height>480</height>
-						<onleft>2201</onleft>
-						<onright>900</onright>
-						<onup>52</onup>
-						<ondown>52</ondown>					
-						<viewtype label="Info 2">list</viewtype>	
-						<scrolltime>100</scrolltime>
-						<itemlayout height="25" width="320">
+						<posy>140</posy>
 							<control type="image">
 								<posx>0</posx>
 								<posy>0</posy>
-								<width>320</width>
-								<height>25</height>
-								<texture border="0,1,0,1">script_rom_browser/rcb-MenuItemNF.png</texture>
-							</control>
-							<control type="label">
-								<posx>10</posx>
-								<posy>0</posy>
-								<width>320</width>
-								<height>25</height>
-								<font>font13</font>
-								<textcolor>grey</textcolor>
-								<selectedcolor>selected</selectedcolor>
-								<align>left</align>
-								<aligny>center</aligny>
-								<label>$INFO[ListItem.Label]</label>
-							</control>									
-						</itemlayout>
-						<focusedlayout height="25" width="320">
-							<control type="image">
-								<posx>0</posx>
-								<posy>0</posy>
-								<width>320</width>
-								<height>26</height>
-								<texture border="0,1,0,1">script_rom_browser/rcb-MenuItemNF.png</texture>
-								<visible>!Control.HasFocus(52)</visible>
-								<include>VisibleFadeEffect</include>
+								<width>250</width>
+								<height>300</height>
+								<aspectratio align="center" aligny="bottom">keep</aspectratio>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<bordertexture border="5">confluence/pic_border.png</bordertexture>
+								<bordersize>5</bordersize>
+								<animation type="Focus" reversible="false">
+									<effect type="zoom" center="80,238" start="81" end="100" time="400" tween="back" easing="out" />
+								</animation>
+								<include>Animation_HiddenByInfo</include>
 							</control>
 							<control type="image">
 								<posx>0</posx>
-								<posy>0</posy>
-								<width>320</width>
-								<height>26</height>
-								<texture border="0,1,0,1">script_rom_browser/rcb-MenuItemFO.png</texture>
-								<visible>Control.HasFocus(52)</visible>
-								<include>VisibleFadeEffect</include>
+								<posy>300</posy>
+								<width>250</width>
+								<height>300</height>
+								<aspectratio align="center" aligny="top">keep</aspectratio>
+								<texture background="true" flippy="true">$INFO[ListItem.Icon]</texture>
+								<bordertexture border="5">confluence/pic_border.png</bordertexture>
+								<bordersize>5</bordersize>
+								<animation type="Focus" reversible="false">
+									<effect type="zoom" center="80,238" start="81" end="100" time="400" tween="back" easing="out" />
+								</animation>
+								<animation effect="fade" start="30" end="30" time="0" condition="true">Conditional</animation>
+								<include>Animation_HiddenByInfo</include>
 							</control>
-							<control type="label">
-								<posx>10</posx>
-								<posy>0</posy>
-								<width>320</width>
-								<height>25</height>
-								<font>font13</font>
-								<textcolor>white</textcolor>
-								<selectedcolor>selected</selectedcolor>
-								<align>left</align>
-								<aligny>center</aligny>
-								<label>$INFO[ListItem.Label]</label>
-							</control>						
-						</focusedlayout>
-					</control>												
+						</control>
+					</focusedlayout>
+				</control>											
 				</control>								
 				
 				<control type="group" id="350">
@@ -382,168 +358,6 @@
 					<posx>15</posx>
 					<posy>10</posy>
 					<visible>Control.IsVisible(52)</visible>
-					<control type="image">				
-						<description>gamedesc background image</description>
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>330</width>
-						<height>553</height>
-						<texture>script_rom_browser/rcb-ContentPanel.png</texture>
-						<colordiffuse>DDFFFFFF</colordiffuse>						
-					</control>
-					<control type="label">
-						<posx>5</posx>
-						<posy>15</posy>
-						<width>320</width>
-						<height>20</height>
-						<font>font16caps</font>
-						<aligny>center</aligny>
-						<textcolor>DDFFFFFF</textcolor>
-						<selectedcolor>FFe2ff43</selectedcolor>
-						<align>center</align>
-						<label>$INFO[ListItem.Label]</label>						
-					</control>
-					<!-- mainviewgameinfobig -->
-					<control type="image" id="2001">
-						<description>mainviewgameinfobig</description>
-						<posx>15</posx>
-						<posy>45</posy>
-						<width>300</width>
-						<height>220</height>										
-						<visible>!Player.HasVideo</visible>
-						<texture>$INFO[ListItem.Property(mainviewgameinfobig)]</texture>
-					</control>					
-					<control type="videowindow" id="2301">
-						<description>video control</description>
-						<posx>15</posx>
-						<posy>45</posy>
-						<width>300</width>
-						<height>220</height>
-						<visible>!IsEmpty(ListItem.Property(mainviewvideosizebig))</visible>
-					</control>
-					
-					<control type="button">
-						<description>click absorber</description>
-						<posx>15</posx>
-						<posy>45</posy>
-						<width>300</width>
-						<height>220</height>
-						<texturefocus></texturefocus>
-						<texturenofocus></texturenofocus>
-						<visible>!IsEmpty(ListItem.Property(mainviewvideosizebig))</visible>
-					</control>					
-					<control type="button" id="2901"> 
-						<description>Play Fullscreen</description>
-						<posx>90</posx>
-						<posy>270</posy>
-						<width>150</width>
-						<height>20</height>
-						<visible>!IsEmpty(ListItem.Property(mainviewvideofullscreen))</visible>
-						<colordiffuse>DDFFFFFF</colordiffuse>
-						<texturefocus>script_rom_browser/rcb-button-focus.png</texturefocus>
-						<texturenofocus>script_rom_browser/rcb-button-nofocus.png</texturenofocus>
-						<label>Play Video Fullscreen</label>
-						<font>font12</font>						
-						<textcolor>DDFFFFFF</textcolor>
-						<disabledcolor>80FFFFFF</disabledcolor>
-						<align>center</align>
-						<aligny>center</aligny>						
-						<onup>500</onup>
-						<ondown>3000</ondown>
-						<onleft>500</onleft>
-						<onright>2200</onright>
-					</control>
-					
-					<!-- mainviewgameinfoupperleft -->
-					<control type="image" id="2401">
-						<description>mainviewgameinfoupperleft</description>
-						<posx>15</posx>
-						<posy>45</posy>
-						<width>150</width>
-						<height>110</height>						
-						<texture>$INFO[ListItem.Property(mainviewgameinfoupperleft)]</texture>						
-					</control>
-					<!-- mainviewgameinfoupperright -->
-					<control type="image" id="2501">
-						<description>mainviewgameinfoupperright</description>
-						<posx>165</posx>
-						<posy>45</posy>
-						<width>150</width>
-						<height>110</height>						
-						<texture>$INFO[ListItem.Property(mainviewgameinfoupperright)]</texture>						
-					</control>
-					<!-- mainviewgameinfolowerleft -->
-					<control type="image" id="2601">
-						<description>mainviewgameinfolowerleft</description>
-						<posx>15</posx>
-						<posy>155</posy>
-						<width>150</width>
-						<height>110</height>						
-						<texture>$INFO[ListItem.Property(mainviewgameinfolowerleft)]</texture>						
-					</control>
-					<!-- mainviewgameinfolowerright -->
-					<control type="image" id="2701">
-						<description>mainviewgameinfolowerright</description>
-						<posx>165</posx>
-						<posy>155</posy>
-						<width>150</width>
-						<height>110</height>
-						<visible>!Player.HasVideo</visible>
-						<texture>$INFO[ListItem.Property(mainviewgameinfolowerright)]</texture>						
-					</control>
-					<!-- mainviewvideowindowsmall -->
-					<control type="videowindow" id="2801">
-						<description>video control</description>
-						<posx>165</posx>
-						<posy>155</posy>
-						<width>150</width>
-						<height>110</height>												
-						<visible>!IsEmpty(ListItem.Property(mainviewvideosizesmall))</visible>
-					</control>
-					<control type="button">
-						<description>video absorber</description>
-						<posx>165</posx>
-						<posy>155</posy>
-						<width>150</width>
-						<height>110</height>
-						<texturefocus></texturefocus>
-						<texturenofocus></texturenofocus>
-						<visible>!IsEmpty(ListItem.Property(mainviewvideosizesmall))</visible>
-					</control>										
-					
-					<control type="textbox" id="2101">
-						<description>Consoles</description>
-						<posx>15</posx>
-						<posy>300</posy>
-						<width>280</width>
-						<height>220</height>			
-						<pagecontrol>2201</pagecontrol>			
-						<textcolor>DDFFFFFF</textcolor>
-						<align>justify</align>
-						<font>font12</font>
-						<label>$INFO[ListItem.Property(plot)]</label>
-						<!--<autoscroll delay="3000" time="1000" repeat="10000">!Control.HasFocus(2201)</autoscroll>-->
-					</control>
-					<control type="scrollbar" id="2201">
-						<description>ConsoleDesc Scrollbar</description>
-						<posx>310</posx>
-						<posy>300</posy>
-						<width>5</width>
-						<height>220</height>
-						<visible>Control.IsVisible(2101)</visible>
-						<texturesliderbackground>script_rom_browser/scrollbar-bg.png</texturesliderbackground>
-						<texturesliderbar>script_rom_browser/scrollbar-bar.png</texturesliderbar>
-						<texturesliderbarfocus>script_rom_browser/scrollbar-barFocus.png</texturesliderbarfocus>
-						<textureslidernib>script_rom_browser/scrollbar-nib.png</textureslidernib>
-						<textureslidernibfocus>script_rom_browser/scrollbar-nibFocus.png</textureslidernibfocus>
-						<pulseonselect></pulseonselect>
-						<orientation>vertical</orientation>
-						<showonepage>false</showonepage>
-						<onup>2201</onup>
-						<ondown>2201</ondown>
-						<onleft>2901</onleft>
-						<onright>52</onright>
-					</control>			
 				</control>				
 			</control>
 			
