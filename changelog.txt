@@ -1,3 +1,10 @@
+Update 9/14/2010 
+  -Fixed issue with scrollbar not visible when only a few items in a list
+  -Fixed some "Movieset" label issues
+  -added tv.png, code was always there just not the image
+  -Added support for RCB script, minus the info screen
+  
+
 Update 9/10/2010 
   -Fix a terrible error in Music Library where in Song level could only choose 2 views not the 4 available
   -Minor spacing changes to "Song" view, mostly fix title and plot overlap issues
