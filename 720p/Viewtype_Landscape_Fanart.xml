@@ -168,9 +168,9 @@
 		<control type="image"> 
 			<posx>0</posx>
 			<posy>0</posy>   
-			<width>413</width>     
-			<height>215</height> 
-			<texture>tv-landscape/land_fanart_logo_back.png</texture>
+			<width>1280</width>     
+			<height>481</height> 
+			<texture>tv-landscape/landscape_fanart_top.png</texture>
 		</control>
 		<control type="image" id="37015">
 			<posx>20</posx>
@@ -200,6 +200,28 @@
 			<textcolor>mainblue</textcolor>
 			<label>[B]$INFO[ListItem.TVShowTitle][/B]</label>
 			<visible>IsEmpty(Control.GetLabel(37015)) + IsEmpty(Control.GetLabel(39015))</visible>
+		</control>
+		<control type="label">
+			<posx>20</posx>
+			<posy>90</posy>
+			<width>230</width>
+			<height>89</height>
+			<align>center</align>
+			<font>Font_Bartowski_Movies_Duration</font>
+			<textcolor>white</textcolor>
+			<label>[B]$INFO[ListItem.Label][/B]</label>
+			<visible>Container.Content(seasons) + !IsEmpty(ListItem.Title)</visible>
+		</control>
+		<control type="label">
+			<posx>20</posx>
+			<posy>90</posy>
+			<width>230</width>
+			<height>89</height>
+			<align>center</align>
+			<font>Font_Bartowski_Movies_Duration</font>
+			<textcolor>white</textcolor>
+			<label>[B]$LOCALIZE[20373] $INFO[ListItem.Season][/B]</label>
+			<visible>Container.Content(episodes) + !IsEmpty(ListItem.Title)</visible>
 		</control>
 	</control>
 	
@@ -324,7 +346,7 @@
 		<textureslidernibfocus>ScrollBarV_Nib_Focus1.png</textureslidernibfocus>
 		<onup>633</onup>
 		<ondown>633</ondown>
-		<showonepage>false</showonepage>
+		<showonepage>true</showonepage>
 		<orientation>horizontal</orientation>
 		<include>Animation_CommonFade</include>
 		<animation effect="slide" start="0,0" end="0,-220" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(6330)">Conditional</animation>

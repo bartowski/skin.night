@@ -273,6 +273,13 @@
 					<include>WindowMenuButton</include>
 					<label>103</label>
 				</control>
+				<control type="togglebutton" id="4">
+					<include>WindowMenuButton</include>
+					<!-- LOC -->
+					<label>$LOCALIZE[584]</label>
+					<!-- LOC -->
+					<altlabel>$LOCALIZE[585]</altlabel>				
+				</control>	
 				<control type="togglebutton" id="14">
 					<include>WindowMenuButton</include>
 					<!-- LOC -->
@@ -280,10 +287,6 @@
 					<!-- LOC -->
 					<altlabel>$LOCALIZE[31097]</altlabel>				
 				</control>
-				<control type="button" id="8">
-					<include>WindowMenuButton</include>
-					<label>137</label>
-				</control>	
 				<control type="button" id="21">
 					<include>WindowMenuButton</include>
 					<label>744</label>
@@ -328,18 +331,19 @@
 			<control type="label">
 				<include>WindowMenuLabel</include>
 				<!-- LOC -->
-				<label>$LOCALIZE[31090]</label>
+				<label>$LOCALIZE[16102]</label>
+			</control>
+			<control type="label">
+				<include>WindowMenuLabel</include>
+				<!-- LOC -->
+				<label>$LOCALIZE[369]</label>
 			</control>
 			<control type="label">
 				<include>WindowMenuLabel</include>
 				<!-- LOC -->
 				<label>$LOCALIZE[31098]</label>
 			</control>
-			<control type="label">
-				<include>WindowMenuLabel</include>
-				<!-- LOC -->
-				<label>$LOCALIZE[369]</label>
-			</control>	
+				
 			<control type="label">
 				<include>WindowMenuLabel</include>
 				<!-- LOC -->

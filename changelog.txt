@@ -1,8 +1,11 @@
 Update 9/14/2010 
   -Fixed issue with scrollbar not visible when only a few items in a list
   -Fixed some "Movieset" label issues
-  -added tv.png, code was always there just not the image
-  -Added support for RCB script, minus the info screen
+  -Added tv.png, code was always there just not the image
+  -Added support for RCB script, minus the info screen, not 100% but close
+  -Added Season label to "Fanart" view
+  -Added Ascending/Descending sort option to View Options
+  -*Trail Balloon* New Volume Display
   
 
 Update 9/10/2010 
