@@ -345,7 +345,7 @@
 					<width>390</width>
 					<height>24</height>
 					<font>Font_Bartowski_Showcase_Right_Main</font>
-					<textcolor>ff15efd9</textcolor>
+					<textcolor>mainbluedarker</textcolor>
 					<label>$LOCALIZE[20339]</label>
 				</control>
 				<control type="label"><!--Director-->
@@ -363,7 +363,7 @@
 					<width>390</width>
 					<height>10</height>
 					<font>Font_Bartowski_Showcase_Right_Main</font>
-					<textcolor>ff15efd9</textcolor>
+					<textcolor>mainbluedarker</textcolor>
 					<label></label>
 				</control>
 				<control type="label"><!--Writer-->
@@ -372,7 +372,7 @@
 					<width>390</width>
 					<height>24</height>
 					<font>Font_Bartowski_Showcase_Right_Main</font>
-					<textcolor>ff15efd9</textcolor>
+					<textcolor>mainbluedarker</textcolor>
 					<label>$LOCALIZE[20417]</label>
 				</control>
 				<control type="label"><!--Writer-->
@@ -390,7 +390,7 @@
 					<width>390</width>
 					<height>10</height>
 					<font>Font_Bartowski_Showcase_Right_Main</font>
-					<textcolor>ff15efd9</textcolor>
+					<textcolor>mainbluedarker</textcolor>
 					<label></label>
 				</control>
 				<control type="label"><!--Genre-->
@@ -399,7 +399,7 @@
 					<width>390</width>
 					<height>24</height>
 					<font>Font_Bartowski_Showcase_Right_Main</font>
-					<textcolor>ff15efd9</textcolor>
+					<textcolor>mainbluedarker</textcolor>
 					<label>$LOCALIZE[515]</label>
 				</control>
 				<control type="label"><!--Genre-->
@@ -417,7 +417,7 @@
 					<width>390</width>
 					<height>10</height>
 					<font>Font_Bartowski_Showcase_Right_Main</font>
-					<textcolor>ff15efd9</textcolor>
+					<textcolor>mainbluedarker</textcolor>
 					<label></label>
 				</control>
 				<control type="label"><!--Rating-->
@@ -426,7 +426,7 @@
 					<width>390</width>
 					<height>24</height>
 					<font>Font_Bartowski_Showcase_Right_Main</font>
-					<textcolor>ff15efd9</textcolor>
+					<textcolor>mainbluedarker</textcolor>
 					<label>$LOCALIZE[563]</label>
 				</control>
 				<control type="label"><!--Rating-->
@@ -444,7 +444,7 @@
 					<width>390</width>
 					<height>10</height>
 					<font>Font_Bartowski_Showcase_Right_Main</font>
-					<textcolor>ff15efd9</textcolor>
+					<textcolor>mainbluedarker</textcolor>
 					<label></label>
 				</control>
 				<control type="label"><!--Studio-->
@@ -453,7 +453,7 @@
 					<width>390</width>
 					<height>24</height>
 					<font>Font_Bartowski_Showcase_Right_Main</font>
-					<textcolor>ff15efd9</textcolor>
+					<textcolor>mainbluedarker</textcolor>
 					<label>$LOCALIZE[572]</label>
 				</control>
 				<control type="label"><!--Rating-->
