@@ -209,17 +209,6 @@
 			<align>center</align>
 			<font>Font_Bartowski_Movies_Duration</font>
 			<textcolor>white</textcolor>
-			<label>[B]$INFO[ListItem.Label][/B]</label>
-			<visible>Container.Content(seasons) + !IsEmpty(ListItem.Title)</visible>
-		</control>
-		<control type="label">
-			<posx>20</posx>
-			<posy>90</posy>
-			<width>230</width>
-			<height>89</height>
-			<align>center</align>
-			<font>Font_Bartowski_Movies_Duration</font>
-			<textcolor>white</textcolor>
 			<label>[B]$LOCALIZE[20373] $INFO[ListItem.Season][/B]</label>
 			<visible>Container.Content(episodes) + !IsEmpty(ListItem.Title)</visible>
 		</control>

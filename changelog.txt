@@ -1,3 +1,9 @@
+Update 9/18/2010 
+  -Fixed a bunch of non-translatable labels
+  -Fixed kiosk mode still being able to select buttons
+  -Added the start of a Polish translation
+  -Added a 'Recently Added' specific view
+
 Update 9/14/2010 
   -Fixed issue with scrollbar not visible when only a few items in a list
   -Fixed some "Movieset" label issues

@@ -74,7 +74,10 @@
 		<include>Global_Time_LowerLeft_music</include>
 		
 		<include>7000_has_focus</include>
+		
+		
 	<control type="group">
+		<visible>!Skin.HasSetting(LockViews)</visible>
 		<include>Animation_CommonFade_ViewOptions</include>	
 		<control type="image"><!-- Floor -->
 			<posx>0</posx>
@@ -135,8 +138,8 @@
 			</control>	
 			<control type="togglebutton" id="4">
 				<include>WindowMenuButton</include>
-				<label>ascending</label>
-				<altlabel>descending</altlabel>
+				<label>$LOCALIZE[584]</label>
+				<altlabel>$LOCALIZE[585]</altlabel>
 			</control>
 		</control>
 

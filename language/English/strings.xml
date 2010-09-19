@@ -218,6 +218,24 @@ just copy the translations from Confluence to here
   <!-- NEW 9/7-->
   <string id="31283">Use on Library Music and Movie/TV Views</string>
   
+  
+  <!-- NEW 9/17-->
+  <string id="31284">Remove Info</string>
+  <string id="31285">Show Info</string>
+  <string id="31286">On Down Plot</string>
+  <string id="31287">Auto Plot</string>
+  <string id="31288">Shelf</string>
+  <string id="31289">Set Label</string>
+  <string id="31290">Set Favorite</string>
+  <string id="31291">Set Playlist</string>
+  <string id="31292">Custom Movies Submenus</string>
+  <string id="31293">Set Custom Submenu Favorite</string>
+  <string id="31294">Set Custom Submenu Playlist</string>
+  <string id="31295">Custom TV Show Submenus</string>
+  <string id="31296">Newest</string>
+  
+  
+  
   </strings>
 
   

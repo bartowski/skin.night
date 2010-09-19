@@ -59,7 +59,8 @@
 			<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
 		</control>
 		
-		<control type="group">
+	<control type="group">
+		<visible>!Skin.HasSetting(LockViews)</visible>
 		<include>Animation_CommonFade_ViewOptions</include>	
 		<control type="image"><!-- Floor -->
 			<posx>0</posx>

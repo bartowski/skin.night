@@ -483,7 +483,7 @@
 				<aligny>center</aligny>
 				<font>Font_Bartowski_Showcase_Right_Under</font>
 				<textcolor>ffffffff</textcolor>
-				<label>[B][COLOR=mainblue]Director[/COLOR][/B] - $INFO[ListItem.Director]</label>
+				<label>[B][COLOR=mainblue]$LOCALIZE[20339][/COLOR][/B] - $INFO[ListItem.Director]</label>
 				<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(55).OnNext | Container(55).OnPrevious]">WindowOpen</animation>
 			</control>
 			<control type="label">
@@ -492,7 +492,7 @@
 				<aligny>center</aligny>
 				<font>Font_Bartowski_Showcase_Right_Under</font>
 				<textcolor>ffffffff</textcolor>
-				<label>[B][COLOR=mainblue]Writer[/COLOR][/B] - $INFO[ListItem.Writer]</label>
+				<label>[B][COLOR=mainblue]$LOCALIZE[515][/COLOR][/B] - $INFO[ListItem.Writer]</label>
 				<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(55).OnNext | Container(55).OnPrevious]">WindowOpen</animation>
 			</control>
 			<control type="label">
@@ -501,7 +501,7 @@
 				<aligny>center</aligny>
 				<font>Font_Bartowski_Showcase_Right_Under</font>
 				<textcolor>ffffffff</textcolor>
-				<label>[B][COLOR=mainblue]Genre[/COLOR][/B] - $INFO[ListItem.Genre]</label>
+				<label>[B][COLOR=mainblue]$LOCALIZE[515][/COLOR][/B] - $INFO[ListItem.Genre]</label>
 				<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(55).OnNext | Container(55).OnPrevious]">WindowOpen</animation>
 			</control>
 			<control type="label">
@@ -510,7 +510,7 @@
 				<aligny>center</aligny>
 				<font>Font_Bartowski_Showcase_Right_Under</font>
 				<textcolor>ffffffff</textcolor>
-				<label>[B][COLOR=mainblue]Studio[/COLOR][/B] - $INFO[ListItem.Studio]</label>
+				<label>[B][COLOR=mainblue]$LOCALIZE[572][/COLOR][/B] - $INFO[ListItem.Studio]</label>
 				<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(55).OnNext | Container(55).OnPrevious]">WindowOpen</animation>
 			</control>
 			<control type="label">
@@ -519,7 +519,7 @@
 				<aligny>center</aligny>
 				<font>Font_Bartowski_Showcase_Right_Under</font>
 				<textcolor>ffffffff</textcolor>
-				<label>[B][COLOR=mainblue]Rating[/COLOR][/B] - $INFO[ListItem.Rating]</label>
+				<label>[B][COLOR=mainblue]$LOCALIZE[563][/COLOR][/B] - $INFO[ListItem.Rating]</label>
 				<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(55).OnNext | Container(55).OnPrevious]">WindowOpen</animation>
 			</control>
 	</control>

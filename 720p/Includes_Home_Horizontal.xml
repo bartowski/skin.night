@@ -203,7 +203,7 @@
 				<item id="14">
 					<description>weather</description>
 					<label>8</label>
-					<icon>special://skin/backgrounds/weather.jpg</icon>
+					<icon>backgrounds/weather.jpg</icon>
 					<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</thumb>				
 					<onclick>xbmc.activatewindow(2600)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoWeatherButton) + !Skin.HasSetting(conditions_weather_backdrop)</visible>
@@ -211,8 +211,8 @@
 				<item id="8">
 					<description>weather</description>
 					<label>8</label>
-					<icon>special://skin/backgrounds/weather.jpg</icon>
-					<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]$INFO[Weather.FanartCode]</thumb>				
+					<icon>backgrounds/weather.jpg</icon>
+					<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder1)]$INFO[Weather.FanartCode]</thumb>				
 					<onclick>xbmc.activatewindow(2600)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoWeatherButton) + Skin.HasSetting(conditions_weather_backdrop)</visible>
 				</item>
