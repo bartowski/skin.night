@@ -1294,7 +1294,7 @@
 			<width>1280</width>     
 			<height>192</height> 
 			<texture>common/rss_back.png</texture>
-			<colordiffuse>ff15efd9</colordiffuse>
+			<colordiffuse>mainbluedarker</colordiffuse>
 			<visible>system.getbool(lookandfeel.enablerssfeeds) + Window.IsActive(home)</visible>
 		</control>
 		<control type="rss" id="1">
