@@ -3,6 +3,7 @@ Update 9/21/2010
   -Fixed Movie "Genre fanart" code
   -Re-introducing the recently added on TV level, Landscape/Fanart/16x9 views
   -Added some more Music Genre Covers
+  -Bunch of little stuff
 
 Update 9/18/2010 
   -Fixed a bunch of non-translatable labels

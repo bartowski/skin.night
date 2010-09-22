@@ -343,7 +343,7 @@
 	<control type="grouplist" id="3448">
 	<posx>800</posx>
 	<posy>600</posy>
-	<onup>6330</onup>
+	<onup>7000</onup>
 	<ondown>633</ondown>
 	<orientation>horizontal</orientation>
 	<include>Animation_CommonFade</include>
