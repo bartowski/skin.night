@@ -2767,7 +2767,7 @@
 							
 							<control type="button" id="8201">
 								<description>Menu Movies Sub Custom8 Label</description>
-								<label>- $LOCALIZE[31289]</label>
+								<label>- $LOCALIZE[31262]</label>
 								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom1_Label)][/COLOR]</label2>
 								<include>skin_settings_button</include>
 								<onclick>Skin.SetString(Menu_Custom1_Label)</onclick>
@@ -2795,7 +2795,7 @@
 							
 							<control type="button" id="8203">
 								<description>Menu Movies Sub Custom8 Label</description>
-								<label>- $LOCALIZE[31289]</label>
+								<label>- $LOCALIZE[31262]</label>
 								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom2_Label)][/COLOR]</label2>
 								<include>skin_settings_button</include>
 								<onclick>Skin.SetString(Menu_Custom2_Label)</onclick>
@@ -3051,7 +3051,7 @@
 							</control>
 							<control type="button" id="8221">
 								<description>Menu Movies Sub Custom11 Label</description>
-								<label>- $LOCALIZE[31289]</label>
+								<label>- $LOCALIZE[31262]</label>
 								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom11_Label)][/COLOR]</label2>
 								<include>skin_settings_button</include>
 								<onclick>Skin.SetString(Menu_Custom11_Label)</onclick>
@@ -3115,7 +3115,7 @@
 							</control>
 							<control type="button" id="8225">
 								<description>Menu Movies Sub Custom13 Label</description>
-								<label>- $LOCALIZE[31289]</label>
+								<label>- $LOCALIZE[31262]</label>
 								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom13_Label)][/COLOR]</label2>
 								<include>skin_settings_button</include>
 								<onclick>Skin.SetString(Menu_Custom13_Label)</onclick>
@@ -3179,7 +3179,7 @@
 							</control>
 							<control type="button" id="8229">
 								<description>Menu Movies Sub Custom15 Label</description>
-								<label>- $LOCALIZE[31289]</label>
+								<label>- $LOCALIZE[31262]</label>
 								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom15_Label)][/COLOR]</label2>
 								<include>skin_settings_button</include>
 								<onclick>Skin.SetString(Menu_Custom15_Label)</onclick>
