@@ -22,6 +22,7 @@
 			<movement>2</movement>
 			<include>Animation_ZoomInZoomOut</include>
 			<include>Animation_HiddenByInfo</include>
+			<visible>stringcompare(container.folderpath,videodb://5/) | Window.IsActive(videoplaylist)</visible>
 			<itemlayout width="633" height="172">
 				<control type="group">
 					<posx>30</posx>
@@ -82,7 +83,7 @@
 							<aligny>center</aligny>
 							<font>Font_EpisodePlot2</font>
 							<textcolor>ListTrackF</textcolor>
-							<label>Season $INFO[ListItem.Season]/Episode $INFO[ListItem.Episode] - Aired $INFO[ListItem.Date]</label>
+							<label>$LOCALIZE[20373] $INFO[ListItem.Season]/$LOCALIZE[20359] $INFO[ListItem.Episode] - Aired $INFO[ListItem.Date]</label>
 							<visible>!IsEmpty(ListItem.Title)</visible>
 						</control>
 						<control type="textbox"><!-- Plot and TV -->
@@ -164,7 +165,7 @@
 							<aligny>center</aligny>
 							<font>Font_EpisodePlot2</font>
 							<textcolor>ListTrackF</textcolor>
-							<label>Season $INFO[ListItem.Season]/Episode $INFO[ListItem.Episode] - Aired $INFO[ListItem.Date]</label>
+							<label>$LOCALIZE[20373] $INFO[ListItem.Season]/$LOCALIZE[20359] $INFO[ListItem.Episode] - Aired $INFO[ListItem.Date]</label>
 							<visible>!IsEmpty(ListItem.Title)</visible>
 						</control>
 						<control type="textbox"><!-- Plot and TV -->
