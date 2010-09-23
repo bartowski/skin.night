@@ -264,11 +264,11 @@
 				<control type="togglebutton" id="34">
 					<description>Toggle MoviesFanart</description>
 					<include>WindowMenuButton</include>
-					<label>Turn Off</label>
-					<altlabel>Turn On</altlabel>
+					<label>31299</label>
+					<altlabel>31300</altlabel>
 					<onclick>Skin.ToggleSetting(no_new_recent_info)</onclick>
 					<selected>Skin.HasSetting(no_new_recent_info)</selected>
-					<visible>[Control.IsVisible(52) | Control.IsVisible(59)] + Container.Content(tvshows)</visible>	
+					<visible>[Control.IsVisible(52) | Control.IsVisible(59) | Control.IsVisible(633)] + Container.Content(tvshows)</visible>	
 				</control>
 				
 				<control type="button" id="3">
@@ -317,8 +317,8 @@
 			</control>
 			<control type="label">
 				<include>WindowMenuLabel</include>
-				<label>Recently Added</label>
-				<visible>[Control.IsVisible(52) | Control.IsVisible(59)] + Container.Content(tvshows)</visible>
+				<label>31081</label>
+				<visible>[Control.IsVisible(52) | Control.IsVisible(59) | Control.IsVisible(633)] + Container.Content(tvshows)</visible>
 			</control>
 			<control type="label">
 				<include>WindowMenuLabel</include>
@@ -333,12 +333,12 @@
 			<control type="label">
 				<include>WindowMenuLabel</include>
 				<!-- LOC -->
-				<label>$LOCALIZE[16102]</label>
+				<label>31090</label>
 			</control>
 			<control type="label">
 				<include>WindowMenuLabel</include>
 				<!-- LOC -->
-				<label>$LOCALIZE[369]</label>
+				<label>$LOCALIZE[31093]</label>
 			</control>
 			<control type="label">
 				<include>WindowMenuLabel</include>

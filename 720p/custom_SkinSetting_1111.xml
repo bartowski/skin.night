@@ -110,7 +110,7 @@
 						<onclick>-</onclick>
 					</item>
 					<item id="7">
-						<label>Custom Home</label>
+						<label>31501</label>
 						<label2>33063</label2>
 						<onclick>-</onclick>
 					</item>
@@ -460,7 +460,7 @@
 						<focusedcolor>white</focusedcolor>
 						<align>left</align>
 						<aligny>top</aligny>
-						<label>Set Conditional Weather Folder - [COLOR=selected]$INFO[Skin.String(Home_Custom_Back_Weather_Folder1)][/COLOR]</label>
+						<label>$LOCALIZE[31504] - [COLOR=selected]$INFO[Skin.String(Home_Custom_Back_Weather_Folder1)][/COLOR]</label>
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
 						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 						<onclick>Skin.SetPath(Home_Custom_Back_Weather_Folder1)</onclick>
@@ -2194,7 +2194,7 @@
 							<width>860</width>
 							<height>45</height>
 							<font>Font_KeyboardKeys</font>
-							<label>Add Submenu of Custom Scripts on Home</label>
+							<label>31503</label>
 							<textcolor>mainblue</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -2767,7 +2767,7 @@
 							
 							<control type="button" id="8201">
 								<description>Menu Movies Sub Custom8 Label</description>
-								<label>- $LOCALIZE[31289]</label>
+								<label>- $LOCALIZE[31262]</label>
 								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom1_Label)][/COLOR]</label2>
 								<include>skin_settings_button</include>
 								<onclick>Skin.SetString(Menu_Custom1_Label)</onclick>
@@ -2795,7 +2795,7 @@
 							
 							<control type="button" id="8203">
 								<description>Menu Movies Sub Custom8 Label</description>
-								<label>- $LOCALIZE[31289]</label>
+								<label>- $LOCALIZE[31262]</label>
 								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom2_Label)][/COLOR]</label2>
 								<include>skin_settings_button</include>
 								<onclick>Skin.SetString(Menu_Custom2_Label)</onclick>
@@ -3051,7 +3051,7 @@
 							</control>
 							<control type="button" id="8221">
 								<description>Menu Movies Sub Custom11 Label</description>
-								<label>- $LOCALIZE[31289]</label>
+								<label>- $LOCALIZE[31262]</label>
 								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom11_Label)][/COLOR]</label2>
 								<include>skin_settings_button</include>
 								<onclick>Skin.SetString(Menu_Custom11_Label)</onclick>
@@ -3115,7 +3115,7 @@
 							</control>
 							<control type="button" id="8225">
 								<description>Menu Movies Sub Custom13 Label</description>
-								<label>- $LOCALIZE[31289]</label>
+								<label>- $LOCALIZE[31262]</label>
 								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom13_Label)][/COLOR]</label2>
 								<include>skin_settings_button</include>
 								<onclick>Skin.SetString(Menu_Custom13_Label)</onclick>
@@ -3161,7 +3161,7 @@
 								<width>860</width>
 								<height>45</height>
 								<font>font13caps</font>
-								<label>Custom Music Submenus</label>
+								<label>31502</label>
 								<textcolor>mainblue</textcolor>
 								<shadowcolor>black</shadowcolor>
 								<align>left</align>
@@ -3179,7 +3179,7 @@
 							</control>
 							<control type="button" id="8229">
 								<description>Menu Movies Sub Custom15 Label</description>
-								<label>- $LOCALIZE[31289]</label>
+								<label>- $LOCALIZE[31262]</label>
 								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom15_Label)][/COLOR]</label2>
 								<include>skin_settings_button</include>
 								<onclick>Skin.SetString(Menu_Custom15_Label)</onclick>
