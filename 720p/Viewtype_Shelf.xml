@@ -6,7 +6,7 @@
 
 	
 		<control type="panel" id="51">
-			<viewtype label="Shelf">icon</viewtype>
+			<viewtype label="31288">icon</viewtype>
 			<posx>50</posx>
 			<posy>20</posy>
 			<width>1280</width>
