@@ -299,7 +299,7 @@
 		<aligny>center</aligny>
 		<font>Font_Bartowski_Title_TVShow</font>
 		<textcolor>ffffffff</textcolor>
-		<label>MovieSet</label>
+		<label>31508</label>
 		<visible>Control.IsVisible(50) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + Container.Content(movies) + Window.IsActive(videolibrary)</visible>
 	</control>
 	
