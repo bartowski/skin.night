@@ -110,7 +110,7 @@
 						<onclick>-</onclick>
 					</item>
 					<item id="7">
-						<label>Custom Home</label>
+						<label>31501</label>
 						<label2>33063</label2>
 						<onclick>-</onclick>
 					</item>
@@ -460,7 +460,7 @@
 						<focusedcolor>white</focusedcolor>
 						<align>left</align>
 						<aligny>top</aligny>
-						<label>Set Conditional Weather Folder - [COLOR=selected]$INFO[Skin.String(Home_Custom_Back_Weather_Folder1)][/COLOR]</label>
+						<label>$LOCALIZE[31504] - [COLOR=selected]$INFO[Skin.String(Home_Custom_Back_Weather_Folder1)][/COLOR]</label>
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
 						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 						<onclick>Skin.SetPath(Home_Custom_Back_Weather_Folder1)</onclick>
@@ -2194,7 +2194,7 @@
 							<width>860</width>
 							<height>45</height>
 							<font>Font_KeyboardKeys</font>
-							<label>Add Submenu of Custom Scripts on Home</label>
+							<label>31503</label>
 							<textcolor>mainblue</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -3161,7 +3161,7 @@
 								<width>860</width>
 								<height>45</height>
 								<font>font13caps</font>
-								<label>Custom Music Submenus</label>
+								<label>31502</label>
 								<textcolor>mainblue</textcolor>
 								<shadowcolor>black</shadowcolor>
 								<align>left</align>

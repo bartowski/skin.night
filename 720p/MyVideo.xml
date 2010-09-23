@@ -253,7 +253,7 @@
 			<control type="button" id="44">
 				<include>WindowMenuLabel</include>
 				<!-- LOC -->
-				<label>$LOCALIZE[369]</label>
+				<label>$LOCALIZE[582]</label>
 			</control>				
 		</control>
 	</control>

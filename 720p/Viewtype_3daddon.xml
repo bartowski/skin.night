@@ -34,7 +34,7 @@
 		<onright>56</onright>
 		<onup>7000</onup>
 		<ondown>66</ondown>
-		<viewtype label="3d Square">list</viewtype>
+		<viewtype label="$LOCALIZE[31500]">list</viewtype>
 		<orientation>horizontal</orientation>
 		<focusposition>3</focusposition>
 		<scrolltime>400</scrolltime>

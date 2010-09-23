@@ -233,7 +233,17 @@ just copy the translations from Confluence to here
   <string id="31295">Custom TV Show Submenus</string>
   <string id="31296">Newest</string>
   
-  
+  <!-- NEW 9/23-->
+  <string id="31297">*Press Down For Info*</string>
+  <string id="31298">*Press Down to Play Trailer*</string>
+  <string id="31299">Turn Off</string>
+  <string id="31300">Turn On</string>
+  <string id="31500">3d Square</string>
+  <string id="31501">Custom Home</string>
+  <string id="31502">Custom Music Submenus</string>
+  <string id="31503">Add Submenu of Custom Scripts on Home</string>
+  <string id="31504">Set Conditional Weather Folder</string>
+  <string id="31505">Plot</string>
   
   </strings>
 
