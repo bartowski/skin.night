@@ -123,7 +123,7 @@
 						<posy>131</posy>
 						<width>162</width>
 						<height>241</height>
-						<texture diffuse="movie-poster/posterview_diffuse.png" fallback="defaultmoviegenre.jpg">special://skin/media/extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
+						<texture diffuse="movie-poster/posterview_diffuse.png" fallback="defaultmoviegenre.jpg">extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<visible>Container.Content(Genres)</visible>
@@ -446,7 +446,7 @@
 				<aligny>center</aligny>
 				<font>Font_RSS_Big</font>
 				<textcolor>ffffffff</textcolor>
-				<label>31508</label>
+				<label>MovieSet</label>
 				<visible>IsEmpty(ListItem.foldername) + !Skin.HasSetting(Poster_Fanart) + !Skin.HasSetting(clean_poster) + !substring(Container.Listitem.Label,..,left) + Container.Content(movies) + Window.IsActive(videolibrary)</visible>
 			</control>
 			<control type="label">
