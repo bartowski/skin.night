@@ -1,3 +1,9 @@
+Update 9/30/2010
+  -Moved Music/Video scan dialog to center/top instead of right/top of screen
+  -Added the "Add Network location" Dialog
+  -Added black background to flags
+  -Changed submenus on Horizontal Home to a wraplist
+
 Update 9/22/2010
   -Added option to turn off New Recently Added on Fanart view
   -Added new Movie Genre images - thx krypt2nite
