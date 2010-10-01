@@ -202,7 +202,7 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Landscape_RightArea</include>
-			<visible>Control.IsVisible(52) + !Container.Content(tvshows) + !Player.HasAudio</visible>
+			<visible>Control.IsVisible(52) + Container.Content(episodes) + !Player.HasAudio</visible>
 		</control>
 		<control type="image"><!-- Last Overlay -->
 			<visible>Control.IsVisible(52)</visible>
@@ -673,7 +673,7 @@
 				<width>180</width>
 				<height>100</height>
 				<align>center</align>
-				<font>Font_TVShow</font>
+				<font>Font_Alaya_Movie-trailer</font>
 				<textcolor>white</textcolor>
 				<label>$INFO[Window(Home).Property(LatestEpisode.1.EpisodeTitle)]</label>
 				<visible>StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem.Label)</visible>
@@ -682,7 +682,7 @@
 				<width>180</width>
 				<height>100</height>
 				<align>center</align>
-				<font>Font_TVShow</font>
+				<font>Font_Alaya_Movie-trailer</font>
 				<textcolor>white</textcolor>
 				<label>$INFO[Window(Home).Property(LatestEpisode.2.EpisodeTitle)]</label>
 				<visible>StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem.Label)</visible>
@@ -691,7 +691,7 @@
 				<width>180</width>
 				<height>100</height>
 				<align>center</align>
-				<font>Font_TVShow</font>
+				<font>Font_Alaya_Movie-trailer</font>
 				<textcolor>white</textcolor>
 				<label>$INFO[Window(Home).Property(LatestEpisode.3.EpisodeTitle)]</label>
 				<visible>StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem.Label)</visible>
@@ -700,7 +700,7 @@
 				<width>180</width>
 				<height>100</height>
 				<align>center</align>
-				<font>Font_TVShow</font>
+				<font>Font_Alaya_Movie-trailer</font>
 				<textcolor>white</textcolor>
 				<label>$INFO[Window(Home).Property(LatestEpisode.4.EpisodeTitle)]</label>
 				<visible>StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem.Label)</visible>
@@ -709,7 +709,7 @@
 				<width>180</width>
 				<height>100</height>
 				<align>center</align>
-				<font>Font_TVShow</font>
+				<font>Font_Alaya_Movie-trailer</font>
 				<textcolor>white</textcolor>
 				<label>$INFO[Window(Home).Property(LatestEpisode.5.EpisodeTitle)]</label>
 				<visible>StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem.Label)</visible>

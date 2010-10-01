@@ -155,7 +155,7 @@
 						<posy>368</posy>
 						<width>162</width>
 						<height>241</height>
-						<texture diffuse="movie-poster/posterview_diffuse.png" fallback="defaultmoviegenre.jpg">extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
+						<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png" fallback="defaultmoviegenre.jpg">extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
 						<fadetime>200</fadetime>
 						<colordiffuse>89FFFFFF</colordiffuse>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -306,7 +306,7 @@
 						<posy>390</posy>
 						<width>211</width>
 						<height>300</height>
-						<texture diffuse="movie-poster/posterview_diffuse.png" fallback="defaultmoviegenre.jpg">extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
+						<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png" fallback="defaultmoviegenre.jpg">extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -458,13 +458,15 @@
 				<font>Font_Bartowski_Movies_Duration</font>
 				<textcolor>ffffffff</textcolor>
 				<label>$INFO[ListItem.year]</label>
+				<animation effect="slide" start="0,0" end="0,-23" time="0" condition="IsEmpty(ListItem.Duration)">Conditional</animation>
 				<visible>Container.Content(movies) + !Skin.HasSetting(clean_poster) + ![Player.HasVideo | substring(container.folderpath,plugin://video/)]</visible>
 			</control>
 			<control type="group">
-				<posx>100</posx>
-				<posy>82</posy>
+				<posx>72</posx>
+				<posy>65</posy>
 				<include>VideoMPAAFlaggingConditions</include>
-				<animation effect="zoom" start="80" end="80" time="0" condition="true">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-64,0" time="0" condition="IsEmpty(ListItem.Year)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,-23" time="0" condition="IsEmpty(ListItem.Duration)">Conditional</animation>
 				<visible>Container.Content(movies) + !Skin.HasSetting(clean_poster) + ![Player.HasVideo | substring(container.folderpath,plugin://video/)]</visible>
 			</control>
 		</control>
@@ -614,6 +616,7 @@
 				<label>*$LOCALIZE[31237]*</label>
 				<shadowcolor>black</shadowcolor>
 				<include>Animation_ZoomInZoomOut</include>
+				<animation effect="slide" start="0,0" end="0,-23" time="0" condition="IsEmpty(ListItem.Duration)">Conditional</animation>
 				<animation effect="fade"  start="0" end="100" time="400" delay="1000" condition="![Container(55).OnNext | Container(55).OnPrevious]">Conditional</animation>
 			</control>	
 			<control type="label"><!--Trailer Stop-->

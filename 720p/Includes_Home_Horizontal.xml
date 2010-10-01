@@ -317,7 +317,7 @@
 								<visible>Library.HasContent(Videos)</visible>
 							</item>
 							<item id="5">
-								<label>Addons</label>
+								<label>$LOCALIZE[31272]</label>
 								<onclick>ActivateWindow(VideoLibrary,Plugins)</onclick>
 							</item>
 						</content>
@@ -403,7 +403,7 @@
 								<onclick>ActivateWindow(VideoLibrary,Playlists,return)</onclick>
 							</item>
 							<item id="9">
-								<label>Newest</label>
+								<label>$LOCALIZE[31296]</label>
 								<onclick>ActivateWindow(VideoLibrary,RecentlyAddedMovies,return)</onclick>
 							</item>
 							<item id="10">
@@ -486,7 +486,7 @@
 								<onclick>ActivateWindow(VideoLibrary,TVShowActors,return)</onclick>
 							</item>
 							<item id="7">
-								<label>Newest</label>
+								<label>$LOCALIZE[31296]</label>
 								<onclick>ActivateWindow(VideoLibrary,RecentlyAddedEpisodes,return)</onclick>
 							</item>
 						</content>
@@ -776,7 +776,7 @@
 					</focusedlayout>
 						<content>
 							<item id="1">
-								<label>One Day</label>
+								<label>143</label>
 								<onclick>Skin.SetString(Weather,1)</onclick>
 							</item>
 							<item id="2">

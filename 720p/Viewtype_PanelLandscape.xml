@@ -318,7 +318,7 @@
 				<posx>15</posx>
 				<posy>450</posy>
 				<width>555</width>
-				<height>240</height>
+				<height>220</height>
 				<font>Font_Bartowski_Showcase_plot</font>
 				<textcolor>ffffffff</textcolor>
 				<label>$INFO[ListItem.Plot]</label>
@@ -348,7 +348,7 @@
 				<posx>15</posx>
 				<posy>410</posy>
 				<width>555</width>
-				<height>264</height>
+				<height>220</height>
 				<font>Font_Bartowski_Showcase_plot</font>
 				<textcolor>ffffffff</textcolor>
 				<label>$INFO[ListItem.Plot]</label>
