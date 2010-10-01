@@ -89,7 +89,7 @@
 						<control type="textbox"><!-- Plot and TV -->
 							<posx>300</posx>
 							<posy>60</posy>
-							<width>960</width>
+							<width>930</width>
 							<height>104</height>
 							<align>justify</align>
 							<info>ListItem.Plot</info>

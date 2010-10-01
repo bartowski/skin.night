@@ -185,12 +185,14 @@
 			<font>Font_RSS_Big</font>
 			<textcolor>ffffffff</textcolor>
 			<label>$INFO[ListItem.year]</label>
+			<animation effect="slide" start="0,0" end="0,-23" time="0" condition="IsEmpty(ListItem.Duration)">Conditional</animation>
 		</control>
 		<control type="group">
-			<posx>96</posx>
-			<posy>384</posy>
+			<posx>76</posx>
+			<posy>307</posy>
 			<include>VideoMPAAFlaggingConditions</include>
-			<animation effect="zoom" start="80" end="80" time="0" condition="true">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-64,0" time="0" condition="IsEmpty(ListItem.Year)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-23" time="0" condition="IsEmpty(ListItem.Duration)">Conditional</animation>
 		</control>
 	</control>	
 	
