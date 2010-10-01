@@ -83,7 +83,7 @@
 							<aligny>center</aligny>
 							<font>Font_EpisodePlot2</font>
 							<textcolor>ListTrackF</textcolor>
-							<label>$LOCALIZE[20373] $INFO[ListItem.Season]/$LOCALIZE[20359] $INFO[ListItem.Episode] - Aired $INFO[ListItem.Date]</label>
+							<label>$LOCALIZE[20373] $INFO[ListItem.Season]/$LOCALIZE[20359] $INFO[ListItem.Episode] - $LOCALIZE[31231] $INFO[ListItem.Date]</label>
 							<visible>!IsEmpty(ListItem.Title)</visible>
 						</control>
 						<control type="textbox"><!-- Plot and TV -->
