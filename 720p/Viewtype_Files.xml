@@ -129,6 +129,7 @@
 					<height>25</height>
 					<texture>dialogs/files/$INFO[ListItem.Overlay]</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<animation effect="fade" start="60" end="60" time="0" condition="true">Conditional</animation>
 					<visible>Skin.HasSetting(movieoverlays) + Container.Content(movies) + !IsEmpty(ListItem.Overlay)</visible>
 				</control>
 			</itemlayout>
@@ -479,50 +480,20 @@
 		</control>
 	</control>
 	<control type="group">
-	<include>Animation_HiddenByInfo</include>
-	<visible>Control.IsVisible(50) + ![Window.IsActive(musicfiles) | Container.Content(movies) | Container.Content(Genres) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(albums) | Container.Content(songs) | [Window.IsActive(musiclibrary) + Skin.HasSetting(music_files_fanart)]]</visible>
-	<include>Animation_Viewtype_Files_RightArea</include>	
-		<control type="image">
-			<posx>770</posx>
-			<posy>360</posy>
-			<width>500</width>
-			<height>360</height>
-			<aspectratio align="right" aligny="bottom">keep</aspectratio>
-			<texture background="true">$INFO[ListItem.Icon]</texture>
-			<bordertexture border="5">confluence/button-nofocus.png</bordertexture>
-			<bordersize>5</bordersize>
-			<fadetime>100</fadetime>
-		</control>
-		<control type="image">
-			<posx>770</posx>
-			<posy>360</posy>
-			<width>500</width>
-			<height>360</height>
-			<aspectratio align="right" aligny="bottom">keep</aspectratio>
-			<texture background="true">$INFO[ListItem(-1).Icon]</texture>
-			<bordertexture border="5">confluence/button-nofocus.png</bordertexture>
-			<bordersize>5</bordersize>
-			<animation type="Hidden">
-			<effect type="zoom" time="400" center="1200,660" start="100" end="180" tween="cubic" easing="in" />
-				<effect type="fade" time="400" start="100" end="0" />
-			</animation>
-			<visible>Container(50).OnNext</visible>
-		</control>
-		<control type="image">
-			<posx>770</posx>
-			<posy>360</posy>
-			<width>500</width>
-			<height>360</height>
-			<aspectratio align="right" aligny="bottom">keep</aspectratio>
-			<texture background="true">$INFO[ListItem(1).Icon]</texture>
-			<bordertexture border="5">confluence/button-nofocus.png</bordertexture>
-			<bordersize>5</bordersize>
-			<animation type="Hidden">
-			<effect type="zoom" time="400" center="1200,660" start="100" end="180" tween="cubic" easing="in" />
-				<effect type="fade" time="400" start="100" end="0" />
-			</animation>
-			<visible>Container(50).OnPrevious</visible>
-		</control>
+		<include>Animation_HiddenByInfo</include>
+		<visible>Control.IsVisible(50) + ![Window.IsActive(musicfiles) | Container.Content(movies) | Container.Content(Genres) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(albums) | Container.Content(songs) | [Window.IsActive(musiclibrary) + Skin.HasSetting(music_files_fanart)]]</visible>
+		<include>Animation_Viewtype_Files_RightArea</include>	
+			<control type="image">
+				<posx>870</posx>
+				<posy>360</posy>
+				<width>400</width>
+				<height>360</height>
+				<aspectratio align="right" aligny="bottom">keep</aspectratio>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<bordertexture border="5">confluence/button-nofocus.png</bordertexture>
+				<bordersize>5</bordersize>
+				<fadetime>200</fadetime>
+			</control>
 	</control>
 	<control type="group">
 	<include>Animation_HiddenByInfo</include>

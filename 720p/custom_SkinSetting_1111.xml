@@ -408,7 +408,7 @@
 						<onclick>Skin.ToggleSetting(horizontal_home)</onclick>
 						<selected>Skin.HasSetting(horizontal_home)</selected>
 					</control>
-					<control type="radiobutton" id="203">
+					<control type="radiobutton" id="202">
 						<description>Show Recently added info</description>
 						<width>860</width>
 						<height>26</height>
@@ -426,16 +426,33 @@
 						<selected>Skin.HasSetting(horizontal_bottom_align)</selected>
 						<visible>Skin.HasSetting(horizontal_home)</visible>
 					</control>
-					<control type="radiobutton" id="202">
+					<control type="radiobutton" id="203">
 						<description>Show Recently added info</description>
 						<include>skin_settings_labels</include>
 						<label>31117</label>
 						<onclick>Skin.ToggleSetting(homepageHideRecentlyAdded)</onclick>
 						<selected>Skin.HasSetting(homepageHideRecentlyAdded)</selected>
 					</control>
-					
+					<control type="radiobutton" id="204">
+						<description>Global Ken Burns</description>
+						<width>860</width>
+						<height>26</height>
+						<font>Font_KeyboardTitle</font>
+						<textoffsetx>40</textoffsetx>
+						<textoffsety>4</textoffsety>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<align>left</align>
+						<aligny>top</aligny>
+						<label>31509</label>
+						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(random_items)</onclick>
+						<selected>Skin.HasSetting(random_items)</selected>
+						<visible>Skin.HasSetting(homepageHideRecentlyAdded)</visible>
+					</control>
 					<!--Weather Widget-->
-						<control type="radiobutton" id="204">
+						<control type="radiobutton" id="205">
 						<description>Show Weather Widget</description>
 						<include>skin_settings_labels</include>
 						<label>31241</label>
@@ -443,14 +460,14 @@
 						<selected>Skin.HasSetting(HomepageWeatherWidget)</selected>
 					</control>
 					<!--End Weather Widget-->
-					<control type="radiobutton" id="205">
+					<control type="radiobutton" id="206">
 						<description>conditions based weather backdrop style</description>
 						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31221]</label>
 						<onclick>Skin.ToggleSetting(conditions_weather_backdrop)</onclick>
 						<selected>Skin.HasSetting(conditions_weather_backdrop)</selected>
 					</control>
-					<control type="button" id="206">
+					<control type="button" id="207">
 						<width>860</width>
 						<height>26</height>
 						<font>Font_KeyboardTitle</font>
@@ -466,14 +483,14 @@
 						<onclick>Skin.SetPath(Home_Custom_Back_Weather_Folder1)</onclick>
 						<visible>Skin.HasSetting(conditions_weather_backdrop)</visible>
 					</control>
-					<control type="radiobutton" id="207">
-						<description>conditions based weather backdrop style</description>
+					<control type="radiobutton" id="208">
+						<description>Ken Burns HOme</description>
 						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31281]</label>
 						<onclick>Skin.ToggleSetting(animation_bg)</onclick>
 						<selected>Skin.HasSetting(animation_bg)</selected>
 					</control>
-					<control type="radiobutton" id="208">
+					<control type="radiobutton" id="209">
 						<description>Global Ken Burns</description>
 						<width>860</width>
 						<height>26</height>
