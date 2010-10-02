@@ -247,6 +247,10 @@ just copy the translations from Confluence to here
   <string id="31506">Grid</string>
   <string id="31507">Slide</string>
   <string id="31508">MovieSet</string>
+  <string id="31509">Rating -</string>
+  <string id="31510">Rating +</string>
+  <string id="31511">Now Playing</string>
+  <string id="31512">song</string>
   
   <!-- NEW 9/30-->
   <string id="31509">Use Random Items instead of Recent Items</string>
