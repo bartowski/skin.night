@@ -777,7 +777,7 @@
 					<visible>Container(300).HasFocus(8) | Container(300).HasFocus(14)</visible>
 					<control type="button" id="90181">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>143</label>
+						<label>31514</label>
 						<onclick>Skin.SetString(Weather,1)</onclick>
 					</control>	
 					<control type="button" id="90182">

@@ -444,7 +444,7 @@
 						<focusedcolor>white</focusedcolor>
 						<align>left</align>
 						<aligny>top</aligny>
-						<label>31509</label>
+						<label>31513</label>
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
 						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 						<onclick>Skin.ToggleSetting(random_items)</onclick>

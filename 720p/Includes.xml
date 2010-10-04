@@ -24,6 +24,7 @@
 	<include file="Viewtype_Shelf.xml" />
 	<include file="Viewtype_addons.xml" />
 	<include file="Includes_Animations.xml" />
+	<include file="Includes_Next_Aired.xml" />
 	<include file="Includes_Trailer.xml" />
 	<include file="Includes_Objects.xml" />
 	<include file="IncludesHomeRecentlyAdded.xml" />
@@ -40,9 +41,12 @@
 	
 	<include name="random_movies">
 		<onfocus>XBMC.RunScript(script.recentlyadded,limit=10)</onfocus>
+		<onfocus>XBMC.RunScript(script.test)</onfocus>
 	</include>
 	<include name="random_tv">
+		<onfocus>XBMC.RunScript(script.recentlyadded,limit=10)</onfocus>
 		<onfocus>XBMC.RunScript(script.randomitems,limit=10&amp;unplayed=True)</onfocus>
+		<onfocus>XBMC.RunScript(script.test)</onfocus>
 	</include>
 	
 	<include name="recent_movies_section">
@@ -671,6 +675,15 @@
 					<font>Font_Time</font>
 					<textcolor>mainblue</textcolor>
 					<info>System.Time(hh:mm xx)</info>
+					<align>right</align>
+					<animation effect="slide" start="0,0" end="0,20" time="0" tween="cubic" easing="inout" condition="system.getbool(lookandfeel.enablerssfeeds)">Conditional</animation>
+				</control>
+				<control type="label">
+					<posy>54</posy>
+					<width>300</width>
+					<font>Font_Date</font>
+					<textcolor>mainblue</textcolor>
+					<label>[B]$INFO[Weather.Temperature][/B]</label>
 					<align>right</align>
 					<animation effect="slide" start="0,0" end="0,20" time="0" tween="cubic" easing="inout" condition="system.getbool(lookandfeel.enablerssfeeds)">Conditional</animation>
 				</control>

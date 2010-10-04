@@ -776,7 +776,7 @@
 					</focusedlayout>
 						<content>
 							<item id="1">
-								<label>143</label>
+								<label>31514</label>
 								<onclick>Skin.SetString(Weather,1)</onclick>
 							</item>
 							<item id="2">

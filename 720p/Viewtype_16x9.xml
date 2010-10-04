@@ -15,7 +15,7 @@
 			<onleft>59</onleft>
 			<onright>59</onright>
 			<onup>7000</onup>
-			<ondown>2448</ondown>
+			<ondown>5448</ondown>
 			<pagecontrol>69</pagecontrol>
 			<viewtype label="$LOCALIZE[31048]">list</viewtype>
 			<orientation>horizontal</orientation>
@@ -523,7 +523,7 @@
 		<visible>Control.IsVisible(59) + Container.Content(tvshows) + !Skin.HasSetting(no_new_recent_info) + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem.Label)]</visible>
 	</control>
 			
-	<control type="grouplist" id="2448">
+	<control type="grouplist" id="5448">
 	<posx>800</posx>
 	<posy>600</posy>
 	<onup>52</onup>
