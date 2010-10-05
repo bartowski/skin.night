@@ -678,7 +678,7 @@
 					<align>right</align>
 					<animation effect="slide" start="0,0" end="0,20" time="0" tween="cubic" easing="inout" condition="system.getbool(lookandfeel.enablerssfeeds)">Conditional</animation>
 				</control>
-				<control type="label">
+				<!--<control type="label">
 					<posy>54</posy>
 					<width>300</width>
 					<font>Font_Date</font>
@@ -686,7 +686,7 @@
 					<label>[B]$INFO[Weather.Temperature][/B]</label>
 					<align>right</align>
 					<animation effect="slide" start="0,0" end="0,20" time="0" tween="cubic" easing="inout" condition="system.getbool(lookandfeel.enablerssfeeds)">Conditional</animation>
-				</control>
+				</control>-->
 		</control>
 	</include>
 	

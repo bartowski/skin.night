@@ -311,5 +311,279 @@
 		</control>
 	</include>
 	
-	
+	<include name="Poster_Next_Aired">
+		<control type="group">
+			<visible>Container.Content(tvshows)</visible>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.1.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.1.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.2.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.2.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.3.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.3.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.4.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.4.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.5.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.5.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.6.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.6.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.7.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.7.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.8.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.8.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.9.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.9.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.10.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.10.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.11.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.11.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.12.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.12.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.13.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.13.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.14.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.14.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.15.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.15.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.16.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.16.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.17.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.17.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.18.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.18.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.19.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.19.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.20.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.20.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.21.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.21.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.22.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.22.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.23.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.23.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.24.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.24.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.25.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.25.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.26.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.26.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.27.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.27.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.28.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.28.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.29.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.29.ShowTitle),ListItem.Label)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[COLOR=ListTrackF][B]Next Episode:[/COLOR] [COLOR=white]$INFO[Window(Home).Property(NextAired.30.NextDate)][/COLOR][/B]</label>
+					<visible>StringCompare(Window(Home).Property(NextAired.30.ShowTitle),ListItem.Label)</visible>
+				</control>
+		</control>
+	</include>
 </includes>

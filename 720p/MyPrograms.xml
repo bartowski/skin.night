@@ -13,7 +13,42 @@
 			<include>Animation_CommonFade</include>
 			<visible></visible>
 		</control>
-	
+		<control type="image">
+			<description>dirty hack for (inside folder) fanart in programs pictures scripts</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true">$INFO[Container.FolderPath,,fanart.jpg]</texture>
+			<aspectratio>scale</aspectratio>
+			<fadetime>400</fadetime> 
+			<include>Animation_MyVideoNav_Fanart</include> 
+			<visible>!substring(ListItem.Path,plugin://) + !substring(ListItem.Path,special://) + !substring(Container.FolderPath,plugin://) + !substring(Container.FolderPath,special://)</visible>
+		</control>
+		<control type="image">
+			<description>dirty hack for (inside folder) fanart in programs pictures scripts</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true">$INFO[ListItem.Path,,fanart.jpg]</texture>
+			<aspectratio>scale</aspectratio>
+			<fadetime>400</fadetime> 
+			<include>Animation_MyVideoNav_Fanart</include> 
+			<visible>!substring(ListItem.Path,plugin://) + !substring(ListItem.Path,special://) + !substring(Container.FolderPath,plugin://) + !substring(Container.FolderPath,special://)</visible>
+		</control>
+		<control type="image">
+			<description>dirty hack for (folder) fanart in programs pictures scripts</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true">$INFO[ListItem.FilenameAndPath,,fanart.jpg]</texture>
+			<aspectratio>scale</aspectratio>
+			<fadetime>400</fadetime> 
+			<include>Animation_MyVideoNav_Fanart</include> 
+			<visible>!substring(ListItem.Path,plugin://) + !substring(ListItem.Path,special://) + !substring(Container.FolderPath,plugin://) + !substring(Container.FolderPath,special://)</visible>
+		</control>
 		
 		<include>Viewtype_Files</include>
 		<include>Viewtype_Poster</include>
