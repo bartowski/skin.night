@@ -738,10 +738,8 @@
 			<align>left</align>
 			<itemgap>0</itemgap>
 			<orientation>horizontal</orientation>
-			<include>VideoCodecFlaggingConditions</include>
-			<include>AudioCodecFlaggingConditions</include>
-			<include>AspectCodecFlaggingConditions</include>
-			<include>VideoTypeHackFlaggingConditions</include>
+			<include condition="!Skin.HasSetting(grey_flags)">color_flags</include>
+			<include condition="Skin.HasSetting(grey_flags)">grey_flags</include>
 			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Landscape_BottomInfo</include>
 		</control>

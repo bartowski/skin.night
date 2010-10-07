@@ -199,8 +199,8 @@ just copy the translations from Confluence to here
   <string id="31266">Enable 'extrafanart' - allows random cycling of fanart in Library mode</string>
   <string id="31267">User needs the 'extrafanart' folder at the root of TV Show or Movie folder</string>
   <string id="31268">Logo</string>
-  <string id="31269">Use a local landcape.jpg instead of regular thumb on TV level</string>
-  <string id="31270">User needs a landcape.jpg image at the root of TV Show folder</string>
+  <string id="31269">Use landscape.jpg instead of regular thumb on TV level</string>
+  <string id="31270">User needs a landscape.jpg image at the root of TV Show folder</string>
   <string id="40281">Items</string>
   <string id="31271">Set Home Menu to Bottom</string>
   <string id="31272">Addons</string>
@@ -255,6 +255,8 @@ just copy the translations from Confluence to here
   <!-- NEW 9/30-->
   <string id="31513">Use Random Items instead of Recent Items</string>
   <string id="31514">One Day</string>
+  <string id="31515">Press Down for New Episodes</string>
+  <string id="31516">*Press Up or "X" to stop Trailer*</string>
   
   
   </strings>

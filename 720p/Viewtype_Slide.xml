@@ -313,8 +313,7 @@
 		<aligny>center</aligny>
 		<font>Font_Alaya_Movie-trailer</font>
 		<textcolor>mainblue</textcolor>
-		<label>*Press Up or "X" to stop Trailer*</label>
-		<shadowcolor>black</shadowcolor>
+		<label>$LOCALIZE[31516]</label>
 		<include>Animation_Viewtype_Showcase_Trailer</include>
 	</control>
 		
@@ -327,10 +326,8 @@
 		<align>center</align>
 		<itemgap>0</itemgap>
 		<orientation>horizontal</orientation>
-		<include>VideoCodecFlaggingConditions</include>
-		<include>AudioCodecFlaggingConditions</include>
-		<include>AspectCodecFlaggingConditions</include>
-		<include>VideoTypeHackFlaggingConditions</include>
+		<include condition="!Skin.HasSetting(grey_flags)">color_flags</include>
+		<include condition="Skin.HasSetting(grey_flags)">grey_flags</include>
 		<include>Animation_HiddenByInfo</include>
 		<include>Animation_BackdropFade</include>
 	</control>

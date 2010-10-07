@@ -39,6 +39,19 @@
 	<include file="Viewtype_Newest_Episodes.xml" />
 	
 	
+	<include name="color_flags">
+		<include>VideoCodecFlaggingConditions</include>
+		<include>AudioCodecFlaggingConditions</include>
+		<include>AspectCodecFlaggingConditions</include>
+		<include>VideoTypeHackFlaggingConditions</include>
+	</include>
+	<include name="grey_flags">
+		<include>VideoCodecFlaggingConditions_grey</include>
+		<include>AudioCodecFlaggingConditions_grey</include>
+		<include>AspectCodecFlaggingConditions_grey</include>
+		<include>VideoTypeHackFlaggingConditions_grey</include>
+	</include>
+	
 	<include name="random_movies">
 		<onfocus>XBMC.RunScript(script.recentlyadded,limit=10)</onfocus>
 		<onfocus>XBMC.RunScript(script.test)</onfocus>
