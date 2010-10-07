@@ -2441,7 +2441,7 @@
 					<control type="grouplist" id="9005">
 						<visible>Container(9000).Hasfocus(5)</visible>
 						<posx>290</posx>
-						<posy>60</posy>
+						<posy>50</posy>
 						<width>860</width>
 						<height>530</height>
 						<itemgap>-1</itemgap>
@@ -2546,16 +2546,6 @@
 							<align>left</align>
 							<aligny>top</aligny>
 						</control>
-						<!--<control type="label" id="512">
-							<width>860</width>
-							<height>45</height>
-							<font>font13caps</font>
-							<label></label>
-							<textcolor>mainblue</textcolor>
-							<shadowcolor>black</shadowcolor>
-							<align>left</align>
-							<aligny>center</aligny>
-						</control>-->
 						<control type="label" id="513">
 							<width>860</width>
 							<height>45</height>
@@ -2582,7 +2572,7 @@
 					</control>
 						<control type="textbox" id="515">
 							<posx>400</posx>
-							<posy>550</posy>
+							<posy>560</posy>
 							<width>600</width>
 							<height>290</height>
 							<align>justify</align>
