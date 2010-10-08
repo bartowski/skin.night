@@ -39,6 +39,14 @@
 	<include file="Viewtype_Newest_Episodes.xml" />
 	
 	
+	
+	<include name="horizontal_onup_middle">
+		<onup></onup>
+	</include>
+	<include name="horizontal_onup_lower">
+		<onup>78881</onup>
+	</include>
+	
 	<include name="color_flags">
 		<include>VideoCodecFlaggingConditions</include>
 		<include>AudioCodecFlaggingConditions</include>
