@@ -60,7 +60,8 @@
 			<posx>-30</posx>
 			<posy>250</posy>
 			<height>615</height>
-			<width>1900</width><!-- 1400 -->
+			<include condition="!Skin.HasSetting(Poster_Fanart)">posterview_width_dark</include>
+			<include condition="Skin.HasSetting(Poster_Fanart)">posterview_width_fanart</include>
 			<onleft>55</onleft>
 			<onright>55</onright>
 			<onup>65</onup>
@@ -123,7 +124,7 @@
 						<posy>131</posy>
 						<width>162</width>
 						<height>241</height>
-						<texture diffuse="movie-poster/posterview_diffuse.png" fallback="defaultmoviegenre.jpg">extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
+						<texture diffuse="movie-poster/posterview_diffuse.png" fallback="extras/moviegenres/default.png">extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<visible>Container.Content(Genres)</visible>
@@ -155,7 +156,7 @@
 						<posy>368</posy>
 						<width>162</width>
 						<height>241</height>
-						<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png" fallback="defaultmoviegenre.jpg">extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
+						<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png" fallback="extras/moviegenres/default.png">extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
 						<fadetime>200</fadetime>
 						<colordiffuse>89FFFFFF</colordiffuse>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -252,7 +253,7 @@
 						<posy>90</posy>
 						<width>211</width>
 						<height>300</height>
-						<texture diffuse="movie-poster/posterview_diffuse.png" fallback="defaultmoviegenre.jpg">extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
+						<texture diffuse="movie-poster/posterview_diffuse.png" fallback="extras/moviegenres/default.png">extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -293,7 +294,7 @@
 						<posy>390</posy>
 						<width>211</width>
 						<height>300</height>
-						<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png" fallback="defaultmoviegenre.jpg">extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
+						<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png" fallback="extras/moviegenres/default.png">extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -342,8 +343,8 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
-			<height>160</height>
-			<texture>movie-poster/Poster_Fanart_Title_Back.png</texture>
+			<height>336</height>
+			<texture>movie-poster/Poster_Fanart_Title_Back2.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
 		
@@ -389,7 +390,7 @@
 				<texture background="true">$INFO[ListItem.path]logo.png</texture>
 				<fadetime>100</fadetime>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
-				<visible>[Container.Content(tvshows) | Container.Content(seasons)]</visible>
+				<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
 			</control>
 			<control type="label">
 				<posx>20</posx>
@@ -402,6 +403,9 @@
 				<label>[B]$INFO[ListItem.TVShowTitle][/B]</label>
 				<visible>[Container.Content(tvshows) | Container.Content(seasons)] + IsEmpty(Control.GetLabel(7015))</visible>
 			</control>
+			
+			<include>Fanart_Next_Aired</include>
+
 			<control type="label">
 				<posx>20</posx>
 				<posy>30</posy>
@@ -411,7 +415,18 @@
 				<font>Font_RSS_Big</font>
 				<textcolor>ffffffff</textcolor>
 				<label>$INFO[ListItem.Duration] $LOCALIZE[12391]</label>
-				<visible>Container.Content(movies) + !Skin.HasSetting(clean_poster) + ![Player.HasVideo | substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)] + !IsEmpty(ListItem.Duration)</visible>
+				<visible>Container.Content(movies) + !Skin.HasSetting(clean_poster) + ![Player.HasVideo | substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)] + !IsEmpty(ListItem.Duration) + !SubString(ListItem.Duration,min)</visible>
+			</control>
+			<control type="label">
+				<posx>20</posx>
+				<posy>30</posy>
+				<width>604</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_RSS_Big</font>
+				<textcolor>ffffffff</textcolor>
+				<label>$INFO[ListItem.Duration]</label>
+				<visible>Container.Content(movies) + !Skin.HasSetting(clean_poster) + ![Player.HasVideo | substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)] + !IsEmpty(ListItem.Duration) + SubString(ListItem.Duration,min)</visible>
 			</control>
 			<control type="label">
 				<posx>20</posx>
@@ -469,7 +484,7 @@
 				<aligny>center</aligny>
 				<font>Font_Bartowski_Showcase_Right_Under</font>
 				<textcolor>ffffffff</textcolor>
-				<label>[B][COLOR=mainblue]$LOCALIZE[515][/COLOR][/B] - $INFO[ListItem.Writer]</label>
+				<label>[B][COLOR=mainblue]$LOCALIZE[20417][/COLOR][/B] - $INFO[ListItem.Writer]</label>
 				<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(55).OnNext | Container(55).OnPrevious]">WindowOpen</animation>
 			</control>
 			<control type="label">

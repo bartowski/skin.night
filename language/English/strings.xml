@@ -257,6 +257,22 @@ just copy the translations from Confluence to here
   <string id="31514">One Day</string>
   <string id="31515">Press Down for New Episodes</string>
   <string id="31516">*Press Up or "X" to stop Trailer*</string>
+  <string id="31517">Random Movies</string>
+  <string id="31518">Random Albums</string>
+  
+  
+  <!-- NEW 9/30-->
+  <string id="31519">Pause</string>
+  <string id="31520">Stop</string>
+  <string id="31521">Fast Forward</string>
+  <string id="31522">Rewind</string>
+  <string id="31523">Expand</string>
+  <string id="31524">Collapse</string>
+  <string id="31525">Lyrics</string>
+  <string id="31526">Movie menu</string>
+  
+  
+  
   
   
   </strings>

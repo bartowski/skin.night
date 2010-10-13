@@ -372,7 +372,7 @@
 			<include>Animation_Viewtype_Landscape_BottomInfo</include>
 				<control type="label"><!-- 1st Seasons -->
 					<posx>5</posx>
-					<posy>455</posy>
+					<posy>452</posy>
 					<width>570</width>
 					<height>50</height>
 					<aligny>center</aligny>
@@ -383,7 +383,7 @@
 				</control>
 				<control type="label"><!-- 1st Seasons -->
 					<posx>5</posx>
-					<posy>455</posy>
+					<posy>452</posy>
 					<width>570</width>
 					<height>50</height>
 					<aligny>center</aligny>
@@ -394,7 +394,7 @@
 				</control>
 				<control type="label"><!-- Episodes -->
 					<posx>5</posx>
-					<posy>485</posy>
+					<posy>478</posy>
 					<width>570</width>
 					<height>50</height>
 					<aligny>center</aligny>
@@ -405,7 +405,7 @@
 				</control>
 				<control type="label"><!-- Episodes -->
 					<posx>5</posx>
-					<posy>485</posy>
+					<posy>478</posy>
 					<width>570</width>
 					<height>50</height>
 					<aligny>center</aligny>
@@ -416,7 +416,7 @@
 				</control>
 				<control type="label"><!-- Genre -->
 					<posx>5</posx>
-					<posy>515</posy>
+					<posy>504</posy>
 					<width>570</width>
 					<height>50</height>
 					<aligny>center</aligny>
@@ -426,7 +426,7 @@
 				</control>
 				<control type="label"><!-- Episode Rating -->
 					<posx>5</posx>
-					<posy>515</posy>
+					<posy>504</posy>
 					<width>570</width>
 					<height>50</height>
 					<aligny>center</aligny>
@@ -442,7 +442,7 @@
 				<include>Animation_Viewtype_Landscape_BottomInfo</include>
 				<include>Animation_HiddenByInfo</include>
 				<posx>25</posx>
-				<posy>556</posy>
+				<posy>542</posy>
 				<orientation>horizontal</orientation>
 				<control type="label">
 					<posx>0</posx>

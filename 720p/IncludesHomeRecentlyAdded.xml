@@ -24,6 +24,22 @@
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<animation effect="slide" start="220,0" end="0,0" time="600" delay="2400" tween="cubic" easing="inout" condition="Container(300).HasFocus(3)">Conditional</animation>
+					<visible>!Skin.HasSetting(random_items)</visible>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>120</posx>
+					<posy>330</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>31517</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>Font_KeyboardKeys</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<animation effect="slide" start="220,0" end="0,0" time="600" delay="2400" tween="cubic" easing="inout" condition="Container(300).HasFocus(3)">Conditional</animation>
+					<visible>Skin.HasSetting(random_items)</visible>
 				</control>
 				<control type="wraplist" id="8000">
 					<posx>-120</posx>
@@ -271,6 +287,22 @@
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<animation effect="slide" start="250,0" end="0,0" time="600" delay="2400" tween="cubic" easing="inout" condition="Container(300).HasFocus(1)">Conditional</animation>
+					<visible>!Skin.HasSetting(random_items)</visible>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>-74</posx>
+					<posy>330</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$LOCALIZE[31518]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>Font_KeyboardKeys</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<animation effect="slide" start="250,0" end="0,0" time="600" delay="2400" tween="cubic" easing="inout" condition="Container(300).HasFocus(1)">Conditional</animation>
+					<visible>Skin.HasSetting(random_items)</visible>
 				</control>
 				<control type="wraplist" id="8002">
 					<posx>-300</posx>
@@ -364,6 +396,22 @@
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<animation effect="slide" start="220,0" end="0,0" time="600" delay="2400" tween="cubic" easing="inout" condition="Container(301).HasFocus(3)">Conditional</animation>
+					<visible>!Skin.HasSetting(random_items)</visible>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>120</posx>
+					<posy>330</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>31517</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>Font_KeyboardKeys</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<animation effect="slide" start="220,0" end="0,0" time="600" delay="2400" tween="cubic" easing="inout" condition="Container(301).HasFocus(3)">Conditional</animation>
+					<visible>Skin.HasSetting(random_items)</visible>
 				</control>
 				<control type="wraplist" id="8000">
 					<posx>-120</posx>
@@ -611,6 +659,22 @@
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<animation effect="slide" start="250,0" end="0,0" time="600" delay="2400" tween="cubic" easing="inout" condition="Container(301).HasFocus(1)">Conditional</animation>
+					<visible>!Skin.HasSetting(random_items)</visible>
+				</control>
+				<control type="label">
+					<description>Title label</description>
+					<posx>-74</posx>
+					<posy>330</posy>
+					<height>20</height>
+					<width>230</width>
+					<label>$LOCALIZE[31518]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>Font_KeyboardKeys</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<animation effect="slide" start="250,0" end="0,0" time="600" delay="2400" tween="cubic" easing="inout" condition="Container(301).HasFocus(1)">Conditional</animation>
+					<visible>Skin.HasSetting(random_items)</visible>
 				</control>
 				<control type="wraplist" id="8002">
 					<posx>-301</posx>
