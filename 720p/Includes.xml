@@ -69,12 +69,10 @@
 	
 	<include name="random_movies">
 		<onfocus>XBMC.RunScript(script.recentlyadded,limit=10)</onfocus>
-		<onfocus> XBMC.RunScript(script.tv.show.next.aired,silent=True&alarm=3600)</onfocus>
 	</include>
 	<include name="random_tv">
 		<onfocus>XBMC.RunScript(script.recentlyadded,limit=10)</onfocus>
 		<onfocus>XBMC.RunScript(script.randomitems,limit=10&amp;unplayed=True)</onfocus>
-		<onfocus> XBMC.RunScript(script.tv.show.next.aired,silent=True&alarm=3600)</onfocus>
 	</include>
 	
 	<include name="recent_movies_section">
