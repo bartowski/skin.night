@@ -295,6 +295,10 @@
 					<onclick>ReplaceWindow(VideoFiles)</onclick>
 					<visible>![Control.IsVisible(55) + Container.Content(movies)]</visible>
 				</control>
+				<control type="button" id="8">
+					<include>WindowMenuButton</include>
+					<label>137</label>
+				</control>
 			</control>
 			<control type="grouplist">
 			<visible>!Skin.HasSetting(LockViews)</visible>
@@ -345,13 +349,17 @@
 				<!-- LOC -->
 				<label>$LOCALIZE[31098]</label>
 			</control>
-				
 			<control type="label">
 				<include>WindowMenuLabel</include>
 				<!-- LOC -->
 				<label>$LOCALIZE[240]</label>
 				<visible>![Control.IsVisible(55) + Container.Content(movies)]</visible>
-			</control>				
+			</control>	
+			<control type="label">
+				<include>WindowMenuLabel</include>
+				<!-- LOC -->
+				<label>Seasrch</label>
+			</control>
 		</control>
 		
 	</control>
