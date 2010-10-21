@@ -68,10 +68,10 @@
 	</include>
 	
 	<include name="random_movies">
-		<onfocus>XBMC.RunScript(script.recentlyadded,limit=10)</onfocus>
+		<onfocus>RunScript(script.recentlyadded,limit=10&amp;albums=True)</onfocus>
 	</include>
 	<include name="random_tv">
-		<onfocus>XBMC.RunScript(script.recentlyadded,limit=10)</onfocus>
+		<onfocus>RunScript(script.recentlyadded,limit=10&amp;albums=True)</onfocus>
 		<onfocus>XBMC.RunScript(script.randomitems,limit=10&amp;unplayed=True)</onfocus>
 	</include>
 	
