@@ -355,7 +355,7 @@
 				<aligny>center</aligny>
 				<font>Font_TVShow</font>
 				<textcolor>ffffffff</textcolor>
-				<label>[B][COLOR=ff67ffff]$LOCALIZE[180]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Duration][/COLOR]</label>
+				<label>[B][COLOR=mainblue]$LOCALIZE[180]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Duration][/COLOR]</label>
 				<visible>!IsEmpty(ListItem.Duration) + SubString(ListItem.Duration,min)</visible>
 			</control>
 			<control type="label">

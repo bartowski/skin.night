@@ -2566,7 +2566,7 @@
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>confluence/button-focus.png</texturefocus>
 							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-							<!--<onclick>RunScript(script.logo-downloader)</onclick>-->
+							<!--<onclick>XBMC.RunScript(script.test)</onclick>-->
 							<onclick>XBMC.RunScript(script.logo-downloader,mode=bulk,clearart=False,logo=True,showthumb=False)</onclick>
 						</control>
 					</control>
