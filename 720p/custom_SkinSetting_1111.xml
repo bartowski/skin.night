@@ -154,6 +154,7 @@
 				<aligny>center</aligny>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
+				<animation effect="slide" start="0,0" end="0,-50" time="0" condition="Container(9000).Hasfocus(5)">Conditional</animation>
 			</control>
 			<control type="group" id="9010">
 				<control type="grouplist" id="9001">
@@ -2441,9 +2442,9 @@
 					<control type="grouplist" id="9005">
 						<visible>Container(9000).Hasfocus(5)</visible>
 						<posx>290</posx>
-						<posy>50</posy>
+						<posy>0</posy>
 						<width>860</width>
-						<height>530</height>
+						<height>550</height>
 						<itemgap>-1</itemgap>
 						<pagecontrol>61</pagecontrol>
 						<onleft>9000</onleft>
@@ -2546,7 +2547,14 @@
 							<align>left</align>
 							<aligny>top</aligny>
 						</control>
-						<control type="label" id="513">
+						<control type="radiobutton" id="513">
+							<include>skin_settings_labels</include>
+							<label>Use TV Themes in Library</label>
+							<onclick>Skin.ToggleSetting(tv_theme)</onclick>
+							<selected>Skin.HasSetting(tv_theme)</selected>
+							<!--<visible>system.hasaddon(script.TvTunes)</visible>-->
+						</control>
+						<control type="label" id="514">
 							<width>860</width>
 							<height>45</height>
 							<font>font13caps</font>
@@ -2556,7 +2564,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 						</control>
-						<control type="button" id="514">
+						<control type="button" id="515">
 							<width>280</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
@@ -2570,7 +2578,7 @@
 							<onclick>XBMC.RunScript(script.logo-downloader,mode=bulk,clearart=False,logo=True,showthumb=False)</onclick>
 						</control>
 					</control>
-						<control type="textbox" id="515">
+						<control type="textbox" id="516">
 							<posx>400</posx>
 							<posy>560</posy>
 							<width>600</width>

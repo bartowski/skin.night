@@ -38,7 +38,13 @@
 	<include file="Viewtype_Slide.xml" />
 	<include file="Viewtype_Newest_Episodes.xml" />
 	
-	
+	<include name="no_tv_theme">
+		<onfocus>SetFocus(50)</onfocus>
+	</include>
+	<include name="yes_tv_theme">
+		 <onfocus>XBMC.RunScript(script.TvTunes,backend=True&amploop=True)</onfocus>
+         <onfocus>SetFocus(50)</onfocus>
+	</include>
 	
 	<include name="posterview_width_dark">
 		<width>1400</width>

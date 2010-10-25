@@ -300,7 +300,7 @@
 	<visible>Control.IsVisible(56)</visible>
 	<include>Animation_HiddenByInfo</include>
 		<control type="textbox">
-			<visible>[Container.Content(movies) | Container.Content(tvshows)] + !Player.HasAudio</visible>
+			<visible>[Container.Content(movies) | Container.Content(tvshows)] + ![Player.HasAudio + !substring(MusicPlayer.Title,theme)]</visible>
 			<posx>15</posx>
 			<posy>390</posy>
 			<width>540</width>
@@ -313,7 +313,7 @@
 			<include>Animation_Viewtype_Panel_BottomArea</include>
 		</control>
 		<control type="textbox">
-			<visible>[Container.Content(movies) | Container.Content(tvshows)] + Player.HasAudio</visible>
+			<visible>[Container.Content(movies) | Container.Content(tvshows)] + [Player.HasAudio + !substring(MusicPlayer.Title,theme)]</visible>
 			<posx>15</posx>
 			<posy>390</posy>
 			<width>540</width>
@@ -333,7 +333,7 @@
 			<texture>panel/last-overlay.png</texture>
 		</control>
 		<control type="grouplist">
-			<visible>Container.Content(movies) + !Player.HasAudio + !Skin.HasSetting(no_media_flags)</visible>
+			<visible>Container.Content(movies) + ![Player.HasAudio + !substring(MusicPlayer.Title,theme)] + !Skin.HasSetting(no_media_flags)</visible>
 			<description>Media Codec Flagging Images</description>
 			<posx>20</posx>
 			<posy>680</posy>
