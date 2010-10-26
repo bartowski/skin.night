@@ -896,7 +896,7 @@
 		</control>	
 			
 			<control type="grouplist">
-				<visible>Control.IsVisible(59) + [Container.Content(movies) | Container.Content(episodes)] + !Skin.HasSetting(no_media_flags) + ![Player.HasAudio + !substring(MusicPlayer.Title,theme)]</visible>
+				<visible>Control.IsVisible(59) + [Container.Content(movies) | Container.Content(episodes)] + !Skin.HasSetting(no_media_flags) + ![Player.HasAudio + !SubString(Window(10025).Property(TvTunesIsAlive),True)]</visible>
 				<animation effect="slide" start="0,0" end="-1000,0" time="600" delay="2800" condition="Container.Content(movies) + ![Container(59).OnNext | Container(59).OnPrevious]">Conditional</animation>
 				<description>Media Codec Flagging Images</description>
 				<posx>0</posx>

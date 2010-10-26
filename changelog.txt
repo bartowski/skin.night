@@ -1,3 +1,6 @@
-10/24/2010
+10/25/2010
+-Some more fine tuning for TvTune Script
+-Added French flag support
 
+10/24/2010
 -Added support for TvTune Script
