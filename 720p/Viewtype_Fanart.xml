@@ -5,6 +5,14 @@
 	<include name="Viewtype_Fanart">
 
 		<!-- Browser -->
+		<control type="image">
+			<visible>Control.IsVisible(56)</visible>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>panel/last-overlay.png</texture>
+		</control>
 		<control type="image"><!-- 1st overlay -->
 			<visible>Control.IsVisible(56) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
 			<posx>0</posx>
@@ -44,11 +52,11 @@
 		
 		
 		<control type="panel" id="56">
-			<visible>!Skin.HasSetting(no_Panel) + [Container.Content(Movies) | [Container.Content(tvshows) + Skin.HasSetting(TVPosters)]]</visible>
+			<visible>!Skin.HasSetting(no_Panel) + [Container.Content(Movies) | [Container.Content(tvshows) + Skin.HasSetting(TVPosters)]] + !substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite) + !Container.Content(Genres)</visible>
 			<posx>520</posx>
-			<posy>-105</posy><!-- -105 -->
+			<posy>12</posy><!-- -105 -->
 			<width>800</width>
-			<height>885</height><!-- 1570  1280 -->
+			<height>704</height><!-- 1570  1280 -->
 			<scrolltime>300</scrolltime>
 			<orientation>vertical</orientation>
 			<viewtype label="$LOCALIZE[31051]">List</viewtype>
@@ -60,20 +68,20 @@
 			<pagecontrol>66</pagecontrol>
 			<include>Animation_Viewtype_Panel_FocusArea</include>
 			<include>Animation_HiddenByInfo</include>
-			<itemlayout width="230" height="350">
+			<itemlayout width="230" height="350" condition="!Skin.HasSetting(panelview_more_posters)">
 			<control type="group">
 			<posx>60</posx>
-			<posy>0</posy>
+			<posy>16</posy>
 				<control type="image">
 					<posx>1</posx>
-					<posy>131</posy>
+					<posy>0</posy>
 					<width>215</width>
 					<height>320</height>
 					<texture>postermatteNF.png</texture>
 				</control>
 				<control type="image">
 					<posx>1</posx>
-					<posy>131</posy>
+					<posy>0</posy>
 					<width>215</width>
 					<height>320</height>
 					<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
@@ -83,7 +91,7 @@
 				</control>
 				<control type="image">
 					<posx>1</posx>
-					<posy>131</posy>
+					<posy>0</posy>
 					<width>215</width>
 					<height>320</height>
 					<texture>postermatteNF.png</texture>
@@ -91,7 +99,7 @@
 				</control>
 				<control type="image">
 					<posx>1</posx>
-					<posy>131</posy>
+					<posy>0</posy>
 					<width>215</width>
 					<height>320</height>
 					<texture background="true" diffuse="postermatteNF.png" fallback="defaultmoviegenre.jpg">extras\moviegenres\$INFO[ListItem.Label].jpg</texture>
@@ -102,7 +110,7 @@
 				</control>
 				<control type="image">
 					<posx>-12</posx>
-					<posy>118</posy>
+					<posy>-13</posy>
 					<width>240</width>
 					<height>346</height>
 					<texture>posterframeF.png</texture>
@@ -110,14 +118,14 @@
 				</control>
 				<control type="image">
 					<posx>0</posx>
-					<posy>130</posy>
+					<posy>-1</posy>
 					<width>216</width>
 					<height>322</height>
 					<texture>posterframeNF.png</texture>
 				</control>
 				<control type="image">
 					<posx>140</posx>
-					<posy>400</posy>
+					<posy>269</posy>
 					<width>100</width>
 					<height>76</height>
 					<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
@@ -125,12 +133,68 @@
 				</control>
 			</control>
 			</itemlayout>
-			
-			<focusedlayout width="300" height="184">
+			<itemlayout width="116" height="176" condition="Skin.HasSetting(panelview_more_posters)">
+					<control type="group">
+						<posx>60</posx>
+						<posy>0</posy>
+							<control type="image">
+								<posx>1</posx>
+								<posy>0</posy>
+								<width>112</width>
+								<height>170</height>
+								<texture>postermatteNF.png</texture>
+								<colordiffuse>black</colordiffuse>
+							</control>
+							<control type="image">
+								<posx>1</posx>
+								<posy>0</posy>
+								<width>112</width>
+								<height>170</height>
+								<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
+								<fadetime>200</fadetime>
+								<aspectratio scalediffuse="false">stretch</aspectratio>
+								<animation effect="fade" start="40" end="40" time="0" condition="true">Conditional</animation>
+							</control>
+							<control type="image">
+								<posx>0</posx>
+								<posy>-1</posy>
+								<width>112</width>
+								<height>170</height>
+								<texture>posterframeNF.png</texture>
+							</control>
+							<control type="image">
+								<posx>-6</posx>
+								<posy>-7</posy>
+								<width>126</width>
+								<height>184</height>
+								<texture>posterframeF.png</texture>
+								<colordiffuse>39FFFFFF</colordiffuse>
+							</control>
+							<control type="image">
+								<posx>62</posx>
+								<posy>134</posy>
+								<width>70</width>
+								<height>53</height>
+								<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+								<animation effect="fade" start="60" end="60" time="0" condition="true">Conditional</animation>
+								<visible>Container.Content(Movies) + Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+							</control>
+							<control type="image">
+								<posx>62</posx>
+								<posy>134</posy>
+								<width>70</width>
+								<height>53</height>
+								<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+								<animation effect="fade" start="60" end="60" time="0" condition="true">Conditional</animation>
+								<visible>Container.Content(tvshows) + Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+							</control>
+					</control>
+				</itemlayout>
+			<focusedlayout width="300" height="184" condition="!Skin.HasSetting(panelview_more_posters)">
 			<control type="group">
 			<posx>60</posx>
-			<posy>0</posy>
-				<control type="image">
+			<posy>16</posy>
+				<!--<control type="image">
 					<posx>-90</posx>
 					<posy>38</posy>
 					<width>392</width>
@@ -140,10 +204,10 @@
 						<effect type="zoom" center="auto" start="100" end="110" time="300" tween="back" easing="out" />
 						<effect type="fade" start="0" end="60" time="800" />
 					</animation>
-				</control>
+				</control>-->
 				<control type="image">
 					<posx>1</posx>
-					<posy>131</posy>
+					<posy>0</posy>
 					<width>215</width>
 					<height>320</height>
 					<texture>postermatteNF.png</texture>
@@ -153,7 +217,7 @@
 				</control>
 				<control type="image">
 					<posx>1</posx>
-					<posy>131</posy>
+					<posy>0</posy>
 					<width>215</width>
 					<height>320</height>
 					<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
@@ -166,7 +230,7 @@
 				</control>
 				<control type="image">
 					<posx>1</posx>
-					<posy>131</posy>
+					<posy>0</posy>
 					<width>215</width>
 					<height>320</height>
 					<texture background="true" diffuse="postermatteNF.png" fallback="defaultmoviegenre.jpg">extras\moviegenres\$INFO[ListItem.Label].jpg</texture>
@@ -191,7 +255,7 @@
 				</control>
 				<control type="image">
 					<posx>-12</posx>
-					<posy>118</posy>
+					<posy>-13</posy>
 					<width>240</width>
 					<height>346</height>
 					<texture>posterframeF.png</texture>
@@ -201,7 +265,7 @@
 				</control>
 				<control type="image">
 					<posx>0</posx>
-					<posy>130</posy>
+					<posy>-1</posy>
 					<width>216</width>
 					<height>322</height>
 					<texture>posterframeNF.png</texture>
@@ -209,8 +273,62 @@
 						<effect type="zoom" center="auto" start="100" end="110" time="300" tween="back" easing="out" />
 					</animation>
 				</control>
-				
 			</control>
+			</focusedlayout>
+			<focusedlayout width="116" height="176" condition="Skin.HasSetting(panelview_more_posters)">
+				<control type="group">
+					<posx>57</posx>
+					<posy>0</posy>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="auto" start="80" end="110" time="400" tween="back" easing="out" />
+					</animation>
+						<!--<control type="image">
+							<posx>-90</posx>
+							<posy>38</posy>
+							<width>392</width>
+							<height>500</height>
+							<texture>panel/panel_poster_back.png</texture>
+						</control>-->
+						<control type="image">
+							<posx>1</posx>
+							<posy>0</posy>
+							<width>112</width>
+							<height>170</height>
+							<texture>postermatteNF.png</texture>
+						</control>
+						<control type="image">
+							<posx>1</posx>
+							<posy>0</posy>
+							<width>112</width>
+							<height>170</height>
+							<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
+							<fadetime>200</fadetime>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+						</control>
+						<control type="image">
+							<posx>62</posx>
+							<posy>134</posy>
+							<width>70</width>
+							<height>53</height>
+							<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+							<visible>Container.Content(Movies) + Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+						</control>
+						<control type="image">
+							<posx>62</posx>
+							<posy>134</posy>
+							<width>70</width>
+							<height>53</height>
+							<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+							<visible>Container.Content(tvshows) + Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+						</control>
+						<control type="image">
+							<posx>-6</posx>
+							<posy>-7</posy>
+							<width>126</width>
+							<height>184</height>
+							<texture>posterframeF.png</texture>
+						</control>
+				</control>
 			</focusedlayout>
 		</control>
 		
@@ -323,14 +441,6 @@
 			<label>$INFO[ListItem.Plot]</label>
 			<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 			<include>Animation_Viewtype_Panel_BottomArea</include>
-		</control>
-		<control type="image">
-			<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<texture>panel/last-overlay.png</texture>
 		</control>
 		<control type="grouplist">
 			<visible>Container.Content(movies) + ![Player.HasAudio + !SubString(Window(10025).Property(TvTunesIsAlive),True)] + !Skin.HasSetting(no_media_flags)</visible>

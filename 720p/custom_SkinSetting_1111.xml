@@ -2349,94 +2349,7 @@
 							<onclick>Skin.SetAddon(HomeScriptButton7_Path,xbmc.python.script)</onclick>
 							<visible>Skin.HasSetting(HomeScriptButton6)</visible>
 						</control>
-
-						<!--<control type="label" id="419">
-							<width>860</width>
-							<height>45</height>
-							<font>Font_KeyboardKeys</font>
-							<label>31122</label>
-							<textcolor>blue</textcolor>
-							<shadowcolor>black</shadowcolor>
-							<align>left</align>
-							<aligny>center</aligny>
-						</control>
-
-						<control type="radiobutton" id="420">
-							<width>860</width>
-							<height>40</height>
-							<font>font13</font>
-							<label>$LOCALIZE[31119]</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-							<onclick>Skin.ToggleSetting(WeatherScript_Enable)</onclick>
-							<selected>Skin.HasSetting(WeatherScript_Enable)</selected>
-						</control>
-						<control type="button" id="421">
-							<width>860</width>
-							<height>40</height>
-							<font>font12</font>
-							<label> - $LOCALIZE[31120]</label>
-							<label2>[COLOR=selected]$INFO[Skin.String(WeatherScript_Label)][/COLOR]</label2>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-							<onclick>Skin.SetString(WeatherScript_Label)</onclick>
-							<visible>Skin.HasSetting(WeatherScript_Enable)</visible>
-						</control>
-						<control type="button" id="422">
-							<width>860</width>
-							<height>40</height>
-							<font>font12</font>
-							<label> - $LOCALIZE[31121]</label>
-							<label2>[COLOR=selected]$INFO[Skin.String(WeatherScript_Path)][/COLOR]</label2>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-							<onclick>Skin.SetFile(WeatherScript_Path,.py)</onclick>
-							<visible>Skin.HasSetting(WeatherScript_Enable)</visible>
-						</control>
-
-						<control type="label" id="423">
-							<width>860</width>
-							<height>45</height>
-							<font>Font_KeyboardKeys</font>
-							<label>31128</label>
-							<textcolor>blue</textcolor>
-							<shadowcolor>black</shadowcolor>
-							<align>left</align>
-							<aligny>center</aligny>
-						</control>
-
-						<control type="radiobutton" id="424">
-							<width>860</width>
-							<height>35</height>
-							<font>font13</font>
-							<label>$LOCALIZE[31126]</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-							<onclick>Skin.ToggleSetting(LyricScript_Enable)</onclick>
-							<selected>Skin.HasSetting(LyricScript_Enable)</selected>
-						</control>
-						<control type="button" id="425">
-							<width>860</width>
-							<height>35</height>
-							<font>font12</font>
-							<label>- $LOCALIZE[31127]</label>
-							<label2>[COLOR=selected]$INFO[Skin.String(LyricScript_Path)][/COLOR]</label2>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-							<onclick>Skin.SetFile(LyricScript_Path,.py)</onclick>
-							<visible>Skin.HasSetting(LyricScript_Enable)</visible>
-						</control>-->
-					</control>
+				</control>
 				</control>
 				<control type="group"><!--mcborzu tv-->
 					<control type="grouplist" id="9005">
@@ -2764,6 +2677,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 						</control>
+						
 						<control type="radiobutton" id="702">
 							<description>custom home 1</description>
 							<include>skin_settings_labels</include>
@@ -2773,8 +2687,6 @@
 							<selected>Skin.HasSetting(Menu_Custom1)</selected>
 							<enable>!Skin.HasSetting(Menu_Movies_Sub)</enable>
 						</control>
-						
-							
 							<control type="button" id="8201">
 								<description>Menu Movies Sub Custom8 Label</description>
 								<label>- $LOCALIZE[31262]</label>
@@ -2792,6 +2704,8 @@
 								<onclick>ActivateWindow(1114)</onclick>
 								<visible>Skin.HasSetting(Menu_Custom1) + Skin.String(MoviesCustom,1)</visible>
 							</control>
+							
+							
 						<control type="radiobutton" id="703">
 							<description>custom home 2</description>
 							<include>skin_settings_labels</include>
@@ -2801,9 +2715,7 @@
 							<selected>Skin.HasSetting(Menu_Custom2)</selected>
 							<enable>!Skin.HasSetting(Menu_Movies_Sub2)</enable>
 						</control>
-						
-							
-							<control type="button" id="8203">
+						<control type="button" id="8203">
 								<description>Menu Movies Sub Custom8 Label</description>
 								<label>- $LOCALIZE[31262]</label>
 								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom2_Label)][/COLOR]</label2>
@@ -2820,6 +2732,7 @@
 								<onclick>ActivateWindow(1114)</onclick>
 								<visible>Skin.HasSetting(Menu_Custom2) + Skin.String(MoviesCustom,2)</visible>
 							</control>
+							
 						<control type="radiobutton" id="704">
 							<description>custom home 3</description>
 							<include>skin_settings_labels</include>
@@ -2829,9 +2742,7 @@
 							<selected>Skin.HasSetting(Menu_Custom3)</selected>
 							<enable>!Skin.HasSetting(Menu_Movies_Sub3)</enable>
 						</control>
-						
-							
-							<control type="button" id="8205">
+						<control type="button" id="8205">
 								<description>custom home 3</description>
 								<label>- $LOCALIZE[31262]</label>
 								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom3_Label)][/COLOR]</label2>
@@ -2848,6 +2759,7 @@
 								<onclick>ActivateWindow(1114)</onclick>
 								<visible>Skin.HasSetting(Menu_Custom3) + Skin.String(MoviesCustom,3)</visible>
 							</control>
+							
 						<control type="radiobutton" id="705">
 							<description>custom home 4</description>
 							<include>skin_settings_labels</include>
@@ -2857,9 +2769,7 @@
 							<selected>Skin.HasSetting(Menu_Custom4)</selected>
 							<enable>!Skin.HasSetting(Menu_Movies_Sub4)</enable>
 						</control>
-						
-							
-							<control type="button" id="8207">
+						<control type="button" id="8207">
 								<description>custom home 4</description>
 								<label>- $LOCALIZE[31262]</label>
 								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom4_Label)][/COLOR]</label2>
@@ -2876,6 +2786,7 @@
 								<onclick>ActivateWindow(1114)</onclick>
 								<visible>Skin.HasSetting(Menu_Custom4) + Skin.String(MoviesCustom,4)</visible>
 							</control>
+							
 						<control type="radiobutton" id="706">
 							<description>custom home 5</description>
 							<include>skin_settings_labels</include>
@@ -2885,9 +2796,7 @@
 							<selected>Skin.HasSetting(Menu_Custom5)</selected>
 							<enable>!Skin.HasSetting(Menu_Movies_Sub5)</enable>
 						</control>
-						
-							
-							<control type="button" id="8209">
+						<control type="button" id="8209">
 								<description>custom home 5</description>
 								<label>- $LOCALIZE[31262]</label>
 								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom5_Label)][/COLOR]</label2>
@@ -2904,6 +2813,7 @@
 								<onclick>ActivateWindow(1114)</onclick>
 								<visible>Skin.HasSetting(Menu_Custom5) + Skin.String(MoviesCustom,5)</visible>
 							</control>
+							
 							<control type="radiobutton" id="707">
 								<description>custom home 6</description>
 								<include>skin_settings_labels</include>
@@ -2914,8 +2824,6 @@
 								<selected>Skin.HasSetting(Menu_Custom6)</selected>
 								<enable>!Skin.HasSetting(Menu_Movies_Sub6)</enable>
 							</control>
-						
-							
 							<control type="button" id="8211">
 								<description>custom home 6</description>
 								<label>- $LOCALIZE[31262]</label>
@@ -2932,6 +2840,7 @@
 								<onclick>Skin.SetFile(Menu_Custom6_Path,.xsp,special://videoplaylists)</onclick>
 								<visible>Skin.HasSetting(Menu_Custom6) + Skin.String(MoviesCustom,6)</visible>
 							</control>
+							
 							<control type="radiobutton" id="708">
 								<description>custom home 7</description>
 								<include>skin_settings_labels</include>
@@ -2941,8 +2850,6 @@
 								<selected>Skin.HasSetting(Menu_Custom7)</selected>
 								<enable>!Skin.HasSetting(Menu_Movies_Sub7)</enable>
 							</control>
-						
-							
 							<control type="button" id="8213">
 								<description>custom home 7</description>
 								<label>- $LOCALIZE[31262]</label>
@@ -2959,6 +2866,7 @@
 								<onclick>Skin.SetFile(Menu_Custom7_Path,.xsp,special://videoplaylists)</onclick>
 								<visible>Skin.HasSetting(Menu_Custom7) + Skin.String(MoviesCustom,7)</visible>
 							</control>
+							
 							<control type="radiobutton" id="709">
 								<description>custom home 8</description>
 								<include>skin_settings_labels</include>
@@ -2968,8 +2876,6 @@
 								<selected>Skin.HasSetting(Menu_Custom8)</selected>
 								<enable>!Skin.HasSetting(Menu_Movies_Sub8)</enable>
 							</control>
-						
-							
 							<control type="button" id="8215">
 								<description>custom home 8</description>
 								<label>- $LOCALIZE[31262]</label>
@@ -3051,10 +2957,10 @@
 						<pagecontrol>61</pagecontrol>
 						<onleft>9000</onleft>
 						<onright>61</onright>
-						<onup>9007</onup>
-						<ondown>9007</ondown>
+						<onup>9008</onup>
+						<ondown>9008</ondown>
 						<!--<animation effect="slide" start="0,0" end="0,-70" time="1000" delay="200" tween="cubic" easing="inout" condition="Control.HasFocus(719) | Control.HasFocus(8229) | Control.HasFocus(8229)">Conditional</animation>-->
-						<control type="label" id="712">
+						<control type="label" id="801">
 								<width>860</width>
 								<height>45</height>
 								<font>font13caps</font>
@@ -3065,7 +2971,7 @@
 								<aligny>center</aligny>
 							</control>
 							
-							<control type="radiobutton" id="713">
+							<control type="radiobutton" id="802">
 								<description>custom home 11</description>
 								<include>skin_settings_labels</include>
 								<label>$LOCALIZE[31293] 1</label>
@@ -3074,7 +2980,7 @@
 								<selected>Skin.HasSetting(Menu_Custom11)</selected>
 								<enable>!Skin.HasSetting(Menu_Movies_Sub11)</enable>
 							</control>
-							<control type="button" id="8221">
+							<control type="button" id="8900">
 								<description>Menu Movies Sub Custom11 Label</description>
 								<label>- $LOCALIZE[31262]</label>
 								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom11_Label)][/COLOR]</label2>
@@ -3082,7 +2988,7 @@
 								<onclick>Skin.SetString(Menu_Custom11_Label)</onclick>
 								<visible>Skin.HasSetting(Menu_Custom11) + Skin.String(MoviesCustom,11)</visible>
 							</control>
-							<control type="button" id="8222">
+							<control type="button" id="8901">
 								<description>Menu Movies Sub Custom11 Path</description>
 								<label>- $LOCALIZE[31290]</label>
 								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom11_Path)][/COLOR]</label2>
@@ -3091,7 +2997,8 @@
 								<onclick>ActivateWindow(1114)</onclick>
 								<visible>Skin.HasSetting(Menu_Custom11) + Skin.String(MoviesCustom,11)</visible>
 							</control>
-							<!--<control type="radiobutton" id="723">
+							
+							<control type="radiobutton" id="803">
 								<description>custom home 19</description>
 								<include>skin_settings_labels</include>
 								<label>$LOCALIZE[31293] 2</label>
@@ -3100,25 +3007,25 @@
 								<selected>Skin.HasSetting(Menu_Custom19)</selected>
 								<enable>!Skin.HasSetting(Menu_Movies_Sub19)</enable>
 							</control>
-							<control type="button" id="8237">
+							<control type="button" id="8902">
 								<description>Menu Movies Sub Custom19 Label</description>
 								<label>- $LOCALIZE[31262]</label>
-								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom11_Label)][/COLOR]</label2>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom19_Label)][/COLOR]</label2>
 								<include>skin_settings_button</include>
 								<onclick>Skin.SetString(Menu_Custom19_Label)</onclick>
 								<visible>Skin.HasSetting(Menu_Custom19) + Skin.String(MoviesCustom,19)</visible>
 							</control>
-							<control type="button" id="8238">
+							<control type="button" id="8903">
 								<description>Menu Movies Sub Custom11 Path</description>
 								<label>- $LOCALIZE[31290]</label>
 								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom19_Path)][/COLOR]</label2>
 								<include>skin_settings_button</include>
 								<onclick>Skin.SetString(Menu_Sub_Custom_Favourites_Path,Menu_Custom19_Path)</onclick>
 								<onclick>ActivateWindow(1114)</onclick>
-								<visible>Skin.HasSetting(Menu_Custom11) + Skin.String(MoviesCustom,19)</visible>
-							</control>-->
+								<visible>Skin.HasSetting(Menu_Custom19) + Skin.String(MoviesCustom,19)</visible>
+							</control>
 							
-							<control type="radiobutton" id="714">
+							<control type="radiobutton" id="804">
 								<description>custom home 12</description>
 								<include>skin_settings_labels</include>
 								<label>$LOCALIZE[31294] 1</label>
@@ -3127,15 +3034,15 @@
 								<selected>Skin.HasSetting(Menu_Custom12)</selected>
 								<enable>!Skin.HasSetting(Menu_Movies_Sub12)</enable>
 							</control>
-							<control type="button" id="8223">
-								<description>custom home 10</description>
+							<control type="button" id="8904">
+								<description>custom home 12</description>
 								<label>- $LOCALIZE[31262]</label>
 								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom12_Label)][/COLOR]</label2>
 								<include>skin_settings_button</include>
 								<onclick>Skin.SetString(Menu_Custom12_Label)</onclick>
 								<visible>Skin.HasSetting(Menu_Custom12) + Skin.String(MoviesCustom,12)</visible>
 							</control>
-							<control type="button" id="8224">
+							<control type="button" id="8905">
 								<description>custom home 12</description>
 								<label>- $LOCALIZE[31291]</label>
 								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom12_Path)][/COLOR]</label2>
@@ -3144,8 +3051,60 @@
 								<visible>Skin.HasSetting(Menu_Custom12) + Skin.String(MoviesCustom,12)</visible>
 							</control>
 							
+							<control type="radiobutton" id="805">
+								<description>custom home 22</description>
+								<include>skin_settings_labels</include>
+								<label>$LOCALIZE[31294] 2</label>
+								<onfocus>Skin.SetString(MoviesCustom,22)</onfocus>
+								<onclick>Skin.ToggleSetting(Menu_Custom22)</onclick>
+								<selected>Skin.HasSetting(Menu_Custom22)</selected>
+								<enable>!Skin.HasSetting(Menu_Movies_Sub22)</enable>
+							</control>
+							<control type="button" id="8906">
+								<description>custom home 22</description>
+								<label>- $LOCALIZE[31262]</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom22_Label)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetString(Menu_Custom22_Label)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom22) + Skin.String(MoviesCustom,22)</visible>
+							</control>
+							<control type="button" id="8907">
+								<description>custom home 22</description>
+								<label>- $LOCALIZE[31291]</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom22_Path)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetFile(Menu_Custom22_Path,.xsp,special://videoplaylists)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom22) + Skin.String(MoviesCustom,22)</visible>
+							</control>
 							
-							<control type="label" id="715">
+							<control type="radiobutton" id="806">
+								<description>custom home 23</description>
+								<include>skin_settings_labels</include>
+								<label>$LOCALIZE[31294] 3</label>
+								<onfocus>Skin.SetString(MoviesCustom,23)</onfocus>
+								<onclick>Skin.ToggleSetting(Menu_Custom23)</onclick>
+								<selected>Skin.HasSetting(Menu_Custom23)</selected>
+								<enable>!Skin.HasSetting(Menu_Movies_Sub23)</enable>
+							</control>
+							<control type="button" id="8908">
+								<description>custom home 23</description>
+								<label>- $LOCALIZE[31262]</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom23_Label)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetString(Menu_Custom23_Label)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom23) + Skin.String(MoviesCustom,23)</visible>
+							</control>
+							<control type="button" id="8909">
+								<description>custom home 23</description>
+								<label>- $LOCALIZE[31291]</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom22_Path)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetFile(Menu_Custom23_Path,.xsp,special://videoplaylists)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom23) + Skin.String(MoviesCustom,23)</visible>
+							</control>
+							
+							
+							<control type="label" id="807">
 								<width>860</width>
 								<height>45</height>
 								<font>font13caps</font>
@@ -3156,7 +3115,7 @@
 								<aligny>center</aligny>
 							</control>
 							
-							<control type="radiobutton" id="716">
+							<control type="radiobutton" id="808">
 								<description>custom home 13</description>
 								<include>skin_settings_labels</include>
 								<label>$LOCALIZE[31293] 1</label>
@@ -3165,7 +3124,7 @@
 								<selected>Skin.HasSetting(Menu_Custom13)</selected>
 								<enable>!Skin.HasSetting(Menu_Movies_Sub13)</enable>
 							</control>
-							<control type="button" id="8225">
+							<control type="button" id="8911">
 								<description>Menu Movies Sub Custom13 Label</description>
 								<label>- $LOCALIZE[31262]</label>
 								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom13_Label)][/COLOR]</label2>
@@ -3173,7 +3132,7 @@
 								<onclick>Skin.SetString(Menu_Custom13_Label)</onclick>
 								<visible>Skin.HasSetting(Menu_Custom13) + Skin.String(MoviesCustom,13)</visible>
 							</control>
-							<control type="button" id="8226">
+							<control type="button" id="8912">
 								<description>Menu Movies Sub Custom13 Path</description>
 								<label>- $LOCALIZE[31290]</label>
 								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom13_Path)][/COLOR]</label2>
@@ -3183,7 +3142,34 @@
 								<visible>Skin.HasSetting(Menu_Custom13) + Skin.String(MoviesCustom,13)</visible>
 							</control>
 							
-							<control type="radiobutton" id="717">
+							<control type="radiobutton" id="809">
+								<description>custom home 20</description>
+								<include>skin_settings_labels</include>
+								<label>$LOCALIZE[31293] 2</label>
+								<onfocus>Skin.SetString(MoviesCustom,20)</onfocus>
+								<onclick>Skin.ToggleSetting(Menu_Custom20)</onclick>
+								<selected>Skin.HasSetting(Menu_Custom20)</selected>
+								<enable>!Skin.HasSetting(Menu_Movies_Sub20)</enable>
+							</control>
+							<control type="button" id="8913">
+								<description>Menu Movies Sub Custom20 Label</description>
+								<label>- $LOCALIZE[31262]</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom20_Label)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetString(Menu_Custom20_Label)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom20) + Skin.String(MoviesCustom,20)</visible>
+							</control>
+							<control type="button" id="8914">
+								<description>Menu Movies Sub Custom20 Path</description>
+								<label>- $LOCALIZE[31290]</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom20_Path)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetString(Menu_Sub_Custom_Favourites_Path,Menu_Custom20_Path)</onclick>
+								<onclick>ActivateWindow(1114)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom20) + Skin.String(MoviesCustom,20)</visible>
+							</control>
+							
+							<control type="radiobutton" id="810">
 								<description>custom home 14</description>
 								<include>skin_settings_labels</include>
 								<label>$LOCALIZE[31294] 1</label>
@@ -3192,7 +3178,7 @@
 								<selected>Skin.HasSetting(Menu_Custom14)</selected>
 								<enable>!Skin.HasSetting(Menu_Movies_Sub14)</enable>
 							</control>
-							<control type="button" id="8227">
+							<control type="button" id="8915">
 								<description>custom home 14</description>
 								<label>- $LOCALIZE[31262]</label>
 								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom14_Label)][/COLOR]</label2>
@@ -3200,7 +3186,7 @@
 								<onclick>Skin.SetString(Menu_Custom14_Label)</onclick>
 								<visible>Skin.HasSetting(Menu_Custom14) + Skin.String(MoviesCustom,14)</visible>
 							</control>
-							<control type="button" id="8228">
+							<control type="button" id="8916">
 								<description>custom home 14</description>
 								<label>- $LOCALIZE[31291]</label>
 								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom14_Path)][/COLOR]</label2>
@@ -3209,7 +3195,59 @@
 								<visible>Skin.HasSetting(Menu_Custom14) + Skin.String(MoviesCustom,14)</visible>
 							</control>
 							
-							<control type="label" id="718">
+							<control type="radiobutton" id="811">
+								<description>custom home 24</description>
+								<include>skin_settings_labels</include>
+								<label>$LOCALIZE[31294] 2</label>
+								<onfocus>Skin.SetString(MoviesCustom,24)</onfocus>
+								<onclick>Skin.ToggleSetting(Menu_Custom24)</onclick>
+								<selected>Skin.HasSetting(Menu_Custom24)</selected>
+								<enable>!Skin.HasSetting(Menu_Movies_Sub24)</enable>
+							</control>
+							<control type="button" id="8917">
+								<description>custom home 24</description>
+								<label>- $LOCALIZE[31262]</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom24_Label)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetString(Menu_Custom24_Label)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom24) + Skin.String(MoviesCustom,24)</visible>
+							</control>
+							<control type="button" id="8918">
+								<description>custom home 24</description>
+								<label>- $LOCALIZE[31291]</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom24_Path)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetFile(Menu_Custom24_Path,.xsp,special://videoplaylists)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom24) + Skin.String(MoviesCustom,24)</visible>
+							</control>
+							
+							<control type="radiobutton" id="812">
+								<description>custom home 25</description>
+								<include>skin_settings_labels</include>
+								<label>$LOCALIZE[31294] 3</label>
+								<onfocus>Skin.SetString(MoviesCustom,25)</onfocus>
+								<onclick>Skin.ToggleSetting(Menu_Custom25)</onclick>
+								<selected>Skin.HasSetting(Menu_Custom25)</selected>
+								<enable>!Skin.HasSetting(Menu_Movies_Sub25)</enable>
+							</control>
+							<control type="button" id="8919">
+								<description>custom home 25</description>
+								<label>- $LOCALIZE[31262]</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom25_Label)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetString(Menu_Custom25_Label)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom25) + Skin.String(MoviesCustom,25)</visible>
+							</control>
+							<control type="button" id="8920">
+								<description>custom home 25</description>
+								<label>- $LOCALIZE[31291]</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom25_Path)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetFile(Menu_Custom25_Path,.xsp,special://videoplaylists)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom25) + Skin.String(MoviesCustom,25)</visible>
+							</control>
+							
+							<control type="label" id="813">
 								<width>860</width>
 								<height>45</height>
 								<font>font13caps</font>
@@ -3220,7 +3258,7 @@
 								<aligny>center</aligny>
 							</control>
 							
-							<control type="radiobutton" id="719">
+							<control type="radiobutton" id="814">
 								<description>custom home 15</description>
 								<include>skin_settings_labels</include>
 								<label>$LOCALIZE[31293] 1</label>
@@ -3229,7 +3267,7 @@
 								<selected>Skin.HasSetting(Menu_Custom15)</selected>
 								<enable>!Skin.HasSetting(Menu_Movies_Sub15)</enable>
 							</control>
-							<control type="button" id="8229">
+							<control type="button" id="8921">
 								<description>Menu Movies Sub Custom15 Label</description>
 								<label>- $LOCALIZE[31262]</label>
 								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom15_Label)][/COLOR]</label2>
@@ -3237,7 +3275,7 @@
 								<onclick>Skin.SetString(Menu_Custom15_Label)</onclick>
 								<visible>Skin.HasSetting(Menu_Custom15) + Skin.String(MoviesCustom,15)</visible>
 							</control>
-							<control type="button" id="8230">
+							<control type="button" id="8922">
 								<description>Menu Movies Sub Custom15 Path</description>
 								<label>- $LOCALIZE[31290]</label>
 								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom15_Path)][/COLOR]</label2>
@@ -3246,7 +3284,35 @@
 								<onclick>ActivateWindow(1114)</onclick>
 								<visible>Skin.HasSetting(Menu_Custom15) + Skin.String(MoviesCustom,15)</visible>
 							</control>
-							<control type="radiobutton" id="720">
+							
+							<control type="radiobutton" id="815">
+								<description>custom home 21</description>
+								<include>skin_settings_labels</include>
+								<label>$LOCALIZE[31293] 2</label>
+								<onfocus>Skin.SetString(MoviesCustom,21)</onfocus>
+								<onclick>Skin.ToggleSetting(Menu_Custom21)</onclick>
+								<selected>Skin.HasSetting(Menu_Custom21)</selected>
+								<enable>!Skin.HasSetting(Menu_Movies_Sub21)</enable>
+							</control>
+							<control type="button" id="8923">
+								<description>Menu Movies Sub Custom21 Label</description>
+								<label>- $LOCALIZE[31262]</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom21_Label)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetString(Menu_Custom21_Label)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom21) + Skin.String(MoviesCustom,21)</visible>
+							</control>
+							<control type="button" id="8924">
+								<description>Menu Movies Sub Custom21 Path</description>
+								<label>- $LOCALIZE[31290]</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom21_Path)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetString(Menu_Sub_Custom_Favourites_Path,Menu_Custom21_Path)</onclick>
+								<onclick>ActivateWindow(1114)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom21) + Skin.String(MoviesCustom,21)</visible>
+							</control>
+							
+							<control type="radiobutton" id="816">
 								<description>custom home 16</description>
 								<include>skin_settings_labels</include>
 								<label>$LOCALIZE[31294] 1</label>
@@ -3255,7 +3321,7 @@
 								<selected>Skin.HasSetting(Menu_Custom16)</selected>
 								<enable>!Skin.HasSetting(Menu_Movies_Sub16)</enable>
 							</control>
-							<control type="button" id="8231">
+							<control type="button" id="8925">
 								<description>custom home 16</description>
 								<label>- $LOCALIZE[31262]</label>
 								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom16_Label)][/COLOR]</label2>
@@ -3263,7 +3329,7 @@
 								<onclick>Skin.SetString(Menu_Custom16_Label)</onclick>
 								<visible>Skin.HasSetting(Menu_Custom16) + Skin.String(MoviesCustom,16)</visible>
 							</control>
-							<control type="button" id="8232">
+							<control type="button" id="8926">
 								<description>custom home 16</description>
 								<label>- $LOCALIZE[31291]</label>
 								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom16_Path)][/COLOR]</label2>
@@ -3271,7 +3337,8 @@
 								<onclick>Skin.SetFile(Menu_Custom16_Path,.xsp,special://musicplaylists)</onclick>
 								<visible>Skin.HasSetting(Menu_Custom16) + Skin.String(MoviesCustom,16)</visible>
 							</control>
-							<control type="radiobutton" id="721">
+							
+							<control type="radiobutton" id="817">
 								<description>custom home 17</description>
 								<include>skin_settings_labels</include>
 								<label>$LOCALIZE[31294] 2</label>
@@ -3280,7 +3347,7 @@
 								<selected>Skin.HasSetting(Menu_Custom17)</selected>
 								<enable>!Skin.HasSetting(Menu_Movies_Sub17)</enable>
 							</control>
-							<control type="button" id="8233">
+							<control type="button" id="8927">
 								<description>custom home 17</description>
 								<label>- $LOCALIZE[31262]</label>
 								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom17_Label)][/COLOR]</label2>
@@ -3288,7 +3355,7 @@
 								<onclick>Skin.SetString(Menu_Custom17_Label)</onclick>
 								<visible>Skin.HasSetting(Menu_Custom17) + Skin.String(MoviesCustom,17)</visible>
 							</control>
-							<control type="button" id="8234">
+							<control type="button" id="8928">
 								<description>custom home 17</description>
 								<label>- $LOCALIZE[31291]</label>
 								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom17_Path)][/COLOR]</label2>
@@ -3296,7 +3363,8 @@
 								<onclick>Skin.SetFile(Menu_Custom17_Path,.xsp,special://musicplaylists)</onclick>
 								<visible>Skin.HasSetting(Menu_Custom17) + Skin.String(MoviesCustom,17)</visible>
 							</control>
-							<control type="radiobutton" id="722">
+							
+							<control type="radiobutton" id="818">
 								<description>custom home 18</description>
 								<include>skin_settings_labels</include>
 								<label>$LOCALIZE[31294] 3</label>
@@ -3305,7 +3373,7 @@
 								<selected>Skin.HasSetting(Menu_Custom18)</selected>
 								<enable>!Skin.HasSetting(Menu_Movies_Sub18)</enable>
 							</control>
-							<control type="button" id="8235">
+							<control type="button" id="8929">
 								<description>custom home 18</description>
 								<label>- $LOCALIZE[31262]</label>
 								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom18_Label)][/COLOR]</label2>
@@ -3313,13 +3381,39 @@
 								<onclick>Skin.SetString(Menu_Custom18_Label)</onclick>
 								<visible>Skin.HasSetting(Menu_Custom18) + Skin.String(MoviesCustom,18)</visible>
 							</control>
-							<control type="button" id="8236">
+							<control type="button" id="8930">
 								<description>custom home 18</description>
 								<label>- $LOCALIZE[31291]</label>
 								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom18_Path)][/COLOR]</label2>
 								<include>skin_settings_button</include>
 								<onclick>Skin.SetFile(Menu_Custom18_Path,.xsp,special://musicplaylists)</onclick>
 								<visible>Skin.HasSetting(Menu_Custom18) + Skin.String(MoviesCustom,18)</visible>
+							</control>
+							
+							<control type="radiobutton" id="819">
+								<description>custom home 26</description>
+								<include>skin_settings_labels</include>
+								<label>$LOCALIZE[31294] 4</label>
+								<onfocus>Skin.SetString(MoviesCustom,26)</onfocus>
+								<onclick>Skin.ToggleSetting(Menu_Custom26)</onclick>
+								<selected>Skin.HasSetting(Menu_Custom26)</selected>
+								<enable>!Skin.HasSetting(Menu_Movies_Sub26)</enable>
+							</control>
+							<control type="button" id="8931">
+								<description>custom home 26</description>
+								<label>- $LOCALIZE[31262]</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom26_Label)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetString(Menu_Custom26_Label)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom26) + Skin.String(MoviesCustom,26)</visible>
+							</control>
+							<control type="button" id="8932">
+								<description>custom home 26</description>
+								<label>- $LOCALIZE[31291]</label>
+								<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom26_Path)][/COLOR]</label2>
+								<include>skin_settings_button</include>
+								<onclick>Skin.SetFile(Menu_Custom26_Path,.xsp,special://musicplaylists)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom26) + Skin.String(MoviesCustom,26)</visible>
 							</control>
 						</control>
 				</control>

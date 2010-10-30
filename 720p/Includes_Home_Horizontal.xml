@@ -375,39 +375,54 @@
 								<visible>Skin.HasSetting(Menu_Custom11)</visible>
 							</item>
 							<item id="2">
+								<label>$INFO[Skin.String(Menu_Custom19_Label)]</label>
+								<onclick>$INFO[Skin.String(Menu_Custom19_Path)]</onclick>
+								<visible>Skin.HasSetting(Menu_Custom19)</visible>
+							</item>
+							<item id="3">
 								<label>$INFO[Skin.String(Menu_Custom12_Label)]</label>
 								<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Menu_Custom12_Path)],return)</onclick>
 								<visible>Skin.HasSetting(Menu_Custom12)</visible>
 							</item>
-							<item id="3">
+							<item id="4">
+								<label>$INFO[Skin.String(Menu_Custom22_Label)]</label>
+								<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Menu_Custom22_Path)],return)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom22)</visible>
+							</item>
+							<item id="5">
+								<label>$INFO[Skin.String(Menu_Custom23_Label)]</label>
+								<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Menu_Custom23_Path)],return)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom23)</visible>
+							</item>
+							<item id="6">
 								<label>$LOCALIZE[744]</label>
 								<onclick>ActivateWindow(VideoFiles)</onclick>
 							</item>
-							<item id="4">
+							<item id="7">
 								<label>$LOCALIZE[135]</label>
 								<onclick>ActivateWindow(VideoLibrary,MovieGenres,return)</onclick>
 							</item>
-							<item id="5">
+							<item id="8">
 								<label>$LOCALIZE[652]</label>
 							<onclick>ActivateWindow(VideoLibrary,MovieYears,return)</onclick>
 							</item>
-							<item id="6">
+							<item id="9">
 								<label>$LOCALIZE[344]</label>
 								<onclick>ActivateWindow(VideoLibrary,MovieActors,return)</onclick>
 							</item>
-							<item id="7">
+							<item id="10">
 								<label>$LOCALIZE[20348]</label>
 								<onclick>ActivateWindow(VideoLibrary,MovieDirectors,return)</onclick>
 							</item>
-							<item id="8">
+							<item id="11">
 								<label>$LOCALIZE[136]</label>
 								<onclick>ActivateWindow(VideoLibrary,Playlists,return)</onclick>
 							</item>
-							<item id="9">
+							<item id="12">
 								<label>$LOCALIZE[31296]</label>
 								<onclick>ActivateWindow(VideoLibrary,RecentlyAddedMovies,return)</onclick>
 							</item>
-							<item id="10">
+							<item id="13">
 								<label>20389</label>
 								<onclick>ActivateWindow(VideoLibrary,MusicVideoTitles,return)</onclick>
 								<visible>Library.HasContent(MusicVideos)</visible>
@@ -466,27 +481,42 @@
 								<visible>Skin.HasSetting(Menu_Custom13)</visible>
 							</item>
 							<item id="2">
+								<label>$INFO[Skin.String(Menu_Custom20_Label)]</label>
+								<onclick>$INFO[Skin.String(Menu_Custom20_Path)]</onclick>
+								<visible>Skin.HasSetting(Menu_Custom20)</visible>
+							</item>
+							<item id="3">
 								<label>$INFO[Skin.String(Menu_Custom14_Label)]</label>
 								<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Menu_Custom14_Path)],return)</onclick>
 								<visible>Skin.HasSetting(Menu_Custom14)</visible>
 							</item>
-							<item id="3">
+							<item id="4">
+								<label>$INFO[Skin.String(Menu_Custom24_Label)]</label>
+								<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Menu_Custom24_Path)],return)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom24)</visible>
+							</item>
+							<item id="5">
+								<label>$INFO[Skin.String(Menu_Custom25_Label)]</label>
+								<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Menu_Custom25_Path)],return)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom25)</visible>
+							</item>
+							<item id="6">
 								<label>$LOCALIZE[744]</label>
 								<onclick>ActivateWindow(VideoFiles)</onclick>
 							</item>
-							<item id="4">
+							<item id="7">
 								<label>$LOCALIZE[135]</label>
 								<onclick>ActivateWindow(VideoLibrary,TVShowGenres,return)</onclick>
 							</item>
-							<item id="5">
+							<item id="8">
 								<label>$LOCALIZE[652]</label>
 								<onclick>ActivateWindow(VideoLibrary,TVShowYears,return)</onclick>
 							</item>
-							<item id="6">
+							<item id="9">
 								<label>$LOCALIZE[344]</label>
 								<onclick>ActivateWindow(VideoLibrary,TVShowActors,return)</onclick>
 							</item>
-							<item id="7">
+							<item id="10">
 								<label>$LOCALIZE[31296]</label>
 								<onclick>ActivateWindow(VideoLibrary,RecentlyAddedEpisodes,return)</onclick>
 							</item>
@@ -639,7 +669,6 @@
 							</item>
 						</content>
 				</control>
-				
 <!--MUSIC --><control type="wraplist" id="9017">
 					<posx>-30</posx>
 					<posy>30</posy>
@@ -690,44 +719,54 @@
 								<visible>Skin.HasSetting(Menu_Custom15)</visible>
 							</item>
 							<item id="2">
+								<label>$INFO[Skin.String(Menu_Custom21_Label)]</label>
+								<onclick>$INFO[Skin.String(Menu_Custom21_Path)]</onclick>
+								<visible>Skin.HasSetting(Menu_Custom21)</visible>
+							</item>
+							<item id="3">
 								<label>$INFO[Skin.String(Menu_Custom16_Label)]</label>
 								<onclick>XBMC.ActivateWindow(musiclibrary,$INFO[Skin.String(Menu_Custom16_Path)],return)</onclick>
 								<visible>Skin.HasSetting(Menu_Custom16)</visible>
 							</item>
-							<item id="3">
+							<item id="4">
 								<label>$INFO[Skin.String(Menu_Custom17_Label)]</label>
 								<onclick>XBMC.ActivateWindow(musiclibrary,$INFO[Skin.String(Menu_Custom17_Path)],return)</onclick>
 								<visible>Skin.HasSetting(Menu_Custom17)</visible>
 							</item>
-							<item id="4">
+							<item id="5">
 								<label>$INFO[Skin.String(Menu_Custom18_Label)]</label>
 								<onclick>XBMC.ActivateWindow(musiclibrary,$INFO[Skin.String(Menu_Custom18_Path)],return)</onclick>
 								<visible>Skin.HasSetting(Menu_Custom18)</visible>
 							</item>
-							<item id="5">
+							<item id="6">
+								<label>$INFO[Skin.String(Menu_Custom26_Label)]</label>
+								<onclick>XBMC.ActivateWindow(musiclibrary,$INFO[Skin.String(Menu_Custom26_Path)],return)</onclick>
+								<visible>Skin.HasSetting(Menu_Custom26)</visible>
+							</item>
+							<item id="7">
 								<label>$LOCALIZE[133]</label>
 								<onclick>ActivateWindow(MusicLibrary,Artists,return)</onclick>
 								<visible>Library.HasContent(Music)</visible>
 							</item>
-							<item id="6">
+							<item id="8">
 								<label>$LOCALIZE[132]</label>
 								<onclick>ActivateWindow(MusicLibrary,Albums,return)</onclick>
 								<visible>Library.HasContent(Music)</visible>
 							</item>
-							<item id="7">
+							<item id="9">
 								<label>$LOCALIZE[134]</label>
 								<onclick>ActivateWindow(MusicLibrary,Songs,return)</onclick>
 								<visible>Library.HasContent(Music)</visible>
 							</item>
-							<item id="8">
+							<item id="10">
 								<label>$LOCALIZE[744]</label>
 								<onclick>ActivateWindow(MusicFiles)</onclick>
 							</item>
-							<item id="9">
+							<item id="11">
 								<label>$LOCALIZE[136]</label>
 								<onclick>ActivateWindow(MusicLibrary,Playlists,return)</onclick>
 							</item>
-							<item id="10">
+							<item id="12">
 								<label>$LOCALIZE[31007]</label>
 								<onclick>ActivateWindow(MusicLibrary,Plugins)</onclick>
 								<visible>Library.HasContent(Music)</visible>

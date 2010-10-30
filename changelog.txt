@@ -1,6 +1,12 @@
+10/30/2010
+  -Added more submenu fav and playlists options
+  -Added option for titles on Showcase w/fanart option enabled
+  -Added smaller, wall-ish thumb view for "Panel" view 
+  -Freshed up the 'info' screens
+
 10/25/2010
--Some more fine tuning for TvTune Script
--Added French flag support
+  -Some more fine tuning for TvTune Script
+  -Added French flag support
 
 10/24/2010
--Added support for TvTune Script
+  -Added support for TvTune Script

@@ -30,6 +30,22 @@
 			<include>Animation_Bartowski_Context_Zoom</include>
 			<include>Animation_HiddenByInfo</include>
 		</control>
+		<control type="label">
+			<visible>Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart) + Skin.HasSetting(showcase_fanart_title)</visible>
+			<animation effect="slide" start="0,0" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-110" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies)">Conditional</animation>
+			<posx>0</posx>
+			<posy>470</posy>
+			<width>1280</width>
+			<height>50</height>
+			<align>center</align>
+			<font>Font_Bartowski_BigMusic</font>
+			<shadowcolor>678b8b8b</shadowcolor>
+			<textcolor>678b8b8b</textcolor>
+			<label>$INFO[ListItem.label]</label>
+			<include>Animation_Bartowski_Context_Zoom</include>
+			<include>Animation_HiddenByInfo</include>
+		</control>
 		
 		
 		<control type="image">
@@ -64,7 +80,7 @@
 			<pagecontrol>68</pagecontrol>
 			<include>Animation_Viewtype_Showcase_FocusArea</include>
 			<include>Animation_HiddenByInfo</include>
-			<visible>!Skin.HasSetting(no_Showcase) + Container.Content(movies)</visible>
+			<visible>!Skin.HasSetting(no_Showcase) + Container.Content(movies) + !substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)</visible>
 			<itemlayout width="168" height="245">
 				<control type="image">
 					<posx>1</posx>
