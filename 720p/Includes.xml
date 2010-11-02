@@ -37,6 +37,9 @@
 	<include file="Viewtype_3daddon.xml" />
 	<include file="Viewtype_Slide.xml" />
 	<include file="Viewtype_Newest_Episodes.xml" />
+	<include file="Viewtype_Poster_Half.xml" />
+	
+	
 	
 	<include name="no_tv_theme">
 		<onfocus>SetFocus(50)</onfocus>

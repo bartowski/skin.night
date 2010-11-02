@@ -18,7 +18,7 @@
 				<texture>tv-landscape/tv-background.png</texture>
 			</control>
 			<control type="image" id="9550">
-				<posx>700</posx>
+				<posx>640</posx>
 				<posy>20</posy>
 				<width>300</width>
 				<height>116</height>
@@ -39,9 +39,9 @@
 			<control type="image">
 				<posx>0</posx>
 				<posy>20</posy>
-				<width>490</width>
+				<width>440</width>
 				<height>560</height>
-				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<aspectratio align="right" aligny="center">keep</aspectratio>
 				<texture background="true">$INFO[ListItem.Icon]</texture>
 				<bordertexture border="8">common/thumb_border.png</bordertexture>
 				<bordersize>8</bordersize>
@@ -99,10 +99,11 @@
 						<textcolor>ffffffff</textcolor>
 						<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 						<animation effect="slide" end="0,-100" time="0" condition="IsEmpty(Control.GetLabel(9170)) + IsEmpty(Control.GetLabel(9171))">conditional</animation>
+						<animation effect="slide" start="0,0" end="1200,0" time="400" delay="300" condition="Control.IsVisible(50)">conditional</animation>
 					</control>
 					<control type="textbox"><!-- Plot and TV -->
 						<visible>!Container.Content(movies)</visible>
-						<posx>500</posx>
+						<posx>445</posx>
 						<posy>490</posy>
 						<width>770</width>
 						<height>280</height>
@@ -112,12 +113,13 @@
 						<textcolor>ffffffff</textcolor>
 						<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 						<animation effect="slide" end="0,-100" time="0" condition="IsEmpty(Control.GetLabel(9170)) + IsEmpty(Control.GetLabel(9171))">conditional</animation>
+						<animation effect="slide" start="0,0" end="1200,0" time="400" delay="300" condition="Control.IsVisible(50)">conditional</animation>
 					</control>
 			</control>
 		<control type="group"><!--movies-->
 			<visible>[!container.content(tvshows) + !container.content(episodes) + !container.content(musicvideos)]</visible>
 			<include>VisibleFadeEffect</include>
-				<control type="grouplist">
+			<!--<control type="grouplist">
 					<posx>680</posx>
 					<posy>610</posy>
 					<orientation>horizontal</orientation>
@@ -134,9 +136,10 @@
 						<include>VideoMPAAFlaggingConditions</include>
 						<animation effect="slide" start="0,0" end="0,4" time="0" tween="cubic" easing="inout" condition="true">Conditional</animation>
 					</control>
-				</control>
+				</control>-->
 				<control type="group">
 					<posy>60</posy>
+					<animation effect="slide" start="0,0" end="1000,0" time="400" delay="300" condition="Control.IsVisible(50)">conditional</animation>
 						<control type="largeimage" id="9170">
 							<posx>510</posx>
 							<posy>30</posy>
@@ -260,8 +263,8 @@
 					<include>VisibleFadeEffect</include>
 					<animation effect="slide" start="0,0" end="-1200,0" time="400" delay="300" condition="Control.IsVisible(50)">conditional</animation>
 					<control type="list" id="49">
-						<posx>500</posx>
-						<posy>190</posy>
+						<posx>445</posx>
+						<posy>180</posy>
 						<width>830</width>
 						<height>330</height>
 						<onleft>49</onleft>
@@ -345,8 +348,8 @@
 					<include>VisibleFadeEffect</include>
 					<animation effect="slide" end="-1800,0" time="200" delay="200" condition="Control.IsVisible(50)">conditional</animation>
 					<control type="list" id="49">
-						<posx>500</posx>
-						<posy>160</posy>
+						<posx>445</posx>
+						<posy>180</posy>
 						<width>830</width>
 						<height>330</height>
 						<onleft>49</onleft>
@@ -582,22 +585,21 @@
 					
 				</control>
 				<control type="image">
-					<description>Actor image</description>
-					<posx>20</posx>
-					<posy>220</posy>
-					<width>250</width>
-					<height>250</height>
+					<posx>0</posx>
+					<posy>20</posy>
+					<width>440</width>
+					<height>560</height>
+					<aspectratio align="right" aligny="center">keep</aspectratio>
 					<texture>$INFO[Container(50).Listitem.Icon]</texture>
-					<bordertexture border="5">confluence/button-nofocus.png</bordertexture>
-					<bordersize>5</bordersize>
-					<aspectratio>keep</aspectratio>
+					<bordertexture border="8">common/thumb_border.png</bordertexture>
+					<bordersize>8</bordersize>
 					<visible>Control.IsVisible(50)</visible>
 					<visible>!Control.HasFocus(12)</visible>
-					<animation effect="slide" start="-400,0" end="0,0" time="400" delay="300" condition="Control.IsVisible(50)">conditional</animation>
+					<animation effect="slide" start="-800,0" end="0,0" time="400" delay="300" condition="Control.IsVisible(50)">conditional</animation>
 				</control>
 				<control type="list" id="50">
-					<posx>280</posx>
-					<posy>120</posy>
+					<posx>445</posx>
+					<posy>136</posy>
 					<width>860</width>
 					<height>480</height>
 					<onleft>9000</onleft>
@@ -611,7 +613,6 @@
 					<visible>!Control.HasFocus(12)</visible>
 					<animation effect="slide" start="0,700" end="0,0" time="400" delay="300" condition="Control.IsVisible(50)">conditional</animation>
 					<itemlayout height="40" width="430">
-						
 						<control type="label">
 							<posx>10</posx>
 							<posy>0</posy>
