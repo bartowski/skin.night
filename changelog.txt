@@ -1,6 +1,7 @@
 11/2/2010
   -Fixed 'Info' screen cast and label overlap issues
   -*Trial Balloon* Poster Half view
+  -updated French flags
 
 10/30/2010
   -Added more submenu fav and playlists options

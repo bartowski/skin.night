@@ -202,7 +202,7 @@
 			<height>27</height>
             <aspectratio>keep</aspectratio>
             <texture>flagging/ratings/csa10.png</texture>
-            <visible>substring(Listitem.mpaa,10 ans)</visible>
+            <visible>substring(Listitem.mpaa,France:-10)</visible>
         </control>
         <control type="image">
             <description>Interdit aux moins de 12 ans</description>
@@ -210,7 +210,7 @@
 			<height>27</height>
             <aspectratio>keep</aspectratio>
             <texture>flagging/ratings/csa12.png</texture>
-            <visible>substring(Listitem.mpaa,12 ans)</visible>
+            <visible>substring(Listitem.mpaa,France:-12)</visible>
         </control>
         <control type="image">
             <description>Interdit aux moins de 16 ans</description>
@@ -218,7 +218,7 @@
 			<height>27</height>
             <aspectratio>keep</aspectratio>
             <texture>flagging/ratings/csa16.png</texture>
-            <visible>substring(Listitem.mpaa,16 ans)</visible>
+            <visible>substring(Listitem.mpaa,France:-16)</visible>
         </control>
         <control type="image">
             <description>Interdit aux moins de 18 ans</description>
@@ -226,7 +226,7 @@
 			<height>27</height>
             <aspectratio>keep</aspectratio>
             <texture>flagging/ratings/csa18.png</texture>
-            <visible>substring(Listitem.mpaa,18 ans)</visible>
+            <visible>substring(Listitem.mpaa,France:-18)</visible>
         </control>
 	</include>
 	<include name="AudioCodecFlaggingConditions">
