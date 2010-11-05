@@ -1,3 +1,9 @@
+11/4/2010
+  -Added logo on episode level of "Info" screen
+  -Added 'Next Aired on "Info" screen
+  -Added plot on Season level of "Poster Half"
+  -Added French and Spanish translations
+
 11/2/2010
   -Fixed 'Info' screen cast and label overlap issues
   -*Trial Balloon* Poster Half view

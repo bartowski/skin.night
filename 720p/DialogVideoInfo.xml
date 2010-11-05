@@ -18,11 +18,20 @@
 				<texture>tv-landscape/tv-background.png</texture>
 			</control>
 			<control type="image" id="9550">
-				<posx>640</posx>
+				<posx>710</posx>
 				<posy>20</posy>
 				<width>300</width>
 				<height>116</height>
 				<texture background="true">$INFO[ListItem.FileNameAndPath]logo.png</texture>
+				<fadetime>100</fadetime>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+			</control>
+			<control type="image" id="9550">
+				<posx>710</posx>
+				<posy>20</posy>
+				<width>300</width>
+				<height>116</height>
+				<texture background="true">$INFO[ListItem.Path]../logo.png</texture>
 				<fadetime>100</fadetime>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 			</control>
@@ -53,15 +62,41 @@
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 					<control type="label">
 						<description>header label</description>
-						<posx>440</posx>
+						<posx>446</posx>
 						<posy>16</posy>
-						<width>840</width>
-						<height>30</height>
+						<width>830</width>
+						<height>50</height>
 						<font>Font_Bartowski_MainMenu_Context</font>
 						<label>[B]$INFO[Listitem.Title][/B] ($INFO[Listitem.Year])</label>
 						<align>center</align>
 						<textcolor>mainblue</textcolor>
-						<visible>IsEmpty(Control.GetLabel(9550))</visible>
+						<visible>Container.Content(movies)</visible>
+					</control>
+					<control type="label">
+						<description>header label</description>
+						<posx>446</posx>
+						<posy>16</posy>
+						<width>830</width>
+						<height>50</height>
+						<font>Font_Bartowski_MainMenu_Context</font>
+						<label>[B]$INFO[Listitem.TVShowTitle][/B]</label>
+						<align>center</align>
+						<textcolor>mainblue</textcolor>
+						<visible>!Container.Content(movies) + IsEmpty(Control.GetLabel(9550)) + IsEmpty(Control.GetLabel(9551))</visible>
+					</control>
+					<control type="label">
+						<description>header label</description>
+						<posx>446</posx>
+						<posy>124</posy>
+						<width>830</width>
+						<height>50</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Font_TVShow</font>
+						<label>[B]"$INFO[Listitem.Title]"[/B]</label>
+						<textcolor>white</textcolor>
+						<animation effect="slide" start="0,0" end="0,-80" time="0" tween="cubic" easing="inout" condition="IsEmpty(Control.GetLabel(9550)) + IsEmpty(Control.GetLabel(9551))">Conditional</animation>
+						<visible>Container.Content(episodes)</visible>
 					</control>
 					<control type="label">
 						<posx>440</posx>
@@ -74,6 +109,7 @@
 						<label>[B]"$INFO[ListItem.TagLine]"[/B]</label>
 						<visible>!IsEmpty(ListItem.TagLine)</visible>
 					</control>
+					<include>VideoInfo_Next_Aired</include>
 					<control type="grouplist">
 						<description>Media Codec Flagging Images</description>
 						<posx>0</posx>
@@ -104,7 +140,7 @@
 					<control type="textbox"><!-- Plot and TV -->
 						<visible>!Container.Content(movies)</visible>
 						<posx>445</posx>
-						<posy>490</posy>
+						<posy>530</posy>
 						<width>770</width>
 						<height>280</height>
 						<align>justify</align>

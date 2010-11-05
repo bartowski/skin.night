@@ -302,7 +302,20 @@
 				<font>Font_Bartowski_Movies_Plot</font>
 				<textcolor>ffffffff</textcolor>
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-				<visible>Control.IsVisible(598)</visible>
+				<visible>Control.IsVisible(598) + !Container.Content(seasons)</visible>
+			</control>
+			<control type="textbox">
+				<description>Plot Movie</description>
+				<posx>10</posx>
+				<posy>290</posy>
+				<width>360</width>
+				<height>370</height>
+				<align>justify</align>
+				<info>Container(52).ShowPlot</info>
+				<font>Font_Bartowski_Movies_Plot</font>
+				<textcolor>ffffffff</textcolor>
+				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+				<visible>Control.IsVisible(598) + Container.Content(seasons)</visible>
 			</control>
 			<control type="label">
 				<posx>20</posx>
