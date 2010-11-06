@@ -25,18 +25,14 @@
 		</control>
 		<control type="label"><!--Big Title-->
 			<visible>Control.IsVisible(55) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)]</visible>
-			<animation effect="slide" start="0,0" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(55) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies)]">Conditional</animation>
-			<posx>0</posx>
-			<posy>235</posy>
-			<width>1280</width>
+			<posx>10</posx>
+			<posy>0</posy>
+			<width>1200</width>
 			<height>50</height>
-			<align>center</align>
-			<font>Font_Bartowski_BigMusic</font>
-			<shadowcolor>678b8b8b</shadowcolor>
-			<textcolor>678b8b8b</textcolor>
-			<label>$INFO[ListItem.label]</label>
-			<include>Animation_HiddenByInfo</include>
-			<include>Animation_Bartowski_Context_Zoom</include>
+			<aligny>center</aligny>
+			<font>Font_Bartowski_Movies_Title</font>
+			<textcolor>mainblue</textcolor>
+			<label>[B]$INFO[ListItem.Label][/B]</label>
 		</control>
 		<control type="label"><!--Big Title-->
 			<visible>Control.IsVisible(55) + Container.Content(movies) + IsEmpty(ListItem.Title) + !Window.IsVisible(VideoFiles)</visible>
@@ -596,6 +592,47 @@
 				<include>Animation_HiddenByInfo</include>
 			</control>
 		</control>
+		
+	<control type="group">
+		<posx>10</posx>
+		<posy>0</posy>
+		<include>Animation_HiddenByInfo</include>
+		<include>Animation_Viewtype_3dland_Lefttop</include>
+		<visible>Control.IsVisible(55) + Window.IsActive(Programs) + substring(container.folderpath,plugin://plugin.program.launcher)</visible>
+			<control type="label">
+				<posx>0</posx>
+				<posy>40</posy>
+				<width>630</width>
+				<height>89</height>
+				<font>Font_TVShow</font>
+				<label>[B][COLOR=ListTrackF]$LOCALIZE[515][/COLOR] [B][COLOR=white]$INFO[ListItem.Genre][/B][/COLOR]</label>
+				<visible>!IsEmpty(ListItem.Genre)</visible>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>64</posy>
+				<width>630</width>
+				<height>89</height>
+				<font>Font_TVShow</font>
+				<label>[B][COLOR=ListTrackF]$LOCALIZE[345][/COLOR] [B][COLOR=white]$INFO[ListItem.Year][/B][/COLOR]</label>
+				<animation effect="slide" start="0,0" end="0,-26" time="0" condition="IsEmpty(ListItem.Genre)">Conditional</animation>
+				<visible>!IsEmpty(ListItem.Year)</visible>
+			</control>
+			<control type="textbox">
+				<description>Plot Movie</description>
+				<posx>20</posx>
+				<posy>90</posy>
+				<width>600</width>
+				<height>230</height>
+				<align>justify</align>
+				<info>ListItem.Plot</info>
+				<font>Font_3dland_plot</font>
+				<textcolor>ffffffff</textcolor>
+				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+				<animation effect="slide" start="0,0" end="0,-26" time="0" condition="IsEmpty(ListItem.Year)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,-52" time="0" condition="IsEmpty(ListItem.genre) + IsEmpty(ListItem.Year)">Conditional</animation>
+			</control>
+	</control>
 		
 		<control type="label"><!--Trailer Start-->
 			<visible>Control.IsVisible(55) + Container.Content(movies) + !Skin.HasSetting(clean_poster) + !IsEmpty(ListItem.Trailer) + !Player.HasVideo</visible>

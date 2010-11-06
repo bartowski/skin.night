@@ -3,7 +3,7 @@
 <window id="1">
 	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>50,56,55</views>
+	<views>50,53,55,56</views>
 	<controls>
 		
 		<control type="image">
@@ -61,6 +61,7 @@
 		<include>Viewtype_Files</include>
 		<include>Viewtype_Poster</include>
 		<include>Viewtype_3daddon</include><!--  56  -->
+		<include>Viewtype_List</include><!--  56  -->
 		
 		<include>Global_Time_TopRight_Files</include>
 		

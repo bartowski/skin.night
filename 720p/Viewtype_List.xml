@@ -44,7 +44,7 @@
 			<include>Animation_HiddenByInfo</include>
 			<camera x="1340" y="380" />
 			<animation effect="rotatey" center="50" start="10" end="10" time="0" condition="true">Conditional</animation>
-			<visible>!Skin.HasSetting(no_3DLandscape) + [[Skin.HasSetting(landscape_jpg) + Container.Content(tvshows)] | [![Skin.HasSetting(TVBanners) | Skin.HasSetting(TVPosters)] + [Container.Content(tvshows) | Container.Content(seasons)]]] | Container.Content(episodes)</visible>
+			<visible>!Skin.HasSetting(no_3DLandscape) + [[Skin.HasSetting(landscape_jpg) + Container.Content(tvshows)] | [![Skin.HasSetting(TVBanners) | Skin.HasSetting(TVPosters)] + [Container.Content(tvshows) | Container.Content(seasons)]]] | Container.Content(episodes) | Window.IsActive(Programs)</visible>
 			<itemlayout width="316" height="245">
 				<control type="group">
 				<posx>150</posx>
@@ -82,7 +82,7 @@
 						<texture background="true" diffuse="movie-poster/xper_test.png">$INFO[ListItem.Icon]</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<visible>!Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)] | Container.Content(episodes) | Window.IsActive(videoplaylist)</visible>
+						<visible>!Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)] | Container.Content(episodes) | Window.IsActive(videoplaylist) | Window.IsActive(Programs)</visible>
 					</control>
 					<control type="image">
 						<posx>-150</posx>
@@ -138,7 +138,7 @@
 						<fadetime>200</fadetime>
 						<colordiffuse>89FFFFFF</colordiffuse>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<visible>!Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)] | Container.Content(episodes) | Window.IsActive(videoplaylist)</visible>
+						<visible>!Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)] | Container.Content(episodes) | Window.IsActive(videoplaylist) | Window.IsActive(Programs)</visible>
 					</control>
 					<control type="image">
 						<posx>-150</posx>
@@ -280,7 +280,7 @@
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 							<effect type="fade" start="0" end="70" time="600" />
 						</animation>
-						<visible>!Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)] | Container.Content(episodes) | Window.IsActive(videoplaylist)</visible>
+						<visible>!Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)] | Container.Content(episodes) | Window.IsActive(videoplaylist) | Window.IsActive(Programs)</visible>
 					</control>
 					<control type="image">
 						<posx>-150</posx>
@@ -307,7 +307,7 @@
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 						</animation>
-						<visible>!Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)] | Container.Content(episodes) | Window.IsActive(videoplaylist)</visible>
+						<visible>!Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)] | Container.Content(episodes) | Window.IsActive(videoplaylist) | Window.IsActive(Programs)</visible>
 					</control>
 					<control type="image">
 						<posx>-150</posx>
@@ -529,6 +529,54 @@
 				<textcolor>white</textcolor>
 				<label>[B]$INFO[ListItem.Label][/B]</label>
 			</control>
+		</control>
+		<control type="group">
+			<posx>10</posx>
+			<posy>0</posy>
+			<include>Animation_HiddenByInfo</include>
+			<include>Animation_Viewtype_3dland_Lefttop</include>
+			<visible>Control.IsVisible(53) + Window.IsActive(Programs) + substring(container.folderpath,plugin://plugin.program.launcher)</visible>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1200</width>
+					<height>50</height>
+					<aligny>center</aligny>
+					<font>Font_Bartowski_Movies_Title</font>
+					<textcolor>mainblue</textcolor>
+					<label>[B]$INFO[ListItem.Label][/B]</label>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>40</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[B][COLOR=ListTrackF]$LOCALIZE[515][/COLOR] [B][COLOR=white]$INFO[ListItem.Genre][/B][/COLOR]</label>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>64</posy>
+					<width>630</width>
+					<height>89</height>
+					<font>Font_TVShow</font>
+					<label>[B][COLOR=ListTrackF]$LOCALIZE[345][/COLOR] [B][COLOR=white]$INFO[ListItem.Year][/B][/COLOR]</label>
+					<visible>!IsEmpty(ListItem.Year)</visible>
+				</control>
+				<control type="textbox">
+					<description>Plot Movie</description>
+					<posx>20</posx>
+					<posy>90</posy>
+					<width>600</width>
+					<height>230</height>
+					<align>justify</align>
+					<info>ListItem.Plot</info>
+					<font>Font_3dland_plot</font>
+					<textcolor>ffffffff</textcolor>
+					<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+					<animation effect="slide" start="0,0" end="0,-26" time="0" condition="IsEmpty(ListItem.Year)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,-52" time="0" condition="IsEmpty(ListItem.genre) + IsEmpty(ListItem.Year)">Conditional</animation>
+				</control>
 		</control>
 		<control type="group">
 			<posx>0</posx>

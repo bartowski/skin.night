@@ -228,6 +228,47 @@
             <texture>flagging/ratings/csa18.png</texture>
             <visible>substring(Listitem.mpaa,France:-18)</visible>
         </control>
+		
+		<control type="image">
+            <description>Interdit aux moins de 10 ans</description>
+            <width>72</width>
+			<height>27</height>
+            <aspectratio>keep</aspectratio>
+            <texture>flagging/ratings/Germany0.png</texture>
+            <visible>substring(Listitem.mpaa,Germany:0)</visible>
+        </control>
+        <control type="image">
+            <description>Interdit aux moins de 12 ans</description>
+            <width>72</width>
+			<height>27</height>
+            <aspectratio>keep</aspectratio>
+            <texture>flagging/ratings/Germany6.png</texture>
+            <visible>substring(Listitem.mpaa,Germany:6)</visible>
+        </control>
+        <control type="image">
+            <description>Interdit aux moins de 16 ans</description>
+            <width>72</width>
+			<height>27</height>
+            <aspectratio>keep</aspectratio>
+            <texture>flagging/ratings/Germany12.png</texture>
+            <visible>substring(Listitem.mpaa,Germany:12)</visible>
+        </control>
+        <control type="image">
+            <description>Interdit aux moins de 18 ans</description>
+            <width>72</width>
+			<height>27</height>
+            <aspectratio>keep</aspectratio>
+            <texture>flagging/ratings/Germany16.png</texture>
+            <visible>substring(Listitem.mpaa,Germany:16)</visible>
+        </control>
+		<control type="image">
+            <description>Interdit aux moins de 18 ans</description>
+            <width>72</width>
+			<height>27</height>
+            <aspectratio>keep</aspectratio>
+            <texture>flagging/ratings/Germany18.png</texture>
+            <visible>substring(Listitem.mpaa,Germany:18)</visible>
+        </control>
 	</include>
 	<include name="AudioCodecFlaggingConditions">
 		<control type="image">
