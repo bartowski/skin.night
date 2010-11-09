@@ -25,7 +25,6 @@
 			<shadowcolor>678b8b8b</shadowcolor>
 			<textcolor>678b8b8b</textcolor>
 			<label>$INFO[ListItem.label]</label>
-			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Bartowski_Context_Zoom</include>
 		</control>
 		<control type="label"><!--Big Title-->
@@ -40,7 +39,6 @@
 			<shadowcolor>678b8b8b</shadowcolor>
 			<textcolor>678b8b8b</textcolor>
 			<label>$LOCALIZE[31235]</label>
-			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Bartowski_Context_Zoom</include>
 		</control>
 		
@@ -63,10 +61,9 @@
 			<preloaditems>2</preloaditems>
 			<pagecontrol>65</pagecontrol>
 			<include>Animation_ZoomInZoomOut</include>
-			<include>Animation_HiddenByInfo</include>
 			<camera x="1340" y="380" />
 			<animation effect="rotatey" center="50" start="12" end="10" time="0" condition="true">Conditional</animation>
-			<visible>!Skin.HasSetting(no_Poster) + ![Container.Content(episodes) | Container.Content(years)]</visible>
+			<visible>!Skin.HasSetting(no_Poster) + ![Container.Content(episodes) | Container.Content(years) | Container.Content(genres)]</visible>
 			<itemlayout width="176" height="245">
 				<control type="group">
 				<posx>154</posx>
@@ -290,7 +287,6 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<include>Animation_ZoomInZoomOut</include>
-			<include>Animation_HiddenByInfo</include>
 			<control type="textbox">
 				<description>Plot Movie</description>
 				<posx>10</posx>
@@ -412,7 +408,6 @@
 		<posx>20</posx>
 		<posy>90</posy>
 		<include>Animation_ZoomInZoomOut</include>
-		<include>Animation_HiddenByInfo</include>
 		<animation effect="slide" start="0,0" end="0,-40" time="0" tween="cubic" easing="inout" condition="IsEmpty(Control.GetLabel(17015))">Conditional</animation>
 		<visible>Control.IsVisible(598) + !IsEmpty(ListItem.Title) + [Container.Content(tvshows) | Container.Content(seasons)] + !Player.HasVideo</visible>	
 			<control type="label">
@@ -460,7 +455,6 @@
 		<posx>20</posx>
 		<posy>44</posy>
 		<include>Animation_ZoomInZoomOut</include>
-		<include>Animation_HiddenByInfo</include>
 			<control type="label">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -468,7 +462,6 @@
 				<height>89</height>
 				<font>Font_TVShow</font>
 				<label>[B][COLOR=ListTrackF]$LOCALIZE[515][/COLOR] [B][COLOR=white]$INFO[ListItem.Genre][/B][/COLOR]</label>
-				<include>Animation_HiddenByInfo</include>
 			</control>
 			<control type="label">
 				<posx>0</posx>
@@ -477,7 +470,6 @@
 				<height>89</height>
 				<font>Font_TVShow</font>
 				<label>[COLOR=ListTrackF][B]$LOCALIZE[172][/COLOR] [COLOR=white]$INFO[ListItem.Property(releasedate)][/COLOR][/B]</label>
-				<include>Animation_HiddenByInfo</include>
 			</control>
 			<control type="label">
 				<posx>0</posx>
@@ -486,7 +478,6 @@
 				<height>89</height>
 				<font>Font_TVShow</font>
 				<label>[COLOR=ListTrackF][B]$LOCALIZE[31226][/COLOR] [COLOR=white]$INFO[ListItem.mpaa][/COLOR][/B]</label>
-				<include>Animation_HiddenByInfo</include>
 			</control>
 		</control>
 		
@@ -529,7 +520,6 @@
 			<orientation>horizontal</orientation>
 			<include condition="!Skin.HasSetting(grey_flags)">color_flags</include>
 			<include condition="Skin.HasSetting(grey_flags)">grey_flags</include>
-			<include>Animation_HiddenByInfo</include>
 			<include>Animation_ZoomInZoomOut</include>
 		</control>
 		<control type="image"> 

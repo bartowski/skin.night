@@ -22,7 +22,6 @@
 			<texture diffuse="Showcase/showcase-diffuse.png">$INFO[Container(592).listitem.property(fanart_image)]</texture>
 			<fadetime>400</fadetime>
 			<aspectratio>stretch</aspectratio>
-			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Panel_Fanart</include>
 		</control>
 		
@@ -44,7 +43,6 @@
 			<pagecontrol>5920</pagecontrol>
 			<preloaditems>2</preloaditems>
 			<include>Animation_Viewtype_Panel_FocusArea</include>
-			<include>Animation_HiddenByInfo</include>
 			<animation effect="slide" start="0,0" end="-40,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(5920)">Conditional</animation>
 			<itemlayout width="660" height="138">
 				<control type="group">
@@ -151,7 +149,6 @@
 		<!-- Browser label and flags -->
 	<control type="group">
 	<include>Animation_Viewtype_Panel_Title</include>
-	<include>Animation_HiddenByInfo</include>
 	<visible>Control.IsVisible(592)</visible>
 		<control type="largeimage" id="7047">
 			<visible>Container.Content(tvshows)</visible>
@@ -188,7 +185,6 @@
 	</control>
 	<control type="group">
 	<visible>Control.IsVisible(592)</visible>
-	<include>Animation_HiddenByInfo</include>
 		<control type="textbox"><!--TV Plot-->
 			<visible>Container.Content(tvshows)</visible>
 			<posx>15</posx>

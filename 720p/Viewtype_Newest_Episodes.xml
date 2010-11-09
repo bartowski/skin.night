@@ -21,7 +21,6 @@
 			<focusposition>2</focusposition>
 			<movement>2</movement>
 			<include>Animation_ZoomInZoomOut</include>
-			<include>Animation_HiddenByInfo</include>
 			<visible>stringcompare(container.folderpath,videodb://5/) | Window.IsActive(videoplaylist)</visible>
 			<itemlayout width="633" height="172">
 				<control type="group">

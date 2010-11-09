@@ -97,7 +97,6 @@
 	<control type="group">
 		<posx>300</posx>
 		<posy>120</posy>
-		<include>Animation_HiddenByInfo</include>
 		<include>Animation_Bartowski_Context_Zoom</include>
 		<visible>Control.IsVisible(595)</visible>
 			<control type="image">
@@ -142,7 +141,6 @@
 	<posy>290</posy>
 	<animation effect="slide" start="0,0" end="0,-400" time="200" delay="600" condition="Control.HasFocus(8241)">Conditional</animation>
 	<visible>Control.IsVisible(595) + Container.Content(movies) + !IsEmpty(ListItem.Title)</visible>
-	<include>Animation_HiddenByInfo</include>
 	<include>Animation_BackdropFade</include>
 		<control type="label"><!--Movie title-->
 			<posx>15</posx>
@@ -211,7 +209,6 @@
 		<posy>40</posy>
 		<animation effect="slide" start="1000,0" end="0,0" time="400" delay="900">Visible</animation>
 		<visible>Control.IsVisible(595) + Container.Content(movies) + Control.HasFocus(8241) + ![Control.HasFocus(8241) + Player.HasVideo]</visible>
-		<include>Animation_HiddenByInfo</include>		
 		<include>Animation_BackdropFade</include>
 			<control type="image" id="8241">
 				<posx>680</posx>
@@ -262,7 +259,6 @@
 		<animation effect="slide" start="0,0" end="0,180" time="0" condition="![IsEmpty(Control.GetLabel(8241)) + IsEmpty(Control.GetLabel(8242))]">Conditional</animation>
 		<animation effect="slide" start="1000,0" end="0,0" time="400" delay="600">Visible</animation>
 		<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-		<include>Animation_HiddenByInfo</include>
 		<include>Animation_BackdropFade</include>
 		<visible>Control.IsVisible(595) + Container.Content(movies) + Control.HasFocus(8241) + ![Control.HasFocus(8241) + Player.HasVideo]</visible>
 	</control>
@@ -339,7 +335,6 @@
 		<orientation>horizontal</orientation>
 		<include condition="!Skin.HasSetting(grey_flags)">color_flags</include>
 		<include condition="Skin.HasSetting(grey_flags)">grey_flags</include>
-		<include>Animation_HiddenByInfo</include>
 		<include>Animation_BackdropFade</include>
 	</control>
 	

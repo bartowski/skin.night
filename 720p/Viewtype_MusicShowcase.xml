@@ -73,7 +73,6 @@
 					<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
 					<fadetime>200</fadetime>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<include>Animation_HiddenByInfo</include>
 				</control>
 				<control type="image">
 					<posx>-11</posx>
@@ -82,7 +81,6 @@
 					<height>216</height>
 					<texture>posterframeF.png</texture>
 					<colordiffuse>89FFFFFF</colordiffuse>
-					<include>Animation_HiddenByInfo</include>
 					<visible>Skin.HasSetting(MusicShowcaseFanart)</visible>
 				</control>
 				<control type="image">
@@ -94,7 +92,6 @@
 					<colordiffuse>69FFFFFF</colordiffuse>
 					<fadetime>200</fadetime>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<include>Animation_HiddenByInfo</include>
 					<animation type="Conditional" reversible="false" condition="!Skin.HasSetting(MusicShowcaseFanart)">
 						<effect type="fade" start="0" end="20" time="0" />
 					</animation>
@@ -106,7 +103,6 @@
 					<height>216</height>
 					<texture flipy="true">posterframeF.png</texture>
 					<colordiffuse>39FFFFFF</colordiffuse>
-					<include>Animation_HiddenByInfo</include>
 					<animation type="Conditional" reversible="false" condition="!Skin.HasSetting(MusicShowcaseFanart)">
 						<effect type="fade" start="0" end="20" time="0" />
 					</animation>
@@ -117,7 +113,6 @@
 					<width>200</width>
 					<height>200</height>
 					<texture>music/darkoverlay3.png</texture>
-					<include>Animation_HiddenByInfo</include>
 					<visible>!Skin.HasSetting(MusicShowcaseFanart)</visible>
 				</control>
 			</control>
@@ -135,7 +130,6 @@
 					<texture background="true" flipy="true" diffuse="postermatte.png">$INFO[ListItem.Icon]</texture>
 					<fadetime>200</fadetime>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<include>Animation_HiddenByInfo</include>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="auto" start="90" end="114" time="400" tween="back" easing="out" />
 						<effect type="fade" start="0" end="60"/>
@@ -147,7 +141,6 @@
 					<width>246</width>
 					<height>236</height>
 					<texture flipy="true">posterframeF.png</texture>
-					<include>Animation_HiddenByInfo</include>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="auto" start="90" end="114" time="400" tween="back" easing="out" />
 						<effect type="fade" start="0" end="20"/>

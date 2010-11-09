@@ -3,7 +3,7 @@
 <window id="25">
 	<defaultcontrol always="true">9999</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>50,55,58,595,51,52,633,53,54,597,56,57,59,592,593,594,596,598</views>
+	<views>50,55,598,58,595,51,52,633,53,54,597,56,57,59,592,593,594,596</views>
 	<controls>
 		<control type="button" id="9999">
             <description>trigger</description>
@@ -59,7 +59,7 @@
 			<include>Dimensions_Fullscreen</include>
 			<fadetime>400</fadetime>
 			<include>Animation_MyVideoNav_Fanart</include>
-			<texture background="true" fallback="backgrounds/movies.jpg">extras/genrefanart/$INFO[ListItem.Label].jpg</texture>
+			<texture background="true" fallback="backgrounds/movies.jpg">special://skin/extras/genrefanart/$INFO[ListItem.Label].jpg</texture>
 			<include>global_kenburns_fanart</include>
 			<visible>Container.Content(genres)</visible>
 		</control>
@@ -106,26 +106,27 @@
 
 
 		
-		
-		
-		<include>Viewtype_Showcase</include><!--  58  -->
-		<include>Viewtype_Poster</include><!--  55  -->
-		<include>Viewtype_Files</include><!--  50  -->
-		<include>Viewtype_Landscape</include><!--  52  -->
-		<include>Viewtype_Landscape_Fanart</include><!--  633  -->
-		<include>Viewtype_List</include><!--  53  -->
-		<include>Viewtype_Episode</include><!--  51  -->
-		<include>Viewtype_Wall</include><!--  54  -->
-		<include>Viewtype_Fanart</include><!--  56  -->
-		<include>Viewtype_PanelLandscape</include><!--  57  -->
-		<include>Viewtype_BannerPanel</include><!--  592  -->
-		<include>Viewtype_WallPanel</include><!--  597  -->
-		<include>Viewtype_16x9</include><!--  59  -->
-		<include>Viewtype_3dbanner</include><!--  593  -->
-		<include>Viewtype_Logo</include><!--  594  -->
-		<include>Viewtype_Slide</include><!--  595  -->
-		<include>Viewtype_Newest_Episodes</include><!--  596  -->
-		<include>Viewtype_Poster_Half</include><!--  598  -->
+	<control type="group">
+		<include>Animation_HiddenByInfo</include>
+			<include>Viewtype_Showcase</include><!--  58  -->
+			<include>Viewtype_Poster</include><!--  55  -->
+			<include>Viewtype_Files</include><!--  50  -->
+			<include>Viewtype_Landscape</include><!--  52  -->
+			<include>Viewtype_Landscape_Fanart</include><!--  633  -->
+			<include>Viewtype_List</include><!--  53  -->
+			<include>Viewtype_Episode</include><!--  51  -->
+			<include>Viewtype_Wall</include><!--  54  -->
+			<include>Viewtype_Fanart</include><!--  56  -->
+			<include>Viewtype_PanelLandscape</include><!--  57  -->
+			<include>Viewtype_BannerPanel</include><!--  592  -->
+			<include>Viewtype_WallPanel</include><!--  597  -->
+			<include>Viewtype_16x9</include><!--  59  -->
+			<include>Viewtype_3dbanner</include><!--  593  -->
+			<include>Viewtype_Logo</include><!--  594  -->
+			<include>Viewtype_Slide</include><!--  595  -->
+			<include>Viewtype_Newest_Episodes</include><!--  596  -->
+			<include>Viewtype_Poster_Half</include><!--  598  -->
+	</control>
 		
 		
 	

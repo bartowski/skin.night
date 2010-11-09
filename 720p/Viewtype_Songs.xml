@@ -18,7 +18,6 @@
 			<texture background="true" diffuse="Showcase/showcase-diffuse.png" fallback="backgrounds/music.jpg">$INFO[Container(52).listitem.property(fanart_image)]</texture>
 			<fadetime>400</fadetime>
 			<aspectratio>stretch</aspectratio>
-			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Panel_Fanart</include>
 		</control>
 		
@@ -38,7 +37,6 @@
 			<focusposition>9</focusposition>
 			<movement>9</movement>
 			<pagecontrol>62</pagecontrol>
-			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Panel_FocusArea</include>
 			<visible>Container.Content(songs) | Container.Content(artists)</visible>
 			<animation effect="slide" start="0,0" end="-100,0" time="1000" delay="600" tween="cubic" easing="inout" condition="Container.Content(artists)">Conditional</animation>
@@ -102,7 +100,6 @@
 		</control>		
 		
 	<control type="group">
-	<include>Animation_HiddenByInfo</include>
 	<include>Animation_Viewtype_Showcase_ThumbArea</include>
 	<visible>Control.IsVisible(52) + Container.Content(songs)</visible>
 		<!--<control type="image">
@@ -187,7 +184,6 @@
 	<control type="group">
 	<posx>0</posx>
 	<posy>300</posy>
-	<include>Animation_HiddenByInfo</include>
 	<include>Animation_Viewtype_Showcase_ThumbArea</include>
 	<visible>Control.IsVisible(52) + Container.Content(artists)</visible>
 		<control type="label">
@@ -247,7 +243,6 @@
 		<label>$INFO[ListItem.Property(Artist_Description)]</label>
 		<align>justify</align>
 		<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-		<include>Animation_HiddenByInfo</include>
 		<include>Animation_Viewtype_3dland_Leftplot</include>
 		<visible>Skin.HasSetting(library_global_clock)</visible>
 	</control>
@@ -262,7 +257,6 @@
 		<label>$INFO[ListItem.Property(Artist_Description)]</label>
 		<align>justify</align>
 		<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-		<include>Animation_HiddenByInfo</include>
 		<include>Animation_Viewtype_3dland_Leftplot</include>
 		<visible>!Skin.HasSetting(library_global_clock)</visible>
 	</control>

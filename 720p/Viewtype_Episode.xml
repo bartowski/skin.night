@@ -31,7 +31,6 @@
 			<movement>2</movement>
 			<visible>!Skin.HasSetting(no_Episode) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
 			<include>Animation_Viewtype_Episode_FocusArea</include>
-			<include>Animation_HiddenByInfo</include>
 			<itemlayout width="633" height="142">
 				<control type="image">
 					<posx>13</posx>
@@ -136,7 +135,6 @@
 					<height>3</height>
 					<info>ListItem.Overlay</info>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<include>Animation_HiddenByInfo</include>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="127,70" start="50" end="100" time="200" tween="cubic" easing="out" />
 						<effect type="fade" start="0" end="100" time="200" />
@@ -167,7 +165,6 @@
 			<texture background="true">$INFO[ListItem.path]logo.png</texture>
 			<fadetime>100</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Episode_LeftSide</include>
 			<visible>Control.IsVisible(51) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
 		</control>
@@ -179,7 +176,6 @@
 			<texture background="true">$INFO[ListItem.path]../logo.png</texture>
 			<fadetime>100</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Episode_LeftSide</include>
 			<visible>Control.IsVisible(51) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
 		</control>
@@ -193,7 +189,6 @@
 			<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 			<font>Font_Bartowski_Episodes</font>
 			<textcolor>ffffffff</textcolor>
-			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Episode_LeftSide</include>
 		</control>
 		<control type="group">
@@ -222,7 +217,6 @@
 		<control type="group">
 			<posx>375</posx>
 			<posy>560</posy>
-			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Episode_BottomArea</include>
 			<visible>Control.IsVisible(51) + !IsEmpty(ListItem.Title)</visible>
 			<control type="label"><!-- Episode Title -->
@@ -278,7 +272,6 @@
 				<orientation>horizontal</orientation>
 				<include condition="!Skin.HasSetting(grey_flags)">color_flags</include>
 				<include condition="Skin.HasSetting(grey_flags)">grey_flags</include>
-				<include>Animation_HiddenByInfo</include>
 				<include>Animation_Viewtype_Episode_BottomArea</include>
 			</control>
 		<control type="image"><!-- 1st Background -->
@@ -298,7 +291,6 @@
 			<font>Font_Episode_Landscape_TVTitle</font>
 			<textcolor>mainblue</textcolor>
 			<label>[B]$INFO[ListItem.TVShowtitle][/B]</label>
-			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Episode_LeftSide</include>
 			<visible>Control.IsVisible(51) + [Container.Content(episodes) | Window.IsActive(videoplaylist)] + IsEmpty(Control.GetLabel(7016)) + IsEmpty(Control.GetLabel(9016))</visible>
 		</control>

@@ -22,7 +22,6 @@
 			<texture background="true" diffuse="Showcase/showcase-diffuse.png">$INFO[Container(57).listitem.property(fanart_image)]</texture>
 			<fadetime>400</fadetime>
 			<aspectratio>stretch</aspectratio>
-			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Panel_Fanart</include>
 		</control>
 		<control type="image">
@@ -35,7 +34,6 @@
 			<texture background="true" diffuse="Showcase/showcase-diffuse.png">$INFO[Container(57).listitem.Icon]</texture>
 			<fadetime>400</fadetime>
 			<aspectratio>stretch</aspectratio>
-			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Panel_Fanart</include>
 		</control>
 		
@@ -55,7 +53,6 @@
 				<preloaditems>2</preloaditems>
 				<pagecontrol>67</pagecontrol>
 				<include>Animation_Viewtype_Panel_FocusArea</include>
-				<include>Animation_HiddenByInfo</include>
 			<itemlayout width="320" height="180">
 			<control type="group">
 			<posx>60</posx>
@@ -82,7 +79,6 @@
 					<width>300</width>
 					<height>39</height>
 					<texture>tv-episodes/epi-black.png</texture>
-					<include>Animation_HiddenByInfo</include>
 					<visible>Container.Content(episodes) + !IsEmpty(ListItem.Title)</visible>
 				</control>
 				<control type="label">
@@ -93,7 +89,6 @@
 					<align>center</align>
 					<font>Font_KeyboardKeys</font>
 					<textcolor>ffffffff</textcolor>
-					<include>Animation_HiddenByInfo</include>
 					<visible>Container.Content(episodes) + !IsEmpty(ListItem.Title)</visible>
 				</control>
 				<control type="image">
@@ -104,7 +99,6 @@
 					<height>3</height>
 					<info>ListItem.Overlay</info>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<include>Animation_HiddenByInfo</include>
 				</control>
 				<control type="image">
 					<posx>230</posx>
@@ -167,7 +161,6 @@
 					<width>300</width>
 					<height>39</height>
 					<texture>tv-episodes/epi-black.png</texture>
-					<include>Animation_HiddenByInfo</include>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="145,202" start="51" end="100" time="600" tween="back" easing="out" />
 					</animation>
@@ -181,7 +174,6 @@
 					<align>center</align>
 					<font>Font_KeyboardKeys</font>
 					<textcolor>ffffffff</textcolor>
-					<include>Animation_HiddenByInfo</include>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="145,202" start="51" end="100" time="600" tween="back" easing="out" />
 					</animation>
@@ -195,7 +187,6 @@
 					<height>3</height>
 					<info>ListItem.Overlay</info>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<include>Animation_HiddenByInfo</include>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="145,202" start="51" end="100" time="600" tween="back" easing="out" />
 					</animation>
@@ -230,7 +221,6 @@
 		<!-- Browser label and flags -->
 	<control type="group">
 		<include>Animation_Viewtype_Panel_Title</include>
-		<include>Animation_HiddenByInfo</include>
 		<visible>Control.IsVisible(57)</visible>	
 			<control type="image" id="7037">
 				<visible></visible>
@@ -312,7 +302,6 @@
 	</control>
 	<control type="group">
 		<visible>Control.IsVisible(57) + Container.Content(episodes)</visible>
-		<include>Animation_HiddenByInfo</include>
 			<control type="textbox"><!--TV Plot-->
 				<visible>!Player.HasAudio</visible>
 				<posx>15</posx>
@@ -342,7 +331,6 @@
 	</control>
 	<control type="group">
 		<visible>Control.IsVisible(57) + !Container.Content(episodes)</visible>
-		<include>Animation_HiddenByInfo</include>
 			<control type="textbox"><!--TV Plot-->
 				<visible>!Player.HasAudio</visible>
 				<posx>15</posx>
@@ -389,7 +377,6 @@
 			<orientation>horizontal</orientation>
 			<include condition="!Skin.HasSetting(grey_flags)">color_flags</include>
 			<include condition="Skin.HasSetting(grey_flags)">grey_flags</include>
-			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Panel_BottomArea</include>
 		</control>
 	<control type="scrollbar" id="67">

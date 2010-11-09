@@ -33,7 +33,6 @@
 			<focusposition>2</focusposition>
 			<preloaditems>2</preloaditems>
 			<include>Animation_Viewtype_Landscape_Fanart_FocusArea</include>
-			<include>Animation_HiddenByInfo</include>
 			<animation effect="slide" start="0,0" end="0,-40" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(6330)">Conditional</animation>
 			<visible>!Skin.HasSetting(no_Landscape_Fanart) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 			<itemlayout width="250" height="225">
@@ -159,7 +158,6 @@
 	
 	<control type="group">
 	<include>Animation_LandscapeFade</include>
-	<include>Animation_HiddenByInfo</include>
 	<visible>Control.IsVisible(633) + [Container.Content(seasons) | Container.Content(episodes)]</visible>
 		<control type="image"> 
 			<posx>0</posx>
@@ -215,7 +213,6 @@
 	<animation effect="zoom" start="640,0,1,720" end="0,0,1280,720" time="200" delay="200">Visible</animation>
 	<animation effect="slide" start="0,0" end="0,-40" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(6330)">Conditional</animation>
 	<include>Animation_LandscapeFade</include>
-	<include>Animation_HiddenByInfo</include>
 	<visible>Control.IsVisible(633) + Container.Content(episodes) + ![Container(633).OnNext | Container(633).OnPrevious]</visible>
 		<control type="image">
 			<posx>288</posx>

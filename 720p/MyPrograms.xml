@@ -58,10 +58,16 @@
 			<visible>!Control.IsVisible(54)</visible>
 		</control>
 		
-		<include>Viewtype_Files</include>
-		<include>Viewtype_Poster</include>
-		<include>Viewtype_3daddon</include><!--  56  -->
-		<include>Viewtype_List</include><!--  56  -->
+		
+	<control type="group">
+		<include>Animation_HiddenByInfo</include>
+			<include>Viewtype_Files</include>
+			<include>Viewtype_Poster</include>
+			<include>Viewtype_3daddon</include><!--  56  -->
+			<include>Viewtype_List</include><!--  56  -->
+	</control>
+	
+	
 		
 		<include>Global_Time_TopRight_Files</include>
 		

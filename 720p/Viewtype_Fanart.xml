@@ -30,7 +30,6 @@
 			<texture background="true" diffuse="Showcase/showcase-diffuse.png" fallback="backgrounds/movies.jpg">$INFO[Container(56).listitem.property(fanart_image)]</texture>
 			<fadetime>400</fadetime>
 			<aspectratio>stretch</aspectratio>
-			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Panel_Fanart</include>
 		</control>
 		<control type="label"><!--Big Title-->
@@ -45,7 +44,6 @@
 			<shadowcolor>678b8b8b</shadowcolor>
 			<textcolor>678b8b8b</textcolor>
 			<label>$LOCALIZE[31232]</label>
-			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Bartowski_Context_Zoom</include>
 		</control>
 		
@@ -67,7 +65,6 @@
 			<preloaditems>2</preloaditems>
 			<pagecontrol>66</pagecontrol>
 			<include>Animation_Viewtype_Panel_FocusArea</include>
-			<include>Animation_HiddenByInfo</include>
 			<itemlayout width="230" height="350" condition="!Skin.HasSetting(panelview_more_posters)">
 			<control type="group">
 			<posx>60</posx>
@@ -335,7 +332,6 @@
 			<!-- Browser label and flags -->
 	<control type="group">
 	<include>Animation_Viewtype_Panel_Title</include>
-	<include>Animation_HiddenByInfo</include>
 	<visible>Control.IsVisible(56)</visible>
 		<control type="label"><!--Movie title-->
 			<visible>Container.Content(movies)</visible>
@@ -416,7 +412,6 @@
 	</control>
 	<control type="group">
 	<visible>Control.IsVisible(56)</visible>
-	<include>Animation_HiddenByInfo</include>
 		<control type="textbox">
 			<visible>[Container.Content(movies) | Container.Content(tvshows)] + ![Player.HasAudio + !SubString(Window(10025).Property(TvTunesIsAlive),True)]</visible>
 			<posx>15</posx>
@@ -453,7 +448,6 @@
 			<orientation>horizontal</orientation>
 			<include condition="!Skin.HasSetting(grey_flags)">color_flags</include>
 			<include condition="Skin.HasSetting(grey_flags)">grey_flags</include>
-			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Panel_BottomArea</include>
 		</control>
 	</control>

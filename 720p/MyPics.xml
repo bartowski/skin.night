@@ -27,10 +27,14 @@
 			<include>Animation_BackdropFade</include>
 		</control>
 		
-		<include>Viewtype_Files</include>
-		<include>Viewtype_PictureGrid</include>
-		<include>PictureThumbView</include>
-		<include>Viewtype_Comics</include>
+		
+	<control type="group">
+		<include>Animation_HiddenByInfo</include>
+			<include>Viewtype_Files</include>
+			<include>Viewtype_PictureGrid</include>
+			<include>PictureThumbView</include>
+			<include>Viewtype_Comics</include>
+	</control>
 
 		<include>Global_Time_TopRight_Files</include>
 		

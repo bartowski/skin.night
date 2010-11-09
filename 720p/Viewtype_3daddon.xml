@@ -41,7 +41,6 @@
 		<preloaditems>2</preloaditems>
 		<pagecontrol>66</pagecontrol>
 		<include>Animation_ZoomInZoomOut</include>
-		<include>Animation_HiddenByInfo</include>
 		<animation effect="slide" end="0,40" time="0" condition="Skin.HasSetting(3dmusic_Fanart)">conditional</animation>
 		<!--<visible>Window.IsVisible(AddonBrowser.xml) | Container.Content(albums) | Window.IsActive(Programs)</visible>-->
 		<camera x="1340" y="380" />
@@ -91,7 +90,7 @@
 						<posy>131</posy>
 						<width>162</width>
 						<height>162</height>
-						<texture background="true" fallback="extras/musicgenres/default.bmp" diffuse="movie-poster/music_square_diffuse.png">extras/musicgenres/$INFO[ListItem.Label].bmp</texture>
+						<texture background="true" fallback="special://skin/extras/musicgenres/default.bmp" diffuse="movie-poster/music_square_diffuse.png">special://skin/extras/musicgenres/$INFO[ListItem.Label].bmp</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<visible>Container.Content(Genres)</visible>
@@ -123,7 +122,7 @@
 						<posy>290</posy>
 						<width>162</width>
 						<height>162</height>
-						<texture background="true" fallback="extras/musicgenres/default.bmp" flipy="true" diffuse="movie-poster/music_square_diffuse.png">extras/musicgenres/$INFO[ListItem.Label].bmp</texture>
+						<texture background="true" fallback="special://skin/extras/musicgenres/default.bmp" flipy="true" diffuse="movie-poster/music_square_diffuse.png">special://skin/extras/musicgenres/$INFO[ListItem.Label].bmp</texture>
 						<fadetime>200</fadetime>
 						<colordiffuse>89FFFFFF</colordiffuse>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -204,7 +203,7 @@
 						<posy>90</posy>
 						<width>211</width>
 						<height>211</height>
-						<texture background="true" fallback="extras/musicgenres/default.bmp" diffuse="movie-poster/music_square_diffuse.png">extras/musicgenres/$INFO[ListItem.Label].bmp</texture>
+						<texture background="true" fallback="special://skin/extras/musicgenres/default.bmp" diffuse="movie-poster/music_square_diffuse.png">special://skin/extras/musicgenres/$INFO[ListItem.Label].bmp</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -244,8 +243,7 @@
 						<posy>298</posy>
 						<width>211</width>
 						<height>211</height>
-						<texture background="true" fallback="extras/musicgenres/default.bmp" flipy="true" diffuse="movie-poster/music_square_diffuse.bmp">extras/musicgenres/$INFO[ListItem.Label].bmp</texture>
-						<fadetime>200</fadetime>
+						<texture background="true" fallback="special://skin/extras/musicgenres/default.bmp" flipy="true" diffuse="movie-poster/music_square_diffuse.bmp">special://skin/extras/musicgenres/$INFO[ListItem.Label].bmp</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
@@ -268,7 +266,6 @@
 		</control>
 		
 	<control type="group">
-	<include>Animation_HiddenByInfo</include>
 	<include>Animation_Viewtype_Showcase_ThumbArea</include>
 	<visible>Control.IsVisible(56) + Container.Content(albums)</visible>
 		<control type="image">
@@ -313,7 +310,6 @@
 	</control>
 	
 	<control type="group">
-	<include>Animation_HiddenByInfo</include>
 	<include>Animation_Viewtype_Showcase_ThumbArea</include>
 	<visible>Control.IsVisible(56) + !Container.Content(albums)</visible>
 		<control type="label">

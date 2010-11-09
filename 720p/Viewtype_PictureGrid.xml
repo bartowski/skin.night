@@ -59,7 +59,6 @@
 					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<bordertexture border="5">confluence/button-nofocus.png</bordertexture>
 					<bordersize>5</bordersize>
-					<include>Animation_HiddenByInfo</include>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -71,7 +70,6 @@
 					<bordertexture border="5">confluence/button-nofocus.png</bordertexture>
 					<bordersize>5</bordersize>
 					<animation effect="fade" start="30" end="30" time="0" condition="true">Conditional</animation>
-					<include>Animation_HiddenByInfo</include>
 				</control>
 			</control>
 		</itemlayout>
@@ -92,7 +90,6 @@
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="80,238" start="81" end="100" time="400" tween="back" easing="out" />
 					</animation>
-					<include>Animation_HiddenByInfo</include>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -107,7 +104,6 @@
 						<effect type="zoom" center="80,238" start="81" end="100" time="400" tween="back" easing="out" />
 					</animation>
 					<animation effect="fade" start="30" end="30" time="0" condition="true">Conditional</animation>
-					<include>Animation_HiddenByInfo</include>
 				</control>
 			</control>
 		</focusedlayout>

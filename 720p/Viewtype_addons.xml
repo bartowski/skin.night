@@ -25,7 +25,6 @@
 			<focusposition>9</focusposition>
 			<movement>9</movement>
 			<pagecontrol>60</pagecontrol>
-			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Files_LeftArea</include>
 			<itemlayout width="1210" height="36">
 				<control type="label">
@@ -104,7 +103,6 @@
 		</control>		
 	
 	<control type="group">
-	<include>Animation_HiddenByInfo</include>
 	<visible>Control.IsVisible(50)</visible>
 	<include>Animation_Viewtype_Wall_Title</include>	
 		<control type="image">
@@ -162,7 +160,6 @@
 			<font>Font_Bartowski_Movies</font>
 			<textcolor>ffffffff</textcolor>
 			<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Wall_Plot</include>
 			<visible>Control.IsVisible(50)</visible>
 		</control>

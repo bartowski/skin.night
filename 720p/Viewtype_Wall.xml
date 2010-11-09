@@ -267,7 +267,6 @@
 			<orientation>horizontal</orientation>
 			<include condition="!Skin.HasSetting(grey_flags)">color_flags</include>
 			<include condition="Skin.HasSetting(grey_flags)">grey_flags</include>
-			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Wall_Fags</include>
 		</control>
 

@@ -15,7 +15,6 @@
 			<texture background="true">$INFO[ListItem.Icon]</texture>
 			<fadetime>200</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<include>Animation_HiddenByInfo</include>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -25,7 +24,6 @@
 			<texture background="true">$INFO[ListItem(1).Icon]</texture>
 			<fadetime>1400</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<include>Animation_HiddenByInfo</include>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -35,7 +33,6 @@
 			<texture background="true">$INFO[ListItem(2).Icon]</texture>
 			<fadetime>400</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<include>Animation_HiddenByInfo</include>
 		</control>
 	<control type="group">
 		<posx>168</posx>
@@ -47,7 +44,6 @@
 				<texture background="true">$INFO[ListItem(-3).Icon]</texture>
 				<fadetime>800</fadetime>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
-				<include>Animation_HiddenByInfo</include>
 			</control>
 			<control type="image">
 				<posx>0</posx>
@@ -57,7 +53,6 @@
 				<texture background="true">$INFO[ListItem(16).Icon]</texture>
 				<fadetime>1200</fadetime>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
-				<include>Animation_HiddenByInfo</include>
 			</control>
 			<control type="image">
 				<posx>0</posx>
@@ -67,7 +62,6 @@
 				<texture background="true">$INFO[ListItem(12).Icon]</texture>
 				<fadetime>900</fadetime>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
-				<include>Animation_HiddenByInfo</include>
 			</control>
 	</control>
 	<control type="group">
@@ -80,7 +74,6 @@
 			<texture background="true">$INFO[ListItem(-13).Icon]</texture>
 			<fadetime>100</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<include>Animation_HiddenByInfo</include>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -90,7 +83,6 @@
 			<texture background="true">$INFO[ListItem(6).Icon]</texture>
 			<fadetime>2200</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<include>Animation_HiddenByInfo</include>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -100,7 +92,6 @@
 			<texture background="true">$INFO[ListItem(7).Icon]</texture>
 			<fadetime>1400</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<include>Animation_HiddenByInfo</include>
 		</control>
 	</control>	
 	<control type="group">
@@ -113,7 +104,6 @@
 			<texture background="true">$INFO[ListItem(13).Icon]</texture>
 			<fadetime>2200</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<include>Animation_HiddenByInfo</include>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -123,7 +113,6 @@
 			<texture background="true">$INFO[ListItem.Icon]</texture>
 			<fadetime>600</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<include>Animation_HiddenByInfo</include>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -133,7 +122,6 @@
 			<texture background="true">$INFO[ListItem(17).Icon]</texture>
 			<fadetime>400</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<include>Animation_HiddenByInfo</include>
 		</control>
 	</control>
 	<control type="group">
@@ -146,7 +134,6 @@
 			<texture background="true">$INFO[ListItem(22).Icon]</texture>
 			<fadetime>1000</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<include>Animation_HiddenByInfo</include>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -156,7 +143,6 @@
 			<texture background="true">$INFO[ListItem(9).Icon]</texture>
 			<fadetime>1800</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<include>Animation_HiddenByInfo</include>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -166,7 +152,6 @@
 			<texture background="true">$INFO[ListItem(5).Icon]</texture>
 			<fadetime>3200</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<include>Animation_HiddenByInfo</include>
 		</control>
 	</control>
 	<control type="group">
@@ -179,7 +164,6 @@
 			<texture background="true">$INFO[ListItem(11).Icon]</texture>
 			<fadetime>3200</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<include>Animation_HiddenByInfo</include>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -189,7 +173,6 @@
 			<texture background="true">$INFO[ListItem(19).Icon]</texture>
 			<fadetime>300</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<include>Animation_HiddenByInfo</include>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -199,7 +182,6 @@
 			<texture background="true">$INFO[ListItem(15).Icon]</texture>
 			<fadetime>900</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<include>Animation_HiddenByInfo</include>
 		</control>
 	</control>
 	<control type="group">
@@ -212,7 +194,6 @@
 			<texture background="true">$INFO[ListItem(14).Icon]</texture>
 			<fadetime>200</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<include>Animation_HiddenByInfo</include>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -222,7 +203,6 @@
 			<texture background="true">$INFO[ListItem(33).Icon]</texture>
 			<fadetime>1300</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<include>Animation_HiddenByInfo</include>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -232,7 +212,6 @@
 			<texture background="true">$INFO[ListItem(4).Icon]</texture>
 			<fadetime>3900</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<include>Animation_HiddenByInfo</include>
 		</control>
 	</control>
 	<control type="group">
@@ -245,7 +224,6 @@
 			<texture background="true">$INFO[ListItem(20).Icon]</texture>
 			<fadetime>1200</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<include>Animation_HiddenByInfo</include>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -255,7 +233,6 @@
 			<texture background="true">$INFO[ListItem(29).Icon]</texture>
 			<fadetime>300</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<include>Animation_HiddenByInfo</include>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -265,7 +242,6 @@
 			<texture background="true">$INFO[ListItem(9).Icon]</texture>
 			<fadetime>900</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<include>Animation_HiddenByInfo</include>
 		</control>
 	</control>
 	</control>
@@ -295,7 +271,6 @@
 		<focusposition>6</focusposition>
 		<movement>6</movement>
 		<pagecontrol>5970</pagecontrol>
-		<include>Animation_HiddenByInfo</include>
 		<include>Animation_Viewtype_Panel_Title</include>
 		<visible>!Skin.HasSetting(no_WallPanel) + Container.Content(movies) + !substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)</visible>
 			<itemlayout width="1210" height="30">
@@ -364,7 +339,6 @@
 				<height>522</height>
 				<texture>wall/wall_panel_glow1.png</texture>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
-				<include>Animation_HiddenByInfo</include>
 			</control>
 			<control type="image">
 				<posx>470</posx>
@@ -374,7 +348,6 @@
 				<texture background="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
 				<fadetime>400</fadetime>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
-				<include>Animation_HiddenByInfo</include>
 			</control>
 	</control>
 		
@@ -486,7 +459,6 @@
 			<orientation>horizontal</orientation>
 			<include condition="!Skin.HasSetting(grey_flags)">color_flags</include>
 			<include condition="Skin.HasSetting(grey_flags)">grey_flags</include>
-			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Wall_Fags</include>
 		</control>
 		<control type="scrollbar" id="5970">
