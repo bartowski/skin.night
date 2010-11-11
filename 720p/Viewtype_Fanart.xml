@@ -395,7 +395,7 @@
 			<align>center</align>
 			<font>Font_RSS_Big</font>
 			<textcolor>ffffffff</textcolor>
-			<label>$INFO[ListItem.Duration] $LOCALIZE[12391]</label>
+			<label>$INFO[ListItem.Year] / $INFO[ListItem.Duration] $LOCALIZE[12391]</label>
 			<visible>Container.Content(movies) + !IsEmpty(ListItem.Title) + !IsEmpty(ListItem.Duration) + !SubString(ListItem.Duration,min)</visible>
 		</control>
 		<control type="label">
@@ -406,7 +406,7 @@
 			<align>center</align>
 			<font>Font_RSS_Big</font>
 			<textcolor>ffffffff</textcolor>
-			<label>$INFO[ListItem.Duration]</label>
+			<label>$INFO[ListItem.Year] / $INFO[ListItem.Duration]</label>
 			<visible>Container.Content(movies) + !IsEmpty(ListItem.Title) + !IsEmpty(ListItem.Duration) + SubString(ListItem.Duration,min)</visible>
 		</control>
 	</control>
