@@ -24,8 +24,8 @@
 		
 		<control type="fixedlist" id="52">
 			<posx>700</posx>
-			<posy>50</posy>
-			<height>650</height>
+			<posy>74</posy>
+			<height>647</height>
 			<width>800</width>
 			<onup>52</onup>
 			<ondown>52</ondown>

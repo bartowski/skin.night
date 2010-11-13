@@ -197,6 +197,14 @@
 		</control>
 		
 		<control type="image">
+            <description>France:U</description>
+            <width>72</width>
+			<height>27</height>
+            <aspectratio>keep</aspectratio>
+            <texture>flagging/ratings/csaU.png</texture>
+            <visible>substring(Listitem.mpaa,France:U)</visible>
+        </control>
+		<control type="image">
             <description>Interdit aux moins de 10 ans</description>
             <width>72</width>
 			<height>27</height>
@@ -230,7 +238,7 @@
         </control>
 		
 		<control type="image">
-            <description>Interdit aux moins de 10 ans</description>
+            <description>Germany:0</description>
             <width>72</width>
 			<height>27</height>
             <aspectratio>keep</aspectratio>
@@ -238,7 +246,7 @@
             <visible>substring(Listitem.mpaa,Germany:0)</visible>
         </control>
         <control type="image">
-            <description>Interdit aux moins de 12 ans</description>
+            <description>Germany:6</description>
             <width>72</width>
 			<height>27</height>
             <aspectratio>keep</aspectratio>
@@ -246,7 +254,7 @@
             <visible>substring(Listitem.mpaa,Germany:6)</visible>
         </control>
         <control type="image">
-            <description>Interdit aux moins de 16 ans</description>
+            <description>Germany:12</description>
             <width>72</width>
 			<height>27</height>
             <aspectratio>keep</aspectratio>
@@ -254,7 +262,7 @@
             <visible>substring(Listitem.mpaa,Germany:12)</visible>
         </control>
         <control type="image">
-            <description>Interdit aux moins de 18 ans</description>
+            <description>Germany:16</description>
             <width>72</width>
 			<height>27</height>
             <aspectratio>keep</aspectratio>
@@ -262,7 +270,7 @@
             <visible>substring(Listitem.mpaa,Germany:16)</visible>
         </control>
 		<control type="image">
-            <description>Interdit aux moins de 18 ans</description>
+            <description>Germany:18</description>
             <width>72</width>
 			<height>27</height>
             <aspectratio>keep</aspectratio>
