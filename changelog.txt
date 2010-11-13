@@ -1,3 +1,8 @@
+11/13/2010
+  -*Trial Balloon - New Flags*
+  -Bumped spacing on title on Episode view up a few pixels
+  -Changed spacing on the list in Song view
+
 11/9/2010
   -Moved extras - Genre icons/fanart - out of /media to top of skin.night folder
   -Added music Genre fanart support
