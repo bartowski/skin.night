@@ -79,7 +79,7 @@
 					<width>300</width>
 					<height>39</height>
 					<texture>tv-episodes/epi-black.png</texture>
-					<visible>Container.Content(episodes) + !IsEmpty(ListItem.Title)</visible>
+					<visible>Container.Content(episodes) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 				</control>
 				<control type="label">
 					<posx>154</posx>
@@ -88,8 +88,8 @@
 					<label>$INFO[ListItem.Label]</label>
 					<align>center</align>
 					<font>Font_KeyboardKeys</font>
-					<textcolor>ffffffff</textcolor>
-					<visible>Container.Content(episodes) + !IsEmpty(ListItem.Title)</visible>
+					<textcolor>white</textcolor>
+					<visible>Container.Content(episodes) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 				</control>
 				<control type="image">
 					<visible>Container.Content(episodes) + Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
@@ -164,7 +164,7 @@
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="145,202" start="51" end="100" time="600" tween="back" easing="out" />
 					</animation>
-					<visible>Container.Content(episodes) + !IsEmpty(ListItem.Title)</visible>
+					<visible>Container.Content(episodes) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 				</control>
 				<control type="label">
 					<posx>154</posx>
@@ -173,11 +173,11 @@
 					<label>$INFO[ListItem.Label]</label>
 					<align>center</align>
 					<font>Font_KeyboardKeys</font>
-					<textcolor>ffffffff</textcolor>
+					<textcolor>white</textcolor>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="145,202" start="51" end="100" time="600" tween="back" easing="out" />
 					</animation>
-					<visible>Container.Content(episodes) + !IsEmpty(ListItem.Title)</visible>
+					<visible>Container.Content(episodes) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 				</control>
 				<control type="image">
 					<visible>Container.Content(episodes) + Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
@@ -263,11 +263,11 @@
 				<height>50</height>
 				<align>center</align>
 				<font>Font_Bartowski_Showcase_runtime_year</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Genre]</label>
 			</control>
 			<control type="label">
-				<visible>Container.Content(episodes) + !IsEmpty(ListItem.Title)</visible>
+				<visible>Container.Content(episodes) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 				<posx>15</posx>
 				<posy>394</posy>
 				<width>555</width>
@@ -278,7 +278,7 @@
 				<label>"$INFO[ListItem.Title]"</label>
 			</control>
 			<control type="label">
-				<visible>Container.Content(episodes) + !IsEmpty(ListItem.Title)</visible>
+				<visible>Container.Content(episodes) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 				<posx>15</posx>
 				<posy>426</posy>
 				<width>555</width>
@@ -296,7 +296,7 @@
 				<height>50</height>
 				<align>center</align>
 				<font>Font_Bartowski_Showcase_runtime_year</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Duration]</label>
 			</control>
 	</control>
@@ -309,7 +309,7 @@
 				<width>555</width>
 				<height>220</height>
 				<font>Font_Bartowski_Showcase_plot</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Plot]</label>
 				<align>justify</align>
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
@@ -322,7 +322,7 @@
 				<width>555</width>
 				<height>144</height>
 				<font>Font_Bartowski_Showcase_plot</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Plot]</label>
 				<align>justify</align>
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
@@ -338,7 +338,7 @@
 				<width>555</width>
 				<height>220</height>
 				<font>Font_Bartowski_Showcase_plot</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Plot]</label>
 				<align>justify</align>
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
@@ -351,7 +351,7 @@
 				<width>555</width>
 				<height>144</height>
 				<font>Font_Bartowski_Showcase_plot</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Plot]</label>
 				<align>justify</align>
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>

@@ -272,6 +272,7 @@
 		<movement>6</movement>
 		<pagecontrol>5970</pagecontrol>
 		<include>Animation_Viewtype_Panel_Title</include>
+		<animation effect="slide" start="0,0" end="30,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(5970)">Conditional</animation>
 		<visible>!Skin.HasSetting(no_WallPanel) + Container.Content(movies) + !substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)</visible>
 			<itemlayout width="1210" height="30">
 				<control type="label">
@@ -302,6 +303,7 @@
 					<width>521</width>
 					<height>68</height>
 					<texture>list/highlight_new.png</texture>
+					<colordiffuse>highlight_selection</colordiffuse>
 					<animation type="Focus" reversible="false">
 						<effect type="fade" start="0" end="100" time="800" />
 					</animation>
@@ -313,7 +315,7 @@
 					<height>46</height>
 					<aligny>center</aligny>
 					<font>Font_Bartowski_Movies</font>
-					<textcolor>ffffffff</textcolor>
+					<textcolor>white</textcolor>
 					<label>[B]$INFO[ListItem.Label][/B]</label>
 					<animation effect="slide" start="0,0" end="20,0" time="0" condition="stringcompare(ListItem.Overlay,OverlayWatched.png) + Skin.HasSetting(movieoverlays)">Conditional</animation>
 				</control>
@@ -338,6 +340,7 @@
 				<width>419</width>
 				<height>522</height>
 				<texture>wall/wall_panel_glow1.png</texture>
+				<colordiffuse>poster_glow</colordiffuse>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 			</control>
 			<control type="image">
@@ -357,7 +360,7 @@
 		<posx>810</posx>
 		<posy>60</posy>
 		<include>Animation_Viewtype_Panel_FocusArea</include>
-		<visible>!IsEmpty(ListItem.Title) + Container.Content(movies) + Control.IsVisible(597)</visible>
+		<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + Container.Content(movies) + Control.IsVisible(597)</visible>
 			<control type="label"><!--Movie title-->
 				<posx>0</posx>
 				<posy>80</posy>
@@ -375,7 +378,7 @@
 				<height>50</height>
 				<aligny>center</aligny>
 				<font>Font_RSS_Big</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<label>31508</label>
 				<visible>IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres)</visible>
 			</control>
@@ -386,7 +389,7 @@
 				<height>50</height>
 				<aligny>center</aligny>
 				<font>Font_RSS_Big</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Duration] $LOCALIZE[12391]</label>
 				<visible>!IsEmpty(ListItem.Duration) + !SubString(ListItem.Duration,min)</visible>
 			</control>
@@ -397,7 +400,7 @@
 				<height>50</height>
 				<aligny>center</aligny>
 				<font>Font_RSS_Big</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Duration]</label>
 				<visible>!IsEmpty(ListItem.Duration) + SubString(ListItem.Duration,min)</visible>
 			</control>
@@ -408,7 +411,7 @@
 				<height>50</height>
 				<aligny>center</aligny>
 				<font>Font_RSS_Big</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Year]</label>
 				<animation effect="slide" start="0,0" end="0,-23" time="0" condition="IsEmpty(ListItem.Duration)">Conditional</animation>
 			</control>
@@ -429,7 +432,7 @@
 				<align>justify</align>
 				<info>ListItem.Plot</info>
 				<font>Font_Bartowski_Movies_Plot</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				<animation effect="fade" start="30" end="100" time="400">Visible</animation>
 			</control>
@@ -442,7 +445,7 @@
 				<align>justify</align>
 				<info>ListItem.Plot</info>
 				<font>Font_Bartowski_Movies_Plot</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				<animation effect="fade" start="30" end="100" time="400">Visible</animation>
 			</control>
@@ -463,8 +466,8 @@
 		</control>
 		<control type="scrollbar" id="5970">
 			<include>Animation_ZoomInZoomOut</include>
-			<posx>1280</posx>
-			<posy>100</posy>
+			<posx>10</posx>
+			<posy>120</posy>
 			<width>25</width>
 			<height>460</height>
 			<visible allowhiddenfocus="true">Control.IsVisible(597) + Control.HasFocus(5970)</visible>
@@ -475,7 +478,7 @@
 			<showonepage>true</showonepage>
 			<orientation>vertical</orientation>
 			<include>Animation_CommonFade</include>
-			<animation effect="slide" start="0,0" end="-500,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(5970)">Conditional</animation>
+			<animation effect="slide" start="-500,0" end="0,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(5970)">Conditional</animation>
 		</control>
 		
 		<include>Trailer_WallPanel</include>
@@ -488,7 +491,7 @@
 			<height>50</height>
 			<aligny>center</aligny>
 			<font>Font_Alaya_Movie-trailer</font>
-			<textcolor>ffffffff</textcolor>
+			<textcolor>white</textcolor>
 			<label>*$LOCALIZE[31240]*</label>
 			<shadowcolor>black</shadowcolor>
 			<include>Animation_ZoomInZoomOut</include>
@@ -501,7 +504,7 @@
 			<height>50</height>
 			<aligny>center</aligny>
 			<font>Font_Alaya_Movie-trailer</font>
-			<textcolor>ffffffff</textcolor>
+			<textcolor>white</textcolor>
 			<label>*$LOCALIZE[31238]*</label>
 			<shadowcolor>black</shadowcolor>
 			<include>Animation_ZoomInZoomOut</include>

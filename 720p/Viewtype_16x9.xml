@@ -23,7 +23,7 @@
 			<scrolltime>200</scrolltime>
 			<preloaditems>2</preloaditems>
 			<include>Animation_Bartowski_Context_Zoom</include>
-			<visible>!Skin.HasSetting(no_16x9) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Window.IsActive(videofiles)]</visible>
+			<visible>!Skin.HasSetting(no_16x9) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Window.IsActive(videofiles)] + !substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)</visible>
 			<itemlayout width="340" height="500">
 				<control type="group">
 				<posx>0</posx>
@@ -133,6 +133,7 @@
 						<width>780</width>
 						<height>578</height>
 						<texture>16x9/focus_glow1.png</texture>
+						<colordiffuse>poster_glow</colordiffuse>
 						<animation type="Focus" reversible="false">
 							<effect type="fade" start="0" end="80" time="1000" delay="800" />
 						</animation>
@@ -294,7 +295,7 @@
 		<control type="group">
 			<posx>350</posx>
 			<posy>260</posy>
-			<visible>Control.IsVisible(59) + Container.Content(movies) + !IsEmpty(ListItem.Title)</visible>
+			<visible>Control.IsVisible(59) + Container.Content(movies) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 			<animation effect="slide" start="0,0" end="-1000,0" time="600" delay="2800" condition="Container.Content(movies) + ![Container(59).OnNext | Container(59).OnPrevious]">Conditional</animation>
 			<include>Animation_Viewtype_Panel_BottomArea</include>
 			<control type="label">
@@ -305,8 +306,8 @@
 				<height>50</height>
 				<aligny>center</aligny>
 				<font>Font_TVShow</font>
-				<textcolor>ffffffff</textcolor>
-				<label>[B][COLOR=mainblue]$LOCALIZE[20339]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Director][/COLOR]</label>
+				<textcolor>white</textcolor>
+				<label>[B][COLOR=mainblue]$LOCALIZE[20339]:[/COLOR][/B] [COLOR=white]$INFO[ListItem.Director][/COLOR]</label>
 			</control>
 			<control type="label">
 				<description>Writer</description>
@@ -316,8 +317,8 @@
 				<height>50</height>
 				<aligny>center</aligny>
 				<font>Font_TVShow</font>
-				<textcolor>ffffffff</textcolor>
-				<label>[B][COLOR=mainblue]$LOCALIZE[20417]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Writer][/COLOR]</label>
+				<textcolor>white</textcolor>
+				<label>[B][COLOR=mainblue]$LOCALIZE[20417]:[/COLOR][/B] [COLOR=white]$INFO[ListItem.Writer][/COLOR]</label>
 			</control>
 			<control type="label">
 				<description>Genre</description>
@@ -327,8 +328,8 @@
 				<height>50</height>
 				<aligny>center</aligny>
 				<font>Font_TVShow</font>
-				<textcolor>ffffffff</textcolor>
-				<label>[B][COLOR=mainblue]$LOCALIZE[515]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Genre][/COLOR]</label>
+				<textcolor>white</textcolor>
+				<label>[B][COLOR=mainblue]$LOCALIZE[515]:[/COLOR][/B] [COLOR=white]$INFO[ListItem.Genre][/COLOR]</label>
 			</control>
 			<control type="label">
 				<description>Duration</description>
@@ -338,8 +339,8 @@
 				<height>50</height>
 				<aligny>center</aligny>
 				<font>Font_TVShow</font>
-				<textcolor>ffffffff</textcolor>
-				<label>[B][COLOR=mainblue]$LOCALIZE[180]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Duration] $LOCALIZE[12391][/COLOR]</label>
+				<textcolor>white</textcolor>
+				<label>[B][COLOR=mainblue]$LOCALIZE[180]:[/COLOR][/B] [COLOR=white]$INFO[ListItem.Duration] $LOCALIZE[12391][/COLOR]</label>
 				<visible>!IsEmpty(ListItem.Duration) + !SubString(ListItem.Duration,min)</visible>
 			</control>
 			<control type="label">
@@ -350,8 +351,8 @@
 				<height>50</height>
 				<aligny>center</aligny>
 				<font>Font_TVShow</font>
-				<textcolor>ffffffff</textcolor>
-				<label>[B][COLOR=mainblue]$LOCALIZE[180]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Duration][/COLOR]</label>
+				<textcolor>white</textcolor>
+				<label>[B][COLOR=mainblue]$LOCALIZE[180]:[/COLOR][/B] [COLOR=white]$INFO[ListItem.Duration][/COLOR]</label>
 				<visible>!IsEmpty(ListItem.Duration) + SubString(ListItem.Duration,min)</visible>
 			</control>
 			<control type="label">
@@ -362,8 +363,8 @@
 				<height>50</height>
 				<aligny>center</aligny>
 				<font>Font_TVShow</font>
-				<textcolor>ffffffff</textcolor>
-				<label>[B][COLOR=mainblue]$LOCALIZE[368]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.rating][/COLOR]</label>
+				<textcolor>white</textcolor>
+				<label>[B][COLOR=mainblue]$LOCALIZE[368]:[/COLOR][/B] [COLOR=white]$INFO[ListItem.rating][/COLOR]</label>
 			</control>
 			<control type="label">
 				<description>Rated</description>
@@ -373,7 +374,7 @@
 				<height>50</height>
 				<aligny>center</aligny>
 				<font>Font_TVShow</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<label>[B][COLOR=mainblue]$LOCALIZE[31226]:[/COLOR][/B]</label>
 			</control>
 			<control type="group">
@@ -385,7 +386,7 @@
 		</control>
 		
 		<control type="group"> 
-			<visible>Control.IsVisible(59) + !IsEmpty(ListItem.Title)</visible>
+			<visible>Control.IsVisible(59) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 			<posx>360</posx>
 			<posy>80</posy>
 			<animation effect="slide" start="0,0" end="-1000,0" time="600" delay="2800" condition="Container.Content(episodes) + ![Container(59).OnNext | Container(59).OnPrevious]">Conditional</animation>
@@ -399,7 +400,7 @@
 					<aligny>center</aligny>
 					<font>Font_TVShow</font>
 					<textcolor>mainblue</textcolor>
-					<label>[B][COLOR=mainblue]$LOCALIZE[31226]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Mpaa][/COLOR]</label>
+					<label>[B][COLOR=mainblue]$LOCALIZE[31226]:[/COLOR][/B] [COLOR=white]$INFO[ListItem.Mpaa][/COLOR]</label>
 					<visible>Container.Content(tvshows) + ![StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem.Label)]</visible>
 				</control>
 				<control type="label">
@@ -411,7 +412,7 @@
 					<aligny>center</aligny>
 					<font>Font_TVShow</font>
 					<textcolor>mainblue</textcolor>
-					<label>[B][COLOR=mainblue]$LOCALIZE[20360]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Episode][/COLOR]</label>
+					<label>[B][COLOR=mainblue]$LOCALIZE[20360]:[/COLOR][/B] [COLOR=white]$INFO[ListItem.Episode][/COLOR]</label>
 					<visible>Container.Content(tvshows) + ![StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem.Label)]</visible>
 				</control>
 				<control type="label">
@@ -422,7 +423,7 @@
 					<height>50</height>
 					<aligny>center</aligny>
 					<font>Font_TVShow</font>
-					<label>[B][COLOR=mainblue]$LOCALIZE[515]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Genre][/COLOR]</label>
+					<label>[B][COLOR=mainblue]$LOCALIZE[515]:[/COLOR][/B] [COLOR=white]$INFO[ListItem.Genre][/COLOR]</label>
 					<visible>Container.Content(tvshows) + ![StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem.Label)]</visible>
 				</control>
 				<control type="label">
@@ -434,7 +435,7 @@
 					<aligny>center</aligny>
 					<font>Font_TVShow</font>
 					<textcolor>mainblue</textcolor>
-					<label>[B][COLOR=mainblue]$LOCALIZE[20373]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Season][/COLOR]</label>
+					<label>[B][COLOR=mainblue]$LOCALIZE[20373]:[/COLOR][/B] [COLOR=white]$INFO[ListItem.Season][/COLOR]</label>
 					<visible>Container.Content(episodes)</visible>
 				</control>
 				<control type="label">
@@ -446,7 +447,7 @@
 					<aligny>center</aligny>
 					<font>Font_TVShow</font>
 					<textcolor>mainblue</textcolor>
-					<label>[B][COLOR=mainblue]$LOCALIZE[20359]:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Episode][/COLOR]</label>
+					<label>[B][COLOR=mainblue]$LOCALIZE[20359]:[/COLOR][/B] [COLOR=white]$INFO[ListItem.Episode][/COLOR]</label>
 					<visible>Container.Content(episodes)</visible>
 				</control>
 				<control type="label">
@@ -458,12 +459,12 @@
 					<aligny>center</aligny>
 					<font>Font_TVShow</font>
 					<textcolor>mainblue</textcolor>
-					<label>[B][COLOR=mainblue]$LOCALIZE[563]:[/B] [COLOR=ffffffff]$INFO[ListItem.Rating][/COLOR]</label>
+					<label>[B][COLOR=mainblue]$LOCALIZE[563]:[/B] [COLOR=white]$INFO[ListItem.Rating][/COLOR]</label>
 					<visible>Container.Content(episodes)</visible>
 				</control>
 			</control>
 			<control type="grouplist">
-				<visible>Control.IsVisible(59) + !IsEmpty(ListItem.Title)</visible>
+				<visible>Control.IsVisible(59) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 				<animation effect="slide" start="0,0" end="-1000,0" time="600" delay="2800" condition="Container.Content(episodes) + ![Container(59).OnNext | Container(59).OnPrevious]">Conditional</animation>
 				<include>Animation_Viewtype_Panel_BottomArea</include>
 				<posx>366</posx>
@@ -500,7 +501,7 @@
 				<align>justify</align>
 				<info>ListItem.Plot</info>
 				<font>Font_Bartowski_Showcase_plot</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				<animation effect="slide" start="340,900" end="340,520" time="600" delay="2800" condition="[Container.Content(episodes) | Container.Content(movies)] + ![Container(59).OnNext | Container(59).OnPrevious]">Conditional</animation>
 				<include>Animation_Viewtype_Panel_BottomArea</include>

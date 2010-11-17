@@ -572,7 +572,7 @@
 		<textoffsety>10</textoffsety>
 		<texturefocus border="5">confluence/button-focus.png</texturefocus>
 		<textcolor>ff000000</textcolor>
-		<focusedcolor>ffffffff</focusedcolor>
+		<focusedcolor>white</focusedcolor>
 		<pulseonselect>false</pulseonselect>
 	</include>
 	<include name="skin_settings_labels">
@@ -1244,7 +1244,7 @@
 	<include name="Global_HeadingSectionVars">
 		<width>960</width>
 		<font>Font_Bartowski_Movies_Title</font>
-		<textcolor>ffffffff</textcolor>
+		<textcolor>white</textcolor>
 		<align>right</align>
 	</include>
 	<include name="Global_HeadingSectionVars1">

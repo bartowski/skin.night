@@ -39,7 +39,7 @@
 				<control type="group">
 				<animation effect="fade" start="100" end="0" time="400" delay="100" condition="Control.HasFocus(2448)">Conditional</animation>
 					<control type="image">
-						<visible>Container.Content(tvshows) + !IsEmpty(ListItem.Title)</visible>
+						<visible>Container.Content(tvshows) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 						<posx>1</posx>
 						<posy>50</posy>
 						<width>230</width>
@@ -50,7 +50,7 @@
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 					</control>	
 					<control type="label">
-						<visible>Container.Content(episodes) + !IsEmpty(ListItem.Title)</visible>
+						<visible>Container.Content(episodes) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 						<posx>115</posx>
 						<posy>100</posy>
 						<width>230</width>
@@ -61,7 +61,7 @@
 						<label>[B]$LOCALIZE[20359] $INFO[ListItem.Episode][/B]</label>
 					</control>
 					<control type="label">
-						<visible>Container.Content(seasons) | [Container.Content(episodes) + IsEmpty(ListItem.Title)] | [Container.Content(tvshows) + IsEmpty(ListItem.Title)]</visible>
+						<visible>Container.Content(seasons) | [Container.Content(episodes) + SubString(ListItem.Icon,DefaultFolderBack.png,Left)] | [Container.Content(tvshows) + SubString(ListItem.Icon,DefaultFolderBack.png,Left)]</visible>
 						<posx>115</posx>
 						<posy>100</posy>
 						<width>230</width>
@@ -98,7 +98,7 @@
 				<control type="group">
 					<animation effect="slide" start="0,0" end="-200,0" time="500" delay="100" condition="Control.HasFocus(2448)">Conditional</animation>
 						<control type="image">
-							<visible>Container.Content(tvshows) + !IsEmpty(ListItem.Title)</visible>
+							<visible>Container.Content(tvshows) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 							<posx>20</posx>
 							<posy>50</posy>
 							<width>230</width>
@@ -108,7 +108,7 @@
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 						</control>
 						<control type="label">
-							<visible>Container.Content(episodes) + !IsEmpty(ListItem.Title)</visible>
+							<visible>Container.Content(episodes) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 							<posx>135</posx>
 							<posy>100</posy>
 							<width>230</width>
@@ -116,11 +116,11 @@
 							<align>center</align>
 							<aligny>bottom</aligny>
 							<font>Font_MainMenuLabel</font>
-							<textcolor>ffffffff</textcolor>
+							<textcolor>white</textcolor>
 							<label>[B]$LOCALIZE[20359] $INFO[ListItem.Episode][/B]</label>
 						</control>
 						<control type="label">
-							<visible>Container.Content(seasons) | [Container.Content(episodes) + IsEmpty(ListItem.Title)] | [Container.Content(tvshows) + IsEmpty(ListItem.Title)]</visible>
+							<visible>Container.Content(seasons) | [Container.Content(episodes) + SubString(ListItem.Icon,DefaultFolderBack.png,Left)] | [Container.Content(tvshows) + SubString(ListItem.Icon,DefaultFolderBack.png,Left)]</visible>
 							<posx>135</posx>
 							<posy>100</posy>
 							<width>230</width>
@@ -128,7 +128,7 @@
 							<align>center</align>
 							<aligny>bottom</aligny>
 							<font>Font_MainMenuLabel</font>
-							<textcolor>ffffffff</textcolor>
+							<textcolor>white</textcolor>
 							<label>[B]$INFO[ListItem.Label][/B]</label>
 						</control>
 						<control type="label">
@@ -205,7 +205,7 @@
 			<font>Font_Bartowski_Movies_Duration</font>
 			<textcolor>white</textcolor>
 			<label>[B]$LOCALIZE[20373] $INFO[ListItem.Season][/B]</label>
-			<visible>Container.Content(episodes) + !IsEmpty(ListItem.Title)</visible>
+			<visible>Container.Content(episodes) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 		</control>
 	</control>
 	
@@ -220,6 +220,7 @@
 			<width>752</width>
 			<height>420</height>
 			<texture>tv-landscape/lanscape_tv_fanart_glow.png</texture>
+			<colordiffuse>poster_glow</colordiffuse>
 		</control>
 		<control type="image">
 			<posx>454</posx>
@@ -235,7 +236,7 @@
 			<width>398</width>
 			<height>224</height>
 			<texture>tv-landscape/tv_fanart_land_back.png</texture>
-			<visible>!IsEmpty(ListItem.Title)</visible>
+			<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 		</control>
 		<control type="image">
 			<posx>438</posx>
@@ -251,8 +252,8 @@
 			<label>[B]$INFO[ListItem.Title][/B]</label>
 			<align>center</align>
 			<font>Font_Bartowski_Extras_Pause</font>
-			<textcolor>ffffffff</textcolor>
-			<visible>!IsEmpty(ListItem.Title)</visible>
+			<textcolor>white</textcolor>
+			<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 		</control>
 	</control>
 	
@@ -273,7 +274,7 @@
 	<control type="group">
 	<include>Animation_LandscapeFade</include>
 	<animation effect="fade" start="0" end="100" time="400" delay="200" condition="Control.HasFocus(18374)">Conditional</animation>
-	<visible>Control.IsVisible(633) + Container.Content(episodes) + !IsEmpty(ListItem.Title) + Control.HasFocus(18374)</visible>
+	<visible>Control.IsVisible(633) + Container.Content(episodes) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left) + Control.HasFocus(18374)</visible>
 		<control type="image">
 			<posx>458</posx>
 			<posy>426</posy>
@@ -287,7 +288,7 @@
 			<width>386</width>
 			<height>188</height>
 			<font>Font_KeyboardKeys_Plot</font>
-			<textcolor>ffffffff</textcolor>
+			<textcolor>white</textcolor>
 			<label>$INFO[ListItem.Plot]</label>
 			<align>justify</align>
 			<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>

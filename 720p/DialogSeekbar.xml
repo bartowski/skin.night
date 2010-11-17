@@ -67,7 +67,7 @@
 				<width>1080</width>
 				<height>25</height>
 				<label>[B]"$INFO[VideoPlayer.Title]"[/B]</label>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<font>Font_Bartowski_Extras_Pause</font>
 				<align>center</align>
 				<animation type="Conditional" reversible="false" condition="Player.Paused" loop="true">
@@ -83,7 +83,7 @@
 				<width>1080</width>
 				<height>25</height>
 				<label>$LOCALIZE[31074]: [COLOR=mainblue][B]$INFO[System.Time][/COLOR][/B] | $LOCALIZE[31075]: [COLOR=mainblue][B]$INFO[Player.FinishTime][/B][/COLOR]</label>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<font>Font_Bartowski_Extras_Pause</font>
 				<align>center</align>
 				<visible>Player.Paused</visible>
@@ -101,7 +101,7 @@
 					<width>1080</width>
 					<height>25</height>
 					<label>$LOCALIZE[31074] [COLOR=mainblue][B]$INFO[System.Time][/COLOR][/B] | $LOCALIZE[31075]: [COLOR=mainblue][B]$INFO[Player.FinishTime][/B][/COLOR]</label>
-					<textcolor>ffffffff</textcolor>
+					<textcolor>white</textcolor>
 					<font>Font_Bartowski_Extras_Pause</font>
 					<align>center</align>
 					<visible>Player.Paused</visible>
@@ -125,7 +125,7 @@
 				<width>300</width>
 				<height>25</height>
 				<font>Font_ListDetail</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<label>[B]$INFO[VideoPlayer.Duration][/B]</label>
 				<animation effect="slide" start="0,0" end="-304,0" time="0" tween="cubic" easing="inout" condition="VideoPlayer.Content(episodes) + ![IsEmpty(Control.GetLabel(7657)) + IsEmpty(Control.GetLabel(7658))]">Conditional</animation>
 			</control>
@@ -227,7 +227,7 @@
 			<align>left</align> 
 			<aligny>center</aligny> 
 			<font>Font_Bartowski_Under_Pause</font>
-			<textcolor>ffffffff</textcolor>
+			<textcolor>white</textcolor>
 			<visible>VideoPlayer.Content(episodes)</visible>
 		</control>
 		<control type="label">
@@ -239,7 +239,7 @@
 			<align>left</align> 
 			<aligny>center</aligny> 
 			<font>Font_Bartowski_Under_Pause</font>
-			<textcolor>ffffffff</textcolor>
+			<textcolor>white</textcolor>
 			<visible>VideoPlayer.Content(movies)</visible>
 		</control>
 		

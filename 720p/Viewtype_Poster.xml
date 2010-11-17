@@ -35,8 +35,8 @@
 			<label>[B]$INFO[ListItem.Label][/B]</label>
 		</control>
 		<control type="label"><!--Big Title-->
-			<visible>Control.IsVisible(55) + Container.Content(movies) + IsEmpty(ListItem.Title) + !Window.IsVisible(VideoFiles)</visible>
-			<animation effect="slide" start="0,0" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(55) + Container.Content(movies) + IsEmpty(ListItem.Title)">Conditional</animation>
+			<visible>Control.IsVisible(55) + Container.Content(movies) + SubString(ListItem.Icon,DefaultFolderBack.png,Left) + !Window.IsVisible(VideoFiles)</visible>
+			<animation effect="slide" start="0,0" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(55) + Container.Content(movies) + SubString(ListItem.Icon,DefaultFolderBack.png,Left)">Conditional</animation>
 			<posx>0</posx>
 			<posy>235</posy>
 			<width>1280</width>
@@ -358,7 +358,7 @@
 				<align>justify</align>
 				<info>ListItem.Plot</info>
 				<font>Font_Bartowski_Movies_Plot</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Control.IsVisible(55) + Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(55).OnNext | Container(55).OnPrevious]">WindowOpen</animation>
 				<animation effect="slide" start="1000,0" end="0,0" time="400" delay="3600" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(55).OnNext | Container(55).OnPrevious]">Conditional</animation>
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
@@ -406,7 +406,7 @@
 				<height>50</height>
 				<aligny>center</aligny>
 				<font>Font_RSS_Big</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Duration] $LOCALIZE[12391]</label>
 				<visible>Container.Content(movies) + !Skin.HasSetting(clean_poster) + ![Player.HasVideo | substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)] + !IsEmpty(ListItem.Duration) + !SubString(ListItem.Duration,min)</visible>
 			</control>
@@ -417,7 +417,7 @@
 				<height>50</height>
 				<aligny>center</aligny>
 				<font>Font_RSS_Big</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Duration]</label>
 				<visible>Container.Content(movies) + !Skin.HasSetting(clean_poster) + ![Player.HasVideo | substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)] + !IsEmpty(ListItem.Duration) + SubString(ListItem.Duration,min)</visible>
 			</control>
@@ -428,7 +428,7 @@
 				<height>50</height>
 				<aligny>center</aligny>
 				<font>Font_RSS_Big</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<label>$LOCALIZE[31508]</label>
 				<visible>IsEmpty(ListItem.foldername) + !Skin.HasSetting(Poster_Fanart) + !Skin.HasSetting(clean_poster) + !substring(Container.Listitem.Label,..,left) + Container.Content(movies) + Window.IsActive(videolibrary)</visible>
 			</control>
@@ -439,7 +439,7 @@
 				<height>50</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_Movies_Duration</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.year]</label>
 				<animation effect="slide" start="0,0" end="0,-23" time="0" condition="IsEmpty(ListItem.Duration)">Conditional</animation>
 				<visible>Container.Content(movies) + !Skin.HasSetting(clean_poster) + ![Player.HasVideo | substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)]</visible>
@@ -460,13 +460,13 @@
 		<width>600</width>
 		<include>Animation_ZoomInZoomOut</include>
 		<animation effect="slide" start="0,600" end="0,0" time="400" delay="3400" condition="Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(55).OnNext | Container(55).OnPrevious]">Conditional</animation>
-		<visible>Control.IsVisible(55) + Skin.HasSetting(PosterPlus) + !IsEmpty(ListItem.Title) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart)</visible>
+		<visible>Control.IsVisible(55) + Skin.HasSetting(PosterPlus) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart)</visible>
 			<control type="label">
 				<width>600</width>
 				<height>20</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_Showcase_Right_Under</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<label>[B][COLOR=mainblue]$LOCALIZE[20339][/COLOR][/B] - $INFO[ListItem.Director]</label>
 				<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(55).OnNext | Container(55).OnPrevious]">WindowOpen</animation>
 			</control>
@@ -475,7 +475,7 @@
 				<height>20</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_Showcase_Right_Under</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<label>[B][COLOR=mainblue]$LOCALIZE[20417][/COLOR][/B] - $INFO[ListItem.Writer]</label>
 				<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(55).OnNext | Container(55).OnPrevious]">WindowOpen</animation>
 			</control>
@@ -484,7 +484,7 @@
 				<height>20</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_Showcase_Right_Under</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<label>[B][COLOR=mainblue]$LOCALIZE[515][/COLOR][/B] - $INFO[ListItem.Genre]</label>
 				<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(55).OnNext | Container(55).OnPrevious]">WindowOpen</animation>
 			</control>
@@ -493,7 +493,7 @@
 				<height>20</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_Showcase_Right_Under</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<label>[B][COLOR=mainblue]$LOCALIZE[572][/COLOR][/B] - $INFO[ListItem.Studio]</label>
 				<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(55).OnNext | Container(55).OnPrevious]">WindowOpen</animation>
 			</control>
@@ -502,7 +502,7 @@
 				<height>20</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_Showcase_Right_Under</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<label>[B][COLOR=mainblue]$LOCALIZE[563][/COLOR][/B] - $INFO[ListItem.Rating]</label>
 				<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="Skin.HasSetting(PosterPlus) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(55).OnNext | Container(55).OnPrevious]">WindowOpen</animation>
 			</control>
@@ -512,7 +512,7 @@
 		<posy>90</posy>
 		<include>Animation_ZoomInZoomOut</include>
 		<animation effect="slide" start="0,0" end="0,-40" time="0" tween="cubic" easing="inout" condition="IsEmpty(Control.GetLabel(7015))">Conditional</animation>
-		<visible>Control.IsVisible(55) + !IsEmpty(ListItem.Title) + [Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(Poster_Fanart) + !Player.HasVideo</visible>	
+		<visible>Control.IsVisible(55) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left) + [Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(Poster_Fanart) + !Player.HasVideo</visible>	
 			<control type="label">
 				<visible>Container.Content(seasons)</visible>
 				<posx>0</posx>
@@ -554,7 +554,7 @@
 			<include>Poster_Next_Aired</include>
 		</control>
 		<control type="group">
-		<visible>Control.IsVisible(55) + substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite) + !IsEmpty(ListItem.Title)</visible>
+		<visible>Control.IsVisible(55) + substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 		<posx>20</posx>
 		<posy>44</posy>
 		<include>Animation_ZoomInZoomOut</include>
@@ -617,7 +617,7 @@
 				<align>justify</align>
 				<info>ListItem.Plot</info>
 				<font>Font_3dland_plot</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				<animation effect="slide" start="0,0" end="0,-26" time="0" condition="IsEmpty(ListItem.Year)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,-52" time="0" condition="IsEmpty(ListItem.genre) + IsEmpty(ListItem.Year)">Conditional</animation>
@@ -632,7 +632,7 @@
 			<height>50</height>
 			<aligny>center</aligny>
 			<font>Font_Alaya_Movie-trailer</font>
-			<textcolor>ffffffff</textcolor>
+			<textcolor>white</textcolor>
 			<label>*$LOCALIZE[31237]*</label>
 			<shadowcolor>black</shadowcolor>
 			<include>Animation_ZoomInZoomOut</include>
@@ -647,7 +647,7 @@
 			<height>50</height>
 			<aligny>center</aligny>
 			<font>Font_Alaya_Movie-trailer</font>
-			<textcolor>ffffffff</textcolor>
+			<textcolor>white</textcolor>
 			<label>*$LOCALIZE[31238]*</label>
 			<shadowcolor>black</shadowcolor>
 			<include>Animation_ZoomInZoomOut</include>

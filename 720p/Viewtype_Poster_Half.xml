@@ -28,8 +28,8 @@
 			<include>Animation_Bartowski_Context_Zoom</include>
 		</control>
 		<control type="label"><!--Big Title-->
-			<visible>Control.IsVisible(598) + Container.Content(movies) + IsEmpty(ListItem.Title) + !Window.IsVisible(VideoFiles)</visible>
-			<animation effect="slide" start="0,0" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(598) + Container.Content(movies) + IsEmpty(ListItem.Title)">Conditional</animation>
+			<visible>Control.IsVisible(598) + Container.Content(movies) + SubString(ListItem.Icon,DefaultFolderBack.png,Left) + !Window.IsVisible(VideoFiles)</visible>
+			<animation effect="slide" start="0,0" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(598) + Container.Content(movies) + SubString(ListItem.Icon,DefaultFolderBack.png,Left)">Conditional</animation>
 			<posx>0</posx>
 			<posy>235</posy>
 			<width>1280</width>
@@ -296,7 +296,7 @@
 				<align>justify</align>
 				<info>ListItem.Plot</info>
 				<font>Font_Bartowski_Movies_Plot</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				<visible>Control.IsVisible(598) + !Container.Content(seasons)</visible>
 			</control>
@@ -309,7 +309,7 @@
 				<align>justify</align>
 				<info>Container(52).ShowPlot</info>
 				<font>Font_Bartowski_Movies_Plot</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				<visible>Control.IsVisible(598) + Container.Content(seasons)</visible>
 			</control>
@@ -355,7 +355,7 @@
 				<height>50</height>
 				<aligny>center</aligny>
 				<font>Font_RSS_Big</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Duration] $LOCALIZE[12391]</label>
 				<visible>Container.Content(movies) + !Skin.HasSetting(clean_poster) + ![Player.HasVideo | substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)] + !IsEmpty(ListItem.Duration) + !SubString(ListItem.Duration,min)</visible>
 			</control>
@@ -366,7 +366,7 @@
 				<height>50</height>
 				<aligny>center</aligny>
 				<font>Font_RSS_Big</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Duration]</label>
 				<visible>Container.Content(movies) + !Skin.HasSetting(clean_poster) + ![Player.HasVideo | substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)] + !IsEmpty(ListItem.Duration) + SubString(ListItem.Duration,min)</visible>
 			</control>
@@ -377,7 +377,7 @@
 				<height>50</height>
 				<aligny>center</aligny>
 				<font>Font_RSS_Big</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<label>$LOCALIZE[31508]</label>
 				<visible>IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + Container.Content(movies) + Window.IsActive(videolibrary)</visible>
 			</control>
@@ -388,7 +388,7 @@
 				<height>50</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_Movies_Duration</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.year]</label>
 				<animation effect="slide" start="0,0" end="0,-23" time="0" condition="IsEmpty(ListItem.Duration)">Conditional</animation>
 				<visible>Container.Content(movies) + !Skin.HasSetting(clean_poster) + ![Player.HasVideo | substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)]</visible>
@@ -409,7 +409,7 @@
 		<posy>90</posy>
 		<include>Animation_ZoomInZoomOut</include>
 		<animation effect="slide" start="0,0" end="0,-40" time="0" tween="cubic" easing="inout" condition="IsEmpty(Control.GetLabel(17015))">Conditional</animation>
-		<visible>Control.IsVisible(598) + !IsEmpty(ListItem.Title) + [Container.Content(tvshows) | Container.Content(seasons)] + !Player.HasVideo</visible>	
+		<visible>Control.IsVisible(598) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left) + [Container.Content(tvshows) | Container.Content(seasons)] + !Player.HasVideo</visible>	
 			<control type="label">
 				<visible>Container.Content(seasons)</visible>
 				<posx>0</posx>
@@ -451,7 +451,7 @@
 			<include>Poster_Next_Aired</include>
 		</control>
 		<control type="group">
-		<visible>Control.IsVisible(598) + substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite) + !IsEmpty(ListItem.Title)</visible>
+		<visible>Control.IsVisible(598) + substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 		<posx>20</posx>
 		<posy>44</posy>
 		<include>Animation_ZoomInZoomOut</include>
@@ -489,7 +489,7 @@
 			<height>50</height>
 			<aligny>center</aligny>
 			<font>Font_Alaya_Movie-trailer</font>
-			<textcolor>ffffffff</textcolor>
+			<textcolor>white</textcolor>
 			<label>*$LOCALIZE[31237]*</label>
 			<shadowcolor>black</shadowcolor>
 			<include>Animation_ZoomInZoomOut</include>
@@ -504,7 +504,7 @@
 			<height>50</height>
 			<aligny>center</aligny>
 			<font>Font_Alaya_Movie-trailer</font>
-			<textcolor>ffffffff</textcolor>
+			<textcolor>white</textcolor>
 			<label>*$LOCALIZE[31238]*</label>
 			<shadowcolor>black</shadowcolor>
 			<include>Animation_ZoomInZoomOut</include>

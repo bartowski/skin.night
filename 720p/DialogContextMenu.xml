@@ -58,7 +58,7 @@
 			<height>38</height>
 			<font>Font_Bartowski_Episode_ContextMenu</font>
 			<textcolor>ff000000</textcolor>
-			<focusedcolor>ffffffff</focusedcolor>
+			<focusedcolor>white</focusedcolor>
 			<align>center</align>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>

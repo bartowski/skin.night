@@ -263,7 +263,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<visible>Control.IsVisible(593) + [Container.Content(episodes) | Window.IsActive(videoplaylist)] + !IsEmpty(ListItem.Title) + !Skin.HasSetting(3dbanner_fanart)</visible>
+			<visible>Control.IsVisible(593) + [Container.Content(episodes) | Window.IsActive(videoplaylist)] + !SubString(ListItem.Icon,DefaultFolderBack.png,Left) + !Skin.HasSetting(3dbanner_fanart)</visible>
 			<include>Animation_Viewtype_3dland_Leftplot</include>
 			<posx>0</posx>
 			<posy>240</posy>
@@ -274,7 +274,7 @@
 					<height>50</height>
 					<aligny>center</aligny>
 					<font>Font_TVShow</font>
-					<textcolor>ffffffff</textcolor>
+					<textcolor>white</textcolor>
 					<label>$LOCALIZE[20373] $INFO[ListItem.Season]/$LOCALIZE[20359] $INFO[ListItem.Episode]</label>
 				</control>
 				<control type="label">
@@ -284,12 +284,12 @@
 					<height>50</height>
 					<aligny>center</aligny>
 					<font>Font_TVShow</font>
-					<textcolor>ffffffff</textcolor>
+					<textcolor>white</textcolor>
 					<label>$LOCALIZE[31231]: $INFO[ListItem.Date]</label>
 				</control>
 		</control>
 	<control type="group">
-		<visible>Control.IsVisible(593) + !Window.IsActive(videoplaylist) + !IsEmpty(ListItem.Title) + !Skin.HasSetting(3dbanner_fanart)</visible>
+		<visible>Control.IsVisible(593) + !Window.IsActive(videoplaylist) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left) + !Skin.HasSetting(3dbanner_fanart)</visible>
 		<posx>20</posx>
 		<posy>90</posy>
 		<include>Animation_Viewtype_3dland_Lefttop</include>

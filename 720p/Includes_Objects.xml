@@ -12,9 +12,9 @@
 		<font>Font_KeyboardKeys</font>
 	</include>
 	<include name="Objects_KeyOnVars">
-		<textcolor>FFFFFFFF</textcolor>
-		<focusedcolor>FFFFFFFF</focusedcolor>
-		<selectedcolor>FFFFFFFF</selectedcolor>
+		<textcolor>white</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<selectedcolor>white</selectedcolor>
 		<align>center</align>
 		<aligny>top</aligny>
 		<textoffsety>21</textoffsety>
@@ -31,9 +31,9 @@
 		<font>Font_KeyboardShapes</font>
 	</include>
 	<include name="Objects_KeyOnSymbolVars">
-		<textcolor>FFFFFFFF</textcolor>
-		<focusedcolor>FFFFFFFF</focusedcolor>
-		<selectedcolor>FFFFFFFF</selectedcolor>
+		<textcolor>white</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<selectedcolor>white</selectedcolor>
 		<align>center</align>
 		<aligny>top</aligny>
 		<textoffsety>21</textoffsety>

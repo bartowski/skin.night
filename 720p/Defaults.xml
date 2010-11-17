@@ -78,7 +78,7 @@
 		<texturenofocus>ButtonNF.png</texturenofocus>
 		<textureradiofocus>settings/button_radioF.png</textureradiofocus>
 		<textureradionofocus>settings/button_radioNF.png</textureradionofocus>
-		<colordiffuse>ButtonFilterColor</colordiffuse>
+		<colordiffuse>highlight_selection</colordiffuse>
 		<radioheight>20</radioheight>
 		<radiowidth>20</radiowidth>
 		<pulseonselect>false</pulseonselect>

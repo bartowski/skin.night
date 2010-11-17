@@ -31,45 +31,45 @@
 			<pagecontrol>5950</pagecontrol>
 			<include>Animation_CommonFade</include>
 			<visible>!Skin.HasSetting(no_Slide) + Container.Content(Movies) + !substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)</visible>
-			<itemlayout width="210" height="700">
-				<control type="group">
-				<posx>0</posx>
-				<posy>200</posy>
-				<animation effect="fade" start="100" end="0" time="400" delay="400" condition="Control.HasFocus(8241)">Conditional</animation>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>235</width>
-						<height>329</height>
-						<texture>Comics/poster_back_item.png</texture>
-						<fadetime>200</fadetime>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
+				<itemlayout width="210" height="700">
+					<control type="group">
+					<posx>0</posx>
+					<posy>200</posy>
+					<animation effect="fade" start="100" end="0" time="400" delay="400" condition="Control.HasFocus(8241)">Conditional</animation>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>235</width>
+							<height>329</height>
+							<texture>Comics/poster_back_item.png</texture>
+							<fadetime>200</fadetime>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+						</control>
+						<control type="image">
+							<posx>16</posx>
+							<posy>10</posy>
+							<width>201</width>
+							<height>301</height>
+							<texture background="true" diffuse="Comics/poster_diffuse_itemlist.png">$INFO[ListItem.Icon]</texture>
+							<fadetime>200</fadetime>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+						</control>
+						<control type="image">
+							<posx>154</posx>
+							<posy>268</posy>
+							<width>80</width>
+							<height>60</height>
+							<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+							<visible>[Skin.HasSetting(movieoverlays) | Skin.HasSetting(tvoverlays)] + !IsEmpty(ListItem.Overlay)</visible>
+						</control>
 					</control>
-					<control type="image">
-						<posx>16</posx>
-						<posy>10</posy>
-						<width>201</width>
-						<height>301</height>
-						<texture background="true" diffuse="Comics/poster_diffuse_itemlist.png">$INFO[ListItem.Icon]</texture>
-						<fadetime>200</fadetime>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
+					</itemlayout>
+				<focusedlayout width="304" height="800">
+					<control type="group">
+					<posx>10</posx>
+					<posy>200</posy>
 					</control>
-					<control type="image">
-						<posx>154</posx>
-						<posy>268</posy>
-						<width>80</width>
-						<height>60</height>
-						<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
-						<visible>[Skin.HasSetting(movieoverlays) | Skin.HasSetting(tvoverlays)] + !IsEmpty(ListItem.Overlay)</visible>
-					</control>
-				</control>
-				</itemlayout>
-			<focusedlayout width="304" height="800">
-				<control type="group">
-				<posx>10</posx>
-				<posy>200</posy>
-				</control>
-			</focusedlayout>
+				</focusedlayout>
 		</control>
 	
 	<control type="image"><!-- Last Overlay -->
@@ -105,6 +105,7 @@
 				<width>583</width>
 				<height>720</height>
 				<texture>Comics/comic_glow.png</texture>
+				<colordiffuse>poster_glow</colordiffuse>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<animation effect="fade" start="0" end="100" time="1000" delay="1000" condition="![Container(595).OnNext | Container(595).OnPrevious]">Conditional</animation>
 			</control>
@@ -140,7 +141,7 @@
 	<posx>640</posx>
 	<posy>290</posy>
 	<animation effect="slide" start="0,0" end="0,-400" time="200" delay="600" condition="Control.HasFocus(8241)">Conditional</animation>
-	<visible>Control.IsVisible(595) + Container.Content(movies) + !IsEmpty(ListItem.Title)</visible>
+	<visible>Control.IsVisible(595) + Container.Content(movies) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 	<include>Animation_BackdropFade</include>
 		<control type="label"><!--Movie title-->
 			<posx>15</posx>
@@ -159,7 +160,7 @@
 			<height>50</height>
 			<aligny>center</aligny>
 			<font>Font_RSS_Big</font>
-			<textcolor>ffffffff</textcolor>
+			<textcolor>white</textcolor>
 			<label>31508</label>
 			<visible>IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres)</visible>
 		</control>
@@ -170,7 +171,7 @@
 			<height>50</height>
 			<aligny>center</aligny>
 			<font>Font_RSS_Big</font>
-			<textcolor>ffffffff</textcolor>
+			<textcolor>white</textcolor>
 			<label>$INFO[ListItem.Duration] $LOCALIZE[12391]</label>
 			<visible>!IsEmpty(ListItem.Duration) + !SubString(ListItem.Duration,min)</visible>
 		</control>
@@ -181,7 +182,7 @@
 			<height>50</height>
 			<aligny>center</aligny>
 			<font>Font_RSS_Big</font>
-			<textcolor>ffffffff</textcolor>
+			<textcolor>white</textcolor>
 			<label>$INFO[ListItem.Duration]</label>
 			<visible>!IsEmpty(ListItem.Duration) + SubString(ListItem.Duration,min)</visible>
 		</control>
@@ -192,7 +193,7 @@
 			<height>50</height>
 			<aligny>center</aligny>
 			<font>Font_RSS_Big</font>
-			<textcolor>ffffffff</textcolor>
+			<textcolor>white</textcolor>
 			<label>$INFO[ListItem.year]</label>
 			<animation effect="slide" start="0,0" end="0,-23" time="0" condition="IsEmpty(ListItem.Duration)">Conditional</animation>
 		</control>
@@ -255,7 +256,7 @@
 		<align>justify</align>
 		<info>ListItem.Plot</info>
 		<font>Font_Bartowski_Movies_Plot</font>
-		<textcolor>ffffffff</textcolor>
+		<textcolor>white</textcolor>
 		<animation effect="slide" start="0,0" end="0,180" time="0" condition="![IsEmpty(Control.GetLabel(8241)) + IsEmpty(Control.GetLabel(8242))]">Conditional</animation>
 		<animation effect="slide" start="1000,0" end="0,0" time="400" delay="600">Visible</animation>
 		<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
@@ -285,7 +286,7 @@
 	</control>
 		
 	<control type="label">
-		<visible>Control.IsVisible(595) + !Control.HasFocus(8241) + !IsEmpty(ListItem.Title)</visible>
+		<visible>Control.IsVisible(595) + !Control.HasFocus(8241) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 		<posx>410</posx>
 		<posy>664</posy>
 		<width>370</width>

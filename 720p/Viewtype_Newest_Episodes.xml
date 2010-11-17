@@ -83,7 +83,7 @@
 							<font>Font_EpisodePlot2</font>
 							<textcolor>ListTrackF</textcolor>
 							<label>$LOCALIZE[20373] $INFO[ListItem.Season]/$LOCALIZE[20359] $INFO[ListItem.Episode] - $LOCALIZE[31231] $INFO[ListItem.Date]</label>
-							<visible>!IsEmpty(ListItem.Title)</visible>
+							<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 						</control>
 						<control type="textbox"><!-- Plot and TV -->
 							<posx>300</posx>
@@ -93,7 +93,7 @@
 							<align>justify</align>
 							<info>ListItem.Plot</info>
 							<font>Font_Bartowski_Movies_Plot</font>
-							<textcolor>ffffffff</textcolor>
+							<textcolor>white</textcolor>
 							<animation effect="fade" start="50" end="50" time="0" condition="true">conditional</animation>
 							<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 						</control>
@@ -165,7 +165,7 @@
 							<font>Font_EpisodePlot2</font>
 							<textcolor>ListTrackF</textcolor>
 							<label>$LOCALIZE[20373] $INFO[ListItem.Season]/$LOCALIZE[20359] $INFO[ListItem.Episode] - Aired $INFO[ListItem.Date]</label>
-							<visible>!IsEmpty(ListItem.Title)</visible>
+							<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 						</control>
 						<control type="textbox"><!-- Plot and TV -->
 							<posx>300</posx>
@@ -175,7 +175,7 @@
 							<align>justify</align>
 							<info>ListItem.Plot</info>
 							<font>Font_Bartowski_Movies_Plot</font>
-							<textcolor>ffffffff</textcolor>
+							<textcolor>white</textcolor>
 							<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 						</control>
 				</control>

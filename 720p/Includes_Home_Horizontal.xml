@@ -42,7 +42,7 @@
 					<posy>50</posy>
 					<align>center</align>
 					<font>Font_Bartowski_MainMenu_Focus</font>
-					<textcolor>ffffffff</textcolor>
+					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<label>$INFO[ListItem.label]</label>
 					<animation effect="slide" end="0,-60" time="301" condition="ControlGroup(9001).HasFocus">conditional</animation>

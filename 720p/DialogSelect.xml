@@ -62,7 +62,7 @@
 						<height>40</height>
 						<font>font13caps_title</font>
 						<textcolor>black</textcolor>
-						<selectedcolor>ffffffff</selectedcolor>
+						<selectedcolor>white</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
@@ -84,8 +84,8 @@
 						<width>430</width>
 						<height>40</height>
 						<font>font13caps_title</font>
-						<textcolor>ffffffff</textcolor>
-						<selectedcolor>ffffffff</selectedcolor>
+						<textcolor>white</textcolor>
+						<selectedcolor>white</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
@@ -153,8 +153,8 @@
 						<width>430</width>
 						<height>40</height>
 						<font>font13caps_title</font>
-						<textcolor>ffffffff</textcolor>
-						<selectedcolor>ffffffff</selectedcolor>
+						<textcolor>white</textcolor>
+						<selectedcolor>white</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>

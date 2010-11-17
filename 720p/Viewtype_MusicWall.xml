@@ -200,7 +200,7 @@
 				<height>50</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_Showcase_runtime_year</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Artist]</label>
 			</control>
 			<control type="label"><!--Duration-->
@@ -210,7 +210,7 @@
 				<height>50</height>
 				<aligny>center</aligny>
 				<font>Font_Bartowski_Showcase_runtime_year</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Year]</label>
 			</control>
 			<control type="textbox">
@@ -221,7 +221,7 @@
 				<align>left</align>
 				<info>ListItem.Property(Description)</info>
 				<font>Font_Bartowski_Movies_Plot</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 			</control>
 	</control>

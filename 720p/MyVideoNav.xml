@@ -36,7 +36,7 @@
 			<aspectratio>stretch</aspectratio>
 			<include>Animation_MyVideoNav_Fanart</include>
 			<include>global_kenburns_fanart</include>
-			<visible>[[!Container.Content(movies) + !Control.IsVisible(54) + IsEmpty(ListItem.Title)] | substring(container.folderpath,plugin://)] + [IsEmpty(ListItem.Property(Fanart_Image)) + IsEmpty(Fanart.Image)]</visible>
+			<visible>![Control.IsVisible(54) | substring(container.folderpath,plugin://)] + IsEmpty(ListItem.Property(Fanart_Image)) + IsEmpty(Fanart.Image)</visible>
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
@@ -44,7 +44,7 @@
 			<aspectratio>stretch</aspectratio>
 			<include>Animation_MyVideoNav_Fanart</include>
 			<include>global_kenburns_fanart</include>
-			<visible>Container.Content(movies) + !Control.IsVisible(54) + IsEmpty(ListItem.Title) + [IsEmpty(ListItem.Property(Fanart_Image)) + IsEmpty(Fanart.Image)]</visible>
+			<visible>Container.Content(movies) + !Control.IsVisible(54) + SubString(ListItem.Icon,DefaultFolderBack.png,Left) + [IsEmpty(ListItem.Property(Fanart_Image)) + IsEmpty(Fanart.Image)]</visible>
 		</control>
 		<control type="image" id="8437"> <!-- season fanart -->
             <include>Dimensions_Fullscreen</include> 
@@ -94,7 +94,7 @@
 			<fadetime>400</fadetime>
 			<texture>backdrops/curtains.png</texture>
 			<include>Animation_MyVideoNav_Fanart</include>
-			<visible>Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(592)</visible>
+			<visible>[Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(592)] + !Control.IsVisible(54)</visible>
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>

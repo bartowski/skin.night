@@ -136,7 +136,7 @@
 						<font>font16caps</font>
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
-						<textcolor>ffffffff</textcolor>
+						<textcolor>white</textcolor>
 					</control>
 				</focusedlayout>
 			</control>

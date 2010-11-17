@@ -179,7 +179,7 @@
 			<height>50</height>
 			<align>center</align>
 			<font>Font_Bartowski_Showcase_runtime_year</font>
-			<textcolor>ffffffff</textcolor>
+			<textcolor>white</textcolor>
 			<label>$INFO[ListItem.Genre]</label>
 		</control>
 	</control>
@@ -192,7 +192,7 @@
 			<width>555</width>
 			<height>264</height>
 			<font>Font_Bartowski_Showcase_plot</font>
-			<textcolor>ffffffff</textcolor>
+			<textcolor>white</textcolor>
 			<label>$INFO[ListItem.Plot]</label>
 			<align>justify</align>
 			<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>

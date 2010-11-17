@@ -2499,7 +2499,7 @@
 							<align>justify</align>
 							<label>$LOCALIZE[31265]</label>
 							<font>Font_Bartowski_Movies_Plot</font>
-							<textcolor>ffffffff</textcolor>
+							<textcolor>white</textcolor>
 							<visible>Container(9000).Hasfocus(5)</visible>
 						</control>
 				</control>

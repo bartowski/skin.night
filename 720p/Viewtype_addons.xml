@@ -73,6 +73,7 @@
 					<width>871</width>
 					<height>121</height>
 					<texture>list/highlight.png</texture>
+					<colordiffuse>highlight_selection</colordiffuse>
 					<animation type="Focus" reversible="false">
 						<effect type="fade" start="0" end="70" time="800" />
 					</animation>
@@ -84,7 +85,7 @@
 					<height>46</height>
 					<aligny>center</aligny>
 					<font>Font_Bartowski_List_Main</font>
-					<textcolor>ffffffff</textcolor>
+					<textcolor>white</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 					<visible></visible>
 				</control>
@@ -158,7 +159,7 @@
 			<align>justify</align>
 			<info>ListItem.Property(Addon.Description)</info>
 			<font>Font_Bartowski_Movies</font>
-			<textcolor>ffffffff</textcolor>
+			<textcolor>white</textcolor>
 			<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 			<include>Animation_Viewtype_Wall_Plot</include>
 			<visible>Control.IsVisible(50)</visible>

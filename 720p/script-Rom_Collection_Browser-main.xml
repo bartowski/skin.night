@@ -116,6 +116,7 @@
 					<width>930</width>
 					<height>121</height>
 					<texture>list/highlight.png</texture>
+					<colordiffuse>highlight_selection</colordiffuse>
 					<animation type="Focus" reversible="false">
 						<effect type="fade" start="0" end="70" time="800" />
 					</animation>
@@ -127,7 +128,7 @@
 					<height>46</height>
 					<aligny>center</aligny>
 					<font>Font_Bartowski_Episode_ContextMenu</font>
-					<textcolor>ffffffff</textcolor>
+					<textcolor>white</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 			</focusedlayout>
@@ -387,7 +388,7 @@
 				<height>50</height>
 				<aligny>center</aligny>
 				<font>Font_RSS_Big</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Property(console)]</label>
 			</control>
 			<control type="label"><!--Year-->
@@ -397,7 +398,7 @@
 				<height>50</height>
 				<aligny>center</aligny>
 				<font>Font_RSS_Big</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Property(year)]</label>
 			</control>
 		</control>
@@ -526,7 +527,7 @@
 						<height>50</height>
 						<aligny>center</aligny>
 						<font>Font_RSS_Big</font>
-						<textcolor>ffffffff</textcolor>
+						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Property(console)]</label>
 					</control>
 					<control type="label"><!--Year-->
@@ -536,7 +537,7 @@
 						<height>50</height>
 						<aligny>center</aligny>
 						<font>Font_RSS_Big</font>
-						<textcolor>ffffffff</textcolor>
+						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Property(year)]</label>
 					</control>
 				</control>
@@ -563,7 +564,7 @@
 							<width>390</width>
 							<height>24</height>
 							<font>Font_Bartowski_Showcase_Right_Under</font>
-							<textcolor>ffffffff</textcolor>
+							<textcolor>white</textcolor>
 							<label fallback="Not Available">$INFO[ListItem.Property(genre)]</label>
 						</control>
 						<control type="label">
@@ -590,7 +591,7 @@
 							<width>390</width>
 							<height>24</height>
 							<font>Font_Bartowski_Showcase_Right_Under</font>
-							<textcolor>ffffffff</textcolor>
+							<textcolor>white</textcolor>
 							<label fallback="Not Available">$INFO[ListItem.Property(publisher)]</label>
 						</control>
 						<control type="label"><!--Director-->
@@ -617,7 +618,7 @@
 							<width>390</width>
 							<height>24</height>
 							<font>Font_Bartowski_Showcase_Right_Under</font>
-							<textcolor>ffffffff</textcolor>
+							<textcolor>white</textcolor>
 							<label fallback="Not Available">$INFO[ListItem.Property(developer)]</label>
 						</control>
 						<control type="label"><!--Director-->
@@ -644,7 +645,7 @@
 							<width>390</width>
 							<height>24</height>
 							<font>Font_Bartowski_Showcase_Right_Under</font>
-							<textcolor>ffffffff</textcolor>
+							<textcolor>white</textcolor>
 							<label fallback="Not Available">$INFO[ListItem.Property(rating)]</label>
 						</control>
 						<control type="label"><!--Director-->
@@ -671,7 +672,7 @@
 							<width>390</width>
 							<height>24</height>
 							<font>Font_Bartowski_Showcase_Right_Under</font>
-							<textcolor>ffffffff</textcolor>
+							<textcolor>white</textcolor>
 							<label fallback="Not Available">$INFO[ListItem.Property(maxplayers)]</label>
 						</control>
 				</control>
@@ -684,7 +685,7 @@
 						<width>540</width>
 						<height>336</height>
 						<font>Font_Bartowski_Showcase_plot</font>
-						<textcolor>ffffffff</textcolor>
+						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Property(plot)]</label>
 						<align>justify</align>
 						<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
@@ -897,7 +898,7 @@
 				<height>50</height>
 				<aligny>center</aligny>
 				<font>Font_RSS_Big</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Property(console)]</label>
 			</control>
 			<control type="label"><!--Year-->
@@ -907,7 +908,7 @@
 				<height>50</height>
 				<aligny>center</aligny>
 				<font>Font_RSS_Big</font>
-				<textcolor>ffffffff</textcolor>
+				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Property(year)]</label>
 			</control>
 		</control>
@@ -932,7 +933,7 @@
 				<width>720</width>
 				<height>160</height>
 				<texture flipy="true">confluence/InfoMessagePanel2.png</texture>
-				<colordiffuse>FFFFFFFF</colordiffuse>
+				<colordiffuse>white</colordiffuse>
 			</control>
 			<!-- Console filter -->
 			<control type="label">
