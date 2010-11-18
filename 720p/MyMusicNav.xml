@@ -44,7 +44,7 @@
 			<fadetime>400</fadetime>
 			<include>Animation_BackdropFade</include>
 			<include>global_kenburns_fanart</include>
-			<visible>IsEmpty(ListItem.Property(Fanart_Image))</visible>
+			<visible>IsEmpty(ListItem.Property(Fanart_Image)) + !Control.IsVisible(51)</visible>
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>

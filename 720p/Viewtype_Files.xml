@@ -60,7 +60,7 @@
 					<textcolor>Text-Filemode</textcolor>
 					<selectedcolor>mainblue</selectedcolor>
 					<label>$INFO[ListItem.label]</label>
-					<animation effect="slide" start="0,0" end="30,0" time="0" condition="[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + stringcompare(ListItem.Overlay,OverlayWatched.png) + [Skin.HasSetting(movieoverlays) | Skin.HasSetting(tvoverlays)]">Conditional</animation>
+					<animation effect="slide" start="0,0" end="30,0" time="0" condition="[[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + stringcompare(ListItem.Overlay,OverlayWatched.png) + [Skin.HasSetting(movieoverlays) | Skin.HasSetting(tvoverlays)]] | [Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)]">Conditional</animation>
 					<visible>![Window.IsActive(Programs) | Window.IsActive(musicplaylist)]</visible>
 				</control>
 				<control type="label">
@@ -124,6 +124,14 @@
 					<textcolor>Text-Filemode</textcolor>
 					<label>$INFO[ListItem.Label2]</label>
 					<visible>Window.IsActive(videofiles)</visible>
+				</control>
+				<control type="image">
+					<posx>6</posx>
+					<posy>6</posy>
+					<width>47</width>
+					<height>36</height>
+					<texture>dialogs/movies/movieset.png</texture>
+					<visible>Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)</visible>
 				</control>
 				<control type="image">
 					<posx>24</posx>
@@ -194,7 +202,7 @@
 					<font>Font_Bartowski_Episode_ContextMenu</font>
 					<textcolor>white</textcolor>
 					<label>$INFO[ListItem.Label]</label>
-					<animation effect="slide" start="0,0" end="30,0" time="0" condition="[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + stringcompare(ListItem.Overlay,OverlayWatched.png) + [Skin.HasSetting(movieoverlays) | Skin.HasSetting(tvoverlays)]">Conditional</animation>
+					<animation effect="slide" start="0,0" end="30,0" time="0" condition="[[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + stringcompare(ListItem.Overlay,OverlayWatched.png) + [Skin.HasSetting(movieoverlays) | Skin.HasSetting(tvoverlays)]] | [Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)]">Conditional</animation>
 					<visible>[!Window.IsActive(Programs) | Window.IsActive(musicplaylist)]</visible>
 				</control>
 				<control type="label">
@@ -231,6 +239,14 @@
 					<textcolor>white</textcolor>
 					<label>$INFO[ListItem.Label2]</label>
 					<visible>Window.IsActive(videofiles)</visible>
+				</control>
+				<control type="image">
+					<posx>6</posx>
+					<posy>6</posy>
+					<width>47</width>
+					<height>36</height>
+					<texture>dialogs/movies/movieset.png</texture>
+					<visible>Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)</visible>
 				</control>
 				<control type="image">
 					<posx>24</posx>
@@ -477,6 +493,7 @@
 			<width>513</width>
 			<height>518</height>
 			<texture>music/music_list_glow1.png</texture>
+			<colordiffuse>poster_glow</colordiffuse>
 			<animation type="Visible">
 				<effect type="fade" start="0" end="100" delay="400" time="1200" />
 			</animation>
@@ -533,6 +550,7 @@
 			<width>559</width>
 			<height>370</height>
 			<texture>list/file_glow1.png</texture>
+			<colordiffuse>poster_glow</colordiffuse>
 			<animation type="Visible">
 				<effect type="fade" start="0" end="100" delay="400" time="1200" />
 			</animation>

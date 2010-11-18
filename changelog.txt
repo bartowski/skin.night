@@ -1,3 +1,14 @@
+11/17/2010
+  -Fixed Jukebox label error
+  -More converting Poster glows to white
+  -Added a Movie set flag
+  -Added a banner.jpg option
+
+11/16/2010
+  -behind the scenes cleanup
+  -change all poster glows/highlights to white
+  -started to organize my /colors/default.xml for easier modding
+
 11/13/2010
   -*Trial Balloon - New Flags*
   -Bumped spacing on title on Episode view up a few pixels

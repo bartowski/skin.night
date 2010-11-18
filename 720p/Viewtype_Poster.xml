@@ -161,6 +161,14 @@
 						<posy>334</posy>
 						<width>70</width>
 						<height>53</height>
+						<texture>dialogs/movies/movieset.png</texture>
+						<visible>Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)</visible>
+					</control>
+					<control type="image">
+						<posx>-46</posx>
+						<posy>334</posy>
+						<width>70</width>
+						<height>53</height>
 						<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
 						<visible>Skin.HasSetting(movieoverlays) + Container.Content(movies) + !IsEmpty(ListItem.Overlay)</visible>
 					</control>
@@ -296,6 +304,17 @@
 							<effect type="fade" start="0" end="70" time="600" />
 						</animation>
 						<visible>Container.Content(Genres)</visible>
+					</control>
+					<control type="image">
+						<posx>-10</posx>
+						<posy>342</posy>
+						<width>86</width>
+						<height>65</height>
+						<texture>dialogs/movies/movieset.png</texture>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
+						</animation>
+						<visible>Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)</visible>
 					</control>
 					<control type="image">
 						<posx>-10</posx>

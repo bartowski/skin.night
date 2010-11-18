@@ -65,10 +65,11 @@
 				<posy>40</posy>
 					<control type="image">
 						<posx>-80</posx>
-						<posy>-176</posy>
+						<posy>-180</posy>
 						<width>335</width>
 						<height>367</height>
 						<texture>music/shelf_back1.png</texture>
+						<colordiffuse>poster_glow</colordiffuse>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="fade" start="0" end="100" time="600" />

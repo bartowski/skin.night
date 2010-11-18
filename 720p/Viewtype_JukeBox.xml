@@ -40,7 +40,7 @@
 					<font>Bartowski_settings_small</font>
 					<textcolor>black</textcolor>
 					<label>$INFO[ListItem.Label]</label>
-					<visible>SubString(ListItem.Icon,DefaultFolderBack.png,Left) | Window.IsActive(501)</visible>
+					<visible>IsEmpty(ListItem.Title) | Window.IsActive(501)</visible>
 				</control>
 				<control type="label">
 					<posx>92</posx>
@@ -104,7 +104,7 @@
 					<font>Bartowski_settings_small</font>
 					<textcolor>black</textcolor>
 					<label>$INFO[ListItem.Label]</label>
-					<visible>SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
+					<visible>IsEmpty(ListItem.Title)</visible>
 				</control>
 				<control type="label">
 					<posx>92</posx>

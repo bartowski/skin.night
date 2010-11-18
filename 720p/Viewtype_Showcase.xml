@@ -114,6 +114,14 @@
 					<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
 					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 				</control>
+				<control type="image">
+					<posx>100</posx>
+					<posy>332</posy>
+					<width>80</width>
+					<height>60</height>
+					<texture>dialogs/movies/movieset.png</texture>
+					<visible>Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)</visible>
+				</control>
 			</itemlayout>
 			
 			<focusedlayout width="210" height="515">
@@ -177,6 +185,17 @@
 							<effect type="zoom" center="90,258" start="81" end="100" time="300" tween="back" easing="out" />
 						</animation>
 						<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+					</control>
+					<control type="image">
+						<posx>134</posx>
+						<posy>344</posy>
+						<width>90</width>
+						<height>68</height>
+						<texture>dialogs/movies/movieset.png</texture>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="90,258" start="81" end="100" time="300" tween="back" easing="out" />
+						</animation>
+						<visible>Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)</visible>
 					</control>
 				</control>
 			</focusedlayout>
@@ -337,7 +356,7 @@
 						<width>390</width>
 						<height>24</height>
 						<font>Font_Bartowski_Showcase_Right_Main</font>
-						<textcolor>mainbluedarker</textcolor>
+						<textcolor>mainblue</textcolor>
 						<label>$LOCALIZE[20339]</label>
 					</control>
 					<control type="label"><!--Director-->
@@ -355,7 +374,7 @@
 						<width>390</width>
 						<height>10</height>
 						<font>Font_Bartowski_Showcase_Right_Main</font>
-						<textcolor>mainbluedarker</textcolor>
+						<textcolor>mainblue</textcolor>
 						<label></label>
 					</control>
 					<control type="label"><!--Writer-->
@@ -364,7 +383,7 @@
 						<width>390</width>
 						<height>24</height>
 						<font>Font_Bartowski_Showcase_Right_Main</font>
-						<textcolor>mainbluedarker</textcolor>
+						<textcolor>mainblue</textcolor>
 						<label>$LOCALIZE[20417]</label>
 					</control>
 					<control type="label"><!--Writer-->
@@ -382,7 +401,7 @@
 						<width>390</width>
 						<height>10</height>
 						<font>Font_Bartowski_Showcase_Right_Main</font>
-						<textcolor>mainbluedarker</textcolor>
+						<textcolor>mainblue</textcolor>
 						<label></label>
 					</control>
 					<control type="label"><!--Genre-->
@@ -391,7 +410,7 @@
 						<width>390</width>
 						<height>24</height>
 						<font>Font_Bartowski_Showcase_Right_Main</font>
-						<textcolor>mainbluedarker</textcolor>
+						<textcolor>mainblue</textcolor>
 						<label>$LOCALIZE[515]</label>
 					</control>
 					<control type="label"><!--Genre-->
@@ -409,7 +428,7 @@
 						<width>390</width>
 						<height>10</height>
 						<font>Font_Bartowski_Showcase_Right_Main</font>
-						<textcolor>mainbluedarker</textcolor>
+						<textcolor>mainblue</textcolor>
 						<label></label>
 					</control>
 					<control type="label"><!--Rating-->
@@ -418,7 +437,7 @@
 						<width>390</width>
 						<height>24</height>
 						<font>Font_Bartowski_Showcase_Right_Main</font>
-						<textcolor>mainbluedarker</textcolor>
+						<textcolor>mainblue</textcolor>
 						<label>$LOCALIZE[563]</label>
 					</control>
 					<control type="label"><!--Rating-->
@@ -436,7 +455,7 @@
 						<width>390</width>
 						<height>10</height>
 						<font>Font_Bartowski_Showcase_Right_Main</font>
-						<textcolor>mainbluedarker</textcolor>
+						<textcolor>mainblue</textcolor>
 						<label></label>
 					</control>
 					<control type="label"><!--Studio-->
@@ -445,7 +464,7 @@
 						<width>390</width>
 						<height>24</height>
 						<font>Font_Bartowski_Showcase_Right_Main</font>
-						<textcolor>mainbluedarker</textcolor>
+						<textcolor>mainblue</textcolor>
 						<label>$LOCALIZE[572]</label>
 					</control>
 					<control type="label"><!--Rating-->

@@ -151,7 +151,7 @@
 	
 <!-- Night easier to mod colors 11-16 -->
 
-	<color name="mainblue">FF67ffff</color>
+	<color name="mainblue">FFEB9E17</color>
 	<color name="mainbluedarker">FF15efd9</color>
 	<color name="highlight_selection">FFFFFFFF</color>
 	<color name="poster_glow">FFFFFFFF</color>
