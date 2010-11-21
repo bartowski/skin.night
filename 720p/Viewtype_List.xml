@@ -45,7 +45,7 @@
 			<include>Animation_Viewtype_3dLand_FocusArea</include>
 			<camera x="1340" y="380" />
 			<animation effect="rotatey" center="50" start="10" end="10" time="0" condition="true">Conditional</animation>
-			<visible>!Skin.HasSetting(no_3DLandscape) + [[Skin.HasSetting(landscape_jpg) + Container.Content(tvshows)] | [![Skin.HasSetting(TVBanners) | Skin.HasSetting(TVPosters)] + [Container.Content(tvshows) | Container.Content(seasons)]]] | Container.Content(episodes) | Window.IsActive(Programs)</visible>
+			<visible>!Skin.HasSetting(no_3DLandscape) + [[Skin.HasSetting(landscape_jpg) + Container.Content(tvshows)] | [![Skin.HasSetting(TVBanners) | Skin.HasSetting(TVPosters)] + [Container.Content(tvshows) | Container.Content(seasons)]]] | Container.Content(episodes) | Window.IsActive(Programs) | substring(container.folderpath,plugin://)</visible>
 			<itemlayout width="316" height="245">
 				<control type="group">
 				<posx>150</posx>
@@ -83,7 +83,7 @@
 						<texture background="true" diffuse="movie-poster/xper_test.png">$INFO[ListItem.Icon]</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<visible>!Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)] | Container.Content(episodes) | Window.IsActive(videoplaylist) | Window.IsActive(Programs)</visible>
+						<visible>!Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)] | Container.Content(episodes) | Window.IsActive(videoplaylist) | Window.IsActive(Programs) | substring(container.folderpath,plugin://)</visible>
 					</control>
 					<control type="image">
 						<posx>-150</posx>
@@ -139,7 +139,7 @@
 						<fadetime>200</fadetime>
 						<colordiffuse>89FFFFFF</colordiffuse>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<visible>!Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)] | Container.Content(episodes) | Window.IsActive(videoplaylist) | Window.IsActive(Programs)</visible>
+						<visible>!Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)] | Container.Content(episodes) | Window.IsActive(videoplaylist) | Window.IsActive(Programs) | substring(container.folderpath,plugin://)</visible>
 					</control>
 					<control type="image">
 						<posx>-150</posx>
@@ -281,7 +281,7 @@
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 							<effect type="fade" start="0" end="70" time="600" />
 						</animation>
-						<visible>!Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)] | Container.Content(episodes) | Window.IsActive(videoplaylist) | Window.IsActive(Programs)</visible>
+						<visible>!Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)] | Container.Content(episodes) | Window.IsActive(videoplaylist) | Window.IsActive(Programs) | substring(container.folderpath,plugin://)</visible>
 					</control>
 					<control type="image">
 						<posx>-150</posx>
@@ -308,7 +308,7 @@
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 						</animation>
-						<visible>!Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)] | Container.Content(episodes) | Window.IsActive(videoplaylist) | Window.IsActive(Programs)</visible>
+						<visible>!Skin.HasSetting(landscape_jpg) + [Container.Content(tvshows) | Container.Content(seasons)] | Container.Content(episodes) | Window.IsActive(videoplaylist) | Window.IsActive(Programs) | substring(container.folderpath,plugin://)</visible>
 					</control>
 					<control type="image">
 						<posx>-150</posx>
@@ -534,7 +534,7 @@
 			<posx>10</posx>
 			<posy>0</posy>
 			<include>Animation_Viewtype_3dland_Lefttop</include>
-			<visible>Window.IsActive(Programs) + substring(container.folderpath,plugin://plugin.program.launcher)</visible>
+			<visible>[Window.IsActive(Programs) + substring(container.folderpath,plugin://plugin.program.launcher)] | substring(container.folderpath,plugin://)</visible>
 				<control type="label">
 					<posx>0</posx>
 					<posy>0</posy>

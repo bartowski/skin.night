@@ -63,7 +63,7 @@
 			<include>Animation_ZoomInZoomOut</include>
 			<camera x="1340" y="380" />
 			<animation effect="rotatey" center="50" start="12" end="10" time="0" condition="true">Conditional</animation>
-			<visible>!Skin.HasSetting(no_Poster) + ![Container.Content(episodes) | Container.Content(years) | Container.Content(genres)]</visible>
+			<visible>!Skin.HasSetting(no_Poster) + ![Container.Content(episodes) | Container.Content(years) | Container.Content(genres) | substring(container.folderpath,plugin://)]</visible>
 			<itemlayout width="176" height="245">
 				<control type="group">
 				<posx>154</posx>

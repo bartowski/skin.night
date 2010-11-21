@@ -272,10 +272,10 @@
 	<include>Animation_Viewtype_Files_RightArea</include>
 	<visible>Container.Content(movies) + Control.IsVisible(50) + !Skin.HasSetting(Files_Fanart)</visible>
 		<control type="image">
-			<posx>830</posx>
-			<posy>6</posy>
-			<width>434</width>
-			<height>670</height>
+			<posx>824</posx>
+			<posy>4</posy>
+			<width>450</width>
+			<height>710</height>
 			<aspectratio align="right" aligny="bottom">stretch</aspectratio>
 			<texture background="true">$INFO[ListItem.Icon]</texture>
 			<bordertexture border="5">confluence/button-nofocus.png</bordertexture>
@@ -283,10 +283,10 @@
 			<fadetime>100</fadetime>
 		</control>
 		<control type="image">
-			<posx>830</posx>
-			<posy>6</posy>
-			<width>434</width>
-			<height>670</height>
+			<posx>824</posx>
+			<posy>4</posy>
+			<width>450</width>
+			<height>710</height>
 			<aspectratio align="right" aligny="bottom">stretch</aspectratio>
 			<texture background="true">$INFO[ListItem(-1).Icon]</texture>
 			<bordertexture border="5">confluence/button-nofocus.png</bordertexture>
@@ -299,10 +299,10 @@
 			<visible>Container(50).OnNext</visible>
 		</control>
 		<control type="image">
-			<posx>830</posx>
-			<posy>6</posy>
-			<width>434</width>
-			<height>670</height>
+			<posx>824</posx>
+			<posy>4</posy>
+			<width>450</width>
+			<height>710</height>
 			<aspectratio align="right" aligny="bottom">stretch</aspectratio>
 			<texture background="true">$INFO[ListItem(1).Icon]</texture>
 			<bordertexture border="5">confluence/button-nofocus.png</bordertexture>
@@ -316,7 +316,7 @@
 		</control>
 	</control>
 	
-	<control type="grouplist">
+	<!--<control type="grouplist">
 		<visible>Control.IsVisible(50) + Container.Content(movies) + !Window.IsActive(videofiles) + !Skin.HasSetting(no_media_flags) + !Skin.HasSetting(Files_Fanart)</visible>
 		<description>Media Codec Flagging Images</description>
 		<posx>864</posx>
@@ -340,19 +340,6 @@
 		<textcolor>white</textcolor>
 		<label>31508</label>
 		<visible>Control.IsVisible(50) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + Container.Content(movies) + Window.IsActive(videolibrary)</visible>
-	</control>
-	
-	<!--<control type="image">
-		<posx>980</posx>
-		<posy>180</posy>
-		<width>300</width>
-		<height>540</height>
-		<aspectratio align="right" aligny="bottom">keep</aspectratio>
-		<texture background="true">$INFO[ListItem.Icon]</texture>
-		<bordertexture border="5">confluence/button-nofocus.png</bordertexture>
-		<bordersize>5</bordersize>
-		<fadetime>100</fadetime>
-		<visible>Control.IsVisible(50) + SubString(ListItem.Icon,DefaultFolderBack.png,Left) + ![Container.Content(movies) | Container.Content(Genres) | Container.Content(episodes) | Container.Content(albums) | Container.Content(songs)]</visible>
 	</control>-->
 	
 	<control type="group">

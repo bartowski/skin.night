@@ -94,7 +94,7 @@
 			<fadetime>400</fadetime>
 			<texture>backdrops/curtains.png</texture>
 			<include>Animation_MyVideoNav_Fanart</include>
-			<visible>[Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(592)] + !Control.IsVisible(54)</visible>
+			<visible>[Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(592) | substring(container.folderpath,plugin://)] + !Control.IsVisible(54)</visible>
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
