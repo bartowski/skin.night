@@ -26,7 +26,7 @@
 				<fadetime>100</fadetime>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 			</control>
-			<control type="image" id="9550">
+			<control type="image" id="9551">
 				<posx>710</posx>
 				<posy>20</posy>
 				<width>300</width>
@@ -142,7 +142,7 @@
 						<posx>445</posx>
 						<posy>530</posy>
 						<width>770</width>
-						<height>280</height>
+						<height>224</height>
 						<align>justify</align>
 						<info>ListItem.Plot</info>
 						<font>Font_Bartowski_Showcase_plot</font>

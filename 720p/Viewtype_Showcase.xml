@@ -76,51 +76,51 @@
 			<include>Animation_Viewtype_Showcase_FocusArea</include>
 			<visible>!Skin.HasSetting(no_Showcase) + [Container.Content(movies) | substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)]</visible>
 			<itemlayout width="168" height="245">
-				<control type="image">
-					<posx>1</posx>
-					<posy>131</posy>
-					<width>162</width>
-					<height>241</height>
-					<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
-					<fadetime>200</fadetime>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
+				<control type="group">
 					<animation effect="slide" start="0,0" end="0,20" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
-				</control>
-				<control type="image">
-					<posx>-8</posx>
-					<posy>122</posy>
-					<width>180</width>
-					<height>260</height>
-					<texture>posterframeF.png</texture>
-					<colordiffuse>39FFFFFF</colordiffuse>
-					<animation effect="slide" start="0,0" end="0,20" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
-				</control>
-				<control type="image">
-					<posx>1</posx>
-					<posy>374</posy>
-					<width>162</width>
-					<height>241</height>
-					<texture background="true" flipy="true" diffuse="movie-poster/Movie_Thumb_Mask.png">$INFO[ListItem.Icon]</texture>
-					<colordiffuse>69FFFFFF</colordiffuse>
-					<fadetime>200</fadetime>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<animation effect="slide" start="0,0" end="0,20" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
-				</control>
-				<control type="image">
-					<posx>100</posx>
-					<posy>332</posy>
-					<width>80</width>
-					<height>60</height>
-					<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
-					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
-				</control>
-				<control type="image">
-					<posx>100</posx>
-					<posy>332</posy>
-					<width>80</width>
-					<height>60</height>
-					<texture>dialogs/movies/movieset.png</texture>
-					<visible>Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)</visible>
+						<control type="image">
+							<posx>1</posx>
+							<posy>131</posy>
+							<width>162</width>
+							<height>241</height>
+							<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
+							<fadetime>200</fadetime>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+						</control>
+						<control type="image">
+							<posx>-8</posx>
+							<posy>122</posy>
+							<width>180</width>
+							<height>260</height>
+							<texture>posterframeF.png</texture>
+							<colordiffuse>39FFFFFF</colordiffuse>
+						</control>
+						<control type="image">
+							<posx>1</posx>
+							<posy>374</posy>
+							<width>162</width>
+							<height>241</height>
+							<texture background="true" flipy="true" diffuse="movie-poster/Movie_Thumb_Mask.png">$INFO[ListItem.Icon]</texture>
+							<colordiffuse>69FFFFFF</colordiffuse>
+							<fadetime>200</fadetime>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+						</control>
+						<control type="image">
+							<posx>100</posx>
+							<posy>332</posy>
+							<width>80</width>
+							<height>60</height>
+							<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+							<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+						</control>
+						<control type="image">
+							<posx>100</posx>
+							<posy>332</posy>
+							<width>80</width>
+							<height>60</height>
+							<texture>dialogs/movies/movieset.png</texture>
+							<visible>Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)</visible>
+						</control>
 				</control>
 			</itemlayout>
 			

@@ -23,7 +23,7 @@
 		
 		
 		<control type="fixedlist" id="52">
-			<posx>700</posx>
+			<posx>660</posx>
 			<posy>74</posy>
 			<height>647</height>
 			<width>800</width>
@@ -39,62 +39,69 @@
 			<pagecontrol>62</pagecontrol>
 			<include>Animation_Viewtype_Panel_FocusArea</include>
 			<visible>Container.Content(songs) | Container.Content(artists)</visible>
+			<animation effect="slide" start="0,0" end="-40,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(62)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="-100,0" time="1000" delay="600" tween="cubic" easing="inout" condition="Container.Content(artists)">Conditional</animation>
 			<itemlayout width="1210" height="36">
-				<control type="label">
-					<posx>20</posx>
-					<posy>0</posy>
-					<width>680</width>
-					<height>46</height>
-					<aligny>center</aligny>
-					<font>Font_Bartowski_List_Main</font>
-					<textcolor>Text-Filemode</textcolor>
-					<label>$INFO[ListItem.TrackNumber]$INFO[ListItem.Title,. ][COLOR Date]$INFO[ListItem.Duration, ][/COLOR]</label>
-					<visible>Container.Content(songs)</visible>
-				</control>
-				<control type="label">
-					<posx>20</posx>
-					<posy>0</posy>
-					<width>720</width>
-					<height>46</height>
-					<aligny>center</aligny>
-					<font>Font_Bartowski_List_Main</font>
-					<textcolor>Text-Filemode</textcolor>
-					<label>$INFO[ListItem.Label]</label>
-					<visible>!Container.Content(songs)</visible>
+				<control type="group">
+					<posx>40</posx>
+						<control type="label">
+							<posx>20</posx>
+							<posy>0</posy>
+							<width>680</width>
+							<height>46</height>
+							<aligny>center</aligny>
+							<font>Font_Bartowski_List_Main</font>
+							<textcolor>Text-Filemode</textcolor>
+							<label>$INFO[ListItem.TrackNumber]$INFO[ListItem.Title,. ][COLOR Date]$INFO[ListItem.Duration, ][/COLOR]</label>
+							<visible>Container.Content(songs)</visible>
+						</control>
+						<control type="label">
+							<posx>20</posx>
+							<posy>0</posy>
+							<width>720</width>
+							<height>46</height>
+							<aligny>center</aligny>
+							<font>Font_Bartowski_List_Main</font>
+							<textcolor>Text-Filemode</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!Container.Content(songs)</visible>
+						</control>
 				</control>
 			</itemlayout>
 			<focusedlayout width="1210" height="36">
-				<control type="image">
-					<posx>0</posx>
-					<posy>-10</posy>
-					<width>800</width>
-					<height>68</height>
-					<texture>list/highlight_new.png</texture>
-					<animation type="Focus" reversible="false">
-						<effect type="fade" start="0" end="100" time="800" />
-					</animation>
-				</control>
-				<control type="label">
-					<posx>20</posx>
-					<posy>0</posy>
-					<width>720</width>
-					<height>46</height>
-					<aligny>center</aligny>
-					<font>Font_Bartowski_List_Main</font>
-					<textcolor>white</textcolor>
-					<label>$INFO[ListItem.Label]</label>
-					<visible>!Container.Content(songs)</visible>
-				</control>
-				<control type="label">
-					<posx>20</posx>
-					<posy>0</posy>
-					<width>680</width>
-					<height>46</height>
-					<aligny>center</aligny>
-					<font>Font_Bartowski_List_Main</font>
-					<label>[COLOR white]$INFO[ListItem.TrackNumber]$INFO[ListItem.Title,. ]$INFO[ListItem.Duration, - ][/COLOR]</label>
-					<visible>Container.Content(songs)</visible>
+				<control type="group">
+					<posx>40</posx>
+						<control type="image">
+							<posx>6</posx>
+							<posy>-10</posy>
+							<width>800</width>
+							<height>68</height>
+							<texture>list/highlight_new.png</texture>
+							<animation type="Focus" reversible="false">
+								<effect type="fade" start="0" end="100" time="800" />
+							</animation>
+						</control>
+						<control type="label">
+							<posx>20</posx>
+							<posy>0</posy>
+							<width>720</width>
+							<height>46</height>
+							<aligny>center</aligny>
+							<font>Font_Bartowski_List_Main</font>
+							<textcolor>white</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!Container.Content(songs)</visible>
+						</control>
+						<control type="label">
+							<posx>20</posx>
+							<posy>0</posy>
+							<width>680</width>
+							<height>46</height>
+							<aligny>center</aligny>
+							<font>Font_Bartowski_List_Main</font>
+							<label>[COLOR white]$INFO[ListItem.TrackNumber]$INFO[ListItem.Title,. ]$INFO[ListItem.Duration, - ][/COLOR]</label>
+							<visible>Container.Content(songs)</visible>
+						</control>
 				</control>
 			</focusedlayout>
 		</control>		
