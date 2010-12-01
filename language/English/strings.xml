@@ -16,7 +16,7 @@
 	
 	<!-- Settings labels -->
 	
-	<string id="31032">Disable Clock</string><!-- GOOD -->
+	<string id="31032">Disable Clock on Home</string><!-- GOOD -->
 	<string id="31033">Scroll Plot for Movies and TV</string>
 	<string id="31034">Disable Media Flags</string>
 	<string id="31035">Enable Movies Watched Overlays</string>

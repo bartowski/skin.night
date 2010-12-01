@@ -68,7 +68,7 @@
 							<width>460</width>
 							<height>50</height>
 							<aligny>center</aligny>
-							<font>Font_TVShow</font>
+							<font>LiberationSans_Regular_22</font>
 							<textcolor>mainblue</textcolor>
 							<label>[B]$INFO[ListItem.Title][/B]</label>
 							<animation effect="fade" start="50" end="50" time="0" condition="true">conditional</animation>
@@ -92,7 +92,7 @@
 							<height>104</height>
 							<align>justify</align>
 							<info>ListItem.Plot</info>
-							<font>Font_Bartowski_Movies_Plot</font>
+							<font>LiberationSans_Regular_20</font>
 							<textcolor>white</textcolor>
 							<animation effect="fade" start="50" end="50" time="0" condition="true">conditional</animation>
 							<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
@@ -151,7 +151,7 @@
 							<width>460</width>
 							<height>50</height>
 							<aligny>center</aligny>
-							<font>Font_TVShow</font>
+							<font>LiberationSans_Regular_22</font>
 							<textcolor>mainblue</textcolor>
 							<label>[B]$INFO[ListItem.Title][/B]</label>
 						</control>
@@ -174,7 +174,7 @@
 							<height>104</height>
 							<align>justify</align>
 							<info>ListItem.Plot</info>
-							<font>Font_Bartowski_Movies_Plot</font>
+							<font>LiberationSans_Regular_20</font>
 							<textcolor>white</textcolor>
 							<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 						</control>

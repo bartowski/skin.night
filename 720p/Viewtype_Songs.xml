@@ -3,23 +3,24 @@
 <includes>
 	<include name="Viewtype_Songs">
 
-		<!-- Browser -->
-		<control type="image">
-			<include>Dimensions_Fullscreen</include>
-			<texture>list/file-black-background1.png</texture>
-			<visible>Control.IsVisible(52)</visible>
-		</control>
-		<control type="image">
-			<visible>Control.IsVisible(52) + Container.Content(artists)</visible>
-			<posx>40</posx>
-			<posy>10</posy>
-			<width>520</width>
-			<height>291</height>
-			<texture background="true" diffuse="Showcase/showcase-diffuse.png" fallback="backgrounds/music.jpg">$INFO[Container(52).listitem.property(fanart_image)]</texture>
-			<fadetime>400</fadetime>
-			<aspectratio>stretch</aspectratio>
-			<include>Animation_Viewtype_Panel_Fanart</include>
-		</control>
+	<control type="group">
+		<visible>Control.IsVisible(52)</visible>
+			<control type="image">
+				<include>Dimensions_Fullscreen</include>
+				<texture>list/file-black-background1.png</texture>
+			</control>
+			<control type="image">
+				<visible>Container.Content(artists)</visible>
+				<posx>40</posx>
+				<posy>10</posy>
+				<width>520</width>
+				<height>291</height>
+				<texture background="true" diffuse="Showcase/showcase-diffuse.png" fallback="backgrounds/music.jpg">$INFO[Container(52).listitem.property(fanart_image)]</texture>
+				<fadetime>400</fadetime>
+				<aspectratio>stretch</aspectratio>
+				<include>Animation_Viewtype_Panel_Fanart</include>
+			</control>
+	</control>
 		
 		
 		<control type="fixedlist" id="52">
@@ -47,10 +48,10 @@
 						<control type="label">
 							<posx>20</posx>
 							<posy>0</posy>
-							<width>680</width>
+							<width>555</width>
 							<height>46</height>
 							<aligny>center</aligny>
-							<font>Font_Bartowski_List_Main</font>
+							<font>LiberationSans_Regular_22</font>
 							<textcolor>Text-Filemode</textcolor>
 							<label>$INFO[ListItem.TrackNumber]$INFO[ListItem.Title,. ][COLOR Date]$INFO[ListItem.Duration, ][/COLOR]</label>
 							<visible>Container.Content(songs)</visible>
@@ -61,7 +62,7 @@
 							<width>720</width>
 							<height>46</height>
 							<aligny>center</aligny>
-							<font>Font_Bartowski_List_Main</font>
+							<font>LiberationSans_Regular_22</font>
 							<textcolor>Text-Filemode</textcolor>
 							<label>$INFO[ListItem.Label]</label>
 							<visible>!Container.Content(songs)</visible>
@@ -87,7 +88,7 @@
 							<width>720</width>
 							<height>46</height>
 							<aligny>center</aligny>
-							<font>Font_Bartowski_List_Main</font>
+							<font>LiberationSans_Regular_22</font>
 							<textcolor>white</textcolor>
 							<label>$INFO[ListItem.Label]</label>
 							<visible>!Container.Content(songs)</visible>
@@ -95,10 +96,10 @@
 						<control type="label">
 							<posx>20</posx>
 							<posy>0</posy>
-							<width>680</width>
+							<width>555</width>
 							<height>46</height>
 							<aligny>center</aligny>
-							<font>Font_Bartowski_List_Main</font>
+							<font>LiberationSans_Regular_22</font>
 							<label>[COLOR white]$INFO[ListItem.TrackNumber]$INFO[ListItem.Title,. ]$INFO[ListItem.Duration, - ][/COLOR]</label>
 							<visible>Container.Content(songs)</visible>
 						</control>
@@ -123,7 +124,7 @@
 			<width>1200</width>
 			<height>50</height>
 			<aligny>center</aligny>
-			<font>Font_Bartowski_Movies_Title</font>
+			<font>LiberationSans_Regular_40</font>
 			<textcolor>mainblue</textcolor>
 			<label>[B]$INFO[ListItem.Album][/B]</label>
 		</control>
@@ -133,7 +134,7 @@
 			<width>604</width>
 			<height>50</height>
 			<aligny>center</aligny>
-			<font>Font_Bartowski_Movies_Duration</font>
+			<font>LiberationSans_Regular_24</font>
 			<textcolor>white</textcolor>
 			<label>$INFO[ListItem.artist]</label>
 		</control>
@@ -143,7 +144,7 @@
 			<width>604</width>
 			<height>50</height>
 			<aligny>center</aligny>
-			<font>Font_Bartowski_Movies_Duration</font>
+			<font>LiberationSans_Regular_24</font>
 			<textcolor>white</textcolor>
 			<label>$INFO[ListItem.year]</label>
 		</control>
@@ -199,7 +200,7 @@
 			<width>546</width>
 			<height>50</height>
 			<aligny>center</aligny>
-			<font>Font_RSS_Big</font>
+			<font>LiberationSans_Regular_24</font>
 			<textcolor>mainblue</textcolor>
 			<label>[B]$LOCALIZE[21898]:[/B] [COLOR=white]$INFO[ListItem.Property(Artist_YearsActive)][/COLOR]</label>
 			<visible>!IsEmpty(ListItem.Property(Artist_YearsActive))</visible>
@@ -210,7 +211,7 @@
 			<width>546</width>
 			<height>50</height>
 			<aligny>center</aligny>
-			<font>Font_RSS_Big</font>
+			<font>LiberationSans_Regular_24</font>
 			<textcolor>mainblue</textcolor>
 			<label>[B]$LOCALIZE[21900]:[/B] [COLOR=white]$INFO[ListItem.Property(Artist_Born)][/COLOR]</label>
 			<visible>!IsEmpty(ListItem.Property(Artist_Born))</visible>
@@ -221,7 +222,7 @@
 			<width>546</width>
 			<height>50</height>
 			<aligny>center</aligny>
-			<font>Font_RSS_Big</font>
+			<font>LiberationSans_Regular_24</font>
 			<textcolor>mainblue</textcolor>
 			<label>[B]$LOCALIZE[21900]:[/B] [COLOR=white]$INFO[ListItem.Property(Artist_Formed)][/COLOR]</label>
 			<visible>!IsEmpty(ListItem.Property(Artist_Formed))</visible>
@@ -232,7 +233,7 @@
 			<width>546</width>
 			<height>50</height>
 			<aligny>center</aligny>
-			<font>Font_RSS_Big</font>
+			<font>LiberationSans_Regular_24</font>
 			<textcolor>mainblue</textcolor>
 			<label>[B]$LOCALIZE[515]:[/B] [COLOR=white]$INFO[ListItem.Property(Artist_Genre)][/COLOR]</label>
 			<visible>!IsEmpty(ListItem.Property(Artist_Genre))</visible>
@@ -245,7 +246,7 @@
 		<posy>400</posy>
 		<width>540</width>
 		<height>246</height>
-		<font>Font_Bartowski_Showcase_plot</font>
+		<font>LiberationSans_Regular_20</font>
 		<textcolor>white</textcolor>
 		<label>$INFO[ListItem.Property(Artist_Description)]</label>
 		<align>justify</align>
@@ -259,7 +260,7 @@
 		<posy>400</posy>
 		<width>540</width>
 		<height>318</height>
-		<font>Font_Bartowski_Showcase_plot</font>
+		<font>LiberationSans_Regular_20</font>
 		<textcolor>white</textcolor>
 		<label>$INFO[ListItem.Property(Artist_Description)]</label>
 		<align>justify</align>

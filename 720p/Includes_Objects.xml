@@ -9,7 +9,7 @@
 		<align>center</align>
 		<aligny>top</aligny>
 		<textoffsety>21</textoffsety>
-		<font>Font_KeyboardKeys</font>
+		<font>LiberationSans_Regular_20</font>
 	</include>
 	<include name="Objects_KeyOnVars">
 		<textcolor>white</textcolor>
@@ -19,7 +19,7 @@
 		<aligny>top</aligny>
 		<textoffsety>21</textoffsety>
 		<include>Animation_KeyboardFade</include>
-		<font>Font_KeyboardKeys</font>
+		<font>LiberationSans_Regular_20</font>
 	</include>
 	<include name="Objects_KeyOffSymbolVars">
 		<textcolor>77FFFFFF</textcolor>

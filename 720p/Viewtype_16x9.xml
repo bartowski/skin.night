@@ -90,7 +90,7 @@
 						<posy>96</posy>
 						<width>250</width>
 						<height>50</height>
-						<font>Font_InfoDetails</font>
+						<font>LiberationSans_Regular_22</font>
 						<textcolor>mainblue</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
@@ -220,9 +220,9 @@
 						<posy>76</posy>
 						<width>500</width>
 						<height>50</height>
-						<font>Font_InfoYear2</font>
+						<font>LiberationSans_Regular_30</font>
 						<textcolor>mainblue</textcolor>
-						<label>$INFO[ListItem.Label]</label>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="191,440" start="90" end="100" time="400" tween="back" easing="out" />
 							<effect type="fade" start="80" end="100" time="400" />
@@ -305,7 +305,7 @@
 				<width>460</width>
 				<height>50</height>
 				<aligny>center</aligny>
-				<font>Font_TVShow</font>
+				<font>LiberationSans_Regular_22</font>
 				<textcolor>white</textcolor>
 				<label>[B][COLOR=mainblue]$LOCALIZE[20339]:[/COLOR][/B] [COLOR=white]$INFO[ListItem.Director][/COLOR]</label>
 			</control>
@@ -316,7 +316,7 @@
 				<width>460</width>
 				<height>50</height>
 				<aligny>center</aligny>
-				<font>Font_TVShow</font>
+				<font>LiberationSans_Regular_22</font>
 				<textcolor>white</textcolor>
 				<label>[B][COLOR=mainblue]$LOCALIZE[20417]:[/COLOR][/B] [COLOR=white]$INFO[ListItem.Writer][/COLOR]</label>
 			</control>
@@ -327,7 +327,7 @@
 				<width>460</width>
 				<height>50</height>
 				<aligny>center</aligny>
-				<font>Font_TVShow</font>
+				<font>LiberationSans_Regular_22</font>
 				<textcolor>white</textcolor>
 				<label>[B][COLOR=mainblue]$LOCALIZE[515]:[/COLOR][/B] [COLOR=white]$INFO[ListItem.Genre][/COLOR]</label>
 			</control>
@@ -338,7 +338,7 @@
 				<width>460</width>
 				<height>50</height>
 				<aligny>center</aligny>
-				<font>Font_TVShow</font>
+				<font>LiberationSans_Regular_22</font>
 				<textcolor>white</textcolor>
 				<label>[B][COLOR=mainblue]$LOCALIZE[180]:[/COLOR][/B] [COLOR=white]$INFO[ListItem.Duration] $LOCALIZE[12391][/COLOR]</label>
 				<visible>!IsEmpty(ListItem.Duration) + !SubString(ListItem.Duration,min)</visible>
@@ -350,7 +350,7 @@
 				<width>460</width>
 				<height>50</height>
 				<aligny>center</aligny>
-				<font>Font_TVShow</font>
+				<font>LiberationSans_Regular_22</font>
 				<textcolor>white</textcolor>
 				<label>[B][COLOR=mainblue]$LOCALIZE[180]:[/COLOR][/B] [COLOR=white]$INFO[ListItem.Duration][/COLOR]</label>
 				<visible>!IsEmpty(ListItem.Duration) + SubString(ListItem.Duration,min)</visible>
@@ -362,26 +362,25 @@
 				<width>460</width>
 				<height>50</height>
 				<aligny>center</aligny>
-				<font>Font_TVShow</font>
+				<font>LiberationSans_Regular_22</font>
 				<textcolor>white</textcolor>
 				<label>[B][COLOR=mainblue]$LOCALIZE[368]:[/COLOR][/B] [COLOR=white]$INFO[ListItem.rating][/COLOR]</label>
 			</control>
 			<control type="label">
 				<description>Rated</description>
 				<posx>15</posx>
-				<posy>371</posy>
+				<posy>373</posy>
 				<width>460</width>
 				<height>50</height>
 				<aligny>center</aligny>
-				<font>Font_TVShow</font>
+				<font>LiberationSans_Regular_22</font>
 				<textcolor>white</textcolor>
 				<label>[B][COLOR=mainblue]$LOCALIZE[31226]:[/COLOR][/B]</label>
 			</control>
 			<control type="group">
-				<posx>116</posx>
-				<posy>547</posy>
+				<posx>86</posx>
+				<posy>382</posy>
 				<include>VideoMPAAFlaggingConditions</include>
-				<animation effect="zoom" start="70" end="70" time="0" condition="true">Conditional</animation>
 			</control>
 		</control>
 		
@@ -398,7 +397,7 @@
 					<width>570</width>
 					<height>50</height>
 					<aligny>center</aligny>
-					<font>Font_TVShow</font>
+					<font>LiberationSans_Regular_22</font>
 					<textcolor>mainblue</textcolor>
 					<label>[B][COLOR=mainblue]$LOCALIZE[31226]:[/COLOR][/B] [COLOR=white]$INFO[ListItem.Mpaa][/COLOR]</label>
 					<visible>Container.Content(tvshows) + ![StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem.Label)]</visible>
@@ -410,7 +409,7 @@
 					<width>570</width>
 					<height>50</height>
 					<aligny>center</aligny>
-					<font>Font_TVShow</font>
+					<font>LiberationSans_Regular_22</font>
 					<textcolor>mainblue</textcolor>
 					<label>[B][COLOR=mainblue]$LOCALIZE[20360]:[/COLOR][/B] [COLOR=white]$INFO[ListItem.Episode][/COLOR]</label>
 					<visible>Container.Content(tvshows) + ![StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem.Label)]</visible>
@@ -422,7 +421,7 @@
 					<width>570</width>
 					<height>50</height>
 					<aligny>center</aligny>
-					<font>Font_TVShow</font>
+					<font>LiberationSans_Regular_22</font>
 					<label>[B][COLOR=mainblue]$LOCALIZE[515]:[/COLOR][/B] [COLOR=white]$INFO[ListItem.Genre][/COLOR]</label>
 					<visible>Container.Content(tvshows) + ![StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem.Label)]</visible>
 				</control>
@@ -433,7 +432,7 @@
 					<width>570</width>
 					<height>50</height>
 					<aligny>center</aligny>
-					<font>Font_TVShow</font>
+					<font>LiberationSans_Regular_22</font>
 					<textcolor>mainblue</textcolor>
 					<label>[B][COLOR=mainblue]$LOCALIZE[20373]:[/COLOR][/B] [COLOR=white]$INFO[ListItem.Season][/COLOR]</label>
 					<visible>Container.Content(episodes)</visible>
@@ -445,7 +444,7 @@
 					<width>570</width>
 					<height>50</height>
 					<aligny>center</aligny>
-					<font>Font_TVShow</font>
+					<font>LiberationSans_Regular_22</font>
 					<textcolor>mainblue</textcolor>
 					<label>[B][COLOR=mainblue]$LOCALIZE[20359]:[/COLOR][/B] [COLOR=white]$INFO[ListItem.Episode][/COLOR]</label>
 					<visible>Container.Content(episodes)</visible>
@@ -457,7 +456,7 @@
 					<width>570</width>
 					<height>50</height>
 					<aligny>center</aligny>
-					<font>Font_TVShow</font>
+					<font>LiberationSans_Regular_22</font>
 					<textcolor>mainblue</textcolor>
 					<label>[B][COLOR=mainblue]$LOCALIZE[563]:[/B] [COLOR=white]$INFO[ListItem.Rating][/COLOR]</label>
 					<visible>Container.Content(episodes)</visible>
@@ -476,7 +475,7 @@
 					<posy>0</posy>
 					<width min="10" max="1034">auto</width>
 					<height>100</height>
-					<font>Font_TVShow</font>
+					<font>LiberationSans_Regular_22</font>
 					<textcolor>mainblue</textcolor>
 					<label>[B]$LOCALIZE[31229] $INFO[ListItem.Year][/B]</label>
 					<visible>Container.Content(tvshows) + ![StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem.Label)]</visible>
@@ -487,7 +486,7 @@
 					<posy>0</posy>
 					<width min="10" max="1034">auto</width>
 					<height>100</height>
-					<font>Font_TVShow</font>
+					<font>LiberationSans_Regular_22</font>
 					<textcolor>mainblue</textcolor>
 					<label>[B]$LOCALIZE[31230] $INFO[ListItem.Date][/B]</label>
 					<visible>Container.Content(episodes)</visible>
@@ -497,10 +496,10 @@
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>600</width>
-				<height>148</height>
+				<height>194</height>
 				<align>justify</align>
 				<info>ListItem.Plot</info>
-				<font>Font_Bartowski_Showcase_plot</font>
+				<font>LiberationSans_Regular_18</font>
 				<textcolor>white</textcolor>
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				<animation effect="slide" start="340,900" end="340,520" time="600" delay="2800" condition="[Container.Content(episodes) | Container.Content(movies)] + ![Container(59).OnNext | Container(59).OnPrevious]">Conditional</animation>
@@ -513,7 +512,7 @@
 		<posy>580</posy>
 		<width>300</width>
 		<height>100</height>
-		<font>Font_TVShow</font>
+		<font>LiberationSans_Regular_22</font>
 		<textcolor>mainblue</textcolor>
 		<label>[B]$LOCALIZE[31275][/B]</label>
 		<include>Animation_CommonFade</include>
@@ -802,7 +801,7 @@
 				<width>180</width>
 				<height>100</height>
 				<align>center</align>
-				<font>Font_Alaya_Movie-trailer</font>
+				<font>LiberationSans_Regular_16</font>
 				<textcolor>white</textcolor>
 				<label>$INFO[Window(Home).Property(LatestEpisode.1.EpisodeTitle)]</label>
 				<visible>StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem.Label)</visible>
@@ -811,7 +810,7 @@
 				<width>180</width>
 				<height>100</height>
 				<align>center</align>
-				<font>Font_Alaya_Movie-trailer</font>
+				<font>LiberationSans_Regular_16</font>
 				<textcolor>white</textcolor>
 				<label>$INFO[Window(Home).Property(LatestEpisode.2.EpisodeTitle)]</label>
 				<visible>StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem.Label)</visible>
@@ -820,7 +819,7 @@
 				<width>180</width>
 				<height>100</height>
 				<align>center</align>
-				<font>Font_Alaya_Movie-trailer</font>
+				<font>LiberationSans_Regular_16</font>
 				<textcolor>white</textcolor>
 				<label>$INFO[Window(Home).Property(LatestEpisode.3.EpisodeTitle)]</label>
 				<visible>StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem.Label)</visible>
@@ -829,7 +828,7 @@
 				<width>180</width>
 				<height>100</height>
 				<align>center</align>
-				<font>Font_Alaya_Movie-trailer</font>
+				<font>LiberationSans_Regular_16</font>
 				<textcolor>white</textcolor>
 				<label>$INFO[Window(Home).Property(LatestEpisode.4.EpisodeTitle)]</label>
 				<visible>StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem.Label)</visible>
@@ -838,7 +837,7 @@
 				<width>180</width>
 				<height>100</height>
 				<align>center</align>
-				<font>Font_Alaya_Movie-trailer</font>
+				<font>LiberationSans_Regular_16</font>
 				<textcolor>white</textcolor>
 				<label>$INFO[Window(Home).Property(LatestEpisode.5.EpisodeTitle)]</label>
 				<visible>StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem.Label)</visible>
@@ -847,7 +846,7 @@
 				<width>180</width>
 				<height>100</height>
 				<align>center</align>
-				<font>Font_Alaya_Movie-trailer</font>
+				<font>LiberationSans_Regular_16</font>
 				<textcolor>white</textcolor>
 				<label>$INFO[Window(Home).Property(LatestEpisode.6.EpisodeTitle)]</label>
 				<visible>StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem.Label)</visible>
@@ -856,7 +855,7 @@
 				<width>180</width>
 				<height>100</height>
 				<align>center</align>
-				<font>Font_Alaya_Movie-trailer</font>
+				<font>LiberationSans_Regular_16</font>
 				<textcolor>white</textcolor>
 				<label>$INFO[Window(Home).Property(LatestEpisode.7.EpisodeTitle)]</label>
 				<visible>StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem.Label)</visible>
@@ -865,7 +864,7 @@
 				<width>180</width>
 				<height>100</height>
 				<align>center</align>
-				<font>Font_Alaya_Movie-trailer</font>
+				<font>LiberationSans_Regular_16</font>
 				<textcolor>white</textcolor>
 				<label>$INFO[Window(Home).Property(LatestEpisode.8.EpisodeTitle)]</label>
 				<visible>StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem.Label)</visible>
@@ -874,7 +873,7 @@
 				<width>180</width>
 				<height>100</height>
 				<align>center</align>
-				<font>Font_Alaya_Movie-trailer</font>
+				<font>LiberationSans_Regular_16</font>
 				<textcolor>white</textcolor>
 				<label>$INFO[Window(Home).Property(LatestEpisode.9.EpisodeTitle)]</label>
 				<visible>StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem.Label)</visible>
@@ -883,7 +882,7 @@
 				<width>180</width>
 				<height>100</height>
 				<align>center</align>
-				<font>Font_Alaya_Movie-trailer</font>
+				<font>LiberationSans_Regular_16</font>
 				<textcolor>white</textcolor>
 				<label>$INFO[Window(Home).Property(LatestEpisode.10.EpisodeTitle)]</label>
 				<visible>StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem.Label)</visible>

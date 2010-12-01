@@ -220,7 +220,7 @@
 				<height>310</height>
 				<align>left</align>
 				<info>ListItem.Property(Description)</info>
-				<font>Font_Bartowski_Movies_Plot</font>
+				<font>LiberationSans_Regular_20</font>
 				<textcolor>white</textcolor>
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 			</control>

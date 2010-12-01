@@ -125,10 +125,10 @@
 			<posy>10</posy>
 			<width>1100</width>
 			<height>15</height>
-			<label>$INFO[ListItem.Label]</label>
+			<label>[B]$INFO[ListItem.Label][/B]</label>
 			<align>left</align>
 			<aligny>center</aligny>
-			<font>Font_MainMenuLabel</font>
+			<font>LiberationSans_Regular_40</font>
 			<textcolor>mainblue</textcolor>
 			<shadowcolor>black</shadowcolor>
 			<include>Animation_BackdropFade</include>
@@ -212,7 +212,7 @@
 					<label>$INFO[ListItem.Label]</label>
 					<align>center</align>
 					<aligny>center</aligny>
-					<font>Font_MainMenuLabel</font>
+					<font>DejaVuSans_Bold_26</font>
 					<textcolor>mainblue</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -234,7 +234,7 @@
 					<label>$INFO[ListItem.PictureDateTime,[COLOR=mainblue]$LOCALIZE[31326][/COLOR] - ]</label>
 					<align>center</align>
 					<aligny>center</aligny>
-					<font>font13caps</font>
+					<font>DejaVuSans_Bold_20</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -247,7 +247,7 @@
 					<label>$INFO[ListItem.PictureResolution,[COLOR=mainblue]$LOCALIZE[31327][/COLOR] - ]</label>
 					<align>center</align>
 					<aligny>center</aligny>
-					<font>font13caps</font>
+					<font>DejaVuSans_Bold_20</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>

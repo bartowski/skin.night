@@ -56,13 +56,12 @@
 					<width>700</width>
 					<height>46</height>
 					<aligny>center</aligny>
-					<font>Font_Bartowski_Episode_ContextMenu</font>
+					<font>LiberationSans_Regular_24</font>
 					<textcolor>Text-Filemode</textcolor>
 					<selectedcolor>mainblue</selectedcolor>
 					<label>$INFO[ListItem.label]</label>
 					<animation effect="slide" start="0,0" end="30,0" time="0" condition="[[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + stringcompare(ListItem.Overlay,OverlayWatched.png) + [Skin.HasSetting(movieoverlays) | Skin.HasSetting(tvoverlays)]] | [Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)]">Conditional</animation>
  					<visible>![Window.IsActive(Programs) | Window.IsActive(musicplaylist)]</visible>
-					<visible>![Window.IsActive(Programs) | Window.IsActive(musicplaylist)]</visible>
 				</control>
 				<control type="label">
 					<posx>20</posx>
@@ -70,7 +69,7 @@
 					<width>700</width>
 					<height>46</height>
 					<aligny>center</aligny>
-					<font>Font_Bartowski_Episode_ContextMenu</font>
+					<font>LiberationSans_Regular_24</font>
 					<textcolor>Text-Filemode</textcolor>
 					<selectedcolor>mainblue</selectedcolor>
 					<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, - ]</label>
@@ -109,7 +108,7 @@
 					<width>700</width>
 					<height>46</height>
 					<aligny>center</aligny>
-					<font>Font_RSS_Big</font>
+					<font>LiberationSans_Regular_24</font>
 					<textcolor>Text-Filemode</textcolor>
 					<label>$INFO[ListItem.year]</label>
 					<visible>Container.Content(movies) + !Skin.HasSetting(Files_Fanart) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
@@ -121,7 +120,7 @@
 					<height>46</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>Font_RSS_Big</font>
+					<font>LiberationSans_Regular_24</font>
 					<textcolor>Text-Filemode</textcolor>
 					<label>$INFO[ListItem.Label2]</label>
 					<visible>Window.IsActive(videofiles)</visible>
@@ -200,7 +199,7 @@
 					<width>680</width>
 					<height>46</height>
 					<aligny>center</aligny>
-					<font>Font_Bartowski_Episode_ContextMenu</font>
+					<font>LiberationSans_Regular_24</font>
 					<textcolor>white</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 					<animation effect="slide" start="0,0" end="30,0" time="0" condition="[[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + stringcompare(ListItem.Overlay,OverlayWatched.png) + [Skin.HasSetting(movieoverlays) | Skin.HasSetting(tvoverlays)]] | [Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)]">Conditional</animation>
@@ -212,7 +211,7 @@
 					<width>700</width>
 					<height>46</height>
 					<aligny>center</aligny>
-					<font>Font_Bartowski_Episode_ContextMenu</font>
+					<font>LiberationSans_Regular_24</font>
 					<textcolor>white</textcolor>
 					<selectedcolor>mainblue</selectedcolor>
 					<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, - ]</label>
@@ -224,7 +223,7 @@
 					<width>700</width>
 					<height>46</height>
 					<aligny>center</aligny>
-					<font>Font_RSS_Big</font>
+					<font>LiberationSans_Regular_24</font>
 					<textcolor>white</textcolor>
 					<label>$INFO[ListItem.year]</label>
 					<visible>Container.Content(movies) + !Skin.HasSetting(Files_Fanart) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
@@ -236,7 +235,7 @@
 					<height>46</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>Font_RSS_Big</font>
+					<font>LiberationSans_Regular_24</font>
 					<textcolor>white</textcolor>
 					<label>$INFO[ListItem.Label2]</label>
 					<visible>Window.IsActive(videofiles)</visible>
@@ -608,11 +607,11 @@
 		</control>
 		<control type="label">
 			<posx>790</posx>
-			<posy>20</posy>
+			<posy>16</posy>
 			<width>490</width>
 			<height>50</height>
 			<align>center</align>
-			<font>Font_Bartowski_TV_Title</font>
+			<font>DejaVuSans_Bold_32</font>
 			<textcolor>mainblue</textcolor>
 			<label>[B]$INFO[ListItem.TVShowtitle][/B]</label>
 			<include>Animation_Viewtype_Files_RightArea</include>
@@ -631,7 +630,7 @@
 				<width>490</width>
 				<height>50</height>
 				<align>center</align>
-				<font>Font_Bartowski_Movies_Duration</font>
+				<font>LiberationSans_Regular_22</font>
 				<textcolor>white</textcolor>
 				<label>[B]$INFO[ListItem.label][/B]</label>
 			</control>
@@ -642,7 +641,7 @@
 				<width>490</width>
 				<height>50</height>
 				<align>center</align>
-				<font>Font_TVShow</font>
+				<font>LiberationSans_Regular_22</font>
 				<label>[B][COLOR=ListTrackF]$LOCALIZE[515][/COLOR] [B][COLOR=white]$INFO[ListItem.Genre][/B][/COLOR]</label>
 			</control>
 			<control type="label">
@@ -652,7 +651,7 @@
 				<width>490</width>
 				<height>50</height>
 				<align>center</align>
-				<font>Font_TVShow</font>
+				<font>LiberationSans_Regular_22</font>
 				<label>[COLOR=ListTrackF][B]$LOCALIZE[31231][/COLOR] [COLOR=white]$INFO[ListItem.Date][/COLOR][/B]</label>
 			</control>
 			<control type="label">
@@ -662,7 +661,7 @@
 				<width>490</width>
 				<height>50</height>
 				<align>center</align>
-				<font>Font_TVShow</font>
+				<font>LiberationSans_Regular_22</font>
 				<label>[COLOR=ListTrackF][B]$LOCALIZE[368][/COLOR] [COLOR=white]$INFO[ListItem.Rating][/COLOR][/B]      [COLOR=ListTrackF][B]$LOCALIZE[31226][/COLOR] [COLOR=white]$INFO[ListItem.mpaa][/COLOR][/B]</label>
 			</control>
 	</control>
@@ -677,7 +676,7 @@
 					<width>480</width>
 					<height>89</height>
 					<align>center</align>
-					<font>Font_Bartowski_Title_TVShow</font>
+					<font>DefaultCaps_30</font>
 					<textcolor>white</textcolor>
 					<label>[B]$LOCALIZE[20373] $INFO[ListItem.Season]     $LOCALIZE[20359] $INFO[ListItem.Episode][/B]</label>
 				</control>
@@ -686,7 +685,7 @@
 					<posy>136</posy>
 					<width>480</width>
 					<height>89</height>
-					<font>Font_TVShow</font>
+					<font>LiberationSans_Regular_22</font>
 					<label>[COLOR=ListTrackF][B]$LOCALIZE[31231][/COLOR] [COLOR=white]$INFO[ListItem.Date][/COLOR][/B]</label>
 				</control>
 				<control type="label">
@@ -694,7 +693,7 @@
 					<posy>162</posy>
 					<width>480</width>
 					<height>89</height>
-					<font>Font_TVShow</font>
+					<font>LiberationSans_Regular_22</font>
 					<label>[COLOR=ListTrackF][B]$LOCALIZE[368][/COLOR] [COLOR=white]$INFO[ListItem.Rating][/COLOR][/B]      [COLOR=ListTrackF][B]$LOCALIZE[31226][/COLOR] [COLOR=white]$INFO[ListItem.mpaa][/COLOR][/B]</label>
 				</control>
 				<control type="textbox"><!-- Plot TV -->
@@ -704,7 +703,7 @@
 					<height>280</height>
 					<align>justify</align>
 					<info>ListItem.Plot</info>
-					<font>Font_Bartowski_Movies</font>
+					<font>LiberationSans_Regular_20</font>
 					<textcolor>white</textcolor>
 					<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 					<animation effect="slide" start="0,0" end=",-80" time="0" tween="cubic" easing="inout" condition="Container.Content(tvshows)">Conditional</animation>

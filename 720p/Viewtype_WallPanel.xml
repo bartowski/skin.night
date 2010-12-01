@@ -281,7 +281,7 @@
 					<width>680</width>
 					<height>46</height>
 					<aligny>center</aligny>
-					<font>Font_Bartowski_Movies</font>
+					<font>LiberationSans_Regular_22</font>
 					<textcolor>Text-Filemode</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 					<animation effect="slide" start="0,0" end="20,0" time="0" condition="[stringcompare(ListItem.Overlay,OverlayWatched.png) + Skin.HasSetting(movieoverlays)] | [Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)]">Conditional</animation>
@@ -322,7 +322,7 @@
 					<width>720</width>
 					<height>46</height>
 					<aligny>center</aligny>
-					<font>Font_Bartowski_Movies</font>
+					<font>LiberationSans_Regular_22</font>
 					<textcolor>white</textcolor>
 					<label>[B]$INFO[ListItem.Label][/B]</label>
 					<animation effect="slide" start="0,0" end="20,0" time="0" condition="[stringcompare(ListItem.Overlay,OverlayWatched.png) + Skin.HasSetting(movieoverlays)] | [Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)]">Conditional</animation>
@@ -383,9 +383,9 @@
 				<width>460</width>
 				<height>50</height>
 				<aligny>center</aligny>
-				<font>Font_Bartowski_Showcase_Title</font>
+				<font>LiberationSans_Regular_28</font>
 				<textcolor>mainbluedarker</textcolor>
-				<label>$INFO[ListItem.Label]</label>
+				<label>[B]$INFO[ListItem.Label][/B]</label>
 			</control>
 			<control type="label">
 				<posx>0</posx>
@@ -393,7 +393,7 @@
 				<width>460</width>
 				<height>50</height>
 				<aligny>center</aligny>
-				<font>Font_RSS_Big</font>
+				<font>LiberationSans_Regular_24</font>
 				<textcolor>white</textcolor>
 				<label>31508</label>
 				<visible>IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres)</visible>
@@ -404,7 +404,7 @@
 				<width>460</width>
 				<height>50</height>
 				<aligny>center</aligny>
-				<font>Font_RSS_Big</font>
+				<font>LiberationSans_Regular_24</font>
 				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Duration] $LOCALIZE[12391]</label>
 				<visible>!IsEmpty(ListItem.Duration) + !SubString(ListItem.Duration,min)</visible>
@@ -415,7 +415,7 @@
 				<width>460</width>
 				<height>50</height>
 				<aligny>center</aligny>
-				<font>Font_RSS_Big</font>
+				<font>LiberationSans_Regular_24</font>
 				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Duration]</label>
 				<visible>!IsEmpty(ListItem.Duration) + SubString(ListItem.Duration,min)</visible>
@@ -426,7 +426,7 @@
 				<width>360</width>
 				<height>50</height>
 				<aligny>center</aligny>
-				<font>Font_RSS_Big</font>
+				<font>LiberationSans_Regular_24</font>
 				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Year]</label>
 				<animation effect="slide" start="0,0" end="0,-23" time="0" condition="IsEmpty(ListItem.Duration)">Conditional</animation>
@@ -442,12 +442,12 @@
 			<control type="textbox">
 				<visible>![Container.OnNext | Container.OnPrevious] + !Player.HasAudio</visible>
 				<posx>0</posx>
-				<posy>224</posy>
+				<posy>200</posy>
 				<width>460</width>
-				<height>310</height>
+				<height>326</height>
 				<align>justify</align>
 				<info>ListItem.Plot</info>
-				<font>Font_Bartowski_Movies_Plot</font>
+				<font>LiberationSans_Regular_20</font>
 				<textcolor>white</textcolor>
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				<animation effect="fade" start="30" end="100" time="400">Visible</animation>
@@ -455,12 +455,12 @@
 			<control type="textbox">
 				<visible>![Container.OnNext | Container.OnPrevious] + Player.HasAudio</visible>
 				<posx>0</posx>
-				<posy>224</posy>
+				<posy>200</posy>
 				<width>460</width>
-				<height>264</height>
+				<height>280</height>
 				<align>justify</align>
 				<info>ListItem.Plot</info>
-				<font>Font_Bartowski_Movies_Plot</font>
+				<font>LiberationSans_Regular_20</font>
 				<textcolor>white</textcolor>
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				<animation effect="fade" start="30" end="100" time="400">Visible</animation>
@@ -506,7 +506,7 @@
 			<width>370</width>
 			<height>50</height>
 			<aligny>center</aligny>
-			<font>Font_Alaya_Movie-trailer</font>
+			<font>LiberationSans_Regular_16</font>
 			<textcolor>white</textcolor>
 			<label>*$LOCALIZE[31240]*</label>
 			<shadowcolor>black</shadowcolor>
@@ -519,7 +519,7 @@
 			<width>370</width>
 			<height>50</height>
 			<aligny>center</aligny>
-			<font>Font_Alaya_Movie-trailer</font>
+			<font>LiberationSans_Regular_16</font>
 			<textcolor>white</textcolor>
 			<label>*$LOCALIZE[31238]*</label>
 			<shadowcolor>black</shadowcolor>

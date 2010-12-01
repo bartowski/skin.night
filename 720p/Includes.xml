@@ -45,7 +45,7 @@
 		<onfocus>SetFocus(50)</onfocus>
 	</include>
 	<include name="yes_tv_theme">
-		 <onfocus>XBMC.RunScript(script.TvTunes,backend=True&amploop=True)</onfocus>
+		 <onfocus>XBMC.RunScript(script.TvTunes,backend=True&amp;loop=True)</onfocus>
          <onfocus>SetFocus(50)</onfocus>
 	</include>
 	
@@ -579,7 +579,7 @@
 		<width>860</width>
 		<height>34</height>
 		<textoffsetx>20</textoffsetx>
-		<font>font16caps</font>
+		<font>LiberationSans_Regular_20</font>
 		<textcolor>grey2</textcolor>
 		<focusedcolor>white</focusedcolor>
 		<texturefocus>confluence/MenuItemFO1.png</texturefocus>
@@ -589,7 +589,7 @@
 		<width>860</width>
 		<height>34</height>
 		<textoffsetx>40</textoffsetx>
-		<font>font16caps</font>
+		<font>LiberationSans_Regular_20</font>
 		<textcolor>grey2</textcolor>
 		<focusedcolor>white</focusedcolor>
 		<texturefocus>confluence/MenuItemFO1.png</texturefocus>
@@ -632,30 +632,23 @@
 		<textwidth>600</textwidth>
 		<posx>150</posx>
 		<posy>91</posy>
-		<font>Font_Bartowski_Main_SubMenu</font>
+		<font>alaska_thin_64</font>
 		<textcolor>38b8b7b7</textcolor>
 		<focusedcolor>mainblue</focusedcolor>
 	</include>
 	<include name="ButtonHomeSubCommonValues_Horizontal">
 		<width>320</width>
 		<height>56</height>
-		<font>Font_Bartowski_Main_SubMenu</font>
+		<font>alaska_thin_64</font>
 		<textcolor>ffb8b7b7</textcolor>
 		<focusedcolor>mainblue</focusedcolor>
 	</include>
 	
 	<!-- Debug objects -->
-	<include name="Object_DebugGrid">
-		<control type="image">
-			<include>Dimensions_Fullscreen</include>
-			<texture>common/debuggrid.png</texture>
-			<visible>Skin.HasSetting(debuggrid)</visible>
-		</control>
-	</include>
 	<include name="DialogID">
 		<posx>10</posx>
 		<posy>35</posy>
-		<font>Large</font>
+		<font>DejaVuSans_Bold_16</font>
 		<textcolor>TextDisabled</textcolor>
 		<align>left</align>
 	</include>
@@ -697,8 +690,9 @@
 					<texture>common/time_gradient_back.png</texture>
 				</control>
 				<control type="label">
+					<posy>4</posy>  
 					<width>300</width>
-					<font>Font_Date</font>
+					<font>LiberationSans_Regular_20</font>
 					<textcolor>white</textcolor>
 					<info>System.Date</info>
 					<align>right</align>
@@ -707,16 +701,16 @@
 				<control type="label">
 					<posy>14</posy>
 					<width>300</width>
-					<font>Font_Time</font>
+					<font>DejaVuSans_Bold_38</font>
 					<textcolor>mainblue</textcolor>
-					<info>System.Time(hh:mm xx)</info>
+					<label>[B]$INFO[System.Time(hh:mm xx)][/B]</label>
 					<align>right</align>
 					<animation effect="slide" start="0,0" end="0,20" time="0" tween="cubic" easing="inout" condition="system.getbool(lookandfeel.enablerssfeeds)">Conditional</animation>
 				</control>
 				<!--<control type="label">
 					<posy>54</posy>
 					<width>300</width>
-					<font>Font_Date</font>
+					<font>LiberationSans_Regular_18</font>
 					<textcolor>mainblue</textcolor>
 					<label>[B]$INFO[Weather.Temperature][/B]</label>
 					<align>right</align>
@@ -725,10 +719,10 @@
 		</control>
 	</include>
 	
-	 <include name="Global_Time_TopRight">
+	<include name="Global_Time_TopRight">
 		<control type="group">
-			<posx>1260</posx>
-			<posy>10</posy>
+			<posx>1270</posx>
+			<posy>0</posy>
 			<include>Animation_BackdropFade</include>
 			<animation effect="slide" start="0,0" end="0,-10" time="0" condition="Control.IsVisible(52) + Container.Content(tvshows) + !Skin.HasSetting(no_new_recent_info)">Conditional</animation>
 			<visible>Skin.HasSetting(library_global_clock) + ![Player.HasAudio + !SubString(Window(10025).Property(TvTunesIsAlive),True)] + Window.IsActive(videolibrary) + ![[Control.IsVisible(52) + Container.Content(tvshows) + Skin.HasSetting(no_new_recent_info)] | Control.IsVisible(598) | Control.IsVisible(57) | Control.IsVisible(592) | Control.IsVisible(56) | Control.IsVisible(51) | Control.IsVisible(54) | Control.IsVisible(50) | Control.IsVisible(58)]</visible>
@@ -741,22 +735,22 @@
 				</control>
 				<control type="label">
 					<width>300</width>
-					<font>Font_Time_Global</font>
+					<font>DejaVuSans_Bold_24</font>
 					<textcolor>mainblue</textcolor>
 					<info>System.Time(hh:mm xx)</info>
 					<align>right</align>
 				</control>
 				<control type="label">
-					<posy>24</posy>
+					<posy>30</posy>
 					<width>300</width>
-					<font>Font_Date</font>
+					<font>LiberationSans_Regular_18</font>
 					<textcolor>white</textcolor>
 					<info>System.Date</info>
 					<align>right</align>
 				</control>
 				<control type="group">
 					<posx>0</posx>
-					<posy>44</posy>
+					<posy>48</posy>
 					<control type="label">
 						<description>Programs</description>
 						<label>$INFO[Container.NumItems,, $LOCALIZE[40281]] - [COLOR=mainblue][B]$LOCALIZE[0][/COLOR][/B]</label>
@@ -810,10 +804,10 @@
 	</include>
 	<include name="Global_Time_TopRight_Music">
 		<control type="group">
-			<posx>1260</posx>
-			<posy>10</posy>
+			<posx>1270</posx>
+			<posy>0</posy>
 			<include>Animation_BackdropFade</include>
-			<visible>Skin.HasSetting(library_global_clock) + !Player.HasMedia + Window.IsActive(musiclibrary) + [Control.IsVisible(58) | Control.IsVisible(55) | Control.IsVisible(50) | Control.IsVisible(53)]</visible>
+			<visible>Skin.HasSetting(library_global_clock) + !Player.HasMedia + Window.IsActive(musiclibrary) + [Control.IsVisible(58) | Control.IsVisible(55) | Control.IsVisible(51) | Control.IsVisible(56) | Control.IsVisible(50) | Control.IsVisible(53)]</visible>
 				<control type="image"> 
 					<posx>-380</posx>
 					<posy>-10</posy>   
@@ -823,15 +817,15 @@
 				</control>
 				<control type="label">
 					<width>300</width>
-					<font>Font_Time_Global</font>
+					<font>DejaVuSans_Bold_24</font>
 					<textcolor>mainblue</textcolor>
 					<info>System.Time(hh:mm xx)</info>
 					<align>right</align>
 				</control>
 				<control type="label">
-					<posy>24</posy>
+					<posy>28</posy>
 					<width>300</width>
-					<font>Font_Date</font>
+					<font>LiberationSans_Regular_18</font>
 					<textcolor>white</textcolor>
 					<info>System.Date</info>
 					<align>right</align>
@@ -880,8 +874,8 @@
 	</include>
 	<include name="Global_Time_TopRight_Files">
 		<control type="group">
-			<posx>1260</posx>
-			<posy>10</posy>
+			<posx>1270</posx>
+			<posy>0</posy>
 			<include>Animation_BackdropFade</include>
 			<visible>Skin.HasSetting(library_global_clock) + ![Player.HasAudio + !SubString(Window(10025).Property(TvTunesIsAlive),True)]</visible>
 				<control type="image"> 
@@ -893,15 +887,15 @@
 				</control>
 				<control type="label">
 					<width>300</width>
-					<font>Font_Time_Global</font>
+					<font>DejaVuSans_Bold_24</font>
 					<textcolor>mainblue</textcolor>
 					<info>System.Time(hh:mm xx)</info>
 					<align>right</align>
 				</control>
 				<control type="label">
-					<posy>24</posy>
+					<posy>28</posy>
 					<width>300</width>
-					<font>Font_Date</font>
+					<font>LiberationSans_Regular_18</font>
 					<textcolor>white</textcolor>
 					<info>System.Date</info>
 					<align>right</align>
@@ -1002,8 +996,9 @@
 					<texture>common/library_time_gradient_lowerright.png</texture>
 				</control>
 				<control type="label">
+					<posy>-4</posy>  
 					<width>300</width>
-					<font>Font_Time_Global</font>
+					<font>DejaVuSans_Bold_24</font>
 					<textcolor>mainblue</textcolor>
 					<info>System.Time(hh:mm xx)</info>
 					<align>right</align>
@@ -1011,7 +1006,7 @@
 				<control type="label">
 					<posy>24</posy>
 					<width>300</width>
-					<font>Font_Date</font>
+					<font>LiberationSans_Regular_18</font>
 					<textcolor>white</textcolor>
 					<info>System.Date</info>
 					<align>right</align>
@@ -1084,8 +1079,9 @@
 					<texture>common/library_time_gradient_lowerleft.png</texture>
 				</control>
 				<control type="label">
+					<posy>-4</posy>  
 					<width>300</width>
-					<font>Font_Time_Global</font>
+					<font>DejaVuSans_Bold_24</font>
 					<textcolor>mainblue</textcolor>
 					<info>System.Time(hh:mm xx)</info>
 					<align>left</align>
@@ -1093,7 +1089,7 @@
 				<control type="label">
 					<posy>24</posy>
 					<width>300</width>
-					<font>Font_Date</font>
+					<font>LiberationSans_Regular_18</font>
 					<textcolor>white</textcolor>
 					<info>System.Date</info>
 					<align>left</align>
@@ -1155,15 +1151,15 @@
 				</control>
 				<control type="label">
 					<width>300</width>
-					<font>Font_Time_Global</font>
+					<font>DejaVuSans_Bold_24</font>
 					<textcolor>mainblue</textcolor>
 					<info>System.Time(hh:mm xx)</info>
 					<align>left</align>
 				</control>
 				<control type="label">
-					<posy>24</posy>
+					<posy>28</posy>
 					<width>300</width>
-					<font>Font_Date</font>
+					<font>LiberationSans_Regular_18</font>
 					<textcolor>white</textcolor>
 					<info>System.Date</info>
 					<align>left</align>
@@ -1225,7 +1221,7 @@
 				</control>
 				<control type="label">
 					<width>300</width>
-					<font>Font_Time_Global</font>
+					<font>DejaVuSans_Bold_24</font>
 					<textcolor>mainblue</textcolor>
 					<info>System.Time(hh:mm xx)</info>
 					<align>right</align>
@@ -1233,7 +1229,7 @@
 				<control type="label">
 					<posy>24</posy>
 					<width>300</width>
-					<font>Font_Date</font>
+					<font>LiberationSans_Regular_18</font>
 					<textcolor>white</textcolor>
 					<info>System.Date</info>
 					<align>right</align>
@@ -1243,26 +1239,26 @@
 	
 	<include name="Global_HeadingSectionVars">
 		<width>960</width>
-		<font>Font_Bartowski_Movies_Title</font>
+		<font>LiberationSans_Regular_20</font>
 		<textcolor>white</textcolor>
 		<align>right</align>
 	</include>
 	<include name="Global_HeadingSectionVars1">
 		<width>960</width>
-		<font>Font_Date</font>
+		<font>LiberationSans_Regular_18</font>
 		<textcolor>white</textcolor>
 		<align>right</align>
 	</include>
 	<include name="Global_HeadingSectionVars2">
 		<width>960</width>
-		<font>Font_Date</font>
+		<font>LiberationSans_Regular_18</font>
 		<textcolor>white</textcolor>
 		<align>left</align>
 	</include>
 	<include name="Global_HeadingDetailVars">
 		<posy>40</posy>
 		<width>800</width>
-		<font>Font_Date</font>
+		<font>LiberationSans_Regular_18</font>
 		<textcolor>Date</textcolor>
 		<align>right</align>
 	</include>
@@ -1273,7 +1269,7 @@
 		<textoffsetx>20</textoffsetx>
 		<align>center</align>
 		<aligny>center</aligny>
-		<font>Font_Bartowski_Press_S</font>
+		<font>LiberationSans_Regular_20</font>
 		<textcolor>MainBlack</textcolor>
 		<focusedcolor>white</focusedcolor>
 		<texturefocus border="5">confluence/button-focus.png</texturefocus>
@@ -1286,7 +1282,7 @@
 		<textoffsetx>20</textoffsetx>
 		<align>center</align>
 		<aligny>center</aligny>
-		<font>Font_Bartowski_Press_S</font>
+		<font>LiberationSans_Regular_20</font>
 		<textcolor>ff000000</textcolor>
 		<focusedcolor>white</focusedcolor>
 		<texturefocus border="5">confluence/button-focus.png</texturefocus>
@@ -1368,7 +1364,7 @@
 		<width>154</width>
 		<height>30</height>
 		<align>center</align>
-		<font>Font_Bartowski_Smaller_MenuTitle</font>
+		<font>LiberationSans_Regular_20</font>
 		<textcolor>ff000000</textcolor>
 		<focusedcolor>white</focusedcolor>
 		<texturefocus border="5">confluence/button-focus.png</texturefocus>
@@ -1384,7 +1380,7 @@
 		<height>30</height>
 		<align>center</align>
 		<textoffsetx>10</textoffsetx>
-		<font>Font_Bartowski_Smaller_MenuTitle</font>
+		<font>LiberationSans_Regular_20</font>
 		<textcolor>ff000000</textcolor>
 		<focusedcolor>white</focusedcolor>
 		<texturefocus border="5">confluence/button-focus.png</texturefocus>
@@ -1415,7 +1411,7 @@
 		<width>154</width>
 		<height>30</height>
 		<align>center</align>
-		<font>Font_Bartowski_Smaller_MenuTitle</font>
+		<font>DejaVuSans_Bold_16</font>
 		<textcolor>ff198f8f</textcolor>
 		<!--<shadowcolor>black</shadowcolor>-->
 		<aligny>bottom</aligny>
@@ -1426,7 +1422,7 @@
 		<width>220</width>
 		<height>30</height>
 		<align>center</align>
-		<font>Font_Bartowski_Smaller_MenuTitle</font>
+		<font>DejaVuSans_Bold_16</font>
 		<textcolor>ff198f8f</textcolor>
 		<!--<shadowcolor>black</shadowcolor>-->
 		<aligny>bottom</aligny>

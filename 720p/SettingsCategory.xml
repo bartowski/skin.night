@@ -41,11 +41,11 @@
 				<posy>20</posy>
 				<width>740</width>
 				<height>30</height>
-				<font>Font_Bartowski_MainMenu_Context</font>
+				<font>LiberationSans_Regular_Caps_38</font>
 				<label>$INFO[Control.GetLabel(2)] - $LOCALIZE[5]</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<textcolor>mainblue</textcolor>
+				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="grouplist" id="5">
@@ -86,7 +86,7 @@
 			<textoffsetx>20</textoffsetx>
 			<align>left</align>
 			<aligny>center</aligny>
-			<font>font24caps_title</font>
+			<font>DefaultCaps_24</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<texturefocus border="5">confluence/button-focus.png</texturefocus>
@@ -97,7 +97,7 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<height>40</height>
-			<font>Font_KeyboardKeys</font>
+			<font>LiberationSans_Regular_20</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<texturefocus border="0,2,0,2">confluence/MenuItemFO1.png</texturefocus>
@@ -108,7 +108,7 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<height>40</height>
-			<font>Font_KeyboardKeys</font>
+			<font>LiberationSans_Regular_20</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<texturefocus border="0,2,0,2">confluence/MenuItemFO1.png</texturefocus>
@@ -119,7 +119,7 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<height>40</height>
-			<font>Font_KeyboardKeys</font>
+			<font>LiberationSans_Regular_20</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<texturefocus border="0,2,0,2">confluence/MenuItemFO1.png</texturefocus>

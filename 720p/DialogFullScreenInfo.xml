@@ -41,7 +41,7 @@
 				<width>300</width>
 				<height>25</height>
 				<align>right</align> 
-				<font>Font_ListDetail</font>
+				<font>LiberationSans_Regular_18</font>
 				<textcolor>mainblue</textcolor>
 				<label>[B]$INFO[VideoPlayer.Time][/B]</label>
 			</control>
@@ -50,7 +50,7 @@
 				<posy>128</posy>
 				<width>300</width>
 				<height>25</height>
-				<font>Font_ListDetail</font>
+				<font>LiberationSans_Regular_18</font>
 				<textcolor>white</textcolor>
 				<label>[B]$INFO[VideoPlayer.Duration][/B]</label>
 			</control>
@@ -72,7 +72,7 @@
 					<label>$INFO[VideoPlayer.Title]</label>
 					<align>left</align> 
 					<aligny>center</aligny> 
-					<font>Font_Bartowski_Title_Pause</font>
+					<font>DejaVuSans_Bold_32</font>
 					<textcolor>mainblue</textcolor>
 					<visible>VideoPlayer.Content(episodes)</visible>
 				</control>
@@ -84,7 +84,7 @@
 					<label>$INFO[VideoPlayer.Title]</label>
 					<align>left</align> 
 					<aligny>center</aligny> 
-					<font>Font_Bartowski_Title_Pause</font>
+					<font>DejaVuSans_Bold_32</font>
 					<textcolor>mainblue</textcolor>
 					<visible>VideoPlayer.Content(movies)</visible>
 				</control>
@@ -96,7 +96,7 @@
 					<label>$INFO[VideoPlayer.Title]</label>
 					<align>left</align> 
 					<aligny>center</aligny> 
-					<font>Font_Bartowski_Title_Pause</font>
+					<font>DejaVuSans_Bold_32</font>
 					<textcolor>mainblue</textcolor>
 					<visible>![VideoPlayer.Content(episodes) | VideoPlayer.Content(movies)]</visible>
 				</control>
@@ -105,10 +105,10 @@
 					<posy>70</posy>
 					<width>412</width> 
 					<height>25</height> 
-					<label>$INFO[VideoPlayer.Year]/$INFO[VideoPlayer.Studio]</label>
+					<label>[B]$INFO[VideoPlayer.Year]/$INFO[VideoPlayer.Studio][/B]</label>
 					<align>left</align> 
 					<aligny>center</aligny> 
-					<font>Font_Bartowski_Under_Pause</font>
+					<font>LiberationSans_Regular_20</font>
 					<textcolor>white</textcolor>
 					<visible>VideoPlayer.Content(movies)</visible>
 				</control>
@@ -120,7 +120,7 @@
 					<label>$LOCALIZE[20373] $INFO[VideoPlayer.Season]/$LOCALIZE[20359] $INFO[VideoPlayer.Episode]</label>
 					<align>left</align> 
 					<aligny>center</aligny> 
-					<font>Font_Bartowski_Under_Pause</font>
+					<font>LiberationSans_Regular_20</font>
 					<textcolor>white</textcolor>
 					<visible>VideoPlayer.Content(episodes)</visible>
 				</control>
@@ -133,7 +133,7 @@
 				<align>justify</align>
 				<label>$INFO[VideoPlayer.Plot]</label>
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-				<font>Font_Bartowski_Episodes</font>
+				<font>LiberationSans_Regular_20</font>
 				<textcolor>white</textcolor>
 				<include>Animation_HiddenByInfo</include>
 				<visible>VideoPlayer.Content(episodes)</visible>
@@ -142,11 +142,11 @@
 				<posx>20</posx>
 				<posy>-30</posy>
 				<width>1000</width>
-				<height>110</height>
+				<height>118</height>
 				<align>justify</align>
 				<label>$INFO[VideoPlayer.Plot]</label>
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-				<font>Font_Bartowski_Episodes</font>
+				<font>LiberationSans_Regular_20</font>
 				<textcolor>white</textcolor>
 				<include>Animation_HiddenByInfo</include>
 				<visible>VideoPlayer.Content(movies)</visible>
@@ -168,7 +168,7 @@
 			<control type="group">
 				<visible>VideoPlayer.Content(movies)</visible>
 				<posx>20</posx>
-				<posy>-110</posy>
+				<posy>-116</posy>
 				<control type="label">
 					<description>Director Info</description>
 					<posx>0</posx>
@@ -177,7 +177,7 @@
 					<height>18</height>
 					<aligny>center</aligny>
 					<align>left</align>
-					<font>Font_ListDetail</font>
+					<font>LiberationSans_Regular_18</font>
 					<label>[B][COLOR=mainblue]$LOCALIZE[20339]:[/COLOR][/B] [COLOR=white]$INFO[VideoPlayer.Director][/COLOR]</label>
 				</control>
 				<control type="label">
@@ -188,7 +188,7 @@
 					<height>18</height>
 					<aligny>center</aligny>
 					<align>left</align>
-					<font>Font_ListDetail</font>
+					<font>LiberationSans_Regular_18</font>
 					<label>[B][COLOR=mainblue]$LOCALIZE[515]:[/COLOR][/B] [COLOR=white]$INFO[VideoPlayer.Genre][/COLOR]</label>
 				</control>
 			</control>

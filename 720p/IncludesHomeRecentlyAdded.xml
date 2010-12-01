@@ -20,7 +20,7 @@
 					<label>31323</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>Font_KeyboardKeys</font>
+					<font>LiberationSans_Regular_20</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<animation effect="slide" start="220,0" end="0,0" time="600" delay="2400" tween="cubic" easing="inout" condition="Container(300).HasFocus(3)">Conditional</animation>
@@ -35,7 +35,7 @@
 					<label>31517</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>Font_KeyboardKeys</font>
+					<font>LiberationSans_Regular_20</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<animation effect="slide" start="220,0" end="0,0" time="600" delay="2400" tween="cubic" easing="inout" condition="Container(300).HasFocus(3)">Conditional</animation>
@@ -122,7 +122,7 @@
 					<label>31324</label>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>Font_KeyboardKeys</font>
+					<font>LiberationSans_Regular_20</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -237,7 +237,7 @@
 							<posy>6</posy>
 							<width>540</width>
 							<height>10</height>
-							<font>Font_Bartowski_Movies</font>
+							<font>LiberationSans_Regular_20</font>
 							<textcolor>mainblue</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<selectedcolor>selected</selectedcolor>
@@ -283,7 +283,7 @@
 					<label>$LOCALIZE[31253]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>Font_KeyboardKeys</font>
+					<font>LiberationSans_Regular_20</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<animation effect="slide" start="250,0" end="0,0" time="600" delay="2400" tween="cubic" easing="inout" condition="Container(300).HasFocus(1)">Conditional</animation>
@@ -298,7 +298,7 @@
 					<label>$LOCALIZE[31518]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>Font_KeyboardKeys</font>
+					<font>LiberationSans_Regular_20</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<animation effect="slide" start="250,0" end="0,0" time="600" delay="2400" tween="cubic" easing="inout" condition="Container(300).HasFocus(1)">Conditional</animation>
@@ -392,7 +392,7 @@
 					<label>31323</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>Font_KeyboardKeys</font>
+					<font>LiberationSans_Regular_20</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<animation effect="slide" start="220,0" end="0,0" time="600" delay="2400" tween="cubic" easing="inout" condition="Container(301).HasFocus(3)">Conditional</animation>
@@ -407,7 +407,7 @@
 					<label>31517</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>Font_KeyboardKeys</font>
+					<font>LiberationSans_Regular_20</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<animation effect="slide" start="220,0" end="0,0" time="600" delay="2400" tween="cubic" easing="inout" condition="Container(301).HasFocus(3)">Conditional</animation>
@@ -494,7 +494,7 @@
 					<label>31324</label>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>Font_KeyboardKeys</font>
+					<font>LiberationSans_Regular_20</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -609,7 +609,7 @@
 							<posy>6</posy>
 							<width>540</width>
 							<height>10</height>
-							<font>Font_Bartowski_Movies</font>
+							<font>LiberationSans_Regular_20</font>
 							<textcolor>mainblue</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<selectedcolor>selected</selectedcolor>
@@ -655,7 +655,7 @@
 					<label>$LOCALIZE[31253]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>Font_KeyboardKeys</font>
+					<font>LiberationSans_Regular_20</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<animation effect="slide" start="250,0" end="0,0" time="600" delay="2400" tween="cubic" easing="inout" condition="Container(301).HasFocus(1)">Conditional</animation>
@@ -670,7 +670,7 @@
 					<label>$LOCALIZE[31518]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>Font_KeyboardKeys</font>
+					<font>LiberationSans_Regular_20</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<animation effect="slide" start="250,0" end="0,0" time="600" delay="2400" tween="cubic" easing="inout" condition="Container(301).HasFocus(1)">Conditional</animation>

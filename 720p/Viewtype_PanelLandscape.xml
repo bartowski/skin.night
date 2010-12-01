@@ -4,38 +4,40 @@
 
 	<include name="Viewtype_PanelLandscape">
 
-		<!-- Browser -->
-		<control type="image"><!-- 1st overlay -->
-			<visible>Control.IsVisible(57)</visible>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<texture>panel/panel-back.png</texture>
-		</control>
-		<control type="image">
-			<visible>Control.IsVisible(57) + Container.Content(tvshows) + !Player.HasVideo</visible>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>570</width>
-			<height>318</height>
-			<texture background="true" diffuse="Showcase/showcase-diffuse.png">$INFO[Container(57).listitem.property(fanart_image)]</texture>
-			<fadetime>400</fadetime>
-			<aspectratio>stretch</aspectratio>
-			<include>Animation_Viewtype_Panel_Fanart</include>
-		</control>
-		<control type="image">
-			<visible>Control.IsVisible(57) + Container.Content(episodes) + !Player.HasVideo</visible>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>570</width>
-			<height>318</height>
-			<!--<texture diffuse="Showcase/showcase-diffuse.png">$INFO[Container(57).listitem.property(fanart_image)]</texture>-->
-			<texture background="true" diffuse="Showcase/showcase-diffuse.png">$INFO[Container(57).listitem.Icon]</texture>
-			<fadetime>400</fadetime>
-			<aspectratio>stretch</aspectratio>
-			<include>Animation_Viewtype_Panel_Fanart</include>
-		</control>
+	<control type="group">
+		<visible>Control.IsVisible(57)</visible>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<texture>panel/panel-back.png</texture>
+			</control>
+			<control type="image">
+				<visible>Container.Content(tvshows) + !Player.HasVideo</visible>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>570</width>
+				<height>318</height>
+				<texture background="true" diffuse="Showcase/showcase-diffuse.png">$INFO[Container(57).listitem.property(fanart_image)]</texture>
+				<fadetime>400</fadetime>
+				<aspectratio>stretch</aspectratio>
+				<include>Animation_Viewtype_Panel_Fanart</include>
+			</control>
+			<control type="image">
+				<visible>Container.Content(episodes) + !Player.HasVideo</visible>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>570</width>
+				<height>318</height>
+				<!--<texture diffuse="Showcase/showcase-diffuse.png">$INFO[Container(57).listitem.property(fanart_image)]</texture>-->
+				<texture background="true" diffuse="Showcase/showcase-diffuse.png">$INFO[Container(57).listitem.Icon]</texture>
+				<fadetime>400</fadetime>
+				<aspectratio>stretch</aspectratio>
+				<include>Animation_Viewtype_Panel_Fanart</include>
+			</control>
+	</control>
+			
 		
 		<control type="panel" id="57">
 				<visible>!Skin.HasSetting(no_LandPanel) + [[Container.Content(tvshows) + !Skin.HasSetting(TVPosters) + !Skin.HasSetting(TVBanners)] | Container.Content(episodes)]</visible>
@@ -87,7 +89,7 @@
 					<width>298</width>
 					<label>$INFO[ListItem.Label]</label>
 					<align>center</align>
-					<font>Font_KeyboardKeys</font>
+					<font>LiberationSans_Regular_20</font>
 					<textcolor>white</textcolor>
 					<visible>Container.Content(episodes) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 				</control>
@@ -172,7 +174,7 @@
 					<width>298</width>
 					<label>$INFO[ListItem.Label]</label>
 					<align>center</align>
-					<font>Font_KeyboardKeys</font>
+					<font>LiberationSans_Regular_20</font>
 					<textcolor>white</textcolor>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="145,202" start="51" end="100" time="600" tween="back" easing="out" />
@@ -251,14 +253,14 @@
 				<width>555</width>
 				<height>50</height>
 				<align>center</align>
-				<font>Font_InfoYear2</font>
+				<font>DejaVuSans_Bold_26</font>
 				<textcolor>mainblue</textcolor>
-				<label>$INFO[ListItem.Label]</label>
+				<label>$INFO[ListItem.TVShowTitle]</label>
 			</control>
 			<control type="label">
-				<visible>Container.Content(tvshows) + IsEmpty(Control.GetLabel(7037)) + IsEmpty(Control.GetLabel(9037))</visible>
+				<visible>Container.Content(tvshows) + IsEmpty(Control.GetLabel(7037))</visible>
 				<posx>15</posx>
-				<posy>358</posy>
+				<posy>350</posy>
 				<width>555</width>
 				<height>50</height>
 				<align>center</align>
@@ -275,29 +277,18 @@
 				<align>center</align>
 				<font>Font_Bartowski_Smaller_MenuValue</font>
 				<textcolor>mainblue</textcolor>
-				<label>"$INFO[ListItem.Title]"</label>
+				<label>[B]"$INFO[ListItem.Title]"[/B]</label>
 			</control>
 			<control type="label">
 				<visible>Container.Content(episodes) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 				<posx>15</posx>
-				<posy>426</posy>
+				<posy>418</posy>
 				<width>555</width>
 				<height>50</height>
 				<align>center</align>
-				<font>Font_Bartowski_Showcase_runtime_year</font>
-				<textcolor>ListTrackF</textcolor>
-				<label>$LOCALIZE[20373] $INFO[ListItem.Season]/$LOCALIZE[20359] $INFO[ListItem.Episode]</label>
-			</control>
-			<control type="label">
-				<visible>Container.Content(movies)</visible>
-				<posx>15</posx>
-				<posy>356</posy>
-				<width>555</width>
-				<height>50</height>
-				<align>center</align>
-				<font>Font_Bartowski_Showcase_runtime_year</font>
+				<font>LiberationSans_Regular_18</font>
 				<textcolor>white</textcolor>
-				<label>$INFO[ListItem.Duration]</label>
+				<label>$LOCALIZE[20373] $INFO[ListItem.Season]/$LOCALIZE[20359] $INFO[ListItem.Episode]</label>
 			</control>
 	</control>
 	<control type="group">
@@ -308,7 +299,7 @@
 				<posy>450</posy>
 				<width>555</width>
 				<height>220</height>
-				<font>Font_Bartowski_Showcase_plot</font>
+				<font>LiberationSans_Regular_20</font>
 				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Plot]</label>
 				<align>justify</align>
@@ -321,7 +312,7 @@
 				<posy>450</posy>
 				<width>555</width>
 				<height>144</height>
-				<font>Font_Bartowski_Showcase_plot</font>
+				<font>LiberationSans_Regular_20</font>
 				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Plot]</label>
 				<align>justify</align>
@@ -336,8 +327,8 @@
 				<posx>15</posx>
 				<posy>410</posy>
 				<width>555</width>
-				<height>220</height>
-				<font>Font_Bartowski_Showcase_plot</font>
+				<height>236</height>
+				<font>LiberationSans_Regular_20</font>
 				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Plot]</label>
 				<align>justify</align>
@@ -350,7 +341,7 @@
 				<posy>410</posy>
 				<width>555</width>
 				<height>144</height>
-				<font>Font_Bartowski_Showcase_plot</font>
+				<font>LiberationSans_Regular_20</font>
 				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Plot]</label>
 				<align>justify</align>

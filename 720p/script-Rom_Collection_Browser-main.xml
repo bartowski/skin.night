@@ -377,7 +377,7 @@
 				<width>1280</width>
 				<height>50</height>
 				<aligny>center</aligny>
-				<font>Font_Bartowski_Movies_Title</font>
+				<font>LiberationSans_Regular_20_Title</font>
 				<textcolor>mainblue</textcolor>
 				<label>[B]$INFO[ListItem.Label][/B]</label>
 			</control>
@@ -387,7 +387,7 @@
 				<width>394</width>
 				<height>50</height>
 				<aligny>center</aligny>
-				<font>Font_RSS_Big</font>
+				<font>LiberationSans_Regular_24</font>
 				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Property(console)]</label>
 			</control>
@@ -397,7 +397,7 @@
 				<width>394</width>
 				<height>50</height>
 				<aligny>center</aligny>
-				<font>Font_RSS_Big</font>
+				<font>LiberationSans_Regular_24</font>
 				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Property(year)]</label>
 			</control>
@@ -526,7 +526,7 @@
 						<width>394</width>
 						<height>50</height>
 						<aligny>center</aligny>
-						<font>Font_RSS_Big</font>
+						<font>LiberationSans_Regular_24</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Property(console)]</label>
 					</control>
@@ -536,7 +536,7 @@
 						<width>394</width>
 						<height>50</height>
 						<aligny>center</aligny>
-						<font>Font_RSS_Big</font>
+						<font>LiberationSans_Regular_24</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Property(year)]</label>
 					</control>
@@ -563,7 +563,7 @@
 							<posy>0</posy>
 							<width>390</width>
 							<height>24</height>
-							<font>Font_Bartowski_Showcase_Right_Under</font>
+							<font>LiberationSans_Regular_18</font>
 							<textcolor>white</textcolor>
 							<label fallback="Not Available">$INFO[ListItem.Property(genre)]</label>
 						</control>
@@ -590,7 +590,7 @@
 							<posy>0</posy>
 							<width>390</width>
 							<height>24</height>
-							<font>Font_Bartowski_Showcase_Right_Under</font>
+							<font>LiberationSans_Regular_18</font>
 							<textcolor>white</textcolor>
 							<label fallback="Not Available">$INFO[ListItem.Property(publisher)]</label>
 						</control>
@@ -617,7 +617,7 @@
 							<posy>0</posy>
 							<width>390</width>
 							<height>24</height>
-							<font>Font_Bartowski_Showcase_Right_Under</font>
+							<font>LiberationSans_Regular_18</font>
 							<textcolor>white</textcolor>
 							<label fallback="Not Available">$INFO[ListItem.Property(developer)]</label>
 						</control>
@@ -644,7 +644,7 @@
 							<posy>0</posy>
 							<width>390</width>
 							<height>24</height>
-							<font>Font_Bartowski_Showcase_Right_Under</font>
+							<font>LiberationSans_Regular_18</font>
 							<textcolor>white</textcolor>
 							<label fallback="Not Available">$INFO[ListItem.Property(rating)]</label>
 						</control>
@@ -671,7 +671,7 @@
 							<posy>0</posy>
 							<width>390</width>
 							<height>24</height>
-							<font>Font_Bartowski_Showcase_Right_Under</font>
+							<font>LiberationSans_Regular_18</font>
 							<textcolor>white</textcolor>
 							<label fallback="Not Available">$INFO[ListItem.Property(maxplayers)]</label>
 						</control>
@@ -684,7 +684,7 @@
 						<posy>25</posy>
 						<width>540</width>
 						<height>336</height>
-						<font>Font_Bartowski_Showcase_plot</font>
+						<font>LiberationSans_Regular_20</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Property(plot)]</label>
 						<align>justify</align>
@@ -887,7 +887,7 @@
 				<width>1280</width>
 				<height>50</height>
 				<aligny>center</aligny>
-				<font>Font_Bartowski_Movies_Title</font>
+				<font>LiberationSans_Regular_20_Title</font>
 				<textcolor>mainblue</textcolor>
 				<label>[B]$INFO[ListItem.Label][/B]</label>
 			</control>
@@ -897,7 +897,7 @@
 				<width>394</width>
 				<height>50</height>
 				<aligny>center</aligny>
-				<font>Font_RSS_Big</font>
+				<font>LiberationSans_Regular_24</font>
 				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Property(console)]</label>
 			</control>
@@ -907,7 +907,7 @@
 				<width>394</width>
 				<height>50</height>
 				<aligny>center</aligny>
-				<font>Font_RSS_Big</font>
+				<font>LiberationSans_Regular_24</font>
 				<textcolor>white</textcolor>
 				<label>$INFO[ListItem.Property(year)]</label>
 			</control>

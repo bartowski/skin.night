@@ -194,9 +194,9 @@
 						<width>394</width>
 						<height>50</height>
 						<aligny>center</aligny>
-						<font>Font_Bartowski_Showcase_Title</font>
+						<font>LiberationSans_Regular_28</font>
 						<textcolor>mainblue</textcolor>
-						<label>$INFO[ListItem.Label]</label>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
 						<include>Animation_Viewtype_Wall_UnderInfo</include>
 					</control>
 					<control type="label">
@@ -205,7 +205,7 @@
 						<width>394</width>
 						<height>50</height>
 						<aligny>center</aligny>
-						<font>Font_RSS_Big</font>
+						<font>LiberationSans_Regular_24</font>
 						<textcolor>white</textcolor>
 						<label>31508</label>
 						<include>Animation_Viewtype_Wall_UnderInfo</include>
@@ -217,7 +217,7 @@
 						<width>394</width>
 						<height>50</height>
 						<aligny>center</aligny>
-						<font>Font_RSS_Big</font>
+						<font>LiberationSans_Regular_24</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Duration] $LOCALIZE[12391]</label>
 						<include>Animation_Viewtype_Wall_UnderInfo</include>
@@ -229,7 +229,7 @@
 						<width>394</width>
 						<height>50</height>
 						<aligny>center</aligny>
-						<font>Font_RSS_Big</font>
+						<font>LiberationSans_Regular_24</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Duration]</label>
 						<include>Animation_Viewtype_Wall_UnderInfo</include>
@@ -241,7 +241,7 @@
 						<width>406</width>
 						<height>50</height>
 						<aligny>center</aligny>
-						<font>Font_RSS_Big</font>
+						<font>LiberationSans_Regular_24</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Property(releasedate)]</label>
 						<include>Animation_Viewtype_Wall_UnderInfo</include>
@@ -253,7 +253,7 @@
 						<width>394</width>
 						<height>50</height>
 						<aligny>center</aligny>
-						<font>Font_RSS_Big</font>
+						<font>LiberationSans_Regular_24</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.year]</label>
 						<include>Animation_Viewtype_Wall_UnderInfo</include>
@@ -266,7 +266,7 @@
 						<width>394</width>
 						<height>50</height>
 						<aligny>center</aligny>
-						<font>Font_RSS_Big</font>
+						<font>LiberationSans_Regular_24</font>
 						<textcolor>white</textcolor>
 						<label>$LOCALIZE[31226]</label>
 						<include>Animation_Viewtype_Wall_UnderInfo</include>
@@ -284,10 +284,10 @@
 						<posx>0</posx>
 						<posy>224</posy>
 						<width>360</width>
-						<height>310</height>
+						<height>340</height>
 						<align>justify</align>
 						<info>ListItem.Plot</info>
-						<font>Font_Bartowski_Movies_Plot</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<autoscroll time="2500" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 						<include>Animation_Viewtype_Wall_Plot</include>

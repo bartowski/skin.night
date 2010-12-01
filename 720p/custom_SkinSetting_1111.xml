@@ -46,8 +46,8 @@
 						<posy>15</posy>
 						<width>380</width>
 						<height>25</height>
-						<font>font24caps_title</font>
-						<textcolor>grey3</textcolor>
+						<font>DefaultCaps_24</font>
+						<textcolor>grey2</textcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
@@ -57,8 +57,8 @@
 						<posy>42</posy>
 						<width>870</width>
 						<height>25</height>
-						<font>font13caps</font>
-						<textcolor>grey2</textcolor>
+						<font>LiberationSans_Regular_18</font>
+						<textcolor>grey3</textcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
@@ -68,7 +68,7 @@
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>260</width>
+						<width>300</width>
 						<height>76</height>
 						<texture border="5">confluence/button-focus.png</texture>
 						<animation effect="fade" start="100" end="30" time="100" condition="!Control.HasFocus(9000)">Conditional</animation>
@@ -76,10 +76,10 @@
 					<control type="label">
 						<posx>0</posx>
 						<posy>15</posy>
-						<width>380</width>
+						<width>300</width>
 						<height>25</height>
 						<textoffsetx>10</textoffsetx>
-						<font>font24caps_title</font>
+						<font>DefaultCaps_24</font>
 						<textcolor>white</textcolor>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -91,7 +91,7 @@
 						<width>870</width>
 						<height>25</height>
 						<textoffsetx>10</textoffsetx>
-						<font>font13caps</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>grey2</textcolor>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -148,7 +148,7 @@
 				<posy>20</posy>
 				<width>740</width>
 				<height>30</height>
-				<font>Font_Bartowski_MainMenu_Context</font>
+				<font>LiberationSans_Regular_Caps_38</font>
 				<label>$LOCALIZE[20077] - $INFO[Container(9000).ListItem.Label]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -171,8 +171,8 @@
 					<ondown>9001</ondown>
 					<control type="label" id="100">
 						<width>860</width>
-						<height>45</height>
-						<font>font13caps</font>
+						<height>35</height>
+						<font>DejaVuSans_Bold_20</font>
 						<label>$LOCALIZE[31256]</label>
 						<textcolor>mainblue</textcolor>
 						<shadowcolor>black</shadowcolor>
@@ -250,7 +250,7 @@
 					<control type="label" id="112">
 						<width>860</width>
 						<height>45</height>
-						<font>font13caps</font>
+						<font>DejaVuSans_Bold_20</font>
 						<label>$LOCALIZE[31038]</label>
 						<textcolor>mainblue</textcolor>
 						<shadowcolor>black</shadowcolor>
@@ -266,7 +266,7 @@
 					<control type="radiobutton" id="114">
 						<width>860</width>
 						<height>40</height>
-						<font>Font_KeyboardTitle</font>
+						<font>LiberationSans_Regular_16</font>
 						<textoffsetx>40</textoffsetx>
 						<label>$LOCALIZE[31041]</label>
 						<textcolor>grey2</textcolor>
@@ -280,7 +280,7 @@
 					<control type="radiobutton" id="115">
 						<width>860</width>
 						<height>40</height>
-						<font>Font_KeyboardTitle</font>
+						<font>LiberationSans_Regular_16</font>
 						<textoffsetx>40</textoffsetx>
 						<label>$LOCALIZE[31257]</label>
 						<textcolor>grey2</textcolor>
@@ -294,7 +294,7 @@
 					<control type="radiobutton" id="116">
 						<width>860</width>
 						<height>40</height>
-						<font>Font_KeyboardTitle</font>
+						<font>LiberationSans_Regular_16</font>
 						<textoffsetx>40</textoffsetx>
 						<label>$LOCALIZE[31258]</label>
 						<textcolor>grey2</textcolor>
@@ -316,7 +316,7 @@
 					<!--<control type="label" id="120">
 						<width>860</width>
 						<height>45</height>
-						<font>Font_KeyboardKeys</font>
+						<font>LiberationSans_Regular_20</font>
 						<label>512</label>
 						<textcolor>blue</textcolor>
 						<shadowcolor>black</shadowcolor>
@@ -352,7 +352,7 @@
 					<control type="label" id="123">
 						<width>860</width>
 						<height>45</height>
-						<font>Font_KeyboardKeys</font>
+						<font>LiberationSans_Regular_20</font>
 						<label>31102</label>
 						<textcolor>blue</textcolor>
 						<shadowcolor>black</shadowcolor>
@@ -399,7 +399,7 @@
 					<control type="label" id="200">
 						<width>860</width>
 						<height>45</height>
-						<font>font13caps</font>
+						<font>DejaVuSans_Bold_20</font>
 						<label>$LOCALIZE[31259]</label> <!--31101-->
 						<textcolor>mainblue</textcolor>
 						<shadowcolor>black</shadowcolor>
@@ -418,7 +418,7 @@
 						<description>Show Recently added info</description>
 						<width>860</width>
 						<height>26</height>
-						<font>Font_KeyboardTitle</font>
+						<font>LiberationSans_Regular_16</font>
 						<textoffsetx>40</textoffsetx>
 						<textoffsety>4</textoffsety>
 						<textcolor>grey2</textcolor>
@@ -443,7 +443,7 @@
 						<description>Global Ken Burns</description>
 						<width>860</width>
 						<height>26</height>
-						<font>Font_KeyboardTitle</font>
+						<font>LiberationSans_Regular_16</font>
 						<textoffsetx>40</textoffsetx>
 						<textoffsety>4</textoffsety>
 						<textcolor>grey2</textcolor>
@@ -476,7 +476,7 @@
 					<control type="button" id="207">
 						<width>860</width>
 						<height>26</height>
-						<font>Font_KeyboardTitle</font>
+						<font>LiberationSans_Regular_16</font>
 						<textoffsetx>40</textoffsetx>
 						<textoffsety>4</textoffsety>
 						<textcolor>grey2</textcolor>
@@ -500,7 +500,7 @@
 						<description>Global Ken Burns</description>
 						<width>860</width>
 						<height>26</height>
-						<font>Font_KeyboardTitle</font>
+						<font>LiberationSans_Regular_16</font>
 						<textoffsetx>40</textoffsetx>
 						<textoffsety>4</textoffsety>
 						<textcolor>grey2</textcolor>
@@ -518,7 +518,7 @@
 					<control type="label" id="210">
 						<width>860</width>
 						<height>45</height>
-						<font>font13caps</font>
+						<font>DejaVuSans_Bold_20</font>
 						<label>$LOCALIZE[31042]</label>
 						<textcolor>mainblue</textcolor>
 						<shadowcolor>black</shadowcolor>
@@ -645,7 +645,7 @@
 						<posy>0</posy>
 						<width>680</width>
 						<height>45</height>
-						<font>Font_KeyboardKeys</font>
+						<font>LiberationSans_Regular_20</font>
 						<label>31109</label>
 						<textcolor>blue</textcolor>
 						<shadowcolor>black</shadowcolor>
@@ -720,7 +720,7 @@
 								<posy>0</posy>
 								<width>600</width>
 								<height>40</height>
-								<font>Font_KeyboardKeys</font>
+								<font>LiberationSans_Regular_20</font>
 								<textcolor>grey2</textcolor>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -732,7 +732,7 @@
 								<posy>0</posy>
 								<width>600</width>
 								<height>40</height>
-								<font>Font_KeyboardKeys</font>
+								<font>LiberationSans_Regular_20</font>
 								<textcolor>white</textcolor>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -744,7 +744,7 @@
 								<posy>0</posy>
 								<width>640</width>
 								<height>40</height>
-								<font>Font_KeyboardKeys</font>
+								<font>LiberationSans_Regular_20</font>
 								<textcolor>grey2</textcolor>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -756,7 +756,7 @@
 								<posy>0</posy>
 								<width>640</width>
 								<height>40</height>
-								<font>Font_KeyboardKeys</font>
+								<font>LiberationSans_Regular_20</font>
 								<textcolor>white</textcolor>
 								<align>right</align>
 								<aligny>center</aligny>
@@ -2194,7 +2194,7 @@
 						<height>20</height>
 						<align>center</align>
 						<aligny>center</aligny>
-						<font>Bartowski_settings_small</font>
+						<font>LiberationSans_Regular_18</font>
 						<haspath>yes</haspath>
 						<label fallback="571">$INFO[Container(9003).ListItem.Thumb]</label>
 						<textcolor>white</textcolor>
@@ -2216,7 +2216,7 @@
 						<control type="label" id="400">
 							<width>860</width>
 							<height>45</height>
-							<font>Font_KeyboardKeys</font>
+							<font>LiberationSans_Regular_20</font>
 							<label>31503</label>
 							<textcolor>mainblue</textcolor>
 							<align>left</align>
@@ -2367,7 +2367,7 @@
 						<control type="label" id="500">
 							<width>860</width>
 							<height>30</height>
-							<font>font13caps</font>
+							<font>DejaVuSans_Bold_20</font>
 							<label>$LOCALIZE[31043]</label>
 							<textcolor>mainblue</textcolor>
 							<shadowcolor>black</shadowcolor>
@@ -2435,9 +2435,9 @@
 						<control type="label" id="510">
 							<width>860</width>
 							<height>26</height>
-							<font>Font_KeyboardTitle</font>
+							<font>LiberationSans_Regular_16</font>
 							<textoffsetx>40</textoffsetx>
-							<label>$LOCALIZE[31270]</label>
+							<label>*$LOCALIZE[31270]*</label>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<align>left</align>
@@ -2453,9 +2453,9 @@
 						<control type="label" id="512">
 							<width>860</width>
 							<height>26</height>
-							<font>Font_KeyboardTitle</font>
+							<font>LiberationSans_Regular_16</font>
 							<textoffsetx>40</textoffsetx>
-							<label>$LOCALIZE[31528]</label>
+							<label>*$LOCALIZE[31528]*</label>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<align>left</align>
@@ -2470,9 +2470,9 @@
 						<control type="label" id="514">
 							<width>860</width>
 							<height>26</height>
-							<font>Font_KeyboardTitle</font>
+							<font>LiberationSans_Regular_16</font>
 							<textoffsetx>40</textoffsetx>
-							<label>$LOCALIZE[31267]</label>
+							<label>*$LOCALIZE[31267]*</label>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<align>left</align>
@@ -2488,7 +2488,7 @@
 						<control type="label" id="516">
 							<width>860</width>
 							<height>30</height>
-							<font>font13caps</font>
+							<font>DejaVuSans_Bold_20</font>
 							<label>$LOCALIZE[31263]</label>
 							<textcolor>mainblue</textcolor>
 							<shadowcolor>black</shadowcolor>
@@ -2498,7 +2498,7 @@
 						<control type="button" id="517">
 							<width>280</width>
 							<height>40</height>
-							<font>Font_KeyboardKeys</font>
+							<font>LiberationSans_Regular_20</font>
 							<textoffsetx>10</textoffsetx>
 							<label>$LOCALIZE[31264]</label>
 							<textcolor>grey2</textcolor>
@@ -2516,7 +2516,7 @@
 							<height>290</height>
 							<align>justify</align>
 							<label>$LOCALIZE[31265]</label>
-							<font>Font_Bartowski_Movies_Plot</font>
+							<font>LiberationSans_Regular_18</font>
 							<textcolor>white</textcolor>
 							<visible>Container(9000).Hasfocus(5)</visible>
 						</control>
@@ -2537,7 +2537,7 @@
 						<control type="label" id="600">
 							<width>860</width>
 							<height>45</height>
-							<font>font13caps</font>
+							<font>DejaVuSans_Bold_20</font>
 							<label>$LOCALIZE[31047]</label>
 							<textcolor>mainblue</textcolor>
 							<shadowcolor>black</shadowcolor>
@@ -2638,7 +2638,7 @@
 						<control type="label" id="616">
 							<width>860</width>
 							<height>45</height>
-							<font>font13caps</font>
+							<font>DejaVuSans_Bold_20</font>
 							<label>$LOCALIZE[31065]</label>
 							<textcolor>mainblue</textcolor>
 							<shadowcolor>black</shadowcolor>
@@ -2688,7 +2688,7 @@
 						<control type="label" id="701">
 							<width>860</width>
 							<height>45</height>
-							<font>font13caps</font>
+							<font>DejaVuSans_Bold_20</font>
 							<label>$LOCALIZE[31260]</label>
 							<textcolor>mainblue</textcolor>
 							<shadowcolor>black</shadowcolor>
@@ -2981,7 +2981,7 @@
 						<control type="label" id="801">
 								<width>860</width>
 								<height>45</height>
-								<font>font13caps</font>
+								<font>DejaVuSans_Bold_20</font>
 								<label>$LOCALIZE[31292]</label>
 								<textcolor>mainblue</textcolor>
 								<shadowcolor>black</shadowcolor>
@@ -3125,7 +3125,7 @@
 							<control type="label" id="807">
 								<width>860</width>
 								<height>45</height>
-								<font>font13caps</font>
+								<font>DejaVuSans_Bold_20</font>
 								<label>$LOCALIZE[31295]</label>
 								<textcolor>mainblue</textcolor>
 								<shadowcolor>black</shadowcolor>
@@ -3268,7 +3268,7 @@
 							<control type="label" id="813">
 								<width>860</width>
 								<height>45</height>
-								<font>font13caps</font>
+								<font>DejaVuSans_Bold_20</font>
 								<label>31502</label>
 								<textcolor>mainblue</textcolor>
 								<shadowcolor>black</shadowcolor>

@@ -107,11 +107,11 @@
 					</control>
 					<control type="label"><!-- Episode Description -->
 						<posx>5</posx>
-						<posy>270</posy>
+						<posy>274</posy>
 						<width>300</width>
 						<height>50</height>
 						<align>center</align>
-						<font>Font_Landscape_TitleTVShow</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<animation effect="fade" start="60" end="60" time="0" condition="stringcompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
@@ -124,7 +124,7 @@
 						<width>294</width>
 						<height>50</height>
 						<align>center</align>
-						<font>Font_Landscape_TitleTVShow</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<animation effect="rotatex" start="180" end="180" center="330" time="0" condition="true">Conditional</animation>
@@ -389,11 +389,11 @@
 					</control>
 					<control type="label"><!-- Episode Description -->
 						<posx>56</posx>
-						<posy>280</posy>
+						<posy>282</posy>
 						<width>392</width>
 						<height>50</height>
 						<align>center</align>
-						<font>Font_Bartowski_Press_S</font>
+						<font>LiberationSans_Regular_22</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<animation effect="fade" start="60" end="60" time="0" condition="stringcompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
@@ -408,7 +408,7 @@
 						<width>392</width>
 						<height>50</height>
 						<align>center</align>
-						<font>Font_Bartowski_Press_S</font>
+						<font>LiberationSans_Regular_22</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<animation effect="rotatex" start="180" end="180" center="350" time="0" condition="true">Conditional</animation>
@@ -423,7 +423,7 @@
 						<posy>90</posy>
 						<width>384</width>
 						<height>190</height>
-						<font>Font_KeyboardKeys_Plot</font>
+						<font>LiberationSans_Regular_20</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Plot]</label>
 						<align>justify</align>
@@ -513,7 +513,7 @@
 				<width>1200</width>
 				<height>50</height>
 				<aligny>center</aligny>
-				<font>Font_Bartowski_Landscape_TV_Title</font>
+				<font>DejaVuSans_40</font>
 				<textcolor>mainblue</textcolor>
 				<label>[B]$INFO[ListItem.TVShowTitle][/B]</label>
 				<visible>[Container.Content(episodes) + IsEmpty(Control.GetLabel(7018)) + IsEmpty(Control.GetLabel(9018))] | [[Container.Content(tvshows) | Container.Content(seasons)] + IsEmpty(Control.GetLabel(7018))]</visible>
@@ -525,9 +525,10 @@
 				<width>230</width>
 				<height>89</height>
 				<align>center</align>
-				<font>Font_Bartowski_Movies_Duration</font>
+				<font>LiberationSans_Regular_22</font>
 				<textcolor>white</textcolor>
 				<label>[B]$INFO[ListItem.Label][/B]</label>
+				<animation effect="slide" start="0,0" end="0,-40" time="0" condition="IsEmpty(Control.GetLabel(7018))">Conditional</animation>
 			</control>
 		</control>
 		<control type="group">
@@ -541,7 +542,7 @@
 					<width>1200</width>
 					<height>50</height>
 					<aligny>center</aligny>
-					<font>Font_Bartowski_Movies_Title</font>
+					<font>LiberationSans_Regular_34</font>
 					<textcolor>mainblue</textcolor>
 					<label>[B]$INFO[ListItem.Label][/B]</label>
 				</control>
@@ -550,7 +551,7 @@
 					<posy>40</posy>
 					<width>630</width>
 					<height>89</height>
-					<font>Font_TVShow</font>
+					<font>LiberationSans_Regular_22</font>
 					<label>[B][COLOR=ListTrackF]$LOCALIZE[515][/COLOR] [B][COLOR=white]$INFO[ListItem.Genre][/B][/COLOR]</label>
 				</control>
 				<control type="label">
@@ -558,7 +559,7 @@
 					<posy>64</posy>
 					<width>630</width>
 					<height>89</height>
-					<font>Font_TVShow</font>
+					<font>LiberationSans_Regular_22</font>
 					<label>[B][COLOR=ListTrackF]$LOCALIZE[345][/COLOR] [B][COLOR=white]$INFO[ListItem.Year][/B][/COLOR]</label>
 					<visible>!IsEmpty(ListItem.Year)</visible>
 				</control>
@@ -570,7 +571,7 @@
 					<height>230</height>
 					<align>justify</align>
 					<info>ListItem.Plot</info>
-					<font>Font_3dland_plot</font>
+					<font>LiberationSans_Regular_20</font>
 					<textcolor>white</textcolor>
 					<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 					<animation effect="slide" start="0,0" end="0,-26" time="0" condition="IsEmpty(ListItem.Year)">Conditional</animation>
@@ -588,9 +589,21 @@
 					<width>604</width>
 					<height>50</height>
 					<aligny>center</aligny>
-					<font>Font_TVShow</font>
+					<font>LiberationSans_Regular_22</font>
 					<textcolor>white</textcolor>
 					<label>$LOCALIZE[20373] $INFO[ListItem.Season]/$LOCALIZE[20359] $INFO[ListItem.Episode]</label>
+					<animation effect="slide" start="0,0" end="0,-50" time="0" condition="IsEmpty(Control.GetLabel(7018)) + IsEmpty(Control.GetLabel(9018))">Conditional</animation>
+				</control>
+				<control type="label">
+					<posx>20</posx>
+					<posy>76</posy>
+					<width>604</width>
+					<height>50</height>
+					<aligny>center</aligny>
+					<font>LiberationSans_Regular_22</font>
+					<textcolor>white</textcolor>
+					<label>$LOCALIZE[31231]: $INFO[ListItem.Date]</label>
+					<animation effect="slide" start="0,0" end="0,-50" time="0" condition="IsEmpty(Control.GetLabel(7018)) + IsEmpty(Control.GetLabel(9018))">Conditional</animation>
 				</control>
 				<control type="textbox">
 					<description>Plot Movie</description>
@@ -603,16 +616,6 @@
 					<font>Font_3dland_plot</font>
 					<textcolor>white</textcolor>
 					<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-				</control>
-				<control type="label">
-					<posx>20</posx>
-					<posy>76</posy>
-					<width>604</width>
-					<height>50</height>
-					<aligny>center</aligny>
-					<font>Font_TVShow</font>
-					<textcolor>white</textcolor>
-					<label>$LOCALIZE[31231]: $INFO[ListItem.Date]</label>
 				</control>
 		</control>
 		<control type="group">
@@ -627,7 +630,7 @@
 					<posy>-4</posy>
 					<width>630</width>
 					<height>89</height>
-					<font>Font_Bartowski_Movies_Duration</font>
+					<font>LiberationSans_Regular_20_Duration</font>
 					<textcolor>white</textcolor>
 					<label>[B]$LOCALIZE[20373] $INFO[ListItem.season][/B]</label>
 				</control>
@@ -637,7 +640,7 @@
 					<posy>0</posy>
 					<width>630</width>
 					<height>89</height>
-					<font>Font_TVShow</font>
+					<font>LiberationSans_Regular_22</font>
 					<label>[B][COLOR=ListTrackF]$LOCALIZE[515][/COLOR] [B][COLOR=white]$INFO[ListItem.Genre][/B][/COLOR]</label>
 				</control>
 				<control type="label">
@@ -646,7 +649,7 @@
 					<posy>30</posy>
 					<width>630</width>
 					<height>89</height>
-					<font>Font_TVShow</font>
+					<font>LiberationSans_Regular_22</font>
 					<label>[COLOR=ListTrackF][B]$LOCALIZE[31231][/COLOR] [COLOR=white]$INFO[ListItem.Date][/COLOR][/B]</label>
 				</control>
 				<control type="label">
@@ -655,7 +658,7 @@
 					<posy>60</posy>
 					<width>630</width>
 					<height>89</height>
-					<font>Font_TVShow</font>
+					<font>LiberationSans_Regular_22</font>
 					<label>[COLOR=ListTrackF][B]$LOCALIZE[368][/COLOR] [COLOR=white]$INFO[ListItem.Rating][/COLOR][/B]      [COLOR=ListTrackF][B]$LOCALIZE[31226][/COLOR] [COLOR=white]$INFO[ListItem.mpaa][/COLOR][/B]</label>
 				</control>
 				<include>Poster_Next_Aired</include>

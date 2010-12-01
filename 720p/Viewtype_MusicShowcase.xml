@@ -5,7 +5,7 @@
 		
 		
 	<control type="group">
-		<visible>Control.IsVisible(58))</visible>
+		<visible>Control.IsVisible(58)</visible>
 			<control type="image">
 				<visible>Skin.HasSetting(MusicShowcaseFanart)</visible>
 				<posx>0</posx>
@@ -25,13 +25,13 @@
 			<control type="label"><!--Big Title-->
 				<animation effect="slide" start="0,0" end="0,-40" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
 				<posx>0</posx>
-				<posy>330</posy>
+				<posy>370</posy>
 				<width>1280</width>
 				<height>50</height>
 				<align>center</align>
-				<font>Font_Bartowski_BigMusic</font>
-				<shadowcolor>678b8b8b</shadowcolor>
-				<textcolor>678b8b8b</textcolor>
+				<font>LiberationSans_Regular_80</font>
+				<shadowcolor>ff8b8b8b</shadowcolor>
+				<textcolor>ff8b8b8b</textcolor>
 				<label>$INFO[ListItem.label]</label>
 				<include>Animation_Bartowski_Context_Zoom</include>
 			</control>

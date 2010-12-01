@@ -97,7 +97,7 @@
 			<visible>!VideoPlayer.Content(episodes)</visible>
 				<control type="label">
 					<posx>100</posx>
-					<posy>92</posy>
+					<posy>94</posy>
 					<width>1080</width>
 					<height>25</height>
 					<label>$LOCALIZE[31074] [COLOR=mainblue][B]$INFO[System.Time][/COLOR][/B] | $LOCALIZE[31075]: [COLOR=mainblue][B]$INFO[Player.FinishTime][/B][/COLOR]</label>
@@ -114,7 +114,7 @@
 				<width>300</width>
 				<height>25</height>
 				<align>right</align> 
-				<font>Font_ListDetail</font>
+				<font>LiberationSans_Regular_18</font>
 				<textcolor>mainblue</textcolor>
 				<label>[B]$INFO[VideoPlayer.Time][/B]</label>
 				<animation effect="slide" start="0,0" end="-10,0" time="0" tween="cubic" easing="inout" condition="VideoPlayer.Content(episodes) + ![IsEmpty(Control.GetLabel(7657)) + IsEmpty(Control.GetLabel(7658))]">Conditional</animation>
@@ -124,7 +124,7 @@
 				<posy>128</posy>
 				<width>300</width>
 				<height>25</height>
-				<font>Font_ListDetail</font>
+				<font>LiberationSans_Regular_18</font>
 				<textcolor>white</textcolor>
 				<label>[B]$INFO[VideoPlayer.Duration][/B]</label>
 				<animation effect="slide" start="0,0" end="-304,0" time="0" tween="cubic" easing="inout" condition="VideoPlayer.Content(episodes) + ![IsEmpty(Control.GetLabel(7657)) + IsEmpty(Control.GetLabel(7658))]">Conditional</animation>
@@ -194,6 +194,26 @@
 	<animation type="WindowClose">
 		<effect type="fade" start="100" end="0" time="600" />
 	</animation>
+		<control type="image" id="2554">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>90</width>
+			<height>35</height>
+			<texture background="true">$INFO[Player.FolderPath]logo.png</texture>
+			<fadetime>300</fadetime>
+			<aspectratio scalediffuse="false">stretch</aspectratio>
+			<visible>VideoPlayer.Content(episodes)</visible>
+		</control>
+		<control type="image" id="2555">
+			<posx>0</posx>
+			<posy>-32</posy>
+			<width>150</width>
+			<height>58</height>
+			<texture background="true">$INFO[Player.FolderPath]../logo.png</texture>
+			<fadetime>300</fadetime>
+			<aspectratio scalediffuse="false">stretch</aspectratio>
+			<visible>VideoPlayer.Content(episodes)</visible>
+		</control>
 		<control type="label">
 			<posx>0</posx>
 			<posy>0</posy>
@@ -202,9 +222,9 @@
 			<label>$INFO[VideoPlayer.TVShowTitle]</label>
 			<align>left</align> 
 			<aligny>center</aligny> 
-			<font>Font_Bartowski_Title_Pause</font>
+			<font>DejaVuSans_Bold_32</font>
 			<textcolor>mainblue</textcolor>
-			<visible>VideoPlayer.Content(episodes)</visible>
+			<visible>VideoPlayer.Content(episodes) + IsEmpty(Control.GetLabel(2554)) + IsEmpty(Control.GetLabel(2555))</visible>
 		</control>
 		<control type="label">
 			<posx>0</posx>
@@ -214,7 +234,7 @@
 			<label>$INFO[VideoPlayer.Title]</label>
 			<align>left</align> 
 			<aligny>center</aligny> 
-			<font>Font_Bartowski_Title_Pause</font>
+			<font>DejaVuSans_Bold_32</font>
 			<textcolor>mainblue</textcolor>
 			<visible>VideoPlayer.Content(movies)</visible>
 		</control>

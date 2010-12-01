@@ -53,10 +53,10 @@
 						<visible>Container.Content(episodes) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 						<posx>115</posx>
 						<posy>100</posy>
-						<width>230</width>
+						<width>240</width>
 						<height>89</height>
 						<align>center</align>
-						<font>Font_MainMenuLabel</font>
+						<font>LiberationSans_Regular_Caps_38</font>
 						<textcolor>ListTrackF</textcolor>
 						<label>[B]$LOCALIZE[20359] $INFO[ListItem.Episode][/B]</label>
 					</control>
@@ -64,10 +64,10 @@
 						<visible>Container.Content(seasons) | [Container.Content(episodes) + SubString(ListItem.Icon,DefaultFolderBack.png,Left)] | [Container.Content(tvshows) + SubString(ListItem.Icon,DefaultFolderBack.png,Left)]</visible>
 						<posx>115</posx>
 						<posy>100</posy>
-						<width>230</width>
+						<width>240</width>
 						<height>89</height>
 						<align>center</align>
-						<font>Font_MainMenuLabel</font>
+						<font>LiberationSans_Regular_Caps_38</font>
 						<textcolor>ListTrackF</textcolor>
 						<label>[B]$INFO[ListItem.Label][/B]</label>
 					</control>
@@ -77,7 +77,7 @@
 						<width>230</width>
 						<height>89</height>
 						<align>center</align>
-						<font>Font_Alaya_Movie-trailer</font>
+						<font>LiberationSans_Regular_16</font>
 						<textcolor>ListTrackNF</textcolor>
 						<label>[B]*$LOCALIZE[16102]*[/B]</label>
 						<visible>Skin.HasSetting(tvoverlays) + Container.Content(tvshows) + ![StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem.Label)] + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
@@ -111,11 +111,11 @@
 							<visible>Container.Content(episodes) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 							<posx>135</posx>
 							<posy>100</posy>
-							<width>230</width>
+							<width>240</width>
 							<height>89</height>
 							<align>center</align>
 							<aligny>bottom</aligny>
-							<font>Font_MainMenuLabel</font>
+							<font>LiberationSans_Regular_Caps_38</font>
 							<textcolor>white</textcolor>
 							<label>[B]$LOCALIZE[20359] $INFO[ListItem.Episode][/B]</label>
 						</control>
@@ -123,11 +123,11 @@
 							<visible>Container.Content(seasons) | [Container.Content(episodes) + SubString(ListItem.Icon,DefaultFolderBack.png,Left)] | [Container.Content(tvshows) + SubString(ListItem.Icon,DefaultFolderBack.png,Left)]</visible>
 							<posx>135</posx>
 							<posy>100</posy>
-							<width>230</width>
+							<width>240</width>
 							<height>89</height>
 							<align>center</align>
 							<aligny>bottom</aligny>
-							<font>Font_MainMenuLabel</font>
+							<font>LiberationSans_Regular_Caps_38</font>
 							<textcolor>white</textcolor>
 							<label>[B]$INFO[ListItem.Label][/B]</label>
 						</control>
@@ -137,7 +137,7 @@
 							<width>230</width>
 							<height>89</height>
 							<align>center</align>
-							<font>Font_Alaya_Movie-trailer</font>
+							<font>LiberationSans_Regular_16</font>
 							<textcolor>mainblue</textcolor>
 							<label>[B]*$LOCALIZE[16102]*[/B]</label>
 							<visible>Skin.HasSetting(tvoverlays) + Container.Content(tvshows) + ![StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem.Label)] + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
@@ -175,7 +175,7 @@
 			<fadetime>100</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 		</control>
-		<control type="image" id="39015">
+		<control type="image" id="49015">
 			<posx>20</posx>
 			<posy>0</posy>
 			<width>230</width>
@@ -191,10 +191,21 @@
 			<width>1200</width>
 			<height>50</height>
 			<aligny>center</aligny>
-			<font>Font_Bartowski_Landscape_TV_Title</font>
+			<font>LiberationSans_Regular_40</font>
 			<textcolor>mainblue</textcolor>
 			<label>[B]$INFO[ListItem.TVShowTitle][/B]</label>
-			<visible>IsEmpty(Control.GetLabel(37015)) + IsEmpty(Control.GetLabel(39015))</visible>
+			<visible>!Container.Content(episodes) + IsEmpty(Control.GetLabel(37015))</visible>
+		</control>
+		<control type="label">
+			<posx>20</posx>
+			<posy>0</posy>
+			<width>1200</width>
+			<height>50</height>
+			<aligny>center</aligny>
+			<font>LiberationSans_Regular_40</font>
+			<textcolor>mainblue</textcolor>
+			<label>[B]$INFO[ListItem.TVShowTitle][/B]</label>
+			<visible>Container.Content(episodes) + IsEmpty(Control.GetLabel(37015)) + IsEmpty(Control.GetLabel(49015))</visible>
 		</control>
 		<control type="label">
 			<posx>20</posx>
@@ -202,9 +213,10 @@
 			<width>230</width>
 			<height>89</height>
 			<align>center</align>
-			<font>Font_Bartowski_Movies_Duration</font>
+			<font>LiberationSans_Regular_20</font>
 			<textcolor>white</textcolor>
 			<label>[B]$LOCALIZE[20373] $INFO[ListItem.Season][/B]</label>
+			<animation effect="slide" start="0,0" end="0,-40" time="0" condition="IsEmpty(Control.GetLabel(37015)) + IsEmpty(Control.GetLabel(39015))">Conditional</animation>
 			<visible>Container.Content(episodes) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 		</control>
 	</control>
@@ -249,9 +261,9 @@
 			<posx>460</posx>
 			<posy>612</posy>
 			<width>390</width>
-			<label>[B]$INFO[ListItem.Title][/B]</label>
+			<label>[B]"$INFO[ListItem.Title]"[/B]</label>
 			<align>center</align>
-			<font>Font_Bartowski_Extras_Pause</font>
+			<font>LiberationSans_Regular_22</font>
 			<textcolor>white</textcolor>
 			<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 		</control>
@@ -287,7 +299,7 @@
 			<posy>424</posy>
 			<width>386</width>
 			<height>188</height>
-			<font>Font_KeyboardKeys_Plot</font>
+			<font>LiberationSans_Regular_18</font>
 			<textcolor>white</textcolor>
 			<label>$INFO[ListItem.Plot]</label>
 			<align>justify</align>
@@ -303,7 +315,7 @@
 		<width>1280</width>
 		<height>100</height>
 		<align>center</align>
-		<font>Font_Alaya_Movie-trailer</font>
+		<font>LiberationSans_Regular_16</font>
 		<textcolor>mainblue</textcolor>
 		<label>[B]$LOCALIZE[31515][/B]</label>
 		<include>Animation_CommonFade</include>
@@ -492,7 +504,7 @@
 		<posy>700</posy>
 		<width>500</width>
 		<height>100</height>
-		<font>Font_Alaya_Movie-trailer</font>
+		<font>LiberationSans_Regular_16</font>
 		<textcolor>mainblue</textcolor>
 		<label fallback="-">[B]$INFO[Container(2448).ListItem.Property(Number)] - [/B]$INFO[Container(2448).ListItem.Label]</label>
 		<include>Animation_CommonFade</include>

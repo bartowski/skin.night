@@ -278,7 +278,7 @@
 									<height>56</height>
 									<label>$INFO[ListItem.Label]</label>
 									<align>center</align>
-									<font>Font_Bartowski_Main_SubMenu</font>
+									<font>alaska_thin_64</font>
 									<textcolor>ffb8b7b7</textcolor>
 								</control>
 						</control>
@@ -292,7 +292,7 @@
 									<height>56</height>
 									<label>[B]$INFO[ListItem.Label][/B]</label>
 									<align>center</align>
-									<font>Font_Bartowski_Main_SubMenu</font>
+									<font>alaska_thin_64</font>
 									<textcolor>mainblue</textcolor>
 								</control>
 						</control>
@@ -349,7 +349,7 @@
 									<height>56</height>
 									<label>$INFO[ListItem.Label]</label>
 									<align>center</align>
-									<font>Font_Bartowski_Main_SubMenu</font>
+									<font>alaska_thin_64</font>
 									<textcolor>ffb8b7b7</textcolor>
 								</control>
 						</control>
@@ -363,7 +363,7 @@
 									<height>56</height>
 									<label>[B]$INFO[ListItem.Label][/B]</label>
 									<align>center</align>
-									<font>Font_Bartowski_Main_SubMenu</font>
+									<font>alaska_thin_64</font>
 									<textcolor>mainblue</textcolor>
 								</control>
 						</control>
@@ -455,7 +455,7 @@
 									<height>56</height>
 									<label>$INFO[ListItem.Label]</label>
 									<align>center</align>
-									<font>Font_Bartowski_Main_SubMenu</font>
+									<font>alaska_thin_64</font>
 									<textcolor>ffb8b7b7</textcolor>
 								</control>
 						</control>
@@ -469,7 +469,7 @@
 									<height>56</height>
 									<label>[B]$INFO[ListItem.Label][/B]</label>
 									<align>center</align>
-									<font>Font_Bartowski_Main_SubMenu</font>
+									<font>alaska_thin_64</font>
 									<textcolor>mainblue</textcolor>
 								</control>
 						</control>
@@ -546,7 +546,7 @@
 									<height>56</height>
 									<label>$INFO[ListItem.Label]</label>
 									<align>center</align>
-									<font>Font_Bartowski_Main_SubMenu</font>
+									<font>alaska_thin_64</font>
 									<textcolor>ffb8b7b7</textcolor>
 								</control>
 						</control>
@@ -560,7 +560,7 @@
 									<height>56</height>
 									<label>[B]$INFO[ListItem.Label][/B]</label>
 									<align>center</align>
-									<font>Font_Bartowski_Main_SubMenu</font>
+									<font>alaska_thin_64</font>
 									<textcolor>mainblue</textcolor>
 								</control>
 						</control>
@@ -610,7 +610,7 @@
 							<height>56</height>
 							<label>$INFO[ListItem.Label]</label>
 							<align>center</align>
-							<font>Font_Bartowski_Main_SubMenu</font>
+							<font>alaska_thin_64</font>
 							<textcolor>ffb8b7b7</textcolor>
 						</control>
 					</itemlayout>
@@ -621,7 +621,7 @@
 								<height>56</height>
 								<label>[B]$INFO[ListItem.Label][/B]</label>
 								<align>center</align>
-								<font>Font_Bartowski_Main_SubMenu</font>
+								<font>alaska_thin_64</font>
 								<textcolor>mainblue</textcolor>
 							</control>
 						</control>
@@ -693,7 +693,7 @@
 									<height>56</height>
 									<label>$INFO[ListItem.Label]</label>
 									<align>center</align>
-									<font>Font_Bartowski_Main_SubMenu</font>
+									<font>alaska_thin_64</font>
 									<textcolor>ffb8b7b7</textcolor>
 								</control>
 						</control>
@@ -707,7 +707,7 @@
 									<height>56</height>
 									<label>[B]$INFO[ListItem.Label][/B]</label>
 									<align>center</align>
-									<font>Font_Bartowski_Main_SubMenu</font>
+									<font>alaska_thin_64</font>
 									<textcolor>mainblue</textcolor>
 								</control>
 						</control>
@@ -795,7 +795,7 @@
 									<height>56</height>
 									<label>$INFO[ListItem.Label]</label>
 									<align>center</align>
-									<font>Font_Bartowski_Main_SubMenu</font>
+									<font>alaska_thin_64</font>
 									<textcolor>ffb8b7b7</textcolor>
 								</control>
 						</control>
@@ -809,7 +809,7 @@
 									<height>56</height>
 									<label>[B]$INFO[ListItem.Label][/B]</label>
 									<align>center</align>
-									<font>Font_Bartowski_Main_SubMenu</font>
+									<font>alaska_thin_64</font>
 									<textcolor>mainblue</textcolor>
 								</control>
 						</control>
@@ -853,7 +853,7 @@
 									<height>56</height>
 									<label>$INFO[ListItem.Label]</label>
 									<align>center</align>
-									<font>Font_Bartowski_Main_SubMenu</font>
+									<font>alaska_thin_64</font>
 									<textcolor>ffb8b7b7</textcolor>
 								</control>
 						</control>
@@ -867,7 +867,7 @@
 									<height>56</height>
 									<label>[B]$INFO[ListItem.Label][/B]</label>
 									<align>center</align>
-									<font>Font_Bartowski_Main_SubMenu</font>
+									<font>alaska_thin_64</font>
 									<textcolor>mainblue</textcolor>
 								</control>
 						</control>
@@ -922,7 +922,7 @@
 							<height>56</height>
 							<label>$INFO[ListItem.Label]</label>
 							<align>center</align>
-							<font>Font_Bartowski_Main_SubMenu</font>
+							<font>alaska_thin_64</font>
 							<textcolor>ffb8b7b7</textcolor>
 						</control>
 					</itemlayout>
@@ -933,7 +933,7 @@
 								<height>56</height>
 								<label>[B]$INFO[ListItem.Label][/B]</label>
 								<align>center</align>
-								<font>Font_Bartowski_Main_SubMenu</font>
+								<font>alaska_thin_64</font>
 								<textcolor>mainblue</textcolor>
 							</control>
 						</control>

@@ -193,9 +193,9 @@
 			<width>555</width>
 			<height>50</height>
 			<align>center</align>
-			<font>Font_InfoYear2</font>
+			<font>LiberationSans_Regular_40</font>
 			<textcolor>mainblue</textcolor>
-			<label>$INFO[ListItem.Label]</label>
+			<label>[B]$INFO[ListItem.Label][/B]</label>
 		</control>
 		<control type="label">
 			<visible>Container.Content(tvshows) + IsEmpty(Control.GetLabel(7047))</visible>
@@ -204,7 +204,7 @@
 			<width>555</width>
 			<height>50</height>
 			<align>center</align>
-			<font>Font_Bartowski_Showcase_runtime_year</font>
+			<font>LiberationSans_Regular_20</font>
 			<textcolor>white</textcolor>
 			<label>$INFO[ListItem.Genre]</label>
 		</control>
@@ -217,7 +217,7 @@
 			<posy>410</posy>
 			<width>555</width>
 			<height>264</height>
-			<font>Font_Bartowski_Showcase_plot</font>
+			<font>LiberationSans_Regular_20</font>
 			<textcolor>white</textcolor>
 			<label>$INFO[ListItem.Plot]</label>
 			<align>justify</align>

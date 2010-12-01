@@ -66,7 +66,7 @@
 						<posy>16</posy>
 						<width>830</width>
 						<height>50</height>
-						<font>Font_Bartowski_MainMenu_Context</font>
+						<font>LiberationSans_Regular_34</font>
 						<label>[B]$INFO[Listitem.Title][/B] ($INFO[Listitem.Year])</label>
 						<align>center</align>
 						<textcolor>mainblue</textcolor>
@@ -78,7 +78,7 @@
 						<posy>16</posy>
 						<width>830</width>
 						<height>50</height>
-						<font>Font_Bartowski_MainMenu_Context</font>
+						<font>LiberationSans_Regular_34</font>
 						<label>[B]$INFO[Listitem.TVShowTitle][/B]</label>
 						<align>center</align>
 						<textcolor>mainblue</textcolor>
@@ -92,7 +92,7 @@
 						<height>50</height>
 						<align>center</align>
 						<aligny>center</aligny>
-						<font>Font_TVShow</font>
+						<font>LiberationSans_Regular_22</font>
 						<label>[B]"$INFO[Listitem.Title]"[/B]</label>
 						<textcolor>white</textcolor>
 						<animation effect="slide" start="0,0" end="0,-80" time="0" tween="cubic" easing="inout" condition="IsEmpty(Control.GetLabel(9550)) + IsEmpty(Control.GetLabel(9551))">Conditional</animation>
@@ -103,10 +103,10 @@
 						<posy>60</posy>
 						<width>840</width>
 						<height>30</height>
-						<font>font13caps_title</font>
+						<font>LiberationSans_Regular_18</font>
 						<align>center</align>
 						<textcolor>white</textcolor>
-						<label>[B]"$INFO[ListItem.TagLine]"[/B]</label>
+						<label>"$INFO[ListItem.TagLine]"</label>
 						<visible>!IsEmpty(ListItem.TagLine)</visible>
 					</control>
 					<include>VideoInfo_Next_Aired</include>
@@ -128,10 +128,10 @@
 						<posx>445</posx>
 						<posy>430</posy>
 						<width>800</width>
-						<height>174</height>
+						<height>212</height>
 						<align>justify</align>
 						<info>ListItem.Plot</info>
-						<font>Font_Bartowski_Showcase_plot</font>
+						<font>LiberationSans_Regular_20</font>
 						<textcolor>white</textcolor>
 						<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 						<animation effect="slide" end="0,-100" time="0" condition="IsEmpty(Control.GetLabel(9170)) + IsEmpty(Control.GetLabel(9171))">conditional</animation>
@@ -145,7 +145,7 @@
 						<height>224</height>
 						<align>justify</align>
 						<info>ListItem.Plot</info>
-						<font>Font_Bartowski_Showcase_plot</font>
+						<font>LiberationSans_Regular_20</font>
 						<textcolor>white</textcolor>
 						<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 						<animation effect="slide" end="0,-100" time="0" condition="IsEmpty(Control.GetLabel(9170)) + IsEmpty(Control.GetLabel(9171))">conditional</animation>
@@ -230,7 +230,7 @@
 								<posy>0</posy>
 								<width>830</width>
 								<height>30</height>
-								<font>font16caps</font>
+								<font>LiberationSans_Regular_20</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>grey</textcolor>
@@ -244,7 +244,7 @@
 								<posy>0</posy>
 								<width>830</width>
 								<height>30</height>
-								<font>font16caps</font>
+								<font>LiberationSans_Regular_20</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>grey</textcolor>
@@ -315,7 +315,7 @@
 								<posy>0</posy>
 								<width>830</width>
 								<height>30</height>
-								<font>font16caps</font>
+								<font>LiberationSans_Regular_20</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>grey</textcolor>
@@ -329,7 +329,7 @@
 								<posy>0</posy>
 								<width>830</width>
 								<height>30</height>
-								<font>font16caps</font>
+								<font>LiberationSans_Regular_20</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>grey</textcolor>
@@ -400,7 +400,7 @@
 								<posy>0</posy>
 								<width>830</width>
 								<height>30</height>
-								<font>font16caps</font>
+								<font>LiberationSans_Regular_20</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>grey</textcolor>
@@ -414,7 +414,7 @@
 								<posy>0</posy>
 								<width>830</width>
 								<height>30</height>
-								<font>font16caps</font>
+								<font>LiberationSans_Regular_20</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>grey</textcolor>
@@ -512,7 +512,7 @@
 								<posy>0</posy>
 								<width>160</width>
 								<height>30</height>
-								<font>font13caps_title</font>
+								<font>DejaVuSans_Bold_20_title</font>
 								<align>right</align>
 								<aligny>center</aligny>
 								<textcolor>blue</textcolor>
@@ -547,7 +547,7 @@
 								<posy>0</posy>
 								<width>160</width>
 								<height>30</height>
-								<font>font13caps_title</font>
+								<font>DejaVuSans_Bold_20_title</font>
 								<align>right</align>
 								<aligny>center</aligny>
 								<textcolor>blue</textcolor>

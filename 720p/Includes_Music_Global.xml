@@ -90,7 +90,7 @@
 						<width min="10" max="380">auto</width>
 						<align>left</align>
 						<height>18</height>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>[B][COLOR=mainblue]$LOCALIZE[13350][/COLOR] [/B]</label>
 						<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
@@ -103,7 +103,7 @@
 						<width min="10" max="380">auto</width>
 						<align>left</align>
 						<height>18</height>
-						<font>Font_Bartowski_Showcase_Title</font>
+						<font>DejaVuSans_Bold_20</font>
 						<textcolor>white</textcolor>
 						<label>[B]$INFO[MusicPlayer.Title][/B]</label>
 						<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
@@ -119,7 +119,7 @@
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>left</align>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[MusicPlayer.Artist,[B]$LOCALIZE[557]: [/B]]</label>
 						<!--<animation effect="slide" end="0,22" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>-->
@@ -134,7 +134,7 @@
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>left</align>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[MusicPlayer.Album,[B]$LOCALIZE[558]: [/B]]</label>
 						<visible>!Control.IsVisible(51)</visible>
@@ -147,7 +147,7 @@
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>left</align>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[MusicPlayer.year,[B]$LOCALIZE[345]: [/B]]</label>
 						<visible>!Control.IsVisible(51)</visible>
@@ -173,7 +173,7 @@
 						<width min="40" max="380">auto</width>
 						<align>left</align>
 						<height>18</height>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>[B][COLOR=mainblue]$LOCALIZE[209]...[/COLOR][/B]</label>
 						<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
@@ -185,7 +185,7 @@
 						<width min="40" max="380">auto</width>
 						<align>left</align>
 						<height>18</height>
-						<font>Font_Bartowski_Showcase_Title</font>
+						<font>DejaVuSans_Bold_20</font>
 						<textcolor>white</textcolor>
 						<label>[B]$INFO[MusicPlayer.offset(1).Title][/B]</label>
 						<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
@@ -199,7 +199,7 @@
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>left</align>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[MusicPlayer.offset(1).Artist,[B]$LOCALIZE[557]: [/B]]</label>
 						<!--<animation effect="slide" end="0,22" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>-->
@@ -213,7 +213,7 @@
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>left</align>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[MusicPlayer.offset(1).Album,[B]$LOCALIZE[558]: [/B]]</label>
 					</control>
@@ -383,7 +383,7 @@
 						<width min="10" max="380">auto</width>
 						<align>left</align>
 						<height>18</height>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>[B][COLOR=mainblue]$LOCALIZE[13350][/COLOR] [/B]</label>
 						<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
@@ -396,7 +396,7 @@
 						<width min="10" max="380">auto</width>
 						<align>left</align>
 						<height>18</height>
-						<font>Font_Bartowski_Showcase_Title</font>
+						<font>DejaVuSans_Bold_20</font>
 						<textcolor>white</textcolor>
 						<label>[B]$INFO[MusicPlayer.Title][/B]</label>
 						<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
@@ -412,7 +412,7 @@
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>left</align>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[MusicPlayer.Artist,[B]$LOCALIZE[557]: [/B]]</label>
 						<!--<animation effect="slide" end="0,22" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>-->
@@ -427,7 +427,7 @@
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>left</align>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[MusicPlayer.Album,[B]$LOCALIZE[558]: [/B]]</label>
 						<visible>!Control.IsVisible(51)</visible>
@@ -440,7 +440,7 @@
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>left</align>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[MusicPlayer.year,[B]$LOCALIZE[345]: [/B]]</label>
 						<visible>!Control.IsVisible(51)</visible>
@@ -466,7 +466,7 @@
 						<width min="40" max="380">auto</width>
 						<align>left</align>
 						<height>18</height>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>[B][COLOR=mainblue]$LOCALIZE[209]...[/COLOR][/B]</label>
 						<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
@@ -478,7 +478,7 @@
 						<width min="40" max="380">auto</width>
 						<align>left</align>
 						<height>18</height>
-						<font>Font_Bartowski_Showcase_Title</font>
+						<font>DejaVuSans_Bold_20</font>
 						<textcolor>white</textcolor>
 						<label>[B]$INFO[MusicPlayer.offset(1).Title][/B]</label>
 						<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
@@ -492,7 +492,7 @@
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>left</align>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[MusicPlayer.offset(1).Artist,[B]$LOCALIZE[557]: [/B]]</label>
 						<!--<animation effect="slide" end="0,22" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>-->
@@ -506,7 +506,7 @@
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>left</align>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[MusicPlayer.offset(1).Album,[B]$LOCALIZE[558]: [/B]]</label>
 					</control>
@@ -677,7 +677,7 @@
 						<width min="10" max="380">auto</width>
 						<align>right</align>
 						<height>18</height>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>mainblue</textcolor>
 						<label>[B]$LOCALIZE[13350][/B]</label>
 						<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
@@ -689,7 +689,7 @@
 						<width min="10" max="380">auto</width>
 						<align>right</align>
 						<height>18</height>
-						<font>Font_Bartowski_Showcase_Title</font>
+						<font>DejaVuSans_Bold_20</font>
 						<textcolor>white</textcolor>
 						<label>[B]$INFO[MusicPlayer.Title][/B]</label>
 						<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
@@ -704,7 +704,7 @@
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>right</align>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[MusicPlayer.Artist] :[B]$LOCALIZE[557][/B]</label>
 						<!--<animation effect="slide" end="0,22" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>-->
@@ -718,7 +718,7 @@
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>right</align>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[MusicPlayer.Album] [B]:$LOCALIZE[558][/B]</label>
 					</control>
@@ -730,7 +730,7 @@
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>right</align>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[MusicPlayer.year] [B]:$LOCALIZE[345][/B]</label>
 					</control>
@@ -755,7 +755,7 @@
 						<width min="750" max="380">auto</width>
 						<align>right</align>
 						<height>18</height>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>mainblue</textcolor>
 						<label>[B]$LOCALIZE[209][/B]</label>
 						<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
@@ -767,7 +767,7 @@
 						<width min="750" max="380">auto</width>
 						<align>right</align>
 						<height>18</height>
-						<font>Font_Bartowski_Showcase_Title</font>
+						<font>DejaVuSans_Bold_20</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[MusicPlayer.offset(1).Title]</label>
 						<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
@@ -781,7 +781,7 @@
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>right</align>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[MusicPlayer.offset(1).Artist][B]:$LOCALIZE[557][/B]</label>
 						<!--<animation effect="slide" end="0,22" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>-->
@@ -795,7 +795,7 @@
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>right</align>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[MusicPlayer.offset(1).Album][B]:$LOCALIZE[558][/B]</label>
 					</control>
@@ -957,7 +957,7 @@
 						<width min="10" max="380">auto</width>
 						<align>right</align>
 						<height>18</height>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>mainblue</textcolor>
 						<label>[B]$LOCALIZE[13350][/B]</label>
 						<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
@@ -969,7 +969,7 @@
 						<width min="10" max="380">auto</width>
 						<align>right</align>
 						<height>18</height>
-						<font>Font_Bartowski_Showcase_Title</font>
+						<font>DejaVuSans_Bold_20</font>
 						<textcolor>white</textcolor>
 						<label>[B]$INFO[MusicPlayer.Title][/B]</label>
 						<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
@@ -984,7 +984,7 @@
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>right</align>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[MusicPlayer.Artist] :[B]$LOCALIZE[557][/B]</label>
 						<!--<animation effect="slide" end="0,22" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>-->
@@ -998,7 +998,7 @@
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>right</align>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[MusicPlayer.Album] [B]:$LOCALIZE[558][/B]</label>
 					</control>
@@ -1010,7 +1010,7 @@
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>right</align>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[MusicPlayer.year] [B]:$LOCALIZE[345][/B]</label>
 					</control>
@@ -1036,7 +1036,7 @@
 						<width min="750" max="380">auto</width>
 						<align>right</align>
 						<height>18</height>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>mainblue</textcolor>
 						<label>[B]$LOCALIZE[209][/B]</label>
 						<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
@@ -1048,7 +1048,7 @@
 						<width min="750" max="380">auto</width>
 						<align>right</align>
 						<height>18</height>
-						<font>Font_Bartowski_Showcase_Title</font>
+						<font>DejaVuSans_Bold_20</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[MusicPlayer.offset(1).Title]</label>
 						<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
@@ -1062,7 +1062,7 @@
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>right</align>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[MusicPlayer.offset(1).Artist][B]:$LOCALIZE[557][/B]</label>
 						<!--<animation effect="slide" end="0,22" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>-->
@@ -1076,7 +1076,7 @@
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>right</align>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[MusicPlayer.offset(1).Album][B]:$LOCALIZE[558][/B]</label>
 					</control>
@@ -1237,7 +1237,7 @@
 						<width min="10" max="380">auto</width>
 						<align>left</align>
 						<height>18</height>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>[B][COLOR=mainblue]$LOCALIZE[13350][/COLOR] [/B]</label>
 						<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
@@ -1250,7 +1250,7 @@
 						<width min="10" max="380">auto</width>
 						<align>left</align>
 						<height>18</height>
-						<font>Font_Bartowski_Showcase_Title</font>
+						<font>DejaVuSans_Bold_20</font>
 						<textcolor>white</textcolor>
 						<label>[B]$INFO[MusicPlayer.Title][/B]</label>
 						<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
@@ -1266,7 +1266,7 @@
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>left</align>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[MusicPlayer.Artist,[B]$LOCALIZE[557]: [/B]]</label>
 						<!--<animation effect="slide" end="0,22" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>-->
@@ -1281,7 +1281,7 @@
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>left</align>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[MusicPlayer.Album,[B]$LOCALIZE[558]: [/B]]</label>
 						<visible>!Control.IsVisible(51)</visible>
@@ -1294,7 +1294,7 @@
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>left</align>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[MusicPlayer.year,[B]$LOCALIZE[345]: [/B]]</label>
 						<visible>!Control.IsVisible(51)</visible>
@@ -1320,7 +1320,7 @@
 						<width min="40" max="380">auto</width>
 						<align>left</align>
 						<height>18</height>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>[B][COLOR=mainblue]$LOCALIZE[209]...[/COLOR][/B]</label>
 						<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
@@ -1332,7 +1332,7 @@
 						<width min="40" max="380">auto</width>
 						<align>left</align>
 						<height>18</height>
-						<font>Font_Bartowski_Showcase_Title</font>
+						<font>DejaVuSans_Bold_20</font>
 						<textcolor>white</textcolor>
 						<label>[B]$INFO[MusicPlayer.offset(1).Title][/B]</label>
 						<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
@@ -1346,7 +1346,7 @@
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>left</align>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[MusicPlayer.offset(1).Artist,[B]$LOCALIZE[557]: [/B]]</label>
 						<!--<animation effect="slide" end="0,22" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>-->
@@ -1360,7 +1360,7 @@
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>left</align>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[MusicPlayer.offset(1).Album,[B]$LOCALIZE[558]: [/B]]</label>
 					</control>
@@ -1514,7 +1514,7 @@
 						<width min="10" max="380">auto</width>
 						<align>right</align>
 						<height>18</height>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>mainblue</textcolor>
 						<label>[B]$LOCALIZE[13350][/B]</label>
 						<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
@@ -1526,7 +1526,7 @@
 						<width min="10" max="380">auto</width>
 						<align>right</align>
 						<height>18</height>
-						<font>Font_Bartowski_Showcase_Title</font>
+						<font>DejaVuSans_Bold_20</font>
 						<textcolor>white</textcolor>
 						<label>[B]$INFO[MusicPlayer.Title][/B]</label>
 						<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
@@ -1541,7 +1541,7 @@
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>right</align>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[MusicPlayer.Artist] :[B]$LOCALIZE[557][/B]</label>
 						<!--<animation effect="slide" end="0,22" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>-->
@@ -1555,7 +1555,7 @@
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>right</align>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[MusicPlayer.Album] [B]:$LOCALIZE[558][/B]</label>
 					</control>
@@ -1567,7 +1567,7 @@
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>right</align>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[MusicPlayer.year] [B]:$LOCALIZE[345][/B]</label>
 					</control>
@@ -1592,7 +1592,7 @@
 						<width min="750" max="380">auto</width>
 						<align>right</align>
 						<height>18</height>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>mainblue</textcolor>
 						<label>[B]$LOCALIZE[209][/B]</label>
 						<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
@@ -1604,7 +1604,7 @@
 						<width min="750" max="380">auto</width>
 						<align>right</align>
 						<height>18</height>
-						<font>Font_Bartowski_Showcase_Title</font>
+						<font>DejaVuSans_Bold_20</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[MusicPlayer.offset(1).Title]</label>
 						<animation effect="slide" end="0,0" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>
@@ -1618,7 +1618,7 @@
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>right</align>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[MusicPlayer.offset(1).Artist][B]:$LOCALIZE[557][/B]</label>
 						<!--<animation effect="slide" end="0,22" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>-->
@@ -1632,7 +1632,7 @@
 						<height>18</height>
 						<aligny>center</aligny>
 						<align>right</align>
-						<font>Font_Date</font>
+						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[MusicPlayer.offset(1).Album][B]:$LOCALIZE[558][/B]</label>
 					</control>

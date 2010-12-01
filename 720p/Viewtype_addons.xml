@@ -33,7 +33,7 @@
 					<width>700</width>
 					<height>46</height>
 					<aligny>center</aligny>
-					<font>Font_Bartowski_List_Main</font>
+					<font>LiberationSans_Regular_24</font>
 					<textcolor>Text-Filemode</textcolor>
 					<label>$INFO[ListItem.Label2]</label>
 					<visible></visible>
@@ -52,7 +52,7 @@
 					<width>720</width>
 					<height>46</height>
 					<aligny>center</aligny>
-					<font>Font_Bartowski_List_Main</font>
+					<font>LiberationSans_Regular_24</font>
 					<textcolor>Text-Filemode</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 					<visible></visible>
@@ -84,7 +84,7 @@
 					<width>700</width>
 					<height>46</height>
 					<aligny>center</aligny>
-					<font>Font_Bartowski_List_Main</font>
+					<font>LiberationSans_Regular_24</font>
 					<textcolor>white</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 					<visible></visible>
@@ -95,7 +95,7 @@
 					<width>700</width>
 					<height>46</height>
 					<aligny>center</aligny>
-					<font>Font_Bartowski_List_Main</font>
+					<font>LiberationSans_Regular_24</font>
 					<textcolor>white</textcolor>
 					<label>$INFO[ListItem.Label2]</label>
 					<visible></visible>
@@ -158,7 +158,7 @@
 			<height>280</height>
 			<align>justify</align>
 			<info>ListItem.Property(Addon.Description)</info>
-			<font>Font_Bartowski_Movies</font>
+			<font>LiberationSans_Regular_20</font>
 			<textcolor>white</textcolor>
 			<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 			<include>Animation_Viewtype_Wall_Plot</include>
