@@ -517,6 +517,18 @@
 			
 				
 			<control type="grouplist">
+				<visible>!Skin.HasSetting(no_media_flags) + Skin.HasSetting(back_flags) + !Skin.HasSetting(ShowcaseFanart)</visible>
+				<description>Media Codec Flagging Images</description>
+				<posx>0</posx>
+				<posy>370</posy>
+				<width>1280</width>
+				<align>right</align>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<include>back_flags</include>
+				<include>Animation_ZoomInZoomOut</include>
+			</control>
+			<control type="grouplist">
 				<visible>!Skin.HasSetting(no_media_flags) + !Skin.HasSetting(ShowcaseFanart)</visible>
 				<description>Media Codec Flagging Images</description>
 				<posx>0</posx>
@@ -525,9 +537,23 @@
 				<align>right</align>
 				<itemgap>0</itemgap>
 				<orientation>horizontal</orientation>
-				<include condition="!Skin.HasSetting(grey_flags)">color_flags</include>
-				<include condition="Skin.HasSetting(grey_flags)">grey_flags</include>
-				<include>Animation_Viewtype_Showcase_RightFlags</include>
+				<include condition="!Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags) + !Skin.HasSetting(flat_flags)">color_flags</include>
+				<include condition="Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags) + !Skin.HasSetting(flat_flags)">vanilla_flags</include>
+				<include condition="Skin.HasSetting(original_flags) + !Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(flat_flags)">original_flags</include>
+				<include condition="Skin.HasSetting(flat_flags) + !Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags)">flat_flags</include>
+				<include>Animation_ZoomInZoomOut</include>
+			</control>
+			<control type="grouplist">
+				<visible>!Skin.HasSetting(no_media_flags) + !Skin.HasSetting(no_frame_flags) + !Skin.HasSetting(ShowcaseFanart)</visible>
+				<description>Media Codec Flagging Images</description>
+				<posx>0</posx>
+				<posy>370</posy>
+				<width>1280</width>
+				<align>right</align>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<include>frame_flags</include>
+				<include>Animation_ZoomInZoomOut</include>
 			</control>
 	</control>
 			

@@ -63,17 +63,47 @@
 		<onup>78881</onup>
 	</include>
 	
+	<include name="frame_flags">
+		<include>VideoCodecFlaggingConditions_frame</include>
+		<include>AudioCodecFlaggingConditions_frame</include>
+		<include>AspectCodecFlaggingConditions_frame</include>
+		<include>VideoTypeHackFlaggingConditions_frame</include>
+	</include>
+	<include name="back_flags">
+		<include>VideoCodecFlaggingConditions_back</include>
+		<include>AudioCodecFlaggingConditions_back</include>
+		<include>AspectCodecFlaggingConditions_back</include>
+		<include>VideoTypeHackFlaggingConditions_back</include>
+	</include>
 	<include name="color_flags">
 		<include>VideoCodecFlaggingConditions</include>
 		<include>AudioCodecFlaggingConditions</include>
 		<include>AspectCodecFlaggingConditions</include>
 		<include>VideoTypeHackFlaggingConditions</include>
 	</include>
-	<include name="grey_flags">
-		<include>VideoCodecFlaggingConditions_grey</include>
-		<include>AudioCodecFlaggingConditions_grey</include>
-		<include>AspectCodecFlaggingConditions_grey</include>
-		<include>VideoTypeHackFlaggingConditions_grey</include>
+	<include name="original_flags">
+		<include>VideoCodecFlaggingConditions_original</include>
+		<include>AudioCodecFlaggingConditions_original</include>
+		<include>AspectCodecFlaggingConditions_original</include>
+		<include>VideoTypeHackFlaggingConditions_original</include>
+	</include>
+	<include name="vanilla_flags">
+		<include>VideoCodecFlaggingConditions_vanilla</include>
+		<include>AudioCodecFlaggingConditions_vanilla</include>
+		<include>AspectCodecFlaggingConditions_vanilla</include>
+		<include>VideoTypeHackFlaggingConditions_vanilla</include>
+	</include>
+	<include name="flat_flags">
+		<include>VideoCodecFlaggingConditions_flat</include>
+		<include>AudioCodecFlaggingConditions_flat</include>
+		<include>AspectCodecFlaggingConditions_flat</include>
+		<include>VideoTypeHackFlaggingConditions_flat</include>
+	</include>
+	<include name="color_MPAAs">
+		<include>VideoMPAAFlaggingConditions</include>	
+	</include>
+	<include name="vanilla_MPAAs">
+		<include>VideoMPAAFlaggingConditions_vanilla</include>		
 	</include>
 	
 	<include name="random_movies">

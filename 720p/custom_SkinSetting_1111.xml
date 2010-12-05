@@ -2395,23 +2395,41 @@
 							<onclick>Skin.ToggleSetting(autoscroll)</onclick>
 							<selected>Skin.HasSetting(autoscroll)</selected>
 						</control>
+						<control type="radiobutton" id="519">
+							<include>skin_settings_labels</include>
+							<label>Use Original Type Flags</label>
+							<onclick>Skin.ToggleSetting(original_flags)</onclick>
+							<selected>Skin.HasSetting(original_flags)</selected>
+						</control>
 						<control type="radiobutton" id="504">
 							<include>skin_settings_labels</include>
-							<label>Use Monochrome(grey) flags</label>
-							<onclick>Skin.ToggleSetting(grey_flags)</onclick>
-							<selected>Skin.HasSetting(grey_flags)</selected>
+							<label>Use Vanilla Type Flags (white by default)</label>
+							<onclick>Skin.ToggleSetting(vanilla_flags)</onclick>
+							<selected>Skin.HasSetting(vanilla_flags)</selected>
+						</control>
+						<control type="radiobutton" id="520">
+							<include>skin_settings_labels</include>
+							<label>Use Flat Type Flags (white by default)</label>
+							<onclick>Skin.ToggleSetting(flat_flags)</onclick>
+							<selected>Skin.HasSetting(flat_flags)</selected>
+						</control>
+						<control type="radiobutton" id="521">
+							<include>skin_settings_labels</include>
+							<label>Disable Frame in Flags</label>
+							<onclick>Skin.ToggleSetting(no_frame_flags)</onclick>
+							<selected>Skin.HasSetting(no_frame_flags)</selected>
+						</control>
+						<control type="radiobutton" id="522">
+							<include>skin_settings_labels</include>
+							<label>Use Back in Flags (grey by default)</label>
+							<onclick>Skin.ToggleSetting(back_flags)</onclick>
+							<selected>Skin.HasSetting(back_flags)</selected>
 						</control>
 						<control type="radiobutton" id="505">
 							<include>skin_settings_labels</include>
 							<label>$LOCALIZE[31034]</label>
 							<onclick>Skin.ToggleSetting(no_media_flags)</onclick>
 							<selected>Skin.HasSetting(no_media_flags)</selected>
-						</control>
-						<control type="radiobutton" id="506">
-							<include>skin_settings_labels</include>
-							<label>$LOCALIZE[31035]</label>
-							<onclick>Skin.ToggleSetting(movieoverlays)</onclick>
-							<selected>Skin.HasSetting(movieoverlays)</selected>
 						</control>
 						<control type="radiobutton" id="507">
 							<include>skin_settings_labels</include>
