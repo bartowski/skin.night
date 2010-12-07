@@ -1,3 +1,8 @@
+12/6/2010
+  -Fanart in 'Info' screen
+  -New Flags
+  -More little fixes due to unicode font switch
+
 11/17/2010
   -Fixed Jukebox label error
   -More converting Poster glows to white

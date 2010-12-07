@@ -9,9 +9,7 @@
 		<animation effect="fade" start="100" end="0" time="600" delay="200" >WindowClose</animation>
 			<control type="image">
 				<include>Dimensions_Fullscreen</include>
-				<texture>backdrops/curtains.png</texture>
-				<aspectratio>stretch</aspectratio>
-				<fadetime>400</fadetime>
+				<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture> 
 			</control>
 			<control type="image">
 				<include>Dimensions_Fullscreen</include>
@@ -120,8 +118,37 @@
 						<orientation>horizontal</orientation>
 						<include>VisibleFadeEffect</include>
 						<visible>!Control.IsVisible(50)</visible>
-						<include condition="!Skin.HasSetting(grey_flags)">color_flags</include>
-						<include condition="Skin.HasSetting(grey_flags)">grey_flags</include>
+						<include>back_flags</include>
+						<include>Animation_ZoomInZoomOut</include>
+					</control>
+					<control type="grouplist">
+						<description>Media Codec Flagging Images</description>
+						<posx>0</posx>
+						<posy>600</posy>
+						<width>490</width>
+						<align>center</align>
+						<itemgap>0</itemgap>
+						<orientation>horizontal</orientation>
+						<include>VisibleFadeEffect</include>
+						<visible>!Control.IsVisible(50)</visible>
+						<include condition="!Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags) + !Skin.HasSetting(flat_flags)">color_flags</include>
+						<include condition="Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags) + !Skin.HasSetting(flat_flags)">vanilla_flags</include>
+						<include condition="Skin.HasSetting(original_flags) + !Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(flat_flags)">original_flags</include>
+						<include condition="Skin.HasSetting(flat_flags) + !Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags)">flat_flags</include>
+						<include>Animation_ZoomInZoomOut</include>
+					</control>
+					<control type="grouplist">
+						<description>Media Codec Flagging Images</description>
+						<posx>0</posx>
+						<posy>600</posy>
+						<width>490</width>
+						<align>center</align>
+						<itemgap>0</itemgap>
+						<orientation>horizontal</orientation>
+						<include>VisibleFadeEffect</include>
+						<visible>!Control.IsVisible(50)</visible>
+						<include>frame_flags</include>
+						<include>Animation_ZoomInZoomOut</include>
 					</control>
 					<control type="textbox"><!-- Plot and TV -->
 						<visible>Container.Content(movies)</visible>

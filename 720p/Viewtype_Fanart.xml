@@ -439,17 +439,43 @@
 					<include>Animation_Viewtype_Panel_BottomArea</include>
 				</control>
 				<control type="grouplist">
-					<visible>Container.Content(movies) + ![Player.HasAudio + !SubString(Window(10025).Property(TvTunesIsAlive),True)] + !Skin.HasSetting(no_media_flags)</visible>
+					<visible>Container.Content(movies) + Skin.HasSetting(back_flags) + ![Player.HasAudio + !SubString(Window(10025).Property(TvTunesIsAlive),True)] + !Skin.HasSetting(no_media_flags)</visible>
 					<description>Media Codec Flagging Images</description>
 					<posx>20</posx>
-					<posy>680</posy>
+					<posy>674</posy>
 					<width>540</width>
 					<align>center</align>
 					<itemgap>0</itemgap>
 					<orientation>horizontal</orientation>
-					<include condition="!Skin.HasSetting(grey_flags)">color_flags</include>
-					<include condition="Skin.HasSetting(grey_flags)">grey_flags</include>
-					<include>Animation_Viewtype_Panel_BottomArea</include>
+					<include>back_flags</include>
+					<include>Animation_ZoomInZoomOut</include>
+				</control>
+				<control type="grouplist">
+					<visible>Container.Content(movies) + ![Player.HasAudio + !SubString(Window(10025).Property(TvTunesIsAlive),True)] + !Skin.HasSetting(no_media_flags)</visible>
+					<description>Media Codec Flagging Images</description>
+					<posx>20</posx>
+					<posy>674</posy>
+					<width>540</width>
+					<align>center</align>
+					<itemgap>0</itemgap>
+					<orientation>horizontal</orientation>
+					<include condition="!Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags) + !Skin.HasSetting(flat_flags)">color_flags</include>
+					<include condition="Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags) + !Skin.HasSetting(flat_flags)">vanilla_flags</include>
+					<include condition="Skin.HasSetting(original_flags) + !Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(flat_flags)">original_flags</include>
+					<include condition="Skin.HasSetting(flat_flags) + !Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags)">flat_flags</include>
+					<include>Animation_ZoomInZoomOut</include>
+				</control>
+				<control type="grouplist">
+					<visible>Container.Content(movies) + !Skin.HasSetting(no_frame_flags) + ![Player.HasAudio + !SubString(Window(10025).Property(TvTunesIsAlive),True)] + !Skin.HasSetting(no_media_flags)</visible>
+					<description>Media Codec Flagging Images</description>
+					<posx>20</posx>
+					<posy>674</posy>
+					<width>540</width>
+					<align>center</align>
+					<itemgap>0</itemgap>
+					<orientation>horizontal</orientation>
+					<include>frame_flags</include>
+					<include>Animation_ZoomInZoomOut</include>
 				</control>
 			</control>
 			<control type="scrollbar" id="66">

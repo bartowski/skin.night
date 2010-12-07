@@ -568,7 +568,7 @@
 					<posx>20</posx>
 					<posy>90</posy>
 					<width>600</width>
-					<height>230</height>
+					<height>238</height>
 					<align>justify</align>
 					<info>ListItem.Plot</info>
 					<font>LiberationSans_Regular_20</font>
@@ -610,7 +610,7 @@
 					<posx>20</posx>
 					<posy>120</posy>
 					<width>600</width>
-					<height>226</height>
+					<height>234</height>
 					<align>justify</align>
 					<info>ListItem.Plot</info>
 					<font>Font_3dland_plot</font>
@@ -664,17 +664,43 @@
 				<include>Poster_Next_Aired</include>
 		</control>
 		<control type="grouplist">
-			<visible>!Skin.HasSetting(3dLandscape_Fanart) + !Skin.HasSetting(no_media_flags)</visible>
+			<visible>!Skin.HasSetting(3dLandscape_Fanart) + Skin.HasSetting(back_flags) + !Skin.HasSetting(no_media_flags)</visible>
 			<description>Media Codec Flagging Images</description>
 			<posx>20</posx>
-			<posy>390</posy>
+			<posy>674</posy>
 			<width>1280</width>
 			<align>left</align>
 			<itemgap>0</itemgap>
 			<orientation>horizontal</orientation>
-			<include condition="!Skin.HasSetting(grey_flags)">color_flags</include>
-			<include condition="Skin.HasSetting(grey_flags)">grey_flags</include>
-			<include>Animation_Viewtype_3dland_Leftplot</include>
+			<include>back_flags</include>
+			<include>Animation_ZoomInZoomOut</include>
+		</control>
+		<control type="grouplist">
+			<visible>!Skin.HasSetting(3dLandscape_Fanart) + !Skin.HasSetting(no_media_flags)</visible>
+			<description>Media Codec Flagging Images</description>
+			<posx>20</posx>
+			<posy>674</posy>
+			<width>1280</width>
+			<align>left</align>
+			<itemgap>0</itemgap>
+			<orientation>horizontal</orientation>
+			<include condition="!Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags) + !Skin.HasSetting(flat_flags)">color_flags</include>
+			<include condition="Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags) + !Skin.HasSetting(flat_flags)">vanilla_flags</include>
+			<include condition="Skin.HasSetting(original_flags) + !Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(flat_flags)">original_flags</include>
+			<include condition="Skin.HasSetting(flat_flags) + !Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags)">flat_flags</include>
+			<include>Animation_ZoomInZoomOut</include>
+		</control>
+		<control type="grouplist">
+			<visible>!Skin.HasSetting(3dLandscape_Fanart) + !Skin.HasSetting(no_frame_flags) + !Skin.HasSetting(no_media_flags)</visible>
+			<description>Media Codec Flagging Images</description>
+			<posx>20</posx>
+			<posy>674</posy>
+			<width>1280</width>
+			<align>left</align>
+			<itemgap>0</itemgap>
+			<orientation>horizontal</orientation>
+			<include>frame_flags</include>
+			<include>Animation_ZoomInZoomOut</include>
 		</control>
 	</control>
 		

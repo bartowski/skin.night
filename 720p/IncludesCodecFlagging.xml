@@ -2094,6 +2094,7 @@
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<colordiffuse>FrameDiffuse</colordiffuse>
+			<visible>!IsEmpty(ListItem.VideoResolution)</visible>
 		</control>
 		<control type="image">
 			<description>Xvid Codec Image</description>
@@ -2376,6 +2377,7 @@
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<colordiffuse>FrameDiffuse</colordiffuse>
+			<visible>!IsEmpty(ListItem.AudioChannels)</visible>
 		</control>
 		<control type="image">
 			<description>dts Codec Image</description>
@@ -2530,6 +2532,7 @@
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/flag_frame.png</texture>
 			<colordiffuse>FrameDiffuse</colordiffuse>
+			<visible>!IsEmpty(ListItem.VideoAspect)</visible>
 		</control>
 	</include>
 	
@@ -2544,6 +2547,7 @@
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<colordiffuse>BackDiffuse</colordiffuse>
+			<visible>!IsEmpty(ListItem.VideoResolution)</visible>
 		</control>
 		<control type="image">
 			<description>Xvid Codec Image</description>
@@ -2826,6 +2830,7 @@
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<colordiffuse>BackDiffuse</colordiffuse>
+			<visible>!IsEmpty(ListItem.AudioChannels)</visible>
 		</control>
 		<control type="image">
 			<description>dts Codec Image</description>
@@ -2980,6 +2985,7 @@
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/back_flag.png</texture>
 			<colordiffuse>BackDiffuse</colordiffuse>
+			<visible>!IsEmpty(ListItem.VideoAspect)</visible>
 		</control>
 	</include>
 	

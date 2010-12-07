@@ -342,6 +342,18 @@
 	</control>
 		
 	<control type="grouplist">
+		<visible>Control.IsVisible(595) + Skin.HasSetting(back_flags) + Container.Content(movies) + !Skin.HasSetting(no_media_flags)</visible>
+		<description>Media Codec Flagging Images</description>
+		<posx>180</posx>
+		<posy>640</posy>
+		<width>600</width>
+		<align>center</align>
+		<itemgap>0</itemgap>
+		<orientation>horizontal</orientation>
+		<include>back_flags</include>
+		<include>Animation_ZoomInZoomOut</include>
+	</control>
+	<control type="grouplist">
 		<visible>Control.IsVisible(595) + Container.Content(movies) + !Skin.HasSetting(no_media_flags)</visible>
 		<description>Media Codec Flagging Images</description>
 		<posx>180</posx>
@@ -350,9 +362,23 @@
 		<align>center</align>
 		<itemgap>0</itemgap>
 		<orientation>horizontal</orientation>
-		<include condition="!Skin.HasSetting(grey_flags)">color_flags</include>
-		<include condition="Skin.HasSetting(grey_flags)">grey_flags</include>
-		<include>Animation_BackdropFade</include>
+		<include condition="!Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags) + !Skin.HasSetting(flat_flags)">color_flags</include>
+		<include condition="Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags) + !Skin.HasSetting(flat_flags)">vanilla_flags</include>
+		<include condition="Skin.HasSetting(original_flags) + !Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(flat_flags)">original_flags</include>
+		<include condition="Skin.HasSetting(flat_flags) + !Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags)">flat_flags</include>
+		<include>Animation_ZoomInZoomOut</include>
+	</control>
+	<control type="grouplist">
+		<visible>Control.IsVisible(595) + !Skin.HasSetting(no_frame_flags) + Container.Content(movies) + !Skin.HasSetting(no_media_flags)</visible>
+		<description>Media Codec Flagging Images</description>
+		<posx>180</posx>
+		<posy>640</posy>
+		<width>600</width>
+		<align>center</align>
+		<itemgap>0</itemgap>
+		<orientation>horizontal</orientation>
+		<include>frame_flags</include>
+		<include>Animation_ZoomInZoomOut</include>
 	</control>
 	
 	<control type="scrollbar" id="5950">

@@ -265,18 +265,44 @@
 					</control>
 			</control>
 			<control type="grouplist">
-					<visible>Container.Content(episodes) + !Skin.HasSetting(no_media_flags)</visible>
-					<description>Media Codec Flagging Images</description>
-					<posx>380</posx>
-					<posy>680</posy>
-					<width>556</width>
-					<align>center</align>
-					<itemgap>0</itemgap>
-					<orientation>horizontal</orientation>
-					<include condition="!Skin.HasSetting(grey_flags)">color_flags</include>
-					<include condition="Skin.HasSetting(grey_flags)">grey_flags</include>
-					<include>Animation_Viewtype_Episode_BottomArea</include>
-				</control>
+				<visible>Container.Content(episodes) + Skin.HasSetting(back_flags) + !Skin.HasSetting(no_media_flags)</visible>
+				<description>Media Codec Flagging Images</description>
+				<posx>380</posx>
+				<posy>674</posy>
+				<width>556</width>
+				<align>center</align>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<include>back_flags</include>
+				<include>Animation_ZoomInZoomOut</include>
+			</control>
+			<control type="grouplist">
+				<visible>Container.Content(episodes) + !Skin.HasSetting(no_media_flags)</visible>
+				<description>Media Codec Flagging Images</description>
+				<posx>380</posx>
+				<posy>674</posy>
+				<width>556</width>
+				<align>center</align>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<include condition="!Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags) + !Skin.HasSetting(flat_flags)">color_flags</include>
+				<include condition="Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags) + !Skin.HasSetting(flat_flags)">vanilla_flags</include>
+				<include condition="Skin.HasSetting(original_flags) + !Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(flat_flags)">original_flags</include>
+				<include condition="Skin.HasSetting(flat_flags) + !Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags)">flat_flags</include>
+				<include>Animation_ZoomInZoomOut</include>
+			</control>
+			<control type="grouplist">
+				<visible>Container.Content(episodes) + !Skin.HasSetting(no_frame_flags) + !Skin.HasSetting(no_media_flags)</visible>
+				<description>Media Codec Flagging Images</description>
+				<posx>380</posx>
+				<posy>674</posy>
+				<width>556</width>
+				<align>center</align>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<include>frame_flags</include>
+				<include>Animation_ZoomInZoomOut</include>
+			</control>
 			<control type="image">
 				<visible>Container.Content(episodes) | Window.IsActive(videoplaylist)</visible>
 				<posx>0</posx>

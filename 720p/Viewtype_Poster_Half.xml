@@ -98,7 +98,7 @@
 						<posy>131</posy>
 						<width>162</width>
 						<height>241</height>
-						<texture background="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
+						<texture background="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.icon]</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 					</control>
@@ -118,7 +118,7 @@
 						<posy>368</posy>
 						<width>162</width>
 						<height>241</height>
-						<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
+						<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.icon]</texture>
 						<fadetime>200</fadetime>
 						<colordiffuse>89FFFFFF</colordiffuse>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -208,7 +208,7 @@
 						<posy>90</posy>
 						<width>211</width>
 						<height>300</height>
-						<texture background="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
+						<texture background="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.icon]</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -235,7 +235,7 @@
 						<posy>386</posy>
 						<width>211</width>
 						<height>300</height>
-						<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
+						<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.icon]</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -501,16 +501,42 @@
 				<include>Animation_ZoomInZoomOut</include>
 			</control>
 			<control type="grouplist">
-				<visible>Control.IsVisible(598) + Container.Content(movies) + !Skin.HasSetting(no_media_flags) + !Control.IsVisible(6598)</visible>
+				<visible>Control.IsVisible(598) + Skin.HasSetting(back_flags) + Container.Content(movies) + !Skin.HasSetting(no_media_flags) + !Control.IsVisible(6598)</visible>
 				<description>Media Codec Flagging Images</description>
 				<posx>20</posx>
-				<posy>680</posy>
+				<posy>674</posy>
 				<width>1280</width>
 				<align>left</align>
 				<itemgap>0</itemgap>
 				<orientation>horizontal</orientation>
-				<include condition="!Skin.HasSetting(grey_flags)">color_flags</include>
-				<include condition="Skin.HasSetting(grey_flags)">grey_flags</include>
+				<include>back_flags</include>
+				<include>Animation_ZoomInZoomOut</include>
+			</control>
+			<control type="grouplist">
+				<visible>Control.IsVisible(598) + Container.Content(movies) + !Skin.HasSetting(no_media_flags) + !Control.IsVisible(6598)</visible>
+				<description>Media Codec Flagging Images</description>
+				<posx>20</posx>
+				<posy>674</posy>
+				<width>1280</width>
+				<align>left</align>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<include condition="!Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags) + !Skin.HasSetting(flat_flags)">color_flags</include>
+				<include condition="Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags) + !Skin.HasSetting(flat_flags)">vanilla_flags</include>
+				<include condition="Skin.HasSetting(original_flags) + !Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(flat_flags)">original_flags</include>
+				<include condition="Skin.HasSetting(flat_flags) + !Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags)">flat_flags</include>
+				<include>Animation_ZoomInZoomOut</include>
+			</control>
+			<control type="grouplist">
+				<visible>Control.IsVisible(598) + !Skin.HasSetting(no_frame_flags) + Container.Content(movies) + !Skin.HasSetting(no_media_flags) + !Control.IsVisible(6598)</visible>
+				<description>Media Codec Flagging Images</description>
+				<posx>20</posx>
+				<posy>674</posy>
+				<width>1280</width>
+				<align>left</align>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<include>frame_flags</include>
 				<include>Animation_ZoomInZoomOut</include>
 			</control>
 			<control type="image"> 

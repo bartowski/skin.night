@@ -20,7 +20,7 @@
 		</control>
 		<control type="largeimage" id="668">
 			<include>Dimensions_Fullscreen</include>
-			<texture>$INFO[listitem.filenameandpath]</texture>
+			<texture>$INFO[listitem.Icon]</texture>
 			<fadetime>400</fadetime>
 			<aspectratio align="top">keep</aspectratio>
 			<visible>[Control.IsVisible(50) | Control.IsVisible(51)] + [substring(listitem.filenameandpath,jpg) | substring(listitem.filenameandpath,bmp) | substring(listitem.filenameandpath,png) | substring(listitem.filenameandpath,tif) | substring(listitem.filenameandpath,ico) | substring(listitem.filenameandpath,pcx) | substring(listitem.filenameandpath,tga)]</visible>

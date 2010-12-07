@@ -157,6 +157,8 @@
 	<color name="poster_glow">FFFFFFFF</color>
 	<color name="episode_view_unfocused">ff959494</color>
 	<color name="episode_view_focus">FF67ffff</color>
-	
+	<color name="FlagDiffuse">FFFFFFFF</color>
+	<color name="FrameDiffuse">FFFFFFFF</color>
+	<color name="BackDiffuse">FF161616</color>
 
 </colors>

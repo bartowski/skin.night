@@ -889,9 +889,10 @@
 			</control>
 		</control>	
 			
+	<control type="group">
+		<animation effect="slide" start="0,0" end="-1000,0" time="600" delay="2800" condition="Container.Content(movies) + ![Container(59).OnNext | Container(59).OnPrevious]">Conditional</animation>	
 			<control type="grouplist">
-				<visible>Control.IsVisible(59) + [Container.Content(movies) | Container.Content(episodes)] + !Skin.HasSetting(no_media_flags) + ![Player.HasAudio + !SubString(Window(10025).Property(TvTunesIsAlive),True)]</visible>
-				<animation effect="slide" start="0,0" end="-1000,0" time="600" delay="2800" condition="Container.Content(movies) + ![Container(59).OnNext | Container(59).OnPrevious]">Conditional</animation>
+				<visible>Control.IsVisible(59) + Skin.HasSetting(back_flags) + [Container.Content(movies) | Container.Content(episodes)] + !Skin.HasSetting(no_media_flags) + ![Player.HasAudio + !SubString(Window(10025).Property(TvTunesIsAlive),True)]</visible>
 				<description>Media Codec Flagging Images</description>
 				<posx>0</posx>
 				<posy>680</posy>
@@ -899,10 +900,37 @@
 				<align>center</align>
 				<itemgap>0</itemgap>
 				<orientation>horizontal</orientation>
-				<include condition="!Skin.HasSetting(grey_flags)">color_flags</include>
-				<include condition="Skin.HasSetting(grey_flags)">grey_flags</include>
-				<include>Animation_Viewtype_Panel_BottomArea</include>
+				<include>back_flags</include>
+				<include>Animation_ZoomInZoomOut</include>
 			</control>
+			<control type="grouplist">
+				<visible>Control.IsVisible(59) + [Container.Content(movies) | Container.Content(episodes)] + !Skin.HasSetting(no_media_flags) + ![Player.HasAudio + !SubString(Window(10025).Property(TvTunesIsAlive),True)]</visible>
+				<description>Media Codec Flagging Images</description>
+				<posx>0</posx>
+				<posy>680</posy>
+				<width>1280</width>
+				<align>center</align>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<include condition="!Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags) + !Skin.HasSetting(flat_flags)">color_flags</include>
+				<include condition="Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags) + !Skin.HasSetting(flat_flags)">vanilla_flags</include>
+				<include condition="Skin.HasSetting(original_flags) + !Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(flat_flags)">original_flags</include>
+				<include condition="Skin.HasSetting(flat_flags) + !Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags)">flat_flags</include>
+				<include>Animation_ZoomInZoomOut</include>
+			</control>
+			<control type="grouplist">
+				<visible>Control.IsVisible(59) + !Skin.HasSetting(no_frame_flags) + [Container.Content(movies) | Container.Content(episodes)] + !Skin.HasSetting(no_media_flags) + ![Player.HasAudio + !SubString(Window(10025).Property(TvTunesIsAlive),True)]</visible>
+				<description>Media Codec Flagging Images</description>
+				<posx>0</posx>
+				<posy>680</posy>
+				<width>1280</width>
+				<align>center</align>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<include>frame_flags</include>
+				<include>Animation_ZoomInZoomOut</include>
+			</control>
+	</control>
 		
 		<control type="scrollbar" id="69">
 			<include>Animation_ZoomInZoomOut</include>

@@ -682,16 +682,42 @@
 				<include>Animation_ZoomInZoomOut</include>
 			</control>
 			<control type="grouplist">
-				<visible>Container.Content(movies) + !Skin.HasSetting(clean_poster) + !Skin.HasSetting(no_media_flags) + !Control.IsVisible(65)</visible>
+				<visible>Container.Content(movies) + Skin.HasSetting(back_flags) + !Skin.HasSetting(clean_poster) + !Skin.HasSetting(no_media_flags) + !Control.IsVisible(65)</visible>
 				<description>Media Codec Flagging Images</description>
 				<posx>20</posx>
-				<posy>680</posy>
+				<posy>676</posy>
 				<width>1280</width>
 				<align>left</align>
 				<itemgap>0</itemgap>
 				<orientation>horizontal</orientation>
-				<include condition="!Skin.HasSetting(grey_flags)">color_flags</include>
-				<include condition="Skin.HasSetting(grey_flags)">grey_flags</include>
+				<include>back_flags</include>
+				<include>Animation_ZoomInZoomOut</include>
+			</control>
+			<control type="grouplist">
+				<visible>Container.Content(movies) + !Skin.HasSetting(clean_poster) + !Skin.HasSetting(no_media_flags) + !Control.IsVisible(65)</visible>
+				<description>Media Codec Flagging Images</description>
+				<posx>20</posx>
+				<posy>676</posy>
+				<width>1280</width>
+				<align>left</align>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<include condition="!Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags) + !Skin.HasSetting(flat_flags)">color_flags</include>
+				<include condition="Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags) + !Skin.HasSetting(flat_flags)">vanilla_flags</include>
+				<include condition="Skin.HasSetting(original_flags) + !Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(flat_flags)">original_flags</include>
+				<include condition="Skin.HasSetting(flat_flags) + !Skin.HasSetting(vanilla_flags) + !Skin.HasSetting(original_flags)">flat_flags</include>
+				<include>Animation_ZoomInZoomOut</include>
+			</control>
+			<control type="grouplist">
+				<visible>Container.Content(movies) + !Skin.HasSetting(no_frame_flags) + !Skin.HasSetting(clean_poster) + !Skin.HasSetting(no_media_flags) + !Control.IsVisible(65)</visible>
+				<description>Media Codec Flagging Images</description>
+				<posx>20</posx>
+				<posy>676</posy>
+				<width>1280</width>
+				<align>left</align>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<include>frame_flags</include>
 				<include>Animation_ZoomInZoomOut</include>
 			</control>
 			<control type="image"> 

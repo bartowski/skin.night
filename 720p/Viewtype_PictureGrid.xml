@@ -221,7 +221,7 @@
 					<posy>50</posy>
 					<width>700</width>
 					<height>500</height>
-					<texture background="true" diffuse="common/big_picture_blur_layout.png">$INFO[ListItem.FilenameAndPath]</texture>
+					<texture background="true" diffuse="common/big_picture_blur_layout.png">$INFO[ListItem.Icon]</texture>
 					<fadetime>400</fadetime>
 					<aspectratio>keep</aspectratio>
 				</control>

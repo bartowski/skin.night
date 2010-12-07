@@ -2357,7 +2357,7 @@
 						<posx>290</posx>
 						<posy>20</posy>
 						<width>860</width>
-						<height>600</height>
+						<height>640</height>
 						<itemgap>-1</itemgap>
 						<pagecontrol>61</pagecontrol>
 						<onleft>9000</onleft>
@@ -2398,20 +2398,47 @@
 						<control type="radiobutton" id="519">
 							<include>skin_settings_labels</include>
 							<label>Use Original Type Flags</label>
+							<onclick>Skin.Reset(vanilla_flags)</onclick> 
+							<onclick>Skin.Reset(flat_flags)</onclick> 
 							<onclick>Skin.ToggleSetting(original_flags)</onclick>
 							<selected>Skin.HasSetting(original_flags)</selected>
+						</control>
+						<control type="image" id="5190">
+							<width>311</width>
+							<height>44</height>
+							<texture>flagging/original.png</texture>
+							<animation effect="slide" start="0,0" end="30,0" time="0" condition="true">Conditional</animation>
+							<visible>Control.HasFocus(519)</visible>
 						</control>
 						<control type="radiobutton" id="504">
 							<include>skin_settings_labels</include>
 							<label>Use Vanilla Type Flags (white by default)</label>
+							<onclick>Skin.Reset(original_flags)</onclick> 
+							<onclick>Skin.Reset(flat_flags)</onclick> 
 							<onclick>Skin.ToggleSetting(vanilla_flags)</onclick>
 							<selected>Skin.HasSetting(vanilla_flags)</selected>
+						</control>
+						<control type="image" id="5040">
+							<width>311</width>
+							<height>44</height>
+							<texture>flagging/vanilla.png</texture>
+							<animation effect="slide" start="0,0" end="30,0" time="0" condition="true">Conditional</animation>
+							<visible>Control.HasFocus(504)</visible>
 						</control>
 						<control type="radiobutton" id="520">
 							<include>skin_settings_labels</include>
 							<label>Use Flat Type Flags (white by default)</label>
+							<onclick>Skin.Reset(original_flags)</onclick> 
+							<onclick>Skin.Reset(vanilla_flags)</onclick> 
 							<onclick>Skin.ToggleSetting(flat_flags)</onclick>
 							<selected>Skin.HasSetting(flat_flags)</selected>
+						</control>
+						<control type="image" id="5200">
+							<width>311</width>
+							<height>44</height>
+							<texture>flagging/flat.png</texture>
+							<animation effect="slide" start="0,0" end="30,0" time="0" condition="true">Conditional</animation>
+							<visible>Control.HasFocus(520)</visible>
 						</control>
 						<control type="radiobutton" id="521">
 							<include>skin_settings_labels</include>
@@ -2419,17 +2446,37 @@
 							<onclick>Skin.ToggleSetting(no_frame_flags)</onclick>
 							<selected>Skin.HasSetting(no_frame_flags)</selected>
 						</control>
+						<control type="image" id="5210">
+							<width>311</width>
+							<height>44</height>
+							<texture>flagging/disable.png</texture>
+							<animation effect="slide" start="0,0" end="30,0" time="0" condition="true">Conditional</animation>
+							<visible>Control.HasFocus(521)</visible>
+						</control>
 						<control type="radiobutton" id="522">
 							<include>skin_settings_labels</include>
 							<label>Use Back in Flags (grey by default)</label>
 							<onclick>Skin.ToggleSetting(back_flags)</onclick>
 							<selected>Skin.HasSetting(back_flags)</selected>
 						</control>
+						<control type="image" id="5220">
+							<width>311</width>
+							<height>44</height>
+							<texture>flagging/use_back.png</texture>
+							<animation effect="slide" start="0,0" end="30,0" time="0" condition="true">Conditional</animation>
+							<visible>Control.HasFocus(522)</visible>
+						</control>
 						<control type="radiobutton" id="505">
 							<include>skin_settings_labels</include>
 							<label>$LOCALIZE[31034]</label>
 							<onclick>Skin.ToggleSetting(no_media_flags)</onclick>
 							<selected>Skin.HasSetting(no_media_flags)</selected>
+						</control>
+						<control type="radiobutton" id="506">
+							<include>skin_settings_labels</include>
+							<label>$LOCALIZE[31035]</label>
+							<onclick>Skin.ToggleSetting(movieoverlays)</onclick>
+							<selected>Skin.HasSetting(movieoverlays)</selected>
 						</control>
 						<control type="radiobutton" id="507">
 							<include>skin_settings_labels</include>
@@ -2527,7 +2574,7 @@
 							<onclick>XBMC.RunScript(script.logo-downloader,mode=bulk,clearart=False,logo=True,showthumb=False)</onclick>
 						</control>
 					</control>
-						<control type="textbox" id="518">
+						<!--<control type="textbox" id="518">
 							<posx>330</posx>
 							<posy>586</posy>
 							<width>830</width>
@@ -2537,7 +2584,7 @@
 							<font>LiberationSans_Regular_18</font>
 							<textcolor>white</textcolor>
 							<visible>Container(9000).Hasfocus(5)</visible>
-						</control>
+						</control>-->
 				</control>
 				<control type="group"><!--mcborzu Disable Views-->
 					<control type="grouplist" id="9006">
