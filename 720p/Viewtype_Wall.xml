@@ -289,7 +289,7 @@
 						<info>ListItem.Plot</info>
 						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
-						<autoscroll time="2500" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+						<autoscroll time="2500" delay="5000" repeat="5000">Skin.HasSetting(autoscroll) + !Window.IsActive(videofiles)</autoscroll
 						<include>Animation_Viewtype_Wall_Plot</include>
 					</control>
 			</control>

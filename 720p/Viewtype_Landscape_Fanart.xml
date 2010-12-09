@@ -216,7 +216,7 @@
 			<font>LiberationSans_Regular_20</font>
 			<textcolor>white</textcolor>
 			<label>[B]$LOCALIZE[20373] $INFO[ListItem.Season][/B]</label>
-			<animation effect="slide" start="0,0" end="0,-40" time="0" condition="IsEmpty(Control.GetLabel(37015)) + IsEmpty(Control.GetLabel(39015))">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-40" time="0" condition="IsEmpty(Control.GetLabel(37015)) + IsEmpty(Control.GetLabel(49015))">Conditional</animation>
 			<visible>Container.Content(episodes) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 		</control>
 	</control>

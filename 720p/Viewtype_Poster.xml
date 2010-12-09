@@ -479,7 +479,7 @@
 			<width>600</width>
 			<include>Animation_ZoomInZoomOut</include>
 			<animation effect="slide" start="0,600" end="0,0" time="400" delay="3400" condition="Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + ![Container(55).OnNext | Container(55).OnPrevious]">Conditional</animation>
-			<visible>Skin.HasSetting(PosterPlus) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart)</visible>
+			<visible>Skin.HasSetting(PosterPlus) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart) + !Window.IsActive(videofiles)</visible>
 				<control type="textbox">
 					<width>600</width>
 					<height>50</height>
@@ -541,7 +541,7 @@
 			<posy>90</posy>
 			<include>Animation_ZoomInZoomOut</include>
 			<animation effect="slide" start="0,0" end="0,-40" time="0" tween="cubic" easing="inout" condition="IsEmpty(Control.GetLabel(7015))">Conditional</animation>
-			<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + [Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(Poster_Fanart) + !Player.HasVideo</visible>	
+			<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + [Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(Poster_Fanart) + !Player.HasVideo + !Window.IsActive(videofiles)</visible>	
 				<control type="label">
 					<visible>Container.Content(seasons)</visible>
 					<posx>0</posx>
