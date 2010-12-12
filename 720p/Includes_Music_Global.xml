@@ -299,7 +299,7 @@
 	<include name="Music_Global_Showcase">
 		<control type="group">
 		<include>Animation_CommonFade</include>
-		<visible>[Control.IsVisible(56) | Control.IsVisible(57) | [Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart)] | Control.IsVisible(51)] + Player.HasAudio + !Skin.HasSetting(zune_music)</visible>		
+		<visible>[Control.IsVisible(56) | [Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart)]  + Control.IsVisible(57) + Control.IsVisible(51)] + Player.HasAudio + !Skin.HasSetting(zune_music)</visible>
 			<control type="image"><!-- 1st overlay -->
 				<posx>0</posx>
 				<posy>0</posy>
