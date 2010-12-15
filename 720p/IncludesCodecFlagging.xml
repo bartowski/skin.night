@@ -6,6 +6,7 @@
 			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$INFO[ListItem.VideoResolution,flagging/video/custom/,.png]</texture>
+			<visible>!IsEmpty(ListItem.VideoResolution)</visible>
 		</control>
 		<control type="image">
 			<description>Xvid Codec Image</description>
@@ -438,6 +439,7 @@
 			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$INFO[ListItem.AudioChannels,flagging/audio/custom/,.png]</texture>
+			<visible>!IsEmpty(ListItem.AudioChannels)</visible>
 		</control>
 		<control type="image">
 			<description>dts Codec Image</description>
@@ -575,6 +577,7 @@
 			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$INFO[ListItem.VideoAspect,flagging/aspectratio/custom/,.png]</texture>
+			<visible>!IsEmpty(ListItem.VideoAspect)</visible>
 		</control>
 	</include>
 	
@@ -588,6 +591,7 @@
 			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$INFO[ListItem.VideoResolution,flagging/video/original/,.png]</texture>
+			<visible>!IsEmpty(ListItem.VideoResolution)</visible>
 		</control>
 		<control type="image">
 			<description>Xvid Codec Image</description>
@@ -839,6 +843,7 @@
 			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$INFO[ListItem.AudioChannels,flagging/audio/original/,.png]</texture>
+			<visible>!IsEmpty(ListItem.AudioChannels)</visible>
 		</control>
 		<control type="image">
 			<description>dts Codec Image</description>
@@ -976,6 +981,7 @@
 			<height>40</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$INFO[ListItem.VideoAspect,flagging/aspectratio/original/,.png]</texture>
+			<visible>!IsEmpty(ListItem.VideoAspect)</visible>
 		</control>
 	</include>
 	
@@ -990,6 +996,7 @@
 			<aspectratio>keep</aspectratio>
 			<texture>$INFO[ListItem.VideoResolution,flagging/video/vanilla/,.png]</texture>
 			<colordiffuse>flagicon</colordiffuse>
+			<visible>!IsEmpty(ListItem.VideoResolution)</visible>
 		</control>
 		<control type="image">
 			<description>Xvid Codec Image</description>
@@ -1475,6 +1482,7 @@
 			<aspectratio>keep</aspectratio>
 			<texture>$INFO[ListItem.AudioChannels,flagging/audio/vanilla/,.png]</texture>
 			<colordiffuse>flagicon</colordiffuse>
+			<visible>!IsEmpty(ListItem.AudioChannels)</visible>
 		</control>
 		<control type="image">
 			<description>dts Codec Image</description>
@@ -1629,6 +1637,7 @@
 			<aspectratio>keep</aspectratio>
 			<texture>$INFO[ListItem.VideoAspect,flagging/aspectratio/vanilla/,.png]</texture>
 			<colordiffuse>flagicon</colordiffuse>
+			<visible>!IsEmpty(ListItem.VideoAspect)</visible>
 		</control>
 	</include>
 	
@@ -1643,6 +1652,7 @@
 			<aspectratio>keep</aspectratio>
 			<texture>$INFO[ListItem.VideoResolution,flagging/video/flat/,.png]</texture>
 			<colordiffuse>flagicon</colordiffuse>
+			<visible>!IsEmpty(ListItem.VideoResolution)</visible>
 		</control>
 		<control type="image">
 			<description>Xvid Codec Image</description>
@@ -1925,6 +1935,7 @@
 			<aspectratio>keep</aspectratio>
 			<texture>$INFO[ListItem.AudioChannels,flagging/audio/flat/,.png]</texture>
 			<colordiffuse>flagicon</colordiffuse>
+			<visible>!IsEmpty(ListItem.AudioChannels)</visible>
 		</control>
 		<control type="image">
 			<description>dts Codec Image</description>
@@ -2079,6 +2090,7 @@
 			<aspectratio>keep</aspectratio>
 			<texture>$INFO[ListItem.VideoAspect,flagging/aspectratio/flat/,.png]</texture>
 			<colordiffuse>flagicon</colordiffuse>
+			<visible>!IsEmpty(ListItem.VideoAspect)</visible>
 		</control>
 	</include>
 	

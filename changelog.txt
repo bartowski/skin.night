@@ -1,3 +1,6 @@
+12/13/2010
+  -Redid 16x9 view
+
 12/6/2010
   -Fanart in 'Info' screen
   -New Flags

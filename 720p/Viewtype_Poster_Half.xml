@@ -60,7 +60,7 @@
 			<focusposition>0</focusposition>
 			<scrolltime>400</scrolltime>
 			<preloaditems>2</preloaditems>
-			<pagecontrol>65</pagecontrol>
+			<pagecontrol>6598</pagecontrol>
 			<include>Animation_ZoomInZoomOut</include>
 			<camera x="1340" y="380" />
 			<animation effect="rotatey" center="50" start="12" end="10" time="0" condition="true">Conditional</animation>

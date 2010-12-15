@@ -732,6 +732,16 @@
 						<label>208</label>
 						<onclick>Dialog.Close(movieinformation)</onclick> 
 						<onclick>PlayMedia($INFO[ListItem.FileNameAndPath])</onclick> 
+						<visible>![system.hasaddon(script.cinema.experience) + Container.Content(movies)]</visible>
+					</control>
+					<control type="button" id="13">
+						<description>Home Theatre</description>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label>$LOCALIZE[31212]</label>
+						<onclick>Playlist.Clear</onclick>
+						<onclick>Dialog.Close(MovieInformation)</onclick>
+						<onclick>XBMC.RunScript(script.cinema.experience)</onclick>
+						<visible>system.hasaddon(script.cinema.experience) + Container.Content(movies)</visible>
 					</control>
 					<control type="button" id="5">
 						<description>Cast/Review</description>
@@ -759,17 +769,8 @@
 						<label>20410</label>
 						<visible>!IsEmpty(ListItem.Trailer)</visible>
 					</control>
-					<control type="button" id="13">
-						<description>Play Trailer</description>
-						<include>ButtonInfoDialogsCommonValues</include>
-						<label>$LOCALIZE[31212]</label>
-						<onclick>Playlist.Clear</onclick>
-						<onclick>Dialog.Close(MovieInformation)</onclick>
-						<onclick>XBMC.RunScript(script.cinema.experience)</onclick>
-						<visible>Skin.HasSetting(hometheater) + Container.Content(movies)</visible>
-					</control>
 					<control type="button" id="14">
-						<description>Play Trailer</description>
+						<description>logo download</description>
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label>$LOCALIZE[31249]</label>
 						<onclick>XBMC.RunScript(script.logo-downloader,mode=solo,logo=True,clearart=True,showthumb=True,showname=$INFO[ListItem.TVShowTitle])</onclick>
