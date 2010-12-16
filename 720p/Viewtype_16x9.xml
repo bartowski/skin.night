@@ -89,6 +89,22 @@
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 							<visible>Skin.HasSetting(ClearTitle) + Container.Content(tvshows)</visible>
 						</control>
+						<control type="image">
+							<posx>372</posx>
+							<posy>200</posy>
+							<width>70</width>
+							<height>53</height>
+							<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+							<visible>Skin.HasSetting(movieoverlays) + Container.Content(movies) + !IsEmpty(ListItem.Overlay)</visible>
+						</control>
+						<control type="image">
+							<posx>372</posx>
+							<posy>200</posy>
+							<width>70</width>
+							<height>53</height>
+							<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+							<visible>Skin.HasSetting(tvoverlays) + !Container.Content(movies) + !IsEmpty(ListItem.Overlay)</visible>
+						</control>
 				</control>
 			</itemlayout>
 			<focusedlayout width="520" height="600">
@@ -168,6 +184,22 @@
 							<fadetime>300</fadetime>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 							<visible>Skin.HasSetting(ClearTitle) + Container.Content(tvshows)</visible>
+						</control>
+						<control type="image">
+							<posx>484</posx>
+							<posy>260</posy>
+							<width>86</width>
+							<height>65</height>
+							<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+							<visible>Skin.HasSetting(movieoverlays) + Container.Content(movies) + !IsEmpty(ListItem.Overlay)</visible>
+						</control>
+						<control type="image">
+							<posx>362</posx>
+							<posy>194</posy>
+							<width>86</width>
+							<height>65</height>
+							<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+							<visible>Skin.HasSetting(tvoverlays) + !Container.Content(movies) + !IsEmpty(ListItem.Overlay)</visible>
 						</control>
 				</control>	
 			</focusedlayout>

@@ -1,3 +1,10 @@
+12/15/2010
+  -Season Fanart now shows on season level
+  -Now non-effecting buttons show on 'Info' screen in Kiosk mode
+  -Added Watched Flags to 16x9
+  -"Home Theatre" now works by default no setting to check, and overrides the play button is installed
+  -Launcher code now updated for "Advanced Launcher"
+
 12/13/2010
   -Redid 16x9 view
 

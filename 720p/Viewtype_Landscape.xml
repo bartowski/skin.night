@@ -313,7 +313,7 @@
 					<visible>Skin.HasSetting(tvoverlays) + Skin.HasSetting(TVPosters) + Container.Content(tvshows) + !IsEmpty(ListItem.Overlay) + !Skin.HasSetting(landscape_jpg)</visible>
 				</control>
 				<control type="label"><!-- Episode Description -->
-					<visible>Container.Content(episodes)</visible>
+					<visible>Container.Content(episodes) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 					<posx>5</posx>
 					<posy>362</posy>
 					<width>500</width>
