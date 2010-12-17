@@ -95,7 +95,24 @@
 				<label>$INFO[Container.ViewMode]</label>
 				<onclick>Container.NextViewMode</onclick>
 			</control>
-			
+			<control type="togglebutton" id="25">
+				<description>Toggle Launcher Plot</description>
+				<include>WindowMenuButton</include>
+				<label>Show Plot</label>
+				<altlabel>Disable Plot</altlabel>
+				<onclick>Skin.ToggleSetting(launcher_plot)</onclick>
+				<selected>Skin.HasSetting(launcher_plot)</selected>
+				<visible>Control.IsVisible(53) + [Window.IsActive(Programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)]</visible>
+			</control>
+			<control type="togglebutton" id="26">
+				<description>Toggle Launcher Plot</description>
+				<include>WindowMenuButton</include>
+				<label>Show Plot</label>
+				<altlabel>Disable Plot</altlabel>
+				<onclick>Skin.ToggleSetting(launcher_plot_poster)</onclick>
+				<selected>Skin.HasSetting(launcher_plot_poster)</selected>
+				<visible>Control.IsVisible(55) + [Window.IsActive(Programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)]</visible>
+			</control>
 		</control>
 
 		<control type="grouplist">
@@ -106,6 +123,12 @@
 				<include>WindowMenuLabel</include>
 				<!-- LOC -->
 				<label>$LOCALIZE[31088]</label>
+			</control>
+			<control type="button" id="41">
+				<include>WindowMenuLabel</include>
+				<!-- LOC -->
+				<label>Plot</label>
+				<visible>[Control.IsVisible(53) | Control.IsVisible(55)] + [Window.IsActive(Programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)]</visible>
 			</control>
 		</control>
 	</control>

@@ -568,7 +568,7 @@
 					<posx>20</posx>
 					<posy>90</posy>
 					<width>600</width>
-					<height>238</height>
+					<height>234</height>
 					<align>justify</align>
 					<info>ListItem.Plot</info>
 					<font>LiberationSans_Regular_20</font>
@@ -576,6 +576,7 @@
 					<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 					<animation effect="slide" start="0,0" end="0,-26" time="0" condition="IsEmpty(ListItem.Year)">Conditional</animation>
 					<animation effect="slide" start="0,0" end="0,-52" time="0" condition="IsEmpty(ListItem.genre) + IsEmpty(ListItem.Year)">Conditional</animation>
+					<visible>Skin.HasSetting(launcher_plot)</visible>
 				</control>
 		</control>
 		<control type="group">

@@ -24,32 +24,7 @@
 				<aspectratio>stretch</aspectratio>
 				<include>Animation_BackdropFade</include>
 			</control>
-			<control type="label"><!--Big Title-->
-				<visible>![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)]</visible>
-				<posx>10</posx>
-				<posy>0</posy>
-				<width>1200</width>
-				<height>50</height>
-				<aligny>center</aligny>
-				<font>LiberationSans_Regular_40</font>
-				<textcolor>mainblue</textcolor>
-				<label>[B]$INFO[ListItem.Label][/B]</label>
-			</control>
-			<control type="label"><!--Big Title-->
-				<visible>Container.Content(movies) + SubString(ListItem.Icon,DefaultFolderBack.png,Left) + !Window.IsVisible(VideoFiles)</visible>
-				<animation effect="slide" start="0,0" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(55) + Container.Content(movies) + SubString(ListItem.Icon,DefaultFolderBack.png,Left)">Conditional</animation>
-				<posx>0</posx>
-				<posy>235</posy>
-				<width>1280</width>
-				<height>50</height>
-				<align>center</align>
-				<font>Font_Bartowski_BigMusic</font>
-				<shadowcolor>678b8b8b</shadowcolor>
-				<textcolor>678b8b8b</textcolor>
-				<label>$LOCALIZE[31235]</label>
-				<include>Animation_Bartowski_Context_Zoom</include>
-			</control>
-	</control>
+		</control>
 		
 		
 		<control type="fixedlist" id="55">
@@ -368,6 +343,17 @@
 				<posx>0</posx>
 				<posy>0</posy>
 				<include>Animation_ZoomInZoomOut</include>
+					<control type="label"><!--Big Title-->
+						<visible>![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)]</visible>
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>1200</width>
+						<height>50</height>
+						<aligny>center</aligny>
+						<font>LiberationSans_Regular_40</font>
+						<textcolor>mainblue</textcolor>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
+					</control>
 					<control type="textbox">
 						<description>Plot Movie</description>
 						<posx>340</posx>
@@ -642,7 +628,7 @@
 					<posx>20</posx>
 					<posy>90</posy>
 					<width>600</width>
-					<height>230</height>
+					<height>240</height>
 					<align>justify</align>
 					<info>ListItem.Plot</info>
 					<font>Font_3dland_plot</font>
@@ -650,6 +636,7 @@
 					<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 					<animation effect="slide" start="0,0" end="0,-26" time="0" condition="IsEmpty(ListItem.Year)">Conditional</animation>
 					<animation effect="slide" start="0,0" end="0,-52" time="0" condition="IsEmpty(ListItem.genre) + IsEmpty(ListItem.Year)">Conditional</animation>
+					<visible>Skin.HasSetting(launcher_plot_poster)</visible>
 				</control>
 		</control>
 			
