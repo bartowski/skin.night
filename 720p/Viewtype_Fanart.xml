@@ -32,20 +32,6 @@
 				<aspectratio>stretch</aspectratio>
 				<include>Animation_Viewtype_Panel_Fanart</include>
 			</control>
-			<control type="label"><!--Big Title-->
-				<visible>Container.Content(movies) + SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
-				<animation effect="slide" start="0,0" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(50) + Container.Content(movies) + SubString(ListItem.Icon,DefaultFolderBack.png,Left)">Conditional</animation>
-				<posx>0</posx>
-				<posy>135</posy>
-				<width>600</width>
-				<height>800</height>
-				<align>center</align>
-				<font>Font_Bartowski_BigMusic</font>
-				<shadowcolor>678b8b8b</shadowcolor>
-				<textcolor>678b8b8b</textcolor>
-				<label>$LOCALIZE[31232]</label>
-				<include>Animation_Bartowski_Context_Zoom</include>
-			</control>
 	</control>
 		
 		
