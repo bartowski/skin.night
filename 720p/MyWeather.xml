@@ -227,7 +227,7 @@
 				<width>195</width>
 				<height>300</height>
 				<!-- condition icon -->
-				<control type="image" id="35">
+				<control type="image">
 					<info>Window.Property(Day1.OutlookIcon)</info>
 					<width>128</width>
 					<height>128</height>
@@ -246,7 +246,7 @@
 					<align>center</align>
 				</control>
 				<!-- condition -->
-				<control type="label" id="34">
+				<control type="label">
 					<info>Window.Property(Day1.Outlook)</info>
 					<width>175</width>
 					<height>35</height>
@@ -314,7 +314,7 @@
 				<width>195</width>
 				<height>300</height>
 				<!-- condition icon -->
-				<control type="image" id="35">
+				<control type="image">
 					<info>Window.Property(Day2.OutlookIcon)</info>
 					<width>128</width>
 					<height>128</height>
@@ -333,7 +333,7 @@
 					<align>center</align>
 				</control>
 				<!-- condition -->
-				<control type="label" id="34">
+				<control type="label">
 					<info>Window.Property(Day2.Outlook)</info>
 					<width>175</width>
 					<height>35</height>
@@ -401,7 +401,7 @@
 				<width>195</width>
 				<height>300</height>
 				<!-- condition icon -->
-				<control type="image" id="35">
+				<control type="image">
 					<info>Window.Property(Day3.OutlookIcon)</info>
 					<width>128</width>
 					<height>128</height>
@@ -420,7 +420,7 @@
 					<align>center</align>
 				</control>
 				<!-- condition -->
-				<control type="label" id="34">
+				<control type="label">
 					<info>Window.Property(Day3.Outlook)</info>
 					<width>175</width>
 					<height>35</height>

@@ -5,7 +5,21 @@
 
 		<!-- Poster Wrap View -->
 		
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>tv-landscape/tv-background.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<include>Animation_BackdropFade</include>
+			<visible>Control.IsVisible(59) + Container.Content(episodes)</visible>
+		</control>
+		
+		
 		<include>Music_Global_TopRight_Music_Showcase</include>
+		
+		
 		
 		<control type="wraplist" id="59">
 			<posx>-300</posx>
@@ -194,8 +208,8 @@
 							<visible>Skin.HasSetting(movieoverlays) + Container.Content(movies) + !IsEmpty(ListItem.Overlay)</visible>
 						</control>
 						<control type="image">
-							<posx>362</posx>
-							<posy>194</posy>
+							<posx>484</posx>
+							<posy>260</posy>
 							<width>86</width>
 							<height>65</height>
 							<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
@@ -212,7 +226,7 @@
 			<onup>7000</onup>
 			<ondown>59</ondown>
 			<label></label>
-			<visible allowhiddenfocus="true">ControlGroup(98374).HasFocus</visible>
+			<visible allowhiddenfocus="true">ControlGroup(98374).HasFocus + Control.IsVisible(59)</visible>
 		</control>
 	</control>
 	
@@ -228,7 +242,7 @@
 		<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 		<animation effect="slide" start="900,0" end="0,0" time="400" delay="400" condition="Control.HasFocus(98374)">Conditional</animation>
 		<include>Animation_ZoomInZoomOut</include>
-		<visible>Control.HasFocus(98374)</visible>
+		<visible>Control.HasFocus(98374) + Control.IsVisible(59)</visible>
 	</control>
 		
 	<control type="group">
