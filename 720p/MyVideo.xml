@@ -16,7 +16,7 @@
 			<fadetime>400</fadetime>
 			<texture>backdrops/curtains.png</texture>
 			<include>Animation_CommonFade</include>
-			<visible>IsEmpty(ListItem.Property(Fanart_Image)) | !Control.IsVisible(54)</visible>
+			<visible>IsEmpty(ListItem.Property(Fanart_Image)) + !Control.IsVisible(54)</visible>
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
@@ -42,7 +42,7 @@
 		<include>Viewtype_Files</include>
 		<include>Viewtype_16x9</include>
 		<include>Viewtype_Poster</include>
-		<!--<include>Viewtype_Wall</include>  54  -->
+		<!--<include>Viewtype_Wall</include>-->
 		
 		<include>Trailer</include>
 		<include>Trailer_TVLandscape</include>
