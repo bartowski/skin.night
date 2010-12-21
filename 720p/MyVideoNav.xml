@@ -139,7 +139,6 @@
 		<include>Trailer_TVLandscape</include>
 		<include>Trailer_Landscape_Fanart</include>
 		<include>Trailer_16x9</include>
-		<include>Trailer_Files</include>
 		<include>Trailer_Poster</include>
 	
 	<control type="group">	
@@ -149,9 +148,12 @@
 			<include>Music_Global_LowerRight</include>
 	</control>
 		
-		<include>Global_Time_TopRight</include>
-		<include>Global_Time_LowerLeft</include>
-		<include>Global_Time_LowerRight</include>
+	<control type="group">	
+		<visible>!Player.HasVideo</visible>
+			<include>Global_Time_TopRight</include>
+			<include>Global_Time_LowerLeft</include>
+			<include>Global_Time_LowerRight</include>
+	</control>
 		
 		<include>7000_has_focus</include>
 		

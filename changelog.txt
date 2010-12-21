@@ -1,3 +1,9 @@
+12/21/2010
+  -Fixed Landscape w/Posters not showing in Season level
+  -Fixed landscape.jpg not used in "LandPanel"
+  -Now Playing window wouldn't show on some views
+  -Also time overlapped Now Playing on some views
+
 12/19/2010
   -16x9 flags global clock fix
   -"Cinema Button" no longer overides 'Play' now own button called "Cinema"

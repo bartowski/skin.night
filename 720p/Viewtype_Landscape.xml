@@ -71,8 +71,7 @@
 		<onleft>52</onleft>
 		<onright>52</onright>
 		<onup>7000</onup>
-		<ondown>2447</ondown>
-		<!--<ondown>62</ondown>-->
+		<ondown>62</ondown>
 		<pagecontrol>62</pagecontrol>
 		<viewtype label="$LOCALIZE[31052]">list</viewtype>
 		<orientation>horizontal</orientation>
@@ -80,7 +79,7 @@
 		<focusposition>2</focusposition>
 		<preloaditems>2</preloaditems>
 		<include>Animation_Viewtype_Landscape_FocusArea</include>
-		<visible>!Skin.HasSetting(no_Landscape) + [[Skin.HasSetting(landscape_jpg) + Container.Content(tvshows)] | [Skin.HasSetting(landscape_thumbs) + [Container.Content(tvshows) | Container.Content(seasons)]]] | Container.Content(episodes)</visible>
+		<visible>!Skin.HasSetting(no_Landscape) + [[Skin.HasSetting(landscape_jpg) + Container.Content(tvshows)] | [[Skin.HasSetting(landscape_thumbs) | Skin.HasSetting(TVPosters)] + [Container.Content(tvshows) | Container.Content(seasons)]]] | Container.Content(episodes)</visible>
 			<itemlayout width="250" height="225">
 				<control type="image">
 					<visible>Container.Content(tvshows) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>

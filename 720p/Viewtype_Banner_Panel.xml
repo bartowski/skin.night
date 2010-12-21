@@ -212,11 +212,24 @@
 	<control type="group">
 	<visible>Control.IsVisible(592)</visible>
 		<control type="textbox"><!--TV Plot-->
-			<visible>Container.Content(tvshows)</visible>
+			<visible>!Skin.HasSetting(library_global_clock)</visible>
 			<posx>15</posx>
 			<posy>410</posy>
 			<width>555</width>
-			<height>264</height>
+			<height>306</height>
+			<font>LiberationSans_Regular_20</font>
+			<textcolor>white</textcolor>
+			<label>$INFO[ListItem.Plot]</label>
+			<align>justify</align>
+			<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+			<include>Animation_Viewtype_Panel_BottomArea</include>
+		</control>
+		<control type="textbox"><!--TV Plot-->
+			<visible>Skin.HasSetting(library_global_clock)</visible>
+			<posx>15</posx>
+			<posy>410</posy>
+			<width>555</width>
+			<height>234</height>
 			<font>LiberationSans_Regular_20</font>
 			<textcolor>white</textcolor>
 			<label>$INFO[ListItem.Plot]</label>

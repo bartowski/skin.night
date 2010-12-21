@@ -228,7 +228,7 @@
 				</control>
 				<control type="image">
 					<posx>146</posx>
-					<posy>416</posy>
+					<posy>286</posy>
 					<width>100</width>
 					<height>76</height>
 					<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>

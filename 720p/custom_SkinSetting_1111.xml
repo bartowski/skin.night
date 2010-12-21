@@ -2380,6 +2380,7 @@
                             <label>$LOCALIZE[31044]</label> 
 							<onclick>Skin.ToggleSetting(TVPosters)</onclick> 
                             <onclick>Skin.Reset(TVBanners)</onclick> 
+							<onclick>Skin.Reset(landscape_thumbs)</onclick> 
                             <selected>Skin.HasSetting(TVPosters)</selected> 
                         </control> 
                         <control type="radiobutton" id="502"> 
@@ -2387,6 +2388,7 @@
                             <label>$LOCALIZE[31045]</label> 
                             <onclick>Skin.ToggleSetting(TVBanners)</onclick> 
                             <onclick>Skin.Reset(TVPosters)</onclick> 
+							<onclick>Skin.Reset(landscape_thumbs)</onclick> 
                             <selected>Skin.HasSetting(TVBanners)</selected> 
                         </control>
 						<control type="radiobutton" id="511">
