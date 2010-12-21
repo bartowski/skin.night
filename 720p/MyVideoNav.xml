@@ -277,15 +277,6 @@
 					<selected>Skin.HasSetting(ClearTitle)</selected>
 					<visible>Control.IsVisible(59) + Container.Content(tvshows)</visible>
 				</control>
-				<control type="togglebutton" id="34">
-					<description>Toggle MoviesFanart</description>
-					<include>WindowMenuButton</include>
-					<label>31299</label>
-					<altlabel>31300</altlabel>
-					<onclick>Skin.ToggleSetting(no_new_recent_info)</onclick>
-					<selected>Skin.HasSetting(no_new_recent_info)</selected>
-					<visible>[Control.IsVisible(52) | Control.IsVisible(59) | Control.IsVisible(633)] + Container.Content(tvshows)</visible>	
-				</control>
 				<control type="togglebutton" id="35">
 					<description>Toggle Showcase Fanart Title</description>
 					<include>WindowMenuButton</include>
@@ -352,11 +343,6 @@
 				<include>WindowMenuLabel</include>
 				<label>$LOCALIZE[31206]</label>
 				<visible>Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart)</visible>		
-			</control>
-			<control type="label">
-				<include>WindowMenuLabel</include>
-				<label>31081</label>
-				<visible>[Control.IsVisible(52) | Control.IsVisible(59) | Control.IsVisible(633)] + Container.Content(tvshows)</visible>
 			</control>
 			<control type="label">
 				<include>WindowMenuLabel</include>

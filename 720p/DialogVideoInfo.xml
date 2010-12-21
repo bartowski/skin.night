@@ -724,22 +724,21 @@
 					<ondown>50</ondown>
 					<animation effect="slide" start="0,200" end="0,0" time="400" >WindowOpen</animation>
 					<animation effect="slide" start="0,0" end="0,200" time="400" >WindowClose</animation>
+					<control type="button" id="13">
+						<description>Home Theatre</description>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label>$LOCALIZE[31212]</label>
+						<onclick>Playlist.Clear</onclick>
+						<onclick>Dialog.Close(MovieInformation)</onclick>
+						<onclick>XBMC.RunScript(script.cinema.experience)</onclick>
+						<visible>system.hasaddon(script.cinema.experience) + Container.Content(movies)</visible>
+					</control>
 					<control type="button" id="7050"> 
 						<description>Play</description>
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label>208</label>
 						<onclick>Dialog.Close(movieinformation)</onclick> 
 						<onclick>PlayMedia($INFO[ListItem.FileNameAndPath])</onclick> 
-						<visible>![system.hasaddon(script.cinema.experience) + Container.Content(movies)]</visible>
-					</control>
-					<control type="button" id="13">
-						<description>Home Theatre</description>
-						<include>ButtonInfoDialogsCommonValues</include>
-						<label>$LOCALIZE[208]</label>
-						<onclick>Playlist.Clear</onclick>
-						<onclick>Dialog.Close(MovieInformation)</onclick>
-						<onclick>XBMC.RunScript(script.cinema.experience)</onclick>
-						<visible>system.hasaddon(script.cinema.experience) + Container.Content(movies)</visible>
 					</control>
 					<control type="button" id="5">
 						<description>Cast/Review</description>

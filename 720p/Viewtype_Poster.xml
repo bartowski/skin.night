@@ -50,7 +50,7 @@
 			<animation effect="rotatey" center="50" start="12" end="10" time="0" condition="true">Conditional</animation>
 			<animation effect="zoom" start="100" end="72" time="700" condition="Skin.HasSetting(Poster_Fanart)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,160" time="700" condition="Skin.HasSetting(Poster_Fanart)">Conditional</animation>
-			<visible>!Skin.HasSetting(no_Poster) + ![Container.Content(episodes) | Container.Content(years)]</visible>
+			<visible>!Skin.HasSetting(no_Poster) + ![Container.Content(episodes) | Container.Content(years) | [Skin.HasSetting(TVBanners) + Container.Content(tvshows)]]</visible>
 			<itemlayout width="176" height="245">
 				<control type="group">
 				<posx>150</posx>

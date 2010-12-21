@@ -1,3 +1,13 @@
+12/19/2010
+  -16x9 flags global clock fix
+  -"Cinema Button" no longer overides 'Play' now own button called "Cinema"
+  -Next Aired added to 16x9 and Landscape Fanart views
+  -Updated flags, now has Unrated flag
+  -Removed "Recently Added" on TV level option  
+  -Skin now defaults on Posters for TV, Landscape now has a setting to check
+  -Changed the order settings in Movie/TV options of skin settings
+  -Poster views hidden on TV level with 'Banner' option selected
+
 12/15/2010
   -Season Fanart now shows on season level
   -Now non-effecting buttons show on 'Info' screen in Kiosk mode

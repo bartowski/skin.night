@@ -40,7 +40,7 @@
 			
 		
 		<control type="panel" id="57">
-				<visible>!Skin.HasSetting(no_LandPanel) + [[Container.Content(tvshows) + !Skin.HasSetting(TVPosters) + !Skin.HasSetting(TVBanners)] | Container.Content(episodes)]</visible>
+				<visible>!Skin.HasSetting(no_LandPanel) + [[Container.Content(tvshows) + [Skin.HasSetting(landscape_thumbs) | Skin.HasSetting(landscape_jpg)]] | Container.Content(episodes)]</visible>
 				<posx>560</posx>
 				<posy>-126</posy><!-- -105 -->
 				<width>800</width>
