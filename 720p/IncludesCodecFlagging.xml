@@ -258,7 +258,7 @@
 			<height>27</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/ratings/custom/mpaa_general.png</texture>
-			<visible>substring(listitem.mpaa,Rated G)</visible>
+			<visible>substring(listitem.mpaa,Rated G) + !substring(ListItem.FilenameAndPath,unrated)</visible>
 		</control>
 		<control type="image">
 			<description>Rated PG</description>
@@ -266,7 +266,7 @@
 			<height>27</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/ratings/custom/mpaa_pg.png</texture>
-			<visible>substring(listitem.mpaa,Rated PG) + !substring(listitem.mpaa,Rated PG-13)</visible>
+			<visible>substring(listitem.mpaa,Rated PG) + !substring(listitem.mpaa,Rated PG-13) + !substring(ListItem.FilenameAndPath,unrated)</visible>
 		</control>
 		<control type="image">
 			<description>Rated PG-13</description>
@@ -274,7 +274,7 @@
 			<height>27</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/ratings/custom/mpaa_pg13.png</texture>
-			<visible>substring(listitem.mpaa,Rated PG-13)</visible>
+			<visible>substring(listitem.mpaa,Rated PG-13) + !substring(ListItem.FilenameAndPath,unrated)</visible>
 		</control>
 		<control type="image">
 			<description>Rated R</description>
@@ -282,7 +282,7 @@
 			<height>27</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/ratings/custom/mpaa_restricted.png</texture>
-			<visible>substring(Listitem.mpaa,Rated R)</visible>
+			<visible>substring(Listitem.mpaa,Rated R) + !substring(ListItem.FilenameAndPath,unrated)</visible>
 		</control>
 		<control type="image">
 			<description>Rated NC-17</description>
@@ -290,7 +290,23 @@
 			<height>27</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/ratings/custom/mpaa_nc17.png</texture>
-			<visible>substring(Listitem.mpaa,Rated NC)</visible>
+			<visible>substring(Listitem.mpaa,Rated NC) + !substring(ListItem.FilenameAndPath,unrated)</visible>
+		</control>
+		<control type="image">
+			<description>Rated NotRated</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/custom/mpaa_notrated.png</texture>
+			<visible>IsEmpty(listitem.mpaa) + !IsEmpty(ListItem.foldername) + !substring(ListItem.FilenameAndPath,unrated)</visible>
+		</control>
+		<control type="image">
+			<description>Rated UnRated</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/custom/mpaa_unrated.png</texture>
+			<visible>substring(ListItem.FilenameAndPath,unrated) | substring(listitem.mpaa,Rated Unrated)</visible>
 		</control>
 		
 		<control type="image">
@@ -1278,7 +1294,7 @@
 			<height>27</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/ratings/vanilla/mpaa_general.png</texture>
-			<visible>substring(listitem.mpaa,Rated G)</visible>
+			<visible>substring(listitem.mpaa,Rated G) + !substring(ListItem.FilenameAndPath,unrated)</visible>
 			<colordiffuse>flagicon</colordiffuse>
 		</control>
 		<control type="image">
@@ -1287,7 +1303,7 @@
 			<height>27</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/ratings/vanilla/mpaa_pg.png</texture>
-			<visible>substring(listitem.mpaa,Rated PG) + !substring(listitem.mpaa,Rated PG-13)</visible>
+			<visible>substring(listitem.mpaa,Rated PG) + !substring(listitem.mpaa,Rated PG-13) + !substring(ListItem.FilenameAndPath,unrated)</visible>
 			<colordiffuse>flagicon</colordiffuse>
 		</control>
 		<control type="image">
@@ -1296,7 +1312,7 @@
 			<height>27</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/ratings/vanilla/mpaa_pg13.png</texture>
-			<visible>substring(listitem.mpaa,Rated PG-13)</visible>
+			<visible>substring(listitem.mpaa,Rated PG-13) + !substring(ListItem.FilenameAndPath,unrated)</visible>
 			<colordiffuse>flagicon</colordiffuse>
 		</control>
 		<control type="image">
@@ -1305,7 +1321,7 @@
 			<height>27</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/ratings/vanilla/mpaa_restricted.png</texture>
-			<visible>substring(Listitem.mpaa,Rated R)</visible>
+			<visible>substring(Listitem.mpaa,Rated R) + !substring(ListItem.FilenameAndPath,unrated)</visible>
 			<colordiffuse>flagicon</colordiffuse>
 		</control>
 		<control type="image">
@@ -1314,7 +1330,25 @@
 			<height>27</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/ratings/vanilla/mpaa_nc17.png</texture>
-			<visible>substring(Listitem.mpaa,Rated NC)</visible>
+			<visible>substring(Listitem.mpaa,Rated NC) + !substring(ListItem.FilenameAndPath,unrated)</visible>
+			<colordiffuse>flagicon</colordiffuse>
+		</control>
+		<control type="image">
+			<description>Rated NotRated</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/vanilla/mpaa_notrated.png</texture>
+			<visible>IsEmpty(listitem.mpaa) + !IsEmpty(ListItem.foldername) + !substring(ListItem.FilenameAndPath,unrated)</visible>
+			<colordiffuse>flagicon</colordiffuse>
+		</control>
+		<control type="image">
+			<description>Rated UnRated</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/vanilla/mpaa_unrated.png</texture>
+			<visible>substring(ListItem.FilenameAndPath,unrated) | substring(listitem.mpaa,Rated Unrated)</visible>
 			<colordiffuse>flagicon</colordiffuse>
 		</control>
 		
