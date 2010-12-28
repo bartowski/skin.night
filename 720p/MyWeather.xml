@@ -9,7 +9,7 @@
 		<width>1280</width>
 		<height>720</height>
 		<texture>backdrops/curtains_diffuse.png</texture>
-		<aspectratio>scale</aspectratio>
+		<aspectratio>stretch</aspectratio>
 		<include>VisibleFadeEffect</include>
 	</control>
 	<control type="multiimage">
@@ -17,8 +17,8 @@
 		<posy>0</posy>
 		<width>740</width>
 		<height>414</height>
-		<imagepath diffuse="Showcase/showcase-diffuse.png">$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]$INFO[Weather.FanartCode]</imagepath>
-		<aspectratio>scale</aspectratio>
+		<imagepath diffuse="Showcase/showcase-diffuse.png">$INFO[Skin.String(Home_Custom_Back_Weather_Folder1)]$INFO[Weather.FanartCode]</imagepath>
+		<aspectratio>stretch</aspectratio>
 		<timeperimage>5000</timeperimage>
 		<randomize>true</randomize>
 		<fadetime>2000</fadetime>

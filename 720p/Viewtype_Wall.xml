@@ -221,7 +221,7 @@
 						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Duration] $LOCALIZE[12391]</label>
 						<include>Animation_Viewtype_Wall_UnderInfo</include>
-						<visible>!IsEmpty(ListItem.Duration) + !SubString(ListItem.Duration,min) + !substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)</visible>
+						<visible>![IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left)] + !SubString(ListItem.Duration,min) + !substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)</visible>
 					</control>
 					<control type="label"><!--Duration-->
 						<posx>0</posx>
@@ -233,7 +233,7 @@
 						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Duration]</label>
 						<include>Animation_Viewtype_Wall_UnderInfo</include>
-						<visible>!IsEmpty(ListItem.Duration) + SubString(ListItem.Duration,min) + !substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)</visible>
+						<visible>SubString(ListItem.Duration,min) + !substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)</visible>
 					</control>
 					<control type="label"><!--Duration-->
 						<posx>0</posx>
@@ -249,7 +249,7 @@
 					</control>
 					<control type="label"><!--Year-->
 						<posx>0</posx>
-						<posy>166</posy>
+						<posy>168</posy>
 						<width>394</width>
 						<height>50</height>
 						<aligny>center</aligny>
@@ -273,7 +273,7 @@
 						<visible>substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)</visible>
 					</control>
 					<control type="group">
-						<posx>60</posx>
+						<posx>58</posx>
 						<posy>177</posy>
 						<include>VideoMPAAFlaggingConditions</include>
 						<include>Animation_Viewtype_Wall_UnderInfo</include>

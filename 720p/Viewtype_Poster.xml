@@ -606,7 +606,7 @@
 			<visible>Window.IsActive(Programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)</visible>
 				<control type="label">
 					<posx>0</posx>
-					<posy>40</posy>
+					<posy>45</posy>
 					<width>630</width>
 					<height>89</height>
 					<font>LiberationSans_Regular_22</font>
@@ -615,7 +615,7 @@
 				</control>
 				<control type="label">
 					<posx>0</posx>
-					<posy>64</posy>
+					<posy>69</posy>
 					<width>630</width>
 					<height>89</height>
 					<font>LiberationSans_Regular_22</font>
@@ -626,7 +626,7 @@
 				<control type="textbox">
 					<description>Plot Movie</description>
 					<posx>20</posx>
-					<posy>90</posy>
+					<posy>95</posy>
 					<width>600</width>
 					<height>240</height>
 					<align>justify</align>
@@ -634,8 +634,8 @@
 					<font>Font_3dland_plot</font>
 					<textcolor>white</textcolor>
 					<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-					<animation effect="slide" start="0,0" end="0,-26" time="0" condition="IsEmpty(ListItem.Year)">Conditional</animation>
-					<animation effect="slide" start="0,0" end="0,-52" time="0" condition="IsEmpty(ListItem.genre) + IsEmpty(ListItem.Year)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,-21" time="0" condition="IsEmpty(ListItem.Year)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,-47" time="0" condition="IsEmpty(ListItem.genre) + IsEmpty(ListItem.Year)">Conditional</animation>
 					<visible>Skin.HasSetting(launcher_plot_poster)</visible>
 				</control>
 		</control>

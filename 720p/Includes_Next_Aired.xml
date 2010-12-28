@@ -318,7 +318,7 @@
 		<posy>60</posy>
 		<include>Animation_HiddenByInfo</include>
 		<include>Animation_Viewtype_Landscape_BottomInfo</include>
-		<visible>Control.IsVisible(59) + Container.Content(tvshows) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
+		<visible>Control.IsVisible(59) + Container.Content(tvshows) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left) + !Window.IsActive(videofiles)</visible>
 			<control type="label">
 				<posx>25</posx>
 				<posy>556</posy>
