@@ -119,146 +119,133 @@
 						<visible>Skin.HasSetting(banner_jpg)</visible>
 					</control>
 					<control type="image">
-						<posx>90</posx>
+						<posx>104</posx>
 						<posy>266</posy>
-						<width>78</width>
-						<height>60</height>
+						<width>60</width>
+						<height>45</height>
 						<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+						<colordiffuse>mainblue</colordiffuse>
 						<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 					</control>
 				</control>
 			</itemlayout>
 			<focusedlayout width="390" height="515">
 				<control type="group">
-				<posx>124</posx>
-				<posy>60</posy>
-					<control type="image">
-						<posx>270</posx>
-						<posy>205</posy>
-						<width>32</width>
-						<height>107</height>
-						<texture>movie-poster/banner_case.png</texture>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<animation type="Focus" reversible="false">
-							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
-							<effect type="fade" start="0" end="100" time="600" />
-						</animation>
-					</control>
-					<control type="image">
-						<posx>266</posx>
-						<posy>306</posy>
-						<width>56</width>
-						<height>304</height>
-						<texture>movie-poster/test2.png</texture>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<animation type="Focus" reversible="false">
-							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
-							<effect type="fade" start="0" end="800" time="800" />
-						</animation>
-					</control>
-					<control type="image">
-						<posx>-150</posx>
-						<posy>204</posy>
-						<width>440</width>
-						<height>110</height>
-						<texture>movie-poster/xper_test.png</texture>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<animation type="Focus" reversible="false">
-							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
-						</animation>
-					</control>
-					<control type="image">
-						<posx>-148</posx>
-						<posy>314</posy>
-						<width>432</width>
-						<height>226</height>
-						<texture>movie-poster/mask_border2_3d1.png</texture>
-						<fadetime>200</fadetime>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<animation type="Focus" reversible="false">
-							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
-							<effect type="fade" start="0" end="50" time="600" />
-						</animation>
-					</control>
-					<control type="image">
-						<posx>-148</posx>
-						<posy>310</posy>
-						<width>436</width>
-						<height>110</height>
-						<texture flipy="true">movie-poster/xper_test.png</texture>
-						<colordiffuse>ff000000</colordiffuse>
-						<fadetime>200</fadetime>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<animation type="Focus" reversible="false">
-							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
-							<effect type="fade" start="0" end="100" time="600" />
-						</animation>
-					</control>
-					<control type="image">
-						<posx>-150</posx>
-						<posy>312</posy>
-						<width>440</width>
-						<height>110</height>
-						<texture background="true" flipy="true" diffuse="movie-poster/xper_test.png">$INFO[ListItem.Icon]</texture>
-						<fadetime>200</fadetime>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<animation type="Focus" reversible="false">
-							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
-							<effect type="fade" start="0" end="70" time="600" />
-						</animation>
-						<visible>!Skin.HasSetting(banner_jpg)</visible>
-					</control>
-					<control type="image">
-						<posx>-150</posx>
-						<posy>312</posy>
-						<width>440</width>
-						<height>110</height>
-						<texture background="true" flipy="true" diffuse="movie-poster/xper_test.png">$INFO[ListItem.path]banner.jpg</texture>
-						<fadetime>200</fadetime>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<animation type="Focus" reversible="false">
-							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
-							<effect type="fade" start="0" end="70" time="600" />
-						</animation>
-						<visible>Skin.HasSetting(banner_jpg)</visible>
-					</control>
-					<control type="image">
-						<posx>-150</posx>
-						<posy>204</posy>
-						<width>440</width>
-						<height>110</height>
-						<texture background="true" diffuse="movie-poster/xper_test.png">$INFO[ListItem.Icon]</texture>
-						<fadetime>200</fadetime>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<animation type="Focus" reversible="false">
-							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
-						</animation>
-						<visible>!Skin.HasSetting(banner_jpg)</visible>
-					</control>
-					<control type="image">
-						<posx>-150</posx>
-						<posy>204</posy>
-						<width>440</width>
-						<height>110</height>
-						<texture background="true" diffuse="movie-poster/xper_test.png">$INFO[ListItem.path]banner.jpg</texture>
-						<fadetime>200</fadetime>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<animation type="Focus" reversible="false">
-							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
-						</animation>
-						<visible>Skin.HasSetting(banner_jpg)</visible>
-					</control>
-					<control type="image">
-						<posx>210</posx>
-						<posy>270</posy>
-						<width>100</width>
-						<height>76</height>
-						<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
-						<animation type="Focus" reversible="false">
-							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
-						</animation>
-						<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
-					</control>
+					<posx>124</posx>
+					<posy>60</posy>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="auto" start="80" end="100" time="600" tween="back" easing="out" />
+					</animation>
+						<control type="image">
+							<posx>270</posx>
+							<posy>205</posy>
+							<width>32</width>
+							<height>107</height>
+							<texture>movie-poster/banner_case.png</texture>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+							<animation type="Focus" reversible="false">
+								<effect type="fade" start="0" end="100" time="600" />
+							</animation>
+						</control>
+						<control type="image">
+							<posx>266</posx>
+							<posy>306</posy>
+							<width>56</width>
+							<height>304</height>
+							<texture>movie-poster/test2.png</texture>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+							<animation type="Focus" reversible="false">
+								<effect type="fade" start="0" end="800" time="800" />
+							</animation>
+						</control>
+						<control type="image">
+							<posx>-150</posx>
+							<posy>204</posy>
+							<width>440</width>
+							<height>110</height>
+							<texture>movie-poster/xper_test.png</texture>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+						</control>
+						<control type="image">
+							<posx>-148</posx>
+							<posy>314</posy>
+							<width>432</width>
+							<height>226</height>
+							<texture>movie-poster/mask_border2_3d1.png</texture>
+							<fadetime>200</fadetime>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+							<animation type="Focus" reversible="false">
+								<effect type="fade" start="0" end="50" time="600" />
+							</animation>
+						</control>
+						<control type="image">
+							<posx>-148</posx>
+							<posy>310</posy>
+							<width>436</width>
+							<height>110</height>
+							<texture flipy="true">movie-poster/xper_test.png</texture>
+							<colordiffuse>ff000000</colordiffuse>
+							<fadetime>200</fadetime>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+							<animation type="Focus" reversible="false">
+								<effect type="fade" start="0" end="100" time="600" />
+							</animation>
+						</control>
+						<control type="image">
+							<posx>-150</posx>
+							<posy>312</posy>
+							<width>440</width>
+							<height>110</height>
+							<texture background="true" flipy="true" diffuse="movie-poster/xper_test.png">$INFO[ListItem.Icon]</texture>
+							<fadetime>200</fadetime>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+							<animation type="Focus" reversible="false">
+								<effect type="fade" start="0" end="70" time="600" />
+							</animation>
+							<visible>!Skin.HasSetting(banner_jpg)</visible>
+						</control>
+						<control type="image">
+							<posx>-150</posx>
+							<posy>312</posy>
+							<width>440</width>
+							<height>110</height>
+							<texture background="true" flipy="true" diffuse="movie-poster/xper_test.png">$INFO[ListItem.path]banner.jpg</texture>
+							<fadetime>200</fadetime>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+							<animation type="Focus" reversible="false">
+								<effect type="fade" start="0" end="70" time="600" />
+							</animation>
+							<visible>Skin.HasSetting(banner_jpg)</visible>
+						</control>
+						<control type="image">
+							<posx>-150</posx>
+							<posy>204</posy>
+							<width>440</width>
+							<height>110</height>
+							<texture background="true" diffuse="movie-poster/xper_test.png">$INFO[ListItem.Icon]</texture>
+							<fadetime>200</fadetime>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+							<visible>!Skin.HasSetting(banner_jpg)</visible>
+						</control>
+						<control type="image">
+							<posx>-150</posx>
+							<posy>204</posy>
+							<width>440</width>
+							<height>110</height>
+							<texture background="true" diffuse="movie-poster/xper_test.png">$INFO[ListItem.path]banner.jpg</texture>
+							<fadetime>200</fadetime>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+							<visible>Skin.HasSetting(banner_jpg)</visible>
+						</control>
+						<control type="image">
+							<posx>222</posx>
+							<posy>270</posy>
+							<width>80</width>
+							<height>60</height>
+							<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+							<colordiffuse>mainblue</colordiffuse>
+							<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+						</control>
 				</control>	
 			</focusedlayout>
 		</control>

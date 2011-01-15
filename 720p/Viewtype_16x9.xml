@@ -109,6 +109,7 @@
 							<width>70</width>
 							<height>53</height>
 							<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+							<colordiffuse>mainblue</colordiffuse>
 							<visible>Skin.HasSetting(movieoverlays) + Container.Content(movies) + !IsEmpty(ListItem.Overlay)</visible>
 						</control>
 						<control type="image">
@@ -117,6 +118,7 @@
 							<width>70</width>
 							<height>53</height>
 							<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+							<colordiffuse>mainblue</colordiffuse>
 							<visible>Skin.HasSetting(tvoverlays) + !Container.Content(movies) + !IsEmpty(ListItem.Overlay)</visible>
 						</control>
 				</control>
@@ -201,18 +203,20 @@
 						</control>
 						<control type="image">
 							<posx>484</posx>
-							<posy>260</posy>
+							<posy>258</posy>
 							<width>86</width>
 							<height>65</height>
 							<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+							<colordiffuse>mainblue</colordiffuse>
 							<visible>Skin.HasSetting(movieoverlays) + Container.Content(movies) + !IsEmpty(ListItem.Overlay)</visible>
 						</control>
 						<control type="image">
 							<posx>484</posx>
-							<posy>260</posy>
+							<posy>258</posy>
 							<width>86</width>
 							<height>65</height>
 							<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+							<colordiffuse>mainblue</colordiffuse>
 							<visible>Skin.HasSetting(tvoverlays) + !Container.Content(movies) + !IsEmpty(ListItem.Overlay)</visible>
 						</control>
 				</control>	

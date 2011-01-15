@@ -96,7 +96,8 @@
 							<width>70</width>
 							<height>53</height>
 							<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
-							<colordiffuse>79FFFFFF</colordiffuse>
+							<colordiffuse>mainblue</colordiffuse>
+							<animation effect="fade" start="79" end="79" time="0" condition="true">Conditional</animation>
 							<visible>Skin.HasSetting(movieoverlays) + Container.Content(movies) + !IsEmpty(ListItem.Overlay)</visible>
 						</control>
 				</control>
@@ -159,10 +160,11 @@
 						</control>
 						<control type="image">
 							<posx>104</posx>
-							<posy>224</posy>
+							<posy>220</posy>
 							<width>80</width>
 							<height>60</height>
 							<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+							<colordiffuse>mainblue</colordiffuse>
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" start="80" end="100" center="auto" time="400" tween="back" easing="out" />
 								<effect type="fade" start="0" end="100" time="400" delay="200" tween="back" easing="out" />

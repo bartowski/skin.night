@@ -66,13 +66,12 @@
 					<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 				</control>
 				<control type="image">
-					<visible>Container.Content(episodes)</visible>
-					<posx>68</posx>
-					<posy>123</posy>
-					<width>122</width>
-					<height>3</height>
-					<info>ListItem.Overlay</info>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<posx>192</posx>
+					<posy>98</posy>
+					<width>80</width>
+					<height>60</height>
+					<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+					<colordiffuse>mainblue</colordiffuse>
 					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 				</control>
 			</itemlayout>
@@ -128,13 +127,12 @@
 					</animation>
 				</control>
 				<control type="image">
-					<visible>Container.Content(episodes)</visible>
-					<posx>68</posx>
-					<posy>123</posy>
-					<width>122</width>
-					<height>3</height>
-					<info>ListItem.Overlay</info>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<posx>192</posx>
+					<posy>98</posy>
+					<width>80</width>
+					<height>60</height>
+					<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+					<colordiffuse>mainblue</colordiffuse>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="127,70" start="50" end="100" time="200" tween="cubic" easing="out" />
 						<effect type="fade" start="0" end="100" time="200" />

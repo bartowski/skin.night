@@ -182,12 +182,13 @@
 					<description>movies</description>
 					<label>$LOCALIZE[20342]</label>
 					<icon>special://skin/backgrounds/movies.jpg</icon>
-					<thumb>$INFO[Skin.String(CustomMoviesFolder)]</thumb>			
-					<onclick>XBMC.ActivateWindow(MyVideoLibrary,movietitles,return)</onclick>
+					<thumb>$INFO[Skin.String(CustomMoviesFolder)]</thumb>	
+					<include condition="!Skin.HasSetting(Custom_Movie_Link)">Movie_Regular</include>
+					<include condition="Skin.HasSetting(Custom_Movie_Link)">Movie_Playlist</include>
 					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies)</visible>
 				</item>
 				<item id="4">
-					<description>movies</description>
+					<description>HD movies</description>
 					<label>$LOCALIZE[31280]</label>
 					<icon>special://skin/backgrounds/HDmovies.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomHDMoviesFolder)]</thumb>			
@@ -468,7 +469,7 @@
 					<onup>9011</onup>
 					<ondown>9011</ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(300).HasFocus(3)</visible>
+					<visible>Container(300).HasFocus(3) | Container(300).HasFocus(4)</visible>
 					<control type="button" id="90110">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$INFO[Skin.String(Menu_Custom11_Label)]</label>

@@ -40,6 +40,12 @@
 	<include file="Viewtype_Poster_Half.xml" />
 	
 	
+	<include name="Movie_Regular">
+		<onclick>XBMC.ActivateWindow(MyVideoLibrary,movietitles,return)</onclick>
+	</include>
+	<include name="Movie_Playlist">
+		<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Custom_Movie_Path)],return)</onclick>
+	</include>
 	
 	<include name="no_tv_theme">
 		<onfocus>SetFocus(50)</onfocus>

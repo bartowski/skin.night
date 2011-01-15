@@ -223,7 +223,7 @@
 				<width>1200</width>
 				<height>50</height>
 				<align>right</align>
-				<font>Font_Bartowski_Landscape_TV_Title</font>
+				<font>LiberationSans_Regular_40</font>
 				<textcolor>mainblue</textcolor>
 				<label>[B]$INFO[ListItem.TVShowtitle][/B]</label>
 				<include>Animation_Viewtype_Landscape_RightArea</include>
@@ -258,19 +258,12 @@
 				</control>
 				<control type="image">
 					<posx>410</posx>
-					<posy>340</posy>
+					<posy>336</posy>
 					<width>120</width>
 					<height>91</height>
 					<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+					<colordiffuse>mainblue</colordiffuse>
 					<visible>Skin.HasSetting(tvoverlays) + !Skin.HasSetting(TVPosters) + Container.Content(tvshows) + !IsEmpty(ListItem.Overlay)</visible>
-				</control>
-				<control type="image">
-					<posx>410</posx>
-					<posy>340</posy>
-					<width>120</width>
-					<height>91</height>
-					<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
-					<visible>Skin.HasSetting(tvoverlays) + !Skin.HasSetting(TVPosters) + Container.Content(tvshows) + !IsEmpty(ListItem.Overlay) + Skin.HasSetting(landscape_jpg)</visible>
 				</control>
 				<control type="image">
 					<visible>Container.Content(episodes) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>

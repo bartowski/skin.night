@@ -208,7 +208,6 @@ just copy the translations from Confluence to here
   <string id="31275">Recent Episodes</string>
   <string id="31276">Play trailers Fullscreen rather than small version</string>
   <string id="31277">Show Lyrics Button in MusicOSD</string>
-  <string id="31278">Play Videos in Backgorund, Not In Small 'Now Playing' Window</string>
   <string id="31279">Slide</string>
   <string id="31280">HD Movies</string>
   <string id="31281">Ken Burns Effect - Rotate/Zoom Fanart on Home</string>
@@ -276,6 +275,8 @@ just copy the translations from Confluence to here
   
   <string id="31530">User needs episodes organized in Season folders. Fanart.jpg must reside inside Season folder</string>
   <string id="31531">Use Landscape Thumbs on TV Section</string>
+  <string id="31532">Use Visualization and Fanart together</string>
+  <string id="31533">Use Custom Playlist for Movies, best for filtering out what you dont want</string>
   
   </strings>
 

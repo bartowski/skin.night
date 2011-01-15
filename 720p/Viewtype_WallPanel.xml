@@ -295,12 +295,14 @@
 					<visible>Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)</visible>
 				</control>
 				<control type="image">
-					<posx>20</posx>
-					<posy>24</posy>
-					<width>17</width>
-					<height>20</height>
-					<texture>dialogs/files/$INFO[ListItem.Overlay]</texture>
+					<posx>8</posx>
+					<posy>20</posy>
+					<width>40</width>
+					<height>30</height>
+					<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+					<colordiffuse>mainblue</colordiffuse>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<animation effect="fade" start="60" end="60" time="0" condition="true">Conditional</animation>
 					<visible>Skin.HasSetting(movieoverlays) + Container.Content(movies) + !IsEmpty(ListItem.Overlay)</visible>
 				</control>
 			</itemlayout>
@@ -336,11 +338,12 @@
 					<visible>Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)</visible>
 				</control>
 				<control type="image">
-					<posx>20</posx>
-					<posy>24</posy>
-					<width>17</width>
-					<height>20</height>
-					<texture>dialogs/files/$INFO[ListItem.Overlay]</texture>
+					<posx>8</posx>
+					<posy>20</posy>
+					<width>40</width>
+					<height>30</height>
+					<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+					<colordiffuse>mainblue</colordiffuse>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<visible>Skin.HasSetting(movieoverlays) + Container.Content(movies) + !IsEmpty(ListItem.Overlay)</visible>
 				</control>
@@ -384,7 +387,7 @@
 				<height>50</height>
 				<aligny>center</aligny>
 				<font>LiberationSans_Regular_28</font>
-				<textcolor>mainbluedarker</textcolor>
+				<textcolor>mainblue</textcolor>
 				<label>[B]$INFO[ListItem.Label][/B]</label>
 			</control>
 			<control type="label">

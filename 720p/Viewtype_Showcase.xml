@@ -90,11 +90,12 @@
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 						</control>
 						<control type="image">
-							<posx>100</posx>
-							<posy>332</posy>
+							<posx>104</posx>
+							<posy>328</posy>
 							<width>80</width>
 							<height>60</height>
 							<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+							<colordiffuse>mainblue</colordiffuse>
 							<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 						</control>
 						<control type="image">
@@ -160,11 +161,12 @@
 						</animation>
 					</control>
 					<control type="image">
-						<posx>134</posx>
-						<posy>344</posy>
+						<posx>138</posx>
+						<posy>340</posy>
 						<width>90</width>
 						<height>68</height>
 						<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+						<colordiffuse>mainblue</colordiffuse>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="90,258" start="81" end="100" time="300" tween="back" easing="out" />
 						</animation>

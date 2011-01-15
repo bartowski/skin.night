@@ -55,12 +55,22 @@
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 						</control>
 						<control type="image">
+							<posx>158</posx>
+							<posy>264</posy>
+							<width>80</width>
+							<height>60</height>
+							<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+							<colordiffuse>mainblue</colordiffuse>
+							<visible>Skin.HasSetting(movieoverlays) + Container.Content(movies) + !IsEmpty(ListItem.Overlay)</visible>
+						</control>
+						<control type="image">
 							<posx>154</posx>
 							<posy>268</posy>
 							<width>80</width>
 							<height>60</height>
 							<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
-							<visible>[Skin.HasSetting(movieoverlays) | Skin.HasSetting(tvoverlays)] + !IsEmpty(ListItem.Overlay)</visible>
+							<colordiffuse>mainblue</colordiffuse>
+							<visible>Skin.HasSetting(movieoverlays) + !Container.Content(movies) + !IsEmpty(ListItem.Overlay)</visible>
 						</control>
 						<control type="image">
 							<posx>154</posx>
@@ -136,12 +146,22 @@
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 			</control>
 			<control type="image">
-				<posx>256</posx>
-				<posy>418</posy>
+				<posx>260</posx>
+				<posy>414</posy>
 				<width>100</width>
 				<height>76</height>
 				<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
-				<visible>[Skin.HasSetting(movieoverlays) | Skin.HasSetting(tvoverlays)] + !IsEmpty(ListItem.Overlay)</visible>
+				<colordiffuse>mainblue</colordiffuse>
+				<visible>Skin.HasSetting(movieoverlays) + Container.Content(movies) + !IsEmpty(ListItem.Overlay)</visible>
+			</control>
+			<control type="image">
+				<posx>260</posx>
+				<posy>414</posy>
+				<width>100</width>
+				<height>76</height>
+				<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+				<colordiffuse>mainblue</colordiffuse>
+				<visible>Skin.HasSetting(movieoverlays) + !Container.Content(movies) + !IsEmpty(ListItem.Overlay)</visible>
 			</control>
 			<control type="image">
 				<posx>256</posx>

@@ -117,7 +117,6 @@
 						<animation effect="fade" start="60" end="60" time="0" condition="stringcompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
 						<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
 					</control>
-					
 					<control type="label"><!-- Episode Description -->
 						<posx>5</posx>
 						<posy>330</posy>
@@ -153,22 +152,13 @@
 						<visible>Skin.HasSetting(landscape_jpg) + !Container.Content(episodes)</visible>
 					</control>
 					<control type="image">
-						<visible>Container.Content(episodes)</visible>
-						<posx>-140</posx>
-						<posy>310</posy>
-						<width>280</width>
-						<height>8</height>
-						<texture>dialogs/tv/$INFO[ListItem.Overlay]</texture>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
-					</control>
-					<control type="image">
-						<posx>90</posx>
-						<posy>258</posy>
-						<width>80</width>
-						<height>60</height>
+						<posx>100</posx>
+						<posy>264</posy>
+						<width>60</width>
+						<height>45</height>
 						<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
-						<visible>Skin.HasSetting(tvoverlays) + !Container.Content(episodes) + !IsEmpty(ListItem.Overlay)</visible>
+						<colordiffuse>mainblue</colordiffuse>
+						<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 					</control>
 					<control type="image">
 						<posx>-150</posx>
@@ -179,16 +169,6 @@
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
-					</control>
-					<control type="image">
-						<visible>Container.Content(episodes)</visible>
-						<posx>-140</posx>
-						<posy>280</posy>
-						<width>280</width>
-						<height>8</height>
-						<texture>dialogs/tv/$INFO[ListItem.Overlay]</texture>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 					</control>
 				</control>
 			</itemlayout>
@@ -351,37 +331,12 @@
 						<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
 					</control>
 					<control type="image">
-						<visible>Container.Content(episodes)</visible>
-						<posx>-140</posx>
-						<posy>290</posy>
-						<width>380</width>
-						<height>8</height>
-						<texture>dialogs/tv/$INFO[ListItem.Overlay]</texture>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<animation type="Focus" reversible="false">
-							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
-						</animation>
-						<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
-					</control>
-					<control type="image">
-						<posx>176</posx>
-						<posy>264</posy>
-						<width>100</width>
-						<height>76</height>
+						<posx>188</posx>
+						<posy>266</posy>
+						<width>80</width>
+						<height>60</height>
 						<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
-						<animation type="Focus" reversible="false">
-							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
-						</animation>
-						<visible>Skin.HasSetting(tvoverlays) + !Container.Content(episodes) + !IsEmpty(ListItem.Overlay)</visible>
-					</control>
-					<control type="image">
-						<visible>Container.Content(episodes)</visible>
-						<posx>-140</posx>
-						<posy>330</posy>
-						<width>380</width>
-						<height>8</height>
-						<texture>dialogs/tv/$INFO[ListItem.Overlay]</texture>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<colordiffuse>mainblue</colordiffuse>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 						</animation>

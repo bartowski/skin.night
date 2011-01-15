@@ -108,12 +108,24 @@
 					<texture>posterframeNF.png</texture>
 				</control>
 				<control type="image">
-					<posx>140</posx>
-					<posy>269</posy>
+					<posx>146</posx>
+					<posy>264</posy>
 					<width>100</width>
 					<height>76</height>
 					<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
-					<visible>[Skin.HasSetting(movieoverlays) | Skin.HasSetting(tvoverlays)]+ !IsEmpty(ListItem.Overlay)</visible>
+					<colordiffuse>mainblue</colordiffuse>
+					<animation effect="fade" start="60" end="60" time="0" condition="true">Conditional</animation>
+					<visible>Skin.HasSetting(movieoverlays) + Container.Content(movies) + !IsEmpty(ListItem.Overlay)</visible>
+				</control>
+				<control type="image">
+					<posx>146</posx>
+					<posy>264</posy>
+					<width>100</width>
+					<height>76</height>
+					<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+					<colordiffuse>mainblue</colordiffuse>
+					<animation effect="fade" start="60" end="60" time="0" condition="true">Conditional</animation>
+					<visible>Skin.HasSetting(movieoverlays) + !Container.Content(movies) + !IsEmpty(ListItem.Overlay)</visible>
 				</control>
 			</control>
 			</itemlayout>
@@ -156,10 +168,11 @@
 							</control>
 							<control type="image">
 								<posx>62</posx>
-								<posy>134</posy>
+								<posy>130</posy>
 								<width>70</width>
 								<height>53</height>
 								<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+								<colordiffuse>mainblue</colordiffuse>
 								<animation effect="fade" start="60" end="60" time="0" condition="true">Conditional</animation>
 								<visible>Container.Content(Movies) + Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 							</control>
@@ -169,6 +182,7 @@
 								<width>70</width>
 								<height>53</height>
 								<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+								<colordiffuse>mainblue</colordiffuse>
 								<animation effect="fade" start="60" end="60" time="0" condition="true">Conditional</animation>
 								<visible>Container.Content(tvshows) + Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 							</control>
@@ -176,87 +190,82 @@
 				</itemlayout>
 			<focusedlayout width="300" height="184" condition="!Skin.HasSetting(panelview_more_posters)">
 			<control type="group">
-			<posx>60</posx>
-			<posy>16</posy>
-				<!--<control type="image">
-					<posx>-90</posx>
-					<posy>38</posy>
-					<width>392</width>
-					<height>500</height>
-					<texture>panel/panel_poster_back.png</texture>
-					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="auto" start="100" end="110" time="300" tween="back" easing="out" />
-						<effect type="fade" start="0" end="60" time="800" />
-					</animation>
-				</control>-->
-				<control type="image">
-					<posx>1</posx>
-					<posy>0</posy>
-					<width>215</width>
-					<height>320</height>
-					<texture>postermatteNF.png</texture>
-					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="auto" start="100" end="110" time="300" tween="back" easing="out" />
-					</animation>
-				</control>
-				<control type="image">
-					<posx>1</posx>
-					<posy>0</posy>
-					<width>215</width>
-					<height>320</height>
-					<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
-					<fadetime>200</fadetime>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<visible>!Container.Content(Genres)</visible>
-					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="auto" start="100" end="110" time="300" tween="back" easing="out" />
-					</animation>
-				</control>
-				<control type="image">
-					<posx>1</posx>
-					<posy>0</posy>
-					<width>215</width>
-					<height>320</height>
-					<texture background="true" diffuse="postermatteNF.png" fallback="defaultmoviegenre.jpg">extras\moviegenres\$INFO[ListItem.Label].jpg</texture>
-					<fadetime>200</fadetime>
-					<colordiffuse>89FFFFFF</colordiffuse>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<visible>Container.Content(Genres)</visible>
-					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="auto" start="100" end="110" time="300" tween="back" easing="out" />
-					</animation>
-				</control>
-				<control type="image">
-					<posx>146</posx>
-					<posy>286</posy>
-					<width>100</width>
-					<height>76</height>
-					<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
-					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="auto" start="100" end="110" time="300" tween="back" easing="out" />
-					</animation>
-					<visible>[Skin.HasSetting(movieoverlays) | Skin.HasSetting(tvoverlays)]+ !IsEmpty(ListItem.Overlay)</visible>
-				</control>
-				<control type="image">
-					<posx>-12</posx>
-					<posy>-13</posy>
-					<width>240</width>
-					<height>346</height>
-					<texture>posterframeF.png</texture>
-					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="auto" start="100" end="110" time="300" tween="back" easing="out" />
-					</animation>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>-1</posy>
-					<width>216</width>
-					<height>322</height>
-					<texture>posterframeNF.png</texture>
-					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="auto" start="100" end="110" time="300" tween="back" easing="out" />
-					</animation>
-				</control>
+				<posx>60</posx>
+				<posy>16</posy>
+				<animation type="Focus" reversible="false">
+					<effect type="zoom" center="auto" start="100" end="110" time="300" tween="back" easing="out" />
+				</animation>
+					<!--<control type="image">
+						<posx>-90</posx>
+						<posy>38</posy>
+						<width>392</width>
+						<height>500</height>
+						<texture>panel/panel_poster_back.png</texture>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="auto" start="100" end="110" time="300" tween="back" easing="out" />
+							<effect type="fade" start="0" end="60" time="800" />
+						</animation>
+					</control>-->
+					<control type="image">
+						<posx>1</posx>
+						<posy>0</posy>
+						<width>215</width>
+						<height>320</height>
+						<texture>postermatteNF.png</texture>
+					</control>
+					<control type="image">
+						<posx>1</posx>
+						<posy>0</posy>
+						<width>215</width>
+						<height>320</height>
+						<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
+						<fadetime>200</fadetime>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<visible>!Container.Content(Genres)</visible>
+					</control>
+					<control type="image">
+						<posx>1</posx>
+						<posy>0</posy>
+						<width>215</width>
+						<height>320</height>
+						<texture background="true" diffuse="postermatteNF.png" fallback="defaultmoviegenre.jpg">extras\moviegenres\$INFO[ListItem.Label].jpg</texture>
+						<fadetime>200</fadetime>
+						<colordiffuse>89FFFFFF</colordiffuse>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<visible>Container.Content(Genres)</visible>
+					</control>
+					<control type="image">
+						<posx>144</posx>
+						<posy>266</posy>
+						<width>100</width>
+						<height>76</height>
+						<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+						<colordiffuse>mainblue</colordiffuse>
+						<visible>Skin.HasSetting(movieoverlays) + Container.Content(movies) + !IsEmpty(ListItem.Overlay)</visible>
+					</control>
+					<control type="image">
+						<posx>144</posx>
+						<posy>266</posy>
+						<width>100</width>
+						<height>76</height>
+						<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+						<colordiffuse>mainblue</colordiffuse>
+						<visible>Skin.HasSetting(movieoverlays) + !Container.Content(movies) + !IsEmpty(ListItem.Overlay)</visible>
+					</control>
+					<control type="image">
+						<posx>-12</posx>
+						<posy>-13</posy>
+						<width>240</width>
+						<height>346</height>
+						<texture>posterframeF.png</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>-1</posy>
+						<width>216</width>
+						<height>322</height>
+						<texture>posterframeNF.png</texture>
+					</control>
 			</control>
 			</focusedlayout>
 			<focusedlayout width="116" height="176" condition="Skin.HasSetting(panelview_more_posters)">
@@ -291,18 +300,20 @@
 						</control>
 						<control type="image">
 							<posx>62</posx>
-							<posy>134</posy>
+							<posy>130</posy>
 							<width>70</width>
 							<height>53</height>
 							<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+							<colordiffuse>mainblue</colordiffuse>
 							<visible>Container.Content(Movies) + Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 						</control>
 						<control type="image">
 							<posx>62</posx>
-							<posy>134</posy>
+							<posy>130</posy>
 							<width>70</width>
 							<height>53</height>
 							<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+							<colordiffuse>mainblue</colordiffuse>
 							<visible>Container.Content(tvshows) + Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 						</control>
 						<control type="image">

@@ -15,8 +15,8 @@
 			<include>Animation_Bartowski_Context_Zoom</include>			
 			<control type="image">
 				<description>LOGO</description>
-				<posx>-60</posx>
-				<posy>-30</posy>
+				<posx>250</posx>
+				<posy>-10</posy>
 				<width>220</width>
 				<height>80</height>
 				<aspectratio>keep</aspectratio>
@@ -24,7 +24,7 @@
 			</control>
 			<control type="list" id="9000">
 				<posx>-80</posx>
-				<posy>60</posy>
+				<posy>-22</posy>
 				<width>260</width>
 				<height>700</height>
 				<onleft>9010</onleft>
@@ -139,6 +139,11 @@
 						<label2>33063</label2>
 						<onclick>-</onclick>
 					</item>
+					<item id="9">
+						<label>Extra Options</label>
+						<label2>33063</label2>
+						<onclick>-</onclick>
+					</item>
 				</content>
 			</control>
 			
@@ -154,7 +159,6 @@
 				<aligny>center</aligny>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
-				<animation effect="slide" start="0,0" end="0,-50" time="0" condition="Container(9000).Hasfocus(5)">Conditional</animation>
 			</control>
 			<control type="group" id="9010">
 				<control type="grouplist" id="9001">
@@ -241,12 +245,6 @@
 						<onclick>Skin.SetAddon(LyricScript_Path,xbmc.python.lyrics)</onclick>
 						<visible>Skin.HasSetting(show_lyrics)</visible>
 					</control>
-					<!--<control type="radiobutton" id="111">
-						<include>skin_settings_labels</include>
-						<label>$LOCALIZE[31278]</label>
-						<onclick>Skin.ToggleSetting(background_nowplaying)</onclick>
-						<selected>Skin.HasSetting(background_nowplaying)</selected>
-					</control>-->
 					<control type="label" id="112">
 						<width>860</width>
 						<height>45</height>
@@ -279,7 +277,7 @@
 					</control>
 					<control type="radiobutton" id="115">
 						<width>860</width>
-						<height>40</height>
+						<height>30</height>
 						<font>LiberationSans_Regular_16</font>
 						<textoffsetx>40</textoffsetx>
 						<label>$LOCALIZE[31257]</label>
@@ -293,7 +291,7 @@
 					</control>
 					<control type="radiobutton" id="116">
 						<width>860</width>
-						<height>40</height>
+						<height>30</height>
 						<font>LiberationSans_Regular_16</font>
 						<textoffsetx>40</textoffsetx>
 						<label>$LOCALIZE[31258]</label>
@@ -311,78 +309,12 @@
 						<onclick>Skin.ToggleSetting(FullscreenJukebox)</onclick>
 						<selected>Skin.HasSetting(FullscreenJukebox)</selected>
 					</control>
-					
-					
-					<!--<control type="label" id="120">
-						<width>860</width>
-						<height>45</height>
-						<font>LiberationSans_Regular_20</font>
-						<label>512</label>
-						<textcolor>blue</textcolor>
-						<shadowcolor>black</shadowcolor>
-						<align>left</align>
-						<aligny>center</aligny>
+					<control type="radiobutton" id="118">
+						<include>skin_settings_labels</include>
+						<label>$LOCALIZE[31532]</label>
+						<onclick>Skin.ToggleSetting(vis_plus_fanart)</onclick>
+						<selected>Skin.HasSetting(vis_plus_fanart)</selected>
 					</control>
-					<control type="radiobutton" id="121">
-						<width>860</width>
-						<height>40</height>
-						<font>font13</font>
-						<label>21398</label>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-						<onclick>Skin.ToggleSetting(Use_Startup_Playlist)</onclick>
-						<selected>Skin.HasSetting(Use_Startup_Playlist)</selected>
-					</control>
-					<control type="button" id="122">
-						<description>Startup Playlist Path</description>
-						<width>860</width>
-						<height>40</height>
-						<font>font13</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>15311</label>
-						<label2>$INFO[Skin.String(Startup_Playlist_Path)]</label2>
-						<onclick>Skin.SetFile(Startup_Playlist_Path,.m3u,t:\playlists\music\)</onclick>
-						<texturefocus>MenuItemFO1.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<enable>Skin.HasSetting(Use_Startup_Playlist)</enable>
-					</control>
-					<control type="label" id="123">
-						<width>860</width>
-						<height>45</height>
-						<font>LiberationSans_Regular_20</font>
-						<label>31102</label>
-						<textcolor>blue</textcolor>
-						<shadowcolor>black</shadowcolor>
-						<align>left</align>
-						<aligny>center</aligny>
-					</control>
-					<control type="radiobutton" id="124">
-						<width>860</width>
-						<height>40</height>
-						<font>font13</font>
-						<label>31124</label>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-						<onclick>Skin.ToggleSetting(ShowBackgroundVideo)</onclick>
-						<selected>!Skin.HasSetting(ShowBackgroundVideo)</selected>
-					</control>
-					<control type="radiobutton" id="125">
-						<width>860</width>
-						<height>40</height>
-						<font>font13</font>
-						<label>31125</label>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-						<onclick>Skin.ToggleSetting(ShowBackgroundVis)</onclick>
-						<selected>!Skin.HasSetting(ShowBackgroundVis)</selected>
-					</control>-->
 				</control>
 				<control type="grouplist" id="9002">
 					<visible>Container(9000).Hasfocus(2)</visible>
@@ -2355,9 +2287,9 @@
 					<control type="grouplist" id="9005">
 						<visible>Container(9000).Hasfocus(5)</visible>
 						<posx>290</posx>
-						<posy>20</posy>
+						<posy>60</posy>
 						<width>860</width>
-						<height>646</height>
+						<height>746</height>
 						<itemgap>-1</itemgap>
 						<pagecontrol>61</pagecontrol>
 						<onleft>9000</onleft>
@@ -2374,7 +2306,6 @@
 							<align>left</align>
 							<aligny>center</aligny>
 						</control>
-
 						<control type="radiobutton" id="501"> 
                             <include>skin_settings_labels</include> 
                             <label>$LOCALIZE[31044]</label> 
@@ -2391,71 +2322,6 @@
 							<onclick>Skin.Reset(landscape_thumbs)</onclick> 
                             <selected>Skin.HasSetting(TVBanners)</selected> 
                         </control>
-						<control type="radiobutton" id="511">
-							<include>skin_settings_labels</include>
-							<label>$LOCALIZE[31529]</label>
-							<onclick>Skin.Reset(TVBanners)</onclick> 
-							<onclick>Skin.ToggleSetting(banner_jpg)</onclick>
-							<selected>Skin.HasSetting(banner_jpg)</selected>
-						</control>
-						<control type="label" id="512">
-							<width>860</width>
-							<height>26</height>
-							<font>LiberationSans_Regular_16</font>
-							<textoffsetx>40</textoffsetx>
-							<label>*$LOCALIZE[31528]*</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<align>left</align>
-							<aligny>top</aligny>
-						</control>
-						<control type="radiobutton" id="530"> 
-                            <include>skin_settings_labels</include>
-                            <label>$LOCALIZE[31531]</label> 
-                            <onclick>Skin.ToggleSetting(landscape_thumbs)</onclick> 
-                            <onclick>Skin.Reset(TVPosters)</onclick> 
-							<onclick>Skin.Reset(TVBanners)</onclick> 
-                            <selected>Skin.HasSetting(landscape_thumbs)</selected> 
-                        </control>
-						<control type="radiobutton" id="509">
-							<include>skin_settings_labels</include>
-							<label>$LOCALIZE[31269]</label>
-							<onclick>Skin.ToggleSetting(landscape_jpg)</onclick>
-							<selected>Skin.HasSetting(landscape_jpg)</selected>
-						</control>
-						<control type="label" id="510">
-							<width>860</width>
-							<height>26</height>
-							<font>LiberationSans_Regular_16</font>
-							<textoffsetx>40</textoffsetx>
-							<label>*$LOCALIZE[31270]*</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<align>left</align>
-							<aligny>top</aligny>
-						</control>
-						<control type="label" id="516">
-							<width>860</width>
-							<height>30</height>
-							<font>DejaVuSans_Bold_20</font>
-							<label>$LOCALIZE[31263]</label>
-							<textcolor>mainblue</textcolor>
-							<shadowcolor>black</shadowcolor>
-							<align>left</align>
-							<aligny>center</aligny>
-						</control>
-						<control type="button" id="517">
-							<width>280</width>
-							<height>40</height>
-							<font>LiberationSans_Regular_20</font>
-							<textoffsetx>10</textoffsetx>
-							<label>$LOCALIZE[31264]</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/button-focus.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-							<onclick>XBMC.RunScript(script.logo-downloader,mode=bulk,clearart=False,logo=True,showthumb=False)</onclick>
-						</control>
 						<control type="radiobutton" id="503">
 							<include>skin_settings_labels</include>
 							<label>$LOCALIZE[31033]</label>
@@ -2473,41 +2339,6 @@
 							<label>$LOCALIZE[31036]</label>
 							<onclick>Skin.ToggleSetting(tvoverlays)</onclick>
 							<selected>Skin.HasSetting(tvoverlays)</selected>
-						</control>
-						<control type="radiobutton" id="508">
-							<include>skin_settings_labels</include>
-							<label>$LOCALIZE[31282]</label>
-							<onclick>Skin.ToggleSetting(genrefanart)</onclick>
-							<onclick>Skin.Reset(extrafanart)</onclick> 
-							<selected>Skin.HasSetting(genrefanart)</selected>
-						</control>
-						<control type="label" id="531">
-							<width>860</width>
-							<height>26</height>
-							<font>LiberationSans_Regular_16</font>
-							<textoffsetx>40</textoffsetx>
-							<label>*$LOCALIZE[31530]*</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<align>left</align>
-							<aligny>top</aligny>
-						</control>
-						<control type="radiobutton" id="513">
-							<include>skin_settings_labels</include>
-							<label>$LOCALIZE[31266]</label>
-							<onclick>Skin.ToggleSetting(extrafanart)</onclick>
-							<selected>Skin.HasSetting(extrafanart)</selected>
-						</control>
-						<control type="label" id="514">
-							<width>860</width>
-							<height>26</height>
-							<font>LiberationSans_Regular_16</font>
-							<textoffsetx>40</textoffsetx>
-							<label>*$LOCALIZE[31267]*</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<align>left</align>
-							<aligny>top</aligny>
 						</control>
 						<control type="radiobutton" id="519">
 							<include>skin_settings_labels</include>
@@ -2586,15 +2417,43 @@
 							<onclick>Skin.ToggleSetting(no_media_flags)</onclick>
 							<selected>Skin.HasSetting(no_media_flags)</selected>
 						</control>
-						<control type="radiobutton" id="515">
+						<control type="radiobutton" id="534">
 							<include>skin_settings_labels</include>
-							<label>Use TV Themes in Library</label>
-							<onclick>Skin.ToggleSetting(tv_theme)</onclick>
-							<selected>Skin.HasSetting(tv_theme)</selected>
-							<!--<visible>system.hasaddon(script.TvTunes)</visible>-->
+							<label>$LOCALIZE[31533]</label>
+							<onclick>Skin.ToggleSetting(Custom_Movie_Link)</onclick>
+							<selected>Skin.HasSetting(Custom_Movie_Link)</selected>
 						</control>
-					</control>
-						<!--<control type="textbox" id="518">
+						<control type="button" id="535">
+							<description>custom home 25</description>
+							<include>skin_settings_button</include>
+							<label>$LOCALIZE[31291]- </label>
+							<label2>[COLOR=selected]$INFO[Skin.String(Custom_Movie_Path)][/COLOR]</label2>
+							<onclick>Skin.SetFile(Custom_Movie_Path,.xsp,special://videoplaylists)</onclick>
+							<visible>Skin.HasSetting(Custom_Movie_Link)</visible>
+						</control>
+						<control type="label" id="516">
+							<width>860</width>
+							<height>30</height>
+							<font>DejaVuSans_Bold_20</font>
+							<label>$LOCALIZE[31263]</label>
+							<textcolor>mainblue</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+						</control>
+						<control type="button" id="517">
+							<width>280</width>
+							<height>40</height>
+							<font>LiberationSans_Regular_20</font>
+							<textoffsetx>10</textoffsetx>
+							<label>$LOCALIZE[31264]</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>confluence/button-focus.png</texturefocus>
+							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+							<onclick>XBMC.RunScript(script.logo-downloader,mode=bulk,clearart=False,logo=True,showthumb=False)</onclick>
+						</control>
+						<control type="textbox" id="518">
 							<posx>330</posx>
 							<posy>586</posy>
 							<width>830</width>
@@ -2604,7 +2463,8 @@
 							<font>LiberationSans_Regular_18</font>
 							<textcolor>white</textcolor>
 							<visible>Container(9000).Hasfocus(5)</visible>
-						</control>-->
+						</control>
+					</control>
 				</control>
 				<control type="group"><!--mcborzu Disable Views-->
 					<control type="grouplist" id="9006">
@@ -3520,7 +3380,149 @@
 							</control>
 						</control>
 				</control>
-			
+				<control type="group"><!--mcborzu tv-->
+					<control type="grouplist" id="9009">
+						<visible>Container(9000).Hasfocus(9)</visible>
+						<posx>290</posx>
+						<posy>60</posy>
+						<width>860</width>
+						<height>646</height>
+						<itemgap>-1</itemgap>
+						<pagecontrol>61</pagecontrol>
+						<onleft>9000</onleft>
+						<onright>61</onright>
+						<onup>9009</onup>
+						<ondown>9009</ondown>
+						<control type="textbox" id="500">
+							<width>860</width>
+							<height>56</height>
+							<font>DejaVuSans_Bold_20</font>
+							<label>These are options that XBMC doesn't do be default. They need the user to go the extra mile to have these function correctly.</label>
+							<textcolor>mainblue</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+						</control>
+
+						<control type="radiobutton" id="511">
+							<include>skin_settings_labels</include>
+							<label>$LOCALIZE[31529]</label>
+							<onclick>Skin.Reset(TVBanners)</onclick> 
+							<onclick>Skin.ToggleSetting(banner_jpg)</onclick>
+							<selected>Skin.HasSetting(banner_jpg)</selected>
+						</control>
+						<control type="label" id="512">
+							<width>860</width>
+							<height>26</height>
+							<font>LiberationSans_Regular_16</font>
+							<textoffsetx>40</textoffsetx>
+							<label>*$LOCALIZE[31528]*</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<align>left</align>
+							<aligny>top</aligny>
+						</control>
+						<control type="radiobutton" id="530"> 
+                            <include>skin_settings_labels</include>
+                            <label>$LOCALIZE[31531]</label> 
+                            <onclick>Skin.ToggleSetting(landscape_thumbs)</onclick> 
+                            <onclick>Skin.Reset(TVPosters)</onclick> 
+							<onclick>Skin.Reset(TVBanners)</onclick> 
+                            <selected>Skin.HasSetting(landscape_thumbs)</selected> 
+                        </control>
+						<control type="radiobutton" id="509">
+							<include>skin_settings_labels</include>
+							<label>$LOCALIZE[31269]</label>
+							<onclick>Skin.ToggleSetting(landscape_jpg)</onclick>
+							<selected>Skin.HasSetting(landscape_jpg)</selected>
+						</control>
+						<control type="label" id="510">
+							<width>860</width>
+							<height>26</height>
+							<font>LiberationSans_Regular_16</font>
+							<textoffsetx>40</textoffsetx>
+							<label>*$LOCALIZE[31270]*</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<align>left</align>
+							<aligny>top</aligny>
+						</control>
+						<!--<control type="label" id="516">
+							<width>860</width>
+							<height>30</height>
+							<font>DejaVuSans_Bold_20</font>
+							<label>$LOCALIZE[31263]</label>
+							<textcolor>mainblue</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+						</control>
+						<control type="button" id="517">
+							<width>280</width>
+							<height>40</height>
+							<font>LiberationSans_Regular_20</font>
+							<textoffsetx>10</textoffsetx>
+							<label>$LOCALIZE[31264]</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>confluence/button-focus.png</texturefocus>
+							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+							<onclick>XBMC.RunScript(script.logo-downloader,mode=bulk,clearart=False,logo=True,showthumb=False)</onclick>
+						</control>-->
+						<control type="radiobutton" id="508">
+							<include>skin_settings_labels</include>
+							<label>$LOCALIZE[31282]</label>
+							<onclick>Skin.ToggleSetting(genrefanart)</onclick>
+							<onclick>Skin.Reset(extrafanart)</onclick> 
+							<selected>Skin.HasSetting(genrefanart)</selected>
+						</control>
+						<control type="label" id="531">
+							<width>860</width>
+							<height>26</height>
+							<font>LiberationSans_Regular_16</font>
+							<textoffsetx>40</textoffsetx>
+							<label>*$LOCALIZE[31530]*</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<align>left</align>
+							<aligny>top</aligny>
+						</control>
+						<control type="radiobutton" id="513">
+							<include>skin_settings_labels</include>
+							<label>$LOCALIZE[31266]</label>
+							<onclick>Skin.ToggleSetting(extrafanart)</onclick>
+							<selected>Skin.HasSetting(extrafanart)</selected>
+						</control>
+						<control type="label" id="514">
+							<width>860</width>
+							<height>26</height>
+							<font>LiberationSans_Regular_16</font>
+							<textoffsetx>40</textoffsetx>
+							<label>*$LOCALIZE[31267]*</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<align>left</align>
+							<aligny>top</aligny>
+						</control>
+						<control type="radiobutton" id="515">
+							<include>skin_settings_labels</include>
+							<label>Use TV Themes in Library</label>
+							<onclick>Skin.ToggleSetting(tv_theme)</onclick>
+							<selected>Skin.HasSetting(tv_theme)</selected>
+							<!--<visible>system.hasaddon(script.TvTunes)</visible>-->
+						</control>
+					</control>
+						<!--<control type="textbox" id="518">
+							<posx>330</posx>
+							<posy>586</posy>
+							<width>830</width>
+							<height>290</height>
+							<align>justify</align>
+							<label>$LOCALIZE[31265]</label>
+							<font>LiberationSans_Regular_18</font>
+							<textcolor>white</textcolor>
+							<visible>Container(9000).Hasfocus(5)</visible>
+						</control>-->
+				</control>
 			</control>
 		</control>
 		
