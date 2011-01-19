@@ -1,3 +1,8 @@
+1/19/2011
+  -Fixed some RCB script errors
+  -Fanart should now sgow on Playlists
+  -Updated Recent/Random script to now play albums not songs
+
 12/21/2010
   -Fixed Landscape w/Posters not showing in Season level
   -Fixed landscape.jpg not used in "LandPanel"
