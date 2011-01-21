@@ -62,7 +62,7 @@
 	<control type="group">
 		<include>Animation_HiddenByInfo</include>
 			<include>Viewtype_Files</include>
-			<include>Viewtype_Poster</include>
+			<include>Viewtype_Poster_Programs</include>
 			<include>Viewtype_3daddon</include><!--  56  -->
 			<include>Viewtype_List</include><!--  56  -->
 	</control>
@@ -73,19 +73,17 @@
 		
 		<include>7000_has_focus</include>
 		
-		<control type="image"><!-- Floor -->
-			<posx>460</posx>
-			<posy>650</posy>
-			<width>380</width>
-			<height>70</height>
-			<texture>backdrops/test2.png</texture>
-			<visible>ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews)</visible>
-			<include>Animation_ViewOptions_whitebar</include>
-		</control>
-		
-		
 	<control type="group">
 		<visible>!Skin.HasSetting(LockViews)</visible>
+		<include>Animation_CommonFade_ViewOptions</include>	
+		<control type="image"><!-- Floor -->
+			<posx>0</posx>
+			<posy>650</posy>
+			<width>1280</width>
+			<height>70</height>
+			<texture>backdrops/test2.png</texture>
+			<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews)</visible>
+		</control>
 		<control type="grouplist" id="7000">
 			<visible>!Skin.HasSetting(LockViews)</visible>
 			<include>WindowMenuVars</include>
@@ -113,6 +111,25 @@
 				<selected>Skin.HasSetting(launcher_plot_poster)</selected>
 				<visible>Control.IsVisible(55) + [Window.IsActive(Programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)]</visible>
 			</control>
+			<control type="togglebutton" id="27">
+				<description>Toggle MoviesFanart</description>
+				<include>WindowMenuButton</include>
+				<label>$LOCALIZE[31284]</label>
+				<altlabel>$LOCALIZE[31285]</altlabel>
+				<onclick>Skin.ToggleSetting(programs_clean_poster)</onclick>
+				<selected>Skin.HasSetting(programs_clean_poster)</selected>
+				<visible>Control.IsVisible(55)</visible>
+			</control>
+			<control type="togglebutton" id="31">
+				<description>Toggle MoviesFanart</description>
+				<include>WindowMenuButton</include>
+				<label>$LOCALIZE[31086]</label>
+				<altlabel>$LOCALIZE[31214]</altlabel>
+				<onclick>Skin.ToggleSetting(Programs_Poster_Fanart)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<selected>Skin.HasSetting(Programs_Poster_Fanart)</selected>
+				<visible>Control.IsVisible(55)</visible>
+			</control>
 		</control>
 
 		<control type="grouplist">
@@ -129,6 +146,16 @@
 				<!-- LOC -->
 				<label>Plot</label>
 				<visible>[Control.IsVisible(53) | Control.IsVisible(55)] + [Window.IsActive(Programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)]</visible>
+			</control>
+			<control type="label">
+				<include>WindowMenuLabel</include>
+				<label>$LOCALIZE[14018]</label>
+				<visible>Control.IsVisible(55)</visible>		
+			</control>
+			<control type="label">
+				<include>WindowMenuLabel</include>
+				<label>$LOCALIZE[14018]</label>
+				<visible>Control.IsVisible(55)</visible>		
 			</control>
 		</control>
 	</control>
