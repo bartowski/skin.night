@@ -17,7 +17,7 @@
 			<control type="group">
 				<posx>-20</posx>
 				<posy>700</posy>
-					<animation type="Conditional" reversible="false" condition="true" loop="true">
+					<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 						<effect type="slide" start="-400,0" end="0,0" time="500" delay="0" />
 						<effect type="slide" start="0,0" end="-400,0" time="500" delay="21000" />
 						<effect type="slide" start="0,0" end="-400,0" time="500" delay="28000" />
@@ -53,7 +53,8 @@
 				<control type="group">
 				<posx>-20</posx>
 				<posy>700</posy>
-					<animation type="Conditional" reversible="false" condition="true" loop="true">
+				<visible>!IsEmpty(MusicPlayer.offset(1).Title)</visible>
+					<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 						<effect type="slide" start="-400,0" end="0,0" time="500" delay="21500" />
 						<effect type="slide" start="0,0" end="-400,0" time="500" delay="28000" />
 					</animation>
@@ -78,7 +79,7 @@
 			<posx>-80</posx>
 			<posy>600</posy>
 			<animation effect="slide" start="0,0" end="66,0" delay="600" time="2000" tween="cubic" easing="inout" condition="!IsEmpty(Control.GetLabel(7026))">Conditional</animation>
-			<animation type="Conditional" reversible="false" condition="true" loop="true">
+			<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 				<effect type="slide" start="0,400" end="0,0" time="500" delay="0" />
 				<effect type="slide" start="0,0" end="0,400" time="500" delay="21000" />
 				<effect type="slide" start="0,0" end="0,400" time="500" delay="28000" />
@@ -161,8 +162,8 @@
 			<control type="group">
 			<posx>-100</posx>
 			<posy>570</posy>
-			<visible>true</visible>
-				<animation type="Conditional" reversible="false" condition="true" loop="true">
+			<visible>!IsEmpty(MusicPlayer.offset(1).Title)</visible>
+				<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 					<effect type="slide" start="0,400" end="0,0" time="500" delay="21500" />
 					<effect type="slide" start="0,0" end="0,400" time="500" delay="28000" />
 				</animation>
@@ -310,7 +311,7 @@
 			<control type="group">
 				<posx>-20</posx>
 				<posy>700</posy>
-					<animation type="Conditional" reversible="false" condition="true" loop="true">
+					<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 						<effect type="slide" start="-400,0" end="0,0" time="500" delay="0" />
 						<effect type="slide" start="0,0" end="-400,0" time="500" delay="21000" />
 						<effect type="slide" start="0,0" end="-400,0" time="500" delay="28000" />
@@ -346,7 +347,8 @@
 				<control type="group">
 				<posx>-20</posx>
 				<posy>700</posy>
-					<animation type="Conditional" reversible="false" condition="true" loop="true">
+				<visible>!IsEmpty(MusicPlayer.offset(1).Title)</visible>
+					<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 						<effect type="slide" start="-400,0" end="0,0" time="500" delay="21500" />
 						<effect type="slide" start="0,0" end="-400,0" time="500" delay="28000" />
 					</animation>
@@ -371,7 +373,7 @@
 			<posx>-80</posx>
 			<posy>600</posy>
 			<animation effect="slide" start="0,0" end="66,0" delay="600" time="2000" tween="cubic" easing="inout" condition="!IsEmpty(Control.GetLabel(7026))">Conditional</animation>
-			<animation type="Conditional" reversible="false" condition="true" loop="true">
+			<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 				<effect type="slide" start="0,400" end="0,0" time="500" delay="0" />
 				<effect type="slide" start="0,0" end="0,400" time="500" delay="21000" />
 				<effect type="slide" start="0,0" end="0,400" time="500" delay="28000" />
@@ -454,8 +456,8 @@
 			<control type="group">
 			<posx>-100</posx>
 			<posy>570</posy>
-			<visible>true</visible>
-				<animation type="Conditional" reversible="false" condition="true" loop="true">
+			<visible>!IsEmpty(MusicPlayer.offset(1).Title)</visible>
+				<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 					<effect type="slide" start="0,400" end="0,0" time="500" delay="21500" />
 					<effect type="slide" start="0,0" end="0,400" time="500" delay="28000" />
 				</animation>
@@ -604,7 +606,7 @@
 			<control type="group">
 				<posx>1100</posx>
 				<posy>130</posy>
-					<animation type="Conditional" reversible="false" condition="true" loop="true">
+					<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 						<effect type="slide" start="400,0" end="0,0" time="500" delay="0" />
 						<effect type="slide" start="0,0" end="400,0" time="500" delay="21000" />
 						<effect type="slide" start="0,0" end="400,0" time="500" delay="28000" />
@@ -640,7 +642,8 @@
 				<control type="group">
 				<posx>1100</posx>
 				<posy>130</posy>
-					<animation type="Conditional" reversible="false" condition="true" loop="true">
+				<visible>!IsEmpty(MusicPlayer.offset(1).Title)</visible>
+					<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 						<effect type="slide" start="400,0" end="0,0" time="500" delay="21500" />
 						<effect type="slide" start="0,0" end="400,0" time="500" delay="28000" />
 					</animation>
@@ -665,7 +668,7 @@
 			<posx>864</posx>
 			<posy>34</posy>
 				<animation effect="slide" start="0,0" end="-60,0" delay="600" time="2000" tween="cubic" easing="inout" condition="!IsEmpty(Control.GetLabel(7726))">Conditional</animation>
-				<animation type="Conditional" reversible="false" condition="true" loop="true">
+				<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 					<effect type="slide" start="0,-400" end="0,0" time="500" delay="0" />
 					<effect type="slide" start="0,0" end="0,-400" time="500" delay="21000" />
 					<effect type="slide" start="0,0" end="0,-400" time="500" delay="28000" />
@@ -743,8 +746,8 @@
 			<control type="group">
 			<posx>864</posx>
 			<posy>6</posy>
-			<visible>true</visible>
-				<animation type="Conditional" reversible="false" condition="true" loop="true">
+			<visible>!IsEmpty(MusicPlayer.offset(1).Title)</visible>
+				<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 					<effect type="slide" start="0,-400" end="0,0" time="500" delay="21500" />
 					<effect type="slide" start="0,0" end="0,-400" time="500" delay="28000" />
 				</animation>
@@ -884,7 +887,7 @@
 			<control type="group">
 				<posx>1100</posx>
 				<posy>130</posy>
-					<animation type="Conditional" reversible="false" condition="true" loop="true">
+					<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 						<effect type="slide" start="400,0" end="0,0" time="500" delay="0" />
 						<effect type="slide" start="0,0" end="400,0" time="500" delay="21000" />
 						<effect type="slide" start="0,0" end="400,0" time="500" delay="28000" />
@@ -920,7 +923,8 @@
 				<control type="group">
 				<posx>1100</posx>
 				<posy>130</posy>
-					<animation type="Conditional" reversible="false" condition="true" loop="true">
+				<visible>!IsEmpty(MusicPlayer.offset(1).Title)</visible>
+					<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 						<effect type="slide" start="400,0" end="0,0" time="500" delay="21500" />
 						<effect type="slide" start="0,0" end="400,0" time="500" delay="28000" />
 					</animation>
@@ -945,7 +949,7 @@
 			<posx>864</posx>
 			<posy>34</posy>
 				<animation effect="slide" start="0,0" end="-60,0" delay="600" time="2000" tween="cubic" easing="inout" condition="!IsEmpty(Control.GetLabel(9826))">Conditional</animation>
-				<animation type="Conditional" reversible="false" condition="true" loop="true">
+				<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 					<effect type="slide" start="0,-400" end="0,0" time="500" delay="0" />
 					<effect type="slide" start="0,0" end="0,-400" time="500" delay="21000" />
 					<effect type="slide" start="0,0" end="0,-400" time="500" delay="28000" />
@@ -986,7 +990,7 @@
 						<align>right</align>
 						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
-						<label>$INFO[MusicPlayer.Artist] :[B]$LOCALIZE[557][/B]</label>
+						<label>$INFO[MusicPlayer.Artist,,[B] :$LOCALIZE[557][/B]]</label>
 						<!--<animation effect="slide" end="0,22" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>-->
 					</control>
 		<!--  album name control -->
@@ -1000,7 +1004,7 @@
 						<align>right</align>
 						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
-						<label>$INFO[MusicPlayer.Album] [B]:$LOCALIZE[558][/B]</label>
+						<label>$INFO[MusicPlayer.Album,,[B] :$LOCALIZE[558][/B]]</label>
 					</control>
 					<control type="label">
 						<description>album name</description>
@@ -1012,7 +1016,7 @@
 						<align>right</align>
 						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
-						<label>$INFO[MusicPlayer.year] [B]:$LOCALIZE[345][/B]</label>
+						<label>$INFO[MusicPlayer.year,,[B] :$LOCALIZE[345][/B]]</label>
 					</control>
 			</control>
 				
@@ -1023,9 +1027,9 @@
 			<control type="group">
 			<posx>864</posx>
 			<posy>6</posy>
-			<visible>true</visible>
+			<visible>!IsEmpty(MusicPlayer.offset(1).Title)</visible>
 				<animation effect="slide" start="0,0" end=",-30" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(59)">Conditional</animation>
-				<animation type="Conditional" reversible="false" condition="true" loop="true">
+				<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 					<effect type="slide" start="0,-400" end="0,0" time="500" delay="21500" />
 					<effect type="slide" start="0,0" end="0,-400" time="500" delay="28000" />
 				</animation>
@@ -1064,7 +1068,7 @@
 						<align>right</align>
 						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
-						<label>$INFO[MusicPlayer.offset(1).Artist][B]:$LOCALIZE[557][/B]</label>
+						<label>$INFO[MusicPlayer.offset(1).Artist,,[B] :$LOCALIZE[557][/B]]</label>
 						<!--<animation effect="slide" end="0,22" condition="IsEmpty(MusicPlayer.offset(1).Title)">Conditional</animation>-->
 					</control>
 		<!--  album name control -->
@@ -1078,7 +1082,7 @@
 						<align>right</align>
 						<font>LiberationSans_Regular_18</font>
 						<textcolor>white</textcolor>
-						<label>$INFO[MusicPlayer.offset(1).Album][B]:$LOCALIZE[558][/B]</label>
+						<label>$INFO[MusicPlayer.offset(1).Album,,[B] :$LOCALIZE[558][/B]]</label>
 					</control>
 				</control>
 		</control>
@@ -1164,7 +1168,7 @@
 			<control type="group">
 				<posx>-20</posx>
 				<posy>700</posy>
-					<animation type="Conditional" reversible="false" condition="true" loop="true">
+					<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 						<effect type="slide" start="-400,0" end="0,0" time="500" delay="0" />
 						<effect type="slide" start="0,0" end="-400,0" time="500" delay="21000" />
 						<effect type="slide" start="0,0" end="-400,0" time="500" delay="28000" />
@@ -1200,7 +1204,8 @@
 				<control type="group">
 				<posx>-20</posx>
 				<posy>700</posy>
-					<animation type="Conditional" reversible="false" condition="true" loop="true">
+				<visible>!IsEmpty(MusicPlayer.offset(1).Title)</visible>
+					<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 						<effect type="slide" start="-400,0" end="0,0" time="500" delay="21500" />
 						<effect type="slide" start="0,0" end="-400,0" time="500" delay="28000" />
 					</animation>
@@ -1225,7 +1230,7 @@
 			<posx>-80</posx>
 			<posy>600</posy>
 			<animation effect="slide" start="0,0" end="66,0" delay="600" time="2000" tween="cubic" easing="inout" condition="!IsEmpty(Control.GetLabel(7026))">Conditional</animation>
-			<animation type="Conditional" reversible="false" condition="true" loop="true">
+			<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 				<effect type="slide" start="0,400" end="0,0" time="500" delay="0" />
 				<effect type="slide" start="0,0" end="0,400" time="500" delay="21000" />
 				<effect type="slide" start="0,0" end="0,400" time="500" delay="28000" />
@@ -1308,8 +1313,8 @@
 			<control type="group">
 			<posx>-100</posx>
 			<posy>570</posy>
-			<visible>true</visible>
-				<animation type="Conditional" reversible="false" condition="true" loop="true">
+			<visible>!IsEmpty(MusicPlayer.offset(1).Title)</visible>
+				<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 					<effect type="slide" start="0,400" end="0,0" time="500" delay="21500" />
 					<effect type="slide" start="0,0" end="0,400" time="500" delay="28000" />
 				</animation>
@@ -1441,7 +1446,7 @@
 			<control type="group">
 				<posx>1106</posx>
 				<posy>704</posy>
-					<animation type="Conditional" reversible="false" condition="true" loop="true">
+					<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 						<effect type="slide" start="400,0" end="0,0" time="500" delay="0" />
 						<effect type="slide" start="0,0" end="400,0" time="500" delay="21000" />
 						<effect type="slide" start="0,0" end="400,0" time="500" delay="28000" />
@@ -1477,7 +1482,8 @@
 				<control type="group">
 				<posx>1106</posx>
 				<posy>704</posy>
-					<animation type="Conditional" reversible="false" condition="true" loop="true">
+				<visible>!IsEmpty(MusicPlayer.offset(1).Title)</visible>
+					<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 						<effect type="slide" start="400,0" end="0,0" time="500" delay="21500" />
 						<effect type="slide" start="0,0" end="400,0" time="500" delay="28000" />
 					</animation>
@@ -1502,7 +1508,7 @@
 			<posx>870</posx>
 			<posy>608</posy>
 				<animation effect="slide" start="0,0" end="-70,0" delay="600" time="2000" tween="cubic" easing="inout" condition="!IsEmpty(Control.GetLabel(17726))">Conditional</animation>
-				<animation type="Conditional" reversible="false" condition="true" loop="true">
+				<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 					<effect type="slide" start="0,400" end="0,0" time="500" delay="0" />
 					<effect type="slide" start="0,0" end="0,400" time="500" delay="21000" />
 					<effect type="slide" start="0,0" end="0,400" time="500" delay="28000" />
@@ -1580,8 +1586,8 @@
 			<control type="group">
 			<posx>870</posx>
 			<posy>580</posy>
-			<visible>true</visible>
-				<animation type="Conditional" reversible="false" condition="true" loop="true">
+			<visible>!IsEmpty(MusicPlayer.offset(1).Title)</visible>
+				<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
 					<effect type="slide" start="0,400" end="0,0" time="500" delay="21500" />
 					<effect type="slide" start="0,0" end="0,400" time="500" delay="28000" />
 				</animation>

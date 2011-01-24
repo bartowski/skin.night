@@ -124,7 +124,7 @@
 			</control>
 			<control type="label">
 				<posx>0</posx>
-				<posy>672</posy>
+				<posy>656</posy>
 				<width>1280</width>
 				<height>50</height>
 				<align>center</align>
@@ -133,7 +133,18 @@
 				<textcolor>mainblue</textcolor>
 				<label>"[B]$INFO[ListItem.Label][/B]"</label>
 				<include>Animation_Bartowski_Context_Zoom</include>
-				<visible></visible>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>682</posy>
+				<width>1280</width>
+				<height>50</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>LiberationSans_Regular_22</font>
+				<textcolor>white</textcolor>
+				<label>[B]$INFO[ListItem.Artist][/B]</label>
+				<include>Animation_Bartowski_Context_Zoom</include>
 			</control>
 		</control>
 		<control type="scrollbar" id="61">

@@ -195,7 +195,7 @@
 			<control type="label">
 				<description>Comment Title</description>
 				<posx>400</posx>
-				<posy>350</posy>
+				<posy>315</posy>
 				<width>130</width>
 				<height>25</height>
 				<align>right</align>
@@ -207,10 +207,11 @@
 			<control type="textbox">
 				<description>Comment value</description>
 				<posx>410</posx>
-				<posy>345</posy>
+				<posy>310</posy>
 				<width>460</width>
 				<height>100</height>
 				<font>DejaVuSans_Bold_20_title</font>
+				<textcolor>white</textcolor>
 				<pagecontrol>-</pagecontrol>
 				<label fallback="161">$INFO[ListItem.Comment]</label>
 			</control>

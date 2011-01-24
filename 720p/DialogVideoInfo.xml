@@ -145,9 +145,9 @@
 						<itemgap>0</itemgap>
 						<orientation>horizontal</orientation>
 						<include>VisibleFadeEffect</include>
-						<visible>!Control.IsVisible(50)</visible>
 						<include>frame_flags</include>
 						<include>Animation_ZoomInZoomOut</include>
+						<visible>!Control.IsVisible(50) + !Skin.HasSetting(no_frame_flags)</visible>
 					</control>
 					<control type="textbox"><!-- Plot and TV -->
 						<visible>Container.Content(movies)</visible>
