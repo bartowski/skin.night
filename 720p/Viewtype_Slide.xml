@@ -171,75 +171,75 @@
 				<texture>dialogs/movies/movieset.png</texture>
 				<visible>Container.Content(movies) + IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres) + Window.IsActive(videolibrary)</visible>
 			</control>
-		</control>
+	</control>
 		
 	<control type="group">
-	<posx>640</posx>
-	<posy>290</posy>
-	<animation effect="slide" start="0,0" end="0,-400" time="200" delay="600" condition="Control.HasFocus(8241)">Conditional</animation>
-	<visible>Control.IsVisible(595) + Container.Content(movies) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
-	<include>Animation_BackdropFade</include>
-		<control type="label"><!--Movie title-->
-			<posx>15</posx>
-			<posy>245</posy>
-			<width>600</width>
-			<height>50</height>
-			<aligny>center</aligny>
-			<font>LiberationSans_Regular_34</font>
-			<textcolor>mainblue</textcolor>
-			<label>[B]$INFO[ListItem.Label][/B]</label>
-		</control>
-		<control type="label">
-			<posx>15</posx>
-			<posy>273</posy>
-			<width>394</width>
-			<height>50</height>
-			<aligny>center</aligny>
-			<font>LiberationSans_Regular_24</font>
-			<textcolor>white</textcolor>
-			<label>31508</label>
-			<visible>IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres)</visible>
-		</control>
-		<control type="label"><!--Duration-->
-			<posx>15</posx>
-			<posy>273</posy>
-			<width>394</width>
-			<height>50</height>
-			<aligny>center</aligny>
-			<font>LiberationSans_Regular_24</font>
-			<textcolor>white</textcolor>
-			<label>$INFO[ListItem.Duration] $LOCALIZE[12391]</label>
-			<visible>!IsEmpty(ListItem.Duration) + !SubString(ListItem.Duration,min)</visible>
-		</control>
-		<control type="label"><!--Duration-->
-			<posx>15</posx>
-			<posy>273</posy>
-			<width>394</width>
-			<height>50</height>
-			<aligny>center</aligny>
-			<font>LiberationSans_Regular_24</font>
-			<textcolor>white</textcolor>
-			<label>$INFO[ListItem.Duration]</label>
-			<visible>!IsEmpty(ListItem.Duration) + SubString(ListItem.Duration,min)</visible>
-		</control>
-		<control type="label"><!--Year-->
-			<posx>15</posx>
-			<posy>296</posy>
-			<width>394</width>
-			<height>50</height>
-			<aligny>center</aligny>
-			<font>LiberationSans_Regular_24</font>
-			<textcolor>white</textcolor>
-			<label>$INFO[ListItem.year]</label>
-			<animation effect="slide" start="0,0" end="0,-23" time="0" condition="IsEmpty(ListItem.Duration)">Conditional</animation>
-		</control>
-		<control type="group">
-			<posx>76</posx>
-			<posy>307</posy>
-			<include>VideoMPAAFlaggingConditions</include>
-			<animation effect="slide" start="0,0" end="-64,0" time="0" condition="IsEmpty(ListItem.Year)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="0,-23" time="0" condition="IsEmpty(ListItem.Duration)">Conditional</animation>
-		</control>
+		<posx>640</posx>
+		<posy>290</posy>
+		<animation effect="slide" start="0,0" end="0,-400" time="200" delay="600" condition="Control.HasFocus(8241)">Conditional</animation>
+		<visible>Control.IsVisible(595) + Container.Content(movies) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
+		<include>Animation_BackdropFade</include>
+			<control type="label"><!--Movie title-->
+				<posx>15</posx>
+				<posy>245</posy>
+				<width>600</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>LiberationSans_Regular_34</font>
+				<textcolor>mainblue</textcolor>
+				<label>[B]$INFO[ListItem.Label][/B]</label>
+			</control>
+			<control type="label">
+				<posx>15</posx>
+				<posy>273</posy>
+				<width>394</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>LiberationSans_Regular_24</font>
+				<textcolor>white</textcolor>
+				<label>31508</label>
+				<visible>IsEmpty(ListItem.foldername) + !substring(Container.Listitem.Label,..,left) + !Container.Content(genres)</visible>
+			</control>
+			<control type="label"><!--Duration-->
+				<posx>15</posx>
+				<posy>273</posy>
+				<width>394</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>LiberationSans_Regular_24</font>
+				<textcolor>white</textcolor>
+				<label>$INFO[ListItem.Duration] $LOCALIZE[12391]</label>
+				<visible>!IsEmpty(ListItem.Duration) + !SubString(ListItem.Duration,min)</visible>
+			</control>
+			<control type="label"><!--Duration-->
+				<posx>15</posx>
+				<posy>273</posy>
+				<width>394</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>LiberationSans_Regular_24</font>
+				<textcolor>white</textcolor>
+				<label>$INFO[ListItem.Duration]</label>
+				<visible>!IsEmpty(ListItem.Duration) + SubString(ListItem.Duration,min)</visible>
+			</control>
+			<control type="label"><!--Year-->
+				<posx>15</posx>
+				<posy>296</posy>
+				<width>394</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>LiberationSans_Regular_24</font>
+				<textcolor>white</textcolor>
+				<label>$INFO[ListItem.year]</label>
+				<animation effect="slide" start="0,0" end="0,-23" time="0" condition="IsEmpty(ListItem.Duration)">Conditional</animation>
+			</control>
+			<control type="group">
+				<posx>76</posx>
+				<posy>307</posy>
+				<include>VideoMPAAFlaggingConditions</include>
+				<animation effect="slide" start="0,0" end="-64,0" time="0" condition="IsEmpty(ListItem.Year)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,-23" time="0" condition="IsEmpty(ListItem.Duration)">Conditional</animation>
+			</control>
 	</control>	
 	
 	<control type="group">
