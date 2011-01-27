@@ -6,10 +6,10 @@
 				<visible>!player.passthrough</visible>
  				<control type="group">
  					<posx>1150</posx>
-					<posy>80</posy>
 					<posy>90</posy>
  					<control type="image">
  						<texture>volume/vol1.png</texture>
+						<colordiffuse>mainblue</colordiffuse>
  						<visible>IntegerGreaterThan(player.volume,-61)</visible>
 					</control>
 					<control type="image">
