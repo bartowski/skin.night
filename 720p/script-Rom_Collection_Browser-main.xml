@@ -929,8 +929,8 @@
 			<width>1400</width><!-- 1400 -->
 			<onleft>56</onleft>
 			<onright>56</onright>
-			<onup>5950</onup>
-			<ondown>8240</ondown>
+			<onup>900</onup>
+			<ondown>900</ondown>
 			<viewtype label="31507">list</viewtype>
 			<orientation>horizontal</orientation>
 			<focusposition>2</focusposition>
