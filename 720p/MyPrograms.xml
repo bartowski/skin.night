@@ -120,6 +120,15 @@
 				<selected>Skin.HasSetting(programs_clean_poster)</selected>
 				<visible>Control.IsVisible(55)</visible>
 			</control>
+			<control type="togglebutton" id="28">
+				<description>Toggle Launcher Plot</description>
+				<include>WindowMenuButton</include>
+				<label>Show Plot</label>
+				<altlabel>Disable Plot</altlabel>
+				<onclick>Skin.ToggleSetting(launcher_plot_square)</onclick>
+				<selected>Skin.HasSetting(launcher_plot_square)</selected>
+				<visible>Control.IsVisible(56) + [Window.IsActive(Programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)]</visible>
+			</control>
 			<control type="togglebutton" id="31">
 				<description>Toggle MoviesFanart</description>
 				<include>WindowMenuButton</include>
@@ -145,7 +154,7 @@
 				<include>WindowMenuLabel</include>
 				<!-- LOC -->
 				<label>Plot</label>
-				<visible>[Control.IsVisible(53) | Control.IsVisible(55)] + [Window.IsActive(Programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)]</visible>
+				<visible>[Control.IsVisible(53) | Control.IsVisible(55) | Control.IsVisible(56)] + [Window.IsActive(Programs) + substring(container.folderpath,plugin://plugin.program.advanced.launcher)]</visible>
 			</control>
 			<control type="label">
 				<include>WindowMenuLabel</include>

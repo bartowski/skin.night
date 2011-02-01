@@ -345,7 +345,7 @@
 						<height>89</height>
 						<font>LiberationSans_Regular_22</font>
 						<label>[B][COLOR=ListTrackF]$LOCALIZE[515][/COLOR] [B][COLOR=white]$INFO[ListItem.Genre][/B][/COLOR]</label>
-						<visible>!IsEmpty(ListItem.Genre)</visible>
+						<visible>substring(container.folderpath,plugin://plugin.program.advanced.launcher) + !IsEmpty(ListItem.Genre)</visible>
 					</control>
 					<control type="textbox">
 						<description>Plot Movie</description>
@@ -360,6 +360,7 @@
 						<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 						<animation effect="slide" start="0,0" end="0,-21" time="0" condition="IsEmpty(ListItem.Year)">Conditional</animation>
 						<animation effect="slide" start="0,0" end="0,-47" time="0" condition="IsEmpty(ListItem.genre) + IsEmpty(ListItem.Year)">Conditional</animation>
+						<visible>substring(container.folderpath,plugin://plugin.program.advanced.launcher) + Skin.HasSetting(launcher_plot_square)</visible>
 					</control>
 			</control>
 
