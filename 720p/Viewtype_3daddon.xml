@@ -319,7 +319,7 @@
 				<include>Animation_Viewtype_Showcase_ThumbArea</include>
 				<visible>!Container.Content(albums)</visible>
 					<control type="label">
-						<posx>20</posx>
+						<posx>0</posx>
 						<posy>0</posy>
 						<width>1020</width>
 						<height>50</height>
@@ -329,7 +329,7 @@
 						<label>[B]$INFO[ListItem.Label][/B]</label>
 					</control>
 					<control type="label">
-						<posx>20</posx>
+						<posx>0</posx>
 						<posy>30</posy>
 						<width>604</width>
 						<height>50</height>
@@ -337,6 +337,29 @@
 						<font>LiberationSans_Regular_24</font>
 						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.Label2]</label>
+					</control>
+					<control type="label">
+						<posx>0</posx>
+						<posy>45</posy>
+						<width>630</width>
+						<height>89</height>
+						<font>LiberationSans_Regular_22</font>
+						<label>[B][COLOR=ListTrackF]$LOCALIZE[515][/COLOR] [B][COLOR=white]$INFO[ListItem.Genre][/B][/COLOR]</label>
+						<visible>!IsEmpty(ListItem.Genre)</visible>
+					</control>
+					<control type="textbox">
+						<description>Plot Movie</description>
+						<posx>20</posx>
+						<posy>95</posy>
+						<width>600</width>
+						<height>240</height>
+						<align>justify</align>
+						<info>ListItem.Plot</info>
+						<font>Font_3dland_plot</font>
+						<textcolor>white</textcolor>
+						<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+						<animation effect="slide" start="0,0" end="0,-21" time="0" condition="IsEmpty(ListItem.Year)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="0,-47" time="0" condition="IsEmpty(ListItem.genre) + IsEmpty(ListItem.Year)">Conditional</animation>
 					</control>
 			</control>
 

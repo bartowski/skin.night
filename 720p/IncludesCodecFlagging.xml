@@ -308,7 +308,7 @@
 			<texture>flagging/ratings/custom/mpaa_unrated.png</texture>
 			<visible>substring(ListItem.FilenameAndPath,unrated) | substring(listitem.mpaa,Rated Unrated)</visible>
 		</control>
-		
+<!--English -->	
 		<control type="image">
 			<description>Rated bbfc_u</description>
 			<width>72</width>
@@ -365,7 +365,73 @@
 			<texture>flagging/ratings/custom/bbfc_r18.png</texture>
 			<visible>substring(listitem.mpaa,UK:R18)</visible>
 		</control>
-		
+<!--Spanish -->	
+		<control type="image">
+			<description>Rated spaTP</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/custom/spaTP.png</texture>
+			<visible>substring(listitem.mpaa,ES:TP)</visible>
+		</control>
+		<control type="image">
+			<description>Rated spaR7</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/custom/spaR7.png</texture>
+			<visible>substring(listitem.mpaa,ES:R7)</visible>
+		</control>
+		<control type="image">
+			<description>Rated spaITP</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/custom/spaITP.png</texture>
+			<visible>substring(listitem.mpaa,ES:ITP)</visible>
+		</control>
+		<control type="image">
+			<description>Rated spaIR7</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/custom/spaIR7.png</texture>
+			<visible>substring(listitem.mpaa,ES:IR7)</visible>
+		</control>
+		<control type="image">
+			<description>Rated spaR12</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/custom/spaR12.png</texture>
+			<visible>substring(listitem.mpaa,ES:R12)</visible>
+		</control>
+		<control type="image">
+			<description>Rated spaR16</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/custom/spaR16.png</texture>
+			<visible>substring(listitem.mpaa,ES:R16)</visible>
+		</control>
+		<control type="image">
+			<description>Rated spaR18</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/custom/spaR18.png</texture>
+			<visible>substring(listitem.mpaa,ES:R18)</visible>
+		</control>
+		<control type="image">
+			<description>Rated spaX</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/custom/spaX.png</texture>
+			<visible>substring(listitem.mpaa,ES:X)</visible>
+		</control>
+
+<!--France-->
 		<control type="image">
             <description>France:U</description>
             <width>72</width>

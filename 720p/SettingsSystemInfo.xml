@@ -270,7 +270,7 @@
 					<description>CPU Text</description>
 					<posx>750</posx>
 					<posy>430</posy>
-					<width>350</width>
+					<width>600</width>
 					<height>25</height>
 					<label>$LOCALIZE[13271] $INFO[System.CPUUsage]</label>
 					<align>right</align>
@@ -283,7 +283,7 @@
 					<description>CPU BAR</description>
 					<posx>630</posx>
 					<posy>455</posy>
-					<width>320</width>
+					<width>600</width>
 					<height>16</height>
 					<info>System.CPUUsage</info>
 				</control>
@@ -291,7 +291,7 @@
 					<description>Memory Text</description>
 					<posx>750</posx>
 					<posy>460</posy>
-					<width>350</width>
+					<width>700</width>
 					<height>25</height>
 					<label>$LOCALIZE[31309] $INFO[system.memory(used.percent)]</label>
 					<align>right</align>
@@ -304,7 +304,7 @@
 					<description>Memory BAR</description>
 					<posx>430</posx>
 					<posy>485</posy>
-					<width>320</width>
+					<width>500</width>
 					<height>16</height>
 					<info>system.memory(used)</info>
 				</control>
