@@ -731,7 +731,7 @@
 						<onclick>Playlist.Clear</onclick>
 						<onclick>Dialog.Close(MovieInformation)</onclick>
 						<onclick>XBMC.RunScript(script.cinema.experience)</onclick>
-						<visible>system.hasaddon(script.cinema.experience) + Container.Content(movies)</visible>
+						<visible>system.hasaddon(script.cinema.experience) + !Skin.HasSetting(cinemascript_home) + Container.Content(movies)</visible>
 					</control>
 					<control type="button" id="7050"> 
 						<description>Play</description>
@@ -774,6 +774,13 @@
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label>$LOCALIZE[31249]</label>
 						<onclick>XBMC.RunScript(script.logo-downloader,mode=solo,logo=True,clearart=True,showthumb=True,showname=$INFO[ListItem.TVShowTitle])</onclick>
+						<visible>Container.Content(tvshows) + !Skin.HasSetting(LockViews)</visible>
+					</control>
+					<control type="button" id="15">
+						<description>tvtunes download</description>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label>$LOCALIZE[31534]</label>
+						<onclick>XBMC.RunScript(script.TvTunes,mode=solo&amp;tvpath=$INFO[ListItem.FilenameAndPath]&amp;tvname=$INFO[ListItem.TVShowTitle])</onclick>
 						<visible>Container.Content(tvshows) + !Skin.HasSetting(LockViews)</visible>
 					</control>
 				</control>

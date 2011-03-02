@@ -40,12 +40,62 @@
 	<include file="Viewtype_Poster_Half.xml" />
 	<include file="Viewtype_Poster_Programs.xml" />
 	
+	
+	
+	
 	<include name="Movie_Regular">
 		<onclick>XBMC.ActivateWindow(MyVideoLibrary,movietitles,return)</onclick>
+	</include>
+	<include name="Movie_Regular_cinema">
+		<onclick>XBMC.RunScript(script.cinema.experience,movietitles)</onclick>
 	</include>
 	<include name="Movie_Playlist">
 		<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(Custom_Movie_Path)],return)</onclick>
 	</include>
+	<include name="Movie_Playlist_cinema">
+		<onclick>XBMC.RunScript(script.cinema.experience,$INFO[Skin.String(Custom_Movie_Path)])</onclick>
+	</include>
+	<include name="HDMovie_Regular">
+		<onclick>XBMC.ActivateWindow(10025,special://skin/playlists/HDMovies.xsp,return)</onclick>
+	</include>
+	<include name="HDMovie_cinema">
+		<onclick>XBMC.RunScript(script.cinema.experience,special://skin/playlists/HDMovies.xsp,return)</onclick>
+	</include>
+	
+	<include name="movie_genres">
+		<onclick>ActivateWindow(VideoLibrary,MovieGenres,return)</onclick>
+	</include>
+	<include name="cinema_genres">
+		<onclick>XBMC.RunScript(script.cinema.experience,moviegenres)</onclick>
+	</include>
+	<include name="movie_years">
+		<onclick>ActivateWindow(VideoLibrary,MovieYears,return)</onclick>
+	</include>
+	<include name="cinema_years">
+		<onclick>XBMC.RunScript(script.cinema.experience,movieyears)</onclick>
+	</include>
+	<include name="movie_actors">
+		<onclick>ActivateWindow(VideoLibrary,MovieActors,return)</onclick>
+	</include>
+	<include name="cinema_actors">
+		<onclick>XBMC.RunScript(script.cinema.experience,movieactors)</onclick>
+	</include>
+	<include name="movie_directors">
+		<onclick>ActivateWindow(VideoLibrary,MovieDirectors,return)</onclick>
+	</include>
+	<include name="cinema_directors">
+		<onclick>XBMC.RunScript(script.cinema.experience,moviedirectors)</onclick>
+	</include>
+	<include name="movie_recentlyaddedmovies">
+		<onclick>ActivateWindow(VideoLibrary,RecentlyAddedMovies,return)</onclick>
+	</include>
+	<include name="cinema_recentlyaddedmovies">
+		<onclick>XBMC.RunScript(script.cinema.experience,recentlyaddedmovies)</onclick>
+	</include>
+	
+	
+	
+	
 	
 	<include name="no_tv_theme">
 		<onfocus>SetFocus(50)</onfocus>

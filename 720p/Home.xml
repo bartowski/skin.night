@@ -183,8 +183,10 @@
 					<label>$LOCALIZE[20342]</label>
 					<icon>special://skin/backgrounds/movies.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomMoviesFolder)]</thumb>	
-					<include condition="!Skin.HasSetting(Custom_Movie_Link)">Movie_Regular</include>
-					<include condition="Skin.HasSetting(Custom_Movie_Link)">Movie_Playlist</include>
+					<include condition="![Skin.HasSetting(Custom_Movie_Link) + Skin.HasSetting(cinemascript_home)]">Movie_Regular</include>
+					<include condition="!Skin.HasSetting(Custom_Movie_Link) + Skin.HasSetting(cinemascript_home)">Movie_Regular_cinema</include>
+					<include condition="Skin.HasSetting(Custom_Movie_Link) + !Skin.HasSetting(cinemascript_home)">Movie_Playlist</include>
+					<include condition="Skin.HasSetting(Custom_Movie_Link) + Skin.HasSetting(cinemascript_home)">Movie_Playlist_cinema</include>
 					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies)</visible>
 				</item>
 				<item id="4">
@@ -192,7 +194,8 @@
 					<label>$LOCALIZE[31280]</label>
 					<icon>special://skin/backgrounds/HDmovies.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomHDMoviesFolder)]</thumb>			
-					<onclick>XBMC.ActivateWindow(10025,special://skin/playlists/HDMovies.xsp,return)</onclick>
+					<include condition="![Skin.HasSetting(Custom_Movie_Link) + Skin.HasSetting(cinemascript_home)]">HDMovie_Regular</include>
+					<include condition="!Skin.HasSetting(Custom_Movie_Link) + Skin.HasSetting(cinemascript_home)">HDMovie_cinema</include>
 					<visible>!Skin.HasSetting(HomeMenuNoHDMoviesButton) + Library.HasContent(Movies)</visible>
 				</item>
 				<item id="5">
@@ -508,22 +511,26 @@
 					<control type="button" id="90116">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$LOCALIZE[135]</label>
-						<onclick>ActivateWindow(VideoLibrary,MovieGenres,return)</onclick>
+						<include condition="!Skin.HasSetting(cinemascript_home)">movie_genres</include>
+						<include condition="Skin.HasSetting(cinemascript_home)">cinema_genres</include>
 					</control>
 					<control type="button" id="90117">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$LOCALIZE[652]</label>
-						<onclick>ActivateWindow(VideoLibrary,MovieYears,return)</onclick>
+						<include condition="!Skin.HasSetting(cinemascript_home)">movie_years</include>
+						<include condition="Skin.HasSetting(cinemascript_home)">cinema_years</include>
 					</control>
 					<control type="button" id="90118">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$LOCALIZE[344]</label>
-						<onclick>ActivateWindow(VideoLibrary,MovieActors,return)</onclick>
+						<include condition="!Skin.HasSetting(cinemascript_home)">movie_actors</include>
+						<include condition="Skin.HasSetting(cinemascript_home)">cinema_actors</include>
 					</control>
 					<control type="button" id="90119">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$LOCALIZE[20348]</label>
-						<onclick>ActivateWindow(VideoLibrary,MovieDirectors,return)</onclick>
+						<include condition="!Skin.HasSetting(cinemascript_home)">movie_directors</include>
+						<include condition="Skin.HasSetting(cinemascript_home)">cinema_directors</include>
 					</control>
 					<control type="button" id="91110">
 						<include>ButtonHomeSubCommonValues</include>
@@ -533,7 +540,8 @@
 					<control type="button" id="91111">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$LOCALIZE[31081]</label>
-						<onclick>ActivateWindow(VideoLibrary,RecentlyAddedMovies,return)</onclick>
+						<include condition="!Skin.HasSetting(cinemascript_home)">movie_recentlyaddedmovies</include>
+						<include condition="Skin.HasSetting(cinemascript_home)">cinema_recentlyaddedmovies</include>
 					</control>
 					<control type="button" id="91112">
 						<include>ButtonHomeSubCommonValues</include>

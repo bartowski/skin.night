@@ -70,8 +70,10 @@
 					<label>$LOCALIZE[20342]</label>
 					<icon>special://skin/backgrounds/movies.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomMoviesFolder)]</thumb>			
-					<include condition="!Skin.HasSetting(Custom_Movie_Link)">Movie_Regular</include>
-					<include condition="Skin.HasSetting(Custom_Movie_Link)">Movie_Playlist</include>
+					<include condition="![Skin.HasSetting(Custom_Movie_Link) + Skin.HasSetting(cinemascript_home)]">Movie_Regular</include>
+					<include condition="!Skin.HasSetting(Custom_Movie_Link) + Skin.HasSetting(cinemascript_home)">Movie_Regular_cinema</include>
+					<include condition="Skin.HasSetting(Custom_Movie_Link) + !Skin.HasSetting(cinemascript_home)">Movie_Playlist</include>
+					<include condition="Skin.HasSetting(Custom_Movie_Link) + Skin.HasSetting(cinemascript_home)">Movie_Playlist_cinema</include>
 					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies)</visible>
 				</item>
 				<item id="4">
@@ -79,7 +81,8 @@
 					<label>$LOCALIZE[31280]</label>
 					<icon>special://skin/backgrounds/HDmovies.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomHDMoviesFolder)]</thumb>			
-					<onclick>XBMC.ActivateWindow(10025,special://skin/playlists/HDMovies.xsp,return)</onclick>
+					<include condition="![Skin.HasSetting(Custom_Movie_Link) + Skin.HasSetting(cinemascript_home)]">HDMovie_Regular</include>
+					<include condition="!Skin.HasSetting(Custom_Movie_Link) + Skin.HasSetting(cinemascript_home)">HDMovie_cinema</include>
 					<visible>!Skin.HasSetting(HomeMenuNoHDMoviesButton) + Library.HasContent(Movies)</visible>
 				</item>
 				<item id="5">
@@ -401,19 +404,23 @@
 							</item>
 							<item id="7">
 								<label>$LOCALIZE[135]</label>
-								<onclick>ActivateWindow(VideoLibrary,MovieGenres,return)</onclick>
+								<include condition="!Skin.HasSetting(cinemascript_home)">movie_genres</include>
+								<include condition="Skin.HasSetting(cinemascript_home)">cinema_genres</include>
 							</item>
 							<item id="8">
 								<label>$LOCALIZE[652]</label>
-							<onclick>ActivateWindow(VideoLibrary,MovieYears,return)</onclick>
+								<include condition="!Skin.HasSetting(cinemascript_home)">movie_years</include>
+								<include condition="Skin.HasSetting(cinemascript_home)">cinema_years</include>
 							</item>
 							<item id="9">
 								<label>$LOCALIZE[344]</label>
-								<onclick>ActivateWindow(VideoLibrary,MovieActors,return)</onclick>
+								<include condition="!Skin.HasSetting(cinemascript_home)">movie_actors</include>
+								<include condition="Skin.HasSetting(cinemascript_home)">cinema_actors</include>
 							</item>
 							<item id="10">
 								<label>$LOCALIZE[20348]</label>
-								<onclick>ActivateWindow(VideoLibrary,MovieDirectors,return)</onclick>
+								<include condition="!Skin.HasSetting(cinemascript_home)">movie_directors</include>
+								<include condition="Skin.HasSetting(cinemascript_home)">cinema_directors</include>
 							</item>
 							<item id="11">
 								<label>$LOCALIZE[136]</label>
@@ -421,7 +428,8 @@
 							</item>
 							<item id="12">
 								<label>$LOCALIZE[31296]</label>
-								<onclick>ActivateWindow(VideoLibrary,RecentlyAddedMovies,return)</onclick>
+								<include condition="!Skin.HasSetting(cinemascript_home)">movie_recentlyaddedmovies</include>
+								<include condition="Skin.HasSetting(cinemascript_home)">cinema_recentlyaddedmovies</include>
 							</item>
 							<item id="13">
 								<label>20389</label>
