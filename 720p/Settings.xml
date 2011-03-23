@@ -2,14 +2,7 @@
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
-		<control type="largeimage">
-			<include>Dimensions_Fullscreen</include>
-			<width>1280</width>
-			<height>720</height>
-			<texture>backdrops/curtains_diffuse.png</texture>
-			<aspectratio>stretch</aspectratio>
-			<include>VisibleFadeEffect</include>
-		</control>
+		<include>Main_Curtains_Back</include>
 		<control type="group">
 			<posx>90</posx>
 			<posy>50</posy>

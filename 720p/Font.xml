@@ -4,8 +4,9 @@
 		
 		<font>
 			<name>font13</name>
-			<filename>DejaVuSans.ttf</filename>
-			<size>20</size>
+			<filename>LiberationSans-Regular.ttf</filename>
+			<size>16</size>
+			<linespacing>1</linespacing>
 		</font>
 		<font>
 			<name>Font_Bartowski_MainMenu</name>
@@ -33,6 +34,12 @@
 		</font>
 		
 <!--  LiberationSans-Regular.ttf -->	
+		<font>
+			<name>LiberationSans_Regular_14</name>
+			<filename>LiberationSans-Regular.ttf</filename>
+			<size>14</size>
+			<linespacing>1</linespacing>
+		</font>
 		<font>
 			<name>LiberationSans_Regular_16</name>
 			<filename>LiberationSans-Regular.ttf</filename>

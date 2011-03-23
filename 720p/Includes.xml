@@ -41,7 +41,17 @@
 	<include file="Viewtype_Poster_Programs.xml" />
 	
 	
-	
+	<include name="Main_Curtains_Back">
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<width>1280</width>
+			<height>720</height>
+			<texture>backdrops/curtains_diffuse.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<include>VisibleFadeEffect</include>
+			<visible>Window.IsActive(settings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(custom_SkinSetting_1111.xml)</visible>
+		</control>
+	</include>
 	
 	<include name="Movie_Regular">
 		<onclick>XBMC.ActivateWindow(MyVideoLibrary,movietitles,return)</onclick>

@@ -241,7 +241,7 @@
 					</control>
 					<control type="label"><!-- Episode season episode -->
 						<posx>0</posx>
-						<posy>30</posy>
+						<posy>20</posy>
 						<width>556</width>
 						<height>50</height>
 						<align>center</align>
@@ -252,7 +252,7 @@
 					</control>
 					<control type="label"><!-- Episode aired -->
 						<posx>0</posx>
-						<posy>58</posy>
+						<posy>44</posy>
 						<width>556</width>
 						<height>50</height>
 						<align>center</align>

@@ -316,10 +316,8 @@
 					<!-- LOC -->
 					<altlabel>$LOCALIZE[31096]</altlabel>				
 				</control>
-				<control type="button" id="21">
+				<control type="button" id="11">
 					<include>WindowMenuButton</include>
-					<label>744</label>
-					<onclick>ReplaceWindow(VideoFiles)</onclick>
 					<visible>![Control.IsVisible(55) + Container.Content(movies)]</visible>
 				</control>
 				<control type="button" id="8">
@@ -328,60 +326,60 @@
 				</control>
 			</control>
 			<control type="grouplist">
-			<visible>!Skin.HasSetting(LockViews)</visible>
-			<include>WindowMenuVars</include>
-			<posy>658</posy>
-			<control type="label">
-				<include>WindowMenuLabel</include>
-				<!-- LOC -->
-				<label>$LOCALIZE[31088]</label>
-			</control>
-			<control type="label">
-				<include>WindowMenuLabel</include>
-				<label>$LOCALIZE[14018]</label>
-				<visible>[Control.IsVisible(55) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(58)] + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] | [Control.IsVisible(50) + Container.Content(movies)] | [Control.IsVisible(59) + Container.Content(tvshows)] | [Control.IsVisible(55) + Window.IsVisible(VideoLibrary)]</visible>		
-			</control>
-			<control type="label">
-				<include>WindowMenuLabel</include>
-				<label>$LOCALIZE[31206]</label>
-				<visible>Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart)</visible>		
-			</control>
-			<control type="label">
-				<include>WindowMenuLabel</include>
-				<label>$LOCALIZE[14018]</label>
-				<visible>Control.IsVisible(55) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart)</visible>		
-			</control>
-			<control type="label">
-				<include>WindowMenuLabel</include>
-				<label>$LOCALIZE[14018]</label>
-				<visible>[Control.IsVisible(55) + Container.Content(movies)] | [Control.IsVisible(593) + Container.Content(tvshows)]  | [Control.IsVisible(633) + Container.Content(episodes)] | [Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)]</visible>		
-			</control>
-			<control type="label">
-				<include>WindowMenuLabel</include>
-				<!-- LOC -->
-				<label>31090</label>
-			</control>
-			<control type="label">
-				<include>WindowMenuLabel</include>
-				<!-- LOC -->
-				<label>$LOCALIZE[31093]</label>
-			</control>
-			<control type="label">
-				<include>WindowMenuLabel</include>
-				<!-- LOC -->
-				<label>$LOCALIZE[31098]</label>
-			</control>
-			<control type="label">
-				<include>WindowMenuLabel</include>
-				<!-- LOC -->
-				<label>$LOCALIZE[240]</label>
-				<visible>![Control.IsVisible(55) + Container.Content(movies)]</visible>
-			</control>	
-			<control type="label">
-				<include>WindowMenuLabel</include>
-				<!-- LOC -->
-				<label>369</label>
-			</control>
+				<visible>!Skin.HasSetting(LockViews)</visible>
+				<include>WindowMenuVars</include>
+				<posy>658</posy>
+					<control type="label">
+						<include>WindowMenuLabel</include>
+						<!-- LOC -->
+						<label>$LOCALIZE[31088]</label>
+					</control>
+					<control type="label">
+						<include>WindowMenuLabel</include>
+						<label>$LOCALIZE[14018]</label>
+						<visible>[Control.IsVisible(55) | Control.IsVisible(53) | Control.IsVisible(56) | Control.IsVisible(58)] + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] | [Control.IsVisible(50) + Container.Content(movies)] | [Control.IsVisible(59) + Container.Content(tvshows)] | [Control.IsVisible(55) + Window.IsVisible(VideoLibrary)]</visible>		
+					</control>
+					<control type="label">
+						<include>WindowMenuLabel</include>
+						<label>$LOCALIZE[31206]</label>
+						<visible>Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart)</visible>		
+					</control>
+					<control type="label">
+						<include>WindowMenuLabel</include>
+						<label>$LOCALIZE[14018]</label>
+						<visible>Control.IsVisible(55) + Container.Content(movies) + !Skin.HasSetting(Poster_Fanart)</visible>		
+					</control>
+					<control type="label">
+						<include>WindowMenuLabel</include>
+						<label>$LOCALIZE[14018]</label>
+						<visible>[Control.IsVisible(55) + Container.Content(movies)] | [Control.IsVisible(593) + Container.Content(tvshows)]  | [Control.IsVisible(633) + Container.Content(episodes)] | [Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)]</visible>		
+					</control>
+					<control type="label">
+						<include>WindowMenuLabel</include>
+						<!-- LOC -->
+						<label>31090</label>
+					</control>
+					<control type="label">
+						<include>WindowMenuLabel</include>
+						<!-- LOC -->
+						<label>$LOCALIZE[31093]</label>
+					</control>
+					<control type="label">
+						<include>WindowMenuLabel</include>
+						<!-- LOC -->
+						<label>$LOCALIZE[31098]</label>
+					</control>
+					<control type="label">
+						<include>WindowMenuLabel</include>
+						<!-- LOC -->
+						<label>$LOCALIZE[240]</label>
+						<visible>![Control.IsVisible(55) + Container.Content(movies)]</visible>
+					</control>	
+					<control type="label">
+						<include>WindowMenuLabel</include>
+						<!-- LOC -->
+						<label>369</label>
+					</control>
 		</control>
 		
 	</control>
