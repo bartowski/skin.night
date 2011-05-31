@@ -275,7 +275,7 @@
 			<align>center</align>
 			<aligny>top</aligny>
 			<label>$LOCALIZE[112]</label>
-			<font>Font_Bartowski_BigMusic</font>
+			<font>LiberationSans_Regular_100</font>
 			<textcolor>33ffffff</textcolor>
 			<visible>player.paused</visible>
 		</control>
@@ -286,7 +286,7 @@
 			<align>center</align>
 			<aligny>top</aligny>
 			<label>FFx2</label>
-			<font>Font_Bartowski_BigMusic</font>
+			<font>LiberationSans_Regular_100</font>
 			<textcolor>33ffffff</textcolor>
 			<visible>player.forwarding2x</visible>
 		</control>
@@ -297,7 +297,7 @@
 			<align>center</align>
 			<aligny>top</aligny>
 			<label>FFx4</label>
-			<font>Font_Bartowski_BigMusic</font>
+			<font>LiberationSans_Regular_100</font>
 			<textcolor>33ffffff</textcolor>
 			<visible>player.forwarding4x</visible>
 		</control>
@@ -308,7 +308,7 @@
 			<align>center</align>
 			<aligny>top</aligny>
 			<label>FFx8</label>
-			<font>Font_Bartowski_BigMusic</font>
+			<font>LiberationSans_Regular_100</font>
 			<textcolor>33ffffff</textcolor>
 			<visible>player.forwarding8x</visible>
 		</control>
@@ -319,7 +319,7 @@
 			<align>center</align>
 			<aligny>top</aligny>
 			<label>FFx16</label>
-			<font>Font_Bartowski_BigMusic</font>
+			<font>LiberationSans_Regular_100</font>
 			<textcolor>33ffffff</textcolor>
 			<visible>player.forwarding16x</visible>
 		</control>
@@ -330,7 +330,7 @@
 			<align>center</align>
 			<aligny>top</aligny>
 			<label>FFx32</label>
-			<font>Font_Bartowski_BigMusic</font>
+			<font>LiberationSans_Regular_100</font>
 			<textcolor>33ffffff</textcolor>
 			<visible>player.forwarding32x</visible>
 		</control>
@@ -341,7 +341,7 @@
 			<align>center</align>
 			<aligny>top</aligny>
 			<label>RWx2</label>
-			<font>Font_Bartowski_BigMusic</font>
+			<font>LiberationSans_Regular_100</font>
 			<textcolor>33ffffff</textcolor>
 			<visible>player.rewinding2x</visible>
 		</control>
@@ -352,7 +352,7 @@
 			<align>center</align>
 			<aligny>top</aligny>
 			<label>RWx4</label>
-			<font>Font_Bartowski_BigMusic</font>
+			<font>LiberationSans_Regular_100</font>
 			<textcolor>33ffffff</textcolor>
 			<visible>player.rewinding4x</visible>
 		</control>
@@ -363,7 +363,7 @@
 			<align>center</align>
 			<aligny>top</aligny>
 			<label>RWx8</label>
-			<font>Font_Bartowski_BigMusic</font>
+			<font>LiberationSans_Regular_100</font>
 			<textcolor>33ffffff</textcolor>
 			<visible>player.rewinding8x</visible>
 		</control>
@@ -374,7 +374,7 @@
 			<align>center</align>
 			<aligny>top</aligny>
 			<label>RWx16</label>
-			<font>Font_Bartowski_BigMusic</font>
+			<font>LiberationSans_Regular_100</font>
 			<textcolor>33ffffff</textcolor>
 			<visible>player.rewinding16x</visible>
 		</control>
@@ -385,7 +385,7 @@
 			<align>center</align>
 			<aligny>top</aligny>
 			<label>RWx32</label>
-			<font>Font_Bartowski_BigMusic</font>
+			<font>LiberationSans_Regular_100</font>
 			<textcolor>33ffffff</textcolor>
 			<visible>player.rewinding32x</visible>
 		</control>

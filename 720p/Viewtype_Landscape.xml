@@ -499,7 +499,7 @@
 			<include>Landscape_Next_Aired</include>
 			
 			<control type="grouplist">
-				<visible>Container.Content(episodes) + Skin.HasSetting(back_flags) + !Skin.HasSetting(no_media_flags) + !Skin.HasSetting(library_global_clock)</visible>
+				<visible>Container.Content(episodes) + Skin.HasSetting(back_flags) + !Skin.HasSetting(no_media_flags)</visible>
 				<description>Media Codec Flagging Images</description>
 				<posx>20</posx>
 				<posy>674</posy>
@@ -511,7 +511,7 @@
 				<include>Animation_ZoomInZoomOut</include>
 			</control>
 			<control type="grouplist">
-				<visible>Container.Content(episodes) + !Skin.HasSetting(no_media_flags) + !Skin.HasSetting(library_global_clock)</visible>
+				<visible>Container.Content(episodes) + !Skin.HasSetting(no_media_flags)</visible>
 				<description>Media Codec Flagging Images</description>
 				<posx>20</posx>
 				<posy>674</posy>
@@ -526,7 +526,7 @@
 				<include>Animation_ZoomInZoomOut</include>
 			</control>
 			<control type="grouplist">
-				<visible>Container.Content(episodes) + !Skin.HasSetting(no_frame_flags) + !Skin.HasSetting(no_media_flags) + !Skin.HasSetting(library_global_clock)</visible>
+				<visible>Container.Content(episodes) + !Skin.HasSetting(no_frame_flags) + !Skin.HasSetting(no_media_flags)</visible>
 				<description>Media Codec Flagging Images</description>
 				<posx>20</posx>
 				<posy>674</posy>

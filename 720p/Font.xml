@@ -100,6 +100,12 @@
 			<size>80</size>
 			<linespacing>1</linespacing>
 		</font>
+		<font>
+			<name>LiberationSans_Regular_100</name>
+			<filename>LiberationSans-Regular.ttf</filename>
+			<size>100</size>
+			<linespacing>1</linespacing>
+		</font>
 		
 <!--  LiberationSans-Regular.ttf -->		
 		<font>
