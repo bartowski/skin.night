@@ -48,7 +48,7 @@
 							<texture>music/musicwallframeF.png</texture>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 						</control>
-				</control>
+			</control>
 				
 				<control type="group">
 				<posx>-20</posx>
