@@ -374,46 +374,13 @@
 			<height>1</height>
 			<label>-</label>
 			<font>-</font>
-			<include condition="!Skin.HasSetting(random_items)">random_movies</include>
 			<include condition="Skin.HasSetting(random_items)">random_tv</include>
 			<include condition="!Skin.HasSetting(horizontal_home)">switch_vertical_home</include>
 			<include condition="Skin.HasSetting(horizontal_home)">switch_horizontal_home</include>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
-			<visible>Skin.HasSetting(homepageHideRecentlyAdded)</visible>
 		</control>
-		<control type="button" id="8999">
-			<description>Don't run Recently added</description>
-			<posx>-20</posx>
-			<posy>-20</posy>
-			<width>1</width>
-			<height>1</height>
-			<label>-</label>
-			<font>-</font>
-			<include condition="!Skin.HasSetting(horizontal_home)">switch_vertical_home</include>
-			<include condition="Skin.HasSetting(horizontal_home)">switch_horizontal_home</include>
-			<texturenofocus>-</texturenofocus>
-			<texturefocus>-</texturefocus>
-			<visible>!Skin.HasSetting(homepageHideRecentlyAdded)</visible>
-		</control>
-		<control type="button" id="8999">
-			<description>Don't run Recently added</description>
-			<posx>-20</posx>
-			<posy>-20</posy>
-			<width>1</width>
-			<height>1</height>
-			<label>-</label>
-			<font>-</font>
-			<onfocus>Skin.Reset(LibraryUpdated)</onfocus>
-			<include condition="!Skin.HasSetting(horizontal_home)">switch_vertical_home</include>
-			<include condition="Skin.HasSetting(horizontal_home)">switch_horizontal_home</include>
-			<texturenofocus>-</texturenofocus>
-			<texturefocus>-</texturefocus>
-			<visible>!Skin.HasSetting(homepageHideRecentlyAdded) + Skin.HasSetting(LibraryUpdated) + !Window.IsVisible(DialogMusicScan.xml) + !Window.IsVisible(DialogVideoScan.xml)</visible>
-		</control>
-			
-			
-			
+		
 		<control type="group" id="9001">
 				<posx>20</posx>
 				<posy>120</posy>

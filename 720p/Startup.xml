@@ -26,8 +26,6 @@
 			<height>1</height>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
-			<include condition="!Skin.HasSetting(random_items)">random_movies</include>
-			<include condition="Skin.HasSetting(random_items)">random_tv</include>
 			<onfocus>XBMC.RunScript(script.tv.show.next.aired,silent=True&amp;alarm=3600)</onfocus>
 			<label>$INFO[Window.Property(LatestMovie.1.Title)]</label>
 			<font>-</font>
